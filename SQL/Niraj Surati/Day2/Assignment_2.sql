@@ -68,10 +68,13 @@ SELECT * FROM Employees
 -- 8. Write a SQL statement to increase the salary of employees under the department 40, 90 and 110 according to the company rules that, salary will be increased by 25% for the department 40, 15% for department 90 and 10% for the department 110 and the rest of the departments will remain same.
 UPDATE Employees 
 SET Salary  =  CASE 
-WHEN DepartmentID = 40 THEN  Salary + (Salary * 25 /100)
-WHEN DepartmentID = 90 THEN  Salary + (Salary * 15 /100)
-WHEN DepartmentID = 110 THEN  Salary + (Salary * 10 /100)
+WHEN DepartmentID = 40 THEN   (Salary + (Salary * 25 /100))
+WHEN DepartmentID = 90 THEN   (Salary + (Salary * 15 /100))
+WHEN DepartmentID = 110 THEN (Salary + (Salary * 10 /100))
+WHEN DepartmentID NOT IN(40,90,110) THEN Salary
 END
+
+-- OR
 
 SELECT * FROM Employees
 
