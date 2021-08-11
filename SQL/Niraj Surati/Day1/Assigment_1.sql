@@ -48,4 +48,18 @@ CREATE TABLE Sales(
 	CONSTRAINT FK_cust_sales FOREIGN KEY (Cust_Id) REFERENCES Customer(Cust_Id)  
 )
 
+ALTER TABLE Sales
+DROP CONSTRAINT FK_car_sales 
+
+ALTER TABLE Sales
+ADD CONSTRAINT FK_Inv_sales FOREIGN KEY (Car_ID) REFERENCES Invenotry(Car_Id)
+
+ALTER TABLE Employees
+ALTER COLUMN Commission VARCHAR(30) NUll
+
+SELECT * FROM Sales
+
+sp_help Sales
+
+sp_help Employees
 
