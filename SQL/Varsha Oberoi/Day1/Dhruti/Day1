@@ -1,0 +1,52 @@
+1.
+use dhruti;
+
+CREATE  TABLE Country ( 
+COUNTRY_ID varchar(2),
+COUNTRY_NAME varchar(40)
+REGION_ID decimal(10,0)
+
+CHECK(COUNTRY_NAME IN('Italy','India','China')) ,
+);
+
+2.
+use dhruti
+
+CREATE TABLE job_history(
+emp_id decimal (6,0) NOT NULL,
+start_date date NOT NULL,
+end_date date NOT NULL,
+CHECK(end_date LIKE '--/--/----'),
+job_id varchar(10)NOT NULL,
+dept_id decimal (4,0) NOT NULL,
+)
+
+3.
+use dhruti
+
+CREATE TABLE [dbo].[jobs](
+	[job id] [nchar](10) NOT NULL UNIQUE,
+	[job title] [nchar](35) NOT NULL DEFAULT  '',
+	[min salary] [decimal](6, 0) DEFAULT 8000,
+	[max salary] [decimal](6, 0) DEFAULT NULL,
+)
+
+4.
+use dhruti
+CREATE TABLE employees ( 
+EMPLOYEE_ID decimal(6,0) NOT NULL PRIMARY KEY, 
+FIRST_NAME varchar(20) DEFAULT NULL, 
+LAST_NAME varchar(25) NOT NULL, 
+EMAIL varchar(25) NOT NULL, 
+PHONE_NUMBER varchar(20) DEFAULT NULL, 
+HIRE_DATE date NOT NULL, 
+JOB_ID varchar(10) NOT NULL, 
+SALARY decimal(8,2) DEFAULT NULL, 
+COMMISSION_PCT decimal(2,2) DEFAULT NULL, 
+MANAGER_ID decimal(6,0) DEFAULT NULL, 
+DEPARTMENT_ID decimal(4,0) DEFAULT NULL, 
+FOREIGN KEY(DEPARTMENT_ID) 
+REFERENCES  departments(DEPARTMENT_ID),
+FOREIGN KEY(JOB_ID) 
+REFERENCES  jobs(JOB_ID)
+)
