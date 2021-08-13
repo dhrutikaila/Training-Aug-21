@@ -1,6 +1,6 @@
 use dhruti
 
-CREATE TABLE job_history(
+CREATE TABLE Job_history(
 emp_id decimal (6,0) NOT NULL,
 start_date date NOT NULL,
 end_date date NOT NULL,
