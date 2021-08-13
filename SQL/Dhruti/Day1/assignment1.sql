@@ -35,4 +35,4 @@ CREATE TABLE Cars (
     FOREIGN KEY (EmployeeId) REFERENCES Emp1(Id)
 );
 ALTER TABLE Sales
-ADD CONSTRAINT fk_empid FOREIGN KEY (EmployeeID) REFERENCES EmployeesB(EmployeeID)
+ADD CONSTRAINT fk_empid FOREIGN KEY (EmployeeID) REFERENCES Emp1(EmployeeID)
