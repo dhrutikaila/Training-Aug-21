@@ -1,20 +1,24 @@
 use dhruti
 
 
-CREATE TABLE employees ( 
-EMPLOYEE_ID decimal(6,0) NOT NULL PRIMARY KEY, 
-FIRST_NAME varchar(20) DEFAULT NULL, 
-LAST_NAME varchar(25) NOT NULL, 
-EMAIL varchar(25) NOT NULL, 
-PHONE_NUMBER varchar(10) DEFAULT NULL, 
-HIRE_DATE date NOT NULL, 
-JOB_ID varchar(10) NOT NULL, 
-SALARY decimal(8,2) DEFAULT NULL, 
-COMMISSION_PCT decimal(2,2) DEFAULT NULL, 
-MANAGER_ID decimal(6,0) DEFAULT NULL, 
-DEPARTMENT_ID decimal(4,0) DEFAULT NULL, 
-CONSTRAINT fk_departments
-    FOREIGN KEY (department_id)
-    REFERENCES job_history(dept_id)
-  
-);
+CREATE TABLE Employees
+(
+	Employee_Id int CONSTRAINT ckEmpId PRIMARY KEY,
+	FirstName varchar(15) NOT NULL,
+	LastName varchar(15) NOT NULL,
+	Email varchar(100) CONSTRAINT ckEmail CHECK(Email LIKE '%_@__%.__%'),
+	PhoneNumber Numeric(10) NOT NULL,
+	Hire_Date varchar(11) CONSTRAINT ckHireDate CHECK(Hire_Date LIKE '__-__-____'),
+	Job_Id int NOT NULL,
+	Salary int,
+	Commission int NOT NULL,
+	Manager_Id int NOT NULL,
+	Department_Id int NOT NULL,
+	CONSTRAINT fk_DepId FOREIGN KEY (Department_Id) REFERENCES Department(DepartmentId),
+	CONSTRAINT fk_JobId FOREIGN KEY (Job_Id) REFERENCES Jobs(JobId)
+)
+ALTER TABLE Employees 
+DROP CONSTRAINT fk_DepID
+
+ALTER TABLE Employees
+ADD CONSTRAINT fk_DepId FOREIGN KEY (Department_Id) REFERENCES Department(DepartmentId);
