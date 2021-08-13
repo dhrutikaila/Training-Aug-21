@@ -1,9 +1,15 @@
 use dhruti
 
 
-CREATE TABLE [dbo].[jobs](
-	[job id] [nchar](10) NOT NULL UNIQUE,
-	[job title] [nchar](35) NOT NULL DEFAULT  '',
-	[min salary] [decimal](6, 0) DEFAULT 8000,
-	[max salary] [decimal](6, 0) DEFAULT NULL,
-)	
+CREATE TABLE Job
+(
+JobId int NOT NULL CONSTRAINT pkJobId PRIMARY KEY,
+JobTitle varchar(30) CONSTRAINT chkJobtitle DEFAULT '',
+MinSalary int NOT NULL CONSTRAINT chkMinSalary DEFAULT 8000,
+MaxSalary int CONSTRAINT chkMaxSalary DEFAULT NULL  
+)
+
+INSERT INTO Jobs ([job id],[job title],[min salary],[max salary]) 
+VALUES 
+(3,' ANALYST',15000,30000),
+(4,'ENG.',25000,36000);
