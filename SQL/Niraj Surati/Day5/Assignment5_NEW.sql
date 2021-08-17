@@ -49,3 +49,16 @@ RIGHT JOIN  Employees AS E2
 ON E2.ManagerID = E1.EmployeeID
 ORDER BY E2.EmployeeID
 
+-- 5. Select first_name, incentive amount from employee and incentives table for all employees even if they didn’t get incentives and set incentive amount as 0 for those employees who didn’t get incentives.
+
+SELECT CONCAT(EMP.FirstName,SPACE(2),EMP.LastName) AS 'Fullname'
+	,	EMP.HireDate AS 'Joining Date'
+	,	Inc.Incentive_Date AS 'Incentive Date'
+	,	ISNULL(Inc.Incentive_Amount,0) AS 'Incetive Amont'
+FROM Employees AS EMP
+LEFT JOIN Incentives AS Inc
+ON EMP.EmployeeID = Inc.Employee_Ref_Id
+
+
+
+
