@@ -79,8 +79,8 @@ WHERE a.Bname IN  (Select City FROM Deposit WHERE Cname = 'SUNIL')
 
 --Q2: List All the Depositors Having Depositors Having Deposit in All the Branches
 -- where SUNIL is Having Account
-SELECT a.CNAME FROM Deposit a WHERE a.BNAME IN (SELECT b.BNAME FROM 
-Deposit b WHERE b.CNAME = 'SUNIL' );
+SELECT d.Cname,d.Bname FROM Deposit d JOIN Branch b ON d.Bname=b.Bname WHERE d.Bname IN
+(SELECT d.Bname FROM Deposit d JOIN Branch b ON d.Bname= b.Bname WHERE d.Cname='SUNIL')
 
 --Q3: List the Names of Customers Living in the City where the Maximum Number of Depositors are Located
 --SELECT a.CNAME FROM Depositss a JOIN CUSTOMER b ON  a.Cname  = b.Cname WHERE b.CITY IN
