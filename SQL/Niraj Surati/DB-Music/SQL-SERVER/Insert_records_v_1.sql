@@ -118,16 +118,16 @@ VALUES(4,'J. R. R. Tolkien','2019-04-25')
 -- Albums
 
 INSERT INTO Albums (ArtistId,Name ,Picture ,CountryID ,PublishedON )
-VALUES(1,'Luke','Chocolat.png',1,'2000-11-2')
-	,	(2,'Liam','Iron Man.png ',2,'2000-11-2')
-	,	(3,'Angela','Brimstone.png',5,'2000-11-2')
-	,	(4,'Thea','Pretty Woman.png',4,'2000-11-2')
-	,	(5,'Felicity','Snatch.png',1,'2000-11-2')
-	,	(5,'Phillip','Iron Man.png ',6,'2000-11-2')
-	,	(4,'Celina','Seven.png',7,'2000-11-2')
-	,	(3,'Carolyn','The Godfather.png',5,'2000-11-2')
-	,	(2,'Russel','The Dark Tower.png',2,'2000-11-2')
-	,	(1,'Kurt','Alien.png', 1,'2000-11-2')
+VALUES(1,'Luke','Chocolat.png',1,'2018-11-12')
+	,	(2,'Liam','Iron Man.png ',2,'2021-07-14')
+	,	(3,'Angela','Brimstone.png',5,'2017-06-21')
+	,	(4,'Thea','Pretty Woman.png',4,'2016-01-25')
+	,	(5,'Felicity','Snatch.png',1,'2018-09-09')
+	,	(5,'Phillip','Iron Man.png ',6,'2012-08-23')
+	,	(4,'Celina','Seven.png',7,'2019-01-22')
+	,	(3,'Carolyn','The Godfather.png',5,'2014-10-16')
+	,	(2,'Russel','The Dark Tower.png',2,'2013-07-15')
+	,	(1,'Kurt','Alien.png', 1,'2012-12-19')
 
 -- Genres
 
@@ -142,3 +142,49 @@ VALUES('Dubstep')
 	,	('Drum & Bass')
 	,	('Soul')
 	,	('Opera')
+
+-- Songs
+
+INSERT INTO Songs (AlbumID
+	,	GenreId
+	,	Name
+	,	LanguageID
+	,	SongFile
+	,	SongFileType
+	,	Duration
+	,	PublishedON
+	,	Active
+)
+VALUES(1,3,'one',3,'gsj','wav','00:04:03','2018-11-12',1)
+	,	(1,4,'Closer',4,'hws','mp3','00:01:30','2018-11-12',1)
+	,	(2,5,'Welcome',5,'hoa','mp3','00:02:00','2021-07-14',1)
+	,	(2,6,'Sorry',6,'fhd','m3u','00:03:00','2021-07-14',1)
+	,	(3,7,'Senorita',7,'jtu','mp3','00:02:26','2017-06-21',1)
+	,	(3,8,'Sugar & Brownies',8,'tou','wav','00:01:05','2017-06-21',1)
+	,	(4,9,'Believer',9,'upj','mp3','00:4:09','2016-01-25',1)
+	,	(5,10,'On my way',10,'ljk','wav','00:02:00','2018-09-09',1)
+
+-- Podcasts
+
+
+
+INSERT INTO Podcasts (AlbumID
+	,	GenreId
+	,	Name
+	,	LanguageID
+	,	PodcastFile
+	,	PodcastFileType
+	,	StreamedON
+	,	Duration
+	,	Active
+)
+VALUES(6,1,'The perfect pod',1,'agd','m3u','2012-08-23','00:20:00',1)
+	,	(6,2,'on the issue',2,'rdw','wav','2012-08-23','00:27:26',1)
+	,	(7,3,'defiant princess',3,'hsj','wav','2019-01-22','00:30:05',1)
+	,	(7,4,'spoken words',4,'khk','mp3','2019/03/04','00:33:00',1)
+	,	(8,5,'Morning talk',5,'pte','mp3','2014-10-16','00:25:16',1)
+	,	(8,6,'on the air',6,'gon','m3u','2014-10-16','00:34:08',1)
+	,	(9,7,'the ineterview',7,'fae','mp3','2013-07-15','00:28:00',1)
+	,	(9,8,'knowledge share',8,'ktj','wav','2013-07-15','00:18:03',1)
+	,	(10,9,'Band of blue',9,'sho','mp3','2012-12-19','00:23:18',1)
+	,	(10,10,'happy host',10,'jua','wav','2012-12-19','00:40:01',1)
