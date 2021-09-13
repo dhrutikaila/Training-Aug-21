@@ -15,31 +15,6 @@ ERROR_SEVERITY() AS Errorseverity,
 ERROR_STATE()  AS ERRORSTATE
 END CATCH
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 --2
 USE AdventureWorksLT2012
 BEGIN TRANSACTION;  
