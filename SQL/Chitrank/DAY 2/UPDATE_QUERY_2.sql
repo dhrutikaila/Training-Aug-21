@@ -1,5 +1,5 @@
 /*Write a SQL statement to change the Email and CommissionPct column of employees 
-table with ‘not available’ and 0.10 for all employees.*/
+TABLE with ï¿½not availableï¿½ and 0.10 for all employees.*/
 
 UPDATE Employees
 SET Email = 'not available',CommissionPct = '0.10'

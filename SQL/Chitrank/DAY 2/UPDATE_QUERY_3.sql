@@ -1,6 +1,6 @@
 /*
 Write a SQL statement to change the Email and CommissionPct column of employees 
-table with ‘not available’ and 0.10 for those employees whose DepartmentID is 110.
+TABLE with ï¿½not availableï¿½ and 0.10 for those employees whose DepartmentID is 110.
 */
 
 

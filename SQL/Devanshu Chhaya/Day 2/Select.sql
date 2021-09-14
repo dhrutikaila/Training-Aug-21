@@ -21,7 +21,7 @@ SELECT * FROM dbo.Employees WHERE FirstName NOT IN('Neena','Lex');
 SELECT * FROM dbo.Employees WHERE Salary BETWEEN 5000 AND 8000;
 
 ---2.8--
-SELECT FirstName+' '+LastName AS Name,Salary,PF=.12*Salary  From dbo.Employees;
+SELECT FirstName+' '+LastName AS Name,Salary,PF=.12*Salary  FROM dbo.Employees;
 
 ---2.9--
 SELECT FirstName FROM dbo.Employees WHERE FirstName like 'N%'

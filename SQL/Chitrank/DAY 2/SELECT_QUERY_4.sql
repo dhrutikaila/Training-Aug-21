@@ -1,5 +1,5 @@
 /*
-Get employee details from Employees table whose Employee Name is “Steven”
+Get employee details FROM Employees TABLE whose Employee Name is ï¿½Stevenï¿½
 */
 
 SELECT * FROM Employees WHERE (FirstName = 'Steven')

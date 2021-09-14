@@ -1,5 +1,5 @@
 /*
-Get FirstName, LastName from Employees table
+Get FirstName, LastName FROM Employees TABLE
 */
 
 SELECT FirstName,LastName FROM Employees

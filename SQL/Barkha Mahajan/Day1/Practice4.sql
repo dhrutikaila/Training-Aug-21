@@ -5,11 +5,11 @@ LastName VARCHAR(10),
 Email VARCHAR(30)  UNIQUE CONSTRAINT chk_Email CHECK (Email LIKE '%@%.___') ,
 PhoneNumber NUMERIC(10)  UNIQUE CONSTRAINT chk_Mobile CHECK (PhoneNumber BETWEEN 1000000000 AND 9999999999),
 HireDate DATE,
-JobId INT CONSTRAINT fkForeig REFERENCES Jobs(JobId) on update cascade,
+JobId INT CONSTRAINT fkForeig REFERENCES Jobs(JobId) on UPDATE cascade,
 Salary MONEY,
 Commission INT ,
 ManagerId INT ,
-DepartmentId INT CONSTRAINT fkkForeig REFERENCES Department(DepartmentId) on update cascade
+DepartmentId INT CONSTRAINT fkkForeig REFERENCES Department(DepartmentId) on UPDATE cascade
 )
 
 

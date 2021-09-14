@@ -1,5 +1,5 @@
 /*
-Get FirstName from Employees table using alias name “Employee Name”
+Get FirstName FROM Employees TABLE using alias name ï¿½Employee Nameï¿½
 */
 
 SELECT 'Employee Name' = FirstName FROM Employees

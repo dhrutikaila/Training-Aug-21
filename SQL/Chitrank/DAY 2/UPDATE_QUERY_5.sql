@@ -1,9 +1,9 @@
-/*Write a SQL statement to change the Email column of employees table with 
-‘not available’ for those employees who belongs to the ‘Accouning’ department.
+/*Write a SQL statement to change the Email column of employees TABLE with 
+ï¿½not availableï¿½ for those employees who belongs to the ï¿½Accouningï¿½ department.
 */
 
 UPDATE Employees
 SET Email = 'not available'
 WHERE DepartmentID=(
-SELECT DepartmentID from Departments
+SELECT DepartmentID FROM Departments
 WHERE DepartmentName = 'Accounting')

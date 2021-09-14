@@ -1,5 +1,5 @@
 /*
-Get employee details from Employees table whose FirstName starts with ‘N’
+Get employee details FROM Employees TABLE whose FirstName starts with ï¿½Nï¿½
 */
 
 SELECT * FROM Employees WHERE (FirstName LIKE 'N%')

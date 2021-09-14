@@ -1,5 +1,5 @@
 /*
-Get employee details from Employees table whose Employee Name are “Neena” and “Lex”
+Get employee details FROM Employees TABLE whose Employee Name are ï¿½Neenaï¿½ and ï¿½Lexï¿½
 */
 
 SELECT * FROM Employees WHERE (FirstName IN ('Neena','Lex'))

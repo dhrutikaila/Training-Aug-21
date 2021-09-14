@@ -15,8 +15,8 @@ Item_qty INT NOT NULL
 
 CREATE TABLE sales(
 srno INT PRIMARY KEY IDENTITY (1,1) ,
-EmployeeNo INT CONSTRAINT emp_fkForeig REFERENCES B_Employee(Employee_Id) on update NO ACTION,
-ItemNo INT CONSTRAINT item_fkForeig REFERENCES Inventory(Item_id) on update NO ACTION,
+EmployeeNo INT CONSTRAINT emp_fkForeig REFERENCES B_Employee(Employee_Id) on UPDATE NO ACTION,
+ItemNo INT CONSTRAINT item_fkForeig REFERENCES Inventory(Item_id) on UPDATE NO ACTION,
 SaleQty INT NOT NULL
 )
 
@@ -31,14 +31,14 @@ INSERT INTO sales VALUES (1,1,20)
 INSERT INTO sales VALUES (2,2,30)
 INSERT INTO sales VALUES (2,3,10)
 
-select * from B_Employee
-select * from Inventory
-select * from sales
+SELECT * FROM B_Employee
+SELECT * FROM Inventory
+SELECT * FROM sales
 
 
 SELECT * INTO Comission FROM
 (SELECT sum(sales.SaleQty) as TotalSale,B_Employee.Employee_Id ,comission=sum(sales.SaleQty)*0.1
-from B_Employee , sales WHERE B_Employee.Employee_Id=sales.EmployeeNo
+FROM B_Employee , sales WHERE B_Employee.Employee_Id=sales.EmployeeNo
 GROUP BY B_Employee.Employee_Id) com
 
 SELECT * FROM Comission
