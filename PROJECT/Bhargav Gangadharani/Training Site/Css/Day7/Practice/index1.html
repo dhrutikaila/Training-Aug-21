@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        .example1 {
+            border: 2px solid blue;
+        }
+
+        .container2{
+            padding: 20px;
+            color: white;
+        }
+
+        .container3{
+            background-color:cyan ;
+            padding: 20px;
+        }
+
+        .container4{
+            background-color: whitesmoke;
+            padding: 20px;
+        }
+        
+
+        @media only screen and (max-width: 600px) {
+            .example1 {
+                border: 2px solid red;
+            }
+            .container2{
+                background: blue;
+            }
+            .container3{
+                display: none;
+            }
+            .container4{
+                font-size: 10px;
+            }
+        }
+
+        @media only screen and (min-width: 600px) {
+            .container2{
+                background: purple;
+            }
+
+            .container4{
+                font-size: 50px;
+            }
+        }
+        
+
+        @media only screen and (min-width: 768px) {
+            .container2{
+                background: purple;
+            }
+        }
+
+        @media only screen and (min-width: 992px) {
+            .container2{
+                background: red;
+            }
+        }
+
+        @media only screen and (min-width: 1200px) {
+            .container2{
+                background: brown;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="example1">
+        <h2>* Resize the browser window to see the effect!</h2>
+        <p>Border around me will change its color, when screen size is changed</p>
+    </div>
+
+    <div class="example2">
+        <h2>* Media Query Breakpoints</h2>
+        <p class="container2">I will change my background color on changing screen size.</p>
+    </div>
+    <div class="example3">
+        <h2>* Hide elements on different screen sizes.</h2>
+        <div class="container3">I will be invisible for you when you change screen size.</div>
+    </div>
+    <div class="example4">
+        <h2>* Change the font size of an element on different screen sizes.</h2>
+        <div class="container4">My size will also change when your screen size is changed.</div>
+    </div>
+</body>
+</html>
