@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-F3w7mX95PdgyTmZZMECAngseQB83DfGTowi0iMjiWaeVhAn4FJkqJByhZMI3AhiU" crossorigin="anonymous">
+    <title>Practice Day15</title>
+</head>
+
+<body>
+    <button class="btn btn-info mt-3 d-block" type="button" onclick="city()">Location</button>
+    <button class="btn btn-info mt-3 d-block" type="button" onclick="calculations()">Find Greatest & Sum of them if value above 40</button>
+    <p class="fw-bolder border-secondary d-block my-3" id="result"></p>
+    <p class="fw-bolder border-secondary d-block my-3" id="sum"></p>
+    <script>
+        function city() {
+            var city = ["Ahmedabad", "Rajkot", "Vadodara", "Surat", "Diu"];
+            for(var i=0; i<city.length; i++){
+                alert("Welcome to "+city[i]);
+            }
+                
+        }
+        function calculations(){
+            var num1 = prompt("Enter the first number");
+            var num2 = prompt("Enter the second number");
+            var num3 = prompt("Enter the third number");
+
+            if(num1>num2){
+                if(num1>num3){
+                    document.getElementById("result").innerHTML="Maximum No. is: " + num1;
+                }else{
+                    document.getElementById("result").innerHTML="Maximum No. is: " + num3;
+                }
+            }else{
+                if(num2>num3){
+                    document.getElementById("result").innerHTML="Maximum No. is: " + num2;
+                }else{
+                    document.getElementById("result").innerHTML="Maximum No. is: " + num3;
+                }
+            }
+
+            var sum = 0;
+            if(num1 > 40){
+                sum += parseInt(num1);
+            }
+            if(num2 > 40){
+                sum += parseInt(num2);
+            }
+            if(num3 > 40){
+                sum += parseInt(num3);
+            }
+            document.getElementById("sum").innerHTML="Sum of No. which are greater than 40 is: " + sum;
+        }
+    </script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-/bQdsTh/da6pkI1MST/rWKFNjaCP5gBSY4sEBT38Q/9RBh9AH40zEOg7Hlq2THRZ" crossorigin="anonymous"></script>
+</body>
+
+</html>
