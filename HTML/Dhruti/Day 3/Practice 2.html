@@ -1,0 +1,135 @@
+<!--Practice position properties static, relative, fixed and absolute.
+Suppose we have a div with specific height and width and we need to arrange more text into it. Use overflow properties.-->
+<!DOCTYPE HTML>
+<html>
+<head>
+<style>
+div.relative {
+  position: relative;
+  width: 400px;
+  height: 200px;
+  border: 3px solid #73AD21;
+} 
+
+div.absolute {
+  position: absolute;
+  top: 80px;
+  right: 0;
+  width: 200px;
+  height: 100px;
+  border: 3px solid #73AD21;
+}
+div.static {
+  position: static;
+  border: 3px solid #73AD21;
+}
+div.fixed {
+  position: fixed;
+  bottom: 0;
+  right: 0;
+  width: 300px;
+  border: 3px solid #73AD21;
+}
+div.sticky {
+  position: -webkit-sticky;
+  position: sticky;
+  top: 0;
+  padding:5px;
+  background-color: #cae8ca;
+  border: 2px solid #4CAF50;
+}
+#overflowTest {
+  background: #4CAF50;
+  color: white;
+  padding: 5px;
+  width: 50%;
+  height: 100px;
+  overflow: scroll;
+  border: 1px solid #ccc;
+}
+</style>
+<link rel="stylesheet" href="Style.css">
+
+</head>
+<nav>
+  <UL>
+    <li class="active"><a href="HOME.html">HOME</a></li>
+    <li><a href="#">HTML</a></li>
+    <li><a href="#">CSS</a></li>
+    <li><a href="#">BOOTSTRAP</a></li>
+    <li><a href="#">JAVASCRIPT</a></li>
+    <li><a href="#">JQUERY</a></li>
+  </UL>
+    </nav>
+  <div>
+      <img src="logo.jpg" alt="not">
+<div class="maincontain">
+
+<body>
+<h2>position: absolute;</h2>
+<div class="relative">This div element has position: relative;
+  <div class="absolute">This div element has position: absolute;</div>
+  
+</div>
+<div class="static">
+    This div element has position: static;
+  </div>
+  <div class="fixed">
+    This div element has position: fixed;
+    </div>
+    <div class="sticky">I am sticky!</div>
+
+<div style="padding-bottom:20px">
+  <p>In this example, the sticky element sticks to the top of the page (top: 0), when you reach its scroll position.</p>
+  <p>Scroll back up to remove the stickyness.</p>
+</div>
+<div id="overflowTest">This text is really long and the height of its container is only 100 pixels. 
+    Therefore, a scrollbar is added to help the reader to scroll the content.
+     Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt 
+     ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, 
+     quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat. 
+     Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse molestie consequat, vel illum 
+     dolore eu feugiat nulla facilisis at vero eros et accumsan et iusto odio dignissim qui blandit praesent 
+     luptatum zzril delenit augue duis dolore te feugait nulla facilisi. Nam liber tempor cum soluta nobis 
+     eleifend option congue nihil imperdiet doming id quod mazim placerat facer possim assum. Typi non habent
+      claritatem insitam; est usus legentis in iis qui facit eorum claritatem.</div>
+</div>
+
+           
+<nav class="sidebar">
+  <div class="text"></div>
+<div>
+  <ul>
+    <li><a href="#">Day 1</a></li><br>
+<li><a href="Day 1/Practice 1.html">Practice 1 </a></li>
+<li><a href="Day 1/practice 2.html">Practice 2</a></li>
+<li><a href="Day 1/Practice 3&4.html">Practice 3&4</a></li>
+<li><a href="Day 1/Practice 5.html">Practice 5</a></li>
+<li><a href="Day 1/Assignment 1.html">Assignment 1</a></li>
+<li><a href="#">Day 2</a></li><br>
+<li><a href="Day 2/Practice 1.html">Practice 1 </a></li>
+<li><a href="Day 2/Practice 2.html">Practice 2</a></li>
+<li><a href="Day 2/Practice 3.html">Practice 3</a></li>
+<li><a href="Day 2/Practice 4.html">Practice 4</a></li>
+<li><a href="Day 2/Practice 5.html">Practice 5</a></li>
+<li><a href="Day 2/Assignment 2.html">Assignment 2</a></li>
+<li><a href="#">Day 3</a></li><br>
+<li><a href="Day 3/Practice 1.html">Practice 1 </a></li>
+<li><a href="Day 3/Practice 2.html">Practice 2</a></li>
+<li><a href="Day 3/Assignment 3.html">Assignment 3</a></li>
+<li><a href="#">Day 4</a></li><br>
+<li><a href="Day 4/Practice 5-6.html">Practice 1 </a></li>
+<li><a href="Day 4/Assignment 4.html">Assignment 4</a></li>
+<li><a href="#">Day 5</a></li><br>
+<li><a href="Day 5/Practice 1.html">Practice 1</a></li>
+<li><a href="Day 5/Practice 2.html">Practice 2</a></li>
+<li><a href="Day 5/Practice 3.html">Practice 3</a></li>
+<li><a href="Day 5/Practice 4.html">Practice 4</a></li>
+<li><a href="Day 5/Assignment 5.html">Assignment 5</a></li>
+<li><a href="Day 5/Assignment 5.2.html">Assignment 5.2</a></li>
+  </ul>
+</nav>
+</div>
+
+  </body>
+</html>

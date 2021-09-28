@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="bootstrap.min.css">
+    <script src="jquery.min.js"></script>
+    <script src="popper.min.js"></script>
+    <script src="bootstrap.min.js"></script>
+    <title>Bootstrap</title>
+</head>
+<body>
+    <header>
+        <h1 class="display-3 text-center my-4">Grid system </h1>
+        <div class="container">
+            <div class="row">
+                <div class="col-md-3">
+                <div class="dropdown">
+                    <button class="btn btn-primary btn-block dropdown-toggle" type="button" data-toggle="dropdown">
+                         2: Utilities
+                    </button>
+                    <div class="dropdown-menu">
+                       <a class="dropdown-item" href="2_2_basic_typography.html">2.2 Basic Typography</a>
+                       <a class="dropdown-item" href="2_3_Text Alignment & Display.html">2.3 Text Alignment & Display</a>
+                       <a class="dropdown-item" href="2_4_Floats & position.html">2.4 Floats & Position</a>
+                       <a class="dropdown-item" href="2_5_Colors_&_background.html">2.5 Colors & Background</a>
+                       <a class="dropdown-item" href="2_6_Spacing.html">2.6 Spacing</a>
+                       <a class="dropdown-item" href="2_7_sizing.html">2.7 Sizing</a>
+                       <a class="dropdown-item" href="2_8_breakpoints.html">2.8 Breakpoints</a>
+                    </div>
+                </div>
+            </div>
+                <div class="col-md-3">
+                <div class="dropdown ">
+                    <button class="btn btn-success btn-block dropdown-toggle" type="button" data-toggle="dropdown">
+                        3: css Component
+                    </button>
+                    <div class="dropdown-menu">
+                        <a class="dropdown-item" href="3_2_buttons&button_groups.html">3.2 button & button groups</a>
+                        <a class="dropdown-item" href="3_3_navbar.html">3.3 navbar</a>
+                        <a class="dropdown-item" href="3_4_list_groups& badge.html">3.4 list groups & badges</a>
+                        <a class="dropdown-item" href="3_5 forms.html">3.5 forms</a>
+                        <a class="dropdown-item" href="3_6_input_groups.html">3.6 input groups</a>
+                        <a class="dropdown-item" href="3_7_alerts & progressbar.html">3.7 alerts & progress</a>
+                        <a class="dropdown-item" href="3_8 tables& pagination.html">3.8 tables & pagination</a>
+                        <a class="dropdown-item" href="3_9 cards.html">3.9 cards</a>
+                        <a class="dropdown-item" href="3_10 media objects.html">3.10 media objects</a>
+                     </div>
+                </div>
+            </div>
+            <div class="col-md-3">
+                <div class="dropdown ">
+                    <button class="btn btn-warning btn-block  dropdown-toggle" type="button" data-toggle="dropdown">
+                        4: Grid & flexbox
+                    </button>
+                    <div class="dropdown-menu">
+                       <a class="dropdown-item" href="4_2 Grid system.html">4.2 Grid system</a>
+                       <a class="dropdown-item" href="4_3 grid alignment.html">4.3 Grid Alignment</a>
+                       <a class="dropdown-item" href="4_4 flexbox.html">4.4 flexbox </a>
+                       <a class="dropdown-item" href="4_5 auto margin & wrap.html">4.5 Auto Margin & wrap</a>
+
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-3">
+                <div class="dropdown ">
+                    <button class="btn btn-danger btn-block  dropdown-toggle" type="button" data-toggle="dropdown">
+                          5: javascript Widgets
+                    </button>
+                    <div class="dropdown-menu">
+                       <a class="dropdown-item" href="5_2 carousel slider.html">5.2 carousel slider</a>
+                       <a class="dropdown-item" href="5_3 collapse & accordion.html">5.3 collapse & accordion</a>
+                       <a class="dropdown-item" href="5_4 tooltips.html">5.4 tooltips</a>
+                       <a class="dropdown-item" href="5_5 popovers.html">5.5 popovers</a>
+                       <a class="dropdown-item" href="5_6 modals.html">5.6 modals</a>
+                     
+                    </div>
+                </div>
+            </div>
+            </div>
+        </div>
+        <hr>
+    </header>
+    <div class="container">
+        <!-- responcive grid -->
+    <div class="row">
+         <div  class="col-sm-6 col-md-8 col-lg-9 col-xl-10" style="border: 1px solid #333">
+            <ul>
+                <li>
+                6 column on small
+            </li>
+            <li>
+                8 column on small
+            </li>
+            <li>
+                9 column on small
+            </li>
+        </ul>
+        </div>
+        
+        <div class="col-sm-6 col-md-4 col-lg-3 col-xl-2" style="border: 1px solid #333">
+            <ul><li>
+
+                6 column on small
+            </li>
+            <li>
+
+                4 column on small
+            </li>
+            <li>
+
+                3 column on small
+            </li>
+            <li>
+
+                2 column on small
+            </li>
+        </ul>
+         </div>
+    </div>
+<br><br>
+<!--equal hight-->
+
+<div class="container-fluid align-item-left">
+    <h2>Equal Height</h2>
+    <p>If one of the column is taller than the other, the rest will follow.</p>
+  </div>
+  
+  <div class="container-fluid">
+    <div class="row">
+      <div class="col bg-success">Lorem ipsum dolor sit amet, cibo sensibus interesset no sit. Et dolor possim volutpat qui. No malis tollit iriure eam, et vel tale zril blandit, rebum vidisse nostrum qui eu. No nostrud dolorem legendos mea, ea eum mucius oporteat platonem.Eam an case scribentur, ei clita causae cum, alia debet eu vel.</div>
+      <div class="col bg-warning">.col</div>
+      <div class="col bg-success">.col</div>
+    </div>
+  </div>
+    <!--equal width-->
+    <div class="row">
+        <div class="col" style="border: 1px solid #333">Equal width</div>
+        <div class="col" style="border: 1px solid #333">Equal width</div>
+        <div  class="col"style="border: 1px solid #333">Equal width</div>
+
+    </div>
+    <!--Equal width multi row-->
+    <div class="row">
+        <div class="col" style="border: 1px solid #333">Equal width multi</div>
+        <div class="col" style="border: 1px solid #333">Equal width multi</div>
+        <div class="w-100"></div>
+        <div  class="col" style="border: 1px solid #333">Equal width multi</div>
+        <div  class="col" style="border: 1px solid #333">Equal width multi</div>
+    </div>
+    <!--Auto layout-->
+    <div class="row">
+        <div class="col" style="border: 1px solid #333">AUTO LAYOUT</div>
+        <div class="col-6" style="border: 1px solid #333">AUTO LAYOUT</div>
+        <div class="col-4" style="border: 1px solid #333">AUTO LAYOUT</div>
+
+    </div>
+      <!--Equal width STACKED-->
+      <div class="row">
+        <div class="col-sm" style="border: 1px solid #333">Equal width stacked</div>
+        <div class="col-sm" style="border: 1px solid #333">Equal width stacked</div>
+        <div class="col-sm"style="border: 1px solid #333">Equal width stacked</div>
+
+    </div>
+
+<!--unequal column-->
+<div class="row no-gutters">
+    <div class="col-3 bg-info">col-3</div>
+    <div class="col-6 bg-success">col-6</div>
+    <div class="col-3 bg-info">col-3</div>
+  </div>
+  <!--basic strutcure-->
+  
+<div class="container-fluid">
+    <h1>Basic Grid Structure</h1>
+    <p>Resize the browser window to see the effect.</p>
+    <p>The first, second and third row will automatically stack on top of each other when the screen is less than 576px wide.</p>
+    
+    <div class="container-fluid">
+      <!-- Control the column width, and how they should appear on different devices -->
+      <div class="row">
+        <div class="col-sm-6" style="background-color:rgb(0, 238, 255);">50%</div>
+        <div class="col-sm-6" style="background-color:orange;">50%</div>
+      </div>
+      <br>
+      
+      <div class="row">
+        <div class="col-sm-4" style="background-color:rgb(0, 238, 255);">33.33%</div>
+        <div class="col-sm-4" style="background-color:orange;">33.33%</div>
+        <div class="col-sm-4" style="background-color:rgb(0, 238, 255);">33.33%</div>
+      </div>
+      <br>
+  
+      <!-- Or let Bootstrap automatically handle the layout -->
+      <div class="row">
+        <div class="col-sm" style="background-color:rgb(0, 238, 255);">25%</div>
+        <div class="col-sm" style="background-color:orange;">25%</div>
+        <div class="col-sm" style="background-color:rgb(0, 238, 255);">25%</div>
+        <div class="col-sm" style="background-color:orange;">25%</div>
+      </div>
+      <br>
+      
+      <div class="row">
+        <div class="col" style="background-color:rgb(0, 238, 255);">25%</div>
+        <div class="col" style="background-color:orange;">25%</div>
+        <div class="col" style="background-color:rgb(0, 238, 255);">25%</div>
+        <div class="col" style="background-color:orange;">25%</div>
+      </div>
+    </div>
+  </div>
+
+
+   
+</body>
+</html>
+
+
+
+
+
+

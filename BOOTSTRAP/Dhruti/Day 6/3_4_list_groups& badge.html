@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="bootstrap.min.css">
+    <script src="jquery.min.js"></script>
+    <script src="popper.min.js"></script>
+    <script src="bootstrap.min.js"></script>
+    <title>Bootstrap</title>
+</head>
+<body>
+    <header>
+        <h1 class="display-3 text-center my-4">List groups & badges</h1>
+        <div class="container">
+            <div class="row">
+                <div class="col-md-3">
+                <div class="dropdown">
+                    <button class="btn btn-primary btn-block dropdown-toggle" type="button" data-toggle="dropdown">
+                         2: Utilities
+                    </button>
+                    <div class="dropdown-menu">
+                       <a class="dropdown-item" href="2_2_basic_typography.html">2.2 Basic Typography</a>
+                       <a class="dropdown-item" href="2_3_Text Alignment & Display.html">2.3 Text Alignment & Display</a>
+                       <a class="dropdown-item" href="2_4_floats & position.html">2.4 Floats & Position</a>
+                       <a class="dropdown-item" href="2_5_Colors_&_background.html">2.5 Colors & Background</a>
+                       <a class="dropdown-item" href="2_6_Spacing.html">2.6 Spacing</a>
+                       <a class="dropdown-item" href="2_7_sizing.html">2.7 Sizing</a>
+                       <a class="dropdown-item" href="2_8_breakpoints.html">2.8 Breakpoints</a>
+                    </div>
+                </div>
+            </div>
+                <div class="col-md-3">
+                <div class="dropdown ">
+                    <button class="btn btn-success btn-block dropdown-toggle" type="button" data-toggle="dropdown">
+                        3: css Component
+                    </button>
+                    <div class="dropdown-menu">
+                        <a class="dropdown-item" href="3_2_buttons&button_groups.html">3.2 button & button groups</a>
+                        <a class="dropdown-item" href="3_3_navbar.html">3.3 navbar</a>
+                        <a class="dropdown-item" href="3_4_list_groups& badge.html">3.4 list groups & badges</a>
+                        <a class="dropdown-item" href="3_5 forms.html">3.5 forms</a>
+                        <a class="dropdown-item" href="3_6_input_groups.html">3.6 input groups</a>
+                        <a class="dropdown-item" href="3_7_alerts & progressbar.html">3.7 alerts & progress</a>
+                        <a class="dropdown-item" href="3_8 tables& pagination.html">3.8 tables & pagination</a>
+                        <a class="dropdown-item" href="3_9 cards.html">3.9 cards</a>
+                        <a class="dropdown-item" href="3_10 media objects.html">3.10 media objects</a>
+                     </div>
+                </div>
+            </div>
+            <div class="col-md-3">
+                <div class="dropdown ">
+                    <button class="btn btn-warning btn-block  dropdown-toggle" type="button" data-toggle="dropdown">
+                        4: Grid & flexbox
+                    </button>
+                    <div class="dropdown-menu">
+                       <a class="dropdown-item" href="4_2 Grid system.html">4.2 Grid system</a>
+                       <a class="dropdown-item" href="4_3 grid alignment.html">4.3 Grid Alignment</a>
+                       <a class="dropdown-item" href="4_4 flexbox.html">4.4 flexbox </a>
+                       <a class="dropdown-item" href="4_5 auto margin & wrap.html">4.5 Auto Margin & wrap</a>
+
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-3">
+                <div class="dropdown ">
+                    <button class="btn btn-danger btn-block  dropdown-toggle" type="button" data-toggle="dropdown">
+                          5: javascript Widgets
+                    </button>
+                    <div class="dropdown-menu">
+                       <a class="dropdown-item" href="5_2 carousel slider.html">5.2 carousel slider</a>
+                       <a class="dropdown-item" href="5_3 collapse & accordion.html">5.3 collapse & accordion</a>
+                       <a class="dropdown-item" href="5_4 tooltips.html">5.4 tooltips</a>
+                       <a class="dropdown-item" href="5_5 popovers.html">5.5 popovers</a>
+                       <a class="dropdown-item" href="5_6 modals.html">5.6 modals</a>
+                     
+                    </div>
+                </div>
+            </div>
+            </div>
+        </div>
+        <hr>
+    </header>
+   
+<div class="container">
+<!--list groups-->
+<ul class="list-group mb-5">
+    <li class="list-group-item">my list item 1</li>
+    <li class="list-group-item">my list item 2</li>
+    <li class="list-group-item">my list item 3</li>
+    <li class="list-group-item">my list item 4</li>
+    <li class="list-group-item">my list item 5</li>
+</ul>
+
+<!--list groups with link-->
+<ul class="list-group mb-5">
+   <a class="list-group-item list-group-item-action" href="#">list 1</a>
+   <a class="list-group-item list-group-item-action" href="#">list 2</a>
+   <a class="list-group-item list-group-item-action" href="#">list 3</a>
+   <a class="list-group-item list-group-item-action" href="#">list 4</a>
+   <a class="list-group-item list-group-item-action" href="#">list 5</a>
+</ul>
+<!--contextual classses-->
+<ul class="list-group mb-5 ">
+    <li class="list-group-item ">regular list item</li>
+    <li class="list-group-item list-group-item-primary">primary list item 2</li>
+    <li class="list-group-item list-group-item-secondary">secondary list item 3</li>
+    <li class="list-group-item list-group-item-success">Success list item 4</li>
+    <li class="list-group-item list-group-item-info">Info list item 5</li>
+    <li class="list-group-item list-group-item-warning">warning list item</li>
+    <li class="list-group-item list-group-item-danger">denger list item 2</li>
+    <li class="list-group-item list-group-item-light">light list item 3</li>
+    <li class="list-group-item list-group-item-dark">dark list item 4</li>
+   
+</ul>
+<!--javascript behavior-->
+<div class="row mb-5">
+        <div class="col-4">
+            <div class="list-group mb-5" id="list-tab" role="tablist">
+                <a class="list-group-item list-group-item-action" id="list-home-list" href="#list-home" data-toggle="list">home</a>
+                <a class="list-group-item list-group-item-action" id="list-about-list" href="#list-about" data-toggle="list">about</a>
+                <a class="list-group-item list-group-item-action" id="list-contact-list" href="#list-contact" data-toggle="list">contact</a>
+            </div>
+        </div>
+        <div class="col-4">
+    <div class="tab-content"id="nav-tabContent">
+    <div class="tab-pane fade show active"id="list-home" role="tabpanel">
+        home content......
+    </div>
+    <div class="tab-pane fade  "id="list-about" role="tabpanel">
+        about content......
+    </div>
+    <div class="tab-pane fade  "id="list-contact" role="tabpanel">
+        contact content......
+    </div>
+    </div>
+        </div>
+</div>
+<!--badges-->
+<ul class="list-group mb-5">
+    <li class="list-group-item">my list item 1</li>
+    <li class="list-group-item d-flex justify-content-between align-items-center">my list item 2 <span class="badge badge-primary">60</span></li>
+    <li class="list-group-item">my list item 3</li>
+    <li class="list-group-item">my list item 4</li>
+    <li class="list-group-item">my list item 5</li>
+</ul>
+<!--breadcrumb-->
+<ol class="breadcrumb">
+    <li class="breadcrumb-item active" >home</li>
+</ol>
+<ol class="breadcrumb">
+    <li class="breadcrumb-item "><a href="#">home</a></li>
+    <li class="breadcrumb-item active ">users</li>
+</ol>
+<ol class="breadcrumb">
+    <li class="breadcrumb-item  " ><a href="#">home</a></li>
+    <li class="breadcrumb-item  "><a href="#">users</a></li>
+  <li class="breadcrumb-item active ">bred</li>
+</ol>
+</div>
+</body>
+</html>
