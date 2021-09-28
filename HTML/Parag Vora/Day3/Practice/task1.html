@@ -1,0 +1,58 @@
+<!-- Parent div should contain 3 div inside. Div should be arranged in following manner.
+ -->
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Task 1</title>
+    <style>
+        * {
+            color: white;
+        }
+        
+        div {
+            float: left;
+            margin-left: 10px;
+            text-align: center;
+            border: 2px solid green;
+            padding: 10px;
+        }
+        
+        #child-1 {
+            background-color: red;
+            border: 2px solid black;
+            height: 100px;
+            width: 100px;
+        }
+        
+        #child-2 {
+            background-color: yellow;
+            border: 2px solid black;
+            height: 100px;
+            width: 100px;
+            color: black;
+        }
+        
+        #child-3 {
+            background-color: green;
+            border: 2px solid black;
+            height: 100px;
+            width: 100px;
+            margin-right: 10px;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="parent">
+        <div id="child-1">child 1</div>
+        <div id="child-2">child 2</div>
+        <div id="child-3">child 3</div>
+    </div>
+</body>
+
+</html>

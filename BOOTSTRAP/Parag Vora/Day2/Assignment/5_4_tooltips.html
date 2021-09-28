@@ -1,0 +1,159 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <!-- Required meta tags -->
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <!-- Bootstrap CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-F3w7mX95PdgyTmZZMECAngseQB83DfGTowi0iMjiWaeVhAn4FJkqJByhZMI3AhiU" crossorigin="anonymous">
+
+  <title>Tootltips</title>
+</head>
+
+<body>
+  <header>
+    <h1 class="display-3 text-center my-4">Tootltips</h1>
+    <div class="container">
+      <div class="row">
+        <div class="col-md-3">
+          <div class="dropdown">
+            <button class="btn btn-info col-sm-8 bt dropdown-toggle" type="button" id="dropdownMenuButton1"
+              data-bs-toggle="dropdown" aria-expanded="false">
+              2:Utilities
+            </button>
+            <div class="dropdown-menu">
+              <a class="dropdown-item" href="/Day1/Assignment/2_2_basic_typography.html">2.2 Basic Typography</a>
+              <a class="dropdown-item" href="/Day1/Assignment/2_3_text_alignment_display.html">2.3 Text Alignment &
+                Display</a>
+              <a class="dropdown-item" href="/Day1/Assignment/2_4_floats_position.html">2.4 Floats & Position</a>
+              <a class="dropdown-item" href="/Day1/Assignment/2_5_colors_background.html">2.5: Colors & Background</a>
+              <a class="dropdown-item" href="/Day1/Assignment/2_6_spacing.html">2.6 Spacing</a>
+              <a class="dropdown-item" href="/Day1/Assignment/2_7_sizing.html">2.7 Sizing</a>
+              <a class="dropdown-item" href="/Day1/Assignment/2_8_breakpoints.html">2.8 Breakpoints</a>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-3">
+          <div class="dropdown">
+            <button class="btn btn-success col-sm-8 dropdown-toggle" type="button" id="dropdownMenuButton1"
+              data-bs-toggle="dropdown" aria-expanded="false">
+              3: CSS Components
+            </button>
+            <div class="dropdown-menu">
+              <a class="dropdown-item" href="/Day1/Assignment/3_2_buttons.html">3.2 Buttons</a>
+              <a class="dropdown-item" href="/Day1/Assignment/3_3_navbar.html">3.3 Navbar</a>
+              <a class="dropdown-item" href="/Day1/Assignment/3_4_list_groups_badges.html">3.4 List Groups & Badges</a>
+              <a class="dropdown-item" href="/Day1/Assignment/3_5_forms.html">3.5 Forms</a>
+              <a class="dropdown-item" href="/Day1/Assignment/3_6_input_groups.html">3.6 Input Groups</a>
+              <a class="dropdown-item" href="/Day1/Assignment/3_7_alerts_progress.html">3.7 Alerts & Progress</a>
+              <a class="dropdown-item" href="/Day1/Assignment/3_8_tables_pagination.html">3.8 Tables & Pagination</a>
+              <a class="dropdown-item" href="/Day1/Assignment/3_9_cards.html">3.9 Cards</a>
+              <a class="dropdown-item" href="/Day1/Assignment/3_10_media_object.html">3.10 Media Objects</a>
+              <a class="dropdown-item" href="/Day1/Assignment/3_11_jumbotron.html">3.11 Jumbotron</a>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-3">
+          <div class="dropdown">
+            <button class="btn btn-warning col-sm-8 dropdown-toggle" type="button" id="dropdownMenuButton1"
+              data-bs-toggle="dropdown" aria-expanded="false">
+              4: Grid & Flexbox
+            </button>
+            <div class="dropdown-menu">
+              <a class="dropdown-item" href="/Day2/Assignment/4_2_grid_system.html">4.2 Grid System</a>
+              <a class="dropdown-item" href="/Day2/Assignment/4_3_grid_alignment.html">4.3 Grid Alignment</a>
+              <a class="dropdown-item" href="/Day2/Assignment/4_4_flexbox.html">4.4 Flexbox</a>
+              <a class="dropdown-item" href="/Day2/Assignment/4_5_auto_margins_wrapping_order.html">4.5 Auto Margins &
+                Wrap</a>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-3">
+          <div class="dropdown">
+            <button class="btn btn-danger col-sm-8 dropdown-toggle" type="button" id="dropdownMenuButton1"
+              data-bs-toggle="dropdown" aria-expanded="false">
+              5: JavaScript Widgets
+            </button>
+            <div class="dropdown-menu">
+              <a class="dropdown-item" href="/Day2/Assignment/5_2_carousel.html">5.2 Carousel</a>
+              <a class="dropdown-item" href="/Day2/Assignment/5_3_collapse.html">5.3 Collapse</a>
+              <a class="dropdown-item" href="/Day2/Assignment/5_4_tooltips.html">5.4 Tooltips</a>
+              <a class="dropdown-item" href="/Day2/Assignment/5_5_popovers.html">5.5 Popovers</a>
+              <a class="dropdown-item" href="/Day2/Assignment/5_6_modals.html">5.6 Modals</a>
+              <a class="dropdown-item" href="/Day2/Assignment/5_7_scrollspy.html">5.7 ScrollSpy</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <hr>
+  </header>
+  <div class="container">
+    <!--###################START HERE######################-->
+
+    <!-- TOOLTIPS -->
+    <button class="btn btn-primary" data-bs-toggle="tooltip" data-bs-placement="Top" title="tooltip on top">Tooltip On
+      Top</button>
+    <button class="btn btn-success" data-bs-toggle="tooltip" data-bs-placement="right" title="tooltip on Right">Tooltip
+      On Right</button>
+    <button class="btn btn-warning" data-bs-toggle="tooltip" data-bs-placement="bottom"
+      title="tooltip on bottom">Tooltip On Bottom</button>
+    <button class="btn btn-danger" data-bs-toggle="tooltip" data-bs-placement="left" title="tooltip on left">Tooltip On
+      Left</button>
+
+    <br>
+    <br>
+
+    <!-- TOOLTIPS WITH HTML -->
+    <button class="btn btn-primary" id="hello" data-bs-toggle="tooltip" data-bs-placement="Top" data-bs-html="true" title="<h3>hello world</h3><p>Lorem ipsum dolor sit amet.</p>">Tooltip with
+      html</button>
+
+    <hr>
+
+    <!-- TRIGGER WITH JS -->
+    <button class="btn btn-secondary" onclick="showTooltip()">
+      Show Tooltip
+    </button>
+
+    <button class="btn btn-secondary" onclick="hideTooltip()">
+      Hide Tooltip
+    </button>
+
+    <button class="btn btn-secondary" onclick="toggleTooltip()">
+      Toggle Tooltip
+    </button>
+
+  </div>
+
+  <div style="margin-top:500px;"></div>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-/bQdsTh/da6pkI1MST/rWKFNjaCP5gBSY4sEBT38Q/9RBh9AH40zEOg7Hlq2THRZ"
+    crossorigin="anonymous"></script>
+
+  <script>
+    var tooltipTriggerList = [].slice.call(document.querySelectorAll('[data-bs-toggle="tooltip"]'))
+    var tooltipList = tooltipTriggerList.map(function (tooltipTriggerEl) {
+      return new bootstrap.Tooltip(tooltipTriggerEl)
+    })
+
+
+    function showTooltip()
+    {
+      $('#hello').tooltip('show');
+    }
+    function hideTooltip()
+    {
+      $('#hello').tooltip('hide');
+    }
+    function toggleTooltip()
+    {
+      $('#hello').tooltip('Toggle');
+    }
+  </script>
+</body>
+
+</html>
