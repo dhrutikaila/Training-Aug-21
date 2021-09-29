@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="../Bootstrap/bootstrap-5.1.1-dist/bootstrap-5.1.1-dist/css/bootstrap.min.css" rel="stylesheet">
+    <title>Assignment Day 1</title>
+</head>
+
+<body>
+    <div class="container">
+    <div class="d-flex w-75 m-3">
+    <label class="form-label mx-1">Please Enter First Number:</label><input class="form-control w-25" type="text" id="num1" />
+    <label class="form-label mx-1">Please Enter Second Number:</label><input class="form-control w-25" type="text" id="num2" />
+    </div>
+    <button class="btn btn-primary m-2" type="button" onclick="add()">Add</button>
+    <button class="btn btn-primary m-2" type="button" onclick="sub()">Sub</button>
+    <button class="btn btn-primary m-2" type="button" onclick="mul()">Mul</button>
+    <button class="btn btn-primary m-2" type="button" onclick="div()">Div</button><br/>
+    <input class="btn btn-outline-primary my-3" type="submit" value="Calculate">
+    <input class="btn btn-outline-primary my-3" type="reset" onclick="reset()">
+    <h3>The Result is :<b id="result"></b> </h3>
+    </div>
+    <script>
+        function add() {
+            num1 = parseInt(document.getElementById('num1').value);
+            num2 = parseInt(document.getElementById('num2').value);
+            document.getElementById('result').innerHTML=num1+num2
+        }
+        function sub() {
+            num1 = parseInt(document.getElementById('num1').value);
+            num2 = parseInt(document.getElementById('num2').value);
+            document.getElementById('result').innerHTML=num1-num2
+        }
+        function mul() {
+            num1 = parseInt(document.getElementById('num1').value);
+            num2 = parseInt(document.getElementById('num2').value);
+            document.getElementById('result').innerHTML=num1*num2
+        }
+        function div() {
+            num1 = parseInt(document.getElementById('num1').value);
+            num2 = parseInt(document.getElementById('num2').value);
+            document.getElementById('result').innerHTML=num1/num2
+        }
+        function reset()
+        {
+            document.getElementById('result').innerHTML="";
+        }
+    </script>
+</body>
+
+</html>

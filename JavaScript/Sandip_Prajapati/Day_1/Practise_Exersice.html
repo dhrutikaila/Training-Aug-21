@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="../Bootstrap/bootstrap-5.1.1-dist/bootstrap-5.1.1-dist/css/bootstrap.min.css" rel="stylesheet">
+    <title>Practise Exersice JS Day 1</title>
+</head>
+<body>
+    <script>
+        var num1 =parseInt(prompt("Enter number 1"));
+        var num2 =parseInt(prompt("Enter number 2"));
+        var num3 =parseInt(prompt("Enter number 3"));
+        console.log(num1);
+        console.log(num2);
+        console.log(num3);
+        //Accept three numbers from the user using prompt, find the greater of these the numbers
+        if(num1>num2 && num1>num3)
+        {
+            console.log("I am Greater Than Every Body",num1);
+        }
+        else if (num2>num1 && num2>num3)
+        {
+            console.log("I am Greater Than Every Body",num2);
+        }
+        else{
+            console.log("I am Greater Than Every Body",num3);
+        }
+        //do the sum of that numbers which are greater than 40.
+        var numarr = [num1,num2,num3];
+        var count = 0
+        for(let num of numarr)
+        {
+            if(num>40)
+            {
+                count+=num   
+            }
+        }
+        console.log("Sum of Greater than 40 is",count);
+        //Declare array with 5 city names and iterate these values with the help of loop and display it with alert.
+        var cityarr = ['Tokyo','Moscow','Berlin','Oslo','Jaipur']
+        for(x of cityarr){
+            alert(x)
+        }
+    </script>
+    <script src="../Bootstrap/bootstrap-5.1.1-dist/bootstrap-5.1.1-dist/js/bootstrap.bundle.js"></script>
+</body>
+</html>
