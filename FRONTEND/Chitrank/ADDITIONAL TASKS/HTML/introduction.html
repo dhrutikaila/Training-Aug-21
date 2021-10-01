@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8"> 
+    <meta name="viewport" content="width=device-width,initial-scale=1.0">
+    <title>FarmPe | Introduction</title>
+<style>
+table,th,td{
+    border: 1px solid white;
+    border-collapse: collapse;
+    padding: 10px;
+    text-align: left;
+    width: 30%;
+    font-size: 20px;
+}
+th,td{
+   
+    border-radius: 15px;
+}
+th{
+    background-color: #D6EEEE;
+}
+
+tr:hover{
+    background-color: #D6EEEE;
+}
+input[type=range]::after{content: attr(max);}
+input[type=range]::before{content: attr(min);}
+input[type=range]{width:250px; color : black;font-family: 'Segoe UI';font-size: small;}
+</style>
+</head>
+<body>
+    <h1>Welcome to the FarmPe Family</h1>
+    <img src="Logo.jpg" alt="FarmPe Logo" width="300" height="300">
+    <p style="font-size: 200%;">Employee Details</p>
+    <table>
+        <tr>
+            <th>Employee Name</th>
+            <th>Designation</th>
+            <th>State</th>
+        </tr>
+        <tr>
+            <td>Chitrank Umarania</td>
+            <td>CEO</td>
+            <td>Gujarat</td>
+        </tr>
+        <tr>
+            <td>Yagnik Patel</td>
+            <td>HR Manager</td>
+            <td>Gujarat</td>
+        </tr>
+        <tr>
+            <td>Harshit Panchal</td>
+            <td>IT Head</td>
+            <td>Maharashtra</td>
+        </tr>
+    </table>
+<br>
+<br>
+<h2>Employee Registration Form</h2>
+<br>
+<form style="font-size: 20px;" target="_blank" method="GET" autocomplete="on"> 
+    <fieldset>
+    <legend><b>Personal Information</b></legend><br>
+    <label for="fname">FirstName :</label>
+    <input type="text" name="fname" id="fname" maxlength="20" autofocus><br><br>
+    <label for="lname">LastName : </label maxlength="30">
+    <input type="text" name="lname" id="lname"><br><br>
+    Gender :
+    <input type="radio" id="male" name="gender" value="male">
+    <label for="male">Male</label>
+    <input type="radio" id="Female" name="gender" value="female">
+    <label for="Female">Female</label>
+    <br><br>
+    <label for="number">Phone No.:</label>
+    <input type="tel" id="number" name="phonenumber" pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}" placeholder="123-456-7890"required><br><br>
+    Languages Known :
+    <input type="checkbox" id="english" name="langknown" value="English">
+    <label for="english">English</label>
+    <input type="checkbox" id="hindi" name="langknown" value="hindi">
+    <label for="hindi">Hindi</label>
+    <input type="checkbox" id="gujarati" name="langknown" value="Gujarati">
+    <label for="gujarati">Gujarati</label>&ensp;
+    <label for="other">Any Other :</label>
+    <input type="text" id="other" name="langknown"><br><br>
+    <label for="birthdate">BirthDate :</label>
+    <input type="date" id="birthdate" name="birthdate"><br><br>
+    <label for="email">Email :</label>
+    <input type="email" id="email" name="email"><br><br>
+    <label for="resume">Upload Resume :</label>
+    <input type="file" id="resume" name="resume"><br><br>
+    <label for="HighestQualification">Highest Qualification :</label>
+    <select id="HighestQualification" name="HighestQualification">
+        <option value="" hidden></option>
+        <option value="10th">10th</option>
+        <option value="12th">12th</option>
+        <option value="Diploma">Diploma</option>
+        <option value="Bachelors Degree" >Bachelors Degree</option>
+        <option vaue="Masters Degree">Masters Degree</option>
+    </select><br><br>
+    </fieldset><br><br>
+    <textarea name="message" rows="10" cols="50">
+ Other things, You would like to share ! 
+ Write Below 
+    </textarea><br><br>
+    <button type="button" onclick="alert('Hey TeamMates!')">Click Me </button>
+    <br>
+    <br>
+    Choose your Technology : <input list="Technology"> 
+    <datalist id="Technology">
+        <option value="PHP">
+        <option value="DotNet">
+        <option value="DBA">DBA</option>
+        <option value="Cloud">Cloud</option>
+    </datalist>
+    <br>
+    <br>
+    <label for="Skills">Rate your Skills :</label>
+    <input type="range" id="Skills" name="Skills" min="0" max="10" value="0"><br><br>
+    <input type="submit" value="Submit">
+    <input type="reset">
+</form>
+
+ 
+</body>
+</html>

@@ -1,0 +1,217 @@
+<!--
+1.Parent div should contain 3 div inside. Div should be arranged in following manner
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=<device-width>, initial-scale=1.0">
+    <title>Document</title>
+<style>
+    .container {
+            width:600px;
+            height:190px;
+            background-color:powderblue;
+            padding-top:20px;
+            padding-left:15px;
+            padding-right:15px;
+        }
+        #st-box {
+            float:left;
+            width:180px;
+            height:160px;
+            border:1px solid black;
+        }
+        #nd-box {
+            float:left;
+            width:180px;
+            height:160px;
+            border:1px solid black;
+            margin-left:25px;
+        }
+        #rd-box {
+            float:right;
+            width:180px;
+            height:160px;
+            border:1px solid black;
+            margin-right: 5px;
+
+        }
+</style>
+</head>
+<body>
+    
+    <div class="container">
+        <div id="st-box">
+        </div>
+        <div id="nd-box">
+        </div>
+        <div id="rd-box">
+        </div>
+    </div>
+</body>
+</html>
+-->
+
+<!--
+2.1 STATIC
+
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+div.static {
+  position: static;
+  border: 3px solid #73AD21;
+}
+</style>
+</head>
+<body>
+<h2>position: static;</h2>
+<div class="static">
+  STATIC POSITION;
+</div>
+</body>
+</html>
+-->
+
+<!--
+2.2 RELATIVE
+
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+div.relative {
+  position: relative;
+  left: 30px;
+  border: 3px solid #73AD21;
+}
+</style>
+</head>
+<body>
+<div class="relative">
+    RELATIVE POSITION;
+</div>
+</body>
+</html>    
+-->
+
+
+<!--
+2.3 FIXED  
+
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+div.fixed {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 300px;
+  border: 3px solid #73AD21;
+}
+</style>
+</head>
+<body>
+<div class="fixed">
+    FIXED POSITION
+</div>
+</body>
+</html>
+-->
+
+<!--
+2.4 ABSOLUTE
+
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+div.relative {
+  position: relative;
+  width: 400px;
+  height: 200px;
+  border: 3px solid #73AD21;
+} 
+div.absolute {
+  position: absolute;
+  top: 80px;
+  right: 0;
+  width: 200px;
+  height: 100px;
+  border: 3px solid #73AD21;
+}
+</style>
+</head>
+<body>
+<div class="relative">This div element has position: relative;
+  <div class="absolute">This div element has position: absolute;</div>
+</div>
+</body>
+</html>
+-->
+
+<!--
+2.5 STICKY
+
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+div.sticky {
+  position: sticky;
+  top: 0;
+  padding: 5px;
+  background-color: #cae8ca;
+  border: 2px solid #4CAF50;
+}
+</style>
+</head>
+<body>
+<div class="sticky">I am sticky!</div>
+
+<div style="padding-bottom:2000px">
+  <p>In this example, the sticky element sticks to the top of the page (top: 0), when you reach its scroll position.</p>
+  <p>Scroll back up to remove the stickyness.</p>
+</div>
+</body>
+</html>
+-->
+
+
+<!--
+3.Suppose we have a div with specific height and width and we need to arrange more text into it. 
+Use overflow properties.
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+<style>
+    div{
+        overflow: scroll;
+        border: 1px solid black;
+        width: 100px;
+        height: 100px;
+    }
+</style>
+</head>
+<body>
+    <div>
+    sgsjgfklsgfklgkldfjgljdfljgljljjfjdsjfljds
+    sdgjklfgjkldfjglkdflkgjkldjkhl
+    sdgksjgkljdfgkldfjhgfklh
+    fghdfjhgljhlkjgfljhlfjglhjf
+    sgojsojgofjogjof
+    gojhooidfjhjojdfjhodjg
+    sgojosjgojfojgojdf
+    </div>
+</body>
+</html>
+-->

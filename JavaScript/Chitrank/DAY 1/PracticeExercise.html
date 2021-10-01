@@ -1,0 +1,70 @@
+<!--
+1.Accept three numbers from the user using prompt, find the greater of these the numbers and do the sum of that numbers which are greater than 40.
+2.Declare array with 5 city names and iterate these values with the help of loop and display it with alert.
+-->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-F3w7mX95PdgyTmZZMECAngseQB83DfGTowi0iMjiWaeVhAn4FJkqJByhZMI3AhiU" crossorigin="anonymous">
+
+</head>
+
+<body>
+
+<div class="container my-5">
+<p id="demo" class="display-5 mb-4"></p>
+<p id="great" class="display-5 mb-4"></p>
+<p id="sum" class="display-5 mb-4"></p>
+</div>
+
+<script>
+
+    //CHECK THE GREATEST NUMBER
+    var x = parseInt(prompt("Enter 1st Number"));
+    var y = parseInt(prompt("Enter 2nd Number"));
+    var z = parseInt(prompt("Enter 3rd Number"));
+    document.getElementById('demo').innerHTML = "Three numbers are : " + x + " " + y + " " + z;
+    if(x == y && y == z)
+    {
+        document.getElementById('great').innerHTML = "Greatest Number is : All are equal";
+    }
+    else if(x >= y && x >=z)
+    {
+        document.getElementById('great').innerHTML = "Greatest Number is :" + x + " is the greatest" ;
+    }
+    else if(y >= x && y >= z)
+    {
+        document.getElementById('great').innerHTML = "Greatest Number is : " + y + " is the greatest" ;
+    }
+    else
+    {
+        document.getElementById('great').innerHTML = "Greatest Number is :" + z + " is the greatest" ;
+    }
+    
+    //SUM NUMBERS GREATER THAN 40
+    var nums = new Array(x,y,z);
+    var sum = 0;
+    for(var i=0;i<nums.length;i++)
+    {   
+        if(parseInt(nums[i])>=40)
+        {
+            sum+=parseInt(nums[i]);
+        }
+    }
+    document.getElementById('sum').innerHTML = "Sum of numbers greater than 40 : " + sum;
+    
+    //LOOP ARRAY 
+    var city = ['Ahmedabad','Baroda','Mumbai','Dehi','Manali'];
+    for(var i=0;i<city.length;i++)
+    {
+        alert(city[i])
+    }
+</script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-/bQdsTh/da6pkI1MST/rWKFNjaCP5gBSY4sEBT38Q/9RBh9AH40zEOg7Hlq2THRZ" crossorigin="anonymous"></script>
+</body>
+</html>

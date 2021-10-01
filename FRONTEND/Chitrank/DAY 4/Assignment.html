@@ -1,0 +1,57 @@
+<!--
+Create a menu list of the website. It should be responsive.
+-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+<style>
+*{
+    box-sizing: border-box;
+}
+body{
+    margin: 0;
+}
+.flex-container{
+    display:flex;
+    background-color: darkslategray;
+    justify-content: flex-end;
+}
+.flex-container > div{
+    background-color: black;
+    padding: 10px 20px;
+    margin: 0;
+    border-right: 1px solid white;
+}
+.flex-container > div a{
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    color:white;
+    text-decoration: none;
+}
+.flex-container > div:hover{
+    background-color: red;
+    
+}
+@media screen and (max-width: 700px){
+    .flex-container{
+        flex-direction: column;
+    }
+    .flex-container > div{
+        text-align: center;
+    }
+   
+}
+
+</style>
+</head>
+<body>
+    <div class="flex-container">
+        <div><a href="#home">Home</a></div>
+        <div><a href="#ContactUs">ContactUs</a></div>
+        <div><a href="#AboutUs">About</a></div>
+    </div>
+</body>
+</html>

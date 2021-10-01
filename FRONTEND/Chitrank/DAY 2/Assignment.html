@@ -1,0 +1,258 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Resume</title>
+    <script src="https://kit.fontawesome.com/e52d09bced.js" crossorigin="anonymous"></script>
+<style>
+*{
+    box-sizing: border-box;
+}
+body{
+    margin: 0;
+
+}
+.row{
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.personalinfo{
+    flex: 20%;
+    background-color: darkslategrey;
+    padding: 20px;
+}
+.personalinfo > img{
+    margin-top: 90px;
+    margin-left: 50px;
+    width: 100px;
+    height: 100px;
+}
+.personalinfo > h2{
+    margin-top: 40px;
+    font-size: 20px;
+}
+.main{
+    flex: 80%;
+    background-color: white;
+    padding: 20px;
+}
+.main h2{
+    margin-top: 30px;
+    margin-left: 40px;
+    color: gray;
+    font-family: sans-serif;
+    font-weight:750px;
+}
+.main p{
+    margin-left: 40px;
+    font-family: Arial, Helvetica, sans-serif;
+}
+.education{
+    flex: 20%;
+    background-color: darkslategrey;
+    padding: 20px;
+}
+.education > h2{
+    margin-top:30px;
+    margin-left: 45px;
+    color: white;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 20px;
+}
+.education > i{
+    font-size:80px;
+    color: white;
+    margin-top: 90px;
+    margin-left: 65px;
+}
+
+.skill{
+    flex: 20%;
+    background-color: darkslategrey;
+    padding: 20px;
+}
+.skill > i{
+    font-size:80px;
+    color: white;
+    margin-top: 90px;
+    margin-left: 55px;
+}
+.skill > h2{
+    margin-top:30px;
+    margin-left: 70px;
+    color: white;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 20px;
+}
+.main1{
+    display: flex;
+    flex: 80%;
+    background-color: white;
+    padding: 20px;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+.main1 > div{
+    margin:20px;
+    color: white;
+    background-color: gray;
+    padding:15px;
+    margin-left: 40px;
+    width:25%;
+    text-align: center;
+    border-radius: 50px;
+}
+.experience{
+    flex: 20%;
+    background-color: darkslategrey;
+    padding: 20px;
+}
+.experience > i{
+    font-size:80px;
+    color: white;
+    margin-top: 90px;
+    margin-left: 58px;
+}
+.experience > h2{
+    margin-top:30px;
+    margin-left: 44px;
+    color: white;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 20px;
+}
+.hobbies{
+    flex: 20%;
+    background-color: darkslategrey;
+    padding: 20px;
+}
+.hobbies > i{
+    font-size: 80px;
+    color: white;
+    margin-top: 90px;
+    margin-left: 25%;
+}
+.hobbies > h2{
+    margin-top:30px;
+    margin-left: 23%;
+    color: white;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 20px;
+}
+.main2{
+    display: flex;
+    flex: 80%;
+    background-color: white;
+    padding: 20px;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+.main2 > div{
+    margin:20px;
+    color: white;
+    background-color: gray;
+    padding:50px;
+    margin-left: 40px;
+    width:25%;
+    text-align: center;
+    font-size: 20px;
+    border-radius: 5px;
+
+}
+</style>
+</head>
+<body>
+    
+    <img src="../ASSETS/LAYOUT.jpg" alt="img" width="1268" height="500px" usemap="#imgmap">
+    <map name="imgmap">
+        <area shape="rect" coords="297,411,471,306" href="#PersonalInfo" alt="pic">
+        <area shape="rect" coords="325,221,471,115" href="#Work" alt="pic">
+        <area shape="rect" coords="676,25,571,142" href="#skill" alt="pic">
+        <area shape="rect" coords="887,111,775,219" href="#hobby" alt="pic">
+        <area shape="rect" coords="804,415,910,306" href="#education" alt="pic">
+    </map>
+    <div class="row">
+    <div class="personalinfo">
+        <img src="../ASSETS/photo.png" alt="photo">
+        <h2 style="color: white;font-family: Verdana, Geneva, Tahoma, sans-serif;">Chitrank Umarania</h2>
+    </div>
+    <div class="main" id="PersonalInfo">
+        <h2>Personal Info</h2>
+        <br>
+        <p>Full Name: Chitrank Sudhirbhai Umarania</p>
+        <p>Date of Birth: 5th April 2000</p>
+        <p>Languages Known: English,Hindi,Gujarati</p>
+        <p>Marital Status: Unmarried</p>
+        <p><i class="far fa-envelope"> : chitumarania@gmail.com</i></p>
+        <p><pre>      <i class="fas fa-mobile-alt"> : 7778904407</i></pre></p>
+    </div>
+
+    <div class="education" id="education">
+        <i class="fas fa-user-graduate"></i>
+        <h2>Education</h2>
+    </div>
+    <div class="main">
+        <h2>Educational Qualification</h2>
+        <br>
+        <h4 style="margin-left: 40px;">L.J.INSTITUTE OF ENGINEERING AND TECHNOLOGY</h4>
+        <p style="line-height: 0px;">B.E. | Computer Engineering | 2017-2021</p>
+        <p>CGPA - 8.78 | CPI - 8.94</p>
+
+        <h4 style="margin-left: 40px;">SHREE GAYATRI ENGLISH MEDIUM SCHOOL | GSHEB</h4>
+        <p style="line-height: 0px;">12th | 2016-2017</p>
+        <p>84.05 Percentile</p>
+        
+        <h4 style="margin-left: 40px;">N.V.PATEL ENGLISH MEDIUM SCHOOL | GSEB</h4>
+        <p style="line-height: 0px;">10th | 2014-2015</p>
+        <p>99.28 Percentile</p>
+    </div>
+
+    <div class="skill" id="skill">
+        <i class="fas fa-brain"></i>
+        <h2>Skills</h2>
+    </div>
+    <div class="main1">
+        <div>SQL <br><i class="fas fa-star" style="margin-top: 10px;"></i><i class="fas fa-star" style="margin-top: 10px;"></i><i class="fas fa-star" style="margin-top: 10px;"></i><i class="fas fa-star" style="margin-top: 10px;"></i><i class="far fa-star" style="margin-top: 10px;"></i></div>
+        <div>HTML <br><i class="fas fa-star" style="margin-top: 10px;"></i><i class="fas fa-star" style="margin-top: 10px;"></i><i class="fas fa-star" style="margin-top: 10px;"></i><i class="fas fa-star" style="margin-top: 10px;"></i><i class="far fa-star" style="margin-top: 10px;"></i></div>
+        <div>CSS <br><i class="fas fa-star" style="margin-top: 10px;"></i><i class="fas fa-star" style="margin-top: 10px;"></i><i class="fas fa-star" style="margin-top: 10px;"></i><i class="fas fa-star" style="margin-top: 10px;"></i><i class="far fa-star" style="margin-top: 10px;"></i></div>
+        <div>Communication <br><i class="fas fa-star" style="margin-top: 10px;"></i><i class="fas fa-star" style="margin-top: 10px;"></i><i class="fas fa-star" style="margin-top: 10px;"></i><i class="fas fa-star" style="margin-top: 10px;"></i><i class="far fa-star" style="margin-top: 10px;"></i></div>
+        <div>GitHub <br><i class="fas fa-star" style="margin-top: 10px;"></i><i class="fas fa-star" style="margin-top: 10px;"></i><i class="fas fa-star" style="margin-top: 10px;"></i><i class="fas fa-star" style="margin-top: 10px;"></i><i class="far fa-star" style="margin-top: 10px;"></i></div>
+    </div>
+    <div class="experience" id="Work">
+        <i class="fa fa-desktop"></i>
+        <h2>Experience</h2>
+    </div>
+    <div class="main">
+        <h2>Work Experience</h2>
+        <p style="line-height: 25px;">2021 - The Spark Foundation(Internship):<br> I Workded as a Data Science and Business Analytics Intern in an agile environment as a part of an
+        <br>interdisciplinary development team. 
+        <br><br>
+        </p>
+        <p style="line-height: 25px;">2020 - InfoLabz IT Service(Internship): <br>For a month I had completed an online learning session of web development and logic 
+        development.
+        </p>
+    </div>
+    <div class="hobbies" id="hobby">
+        <i class="fas fa-heading"></i>
+        <h2>Hobbies</h2>
+    </div>
+    <div class="main2">
+        <div><i class="fas fa-road" style="font-size: 100px;"></i>
+            <p style="margin-top: 50px;">Travelling</p>
+        </div>
+        <div><i class="fas fa-laptop" style="font-size: 100px;"></i>
+            <p style="margin-top: 50px;">Web Surfing</p>
+        </div>
+        <div><i class="fas fa-camera-retro" style="font-size:100px"></i>
+            <p style="margin-top: 50px;">Cinematography</p>
+        </div>
+    </div>
+    </div>
+</body>
+</html>

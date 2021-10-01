@@ -1,2 +1,0 @@
-SELECT * FROM Employees 
-WHERE Salary BETWEEN 5000 AND 8000
