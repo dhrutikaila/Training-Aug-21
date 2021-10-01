@@ -1,0 +1,25 @@
+<!-- Use Window.location object to navigate on another page -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Task 9</title>
+</head>
+<body>
+    <button id="btn" onclick="navigateToGoogle()">click me to go to google</button>
+    <button id="btn" onclick="navigateToTask7()">click me to go to task 7</button>
+    <script>
+        function navigateToGoogle()
+        {
+            window.location.href = 'https://www.google.com';
+        }
+        function navigateToTask7()
+        {
+            window.location.href = 'http://127.0.0.1:5500/Day3/Practice/task7.html';
+        }
+    </script>
+</body>
+</html>

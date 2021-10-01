@@ -1,0 +1,37 @@
+<!-- Create Login Form with field UserName and Password field. -->
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login Form</title>
+</head>
+
+<body>
+    <form name="login_form" method="GET" id="login_form" >
+       <h2> Login Form</h2>
+        <table width="250" border="1" >
+            <tr>
+                <td>Username:</td>
+                <td><input type="text" id="Username" name="Username" required></td>
+            </tr>
+            <tr>
+                <td>Password:</td>
+                <td>
+                    <input type="password" name="password" id="pswd" pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}" required
+                        title="Must contain at least one number and one uppercase and lowercase letter, and at least 8 or more characters">
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <input type="submit" value="LogIN" >
+                </td>
+            </tr>
+        </table>
+    </form>
+</body>
+
+</html>

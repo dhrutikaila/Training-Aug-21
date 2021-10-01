@@ -1,0 +1,50 @@
+<!-- Provide universal selector and apply blue color to a page -->
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login Form</title>
+    <style>
+        body
+        {
+            color:white;
+            background-color: rgb(72, 72, 204);
+        }
+        
+        table,h2{
+            text-align: center;
+            margin-left: auto; 
+            margin-right: auto;
+        }
+    </style>
+</head>
+
+<body>
+    <form name="login_form" method="GET" id="login_form" >
+       <h2> Login Form</h2>
+        <table width="250" border="1" >
+            <tr>
+                <td>Username:</td>
+                <td><input type="text" id="Username" name="Username" required></td>
+            </tr>
+            <tr>
+                <td>Password:</td>
+                <td>
+                    <input type="password" name="password" id="pswd" pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}" required
+                        title="Must contain at least one number and one uppercase and lowercase letter, and at least 8 or more characters">
+                </td>
+            </tr>
+            <tr>
+                <td colspan="2">
+                    <input type="submit" value="LogIN" id="btn" >
+                </td>
+            </tr>
+        </table>
+    </form>
+</body>
+
+</html>

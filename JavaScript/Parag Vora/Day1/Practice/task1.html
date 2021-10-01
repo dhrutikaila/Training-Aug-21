@@ -1,0 +1,49 @@
+<!-- Accept three numbers from the user using prompt, find the greater of these the numbers and do the sum of that numbers which are greater than 40. -->
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Practice Task 1</title>
+</head>
+
+<body>
+    <script>
+        var num1 = parseInt(prompt("enter first numebr"));
+        var num2 = parseInt(prompt("enter second numebr"));
+        var num3 = parseInt(prompt("enter third numebr"));
+        var sum = 0;
+        if (num1 > 40) {
+            sum = sum + (num1);
+        }
+        if (num2 > 40) {
+            sum = sum + (num2);
+        }
+        if (num3 > 40) {
+            sum = sum + (num3);
+        }
+
+
+        if (num1 > num2) {
+            if (num1 > num3) {
+                alert("the greater number is " + num1 + " " + "\n" + "the sum of the numbers is " + sum);
+            }
+            else {
+                alert("the greater number is " + num3 + " " + "\n" + "the sum of the numbers is " + sum)
+            }
+        }
+        else {
+            if (num2 > num3) {
+                alert("the greater number is " + num2 + " " + "\n" + "the sum of the numbers is " + sum);
+            }
+            else {
+                alert("the greater number is " + num3 + " " + "\n" + "the sum of the numbers is " + sum)
+            }
+        }
+    </script>
+</body>
+
+</html>

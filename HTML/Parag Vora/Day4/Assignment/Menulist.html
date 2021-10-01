@@ -1,0 +1,79 @@
+<!-- Create a menu list of the website. It should be responsive. -->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Menu List</title>
+    <style>
+        .header {
+            background-color: azure;
+            text-align: center;
+            border: 2px solid black;
+        }
+
+        a {
+            color: white;
+            text-decoration: none;
+        }
+
+        a:hover
+        {
+            color: aliceblue;
+            background-color: blueviolet;
+        }
+        .nav-bar ul li {
+            display: inline;
+            padding: 10px;
+            border: 2px solid black;
+            background-color: blue;
+            font-size: x-large;
+        }
+
+        .nav-bar {
+            display: flex;
+            margin-top: 10px;
+            background-color: blanchedalmond;
+            height: 70px;
+            border: 2px solid black;
+        }
+
+        @media(max-width:800px) {
+            .nav-bar ul li {
+                display: block;
+                list-style-type: none;
+                margin-top: 10px;
+                padding: 10px;
+                background-color: red;
+                font-size: x-large;
+                
+            }
+
+            .nav-bar
+            {
+                width: 30%;
+                height: 50%;
+                background-color: blue;
+                border: 2px solid khaki;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="header">
+        <h1>Header</h1>
+    </div>
+    <div class="nav-bar">
+        <ul class="list">
+            <li><a href="#">Home</a></li>
+            <li><a href="#">About Us</a></li>
+            <li><a href="#">Contact Us</a></li>
+            <li><a href="#">Services</a></li>
+        </ul>
+    </div>
+</body>
+
+</html>

@@ -1,0 +1,100 @@
+ASSIGNMENT
+
+You have been hired to create a relational database to support a car sales business. You need to store information on the business’s employees, inventory, and completed sales. You also need to account for the fact that each salesperson receives a different percentage of their sales in commission. What tables and columns would you create in your relational database, and how would you link the tables?
+=>
+
+database name: car_sales
+
+tables :
+->employees
+->customers
+->sales
+->department
+->car_deatils
+->inventory
+->orders
+->policy
+
+employees
+->emp_id primary key
+->first_name
+->last_name
+->phone_no
+->address
+->city
+->dob
+->emp_status
+	active
+	inactive (who had leave the job from company)
+->dept_id references to department(dept_id)
+->designation
+
+customers
+->cust_id primary key
+->first_name
+->last_name
+->phone_no
+->address
+->city
+->pay_mode
+	cash
+	EMI
+->dob
+
+
+sales
+->sales_id primary key
+->emp_id references to employees(emp_id)
+->car_id refernces to car_details(car_id)
+->cust_id refernces to customers(cust_id)
+->
+
+department
+->dept_id primary key
+->dept_name
+->dept_location
+->manager_id refernces to employees(emp_id)
+
+car_details
+->car_id primary key
+->car_name
+->car_company
+->car_model_year
+->car_model_type
+	top
+	second
+->car_chasis_no
+->car_type
+	CNG
+	DIESEL
+	Petrol
+
+
+Inventory
+->inv_id primary key
+->car_instock
+->car_sold
+->car_alredy_ordered
+->damaged_car
+
+orders
+->order_id primary key
+->cust_id refernces to customers(cust_id)
+->oreder_status
+->order_tracking_no
+->order_amount_due
+->order_date
+->ordered_car_id references to car_details(car_id)
+
+
+policy
+->policy_id primary key
+->policy_type 
+	full insurance
+	third party insurance
+->car_id references to car_details(car_id)
+->policy_start_date
+->policy_end_date
+->cust_id references to customers(cust_id)
+->emp_id referneces to employees(emp_id)                 (this field is for company employee who have handled policy documents of the respective customer)
+-

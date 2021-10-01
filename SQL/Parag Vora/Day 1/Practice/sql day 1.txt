@@ -1,0 +1,77 @@
+1)Write a SQL statement to create a table named countries including columns CountryId, CountryName and RegionId and make sure that no countries except Italy, India and China will be entered in the table. and combination of columns CountryId and RegionId will be unique.
+
+=>
+CREATE TABLE Countries
+( 
+CountryId varchar(2) NOT NULL UNIQUE DEFAULT '',
+CountryName varchar(40) CONSTRAINT chkcountry CHECK( CountryName IN('Italy','India','China')),
+RegionId decimal(10,0) NOT NULL,
+PRIMARY KEY (CountryId,RegionId)
+ )
+
+
+2)Write a SQL statement to create a table named JobHistory including columns EmployeeId, StartDate, End_Eate, Job_Id and Department_Id and make sure that the value against column EndDate will be entered at the time of insertion to the format like ‘–/–/—-‘.
+
+=>
+CREATE TABLE JobHistory
+(
+EmployeeId int not null,
+StartDate date not null,
+End_Date date not null check (End_Date like '--/--/----'), 
+Job_Id int not null,
+Department_Id  int not null
+)
+
+3)Write a SQL statement to create a table named jobs including columns JobId, JobTitle, MinSalary and MaxSalary, and make sure that, the default value for JobTitle is blank and MinSalary is 8000 and MaxSalary is NULL will be entered automatically at the time of insertion if no value assigned for the specified columns.
+
+=>
+CREATE TABLE Jobs
+(
+JobId int ,
+JobTitle varchar(100) default ' ', 
+MinSalary int CONSTRAINT chkMinsalary CHECK(MinSalary>=8000),
+MaxSalary int default null,
+)
+
+
+4)Write a SQL statement to create a table employees including columns Employee_Id, FirstName, LastName, Email, PhoneNumber, Hire_Date, Job_Id, Salary, Commission, Manager_Id and Department_Id and make sure that, the Employee_Id column does not contain any duplicate value at the time of insertion, and the foreign key column DepartmentId, reference by the column DepartmentId of Departments table, can contain only those values which are exists in the Department table and another foreign key column JobId, referenced by the column JobId of jobs table, can contain only those values which are exists in the jobs table.
+=>
+CREATE TABLE employees 
+(
+Employee_Id int primary key not null identity(1,1),
+FirstName  varchar(40) ,
+LastName varchar(40),
+Email varchar(100),
+PhoneNumber varchar(32),
+Hire_Date date ,
+Job_Id int CONSTRAINT fkjobid foreign key references Jobs(JobId), 
+Salary money,
+Commission money,
+Manager_Id int ,
+Department_Id int CONSTRAINT fkdepId FOREIGN KEY REFERENCES Departments(DepartmentId)
+)
+
+
+
+ALTER STATTEMENT
+
+
+1)Write a SQL statement to add a foreign key constraint named fk_job_id on JobId column of JobHistory table referencing to the primary key JobId of jobs table.
+=>
+ALTER TABLE JobHistory
+add constraint fk_job_id 
+foreign key(Job_Id) references Jobs(JobId)
+
+2)Write a SQL statement to drop the existing foreign key fk_job_id from JobHistory table on JobId column which is referencing to the JobId of jobs table.
+=>
+ALTER TABLE JobHistory
+DROP CONSTRAINT fk_job_id;
+
+3)Write a SQL statement to add a new column named location to the JobHistory table.
+=>
+ALTER TABLE JobHistory
+ADD location varchar(100)
+
+
+
+
