@@ -38,6 +38,19 @@
 
                var y; // Declare y
 
+                 //Using Function call create employee object with field Name, Address and Designation and pass it to function.
+                 const employee = {
+                    fullName: function(name, Address,Designation) {
+                        return this.name + " " + this.Address + "," + city + "," + country +this.Designation+",";
+                    }
+                    }
+                    const person1 = {
+                    name:"John",
+                    Address: "delhi",
+                    Designation:"HR"
+                    }
+                    employee.name.call(person1, "Oslo", "Norway",".net");
+
                 //Explain Function closure with practical
                                 
                 const add = (function () {
@@ -47,9 +60,11 @@
 
                 function myFunction(){
                 document.getElementById("d1").innerHTML = add();
-                }
-
-
+                }  
+                //Using Function Apply pass employee object to a function defined in the function.
+                
+                employee.name.apply(person1, ["Oslo", "Norway","net"]);
+              
                     </script>
 </body>
 </html>
