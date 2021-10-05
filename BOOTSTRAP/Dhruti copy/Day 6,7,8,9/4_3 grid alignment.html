@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="bootstrap.min.css">
+    <script src="jquery.min.js"></script>
+    <script src="popper.min.js"></script>
+    <script src="bootstrap.min.js"></script>
+    <title>Bootstrap</title>
+</head>
+<body>
+    <header>
+        <h1 class="display-3 text-center my-4">Grid alignment</h1>
+        <div class="container">
+            <div class="row">
+                <div class="col-md-3">
+                <div class="dropdown">
+                    <button class="btn btn-primary btn-block dropdown-toggle" type="button" data-toggle="dropdown">
+                         2: Utilities
+                    </button>
+                    <div class="dropdown-menu">
+                       <a class="dropdown-item" href="2_2_basic_typography.html">2.2 Basic Typography</a>
+                       <a class="dropdown-item" href="2_3_Text Alignment & Display.html">2.3 Text Alignment & Display</a>
+                       <a class="dropdown-item" href="2_4_Floats & position.html">2.4 Floats & Position</a>
+                       <a class="dropdown-item" href="2_5_Colors_&_background.html">2.5 Colors & Background</a>
+                       <a class="dropdown-item" href="2_6_Spacing.html">2.6 Spacing</a>
+                       <a class="dropdown-item" href="2_7_sizing.html">2.7 Sizing</a>
+                       <a class="dropdown-item" href="2_8_breakpoints.html">2.8 Breakpoints</a>
+                    </div>
+                </div>
+            </div>
+                <div class="col-md-3">
+                <div class="dropdown ">
+                    <button class="btn btn-success btn-block dropdown-toggle" type="button" data-toggle="dropdown">
+                        3: css Component
+                    </button>
+                    <div class="dropdown-menu">
+                        <a class="dropdown-item" href="3_2_buttons&button_groups.html">3.2 button & button groups</a>
+                        <a class="dropdown-item" href="3_3_navbar.html">3.3 navbar</a>
+                        <a class="dropdown-item" href="3_4_list_groups& badge.html">3.4 list groups & badges</a>
+                        <a class="dropdown-item" href="3_5 forms.html">3.5 forms</a>
+                        <a class="dropdown-item" href="3_6_input_groups.html">3.6 input groups</a>
+                        <a class="dropdown-item" href="3_7_alerts & progressbar.html">3.7 alerts & progress</a>
+                        <a class="dropdown-item" href="3_8 tables& pagination.html">3.8 tables & pagination</a>
+                        <a class="dropdown-item" href="3_9 cards.html">3.9 cards</a>
+                        <a class="dropdown-item" href="3_10 media objects.html">3.10 media objects</a>
+                     </div>
+                </div>
+            </div>
+            <div class="col-md-3">
+                <div class="dropdown ">
+                    <button class="btn btn-warning btn-block  dropdown-toggle" type="button" data-toggle="dropdown">
+                        4: Grid & flexbox
+                    </button>
+                    <div class="dropdown-menu">
+                       <a class="dropdown-item" href="4_2 Grid system.html">4.2 Grid system</a>
+                       <a class="dropdown-item" href="4_3 grid alignment.html">4.3 Grid Alignment</a>
+                       <a class="dropdown-item" href="4_4 flexbox.html">4.4 flexbox </a>
+                       <a class="dropdown-item" href="4_5 auto margin & wrap.html">4.5 Auto Margin & wrap</a>
+
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-3">
+                <div class="dropdown ">
+                    <button class="btn btn-danger btn-block  dropdown-toggle" type="button" data-toggle="dropdown">
+                          5: javascript Widgets
+                    </button>
+                    <div class="dropdown-menu">
+                       <a class="dropdown-item" href="5_2 carousel slider.html">5.2 carousel slider</a>
+                       <a class="dropdown-item" href="5_3 collapse & accordion.html">5.3 collapse & accordion</a>
+                       <a class="dropdown-item" href="5_4 tooltips.html">5.4 tooltips</a>
+                       <a class="dropdown-item" href="5_5 popovers.html">5.5 popovers</a>
+                       <a class="dropdown-item" href="5_6 modals.html">5.6 modals</a>
+                     
+                    </div>
+                </div>
+            </div>
+            </div>
+        </div>
+        <hr>
+    </header>
+    <div class="container">
+
+
+
+          <!--vartical alignment-->
+          <div class="container">
+                <div class="row align-items-start" style="height: 200px; border:1px #333 solid">
+                <div class="col">top aligned text</div>
+                <div class="col">top aligned text</div>
+                <div class="col">top aligned text</div>
+            
+                </div>
+
+          </div>
+          <div class="container">
+            <div class="row align-items-center" style="height: 200px; border:1px #333 solid">
+            <div class="col">center aligned text</div>
+            <div class="col">center aligned text</div>
+            <div class="col">center aligned text</div>
+        
+            </div>
+
+      </div>
+      <div class="container">
+        <div class="row align-items-end" style="height: 200px; border:1px #333 solid">
+        <div class="col">bottom aligned text</div>
+        <div class="col">bottom aligned text</div>
+        <div class="col">bottom aligned text</div>
+    
+        </div>
+
+  </div>
+  <br><br>
+    <!--vartical alignment individual cols-->
+          
+    <div class="container">
+        <div class="row align-items-end" style="height: 200px; border:1px #333 solid">
+        <div class="col align-self-start">top aligned text</div>
+        <div class="col  align-self-center">middle aligned text</div>
+        <div class="col  align-self-end">bottom aligned text</div>
+    
+        </div>
+
+  </div>
+  <br><br>
+  <!--horizontal alignment cols-->
+  <div class="container">
+    <div class="row justify-content-start" style="height: 200px; border:1px #333 solid">
+    <div class="col-4">left aligned text</div>
+    <div class="col-4">left aligned text</div>
+   
+    </div>
+
+</div>
+<div class="container">
+    <div class="row justify-content-center" style="height: 200px; border:1px #333 solid">
+    <div class="col-4">center aligned text</div>
+    <div class="col-4">center aligned text</div>
+   
+    </div>
+
+</div>
+<div class="container">
+    <div class="row justify-content-end" style="height: 200px; border:1px #333 solid">
+    <div class="col-4">bottom aligned text</div>
+    <div class="col-4">bottom aligned text</div>
+   
+    </div>
+
+</div>
+<div class="container">
+    <div class="row justify-content-around" style="height: 200px; border:1px #333 solid">
+    <div class="col-4">around aligned text</div>
+    <div class="col-4">around aligned text</div>
+   
+    </div>
+
+</div>
+<div class="container">
+    <div class="row justify-content-between" style="height: 200px; border:1px #333 solid">
+    <div class="col-4">between aligned text</div>
+    <div class="col-4">between aligned text</div>
+   
+    </div>
+
+</div>
+<br><br>
+<div class="container-fluid">
+    <div class="row no-gutters">
+      <div class="col-3 bg-info">
+        Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.<br>
+        Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+      </div>
+      <div class="col-9 bg-success">
+        Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo.
+      </div>
+    </div>
+  </div>
+</div>
+
+<br><br>
+
+
+
+    </div>
+   
+</body>
+</html>
