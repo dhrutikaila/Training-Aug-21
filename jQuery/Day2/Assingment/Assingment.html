@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Assingment</title>
+        <!-- Bootstrap CSS -->
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-F3w7mX95PdgyTmZZMECAngseQB83DfGTowi0iMjiWaeVhAn4FJkqJByhZMI3AhiU" crossorigin="anonymous">
+        
+        <script src="./jquery-3.6.0.js"></script>
+    </head>
+    <body>
+        <!-- Optional JavaScript; choose one of the two! -->
+
+        <!-- Option 1: Bootstrap Bundle with Popper -->
+
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-/bQdsTh/da6pkI1MST/rWKFNjaCP5gBSY4sEBT38Q/9RBh9AH40zEOg7Hlq2THRZ" crossorigin="anonymous"></script>
+        
+        <div class="container my-2">
+            <div class="d-grid">
+                <button class="btn btn-success">Get Data</button>
+            </div>
+        
+            <div id="section">
+                <table class="table my-2" id="tbldata">
+                    <thead id="tblhead" class="table-active">
+                        <tr id="throw">
+
+                        </tr>
+                    </thead>
+                    <tbody id="tblbody">
+                    </tbody>
+                </table>
+            </div>
+        </div>
+        <script>
+            $(document).ready(function(){
+                $("button").click(function(){
+                    $.getJSON("https://gorest.co.in/public-api/users",{},function(response){
+                        $.each(response.data[0], function(key){
+                            $("#throw").append($("<th>" + key.toUpperCase() + "</th>"));
+                        });
+                        $.each(response.data, function(index, value){
+                            $("#tblbody").append($("<tr></tr>").append($("<td></td>").text(value.id)).append($("<td></td>").text(value.name)).append($("<td></td>").text(value.email)).append($("<td></td>").text(value.gender)).append($("<td></td>").text(value.status)));
+                        });
+                    });
+                });
+            });
+        </script>
+    </body>
+</html>

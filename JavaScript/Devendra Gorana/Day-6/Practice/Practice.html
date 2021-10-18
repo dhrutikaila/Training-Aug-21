@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Practice Exercise</title>
+        <!-- Bootstrap CSS -->
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-F3w7mX95PdgyTmZZMECAngseQB83DfGTowi0iMjiWaeVhAn4FJkqJByhZMI3AhiU" crossorigin="anonymous">
+    </head>
+    <body>
+        <!-- Optional JavaScript; choose one of the two! -->
+
+        <!-- Option 1: Bootstrap Bundle with Popper -->
+
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-/bQdsTh/da6pkI1MST/rWKFNjaCP5gBSY4sEBT38Q/9RBh9AH40zEOg7Hlq2THRZ" crossorigin="anonymous"></script>
+        <!--use checkValidity() function -->
+        <div class="container border my-2">
+            <form>
+                <label class="form-label">If the number is less than 100 or greater than 300, an error message will be displayed.</label>
+                <div class="row my-1">
+                    <div class="col">
+                        <input class="form-control" type="number" min="100" max="300" id="num" placeholder="Enter Number" required>
+                    </div>
+                    <div class="col d-grid">    
+                        <button class="btn btn-primary" onclick="check_validity()">Click Here</button>
+                    </div>
+                </div>
+            </form>
+        </div>
+        <p id="demo">h</p>
+
+        <script>
+            //function for check vaidity
+            function check_validity()
+            {
+                const inpObj = document.getElementById("num").value;
+                if(!inpObj.checkValidity())
+                {
+                    document.getElementById("demo").innerHTML = inpObj.validationMessage;
+                }
+                else
+                {
+                    document.getElementById("demo").innerHTML = "Input OK";
+                }
+            }
+
+            
+        </script>
+    </body>
+</html>

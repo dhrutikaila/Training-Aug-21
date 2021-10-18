@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Practice</title>
+        <script src="./jquery-3.6.0.js"></script>
+    </head>
+    <body>
+        
+        <h2 id="test">This is a heading</h2>
+        <h2 class="test1">This is heading 2</h2>
+        <h2 class="test1">This is heading 3</h2>
+        <p>This is a paragraph.</p>
+        <p>This is another paragraph.</p>
+        <article>Hello Click me twise to hide.</article>
+        <button id="btn1">Click me to hide paragraphs</button>
+        <br>
+        <h3 id="demo1">The function is executed when the mouse pointer enters the HTML element:</h3>
+        <h3 id="demo2">The function is executed when the mouse pointer leaves the HTML element:</h3>
+        <h3 id="demo3">The first function is executed when the mouse enters the HTML element, and the second function is executed when the mouse leaves the HTML element:</h3>
+        
+        Name: <input type="text" name="fullname"><br>
+        Email: <input type="text" name="email"><br>
+
+        <h3 id="demo4">The on() method attaches one or more event handlers for the selected elements.</h3>
+        <h3 id="demo5">If you click on the "Hide" button, I will disappear.</h3>
+        <button id="hide">Hide</button>
+        <button id="show">Show</button>
+        <h3 id="demo6">This is a paragraph with little content.</h3>
+        <button id="toggle">Toggle between hiding and showing the paragraphs</button>
+
+        <h3 id="demo7">Demonstrate fadeIn() with different parameters.</h3>
+
+        <button id="btn2">Click to fade in boxes</button><br><br>
+        <button id="btn3">Click to fade Out boxes</button><br><br>
+        <button id="btn4">Click to fade in/out boxes</button><br><br>
+        <button id="btn5">Click to fade boxes fade with opacity</button><br><br>
+        
+
+        <div id="div1" style="width:80px;height:80px;display:none;background-color:red;"></div><br>
+        <div id="div2" style="width:80px;height:80px;display:none;background-color:green;"></div><br>
+        <div id="div3" style="width:80px;height:80px;display:none;background-color:blue;"></div>
+    </body>
+
+    <script>
+        //When a user clicks on a button, all <p> elements will be hidden:
+        $(document).ready(function(){
+            $("#btn1").click(function(){
+                $("p").hide();
+            });
+        });
+        
+        //When a user clicks on a button, the element with id="test" will be hidden:
+        $(document).ready(function(){
+            $("#btn1").click(function(){
+                $("#test").hide();
+            });
+        });
+
+        //When a user clicks on a button, the elements with class="test" will be hidden:
+        $(document).ready(function(){
+            $("#btn1").click(function(){
+                $(".test1").hide();
+            });
+        });
+
+        //click() method event example
+        $(document).ready(function(){
+            $("article").dblclick(function(){
+                $(this).hide();
+            });
+        });
+
+        //mouseenter() function example
+        $(document).ready(function(){
+            $("#demo1").mouseenter(function(){
+                alert("You entered demo1!");
+            });
+        });
+
+        //mouseleave() function example
+        $(document).ready(function(){
+            $("#demo2").mouseleave(function(){
+                alert("Bye! You now leave demo2");
+            });
+        });
+
+        //hover example
+        $(document).ready(function(){
+            $("#demo3").hover(function(){
+                alert("You enterd demo3!");
+            },
+            function(){
+                alert("Bye! you now leave demo3");
+            });
+        });
+
+        //focus & blur function example
+        $(document).ready(function(){
+            $("input").focus(function(){
+                $(this).css("background-color", "yellow");
+            });
+            $("input").blur(function(){
+                $(this).css("background-color", "green");
+            });
+        });
+
+        //The on() method example
+        $(document).ready(function(){
+            $("#demo4").on({
+                mouseenter: function(){
+                    $(this).css("background-color", "lightgray");
+                },  
+                mouseleave: function(){
+                    $(this).css("background-color", "lightblue");
+                }, 
+                click: function(){
+                    $(this).css("background-color", "yellow");
+                }  
+            });
+        });
+
+        //hide() and show() method
+        $(document).ready(function(){
+            $("#hide").click(function(){
+                $("#demo5").hide();
+            });
+            $("#show").click(function(){
+                $("#demo5").show();
+            });
+        });
+
+        //toggle method example
+        $(document).ready(function(){
+            $("#toggle").click(function(){
+                $("#demo6").toggle();
+            });
+        });
+
+        //fade in method 
+        $(document).ready(function(){
+            $("#btn2").click(function(){
+                $("#div1").fadeIn();
+                $("#div2").fadeIn("slow");
+                $("#div3").fadeIn(3000);
+            });
+        });
+
+        //fade out method
+        $(document).ready(function(){
+            $("#btn3").click(function(){
+                $("#div1").fadeOut();
+                $("#div2").fadeOut("slow");
+                $("#div3").fadeOut(3000);
+            });
+        });
+
+        //fadetoggle method
+        $(document).ready(function(){
+            $("#btn4").click(function(){
+                $("#div1").fadeToggle();
+                $("#div2").fadeToggle("slow");
+                $("#div3").fadeToggle(4000);
+            });
+        });
+
+        //fadeto method
+        $(document).ready(function(){
+            $("#btn5").click(function(){
+                $("#div1").fadeTo("slow",0.15);
+                $("#div2").fadeTo("slow",0.10);
+                $("#div3").fadeTo(4000,0.5);
+            });
+        });
+    </script>
+</html>

@@ -1,0 +1,61 @@
+<!--
+Design a form for storing employee details. (Employee name, age, Gender, designation, salary, location, Email ID, Date of Joining and contact number)
+Validation required
+Age should be a number
+Each field should contain value
+Email ID should be in proper format
+Date of joining should be in date format
+Location should be in the drop down list
+Use radio buttons for Gender
+-->
+
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Day1 Practice</title>
+     </head>
+     <body>
+        <form>
+            <hr>
+            <label for="empname">Employee Name:</label><br>
+            <input type="text" id="empname" name="empname" required><br>
+            <label for="age">Age:</label><br>
+            <input type="number" min="18" max="60" id="age" name="age" required><br>
+            <label for="gender">Gender:</label><br>
+            <input type="radio" id="male" name="gender" value="Male" required>
+            <label for="male">Male</label>
+            <input type="radio" id="female" name="gender" value="Female" required>
+            <label for="female">Female</label>
+            <input type="radio" id="others" name="gender" value="Others" required>
+            <label for="others">Others</label><br>
+            <label for="designation">Designation:</label><br>
+            <input type="text" id="designation" name="designation" required><br>
+            <label for="salary">Salary:</label><br>
+            <input type="number" id="salary" name="salary" required><br>
+            
+            <label for="location">Location:</label><br>
+            <input list="location" name="location" required>
+            <datalist id="location">
+            <option value="Ahmedabad">
+            <option value="Benglore">
+            <option value="Mumbai">
+            <option value="Delhi">
+            <option value="Pune">
+            </datalist><br>
+            
+            <label for="email">Email Id:</label><br>
+            <input type="email" id="email" name="email" required><br>
+            <label for="dateofjoining">Date Of Joining:</label><br>
+            <input type="date" id="dateofjoining" name="dateofjoining" required><br>
+            <label for="contactnum">Contact Number:</label><br>
+            <input type="tel" id="contactnum" name="contactnum" maxlength="10" required><br>
+            <input type="checkbox" id="t&c" name="t&c" required>
+            <label for="t&c">I Agree With Terms And Conditions.</label><br><hr>
+            <input type="submit" value="Submit">
+            <input type="reset"><hr>
+        </form>
+     </body>
+</html>

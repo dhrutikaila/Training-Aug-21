@@ -1,0 +1,412 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Practice</title>
+        <script src="./jquery-3.6.0.js"></script>
+       
+        <style>
+            .ancestors * { 
+                display: block;
+                border: 2px solid lightgrey;
+                color: lightgrey;
+                padding: 5px;
+                margin: 15px;
+            }
+
+            .descendants * { 
+                display: block;
+                border: 2px solid lightgrey;
+                color: lightgrey;
+                padding: 5px;
+                margin: 15px;
+            }
+
+            .siblings * { 
+                display: block;
+                border: 2px solid lightgrey;
+                color: lightgrey;
+                padding: 5px;
+                margin: 15px;
+            }
+        </style>
+        <script>
+            $(document).ready(function(){
+                //Traversing Ancestors examples:
+                //parent() method
+                $(".span1").parent().css({"color": "red", "border": "2px solid red"});
+                //parents() method
+                $("#span2").parents().css({"color": "green", "border": "2px solid green"});
+                //we can pass value in parents() method
+                $("#span3").parents("ul").css({"color": "blue", "border": "2px solid blue"});
+                //parentsUntil() method - it return all ancestors between span and div
+                $("#span4").parentsUntil("div").css({"color": "black", "border": "2px solid black"});
+            
+                //Traversing Descendants example:
+                //children() method
+                $("#div1").children().css({"background-color":"yellow", "color": "red", "border": "2px solid red"});
+                //childern() method with value
+                $("#div2").children("p#p1").css({"background-color":"yellow", "color": "red", "border": "2px solid red"});
+                //find() method
+                $("#div3").find("span").css({"background-color":"yellow", "color": "red", "border": "2px solid red"});
+                //find("*") method
+                $("#div4").find("*").css({"background-color":"yellow", "color": "red", "border": "2px solid red"});
+                
+                //Traversing - Siblings example:
+                //siblibgs() method
+                $("#h2_1").siblings().css({"color": "red", "border": "2px solid red"});
+                //siblibgs("p") method
+                $("#h2_2").siblings("p").css({"color": "red", "border": "2px solid red"});
+                //next() method
+                $("#h2_3").next().css({"color": "red", "border": "2px solid red"});
+                //nextAll() method
+                $("#h2_4").nextAll().css({"color": "red", "border": "2px solid red"});
+                //nextUntil() method
+                $("#h2_5").nextUntil("h6").css({"color": "red", "border": "2px solid red"});
+                //prev() method
+                $("#h2_6").prev().css({"color": "red", "border": "2px solid red"});
+                //prevAll() method
+                $("#h2_7").prevAll().css({"color": "red", "border": "2px solid red"});
+                //prevUntil() method
+                $("#h2_8").prevUntil("h6").css({"color": "red", "border": "2px solid red"});
+
+                //Traversing - Filtering example:
+                //first() method
+                $("#div5 p").first().css("background-color", "yellow");
+                //last() method
+                $("#div6 h6").last().css("background-color", "yellow");
+                //eq() method
+                $("#div7 p").eq(2).css("background-color", "yellow");
+                //filter() method
+                $("#div8 p").filter(".intro").css("background-color", "yellow");
+                //not() method
+                $("#div9 p").not(".intro").css("background-color", "yellow");
+
+                //AJAX load() Method  
+                $("#btn1").click(function(){
+                    $("#div10").load("Practice.txt");
+                });
+                $("#btn2").click(function(){
+                    $("#div10").load("Practice.txt #p1");
+                });
+
+                //get() method
+                $("#btn3").click(function(){
+                    $.get("Practice.asp", function(data, status){
+                        alert("Data: " + data + "\nStatus: " + status);
+                    });
+                });
+
+                //post() method
+                $("btn4").click(function(){
+                    $.post("Practice_post.asp",
+                    {
+                        name: "Donald Duck",
+                        city: "Duckburg"
+                    },
+                    function(data,status){
+                        alert("Data: " + data + "\nStatus: " + status);
+                    });
+                });
+            });
+        </script>
+    </head>
+    <body>
+        <h1>Traversing - Ancestors</h1>
+        <h3>Parent() Method Example </h3>
+        <div class="ancestors">
+            <div style="width:500px;">div (great-grandparent)
+              <ul>ul (grandparent)  
+                <li>li (direct parent)
+                  <span class="span1">span</span>
+                </li>
+              </ul>   
+            </div>
+          
+            <div style="width:500px;">div (grandparent)   
+              <p>p (direct parent)
+                <span class="span1">span</span>
+              </p> 
+            </div>
+        </div>
+
+        <br><br>
+
+        <h3>Parents() Method Example</h3>
+        <div class="ancestors">
+            <div style="width:500px;">div (great-grandparent)
+                <ul>ul (grandparent)  
+                  <li>li (direct parent)
+                    <span id="span2">span</span>
+                  </li>
+                </ul>   
+            </div>
+        </div>
+
+        <br><br>
+
+        <h3>Parents() method with value Example</h3>
+        <div class="ancestors">
+            <div style="width:500px;">div (great-grandparent)
+                <ul>ul (grandparent)  
+                  <li>li (direct parent)
+                    <span id="span3">span</span>
+                  </li>
+                </ul>   
+            </div>
+        </div>
+
+        <br><br>
+
+        <h3>ParentsUntil() Method Example</h3>
+        <div class="ancestors">
+            <div style="width:500px;">div (great-grandparent)
+                <ul>ul (grandparent)  
+                  <li>li (direct parent)
+                    <span id="span4">span</span>
+                  </li>
+                </ul>   
+            </div>
+        </div>
+
+        <br><br>
+
+        <h1>Traversing - Descendants</h1>
+        <h3>Children() Method Example</h3>
+        <div id="div1" class="descendants" style="width:500px;">div (current element) 
+            <p>p (child)
+              <span>span (grandchild)</span>   
+            </p>
+            <p>p (child)
+              <span>span (grandchild)</span>
+            </p> 
+        </div>
+
+        <br><br>
+
+        <h3>childern(p.first) example</h3>
+        <div id="div2" class="descendants" style="width:500px;">div (current element) 
+            <p id="p1">p (child)
+              <span>span (grandchild)</span>   
+            </p>
+            <p id="p2">p (child)
+              <span>span (grandchild)</span>
+            </p> 
+        </div>
+
+        <br><br>
+
+        <h3>find() Method Example</h3>
+        <div id="div3" class="descendants" style="width:500px;">div (current element) 
+            <p id="p1">p (child)
+              <span>span (grandchild)</span>   
+            </p>
+            <p id="p2">p (child)
+              <span>span (grandchild)</span>
+            </p> 
+        </div>
+
+        <br><br>
+
+        <h3>find("*") Method Example</h3>
+        <div id="div4" class="descendants" style="width:500px;">div (current element) 
+            <p id="p1">p (child)
+              <span>span (grandchild)</span>   
+            </p>
+            <p id="p2">p (child)
+              <span>span (grandchild)</span>
+            </p> 
+        </div>
+
+        <br><br>
+
+        <h1>Traversing - Siblings </h1>
+        <h3>Siblings() method Example</h3>
+        <div class="siblings">div (parent)
+            <p>p</p>
+            <span>span</span>
+            <h2 id="h2_1">h2</h2>
+            <h3>h3</h3>
+            <p>p</p>
+        </div>
+
+        <br><br>
+
+        <h3>siblibgs("p") method example</h3>
+        <div class="siblings">div (parent)
+            <p>p</p>
+            <span>span</span>
+            <h2 id="h2_2">h2</h2>
+            <h3>h3</h3>
+            <p>p</p>
+        </div>
+
+        <br><br>
+
+        <h3>next() method example</h3>
+        <div class="siblings">div (parent)
+            <p>p</p>
+            <span>span</span>
+            <h2 id="h2_3">h2</h2>
+            <h3>h3</h3>
+            <p>p</p>
+        </div>
+
+        <br><br>
+
+        <h3>nextAll() method example</h3>
+        <div class="siblings">div (parent)
+            <p>p</p>
+            <span>span</span>
+            <h2 id="h2_4">h2</h2>
+            <h3>h3</h3>
+            <p>p</p>
+        </div>
+
+        <br><br>
+
+        <h3>nextUntil("h6") method example</h3>
+        <div class="siblings">div (parent)
+            <p>p</p>
+            <span>span</span>
+            <h2 id="h2_5">h2</h2>
+            <h3>h3</h3>
+            <p>p</p>
+            <h4>h4</h4>
+            <h5>h5</h5>
+            <h6>h6</h6>
+            <p>p</p>
+            <h6>h6</h6>
+            <p>p</p>
+        </div>
+
+        <br><br>
+
+        <h3>prev() method example</h3>
+        <div class="siblings">div (parent)
+            <p>p</p>
+            <span>span</span>
+            <h2 id="h2_6">h2</h2>
+            <h3>h3</h3>
+            <p>p</p>
+        </div>
+
+        <br><br>
+
+        <h3>prevAll() method example</h3>
+        <div class="siblings">div (parent)
+            <p>p</p>
+            <span>span</span>
+            <h2 id="h2_7">h2</h2>
+            <h3>h3</h3>
+            <p>p</p>
+        </div>
+
+        <br><br>
+
+        <h3>prevUntil("h6") method example</h3>
+        <div class="siblings">div (parent)
+            <h5>h5</h5>
+            <h6>h6</h6>
+            <p>p</p>
+            <p>p</p>
+            <span>span</span>
+            <h2 id="h2_8">h2</h2>
+            <h3>h3</h3>
+            <p>p</p>
+            <h4>h4</h4>
+            <h5>h5</h5>
+            <h6>h6</h6>
+            <p>p</p>
+            <h6>h6</h6>
+            <p>p</p>
+        </div>
+
+        <br><br>
+
+        <h1>Traversing - Filtering</h1>
+        <h3>first() method example</h3>
+        <div id="div5" class="siblings">div (parent)
+            <h5>h5</h5>
+            <h6>h6</h6>
+            <p>p</p>
+            <p>p</p>
+            <span>span</span>
+            <h2>h2</h2>
+            <h3>h3</h3>
+            <p>p</p>
+            <h4>h4</h4>
+            <h5>h5</h5>
+            <h6>h6</h6>
+            <p>p</p>
+            <h6>h6</h6>
+            <p>p</p>
+        </div>
+
+        <br><br>
+
+        <h3>last() method example</h3>
+        <div id="div6" class="siblings">div (parent)
+            <h5>h5</h5>
+            <h6>h6</h6>
+            <p>p</p>
+            <p>p</p>
+            <span>span</span>
+            <h2>h2</h2>
+            <h3>h3</h3>
+            <p>p</p>
+            <h4>h4</h4>
+            <h5>h5</h5>
+            <h6>h6</h6>
+            <p>p</p>
+            <h6>h6</h6>
+            <p>p</p>
+        </div>
+
+        <br><br>
+
+        <h3>eq() method example</h3>
+        <div id="div7" class="siblings">div (parent)
+            <p>My name is Donald (index 0).</p>
+            <p>Donald Duck (index 1).</p>
+            <p>I live in Duckburg (index 2).</p>
+            <p>My best friend is Mickey (index 3).</p>
+        </div>
+         
+        <br><br>
+
+        <h3>filter() method example</h3>
+        <div id="div8" class="siblings">div (parent)
+            <p>My name is Donald.</p>
+            <p class="intro">I live in Duckburg.</p>
+            <p class="intro">I love Duckburg.</p>
+            <p>My best friend is Mickey.</p>
+        </div>
+
+        <br><br>
+
+        <h3>not() method example</h3>
+        <div id="div9" class="siblings">div (parent)
+            <p>My name is Donald.</p>
+            <p class="intro">I live in Duckburg.</p>
+            <p class="intro">I love Duckburg.</p>
+            <p>My best friend is Mickey.</p>
+        </div>
+
+        <h1>AJAX load() Method</h1>
+        <div id="div10"><h2>Let jQuery AJAX Change This Text</h2></div>
+        <button id="btn1">Get External Content</button>
+        <button id="btn2">Get only P from External Content</button>
+        <br><br> 
+
+        <h1>get() Method Example</h1>
+        <button id="btn3">Send an HTTP GET request to a page and get the result back</button>
+        <br><br>
+        <h1>post() method Example</h1>
+        <button id="btn4">Send an HTTP POST request to a page and get the result back</button>
+
+
+    </body>
+</html>

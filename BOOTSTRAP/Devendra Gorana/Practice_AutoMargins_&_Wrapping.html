@@ -1,0 +1,115 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <!-- Required meta tags -->
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>Bootstarp FlexBox Practice</title>
+    
+        <!-- Bootstrap CSS -->
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-F3w7mX95PdgyTmZZMECAngseQB83DfGTowi0iMjiWaeVhAn4FJkqJByhZMI3AhiU" crossorigin="anonymous">
+        <style>
+            .row-hl {
+                background-color: rgb(196, 194, 189);
+                height: 250px;
+            }
+            .item-hl {
+                border: 1px solid black;
+            }
+        </style>
+    </head>
+    <body>
+        <!-- Optional JavaScript; choose one of the two! -->
+
+        <!-- Option 1: Bootstrap Bundle with Popper -->
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-/bQdsTh/da6pkI1MST/rWKFNjaCP5gBSY4sEBT38Q/9RBh9AH40zEOg7Hlq2THRZ" crossorigin="anonymous"></script>
+
+        <!-- Option 2: Separate Popper and Bootstrap JS -->
+        <!--
+        <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.3/dist/umd/popper.min.js" integrity="sha384-W8fXfP3gkOKtndU4JGtKDvXbO53Wy8SZCQHczT5FMiiqmQfUpWbYdTil/SxwZgAN" crossorigin="anonymous"></script>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/js/bootstrap.min.js" integrity="sha384-skAcpIdS7UcVUC05LJ9Dxay8AXcDYfBJqt1CJ85S/CFujBsIzCIv+l9liuYLaMQ/" crossorigin="anonymous"></script>
+        -->
+
+        <!--Margin end Auto-->
+        <div class="d-flex row-hl">
+            <div class="me-auto p-4 item-hl">Flex item 1</div>
+            <div class="p-4 item-hl">Flex item 2</div>
+            <div class="p-4 item-hl">Flex item 3</div>
+        </div>
+        <br><br>
+
+        <!--Margin start Auto-->
+        <div class="d-flex row-hl">
+            <div class="p-4 item-hl">Flex item 1</div>
+            <div class="p-4 item-hl">Flex item 2</div>
+            <div class="ms-auto p-4 item-hl">Flex item 3</div>
+        </div>
+        <br><br>
+
+        <!--Margin bottom Auto-->
+        <div class="d-flex flex-column row-hl">
+            <div class="mb-auto p-4 item-hl">Flex item 1</div>
+            <div class="p-4 item-hl">Flex item 2</div>
+            <div class="p-4 item-hl">Flex item 3</div>
+        </div>
+        <br><br>
+
+        <!--Margin Top Auto-->
+        <div class="d-flex flex-column row-hl">
+            <div class="p-4 item-hl">Flex item 1</div>
+            <div class="p-4 item-hl">Flex item 2</div>
+            <div class="mt-auto p-4 item-hl">Flex item 3</div>
+        </div>
+        <br><br>
+
+        <!--No Wrap-->
+        <div class="d-flex flex-nowrap row-hl">
+            <div class="p-4 item-hl">Flex item 1</div>
+            <div class="p-4 item-hl">Flex item 2</div>
+            <div class="p-4 item-hl">Flex item 3</div>
+            <div class="p-4 item-hl">Flex item 4</div>
+            <div class="p-4 item-hl">Flex item 5</div>
+            <div class="p-4 item-hl">Flex item 6</div>
+            <div class="p-4 item-hl">Flex item 7</div>
+            <div class="p-4 item-hl">Flex item 8</div>
+            <div class="p-4 item-hl">Flex item 9</div>
+            <div class="p-4 item-hl">Flex item 10</div>
+            <div class="p-4 item-hl">Flex item 11</div>
+            <div class="p-4 item-hl">Flex item 12</div>
+            <div class="p-4 item-hl">Flex item 13</div>
+            <div class="p-4 item-hl">Flex item 14</div>
+            <div class="p-4 item-hl">Flex item 15</div>
+        </div>
+        <br><br>
+
+        <!--Wrap-->
+        <div class="d-flex flex-wrap row-hl">
+            <div class="p-4 item-hl">Flex item 1</div>
+            <div class="p-4 item-hl">Flex item 2</div>
+            <div class="p-4 item-hl">Flex item 3</div>
+            <div class="p-4 item-hl">Flex item 4</div>
+            <div class="p-4 item-hl">Flex item 5</div>
+            <div class="p-4 item-hl">Flex item 6</div>
+            <div class="p-4 item-hl">Flex item 7</div>
+            <div class="p-4 item-hl">Flex item 8</div>
+            <div class="p-4 item-hl">Flex item 9</div>
+            <div class="p-4 item-hl">Flex item 10</div>
+            <div class="p-4 item-hl">Flex item 11</div>
+            <div class="p-4 item-hl">Flex item 12</div>
+            <div class="p-4 item-hl">Flex item 13</div>
+            <div class="p-4 item-hl">Flex item 14</div>
+            <div class="p-4 item-hl">Flex item 15</div>
+        </div>
+        <br><br>
+
+        <!--Ordering-->
+        <div class="d-flex row-hl">
+            <div class="order-3 p-4 item-hl">Flex item 1</div>
+            <div class="order-1 p-4 item-hl">Flex item 2</div>
+            <div class="order-2 p-4 item-hl">Flex item 3</div>
+        </div>
+        <br><br>
+
+    </body>
+</html>

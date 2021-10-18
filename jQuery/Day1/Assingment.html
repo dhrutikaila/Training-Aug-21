@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Assingment</title>
+        <script src="./jquery-3.6.0.js"></script>
+    </head>
+    <body>
+        <!--
+            – Put a droplist with 5 country name from list object using jquery
+
+                  (Eg. India, United Kingdom..). Default value should “Please select”.
+
+                – Bellow droplist all country name which are in the dropdown that should display with Label :
+
+                  “Your Selected Country : “.
+
+                – By default all country name should display.
+
+                – Only that country name should appear which are you select from dropdown.
+
+                  All other label should be disappear.
+
+                – When i select ‘Please select’, all countries name should get displayed.
+        -->
+        <select name="countries" id="countries">
+            <option value="India, US, Dubai, Singapur, UK">Please Select</option>
+            <option value="India">India</option>
+            <option value="US">US</option>
+            <option value="Dubai">Dubai</option>
+            <option value="Singapur">Singapur</option>
+            <option value="UK">UK</option>
+        </select>
+        <br><br>
+        <label></label>
+        
+    </body>
+    <script>
+        $(document).ready(function(){
+            $("select").on("click",function(){
+                var value = $(this).val();
+                $("label").text('').append();
+                $("label").append("Your Selected Country : " + value);
+            }); 
+        });
+    </script>
+</html>

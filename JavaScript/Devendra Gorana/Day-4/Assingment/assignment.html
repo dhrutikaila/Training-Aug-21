@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Assingment</title>
+        <!-- Bootstrap CSS -->
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-F3w7mX95PdgyTmZZMECAngseQB83DfGTowi0iMjiWaeVhAn4FJkqJByhZMI3AhiU" crossorigin="anonymous">
+    </head>
+    <body>
+        <!-- Optional JavaScript; choose one of the two! -->
+
+        <!-- Option 1: Bootstrap Bundle with Popper -->
+
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-/bQdsTh/da6pkI1MST/rWKFNjaCP5gBSY4sEBT38Q/9RBh9AH40zEOg7Hlq2THRZ" crossorigin="anonymous"></script>
+        
+        <!--Navbar-->
+        <nav class="navbar navbar-expand-sm bg-dark mb-4">
+            <div class="container">         
+                <div class="collapse navbar-collapse">
+                    <ul class="navbar-nav mx-auto">
+                        <li class="nav-item"><a class="nav-link text-white" href="#">Home</a></li>
+                        <li class="nav-item"><a class="nav-link text-white" href="#">About</a></li>
+                        <li class="nav-item"><a class="nav-link text-white" href="#">Contact</a></li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+
+        <!-- Container -->
+        <div class="container border bg-light">
+            <div class="d-grid">
+                <button class="btn btn-success my-1" type="button" onclick="(starttimer())" id="startexam">Start Exam</button>
+            </div>
+            <div class="row m-1 border justify-content-center">
+                You Have 3 Hours To Finish Exam.
+            </div>
+        </div>
+
+
+        <script>
+            function starttimer() 
+            {
+                //open exam window
+                myWindow = window.open("file:///C:/Users/Devendra/Desktop/Practice1/Training-Aug-21/JavaScript/Devendra%20Gorana/Day-4/Assingment/exam.html");
+            }
+        </script>
+    </body>
+</html>

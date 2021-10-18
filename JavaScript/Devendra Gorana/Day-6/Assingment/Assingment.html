@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Assingment</title>
+        <!-- Bootstrap CSS -->
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-F3w7mX95PdgyTmZZMECAngseQB83DfGTowi0iMjiWaeVhAn4FJkqJByhZMI3AhiU" crossorigin="anonymous">
+        <style>
+            /*Css for remove up-down symbol from input type number*/
+            input[type=number]::-webkit-inner-spin-button,
+            input[type=number]::-webkit-outer-spin-button {
+                -webkit-appearance: none;
+                -moz-appearance: none;
+                appearance: none;
+                margin: 0;
+            }
+        </style>
+        <script src="./Assingment.js"></script>
+    </head>
+    <body>
+        <!-- Optional JavaScript; choose one of the two! -->
+
+        <!-- Option 1: Bootstrap Bundle with Popper -->
+
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-/bQdsTh/da6pkI1MST/rWKFNjaCP5gBSY4sEBT38Q/9RBh9AH40zEOg7Hlq2THRZ" crossorigin="anonymous"></script>
+        
+        
+        <div class="container border my-2">
+            <div class="row bg-light">
+                <div class="col-2 border text-center p-2">Product Id</div>
+                <div class="col-4 border text-center p-2">Product Name</div>
+                <div class="col-2 border text-center p-2">Price</div>
+                <div class="col-2 border text-center p-2">Quantity</div>
+                <div class="col-2 border text-center p-2">Add TO Cart</div>
+            </div>
+
+            <div class="row">
+                <div class="col-2 border text-center"><p class="my-3" id="pid1">1</p></div>
+                <div class="col-4 border text-center"><p class="my-3" id="pname1">Cheese</p></div>
+                <div class="col-2 border text-center"><p class="my-3" id="price1">100</p></div>
+                <div class="col-2 border">
+                    <div class="row">
+                        <div class="col-7 text-center d-grid border p-0"><input class="form-control" value="0" id=quantity1 type="number" min="0" max="50"></div>
+                        <div class="col-5">
+                            <div class="row row-cols-1 border p-0">    
+                                <div class="col d-grid p-0">
+                                    <button class="btn btn-secondary btn-sm" onclick="add_qnt1()" style="margin: 1px;" type="button">+</button>
+                                </div>
+                                <div class="col d-grid p-0">
+                                    <button class="btn btn-secondary btn-sm" onclick="less_qnt1()" style="margin: 1px;" type="button">-</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-2 d-grid border p-0">
+                    <button class="btn btn-success m-1" onclick="add1()" type="button">Add</button>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col-2 border text-center"><p class="my-3" id="pid2">2</p></div>
+                <div class="col-4 border text-center"><p class="my-3" id="pname2">Pen</p></div>
+                <div class="col-2 border text-center"><p class="my-3" id="price2">150</p></div>
+                <div class="col-2 border">
+                    <div class="row">
+                        <div class="col-7 text-center d-grid border p-0"><input class="form-control" value="0" id=quantity2 type="number" min="0" max="50"></div>
+                        <div class="col-5">
+                            <div class="row row-cols-1 border p-0">    
+                                <div class="col d-grid p-0">
+                                    <button class="btn btn-secondary btn-sm" onclick="add_qnt2()" style="margin: 1px;" type="button">+</button>
+                                </div>
+                                <div class="col d-grid p-0">
+                                    <button class="btn btn-secondary btn-sm" onclick="less_qnt2()" style="margin: 1px;" type="button">-</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-2 d-grid border p-0">
+                    <button class="btn btn-success m-1" onclick="add2()" type="button">Add</button>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col-2 border text-center"><p class="my-3" id="pid3">3</p></div>
+                <div class="col-4 border text-center"><p class="my-3" id="pname3">Butter</p></div>
+                <div class="col-2 border text-center"><p class="my-3" id="price3">100</p></div>
+                <div class="col-2 border">
+                    <div class="row">
+                        <div class="col-7 text-center d-grid border p-0"><input class="form-control" value="0" id=quantity3 type="number" min="0" max="50"></div>
+                        <div class="col-5">
+                            <div class="row row-cols-1 border p-0">    
+                                <div class="col d-grid p-0">
+                                    <button class="btn btn-secondary btn-sm" onclick="add_qnt3()" style="margin: 1px;" type="button">+</button>
+                                </div>
+                                <div class="col d-grid p-0">
+                                    <button class="btn btn-secondary btn-sm" onclick="less_qnt3()" style="margin: 1px;" type="button">-</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-2 d-grid border p-0">
+                    <button class="btn btn-success m-1" onclick="add3()" type="button">Add</button>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col-2 border text-center"><p class="my-3" id="pid4">4</p></div>
+                <div class="col-4 border text-center"><p class="my-3" id="pname4">Pencil</p></div>
+                <div class="col-2 border text-center"><p class="my-3" id="price4">10</p></div>
+                <div class="col-2 border">
+                    <div class="row">
+                        <div class="col-7 text-center d-grid border p-0"><input class="form-control" value="0" id=quantity4 type="number" min="0" max="50"></div>
+                        <div class="col-5">
+                            <div class="row row-cols-1 border p-0">    
+                                <div class="col d-grid p-0">
+                                    <button class="btn btn-secondary btn-sm" onclick="add_qnt4()" style="margin: 1px;" type="button">+</button>
+                                </div>
+                                <div class="col d-grid p-0">
+                                    <button class="btn btn-secondary btn-sm" onclick="less_qnt4()" style="margin: 1px;" type="button">-</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-2 d-grid border p-0">
+                    <button class="btn btn-success m-1" onclick="add4()" type="button">Add</button>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col-2 border text-center"><p class="my-3" id="pid5">5</p></div>
+                <div class="col-4 border text-center"><p class="my-3" id="pname5">Notebook</p></div>
+                <div class="col-2 border text-center"><p class="my-3" id="price5">120</p></div>
+                <div class="col-2 border">
+                    <div class="row">
+                        <div class="col-7 text-center d-grid border p-0"><input class="form-control" value="0" id=quantity5 type="number" min="0" max="50"></div>
+                        <div class="col-5">
+                            <div class="row row-cols-1 border p-0">    
+                                <div class="col d-grid p-0">
+                                    <button class="btn btn-secondary btn-sm" onclick="add_qnt5()" style="margin: 1px;" type="button">+</button>
+                                </div>
+                                <div class="col d-grid p-0">
+                                    <button class="btn btn-secondary btn-sm" onclick="less_qnt5()" style="margin: 1px;" type="button">-</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-2 d-grid border p-0">
+                    <button class="btn btn-success m-1" onclick="add5()" type="button">Add</button>
+                </div>
+            </div>
+
+            <div class="row d-grid border my-3 p-1">
+                <button class="btn btn-success" onclick="cart_summary()" type="button">CART SUMMARY</button>
+            </div>
+
+        </div>
+    </body>
+</html>

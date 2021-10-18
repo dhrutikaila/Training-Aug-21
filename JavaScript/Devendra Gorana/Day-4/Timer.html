@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Assingment</title>
+        <!-- Bootstrap CSS -->
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-F3w7mX95PdgyTmZZMECAngseQB83DfGTowi0iMjiWaeVhAn4FJkqJByhZMI3AhiU" crossorigin="anonymous">
+    </head>
+    <body>
+        <!-- Optional JavaScript; choose one of the two! -->
+
+        <!-- Option 1: Bootstrap Bundle with Popper -->
+
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-/bQdsTh/da6pkI1MST/rWKFNjaCP5gBSY4sEBT38Q/9RBh9AH40zEOg7Hlq2THRZ" crossorigin="anonymous"></script>
+        
+        <div class="container bg-dark border my-1">
+            <div class="d-grid border border-white border-2 rounded justify-content-center my-2">
+                <h2 class="m-0 text-white" >SET TIMER</h2>
+            </div>
+            <div class="row my-1">
+                <div class="col border border-white border-2 rounded ms-3 me-1 d-flex">
+                    <p class="text-white h4 m-0">Current Time - </p>
+                    <p class="text-white h4 m-0 ms-2" id="currentTime"> </p>
+                </div>
+                <div class="col border border-white border-2 rounded ms-1 me-3 d-flex">
+                    <p class="text-white h4 m-0">Time Left - </p>
+                    <p class="text-white h4 m-0 ms-2" id="timerTime"> </p>
+                </div>
+            </div>
+            
+            <div class="row justify-content-center my-2">
+                <div class="col">
+                    <label for="hours" class="form-label text-white">Hours</label>
+                    <input type="number" class="form-control" id="hours" min="0">
+                </div>
+                <div class="col">
+                    <label for="minute" class="form-label text-white">Minute</label>
+                    <input type="number" class="form-control" id="minute" min="0" max="60">
+                </div>
+                <div class="col">
+                    <label for="second" class="form-label text-white">Second</label>
+                    <input type="number" class="form-control" id="second" min="0" max="60">
+                </div>
+            </div>
+            <div class="d-grid mb-1">
+                <button class="btn btn-primary my-2" type="button" onclick="start_timer()" id="st">Start Timer</button>
+            </div>
+        </div>
+        <script>
+            //function for current time
+            setInterval(myFunction1, 5000);
+            function myFunction1() 
+            {
+                let d = new Date();
+                document.getElementById("currentTime").innerHTML = d.getHours() + ":" + d.getMinutes() + ":" + d.getSeconds() ;
+            }
+
+
+            //function for timer
+            function start_timer()
+            {
+                var input_h = document.getElementById("hours").value;
+                var input_m = document.getElementById("minute").value;
+                var input_s = document.getElementById("second").value;
+
+                var d = new Date();
+                var h = d.setHours(d.getHours() + parseInt(input_h));
+                var m = d.setMinutes(d.getMinutes() + parseInt(input_m));
+                var s = d.setSeconds(d.getSeconds() + parseInt(input_s));
+            
+                var x = setInterval(function() 
+                {   
+                    var now = new Date().getTime();
+                    var t = d - now;
+                    var days = Math.floor(t / (1000 * 60 * 60 * 24));
+                    var hours = Math.floor((t%(1000 * 60 * 60 * 24))/(1000 * 60 * 60));
+                    var minutes = Math.floor((t % (1000 * 60 * 60)) / (1000 * 60));
+                    var seconds = Math.floor((t % (1000 * 60)) / 1000);
+                    document.getElementById("timerTime").innerHTML = hours + " : " + minutes + " : " + seconds;
+                    if (t < 0) {
+                        clearInterval(x);
+                        document.getElementById("timerTime").innerHTML = "Time Expired";
+                    }
+                }, 1000);
+            } 
+        </script>
+    </body>
+</html>
+
+

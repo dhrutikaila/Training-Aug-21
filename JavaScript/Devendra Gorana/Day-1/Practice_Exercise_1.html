@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Practice Exercise</title>
+    </head>
+    <body>
+    <!--1.Accept three numbers from the user using prompt,
+    find the greater of these the numbers and do the sum of that numbers which are greater than 40.-->
+        <script>
+        var num1 = prompt("Enter First Number");
+        var num2 = prompt("Enter Second Number");
+        var num3 = prompt("Enter Third Number");
+        var ans1 = greater_num(parseInt(num1),parseInt(num2),parseInt(num3));
+        var ans2 = sum_num(parseInt(num1),parseInt(num2),parseInt(num3));
+        alert("Greater Number is " + ans1 + "\nSum of That Numbers Which are Greater than 40 is " + ans2);
+
+        /*Function for find greater number between three number*/
+        function greater_num(a,b,c) 
+        {
+            if(a>b && a>c) 
+            {
+                return a;
+            }
+            else if(b>a && b>c)
+            {
+                return b;
+            }
+            else
+            {
+                return c;
+            }
+
+        }
+
+        /*Function for sum of that numbers which are greater than 40*/
+        function sum_num(a,b,c)
+        {
+            if(a>40 && b>40 && c>40)
+            {
+                return a+b+c;
+            }
+            else if(a>40 && b>40)
+            {
+                return a+b;
+            }
+            else if(b>40 && c>40)
+            {
+                return b+c;
+            }
+            else if(c>40 && a>40)
+            {
+                return c+a;
+            }
+            else
+            {
+                return "\nNo One Is Greater Then 40.";
+            }
+        }
+        </script>
+
+    <!--Declare array with 5 city names and iterate these values with the help of loop and display it with alert.-->
+        <script>
+            const city = ["Ahmedabad","Jaipur","Benglore","Mumbai","Pune"];
+            let text;
+            for (let i = 0; i < 5; i++) 
+            {
+                text += "\n" + city[i] 
+                
+            }
+            alert("List of Array:" + text);
+            
+
+        </script>
+
+    </body>
+</html>

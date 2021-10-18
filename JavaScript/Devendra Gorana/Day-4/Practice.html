@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Practice</title>
+        <!-- Bootstrap CSS -->
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-F3w7mX95PdgyTmZZMECAngseQB83DfGTowi0iMjiWaeVhAn4FJkqJByhZMI3AhiU" crossorigin="anonymous">
+    </head>
+    <body>
+        <!-- Optional JavaScript; choose one of the two! -->
+
+        <!-- Option 1: Bootstrap Bundle with Popper -->
+
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-/bQdsTh/da6pkI1MST/rWKFNjaCP5gBSY4sEBT38Q/9RBh9AH40zEOg7Hlq2THRZ" crossorigin="anonymous"></script>
+
+        <!-- Option 2: Separate Popper and Bootstrap JS -->
+        <!--
+        <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.3/dist/umd/popper.min.js" integrity="sha384-W8fXfP3gkOKtndU4JGtKDvXbO53Wy8SZCQHczT5FMiiqmQfUpWbYdTil/SxwZgAN" crossorigin="anonymous"></script>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/js/bootstrap.min.js" integrity="sha384-skAcpIdS7UcVUC05LJ9Dxay8AXcDYfBJqt1CJ85S/CFujBsIzCIv+l9liuYLaMQ/" crossorigin="anonymous"></script>
+        -->
+        <div class="container border mt-4" style="background-color: rgb(63, 52, 52); border-radius: 7px;">
+            
+            
+            <p class="m-2" id="demo1" style="color: white;"></p>
+            <p class="m-2" id="demo2" style="color: white;"></p>
+            <div class="mt-4">
+            <p class="m-2" id="demo3" style="color: rgb(211, 22, 22);"></p>
+            </div> 
+            <div class="mt-4">
+                <p class="m-2" id="demo4" style="color: rgb(211, 22, 22);"></p>
+            </div> 
+            <div class="mt-4">
+                <p class="m-2" id="demo5" style="color: rgb(211, 22, 22);"></p>
+            </div> 
+            <div class="mt-4">
+                <p class="m-2" id="demo6" style="color: rgb(211, 22, 22);"></p>
+            </div>          
+        </div>
+        <script>
+            setInterval(myFunction1, 5000);
+            function myFunction1() 
+            {
+                let d = new Date();
+                document.getElementById("demo1").innerHTML = d.getHours() + ":" + d.getMinutes() + ":" + d.getSeconds() ;
+            }
+
+            setTimeout(myFunction2,5000);
+            function myFunction2()
+            {
+                document.getElementById("demo2").innerHTML = "Time Out";
+            }
+            
+
+            //Promises Practice
+
+            let myPromise = new Promise(function(myResolve, myReject) {
+                let x = 0;
+
+            // some code (try to change x to 5)
+
+                if (x == 0) {
+                    myResolve("OK");
+                } else {
+                    myReject("Error");
+                }
+            });
+
+            myPromise.then(
+                function(value) {document.getElementById("demo3").innerHTML = value;},
+                function(error) {document.getElementById("demo3").innerHTML = error;}
+            );
+
+
+            //********************************************//
+            function myfunction(data)
+            {
+                //producer code
+                let myPromise = new Promise(function(myResolve,myReject)
+                {
+                    
+                    let successMessage="Enter Data Is String.";
+                    let errorMessage="error!";
+                    
+                    if(typeof data === 'string')
+                    {
+                        myResolve(successMessage);
+                    }
+                    else
+                    {
+                        myReject(errorMessage);
+                    }
+                });
+             
+                //consumer code
+                myPromise.then(
+                    function(value){document.getElementById("demo4").innerHTML = value;},
+                    function(error){document.getElementById("demo4").innerHTML = error;} 
+                );
+            }
+            myfunction("Devendra Gorana");
+
+
+            //Async function
+            function myDisplayer(some) {
+                document.getElementById("demo5").innerHTML = some;
+            }
+
+            async function myFunction() {return "Hello";}
+
+            myFunction().then(
+                function(value) {myDisplayer(value);}
+            );
+
+            //Await
+            async function myDisplay() {
+                let myPromise = new Promise(function(myResolve, myReject) {
+                    myResolve("I love Programming. !!");
+                });
+                document.getElementById("demo6").innerHTML = await myPromise;
+            }
+
+            myDisplay();
+        </script>
+    </body>
+</html>

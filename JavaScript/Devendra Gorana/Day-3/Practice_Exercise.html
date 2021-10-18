@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Practice Exercise</title>
+        <!-- Bootstrap CSS -->
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-F3w7mX95PdgyTmZZMECAngseQB83DfGTowi0iMjiWaeVhAn4FJkqJByhZMI3AhiU" crossorigin="anonymous">
+    </head>
+    <body>
+        <!-- Optional JavaScript; choose one of the two! -->
+
+        <!-- Option 1: Bootstrap Bundle with Popper -->
+
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-/bQdsTh/da6pkI1MST/rWKFNjaCP5gBSY4sEBT38Q/9RBh9AH40zEOg7Hlq2THRZ" crossorigin="anonymous"></script>
+    
+        <!--Use Window.location object to navigate on another page-->
+        <div class="container border my-2">
+            <div class="d-grid my-2">
+                <label class="form-label">Use Window.location object to navigate on another page Example. </label>
+                <button class="btn btn-success" type="button" onclick="redirect()">Click Here</button>
+            </div>
+            <!--Use Window.history object to move to previous url in the history list-->
+            <div class="d-grid my-2">
+                <label class="form-label">Use Window.history object to move to previous url in the history list Example. </label>
+                <button class="btn btn-success" type="button" onclick="redirect_History()">Click Here</button>
+            </div>
+            <!--Try to change windows height and width using Windows object-->
+            <div class="d-grid my-2">
+                <label class="form-label">Try to change windows height and width using Windows object Example. </label>
+                <button class="btn btn-success" type="button" onclick="resize_page()">Click Here</button>
+            </div>
+        </div>
+
+        <script>
+        function redirect() 
+        {
+            window.location.assign("https://www.w3schools.com")
+        }
+
+        function redirect_History()
+        {
+            window.history.back();
+        }
+                 
+        function resize_page()
+        {
+            window.resizeTo(1000px,720px);
+        }
+        </script>
+    </body>
+</html>
+
