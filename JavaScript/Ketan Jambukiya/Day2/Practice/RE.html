@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <p id="demo"></p>
+    <p id="re"></p>
+    <p id="replace"></p>
+    <script>
+        var x = "hello everyone everyone"
+        document.getElementById("demo").innerHTML = 
+        //for Search
+        x.search("everyone")+"<br>"+
+        //search to be case-insensitive
+        x.search(/Everyone/i)+"<br>"+
+        //global search
+        x.search(/everyone/g)+"<br>";
+
+         y = "Is this all there is? 123421589,red,green,re,green";
+        document.getElementById("re").innerHTML = 
+        //any of the characters between the brackets
+        y.match(/[th]/g)+"<br>"+
+        // any of the digits between the brackets
+        y.match(/[0-5]/g)+"<br>"+
+        //any of the alternatives separated with |
+        y.match(/(red|green)/g)+"<br>";
+
+
+        //replace
+        var text = "Please visit Microsoft!";
+        document.getElementById("replace").innerHTML =
+        text.replace(/microsoft/i, "W3Schools");
+
+
+    </script>
+</body>
+</html>

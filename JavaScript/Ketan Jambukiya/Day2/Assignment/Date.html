@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Date Validation</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-F3w7mX95PdgyTmZZMECAngseQB83DfGTowi0iMjiWaeVhAn4FJkqJByhZMI3AhiU" crossorigin="anonymous">
+
+</head>
+<body>
+    <div class="m-4">
+    <input type="text" id="ddate" placeholder="MM-DD-YYYY" class="form-control w-25 mb-3">
+      <div class="mb-3">
+    <button id="checkdate" class="btn btn-outline-secondary" onclick="checkdate()">Check Date</button>
+    <button id="reset" class="btn btn-outline-secondary" onclick="reset()">Reset</button>
+     </div> 
+    <label id="result"></label>
+</div>
+
+    <script>
+        function checkdate()
+        {
+            var abc = document.getElementById('ddate').value;
+            arr = abc.split("-");
+            month = parseInt(arr[0]);
+            day = parseInt(arr[1]);
+            year = parseInt(arr[2]);
+
+
+
+            if (day < 1 || day > 31) {
+                document.getElementById("result").innerHTML = " Date is not valid"
+
+            }
+            else if (month < 1 || month > 12) {
+                document.getElementById("result").innerHTML = " Date is not valid"
+
+            }
+            else if 
+            
+            (month == 2) {
+
+                if (((year % 4 == 0 && year % 100 != 0) || (year % 400 == 0)) && (day > 1 || day < 30)) {
+                    document.getElementById("result").innerHTML = " Date is valid"
+                }
+                else {
+                    document.getElementById("result").innerHTML = " Date is not valid"
+                }
+            }
+            else if ((month == 4 || month == 6 || month == 9 || month == 11) && (day < 1 || day > 30)) {
+                document.getElementById("result").innerHTML = " Date is not valid"
+            }
+
+            else {
+                document.getElementById("result").innerHTML = " Date is valid"
+            }
+        }
+
+        function reset()
+        {
+            document.getElementById("ddate").value="";
+            document.getElementById("result").innerHTML="";
+        }
+    </script>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-/bQdsTh/da6pkI1MST/rWKFNjaCP5gBSY4sEBT38Q/9RBh9AH40zEOg7Hlq2THRZ" crossorigin="anonymous"></script>
+
+</body>
+</html>

@@ -1,0 +1,73 @@
+<!--  Put a droplist with 5 country name from list object using jquery
+
+     (Eg. India, United Kingdom..). Default value should “Please select”.
+
+     – Bellow droplist all country name which are in the dropdown that should display with Label :
+
+     “Your Selected Country : “.
+
+    – By default all country name should display.
+
+    – Only that country name should appear which are you select from dropdown.
+
+    All other label should be disappear.
+
+    – When i select ‘Please select’, all countries name should get displayed. -->
+    
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-F3w7mX95PdgyTmZZMECAngseQB83DfGTowi0iMjiWaeVhAn4FJkqJByhZMI3AhiU" crossorigin="anonymous">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
+    <script>
+        $(document).ready(function () {
+            $("#result").html("you have selected : ");
+            $("#location option").each(function () {
+                $("#result").append(this.value + "<br>");
+            })
+            $("#location").change(function () {
+                var country = $("#location option:selected").val();
+
+
+                if (country == " ") {
+                    $("#result").html("you have selected : ")
+                    $("#location option").each(function () {
+                        $("#result").append(this.value + "<br>");
+                    })
+                }
+                else {
+                    $("#result").html("you have selected  : " + country);
+                }
+
+            })
+        })
+    </script>
+</head>
+
+<body>
+    <label style="margin: 10px;">Location : </label>
+    <select name="Location" id="location">
+        <option value=" ">Please Select</option>
+        <option value="India">India</option>
+        <option value="Australia">Australia</option>
+        <option value="china">China</option>
+        <option value="Canada">Canada</option>
+        <option value="Thailand">Brazil</option>
+    </select><br>
+
+    <label id="result" style="margin: 10px ;"></label>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-/bQdsTh/da6pkI1MST/rWKFNjaCP5gBSY4sEBT38Q/9RBh9AH40zEOg7Hlq2THRZ"
+        crossorigin="anonymous"></script>
+
+</body>
+
+</html>

@@ -1,0 +1,30 @@
+<!-- Define a function called callback which receives an argument and prints the square of that number. -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>callback</title>
+</head>
+<body>
+    <label id="result"></label>
+    <script>
+         var x;
+         function Number(a,callback)
+         {
+             x= setInterval (()=>{
+                 callback(a*a)
+            },4000);
+        
+         }
+             var c = 5
+             Number(c,(b)=>{
+             document.getElementById("result").innerHTML = "Square of "+ c +" is "  + b ; 
+             clearInterval(x);
+         })
+
+       
+    </script>
+</body>
+</html>

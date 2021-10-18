@@ -1,0 +1,88 @@
+
+<!-- Create Basic layout of the application which contain header, footer, leftbar and sidebar.
+Header keep brand logo and navigation bar for home, aboutus and contact us. Navigation should work properly -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+       
+       nav {
+
+            border: 1px solid black ;
+            padding: 30px;
+            background-color: red;
+                
+        }
+        nav  a {
+        color: white;
+        padding: 14px 20px;
+        text-decoration: none;
+        text-align: center;
+}
+       a:hover {
+        color: blanchedalmond;
+          background-color: blue;
+          
+        }
+       .main{
+        
+            display: grid;
+            grid-template-columns: 1fr 4fr ;
+            
+        }
+        .A {
+            height: 300px;
+            background-color: wheat;
+            border: 1px solid black;
+            text-align: justify;
+            padding: 3px;
+            height: 400px;
+        }
+        .B {
+            height: 300px;
+            background-color: darkgoldenrod;
+            border: 1px solid black;
+            padding: 3px;
+            text-align: justify;
+            height: 400px;
+        }
+
+        .footer {
+            border: 1px solid black;
+            padding: 40px;
+            text-align: center;
+            background: plum;
+            
+           
+        }
+
+       
+    </style>
+</head>
+<body>
+    <nav>
+        <a href="Home.html"> Home</a>
+        <a href="Aboutus.html"> Aboutus</a>
+        <a href="Contactus.html">    Contactus  </a>
+    </nav>
+    <div class="main">
+        <div class="A">
+           
+            <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Aspernatur adipisci itaque, eius molestiae, inventore illo officia vel, vitae laborum corporis incidunt dolores vero earum! Sit nostrum suscipit quas fuga provident.</p>
+        </div>
+        <div class="B">
+           
+            <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Aspernatur adipisci itaque, eius molestiae, inventore illo officia vel, vitae laborum corporis incidunt dolores vero earum! Sit nostrum suscipit quas fuga provident.</p>
+        </div>
+    
+    </div>
+    <div class="footer">
+        <h>footer</h2>
+    </div>
+  
+</body>
+</html>

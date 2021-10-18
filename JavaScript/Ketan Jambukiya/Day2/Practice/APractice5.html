@@ -1,0 +1,27 @@
+<!-- Try some operation with list like push, pop, shifting, deleting element -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+        <p id="demo"></p><br>
+        <p id="hello"></p>
+        <script>
+            var arr1 = ["Ahemedbad","Rajkot","Surat","Gandhinagr","Jamnagar","Bharuch","Porbandar"];
+            //for pop
+            arr1.pop();
+            //for push
+            arr1.push("Vadodra");
+            //for shift
+            arr1.shift();
+            //for delete
+            arr1.splice(2,2);
+            document.getElementById("demo").innerHTML =  arr1; 
+
+        </script>
+</body>
+</html>

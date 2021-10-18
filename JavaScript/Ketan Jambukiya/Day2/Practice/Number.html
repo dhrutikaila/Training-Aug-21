@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Number</title>
+</head>
+<body>
+<h2>JavaScript Number Methods</h2>
+
+<p id="demo"></p><br>
+<p id="number"></p><br>
+<p id="date"></p>
+
+<script>
+var num = 123.678;
+// Convert a number to a string
+document.getElementById("demo").innerHTML =num.toString()+"<br>"+
+
+//Exponintial number
+num.toExponential(4)+"<br>"+
+
+//toFixed() returns a string, with the number written with a specified number of decimals
+num.toFixed(2)+"<br>"+
+
+//toPrecision() returns a string, with a number written with a specified length
+num.toPrecision(5)+"<br>"+
+
+//valueOf() returns a number as a number
+num.valueOf()+"<br>";
+ 
+// convert JavaScript variables to numbers
+document.getElementById("number").innerHTML = Number(true)+"<br>"+Number(false)+"<br>"+
+//parses a string and returns a whole number
+parseInt("1000 hello");
+
+//convert a date to a number.
+var x = new Date("2000-07-29");
+document.getElementById("date").innerHTML = Number(x);
+
+
+
+
+</script>
+</body>
+</html>
