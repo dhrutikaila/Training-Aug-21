@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Practice</title>
+    <style>
+       nav> ul{
+            list-style-type: none;
+            text-align: right;
+            
+        }
+        nav >ul li{
+            display: inline;
+            font-size: 25px;
+            padding-left: 5px;
+            background-color: aqua;
+        }
+    </style>
+</head>
+<body>
+  <nav>
+    <ul>
+        <li><a href="#">Home</a></li>
+        <li><a href="#">AboutUs</a></li>
+        <li><a href="#">ContactUs</a></li>
+    </ul>
+</nav>
+    <article style="width: 300px; border: 2px solid gray; padding: 10px; border-radius: 10px; margin:5px;">
+        <img src="Assets/news.png" width="300" height="250"/>
+        <h3> Gujarat CM Bhupendra Patel visits flood-affected areas in Jamnagar</h3>
+        <p>
+            The newly sworn-in chief minister of Gujarat Bhupendra Patel on Tuesday visited some of the flood-affected areas in Jamnagar to take stock of the situation. This comes after he chaired a high-level review meeting on Monday to assess the flood situations in some parts of the Saurashtra region. Besides, he has also been reportedly making an aerial survey of the affected regions. According to reports, Jamnagar and Rajkot districts of Gujarat are worst-hit after heavy rain led to overflowing dams in the state.
+        </p>
+    </article>
+    <h1> Employee Hierarchy</h1>
+    <h2>Company CEO<br>Tony Charles</h2>
+        <ul style="list-style-type: Disc;">
+          <li>Sales manager<br>Steve Heisenberg
+            <ul style="list-style-type: circle;">
+              <li>Representative
+                <ol type="1">
+                  <li>Roger</li>
+                  <li>George</li>
+                </ol>
+              </li>
+            </ul>
+          </li>
+          <li>Project manager<br>John Mathews
+            <ul style="list-style-type: circle;">
+              <li>Team Leader
+                <ol type="1">
+                  <li>Daniel
+                    <ol type="I">
+                      <li>Sr Developer
+                        <ol type="i">
+                          <li>David</li>
+                          <li>Robert</li>
+                          <li>William</li>
+                        </ol>
+                      </li>
+                      <li>Jr Developer
+                        <ol type="i">
+                          <li>Thomas</li>
+                          <li>Christopher</li>
+                          <li>Donald</li>
+                        </ol>
+                      </li>
+                    </ol>
+                  </li>
+                  <li>Steven
+                    <ol type="I">
+                    <li>Sr Developer
+                      <ol type="i">
+                        <li>Andrew</li>
+                        <li>Kenneth</li>
+                        <li>Joshua</li>
+                      </ol>
+                    </li>
+                    <li>Jr Developer
+                      <ol type="i">
+                        <li>Kevin</li>
+                        <li>Jason</li>
+                        <li>Ryan</li>
+                      </ol>
+                    </li>
+                  </ol>
+                </li>
+                  <li>Gary
+                    <ol type="I">
+                      <li>Sr Developer
+                        <ol type="i">
+                          <li>Jeffrey</li>
+                          <li>Jacob</li>
+                          <li>Edward</li>
+                        </ol>
+                      </li>
+                      <li>Jr Developer
+                        <ol type="i">
+                          <li>Nicholas</li>
+                          <li>Justin</li>
+                          <li>Scott</li>
+                        </ol>
+                      </li>
+                    </ol> 
+                  </li>
+                </ol>
+              </li>
+            </ul>
+          </li>
+          <li>Networking manager<br>Joseph Anthony
+            <ul style="list-style-type: circle;">
+              <li>Networking Assistance
+                <ol type="1">
+                  <li>Frank</li>
+                  <li>Alexander</li>
+                  <li>Dennis</li>
+                </ol>
+              </li>
+            </ul>
+          </li>
+        </ul>
+        <h1> Login Form</h1>
+        <form>
+            <label for="usr">Username</label>
+            <input type="text" id="usr" required>
+        
+            <label for="pswd">Password</label>
+            <input type="password" id="pswd" pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}" title="Must contain at least one number and one uppercase and lowercase letter, and at least 8 or more characters" required>
+        
+            <input type="submit" value="Submit">
+          </form>
+    <!--  Size attribute specifies number of visible options --> 
+        <form>
+          <label for="cars">Choose a car:</label>
+          <select id="cars" name="cars" size="3">
+            <option value="volvo">Volvo</option>
+            <option value="saab">Saab</option>
+            <option value="fiat">Fiat</option>
+            <option value="audi">Audi</option>
+          </select> 
+        </form><br>
+   <!--  Multiple attribute allows to select multiple options --> 
+        <form>
+          <label for="cars">Choose a car:</label>
+          <select id="cars" name="cars" multiple>
+            <option value="volvo">Volvo</option>
+            <option value="saab">Saab</option>
+            <option value="fiat">Fiat</option>
+            <option value="audi">Audi</option>
+          </select> 
+        </form><br>
+      <form>
+        <label for="btn">press button</label>
+        <input type="button" id="btn" value="Button"><br><br>
+
+        <label for="fav_language">fav language</label><br>
+        <label for="html">HTML</label>
+        <input type="radio" id="html" name="fav_language" value="HTML"><br>
+        <label for="css">CSS</label> 
+        <input type="radio" id="css" name="fav_language" value="CSS"><br>
+        <label for="javascript">JavaScript</label>   
+        <input type="radio" id="javascript" name="fav_language" value="JavaScript"><br><br>
+        <input type="submit" value="Submit"><br><br>
+        
+        <label for="favcolor">Select your favorite color:</label>
+        <input type="color" id="favcolor" name="favcolor"><br><br>
+
+        <label for="birthday">Birthday:</label>
+        <input type="date" id="birthday" name="birthday"><br><br>
+
+        <input type="checkbox" id="vehicle1" name="vehicle1" value="Bike">
+        <label for="vehicle1"> I have a bike</label><br>
+        <input type="checkbox" id="vehicle2" name="vehicle2" value="Car">
+        <label for="vehicle2"> I have a car</label><br>
+        <input type="checkbox" id="vehicle3" name="vehicle3" value="Boat">
+        <label for="vehicle3"> I have a boat</label><br><br>
+
+        <label for="email">Enter your email:</label>
+        <input type="email" id="email" name="email"><br><br>
+
+        <label for="myfile">Select a file:</label>
+        <input type="file" id="myfile" name="myfile"><br><br>
+
+        <label for="vol">Volume (between 0 and 50):</label>
+        <input type="range" id="vol" name="vol" min="0" max="50"><br><br>
+
+        <label for="gsearch">Search Google:</label>
+        <input type="search" id="gsearch" name="gsearch"><br><br>
+
+        <label for="phone">Enter your phone number:</label>
+        <input type="tel" id="phone" name="phone" pattern="[0-9]{3}-[0-9]{2}-[0-9]{3}"><br><br>
+
+        <label for="appt">Select a time:</label>
+        <input type="time" id="appt" name="appt"><br><br>
+
+        <label for="homepage">Add your homepage:</label>
+        <input type="url" id="homepage" name="homepage"><br><br>
+
+      </form>
+   <!--Text Area defines block to enter text of mentioned size-->
+   <h4 style="float: left;">Feedback : </h4>
+   <textarea name="feedback" rows="5" cols="30" style="float: left;">
+   </textarea><br>
+   
+      
+</body>
+</html>

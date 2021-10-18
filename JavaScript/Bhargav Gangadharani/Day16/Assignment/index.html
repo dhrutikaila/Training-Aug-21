@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-F3w7mX95PdgyTmZZMECAngseQB83DfGTowi0iMjiWaeVhAn4FJkqJByhZMI3AhiU" crossorigin="anonymous">
+    <title>Assignment Day16</title>
+</head>
+<body>
+    <div class="container mt-5">
+        <form>
+            <div class="my-3">
+                <label for="date" class="mb-2 h3">Date : <span class="small">(MM/DD/YYYY)</span></label>
+                <input type="text" placeholder="format: 01/20/2021 " class="form-control" id="date">
+            </div>
+        </form>
+        <button class="btn btn-success mt-2" onclick="return check(document.getElementById('date').value)">Submit</button>
+    </div>
+    
+
+    <script>
+        function check(dt){
+            
+            if(dt==""){
+                alert("Please Enter the Date !");
+                return;
+            }
+
+           var dtpart = dt.split("/");
+            if( dtpart.length != 3 || dtpart[0].length != 2 || dtpart[1].length != 2 || dtpart[2].length != 4){
+                alert('Please Enter the Date in valid format !');
+                return;
+            }
+            var day = parseInt(dtpart[1]);
+            var month = parseInt(dtpart[0]);
+            var year = parseInt(dtpart[2]);
+            
+            if(isNaN(year) || year > (new Date()).getFullYear ){
+                alert('Invalid Year!');
+                return;    
+            }
+
+            else if( isNaN(month) || month < 1 || month > 12  )
+            {
+                alert('Invalid Month!');
+                return;
+            }
+
+            else if(isNaN(day) || day < 1 || day > (new Date(year, month, 0).getDate()) )
+            {
+                alert('Invalid Date!');
+                return;
+            }
+
+            else{alert("Thanks for a valid Date !");
+            return dt;
+            }
+        }
+    </script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-/bQdsTh/da6pkI1MST/rWKFNjaCP5gBSY4sEBT38Q/9RBh9AH40zEOg7Hlq2THRZ" crossorigin="anonymous"></script>
+</body>
+
+</html>

@@ -1,6 +1,7 @@
 /*
 1. Write a query that displays the FirstName and the length of the FirstName for all
-
+employees whose name starts with the letters �A�, �J� or �M�. Give each column an 
+appropriate label. Sort the results by the employees� FirstName
 */
 
 SELECT 'First Name' = FirstName,'Name Length' = LEN(FirstName) 
@@ -15,7 +16,7 @@ Label the column SALARY.
 
 SELECT firstname,'SALARY' = RIGHT(REPLICATE('$',10-LEN(Salary)) + 
 CAST(Salary as varchar),10) 
-
+FROM Employees
 
 
 /*
@@ -34,7 +35,7 @@ ORDER BY HireDate
 
 /*
 4.Write a query to display the length of first name for employees where 
-
+last name contains character �c� after 2nd position.
 */
 
 SELECT LEN(FirstName) FROM EMPLOYEES WHERE CHARINDEX('c',LastName)>2
@@ -49,7 +50,8 @@ SELECT 'LAST 4 DIGITS' = RIGHT(PhoneNumber,4) FROM Employees
 
 
 /*
-
+6.Write a query to UPDATE the portion of the PhoneNumber in the employees TABLE, 
+within the phone number the substring �124� will be replaced by �999�.
 */
 
 UPDATE Employees
@@ -66,7 +68,7 @@ SELECT DATEDIFF(yyyy,'2000-04-05',GETDATE())
 
 
 /*
-
+8.Write a query to get the distinct Mondays FROM HireDate in employees TABLEs.
 */
 
 SELECT HireDate FROM Employees 
@@ -75,7 +77,8 @@ WHERE DATENAME(WEEKDAY,HireDate)='MONDAY'
 
 
 /*
-
+9.Write a query to get the FirstName and HireDate FROM Employees TABLE 
+where HireDate between �1987-06-01� and �1987-07-30�
 */
 
 SELECT FirstName,HireDate FROM EMPLOYEES 

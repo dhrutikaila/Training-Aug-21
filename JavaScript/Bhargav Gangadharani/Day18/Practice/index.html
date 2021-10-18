@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-F3w7mX95PdgyTmZZMECAngseQB83DfGTowi0iMjiWaeVhAn4FJkqJByhZMI3AhiU" crossorigin="anonymous">
+    <title>Practice</title>
+</head>
+
+<body>
+    <!-- Question 1 -->
+    <div class="container bg-light border border-secondary rounded mt-5 p-5 text-center" style="overflow: auto;">
+        <p class="display-4">Practice Task 1</p>
+        <p class="lead">Define a function called callback which receives an argument and prints the square of that number.</p>
+        <form>
+            <label class="form-control-label" for="number">Enter Number : </label>
+            <input class="form-control w-25 mx-auto" id="number" type="number">
+        </form>
+        <p id="square" class="text-dark"></p>
+        <button class="btn btn-primary" onclick="squareNumber(document.forms[0].number, document.getElementById('square'))">Square</button>
+    </div>
+
+
+    <!-- Question 2 -->
+    <div class="container bg-light border border-secondary rounded mt-5 p-5 text-center" style="overflow: auto;">
+        <p class="display-4">Practice Task 2</p>
+        <p class="lead">Make a function that takes in a single parameter and returns a new promise.
+        using setTimeout, after 500 milliseconds, the promise will either resolve or reject. if the input is a string,
+        the promise resolves with that reverse string . if the input is anything but a string it rejects with that same input call the function wrong Input</p>
+        <form>
+            <label class="form-control-label" for="number">Enter String : </label>
+            <input class="form-control w-25 mx-auto" id="string" type="text">
+        </form>
+        <p id="strValid" class="text-dark"></p>
+        <button class="btn btn-primary" onclick="checkstr(document.forms[1].string, document.getElementById('strValid'))">Check By Promise</button>
+    </div>
+
+    <script src="Assets/script.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-/bQdsTh/da6pkI1MST/rWKFNjaCP5gBSY4sEBT38Q/9RBh9AH40zEOg7Hlq2THRZ" crossorigin="anonymous"></script>
+</body>
+
+</html>
