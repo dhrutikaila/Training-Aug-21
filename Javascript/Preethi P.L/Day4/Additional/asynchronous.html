@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Callback with Asynchronous functions</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-F3w7mX95PdgyTmZZMECAngseQB83DfGTowi0iMjiWaeVhAn4FJkqJByhZMI3AhiU" crossorigin="anonymous">
+</head>
+<body>
+    <!--Header-->
+    <div class="container text-center mt-2">
+        <h1 class="display1">Callback with Asynchronous functions</h1>
+        <hr>
+    </div>
+
+    <!--Section-1-->
+    <div class="container bg-light mt-3 p-3">
+        <h4>*Waiting for timeout*</h4>
+        <h6>Use setTimeout to change below text to another text after 2 seconds.</h6><br>
+        <h3 id="txt1" class="display-1">HELLO WORLD!!</h3>
+        <button class="btn btn-primary my-2" onclick="setTimeout(text,2000)">Change text</button>
+        <small class="text-muted">Wait 2 seconds for this text to change.</small>
+    </div>
+
+    <!--Section-2-->
+    <div class="container bg-light mt-3 p-3">
+        <h4>*Waiting for interval*</h4>
+        <h6>Use setInterval to display time every second.</h6><br>
+        <h3 id="time" class="display-1"></h3>
+        <button class="btn btn-primary my-2" onclick="setInterval(time,1000)">Display time</button>
+    </div>
+    
+    
+    <script>
+        //change text
+        function text()
+        {
+            document.getElementById("txt1").innerHTML = "GOOD MORNING!";
+        }
+
+        //display time
+        function time()
+        {
+            let d = new Date();
+            document.getElementById("time").innerHTML =   d.getHours() + ":" + d.getMinutes() + ":" + d.getSeconds(); 
+        }
+    </script>
+    <!-- Bootstrap JS Bundle with Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-/bQdsTh/da6pkI1MST/rWKFNjaCP5gBSY4sEBT38Q/9RBh9AH40zEOg7Hlq2THRZ" crossorigin="anonymous"></script>
+</body>
+</html>

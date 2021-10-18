@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Practice Exercise 3</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-F3w7mX95PdgyTmZZMECAngseQB83DfGTowi0iMjiWaeVhAn4FJkqJByhZMI3AhiU" crossorigin="anonymous">
+</head>
+<body>
+    <!--Header-->
+    <div class="container text-center mt-2">
+        <h1 class="display1">Practice Exercise 3</h1>
+        <hr>
+    </div>
+
+    <!--Main-->
+    <div class="container bg-light mt-3 p-2">
+        <p>Q. Write a JavaScript function to extract a specified number of characters from a string.</p><br>
+        <form>
+            <div class="form-group">
+                <label for="string" class="control-label">Enter a string :</label>
+                <input type="text" class="form-control" id="str">
+            </div><br>
+            <div class="form-group">
+                <label for="index1" class="control-label">Start index :</label>
+                <input type="number" class="form-control" id="index1">
+            </div><br>
+            <div class="form-group">
+                <label for="index2" class="control-label">End index :</label>
+                <input type="number" class="form-control" id="index2">
+            </div><br>
+            <input type="button" class="btn btn-success" onclick="extract(str.value,index1.value,index2.value)" value="Extract">
+            <input type="reset" class="btn btn-danger" onclick="clr(result.value)" value="Reset">
+        </form>
+        <br>
+        <p>Result : <span id="result"></span></p>
+    </div>
+
+    <!--JS-->
+    <script>
+        function extract(str,num1,num2)
+        {
+            if(str.length === 0 || num1 == 0 || num2 == 0)
+            {
+                alert("Please enter a valid input!");
+            }
+            else
+            {
+                document.getElementById("result").innerHTML = str.slice(num1,num2);
+            }             
+        }
+        function clr(value)
+        {
+            document.getElementById('result').style.display='none';
+        }
+    </script>
+</body>
+</html>

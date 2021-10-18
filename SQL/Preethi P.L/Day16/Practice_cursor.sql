@@ -1,0 +1,78 @@
+-- CURSOR(from mariadb)
+
+-- Create three tables
+
+CREATE TABLE c1(i INT);
+CREATE TABLE c2(i INT);
+CREATE TABLE c3(i INT);
+
+-- Create procedure for Cursor
+
+DELIMITER &&
+CREATE PROCEDURE p1() 
+BEGIN 
+	DECLARE done INT DEFAULT FALSE; 
+	DECLARE x, y INT;
+ 
+	DECLARE cur1 CURSOR FOR SELECT i FROM c1;  	-- DECLARE CURSOR
+	DECLARE cur2 CURSOR FOR SELECT i FROM c2; 
+
+	DECLARE CONTINUE HANDLER FOR NOT FOUND SET done = TRUE; 
+	
+	OPEN cur1;  -- OPEN CURSOR 
+	OPEN cur2; 
+	
+	read_loop: LOOP
+ 		FETCH cur1 INTO x; -- FETCH CURSOR
+		FETCH cur2 INTO y; 
+		IF done THEN LEAVE read_loop; 
+		END IF; 
+		IF x < y THEN INSERT INTO c3 VALUES (x); 
+		ELSE INSERT INTO c3 VALUES (y); 
+		END IF; 
+	END LOOP; 
+	
+	CLOSE cur1; -- CLOSE CURSOR 
+	CLOSE cur2; 
+END &&
+DELIMITER ;
+
+INSERT INTO c1 VALUES(5),(50),(500);
+INSERT INTO c2 VALUES(10),(20),(30);
+
+CALL p1;
+SELECT * FROM c3;
+
+
+
+-- CURSOR example 2
+
+-- Display salaryhike(Not updated in table)
+
+DELIMITER &&
+
+CREATE PROCEDURE salaryhike() 
+BEGIN 
+	DECLARE done INT DEFAULT FALSE; 
+	DECLARE x NUMERIC; 
+	DECLARE cur1 CURSOR FOR SELECT Salary FROM employees; -- DECLARE CURSOR 
+	DECLARE CONTINUE HANDLER FOR NOT FOUND SET done = TRUE; 
+	OPEN cur1; -- OPEN CURSOR 
+	read_loop: LOOP 
+	FETCH cur1 INTO x; -- FETCH CURSOR 
+	IF done THEN LEAVE read_loop; 
+	END IF; 
+	IF x BETWEEN 30000 AND 40000 THEN SET x = x + 5000; 
+	ELSEIF x BETWEEN 40000 AND 55000 THEN SET x = x + 7000; 
+	ELSEIF x BETWEEN 55000 AND 65000 THEN SET x = x + 9000; 
+	END IF; 
+	SELECT x;
+	END LOOP; 
+	CLOSE cur1; -- CLOSE CURSOR 
+END &&
+DELIMITER ;
+
+
+
+
+

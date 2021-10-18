@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bootstrap Flexbox</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-F3w7mX95PdgyTmZZMECAngseQB83DfGTowi0iMjiWaeVhAn4FJkqJByhZMI3AhiU" crossorigin="anonymous">
+    
+</head>
+<body>
+
+    <!-- Bootstrap Bundle with Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-/bQdsTh/da6pkI1MST/rWKFNjaCP5gBSY4sEBT38Q/9RBh9AH40zEOg7Hlq2THRZ" crossorigin="anonymous"></script>
+
+    <div class="container mt-3">
+        <!--Flexbox Container-->
+        <h2>Flexbox Container</h2>
+        <div class="d-flex p-2 bg-light">Flexbox container!</div><br/>
+        
+        <!--Inline Flexbox Container-->
+        <h2>Inline Flexbox Container</h2>
+        <div class="d-inline-flex p-2 bg-light mb-4">Inline flexbox container!</div>
+        
+        <!--Flex row & Flex Items-->
+        <h2>Flex row & Flex Items</h2>
+        <div class="d-flex flex-row bg-light">
+            <div class="p-4 border">Item 1</div>
+            <div class="p-4 border">Item 2</div>
+            <div class="p-4 border">Item 3</div>
+        </div><br>
+
+        <!--Flex row reverse-->
+        <h2>Flex row reverse</h2>
+        <div class="d-flex flex-row-reverse bg-light">
+            <div class="p-4 border">Item 1</div>
+            <div class="p-4 border">Item 2</div>
+            <div class="p-4 border">Item 3</div>
+        </div><br>
+
+        <!--Justify Content-->
+        <h2>Justify content</h2>
+        <div class="d-flex flex-row justify-content-start bg-light">
+            <div class="p-4 border">Item 1</div>
+            <div class="p-4 border">Item 2</div>
+            <div class="p-4 border">Item 3</div>
+        </div><br>
+        <div class="d-flex flex-row justify-content-center bg-light">
+            <div class="p-4 border">Item 1</div>
+            <div class="p-4 border">Item 2</div>
+            <div class="p-4 border">Item 3</div>
+        </div><br>
+        <div class="d-flex flex-row justify-content-end bg-light">
+            <div class="p-4 border">Item 1</div>
+            <div class="p-4 border">Item 2</div>
+            <div class="p-4 border">Item 3</div>
+        </div><br>
+        <div class="d-flex flex-row justify-content-around bg-light">
+            <div class="p-4 border">Item 1</div>
+            <div class="p-4 border">Item 2</div>
+            <div class="p-4 border">Item 3</div>
+        </div><br>
+        <div class="d-flex flex-row justify-content-between bg-light">
+            <div class="p-4 border">Item 1</div>
+            <div class="p-4 border">Item 2</div>
+            <div class="p-4 border">Item 3</div>
+        </div><br>
+
+        <!--Flex Column-->
+        <h2>Flex Column</h2>
+        <div class="d-flex flex-column bg-light">
+            <div class="p-4 border">Item 1</div>
+            <div class="p-4 border">Item 2</div>
+            <div class="p-4 border">Item 3</div>
+        </div><br>
+
+        <!--Flex column reverse-->
+        <h2>Flex Column Reverse</h2>
+        <div class="d-flex flex-column-reverse bg-light">
+            <div class="p-4 border">Item 1</div>
+            <div class="p-4 border">Item 2</div>
+            <div class="p-4 border">Item 3</div>
+        </div><br>
+
+        <!--Vertical Align Items-->
+        <h2>Vertical Align Items</h2>
+        <div class="d-flex flex-row align-items-start bg-light" style="height:200px">
+            <div class="p-4 border">Item 1</div>
+            <div class="p-4 border">Item 2</div>
+            <div class="p-4 border">Item 3</div>
+        </div>
+        <br>
+
+        <div class="d-flex flex-row align-items-center bg-light" style="height:200px">
+            <div class="p-4 border">Item 1</div>
+            <div class="p-4 border">Item 2</div>
+            <div class="p-4 border">Item 3</div>
+        </div>
+        <br>
+
+        <div class="d-flex flex-row align-items-end bg-light" style="height:200px">
+            <div class="p-4 border">Item 1</div>
+            <div class="p-4 border">Item 2</div>
+            <div class="p-4 border">Item 3</div>
+        </div><br>
+
+        <div class="d-flex flex-row align-items-baseline bg-light" style="height:200px">
+            <div class="p-4 border">Item 1</div>
+            <div class="p-4 border">Item 2</div>
+            <div class="p-4 border">Item 3</div>
+        </div><br>
+
+        <div class="d-flex flex-row align-items-stretch bg-light" style="height:200px">
+            <div class="p-4 border">Item 1</div>
+            <div class="p-4 border">Item 2</div>
+            <div class="p-4 border">Item 3</div>
+        </div><br>
+
+        <!--Align Self-->
+        <h2>Align Self</h2>
+        <div class="d-flex flex-row bg-light" style="height:200px">
+            <div class="align-self-start p-4 border">Item 1</div>
+            <div class="align-self-center p-4 border">Item 2</div>
+            <div class="align-self-end p-4 border">Item 3</div>
+            <div class="align-self-baseline p-4 border">Item 4</div>
+            <div class="align-self-stretch p-4 border">Item 5</div>
+        </div><br>
+
+        <!--Responsive Align Self-->
+        <h2>Responsive Align Self</h2>
+        <div class="d-flex flex-row bg-light" style="height:200px">
+            <div class="align-self-md-start p-4 border">Item 1</div>
+            <div class="align-self-md-center p-4 border">Item 2</div>
+            <div class="align-self-md-end p-4 border">Item 3</div>
+            <div class="align-self-md-baseline p-4 border">Item 4</div>
+            <div class="align-self-md-stretch p-4 border">Item 5</div>
+        </div><br>
+    </div>    
+</body>
+</html>

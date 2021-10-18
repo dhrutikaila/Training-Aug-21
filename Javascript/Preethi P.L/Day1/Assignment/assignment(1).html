@@ -1,0 +1,89 @@
+<!--Create an application for performing basic math operations like Addition, Subtraction,   Multiplication and Division.-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Day1 Assignment</title>
+</head>
+<body>
+    <h1>Assignment</h1>
+    <p>Create an application for performing basic math operations like Addition, Subtraction,   Multiplication and Division.</p>
+    <hr>
+    <form>
+        <label for="num1">Please enter first number : </label>
+        <input type="text" id="num1" placeholder="First Number"><br><br>
+        <label for="num2">Please enter second number : </label>
+        <input type="text" id="num2" placeholder="Second Number"><br><br>
+        <label for="operation">Please select operation you want to perform : </label><br>
+        
+        <input type="radio" name="operation" value="Addition" id="addition">
+        <label for="addition">Addition</label><br>
+        
+        <input type="radio" name="operation" value="Subtraction" id="subtraction">
+        <label for="subtraction">Subtraction</label><br>
+        
+        <input type="radio" name="operation" value="Multiplication" id="multiplication">
+        <label for="multiplication">Multiplication</label><br>
+        
+        <input type="radio" name="operation" value="Division" id="division">
+        <label for="division">Division</label><br><br>
+
+        <input type="button" value="Calculate" onclick="calculate()">
+        <input type="reset" value="Reset" onclick="clrdata()"><br><br>
+
+        Result is : <span id="result"></span>
+    </form>
+    
+
+    <script>
+        function calculate()
+        {   
+            console.log("Calculate Function called");
+            num1 = parseInt(document.getElementById("num1").value);
+            num2 = parseInt(document.getElementById("num2").value);
+            if(isNaN(num1)==false && isNaN(num2)==false)
+            {   
+                if(document.querySelector('input[name="operation"]:checked'))
+                {
+                var operation = document.querySelector('input[name="operation"]:checked');
+                switch(operation)
+                {
+                    case addition: 
+                        document.getElementById("result").innerHTML = num1 + num2;
+                        break;
+                    
+                    case subtraction: 
+                        document.getElementById("result").innerHTML = num1 - num2;
+                        break;
+                    
+                    case multiplication: 
+                        document.getElementById("result").innerHTML = num1 * num2;
+                        break;
+                    
+                    case division: 
+                        document.getElementById("result").innerHTML = num1/num2;
+                        break;
+                }
+                }
+                else
+                {
+                    alert("Please select an operation");
+                }
+            }
+            else
+            {
+                alert("Invalid Input! Input must be a number");
+            }
+        }
+
+        function clrdata()
+        {
+            console.log("clrdata Function called");
+            document.getElementById('result').style.display='none';
+        }
+        
+    </script>
+</body>
+</html>

@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Practice Exercise 1</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-F3w7mX95PdgyTmZZMECAngseQB83DfGTowi0iMjiWaeVhAn4FJkqJByhZMI3AhiU" crossorigin="anonymous">
+</head>
+<body>
+    <!--Header-->
+    <div class="container text-center mt-2">
+        <h1 class="display1">Practice Exercise 1</h1>
+        <hr>
+    </div>
+
+    <!--Main-->
+    <div class="container bg-light mt-3 p-2">
+        <h6>Q. Define a function called callback which receives an argument and prints the square of that number.</h6><br>
+        
+        <div class="form-group w-25">
+            <label for="num1" class="form-label">Enter number : </label>
+            <input type="number" class="form-control mb-2" id="num1" placeholder="Enter a number">
+        </div>
+        <button class="btn btn-primary" onclick="square(num1.value,print)">Print Square</button>
+        <p class="h4 mt-2">Result : <span id="result"></span></p>
+    </div>
+
+    <script>
+        
+        //Print result
+        function print(result)
+        {
+            document.getElementById("result").innerHTML = result;
+        }
+
+        //Calculates square
+        function square(num1,callback)
+        {
+            callback(num1*num1);
+        }
+    </script>
+    <!-- Bootstrap JS Bundle with Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-/bQdsTh/da6pkI1MST/rWKFNjaCP5gBSY4sEBT38Q/9RBh9AH40zEOg7Hlq2THRZ" crossorigin="anonymous"></script>
+</body>
+</html>

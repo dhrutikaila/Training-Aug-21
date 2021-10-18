@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>String Methods</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-F3w7mX95PdgyTmZZMECAngseQB83DfGTowi0iMjiWaeVhAn4FJkqJByhZMI3AhiU" crossorigin="anonymous">
+</head>
+<body>
+    <!--Header-->
+    <div class="container text-center mt-2">
+        <h1 class="display1">STRING METHODS</h1>
+        <hr>
+    </div>
+    
+    <!--Main-->
+    <div class="container mt-3 bg-light">
+        <h3>length()</h3>
+        <h3>slice()</h3>
+        <h3>substring()</h3>
+        <h3>substr()</h3>
+        <h3>replace()</h3>
+        <h3>toUpperCase()</h3>
+        <h3>toLowerCase()</h3>
+        <h3>concat()</h3>
+        <h3>trim()</h3>
+        <h3>padStart()</h3>
+        <h3>padEnd()</h3>
+        <h3>charAt()</h3>
+        <h3>charCodeAt()</h3>
+        <h3>split()</h3>
+    </div>
+    
+    <script>
+        var str = "Computer Engineering";
+        console.log("String = "+str+" & Length = "+str.length);
+        console.log("Slice(0,8) : "+str.slice(0,8));
+        console.log("Slice(-11,-8) : "+str.slice(-11,-8));
+        console.log("Substring(10,18) : "+str.substring(9,20));
+        console.log("Substr(0,3) : "+str.substr(0,3));
+        console.log("replace(Computer,Electrical) : "+str.replace("Computer","Electrical"));
+        console.log("toUpperCase() : "+str.toUpperCase());
+        console.log("toLowerCase() : "+str.toLowerCase());
+        var str1 = "Preethi";
+        var str2 = "P.L";
+        console.log("str1 = "+str1);
+        console.log("str2 = "+str2);
+        console.log("concat() : "+str1.concat(" ",str2));
+        var str3 = "            Times Of India           ";
+        console.log("str3 = "+str3);
+        console.log("trim() = "+str3.trim());
+        var x = "5";
+        console.log("x = "+x);
+        console.log("padStart(4,0) = "+x.padStart(4,0));
+        console.log("padEnd(4,0) = "+x.padEnd(4,0));
+        console.log("str = "+str);    
+        console.log("charAt(3) : "+str.charAt(3));    
+        console.log("charCodeAt(3) : "+str.charCodeAt(3));
+        var str4 = "Mech,Civil,Comp,IT";
+        console.log("str4 = "+str4);
+        var temp = str4.split(",");
+        console.log("split(,) : "+temp[1]); 
+
+    </script>
+</body>
+</html>

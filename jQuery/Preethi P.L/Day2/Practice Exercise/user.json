@@ -1,0 +1,20 @@
+{"user":[
+    {
+        "id": 1,
+        "name": "Preethi",
+        "age": "22",
+        "qualification": "B.E Computer"
+    },
+    {
+        "id": 2,
+        "name": "Isha",
+        "age": "22",
+        "qualification": "B.A Performing Arts "
+    },
+    {
+        "id": 3,
+        "name": "Vivek",
+        "age": "21",
+        "qualification": "B.B.A"
+    }
+]}

@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Array Methods</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-F3w7mX95PdgyTmZZMECAngseQB83DfGTowi0iMjiWaeVhAn4FJkqJByhZMI3AhiU" crossorigin="anonymous">
+</head>
+<body>
+    <!--Header-->
+    <div class="container text-center mt-2">
+        <h1 class="display1">ARRAY METHODS</h1>
+        <hr>
+    </div>
+    
+    <!--Main-->
+    <div class="container bg-light mt-3">
+        
+        <h3>toString()</h3>
+        <p id="1"></p>
+
+        <h3>join()</h3>
+        <p id="2"></p>
+
+        <h3>pop()</h3>
+        <p id="3"></p>
+        <p id="4"></p>
+        <p id="5"></p>
+
+        <h3>push()</h3>
+        <p id="6"></p>
+        <p id="7"></p>
+
+        <h3>shift()</h3>
+        <p id="8"></p>
+        <p id="9"></p>
+        <p id="10"></p>
+
+        <h3>unshift()</h3>
+        <p id="11"></p>
+        <p id="12"></p>
+
+        <h3>change element of array</h3>
+        <p id="13"></p>
+        <p id="14"></p>
+        
+        <h3>append elements to array using length</h3>
+        <p id="15"></p>
+        <p id="16"></p>
+
+        <h3>add items using splice()</h3>
+        <p id="17"></p>
+        <p id="18"></p>
+        
+        <h3>remove items splice()</h3>
+        <p id="19"></p>
+        <p id="20"></p>
+
+        <h3>concat()</h3>
+        <p id="21"></p>
+        <p id="22"></p>
+        <p id="23"></p>
+
+        <h3>slice()</h3>
+        <p id="24"></p>
+        <p id="25"></p>
+    </div> 
+
+    <!--JS-->
+    <script>
+        var dept = ["PHP",".NET","Android","Nodejs"];
+        console.log(dept);
+        
+        document.getElementById("1").innerHTML = dept.toString();
+        document.getElementById("2").innerHTML = dept.join("/");
+        
+        document.getElementById("3").innerHTML = dept;
+        document.getElementById("4").innerHTML = "Popped item = "+dept.pop();
+        document.getElementById("5").innerHTML = dept;
+
+        dept.push("Java");
+        document.getElementById("6").innerHTML = dept;
+        document.getElementById("7").innerHTML = "New array length = "+dept.push();
+    
+        document.getElementById("8").innerHTML = dept;
+        document.getElementById("9").innerHTML = dept.shift();
+        document.getElementById("10").innerHTML = dept;
+
+        dept.unshift("Python");
+        document.getElementById("11").innerHTML = dept;
+        document.getElementById("12").innerHTML = "New array length = "+dept.unshift();
+    
+        document.getElementById("13").innerHTML = dept;
+        dept[0]="PHP";
+        document.getElementById("14").innerHTML = dept;
+
+        document.getElementById("15").innerHTML = dept;
+        dept[dept.length]="Python";
+        document.getElementById("16").innerHTML = dept;
+
+        document.getElementById("17").innerHTML = dept;
+        dept.splice(3,2,"HR","Sales");
+        document.getElementById("18").innerHTML = dept;
+
+        document.getElementById("19").innerHTML = dept;
+        dept.splice(0,1);
+        document.getElementById("20").innerHTML = dept;
+
+        var dept1 = ["Computer Science","IT"];
+        var dept2 = ["Mechanical","Civil"];
+        document.getElementById("21").innerHTML = "dept1 = "+dept1;
+        document.getElementById("22").innerHTML = "dept2 = "+dept2;
+        document.getElementById("23").innerHTML = dept1.concat(dept2);
+
+        document.getElementById("24").innerHTML = dept;
+        document.getElementById("25").innerHTML = dept.slice(2);
+
+        
+    </script>
+
+    <!-- Bootstrap JS Bundle with Popper
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-/bQdsTh/da6pkI1MST/rWKFNjaCP5gBSY4sEBT38Q/9RBh9AH40zEOg7Hlq2THRZ" crossorigin="anonymous"></script> -->
+</body>
+</html>

@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Practice Exercise 2</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-F3w7mX95PdgyTmZZMECAngseQB83DfGTowi0iMjiWaeVhAn4FJkqJByhZMI3AhiU" crossorigin="anonymous">
+</head>
+<body>
+    <!--Header-->
+    <div class="container text-center mt-2">
+        <h1 class="display1">Practice Exercise 2</h1>
+        <hr>
+    </div>
+
+    <!--Main-->
+    <div class="container bg-light mt-3 p-2">
+        <p>Q. Write a JavaScript function to split a string and convert it into an array of words.</p><br>
+        <form>
+            <div class="form-group">
+                <label for="string" class="control-label">Enter a string :</label>
+                <input type="text" class="form-control" id="str">
+            </div><br>
+            <input type="button" class="btn btn-success" onclick="split_convert(str.value)" value="Split & Convert">
+            <input type="reset" class="btn btn-danger" onclick="clr(result.value)" value="Reset">
+        </form>
+        <br>
+        <p>Result : <span id="result"></span></p>
+    </div>
+
+    <!--JS-->
+    <script>
+        function split_convert(value)
+        {
+            var x = value.split(" ");
+            document.getElementById("result").innerHTML = x;             
+        }
+        function clr(value)
+        {
+            document.getElementById('result').style.display='none';
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>List groups</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-F3w7mX95PdgyTmZZMECAngseQB83DfGTowi0iMjiWaeVhAn4FJkqJByhZMI3AhiU" crossorigin="anonymous">
+</head>
+<body>
+    <!-- Bootstrap JS Bundle with Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-/bQdsTh/da6pkI1MST/rWKFNjaCP5gBSY4sEBT38Q/9RBh9AH40zEOg7Hlq2THRZ" crossorigin="anonymous"></script>
+    
+    <!--List Group-->
+    <div class="container mt-3">
+        
+        <ul class="list-group mb-5">
+            <li class="list-group-item">Item 1</li>
+            <li class="list-group-item">Item 2</li>
+            <li class="list-group-item">Item 4</li>
+            <li class="list-group-item">Item 4</li>
+        </ul>
+
+        <!--List group with links-->
+        <ul class="list-group mb-5">
+            <a class="list-group-item list-group-item-action" href="#">Item 1</a>
+            <a class="list-group-item list-group-item-action" href="#">Item 2</a>
+            <a class="list-group-item list-group-item-action" href="#">Item 3</a>
+            <a class="list-group-item list-group-item-action" href="#">Item 4</a>
+        </ul>
+
+        <!--Contextual classes-->
+        <ul class="list-group mb-5">
+            <li class="list-group-item list-group-item-primary">Item 1</li>
+            <li class="list-group-item list-group-item-success">Item 2</li>
+            <li class="list-group-item list-group-item-info">Item 3</li>
+            <li class="list-group-item list-group-item-danger">Item 4</li>
+            <li class="list-group-item list-group-item-warning">Item 5</li>
+            <li class="list-group-item list-group-item-dark">Item 6</li>
+            <li class="list-group-item list-group-item-light">Item 7</li>
+            <li class="list-group-item list-group-item-secondary">Item 8</li>
+        </ul>
+
+        <!--Javascript behaviour-->
+    <div class="row mb-5">
+        <div class="col-4">
+            <div class="list-group mb-5" id="list-tab" role=tablist>
+                <a class="list-group-item list-group-item-action active" id="list-home-list" 
+                    data-bs-toggle="list"href="#list-home">Home</a>
+                <a class="list-group-item list-group-item-action" id="list-about-list" 
+                    data-bs-toggle="list"href="#list-about">About</a>
+                <a class="list-group-item list-group-item-action" id="list-contact-list" 
+                    data-bs-toggle="list"href="#list-contact">Contact</a>
+                
+            </div>
+    
+        </div>
+        <div class="col-8">
+            <div class="tab-content" id="nav-tabcontent">
+                <div class="tab-pane fade show active" id="list-home" role="tabpanel">
+                    Home Content...
+                </div>
+                <div class="tab-pane fade" id="list-about" role="tabpanel">
+                    About Content...
+                </div>
+                <div class="tab-pane fade" id="list-contact" role="tabpanel">
+                    Contact Content...
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

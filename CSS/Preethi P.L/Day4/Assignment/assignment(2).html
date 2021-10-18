@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Grid Layout Example</title>
+    <style>
+        body{
+            margin: 0px;
+        }
+        .grid-container{
+             display: grid;
+             height: 100%;
+             grid-template-areas:'header header header header'
+                                'nav nav nav nav'
+                                'main main main main'
+                                'footer footer footer footer';
+            grid-template-columns: 1fr 1fr 1fr 1fr;
+            grid-template-rows:1fr 0.6fr 6.33fr 1fr;
+         }
+        .header{
+            grid-area: header;
+            background-color:rgb(2, 2, 97);
+            color: white;
+            text-align: center;
+            font-family: sans-serif;
+            font-weight: bolder;
+            padding:30px;
+        }
+        .nav{
+            grid-area: nav;
+            display: flex;
+            flex-direction: row;
+            background-color: gray;
+            overflow: hidden;
+        }
+        .nav a{
+            float:left;
+            display: block;
+            padding: 15px 16px;
+            text-decoration: none;
+            color:white;
+            font-family: sans-serif;
+            font-size: 15px;
+            font-weight: bold;
+        }
+        a:hover{
+            background-color:rgb(235, 232, 232);
+            color:black;
+        }
+        .main{
+            grid-area: main;
+            background-color: rgb(207, 206, 206);
+            padding: 20px;
+            text-align: justify;
+            font-family: sans-serif;
+            font-size: 20px;
+        }
+        .footer{
+            grid-area: footer;
+            background-color:rgb(1, 1, 58) ;
+            color: white;
+            text-align: center;
+            font-family: sans-serif;
+            font-weight: bolder;
+            padding:30px;
+        }
+         @media (max-width:600px){
+            .nav{
+                flex-direction: column;
+            }
+            .nav a{
+                text-align: center;
+            }
+            .grid-container{
+                grid-template-areas:'header'
+                                'nav'
+                                'main'
+                                'footer';
+                grid-template-columns: 1fr;
+                grid-template-rows:0.1fr 1fr 7fr 0.1fr;
+         }
+              
+         }  
+    </style>
+</head>
+<body>
+    <div class="grid-container">
+        <div class="header">LOGO HERE</div>
+        <div class="nav">
+            <a href="#">HOME</a>
+            <a href="#">ABOUT US</a>
+            <a href="#">CONTACT US</a>
+        </div>
+        <div class="main">
+            <h2>Lorem Ipsum</h2>
+            Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo 
+            ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis 
+            parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, 
+            pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim. Donec pede 
+            justo, fringilla vel, aliquet nec, vulputate eget, arcu. In enim justo, rhoncus ut, 
+            imperdiet a, venenatis vitae, justo. Nullam dictum felis eu pede mollis pretium. 
+            Integer tincidunt. Cras dapibus. Vivamus elementum semper nisi. Aenean vulputate 
+            eleifend tellus. Aenean leo ligula, porttitor eu, consequat vitae, eleifend ac, 
+            enim. Aliquam lorem ante, dapibus in, viverra quis, feugiat a, tellus. Phasellus 
+            viverra nulla ut metus varius laoreet. Quisque rutrum. Aenean imperdiet. Etiam 
+            ultricies nisi vel augue. Curabitur ullamcorper ultricies nisi. Nam eget dui. 
+        
+            <h2>Lorem Ipsum</h2>
+            Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo 
+            ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis 
+            parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, 
+            pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim. Donec pede 
+            justo, fringilla vel, aliquet nec, vulputate eget, arcu. In enim justo, rhoncus ut, 
+            imperdiet a, venenatis vitae, justo. Nullam dictum felis eu pede mollis pretium. 
+            Integer tincidunt. Cras dapibus. Vivamus elementum semper nisi. Aenean vulputate 
+            eleifend tellus. Aenean leo ligula, porttitor eu, consequat vitae, eleifend ac, 
+            enim. Aliquam lorem ante, dapibus in, viverra quis, feugiat a, tellus. Phasellus 
+            viverra nulla ut metus varius laoreet. Quisque rutrum. Aenean imperdiet. Etiam 
+            ultricies nisi vel augue. Curabitur ullamcorper ultricies nisi. Nam eget dui. 
+    
+        
+        </div>
+        <div class="footer">COPYRIGHT</div>
+    </div>
+</body>
+</html>

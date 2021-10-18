@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Assignment</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-F3w7mX95PdgyTmZZMECAngseQB83DfGTowi0iMjiWaeVhAn4FJkqJByhZMI3AhiU" crossorigin="anonymous">
+    <!--jQuery-->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+    <script>
+        $(document).ready(function(){
+            $("#btn1").click(function(){
+
+                //fetch json
+                $.getJSON("https://gorest.co.in/public-api/users",function(res){
+                    console.log(res.data);
+                    var data = "";
+
+                    //iterate through object
+                    $.each(res.data,function(key,value){
+                       data += "<tr>"; 
+                       data += "<td>" + value.id + "</td>";
+                       data += "<td>" + value.name + "</td>";
+                       data += "<td>" + value.gender + "</td>";
+                       data += "<td>" + value.email + "</td>";
+                       data += "<td>" + value.status + "</td>";
+                       data += "</tr>";
+                    });
+                    $("#table").append(data);
+                });
+            });
+        });
+    </script>
+
+
+</head>
+<body>
+    <!--Header-->
+    <div class="container text-center mt-2">
+        <h1 class="display1">Assignment</h1>
+        <hr>
+    </div>
+
+    <!--Main-->
+    <div class="container mt-3 p-2">
+        <h4>Q. Use getJSON method access this web api  https://gorest.co.in/public-api/users and display the result in one table.</h4>
+        Click below button to fetch json data
+    </div>
+    <div class="container mt-3">
+        <button class="btn btn-success" id="btn1">Click me!</button>
+    </div>
+
+    <div class="container mt-3 p-2">
+        <!--Table-->
+        <table class="table table-bordered" id="table">
+            <tr>
+                <th>Id</th>
+                <th>Name</th>
+                <th>Gender</th>
+                <th>Email</th>
+                <th>Status</th>
+            </tr>
+        </table>
+    </div>
+</body>
+</html>

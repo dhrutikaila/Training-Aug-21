@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Number Methods</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-F3w7mX95PdgyTmZZMECAngseQB83DfGTowi0iMjiWaeVhAn4FJkqJByhZMI3AhiU" crossorigin="anonymous">
+</head>
+<body>
+    <!--Header-->
+    <div class="container text-center mt-2">
+        <h1 class="display1">NUMBER METHODS</h1>
+        <hr>
+    </div>
+
+    <!--Main-->
+    <div class="container mt-3 bg-light">
+        <h3>toString()</h3>
+        <h3>toExponential()</h3>
+        <h3>toFixed()</h3>
+        <h3>toPrecision()</h3>
+        <h3>valueOf</h3>
+        <h3>Number()</h3>
+        <h3>parseInt()</h3>
+        <h3>parseFloat()</h3>
+        <h3>MAX_VALUE</h3>
+        <h3>MIN_VALUE</h3>
+        <h3>POSITIVE_INFINITY</h3>
+        <h3>NEGATIVE_INFINITY</h3>
+    </div>
+    <!--JS-->
+    <script>
+        var x = 123;
+        console.log("x = "+x);
+        console.log("toString() : "+x.toString());            
+        console.log("toExponential(4) : "+x.toExponential(4)); 
+        var y = 9.656;
+        console.log("y = "+y);
+        console.log("toFixed(2) : "+y.toFixed(2));
+        console.log("toPrecision(2) : "+y.toPrecision(2));
+        console.log("valueOf() : "+y.valueOf());  
+        console.log("Number(y) : "+Number(y));
+        console.log("parseInt(y) : "+parseInt(y));
+        console.log("parseFloat(y) : "+parseFloat(y));
+        console.log("Number.MAX_VALUE : "+Number.MAX_VALUE);
+        console.log("Number.MIN_VALUE : "+Number.MIN_VALUE); 
+        console.log("Number.POSITIVE_INFINITY : "+Number.POSITIVE_INFINITY);
+        console.log("Number.NEGATIVE_INFINITY : "+Number.NEGATIVE_INFINITY);
+        
+    </script>
+</body>
+</html>

@@ -1,0 +1,90 @@
+<!--Create Basic layout of the application which contain header, footer, leftbar and sidebar.
+Header keep brand logo and navigation bar for home, aboutus and contact us. Navigation should work properly.-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Assignment</title>
+    <style>
+        body{
+            margin:0px;
+            background-color: rgb(207, 204, 204);
+        }
+        .header{
+            
+            background-color:rgb(169, 98, 236);
+            text-align: center;
+            padding: 5px;
+            color:white;
+        }
+        
+        .topnav{
+            overflow:hidden;
+            background-color: black;
+            text-align: center;
+        }
+        .topnav a {
+            
+            display: inline-block;
+            color: white;
+            text-align: center;
+            padding: 14px 16px;
+            text-decoration: none;
+        }
+        .topnav a:hover {
+            background-color: #ddd;
+            color: black;
+        }
+        .sidebar{
+            margin:0px;
+            background-color:white;
+            width: 200px;
+            height:100%;
+            position: fixed;
+            overflow: auto;
+        }
+        .sidebar a{
+            display: block;
+            text-decoration: none;
+            padding: 18px;
+            font-weight: bold;
+
+        }
+        .sidebar a:hover{
+            background-color:rgb(245, 245, 245);
+
+        }
+        .footer{
+            background-color:rgb(169, 98, 236);
+            text-align: center;
+            padding: 40px;
+            color:white;
+            position:fixed;
+            bottom:0px;
+            width:100%;
+        }
+
+
+    </style>
+</head>
+<body>
+    <div class="header">
+        <h1>Logo Here</h1>
+    </div>
+    <div class="topnav">
+            <a href="#">HOME</a>
+            <a href="#">ABOUT US</a>
+            <a href="#">CONTACT US</a>
+    </div>
+    <div class="sidebar">
+        <a href="#">MY PROFILE</a>
+        <a href="#">ORDER HISTORY</a>
+        <a href="#">SETTINGS</a>
+    </div>
+    <div class="footer">
+        COPYRIGHT
+    </div>
+</body>
+</html>

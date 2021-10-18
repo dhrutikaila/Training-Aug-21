@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Practice Exercise 5</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-F3w7mX95PdgyTmZZMECAngseQB83DfGTowi0iMjiWaeVhAn4FJkqJByhZMI3AhiU" crossorigin="anonymous">
+</head>
+<body>
+    <!--Header-->
+    <div class="container text-center mt-2">
+        <h1 class="display1">Practice Exercise 5</h1>
+        <hr>
+    </div>
+
+    <!--Main-->
+    <div class="container bg-light mt-3 p-2">
+        <p>Q. Try some operation with list like push, pop, shifting, deleting element
+        </p><br>
+        <form>
+            <div class="form-group">
+                <label for="string" class="control-label">Enter list items:</label>
+                <input type="text" class="form-control" id="str">
+            </div><br>
+            
+            <input type="button" class="btn btn-success" onclick="push_item()" value="Push">
+            <input type="button" class="btn btn-primary" onclick="pop_item()" value="Pop">
+            <input type="button" class="btn btn-warning" onclick="shift_item()" value="Shift">
+            <input type="button" class="btn btn-secondary" onclick="unshift_item()" value="Unshift">
+            <input type="button" class="btn btn-danger" onclick="delete_item()" value="Delete">
+            
+        </form>
+        <br>
+        <h4>Result : <span id="result"></span></h4>
+    </div>
+
+    <!--JS-->
+    <script>
+        function push_item()
+        {
+            var arr =  str.value.split(" ");
+            //console.log("array : "+arr);
+            var items = prompt("Enter items to be pushed:");
+            items = items.split(" ");
+            // console.log("Item to be pushed : "+items);
+            for(i=0;i<items.length;i++)
+            {
+                //console.log(items[i]);  
+                arr.push(items[i]);
+            }
+            //console.log(arr);
+            document.getElementById("result").innerHTML = arr;
+        }
+        function pop_item()
+        {
+            var arr = str.value.split(" ");
+            arr.pop();
+            document.getElementById("result").innerHTML = arr;           
+        }
+        function shift_item()
+        {
+            var arr = str.value.split(" ");
+            arr.shift();
+            document.getElementById("result").innerHTML = arr;             
+        }
+        function unshift_item()
+        {
+            var arr =  str.value.split(" ");
+            //console.log("array : "+arr);
+            var items = prompt("Enter items to be unshifted:");
+            items = items.split(" ");
+            //console.log("Items to be unshifted : "+items);
+            for(i=0;i<items.length;i++)
+            {
+                arr.unshift(items[i]);
+            }
+            //console.log(arr);
+            document.getElementById("result").innerHTML = arr;             
+        }
+        function delete_item()
+        {
+            var arr = str.value.split(" ");
+            var index = prompt("Enter index of item to be deleted");
+            delete arr[index];
+            console.log(arr);
+            document.getElementById("result").innerHTML = arr+ "<br>  deleted item = arr["+index+"] : "+arr[index];  
+        }
+    </script>
+</body>
+</html>

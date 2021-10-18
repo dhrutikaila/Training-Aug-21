@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Grid Layout Example</title>
+    <style>
+        body{
+            margin: 0px;
+        }
+        .header{
+            background-color:black;
+            color: white;
+            text-align: center;
+            font-weight: bolder;
+            padding:30px;
+        }
+        .item1{grid-area: header;}
+        .item2{grid-area: menu;}
+        .item3{grid-area: main;}
+        .item4{grid-area: footer;}
+
+        .grid-container{
+             display: grid;
+             grid-template-areas:'header header header header header'
+                                'menu main main main main'
+                                'menu footer footer footer footer';
+            grid-gap: 20px;
+            padding:20px;
+            background-color: rgb(126, 114, 207);
+         }   
+         
+         .grid-container > div{
+             background-color: floralwhite;
+             text-align: center;
+             font-weight: bolder;
+             font-size: 20px;
+             padding: 90px;
+         }
+    </style>
+</head>
+<body>
+    <div class="header">GRID LAYOUT</div>
+    <div class="grid-container">
+        <div class="item1">HEADER</div>
+        <div class="item2">MENU</div>
+        <div class="item3">MAIN</div>
+        <div class="item4">FOOTER</div>
+    </div>
+</body>
+</html>
