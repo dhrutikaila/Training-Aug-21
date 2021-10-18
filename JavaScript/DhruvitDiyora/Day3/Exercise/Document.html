@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Javascript Day 3 Document Practice</title>
+    <!-- CSS only -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-F3w7mX95PdgyTmZZMECAngseQB83DfGTowi0iMjiWaeVhAn4FJkqJByhZMI3AhiU" crossorigin="anonymous">
+</head>
+
+<body>
+    <h2 id="1">Old Heading</h2>
+    <!-- p-4: DOM CSS -->
+    <button type="button" onclick="document.getElementById('1').style.color = 'red'">
+        Click Me!</button>
+    <h3 id="2">Check date</h3>
+    <br>
+    <hr>
+    <h3>Form validation:</h3>
+    <form name="myForm" action="/action_page.php" onsubmit="return validateForm()" method="post">
+        Name: <input type="text" name="fname"><br>
+        Number: <input type="number" name="Salary" onkeypress="return isNumberKey(event)" min="0" required>
+
+        <input type="submit" value="Submit">
+    </form>
+    <br>
+    <hr>
+    <h3>JS Events</h3>
+    <button onclick="changeText(this)">Click me!</button>
+    <button onclick="displayDate()">The time is?</button>
+    <p id="date"></p>
+    <div onmouseover="mOver(this)" onmouseout="mOut(this)"
+        style="background-color:cyan;width:120px;height:20px;padding:20px;">
+        Mouse Over Me</div><br>
+    <div onmousedown="mDown(this)" onmouseup="mUp(this)"
+        style="background-color:greenyellow;width:90px;height:20px;padding:30px;">
+        Click Me</div>
+    <br>
+    <hr>
+    <button id="alertbtn">Try it</button>
+    <div>
+
+    </div>
+    <script src="Document.js"> </script>
+    <!-- JavaScript Bundle with Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-/bQdsTh/da6pkI1MST/rWKFNjaCP5gBSY4sEBT38Q/9RBh9AH40zEOg7Hlq2THRZ" crossorigin="anonymous">
+    </script>
+
+</body>
+
+</html>

@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Array Practice</title>
+</head>
+<body>
+    <script>
+        const fruits = ["Banana", "Orange", "Apple", "Mango"];
+        //convert to string
+        console.log(fruits.toString());
+        //join using *
+        console.log(fruits.join(" * "));
+
+        //pop function
+        console.log(fruits.pop());
+
+        //push function
+        console.log(fruits.push("Kiwi"));
+        //shift function
+        console.log(fruits.shift());
+
+        //unshift function
+        console.log(fruits.unshift("Lemon"));
+
+        //using idex
+        fruits[0] = "Kiwi";
+        console.log(fruits);
+        fruits[fruits.length] = "Kiwi";
+        console.log(fruits);
+
+        //delete
+        delete fruits[0];
+        console.log(fruits);
+        fruits.splice(2, 0, "Lemon", "Kiwi")
+        console.log(fruits);
+        fruits.splice(0, 1);
+        console.log(fruits);
+
+        const myGirls = ["Cecilie", "Lone"];
+        const myBoys = ["Emil", "Tobias", "Linus"];
+        //concat
+        const myChildren = myGirls.concat(myBoys); 
+        console.log(myChildren); 
+        const myChildren2 =myChildren.concat(myGirls,myBoys);
+        console.log(myChildren2);
+
+        //slice
+        console.log(fruits.slice(1));
+        console.log(fruits.slice(1, 3));
+        //sort
+        console.log(fruits.sort());
+        //reverse
+        console.log(fruits.reverse());
+        const points = [40, 100, 1, 5, 25, 10];
+        //sort function
+        points.sort(function(a, b){return a - b});
+        console.log(points);
+        console.log(points);
+
+
+    </script>
+    
+</body>
+</html>

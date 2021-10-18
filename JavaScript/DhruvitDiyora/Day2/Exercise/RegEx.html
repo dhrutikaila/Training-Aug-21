@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>RegEx</title>
+</head>
+
+<body>
+    <script>
+        var text = "Hello W3Schools! welcome to the world of programming";
+        console.log(text.search("W3Schools"));
+        console.log(text.replace("Microsoft", "W3Schools"));
+
+        //perform a global match
+        console.log(text.match(/to/g));
+
+        //Perform multiline matching
+        console.log(text.match(/^is/m));
+
+        //Perform a global match using numver pa
+        var numbers = "123456789";
+        console.log(numbers.match(/[1-4]/g));
+
+        console.log(text.match(/[h]/g));
+        var color = "re, green, red, green, gren, gr, blue, yellow";
+        console.log(color.match(/(red|green)/g));
+        var text1 = "HelloooW helloo 123456";
+
+        //find a digit
+        console.log(text1.match(/\d/g));
+
+        //whitespce character
+        console.log(text1.match(/\s/g));
+
+        //finding character at the start of the word
+        console.log(text1.match(/\bHel/g));
+
+        //finding character at the end of the word
+        console.log(text1.search(/Hel\b/));
+
+        //by character code
+        console.log(text1.search(/\u0057/g));
+
+        //Matches any string that contains at least one o
+        console.log(text1.match(/o+/g));
+
+        //Matches any string that contains zero or more occurrences of lo
+        console.log(text1.match(/lo*/g));
+
+        //Matches any string that contains zero or one occurrences of 10
+        console.log(text1.match(/10?/g));
+    </script>
+
+</body>
+
+</html>

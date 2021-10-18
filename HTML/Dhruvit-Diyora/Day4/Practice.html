@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Day 4 Practice</title>
+    <style media="screen">
+        /* div{
+            display: flexbox;
+            outline: 2px solid silver;
+
+        }
+        p{
+            flex: 1 auto; margin: 1em;
+            font-family: sans-serif;
+            color: white;
+            background: tomato;
+            font-weight: bold;
+            text-align: center;
+
+        } */
+        /* div{
+            display: flexbox;
+            display: -ms-flexbox;
+            display: -moz-flexbox;
+            display: -o-flexbox;
+            display: -webkit-flexbox;
+            flex-flow: row;
+            -ms-flex-flow: row;
+            -moz-flex-flow: row;
+            -o-flex-flow: row;
+            -webkit-flex-flow: row;
+            height: 200px;
+            padding: 1em;
+            background-color: palegoldenrod;
+            font: bold 100%/1 sans-serif;
+
+        }
+        div>div{
+            width: 100px;
+            margin: 1em;
+            height: 100px;
+            background-color: dodgerblue;
+            text-align: center;
+            color: white;
+            font-size: x-large;
+            line-height: 100px;
+        }
+        div>div:first-child,
+        div>div:last-child {
+            flex-order: 1;
+            -ms-flex-order: 1;
+            -moz-flex-order: 1;
+            -o-flex-order:1;
+            -webkit-flex-order: 1;
+        } */
+        /* .parent {
+        display: flex;
+        flex-wrap: wrap;
+        }
+
+        .child {
+        flex: 1 0 21%; 
+        margin: 5px;
+        height: 100px;
+        background-color: blue;
+        } */
+
+        /* .parent {
+        display: flex;
+        flex-wrap: wrap;
+        flex-direction: row-reverse;
+        }
+
+        .child {
+        flex: 1 0 21%; 
+        margin: 5px;
+        height: 100px;
+        background-color: blue;
+        }
+        .rightoleft{
+            color: floralwhite;
+
+        } */
+        * {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: Arial;
+}
+
+.header {
+  text-align: center;
+  padding: 32px;
+}
+
+.row {
+  display: flex;
+  flex-wrap: wrap;
+  padding: 0 4px;
+}
+
+/* Create four equal columns that sits next to each other */
+.column {
+  flex: 25%;
+  max-width: 25%;
+  padding: 0 4px;
+}
+
+.column img {
+  margin-top: 8px;
+  vertical-align: middle;
+}
+
+/* Responsive layout - makes a two column-layout instead of four columns */
+@media (max-width: 800px) {
+  .column {
+    flex: 50%;
+    max-width: 50%;
+  }
+}
+
+/* Responsive layout - makes the two columns stack on top of each other instead of next to each other */
+@media (max-width: 600px) {
+  .column {
+    flex: 100%;
+    max-width: 100%;
+  }
+}
+    </style>
+</head>
+<body>
+    <!-- <span>ex 1 from ppt</span>
+    <div>
+        <p>This is the child1 box</p>
+        <p>This is the child2 box</p>
+        <p>This is the child3</p>
+        <p>This is the child4</p>
+    </div> -->
+    <!-- 
+        <span>ex 1 from ppt</span>
+        <div>
+        <div>Keys</div>
+        <div>Phone</div>
+        <div>Wallet</div>
+    </div> -->
+    <!-- <span>
+        Create a flexbox with four flex items
+    </span>
+    <div class="parent">
+        <div class="child"></div>
+        <div class="child"></div>
+        <div class="child"></div>
+        <div class="child"></div>
+    </div> -->
+    <!-- <span>
+        Flexbox with three flex items –right to left direction
+    </span>
+    <div>
+        <div class="parent">
+            <div class="child"><span class="rightoleft" >11</span></div>
+            <div class="child"><span class="rightoleft"> 22</span></div>
+            <div class="child" ><span class="rightoleft"> 33</span></div>
+        </div>
+    </div> -->
+    <span>
+        Flexbox image gallery
+    </span>
+    <div class="row"> 
+        <div class="column">
+          <img src="./Assets/wedding.jpg" style="width:100%">
+          <img src="./Assets/rocks.jpg" style="width:100%">
+          <img src="./Assets/falls2.jpg" style="width:100%">
+          <img src="./Assets/paris.jpg" style="width:100%">
+          <img src="./Assets/nature.jpg" style="width:100%">
+          <img src="./Assets/mist.jpg" style="width:100%">
+          <img src="./Assets/paris.jpg" style="width:100%">
+        </div>
+        
+        <div class="column">
+          <img src="./Assets/underwater.jpg" style="width:100%">
+          <img src="./Assets/ocean.jpg" style="width:100%">
+          <img src="./Assets/wedding.jpg" style="width:100%">
+          <img src="./Assets/mountainskies.jpg" style="width:100%">
+          <img src="./Assets/rocks.jpg" style="width:100%">
+          <img src="./Assets/underwater.jpg" style="width:100%">
+        </div> 
+         
+        <div class="column">
+          <img src="./Assets/wedding.jpg" style="width:100%">
+          <img src="./Assets/rocks.jpg" style="width:100%">
+          <img src="./Assets/falls2.jpg" style="width:100%">
+          <img src="./Assets/paris.jpg" style="width:100%"  >
+          <img src="./Assets/nature.jpg" style="width:100%">
+          <img src="./Assets/mist.jpg" style="width:100%">
+          <img src="./Assets/paris.jpg" style="width:100%">
+        </div>
+        
+        <div class="column">
+          <img src="./Assets/underwater.jpg" style="width:100%">
+          <img src="./Assets/ocean.jpg" style="width:100%">
+          <img src="./Assets/wedding.jpg" style="width:100%">
+          <img src="./Assets/mountainskies.jpg" style="width:100%">
+          <img src="./Assets/rocks.jpg" style="width:100%">
+          <img src="./Assets/underwater.jpg" style="width:100%">
+        </div>
+      </div>
+      
+    
+</body>
+</html>

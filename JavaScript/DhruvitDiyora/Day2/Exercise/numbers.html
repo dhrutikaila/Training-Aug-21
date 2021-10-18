@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Numbers</title>
+</head>
+
+<body>
+    <script>
+        //numbers
+        let x = 3.14;
+        let y = 3;
+        console.log(x);
+        console.log(y);
+
+        //numbers using e to the power
+        var x1 = 123e5; // 12300000
+        var x2 = 123e-5;
+        console.log(x1);
+        console.log(x2);
+
+        //checking limit
+        var x3 = 999999999999999;
+        var x4 = 9999999999999999;
+        console.log(x3);
+        console.log(x4);
+
+        //adding two numbers
+        x5 = 0.2 + 0.1;
+        console.log(x5);
+
+        //adding two nummbers
+        var x6 = (0.2 * 10 + 0.1 * 10) / 10;
+        console.log(x6);
+
+        //setting numbers as string and adding them
+        var a = "10";
+        var b = "12";
+        console.log(a + b);
+
+        //setting numbers with different datatype and adding them
+        a = 10;
+        console.log(a + b);
+        b = 20;
+        c = "30";
+        console.log(a + b + c);
+
+        //string type numbers divide multiply and substract
+        a = "10";
+        b = "12";
+        console.log(a / b);
+        console.log(a * b);
+        console.log(a - b);
+
+        //divide by string
+        console.log(100 / "Apple");
+        console.log(100 / "10");
+
+        //adding into NaN
+        var x7 = NaN;
+        var x8 = 5;
+        console.log(x7 + x8);
+
+        //adding into string
+        x8 = "5"
+        console.log(x7 + x8);
+        console.log(typeof x7);
+
+
+        //infinity number  check
+        myNumber = 2;
+        txt = ""
+        while (myNumber != Infinity) {
+            myNumber = myNumber * myNumber;
+            txt = txt + myNumber + "<br>";
+        }
+        console.log(txt);
+        console.log(typeof Infinity);
+
+        var x9 = 0xFF;
+        console.log(x9);
+        var x10 = new Number(123);
+        console.log(typeof x10);
+        console.log(x == y);
+        console.log(x === y);
+
+
+        //methods
+        console.log("number methods");
+        x11 = 123;
+        x11.toString();
+        (123).toString();
+        (100 + 23).toString();
+        x12 = 9.656;
+
+        //convert number into exponential notation
+        console.log(x12.toExponential(2));
+        console.log(x12.toExponential(4));
+        console.log(x12.toExponential(6));
+
+        //Convert a number into a string, rounding the number to keep only two decimals:
+        console.log(x12.toFixed(0));
+        console.log(x12.toFixed(2));
+        console.log(x12.toFixed(4));
+        console.log(x12.toFixed(6));
+
+        //Format a number into a specified length:
+        console.log(x12.toPrecision(2));
+        console.log(x12.toPrecision(4));
+        console.log(x12.toPrecision(6));
+
+        console.log(x === y);
+    </script>
+
+</body>
+
+</html>

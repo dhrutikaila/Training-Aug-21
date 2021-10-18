@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HTML Day 1 Assignment</title>
+    <link rel="stylesheet" href="../Day7/Bootstrap/bootstrap.min.css">
+    <style>
+        .just-padding {
+            padding: 15px;
+        }
+    
+        .list-group.list-group-root {
+            padding: 0;
+            overflow: hidden;
+        }
+    
+        .list-group.list-group-root .list-group {
+            margin-bottom: 0;
+        }
+    
+        .list-group.list-group-root .list-group-item {
+            border-radius: 0;
+            border-width: 1px 0 0 0;
+        }
+    
+        .list-group.list-group-root>.list-group-item:first-child {
+            border-top-width: 0;
+        }
+    
+        .list-group.list-group-root>.list-group>.list-group-item {
+            padding-left: 30px;
+        }
+    
+        .list-group.list-group-root>.list-group>.list-group>.list-group-item {
+            padding-left: 45px;
+        }
+        form{
+          margin-top: 10%;
+          text-align: center;
+          align-items: center;
+        }
+        label{
+          margin-top: 10px;
+        }                     
+    </style>
+    <style type="text/css">
+    
+
+    </style>
+</head>
+<body>
+  <nav class="navbar navbar-expand-sm navbar-light bg-light mb-3">
+        <div class="container">
+
+            <a class="navbar-brand img-fluid" href="../index.html"><img src="../Day3/Assets/logo.png" alt="logo" height="80px"
+                    width="80px"></a>
+            <button class="navbar-toggler" data-toggle="collapse" data-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ml-auto">
+                    <li class="nav-item px-3">
+                        <a class="nav-link " href="../index.html">Home</a>
+                    </li>
+                    <li class="nav-item  px-3">
+                        <a class="nav-link active" href="../html.html">HTML</a>
+                    </li>
+                    <li class="nav-item px-3">
+                        <a class="nav-link" href="../css.html">CSS</a>
+                    </li>
+                    <li class="nav-item px-3">
+                        <a class="nav-link" href="../bootstrap.html">Bootstrap</a>
+                    </li>
+                    <li class="nav-item px-3">
+                        <a class="nav-link" href="../javascript.html">Javascript</a>
+                    </li>
+                    <li class="nav-item px-3">
+                        <a class="nav-link" href="../jquery.html">JQuery</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <div class="container">
+        <div class="row">
+            <div class="col-4">
+                <div class="just-padding">
+    
+                    <div class="list-group list-group-root well">
+    
+                        <a href="#" class="list-group-item bg-primary text-white">Day 3</a>
+                        <div class="list-group">
+    
+                            <a href="./Practice-Day-1.html" class="list-group-item bg-warning">Practice</a>
+                            <a href="./Assignment.html" class="list-group-item bg-warning">Assignment</a>
+                        </div>
+                        
+                    </div>
+    
+                </div>
+            </div>
+            <div class="col-8" style="border: 1px;">
+              <form id="employeeform" >
+                  <label for="name">Name:</label>
+                  <input type="text" required>
+                  <br />
+                  <label for="email">Email:</label>
+                  <input type="email" pattern="/^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/" required>
+                  <br />
+                  <label for="phone_number">Mobile:</label>
+                  <input type="tel"
+                    name="phone_number"
+                    id="phone_number"
+                    pattern="[789][0-9]{9}"
+                    required="required"
+                    />
+                    <br />
+                  <label for="age">Age:</label>
+                  <input type="number" required>
+                  <br />
+                  <label> Gender
+                      <input type="radio" name="gender" value="male" required>
+                      Male
+                    </label><br>
+                  
+                    <label>
+                      <input type="radio" name="gender" value="female">
+                      Female
+                    </label><br>
+                  
+                    <label>
+                      <input type="radio" name="gender" value="other">
+                      Other
+                  </label><br>
+                  <label for="designation">Designation:</label>
+                  <input type="text" required>
+                  <br />
+                  <label for="salary">Salary:</label>
+                  <input type="number" required>
+                  <br />
+                  <label for="dateofjoining">DoJ:</label>
+                  <input type="date" required>
+                  <br />  
+                  <label for="location" >Location</label>
+                  <select id="location" name="location">
+                      <option value="surat">Surat</option>
+                      <option value="ahmedabad">Ahmedabad</option>
+                      <option value="delhi">Delhi</option>
+                      <option value="mumbai">Mumbai</option>
+                    </select>
+                  <br />
+                  <input type="submit" value="submit" /><br/>
+              </form>
+              </div>
+</body>
+</html>

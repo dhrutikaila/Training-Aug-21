@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>JQuery Practice assignment Day 2</title>
+    <!-- CSS only -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-F3w7mX95PdgyTmZZMECAngseQB83DfGTowi0iMjiWaeVhAn4FJkqJByhZMI3AhiU"
+      crossorigin="anonymous"
+    />
+  </head>
+  <body>
+    <div class="container">
+      <div class="ancestors">
+        <div style="width: 500px">
+          div (great-grandparent)
+          <ul>
+            ul (grandparent)
+            <li>
+              li (direct parent)
+              <span id="span">span</span>
+            </li>
+          </ul>
+        </div>
+
+        <div style="width: 500px">
+          div (grandparent)
+          <p>
+            p (direct parent)
+            <span id="span">span</span>
+          </p>
+        </div>
+      </div>
+      <div class="ancestorss">
+        <div style="width: 500px">
+          div (great-grandparent)
+          <ul>
+            ul (grandparent)
+            <li>
+              li (direct parent)
+              <span class="span">span</span>
+            </li>
+          </ul>
+        </div>
+
+        <div style="width: 500px">
+          div (grandparent)
+          <p>
+            p (direct parent)
+            <span class="span">span</span>
+          </p>
+        </div>
+      </div>
+      <div class="ancestorssz">
+        <div style="width: 500px" id="util">
+          div (great-grandparent)
+          <ul>
+            ul (grandparent)
+            <li>
+              li (direct parent)
+              <span id="until">span</span>
+            </li>
+          </ul>
+        </div>
+
+        <div style="width: 500px">
+          div (grandparent)
+          <p>
+            p (direct parent)
+            <span>span</span>
+          </p>
+        </div>
+      </div>
+    </div>
+    <div class="descendants" style="width: 500px">
+      div (current element)
+      <p class="first">
+        p (child)
+        <span>span (grandchild)</span>
+      </p>
+      <p class="second">
+        p (child)
+        <span>span (grandchild)</span>
+      </p>
+    </div>
+    <script
+      src="https://code.jquery.com/jquery-3.6.0.min.js"
+      integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4="
+      crossorigin="anonymous"
+    ></script>
+    <script src="practice.js"></script>
+    <!-- JavaScript Bundle with Popper -->
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-/bQdsTh/da6pkI1MST/rWKFNjaCP5gBSY4sEBT38Q/9RBh9AH40zEOg7Hlq2THRZ"
+      crossorigin="anonymous"
+    ></script>
+  </body>
+</html>

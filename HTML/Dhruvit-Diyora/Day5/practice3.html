@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Grid practice 1</title>
+    <style>
+    #grid{
+        background: palegoldenrod;
+        border: silver;
+        display: -ms-grid;
+        color: white;
+        font-family: sans-serif;
+        font-weight: bold;
+        -ms-grid-columns: 150px auto 2fr;
+        -ms-grid-rows: 50px 6em auto;
+    }
+    #logo{
+        background: dodgerblue;
+        -ms-grid-rows: 1;
+        -ms-grid-columns: 1;
+    }
+    #item{
+        background: olive;
+        -ms-grid-rows: 2;
+        -ms-grid-columns: 2;
+    }
+
+    </style>
+</head>
+<body>
+    <div>
+        <div id="grid">
+            <div id="logo">logo</div>
+            <div id="item">items</div>
+        </div>
+    </div>
+</body>
+</html>

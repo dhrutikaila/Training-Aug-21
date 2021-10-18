@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .parent {
+        display: flex;
+        flex-wrap: wrap;
+        flex-direction: row-reverse;
+        }
+
+        .child {
+        flex: 1 0 21%; 
+        margin: 5px;
+        height: 100px;
+        background-color: blue;
+        }
+        .rightoleft{
+            color: floralwhite;
+
+        }
+    </style>
+</head>
+<body>
+    <span>
+        Flexbox with three flex items –right to left direction
+    </span>
+    <div>
+        <div class="parent">
+            <div class="child"><span class="rightoleft" >11</span></div>
+            <div class="child"><span class="rightoleft"> 22</span></div>
+            <div class="child" ><span class="rightoleft"> 33</span></div>
+        </div>
+    </div>
+</body>
+</html>

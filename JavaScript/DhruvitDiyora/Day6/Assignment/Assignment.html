@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavaScript Day 6 Assignment</title>
+    <style>
+        html {
+            font-family: 'helvetica neue', helvetica, arial, sans-serif;
+        }
+
+        thead th,
+        tfoot th {
+            font-family: 'Rock Salt', cursive;
+        }
+
+        th {
+            letter-spacing: 2px;
+        }
+
+        td {
+            letter-spacing: 1px;
+        }
+
+        tbody td {
+            text-align: center;
+        }
+
+        tfoot th {
+            text-align: right;
+        }
+    </style>
+    <!-- CSS only -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-F3w7mX95PdgyTmZZMECAngseQB83DfGTowi0iMjiWaeVhAn4FJkqJByhZMI3AhiU" crossorigin="anonymous">
+</head>
+
+<body>
+    <div class="container">
+
+        <table class="table text-center" id="table">
+            <thead>
+                <tr>
+                    <td class="col-1">Product ID</td>
+                    <td class="col-5">Product Name</td>
+                    <td class="col-2">Price</td>
+                    <td class="col-2">Quantity</td>
+                    <td class="col-2"></td>
+                    <td></td>
+                </tr>
+            </thead>
+            <tr>
+                <td>1</td>
+                <td>Cheese</td>
+                <td>100</td>
+                <td>1</td>
+                <td><button class="btn btn-primary" onclick="AddToCart(1)">Add to Cart</button></td>
+            </tr>
+            <tr>
+                <td>2</td>
+                <td>Pen</td>
+                <td>150</td>
+                <td>2</td>
+                <td><button class="btn btn-primary" onclick="AddToCart(2)">Add to Cart</button></td>
+            </tr>
+            <tr>
+                <td>3</td>
+                <td>Butter</td>
+                <td>100</td>
+                <td>1</td>
+                <td><button class="btn btn-primary" onclick="AddToCart(3)">Add to Cart</button></td>
+            </tr>
+            <tr>
+                <td>4</td>
+                <td>Pencil</td>
+                <td>10</td>
+                <td>1</td>
+                <td><button class="btn btn-primary" onclick="AddToCart(4)">Add to Cart</button></td>
+            </tr>
+
+
+        </table>
+        <button class="btn btn-primary text-center" onclick="Summary()">Summary</button>
+    </div>
+
+
+    <script src="assignment.js"> </script>
+    <!-- JavaScript Bundle with Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-/bQdsTh/da6pkI1MST/rWKFNjaCP5gBSY4sEBT38Q/9RBh9AH40zEOg7Hlq2THRZ" crossorigin="anonymous">
+    </script>
+
+</body>
+
+</html>

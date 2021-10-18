@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JS Day3 Practice</title>
+    <!-- CSS only -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-F3w7mX95PdgyTmZZMECAngseQB83DfGTowi0iMjiWaeVhAn4FJkqJByhZMI3AhiU" crossorigin="anonymous">
+</head>
+<body>
+    <div class="container">
+        <h1>Form management</h1>
+        <form>Enter here a serial number in the pattern xxx-xxx-xx-x, where each x is a digit:
+            <input id="serial" type="text" size="12" onkeyup="correct();">
+        </form>
+        <br>
+        <br>
+        <br>
+        <h3>Use the getElementById method to find the element, and change its text to "Hello".</h3>
+        <p id="demo"></p>
+
+        <br>
+        <h3>Use the getElementsByTagName method to find the first <p> element, and change its text to "Hello".</h3>
+        <p></p>
+
+        <br>
+        <h3>Change the text of the first element that has the class name "test".</h3>
+        <p class="test"></p>
+        <p class="test"></p>
+
+        <br>
+
+
+
+        <h3>Use HTML DOM to change the value of the image's src attribute.</h3>
+        <img id="image" src="smiley.gif">
+        <br>
+
+
+        <h3>Use HTML DOM to change the value of the input field.</h3>
+        <input type="text" id="myText" value="Hello">
+        <br>
+
+
+        <h3>
+            Change the text color of the element to "red"
+
+        </h3>
+        <p id="demo3">hello</p>
+        <br>
+
+
+        <h3>Change the font size of the p element to 40 pixels.</h3>
+        <p id="demo4">hello</p>
+        <br>
+
+        <h3>Use the CSS display property to hide the p element</h3>
+        <p id="demo5">hello</p>
+        <br>
+
+
+        <h3>
+            Use the eventListener to assign an onclick event to the button element.
+        </h3>
+        <button class="btn btn-primary" id="demo6">Click me1</button>
+
+        <h3>Use Window.location object to navigate on another page</h3>
+        <input type="button" class="btn btn-primary" value="Load new document" onclick="navigate()">
+        <br>
+
+        <h3>Use Window.history object to move to previous url in the history list</h3>
+        <input type="button" class="btn btn-primary" value="Back" onclick="goBack()">
+        
+
+        <h6>Try to change windows height and width using Windows object</h6>
+        <input type="button" class="btn btn-primary" value="Back" onclick="resizing()">
+    </div>
+
+    <script src="./practice.js">
+    </script>
+    <!-- JavaScript Bundle with Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-/bQdsTh/da6pkI1MST/rWKFNjaCP5gBSY4sEBT38Q/9RBh9AH40zEOg7Hlq2THRZ" crossorigin="anonymous"></script>
+        
+    
+</body>
+</html>

@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Practice 1</title>
+</head>
+<body>
+    <script>
+        //Write a JavaScript function to check whether a string is blank or not
+        function isBlank(string){
+            if(string==null || string==''){
+                console.log("yes, it's null")
+            }
+            else{{
+                console.log("nope");
+            }}
+            
+        }
+        isBlank("sdcd");
+
+
+        //Write a JavaScript function to split a string and convert it into an array of words
+        function stringToArray(string) {
+            return string.split(" ")
+        }
+        console.log(stringToArray("hello world"));
+
+        //Write a JavaScript function to extract a specified number of characters from a string.
+        function extract(str, start, numbers) {
+            return (str.substr(start, numbers))
+        }
+        console.log(extract("hello world",2,6));
+
+        //Write a JavaScript function to get the current date
+        function date(){
+            return new Date();
+        }
+        console.log(date());
+
+        //Try some operation with list like push, pop, shifting, deleting element
+
+        //list
+        const fruits = ["Banana", "Orange", "Apple", "Mango"];
+        
+        //pop
+        console.log(fruits.pop());
+
+        //push
+        console.log(fruits.push("Kiwi"));
+
+        //shift
+        console.log(fruits.shift());
+
+        //unshift 
+        console.log(fruits.unshift("Lemon"));
+
+        //delete
+        delete fruits[0];
+        console.log(fruits);
+
+
+
+    </script>
+    
+</body>
+</html>
