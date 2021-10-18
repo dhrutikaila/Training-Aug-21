@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+     <link rel="stylesheet" href="../../assests/css/bootstrap.min.css">
+    <script src="../../assests/js/jquery-3.6.0.js"></script>
+    <script src="../../assests/js/bootstrap.bundle.js"></script>
+
+</head>
+<body>
+    <h1>hello World</h1>
+    <script>
+        /*jQuery is a JavaScript Library.
+
+        jQuery greatly simplifies JavaScript programming.
+
+        jQuery is easy to learn.*/
+        $(document).ready(function(){
+            $("h1").text("hello world using Jquery")
+
+        });
+        /*The Document Ready Event
+You might have noticed that all jQuery methods in our examples, are inside a document ready event:
+*/
+$(document).ready(function(){
+
+  // jQuery methods go here...
+
+});
+/*
+This is to prevent any jQuery code from running before the document is finished loading (is ready).
+
+It is good practice to wait for the document to be fully loaded and ready before working with it. This also allows you to have your JavaScript code before the body of your document, in the head section.
+
+Here are some examples of actions that can fail if methods are run before the document is fully loaded:
+
+Trying to hide an element that is not created yet
+Trying to get the size of an image that is not loaded yet
+Tip: The jQuery team has also created an even shorter method for the document ready event:
+*/
+$(function(){
+
+  // jQuery methods go here...
+
+});
+//Use the syntax you prefer. We think that the document ready event is easier to understand when reading the code.
+
+
+
+        
+    </script>
+      
+</body>
+</html>

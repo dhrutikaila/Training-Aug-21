@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-F3w7mX95PdgyTmZZMECAngseQB83DfGTowi0iMjiWaeVhAn4FJkqJByhZMI3AhiU" crossorigin="anonymous">
+    <style>
+        :root{
+            --item:1;
+        }
+        .dropdown-item{
+            display:inline;
+        }
+         nav{
+            display:inline;
+            justify-content:center;
+            width:100vw;
+        }
+        .navbar{
+            width:100vw !important;
+        }
+        .dropdown{
+            margin-left:5vw;
+        }
+        li a{
+            display:inline;
+        }
+
+        ol {
+    counter-reset: item;
+    padding-left: 10px;
+}
+li {
+    display: block
+}
+li:before {
+    content: counters(item, ".") " ";
+    counter-increment: item
+}
+        .btn{
+            display:inline-block;
+           /* width:18vw !important;*/
+        }
+          @media only screen and (min-width:300px) and (max-width:600px){
+              .btn{
+            display:inline-block;
+            width:85vw !important;
+            margin-left:1vw !important;
+        }
+        }
+        @media only screen and (min-width:600px) and (max-width:992px){
+              .btn{
+            display:inline-block;
+            width:50vw !important;
+        }
+        }
+        @media  only screen and (min-width:992px) and (min-width:1200px){
+    
+          .dropdown{
+              width:21vw !important;
+            margin-left:3vw !important;
+        }
+        #navbarSupportedContent{
+            width:100vw !important;
+        }
+        
+        .btn{
+            display:inline-block;
+            width:21vw !important;
+        }
+        
+      }
+       
+    </style>
+</head>
+<body>
+
+
+<ol class="navbar navbar-expand-lg navbar-light bg-dark nav" start="2">
+ <div class="container-fluid bg-dark">
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+     <div id="navbarSupportedContent" class="ms-0 navbar-collapse collapse">
+    
+    <div class="dropdown">
+  <li class="btn btn-primary btn-lg bn dropdown-toggle" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">Utilites</li>
+  <ol class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
+    <li><a class="dropdown-item" href="BasicTypography.html">Basic Typography</a></li>
+    <li><a class="dropdown-item" href="text_alignment_display.html">Text Alignment & Display</a></li>
+    <li><a class="dropdown-item" href="floats_positions.html">Floats_positions</a></li>
+    <li><a class="dropdown-item" href="colors_background.html">Colors & Background</a></li>
+    <li><a class="dropdown-item" href="spacing.html">Spacing</a></li>
+    <li><a class="dropdown-item" href="sizing.html">Sizing</a></li>
+    <li><a class="dropdown-item" href="breakpoints.html">BreakPoints</a></li>
+    
+  </ol>
+</div>
+<div class="dropdown">
+  <li class="btn btn-success bn btn-lg dropdown-toggle" type="button" id="dropdownMenuButton2" data-bs-toggle="dropdown" aria-expanded="false">CSS Components</li>
+  <ol class="dropdown-menu" aria-labelledby="dropdownMenuButton2">
+    
+    <li><a class="dropdown-item" href="../Components/Buttons.html">Buttons</a></li>
+
+    <li><a class="dropdown-item" href="../Components/navbar.html">Navbar</a></li>
+
+    <li><a class="dropdown-item" href="../Components/ListGroup.html">ListGroup & Bedges</a></li>
+
+    <li><a class="dropdown-item" href="../Components/Forms.html">Form</a></li>
+
+    <li><a class="dropdown-item" href="../Components/InputGroups.html">Input Groups</a></li>
+
+    <li><a class="dropdown-item" href="../Components/InputGroups.html">Alerts & Progress</a></li>
+
+    <li><a class="dropdown-item" href="../Components/InputGroups.html">Tables & Pagination</a></li>
+
+    <li><a class="dropdown-item" href="../Components/card.html">Cards</a></li>
+
+    <li><a class="dropdown-item" href="../Components/MediaObjects.html">Media Objects</a></li>
+
+    <li><a class="dropdown-item" href="../Components/InputGroups.html">Input Groups</a></li>
+
+  </ol>
+</div>
+
+<div class="dropdown">
+  <li class="btn btn-warning bn btn-lg dropdown-toggle" type="button" id="dropdownMenuButton3" data-bs-toggle="dropdown" aria-expanded="false">Grid & Flexbox</li>
+  <ol class="dropdown-menu" aria-labelledby="dropdownMenuButton3">
+     <li><a class="dropdown-item" href="../../../Day2/practice/grid.html">Grid System</a></li>
+      <li><a class="dropdown-item" href="../../../Day2/practice/grid-alignment.html">Grid Alignment</a></li>
+       <li><a class="dropdown-item" href="../../../Day2/practice/flexbox.html">Flexbox</a></li>
+       <li><a class="dropdown-item" href="../../../Day2/practice/automargins_wrapping.html">Auto Margins & wrap</a></li>
+  </ol>
+</div>
+
+<div class="dropdown">
+  <li class="btn btn-danger bn btn-lg dropdown-toggle" type="button" id="dropdownMenuButton4" data-bs-toggle="dropdown" aria-expanded="false">
+JavaScript Widgets</li>
+  <ol class="dropdown-menu" aria-labelledby="dropdownMenuButton4">
+     <li><a class="dropdown-item" href="../../../Day2/practice/carousel.html">Carousel</a></li>
+      <li><a class="dropdown-item" href="../../../Day2/practice/collapse.html">Collapse</a></li>    
+       <li><a class="dropdown-item" href="../../../Day2/practice/tooltips.html">Tooltips</a></li>
+      <li><a class="dropdown-item" href="../../../Day2/practice/popovers.html">Popovers</a></li>    
+       <li><a class="dropdown-item" href="../../../Day2/practice/modals.html">Modals</a></li>
+</ol>
+</div>
+</div>
+</ol>
+</div>  
+  
+<div class="container">
+    <div class="bg-primary w-25 m-3">Width 25</div>
+    <div class="bg-primary w-50 m-3">Width 50</div>
+    <div class="bg-primary w-75 m-3">Width 75</div>
+    <div class="bg-primary w-100 m-3">Width 100</div>
+
+    <!-- it does not work w-10 and w-20 -->
+    <div class="bg-primary w-10 m-3">Width 10</div>
+
+    <div class="bg-primary w-20 m-3">Width 20</div>
+
+    <div style="height:300px !important;border:1px solid black">
+    <div class="bg-primary h-25  d-inline-block">Height 25</div>
+
+    <div class="bg-primary h-50 d-inline-block">Height 50</div>
+
+    <div class="bg-primary h-75 d-inline-block">Height 75</div>
+
+    <div class="bg-primary h-100 d-inline-block">Height 100</div>
+<!-- it does not work h-10 and h-20 -->
+    <div class="bg-primary h-10 d-inline-block">Height 10</div>
+
+    <div class="bg-primary h-20 d-inline-block">Height 20</div>
+    </div><br><br>
+    <div class="bg-light border">Regular</div>
+    <div class="bg-light border border-primary">Primary</div>
+    <div class="bg-light border border-secondary">Secondary</div>
+
+    <div class="bg-light border border-warning">Warning</div>
+
+    <div class="bg-light border border-info">info</div>
+
+    <div class="bg-light border border-success">Success</div>
+
+    <div class="bg-light border border-danger">Danger</div>
+
+    <div class="bg-light border border-dark">Dark</div>
+
+    <div class="bg-light border border-light">light</div>
+
+    <div class="bg-light border border-white">White</div>
+
+</div>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-/bQdsTh/da6pkI1MST/rWKFNjaCP5gBSY4sEBT38Q/9RBh9AH40zEOg7Hlq2THRZ" crossorigin="anonymous">
+    </script>
+</body>
+</html>

@@ -1,0 +1,481 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+
+        #nav1{
+            background-color: lightgray;
+            display: flex;
+            flex-direction: row;
+            height: 15vh !important;
+            width: 100vw !important;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+        }
+
+        #logo {
+            display: flex;
+            justify-content: center;
+
+        }
+
+        div img {}
+
+        div {
+            font-size: 30px;
+            margin-left: auto;
+            margin-top: 0vh !important;
+            margin-bottom: 0px;
+        }
+
+        div a {
+            text-decoration: none;
+            color: grey;
+            /* margin-left:3vw !important; */
+            margin-right: 3vw !important;
+            /* justify-content:center;*/
+        }
+
+        article {
+
+            height: 85vh;
+            width: 79vw;
+            float: left;
+            background-image: url("../../../HTML/Nisarg Adalja/assests/images/html5.jpg");
+            background-repeat: no-repeat;
+            background-size: cover;
+        }
+
+        h1 {
+            margin-top: 40px !important;
+        }
+        li{
+            font-size:30px;
+        }
+        aside {
+            display: flex;
+            flex-direction: column;
+            float: left;
+            height: 85vh;
+            width: 18vw;
+            background-color: orange;
+        }
+        header{
+            width:100% !important;
+        }
+        /* Dropdown Button */
+
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+        }
+
+        .navbar {
+            overflow: hidden;
+            display: flex;
+            flex-direction: column;
+            background-color: #333;
+        }
+
+        .navbar a {
+            float: left;
+            font-size: 20px;
+            color: white;
+            text-align: left;
+            padding: 14px 16px;
+            text-decoration: none;
+        }
+
+        .dropdown {
+            float: left;
+            overflow: hidden;
+        }
+
+        .dropdown .dropbtn {
+            font-size: 20px;
+            border: none;
+            outline: none;
+            color: white;
+            padding: 0px 0px;
+            background-color: inherit;
+            font-family: inherit;
+            margin: 0;
+        }
+
+        .navbar a:hover,
+        .dropdown:hover .dropbtn {
+            background-color: red;
+        }
+
+        .dropdown-content {
+            display: none;
+            position: absolute;
+            background-color: #f9f9f9;
+            min-width: 160px;
+            box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+            z-index: 1;
+        }
+
+        .dropdown-content a {
+            float: none;
+            color: black;
+            padding: 0px 0px;
+            text-decoration: none;
+            display: block;
+            text-align: left;
+        }
+
+        .dropdown-content a:hover {
+            background-color: #ddd;
+        }
+
+        .dropdown:hover .dropdown-content {
+            display: block;
+        }
+        .dropdown-content a:active {
+            background-color: #ddd;
+        }
+
+        .dropdown:active .dropdown-content {
+            display: block;
+        }
+
+        /* Dropdown Button */
+
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+        }
+
+        .navbar {
+            overflow: hidden;
+            display: flex;
+            flex-direction: column;
+            background-color: #333;
+        }
+
+        .navbar a {
+            float: left;
+            font-size: 20px;
+            color: white;
+            text-align: left;
+            padding: 14px 16px;
+            text-decoration: none;
+        }
+
+        .dropdown {
+            float: left;
+            overflow: hidden;
+        }
+
+        .dropdown .dropbtn {
+            font-size: 20px;
+            border: none;
+            outline: none;
+            color: white;
+            padding: 0px 0px;
+            background-color: inherit;
+            font-family: inherit;
+            margin: 0;
+        }
+
+        .navbar a:hover,
+        .dropdown:hover .dropbtn {
+            background-color: red;
+        }
+
+        .dropdown-content {
+            display: none;
+            position: absolute;
+            background-color: #f9f9f9;
+            min-width: 160px;
+            box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+            z-index: 1;
+        }
+
+        .dropdown-content a {
+            float: none;
+            color: black;
+            padding: 0px 0px;
+            text-decoration: none;
+            display: block;
+            text-align: left;
+        }
+
+        .dropdown-content a:hover {
+            background-color: #ddd;
+        }
+
+        .dropdown:hover .dropdown-content {
+            display: block;
+        }
+        .dropdown-content a:active {
+            background-color: #ddd;
+        }
+
+        .dropdown:active .dropdown-content {
+            display: block;
+        }
+    </style>
+    <style>
+        header{
+            background-color:red;
+            height:15vh;
+            width:100vw;
+        }
+        #nav{
+            
+            color:white !important;
+            font-size:20px;
+            
+            float:right;
+            margin-right:40vh !important;
+            margin-top:5vh !important;
+        }
+        nav a{
+            text-decoration:none;
+             color:white !important;
+            font-size:20px;
+            margin-left:3vw !important;
+         margin-right:3vw !important;
+        }
+        aside{
+            float:left;
+            height:70vh !important;
+            width:20%;
+            background-color:yellow;
+        }
+        article{
+            float:left;
+            height:70vh !important;
+            width:77vw !important;
+            background-color:orange;
+        }
+        footer{
+            clear:left;
+            background-color:pink;
+        }
+    </style>
+    <style>
+        @media only screen and (max-width:700px){
+             body {
+          /*  background-color: lightblue;*/
+            }
+        }
+        /* For desktop: */
+* {
+  box-sizing: border-box;
+}
+
+.row::after {
+  content: "";
+  clear: both;
+  display: block;
+}
+
+[class*="col-"] {
+  float: left;
+  padding: 15px;
+}
+
+html {
+  font-family: "Lucida Sans", sans-serif;
+}
+
+.header {
+  background-color: #9933cc;
+  color: #ffffff;
+  padding: 15px;
+}
+
+.menu ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+
+.menu li {
+  padding: 8px;
+  margin-bottom: 7px;
+  background-color: #33b5e5;
+  color: #ffffff;
+  box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
+}
+
+.menu li:hover {
+  background-color: #0099cc;
+}
+
+.aside {
+  background-color: #33b5e5;
+  padding: 15px;
+  color: #ffffff;
+  text-align: center;
+  font-size: 14px;
+  box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
+}
+
+.footer {
+  background-color: #0099cc;
+  color: #ffffff;
+  text-align: center;
+  font-size: 12px;
+  padding: 15px;
+}
+
+/* For desktop: */
+.col-1 {width: 8.33%;}
+.col-2 {width: 16.66%;}
+.col-3 {width: 25%;}
+.col-4 {width: 33.33%;}
+.col-5 {width: 41.66%;}
+.col-6 {width: 50%;}
+.col-7 {width: 58.33%;}
+.col-8 {width: 66.66%;}
+.col-9 {width: 75%;}
+.col-10 {width: 83.33%;}
+.col-11 {width: 91.66%;}
+.col-12 {width: 100%;}
+
+@media only screen and (max-width: 768px) {
+  /* For mobile phones: */
+  [class*="col-"] {
+    width: 100%;
+  }
+}
+    </style>
+</head>
+<body>
+<nav id="nav1">
+        <div id="logo">
+            <img src="https://tutorials.rxtrainees.radixweb.net/wp-content/uploads/2020/12/logo_2500X1875.jpg"
+                height="50px" width="200px">
+        </div>
+        <div>
+            <a href="../../../../Modules/Project/Nisarg Adalja/nisargProject.html">HOME</a>
+            <a href="../../../../Modules/Project/Nisarg Adalja/htmlfile.html">HTML</a>
+            <a href="../../../../Modules/Project/Nisarg Adalja/cssfile.html">CSS</a>
+            <a href="../../../../Modules/Project/Nisarg Adalja/Bootstrap.html">Bootstrap</a>
+            <a href="../../../../Modules/Project/Nisarg Adalja/javascript.html">JAVASCRIPT</a>
+            <a href="../../../../Modules/Project/Nisarg Adalja/jquery.html">JQUERY</a>
+            <a href="../../../../Modules/Project/Nisarg Adalja/project.html">PORJECT</a>
+        </div>
+    </nav>
+    <aside>
+      <ol>
+            <li>Day-3
+                <ul>
+                    <div class="dropdown">
+                        <button class="dropbtn">Additional Exercise</button>
+                        <div class="dropdown-content">
+                            <a href="../../Day3/additional/additional.html">additional.html</a>
+                        </div>
+                    </div>
+                    <div class="dropdown">
+                        <button class="dropbtn">Assignment Exercise</button>
+                        <div class="dropdown-content">
+                            <a href="../../Day3/assignments/about.html">about.html</a>
+                              <a href="../../Day3/assignments/assignments.html">assignment.html</a>
+                                <a href="../../Day3/assignments/contact.html">contact.html</a>
+                        </div>
+                    </div>
+                    <div class="dropdown">
+                        <button class="dropbtn">Practice Exercise</button>
+                        <div class="dropdown-content">
+                            <a href="../../Day3/practice/practice.html">practice.html</a>
+                            <a href="../../Day3/practice/practice1.html">practice1.html</a>
+                            
+                        </div>
+                    </div>
+
+                </ul>
+            </li>
+             <li>Day-4
+                <ul>
+                    <div class="dropdown">
+                        <button class="dropbtn">Additional Exercise</button>
+                        <div class="dropdown-content">
+                            <a href="../../Day4/additional/additional.html">additional.html</a>
+                        </div>
+                    </div>
+                    <div class="dropdown">
+                        <button class="dropbtn">Assignment Exercise</button>
+                        <div class="dropdown-content">
+                            <a href="../../Day4/assignment/assignment.html">assignment.html</a>
+                        </div>
+                    </div>
+                    <div class="dropdown">
+                        <button class="dropbtn">Practice Exercise</button>
+                        <div class="dropdown-content">
+                            <a href="../../Day4/practice/practice.html">practice.html</a>
+                        </div>
+                    </div>
+
+                </ul>
+            </li>
+             <li>Day-5
+                <ul>
+                    <div class="dropdown">
+                        <button class="dropbtn">Additional Exercise</button>
+                        <div class="dropdown-content">
+                            <a href="../../Day5/additional/additional.html">additional.html</a>
+                        </div>
+                    </div>
+                    <div class="dropdown">
+                        <button class="dropbtn">Assignment Exercise</button>
+                        <div class="dropdown-content">
+                            <a href="../../Day5/assignments/assignment.html">assignment.html</a>
+                        </div>
+                    </div>
+                    <div class="dropdown">
+                        <button class="dropbtn">Practice Exercise</button>
+                        <div class="dropdown-content">
+                            <a href="../../Day5/practice/practice.html">practice.html</a>
+                        </div>
+                    </div>
+
+                </ul>
+            </li>
+        </ol>
+    </aside>
+    <article>    
+<div class="header">
+  <h1>India</h1>
+</div>
+
+<div class="row">
+  <div class="col-3 menu">
+    <ul>
+    <li>The Flight</li>
+    <li>The City</li>
+    <li>The Mumbai</li>
+    <li>The Food</li>
+    </ul>
+  </div>
+
+  <div class="col-6">
+    <h1>The City</h1>
+    <p>Chania is the capital of the Chania region on the island of Crete. The city can be divided in two parts, the old town and the modern city.</p>
+  </div>
+
+  <div class="col-3 right">
+    <div class="aside">
+      <h2>What?</h2>
+      <p>Chania is a city on the island of Crete.</p>
+      <h2>Where?</h2>
+      <p>Crete is a Greek island in the Mediterranean Sea.</p>
+      <h2>How?</h2>
+      <p>You can reach Chania airport from all over Europe.</p>
+    </div>
+  </div>
+</div>
+
+<div class="footer">
+  <p>Resize the browser window to see how the content respond to the resizing.</p>
+</div>
+</article>
+</body>
+</html>

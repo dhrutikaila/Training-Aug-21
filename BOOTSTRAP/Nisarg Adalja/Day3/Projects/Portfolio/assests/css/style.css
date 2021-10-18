@@ -1,0 +1,35 @@
+.bg-black{
+    background:#000;
+    color:#fff;
+}
+#mainheader img{
+    width:100%;
+    height:100%;
+}
+#mainheader .port-item{
+    width:30%;
+}
+#mainheader .port-item .fa{
+        font-size:2em;
+    }
+#mainheader .port-item:hover{
+    opacity:0.8 !important;
+    cursor:pointer !important;
+}
+@media(min-width:1000px){
+    .port-item{
+        padding:3em !important;
+    }
+}
+
+@media(min-width:1250px){
+    .port-item{padding:4em !important;
+    }
+}
+@media(min-width:1400px){
+    .port-item{padding:5em !important;
+    }
+}
+#home{
+    height:100vh !important;
+}

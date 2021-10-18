@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        /*Web Storage API
+        The Web Storage API is a simple syntax for storing and retrieving data in the browser. It is very easy to use:
+        */
+
+        /*
+        The localStorage Object
+
+        The localStorage object provides access to a local storage for a particular Web Site. It allows you to store, read, add, modify, and delete data items for that domain.
+        The data is stored with no expiration date, and will not be deleted when the browser is closed.
+        The data will be available for days, weeks, and years.
+        */
+        /*The setItem() Method
+T       he localStorage.setItem() method stores a data item in a storage.
+        It takes a name and a value as parameters:*/
+        localStorage.setItem("name", "Nisarg Adalja");
+
+        /*The getItem() Method
+        The localStorage.getItem() method retrieves a data item from the storage.*/
+        console.log(localStorage.getItem("name"));
+
+        //to delete the localstorage we have remove method
+        localStorage.removeItem("name");
+
+
+        /*The sessionStorage Object
+
+        The sessionStorage object is identical to the localStorage object.
+
+        The difference is that the sessionStorage object stores data for one session.
+
+        The data is deleted when the browser is closed. also deleted after specific time*/
+
+        //The setItem() Method
+        //The sessionStorage.setItem() method stores a data item in a storage.
+
+        //It takes a name and a value as parameters:
+        sessionStorage.setItem("name", "nisarg adalja");
+
+        /*The getItem() Method
+        The sessionStorage.getItem() method retrieves a data item from the storage.
+
+        It takes a name as parameter:*/
+
+        sessionStorage.getItem("name");
+
+        //to delete the session we have remove method
+        sessionStorage.removeItem("name");
+
+        /*Storage Object Properties and Methods
+        Property/Method	Description
+        key(n)	                    Returns the name of the nth key in the storage
+        length	                    Returns the number of data items stored in the Storage object
+        getItem(keyname)	        Returns the value of the specified key name
+        setItem(keyname, value)	    Adds that key to the storage, or update that key's value if it already exists
+        removeItem(keyname)     	Removes that key from the storage
+        clear()	                    Empty all key out of the storage */
+
+        /*
+        Related Pages for Web Storage API
+
+        Property	Description
+        window.localStorage	    Allows to save key/value pairs in a web browser. Stores the data with no expiration date
+        window.sessionStorage	Allows to save key/value pairs in a web browser. Stores the data for one session*/
+
+    </script>
+</body>
+</html>

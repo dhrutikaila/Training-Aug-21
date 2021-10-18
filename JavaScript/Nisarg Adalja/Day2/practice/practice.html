@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body id="main">
+    <div id="result">
+
+    </div>
+    <script>
+        /* Write a JavaScript function to check whether a string is blank or not*/
+        result=document.getElementById('result');
+        function checkString(str){
+            if(!str){
+                console.log("This is blank String. this not valid String");
+                result.innerHTML += "This is blank String.This not valid String.\t \n ";
+            }
+            else{
+                console.log("this is valid");
+                result.innerHTML+="This is valid. ";
+            }
+
+        }
+        checkString("");
+        checkString("nisarg");
+        //setTimeout(8000,splitString("this is Split the String into araay of words"));
+        /*
+        Write a JavaScript function to split a string and convert it into an array of words*/
+        
+        function splitString(str){
+            var arr=str.split(" ");
+            for (var element of arr){
+                result.innerHTML+='+'+element;
+            }
+        }
+        splitString("this is my String");
+        /*
+        JavaScript function to extract a specified number of characters from a string.*/
+        function sliceString(str,start,end){
+            console.log(str.slice(start,end));
+            result.innerHTML+=' slice method result is : '+str.slice(start,end)+' ';
+        }
+        sliceString("this is my String",5,10);
+        /*Write a JavaScript function to get the current date*/
+        function currentDate(){
+            result.innerHTML+=' Current Date is :'+ new Date();
+        }
+       /* Try some operation with list like push, pop, shifting, deleting element*/
+       arr=new Array();
+       arr.push(10);
+       arr.push(20);
+       arr.push(30);
+        arr.push(40);
+        arr.push(50);
+        arr.push(60);
+        arr.push(70);
+        arr.pop();
+        arr.pop();
+        arr.shift();
+        arr.shift();
+        arr.unshift(25);
+        arr.pop(50);
+        console.log(arr);
+    result.innerHTML+=" remaining item in list"+arr;
+
+       
+    </script>
+</body>
+
+</html>

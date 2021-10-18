@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body id="main">
+    <script>
+        var a = 5;
+       // const b = 7; /*value of constant variable can not be change*/
+
+        /* The let keyword was introduced in ES6 (2015).
+
+        Variables defined with let cannot be Redeclared.
+
+        Variables defined with let must be Declared before use.
+
+        Variables defined with let have Block Scope.*/
+        //let c = 8; /*var is local variable and let is global variable*/
+        //let c=10; // it give error bcz we can not redifine it.
+        /* Block Scope
+Before ES6 (2015), JavaScript had only Global Scope and Function Scope.
+
+ES6 introduced two important new JavaScript keywords: let and const.
+
+These two keywords provide Block Scope in JavaScript.
+
+Variables declared inside a { } block cannot be accessed from outside the block: */
+        {
+        //    let x = 5;
+        }
+        //console.log(x); // it also give error bcz x can not access outside the block 
+
+
+        var $$$ = "Hello World";
+        var $ = 2;
+        var $myMoney = 5;
+        var _lastName = "Johnson";
+        var _x = 2;
+        var _100 = 5;
+        var $ = 10; {
+            var pop = "pop"
+        }
+        console.log(pop); //we can access pop outside the block bcz of var.
+        console.log($); //it does not give eeror bcz in var we can redeclare the variable.
+        var x = 2; // Allowed
+        // let x = 3; // Not allowed
+
+        {
+        //    let x = 2; // Allowed
+            //let x = 3; // Not allowed
+        }
+
+        {
+         //   let x = 2; // Allowed
+            //var x = 3 // Not allowed
+        }
+        carName = "Volvo";
+        var carName;
+        carName = "Saab";
+       // let carName = "Volvo";
+
+        /*
+        The const keyword was introduced in ES6 (2015).
+
+        Variables defined with const cannot be Redeclared.
+
+        Variables defined with const cannot be Reassigned.
+
+        Variables defined with const have Block Scope.
+        */
+        /*Cannot be Reassigned
+        A const variable cannot be reassigned:*/
+        //const PI = 3.141592653589793;
+       // PI = 3.14; // This will give an error
+       // PI = PI + 10; // This will also give an error
+
+        //JavaScript const variables must be assigned a value when they are declared:
+       // const PI;
+       // PI = 3.14159265359; //it give error
+        //const cars = ["Saab", "Volvo", "BMW"];
+
+        // You can change an element:
+     //   cars[0] = "Toyota";
+
+        // You can add an element:
+    //    cars.push("Audi");
+        //const cars = ["Saab", "Volvo", "BMW"];
+
+        //cars = ["Toyota", "Volvo", "Audi"]; // ERROR
+
+        /*Constant Objects
+        You can change the properties of a constant object:
+        */
+        //Example
+        // You can create a const object:
+        /*const car = {
+            type: "Fiat",
+            model: "500",
+            color: "white"
+        };*/
+
+        // You can change a property:
+       // car.color = "red";
+
+        // You can add a property:
+        //car.owner = "Johnson";
+
+        //const car = {type:"Fiat", model:"500", color:"white"};
+
+        //car = {type:"Volvo", model:"EX60", color:"red"};    // ERROR
+    </script>
+</body>
+
+</html>

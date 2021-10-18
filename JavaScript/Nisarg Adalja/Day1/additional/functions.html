@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="../../assests/css/bootstrap.min.css">
+  <script src="../../assests/js/jquery-3.6.0.js"></script>
+  <script src="../../assests/js/bootstrap.bundle.js"></script>
+
+</head>
+<body id="main">
+    <button onlclick="alert('this is alert function');">Click me</button>
+    <input type="number" id="num1" name="num1" placeholder="Enter the Number1">
+    <input tye="number" id="num2" name="num2" placeholder="Enter the Number2">
+    <button onclick="addition(num1.value,num2.value)">Addition</button>
+    <button onclick="substraction(num1.value,num2.value)">Substraction</button>
+    <button onclick="multiplication(num1.value,num2.value)">Multiplication</button>
+    <button onclick="division(num1.value,num2.value)">Division</button>
+    <div id="result"></div>
+    <div id="demo"></div>
+    <script>
+
+        var result=document.getElementById("result");
+        /* function that return no value it's called subroutines*/
+        function addition(num1,num2){
+            var num11=parseInt(num1);
+            var num22=parseInt(num2);
+            console.log(num11+num22);
+            result.innerHTML="Result of Addition is "+(parseInt(num1)+parseInt(num2));
+        }
+        function multiplication(num1,num2){
+            num1=parseInt(num1);
+            num2=parseInt(num2);
+            result.innerHTML="Result odf multiplication is "+ (num1*num2);
+        }
+        function substraction(num1,num2){
+            num1=parseInt(num1);
+            num2=parseInt(num2);
+            result.innerHTML="Result of substraction is "+(num1-num2);
+        }
+        function division(num1,num2){
+            num1=parseInt(num1);
+            num2=parseInt(num2);
+            result.innerHTML="Result of division is "+(num1/num2);
+        }
+        /*The () Operator Invokes the Function
+        Using the example above, toCelsius refers to the function object, and toCelsius() refers to the function result.
+        Accessing a function without () will return the function object instead of the function result.*/
+        function toCelsius(fahrenheit) {
+            return (5/9) * (fahrenheit-32);
+        }
+        
+document.getElementById("demo").innerHTML = toCelsius;
+    </script>
+</body>
+</html>

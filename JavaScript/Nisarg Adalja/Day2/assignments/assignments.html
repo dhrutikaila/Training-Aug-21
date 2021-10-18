@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <input type="text" id="date">
+    <button id="submit" onclick="checkdate()">Submit</button>
+    <div id="result"></div>
+    <script>
+        /*Date entered by the user should be checked for whether it is a Valid Date or not.
+
+Entered date should be in “”date[1]-date[0]-date[2]”” format. Display the Date Format along with the Text Box.
+
+You are required to perform following checks :
+
+– Entered characters should be digits only.
+
+– Month should be within the range 1 to 12.
+
+ Days should be within the range 1 to 31.
+
+
+
+ 
+Check the entered Days and its corresponding Month.*/
+
+        var leap = false;
+
+        function isLeap(year) {
+            if (year % 4 === 0) {
+                if (year % 100 === 0) {
+                    if (year % 400 == 0) {
+                        return true;
+                    } else {
+                        return false;
+                    }
+                } else {
+                    return true;
+                }
+            } else {
+                return false;
+            }
+        }
+
+
+        function checkdate() {
+            var dt = document.getElementById("date").value;
+            console.log(dt);
+            console.log(typeof dt);
+            var date = dt.split('-');
+            console.log(date[0]);
+            console.log(date[1]);
+            console.log(date[2]);
+            date[0]=parseInt(date[0]);
+            date[1]=parseInt(date[1]);
+            
+            date[2]=parseInt(date[2]);
+            
+
+            const pattern = /^(0?[1-9]|[1-2][0-9]|3[01])\-(0?[1-9]|1[0-2])\-\d{4}$/;
+            console.log(pattern.test(dt));
+            if (pattern.test(dt)) {
+                if (isLeap(parseInt(date[2]))) {
+                    if (date[1] == 2) {
+                        if (date[0] <= 29) {
+                            console.log("date is in correct formate");
+                            result.innerHTML="date is in correct formate";
+                        }
+                        
+                    }
+                     else if (date[1]==1 || date[1]==3 || date[1]==5 || date[1]==7 || date[1]==8 || date[1]==10 || date[1]==12){
+                        if(date[0]<=31){
+                             console.log("date is in correct formate");
+                              result.innerHTML="date is in correct formate";
+                        }
+                        
+                    } 
+                    else if  (date[1]==4 || date[1]==6 || date[1]==9 || date[1]==11){
+                        if(date[0]<=30){
+                            console.log("date is in correct formate");
+                            result.innerHTML="date is in correct formate";
+
+                        }
+                        
+                    }
+                    else{
+                           //result.innerHTML="date is in incorrect formate";
+       
+                        }
+
+                }
+                else{
+                    if (date[1] == "02") {
+                        if (date[0] <= 28) {
+                            console.log("date is in correct formate");
+                            result.innerHTML="date is in correct formate";
+                        }
+                    }
+                    else if (date[1]==1 || date[1]==3 || date[1]==5 || date[1]==7 || date[1]==8 || date[1]==10 || date[1]==12){
+                        if(date[0]<=31){
+                             console.log("date is in correct formate");
+                              result.innerHTML="date is in correct formate";
+                        }
+                        
+                    } 
+                    else if  (date[1]==4 || date[1]==6 || date[1]==9 || date[1]==11){
+                        if(date[0]<=30){
+                            console.log("date is in correct formate");
+                            result.innerHTML="date is in correct formate";
+
+                        }
+                        
+                    }
+                    else{
+                        //result.innerHTML="date is in incorrect formate";
+       
+                        }
+                }
+            }
+            else{
+                console.log("date is in incorrect formate ");
+                result.innerHTML="date is in incorrect formate";
+            }
+        }
+    </script>
+</body>
+
+</html>

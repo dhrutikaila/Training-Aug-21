@@ -1,0 +1,311 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Arrays</title>
+</head>
+<body>
+    <div id="demo"></div>
+      <button onclick="myFunction1()">Sort Alphabetically</button>
+<button onclick="myFunction2()">Sort Numerically</button>
+
+<p id="demo1"></p>
+
+<script>
+        const cars = ["Saab", "Volvo", "BMW"];
+
+        var cars1 = [];
+        cars1[0]= "Saab";
+        cars1[1]= "Volvo";
+        cars1[2]= "BMW";
+
+        //access array elements
+        var cars2 = new Array("Saab", "Volvo", "BMW");
+        console.log(cars2[1]);
+
+        //changing an array element
+        cars2[0]="audi";
+
+        /*Access the Full Array
+        With JavaScript, the full array can be accessed by referring to the array name: */
+        let cars3 = ["Saab", "Volvo", "BMW"];
+        document.getElementById("demo").innerHTML = cars3;
+
+        const person = {firstName:"John", lastName:"Doe", age:46};
+
+        // sorting the array
+        cars3.sort();
+        //length property
+        cars3.length;
+
+        const fruits = ["Banana", "Orange", "Apple", "Mango"];
+
+        let text = "<ul>";
+        fruits.forEach(myFunction);
+        text += "</ul>";
+
+        function myFunction(value) {
+            text += "<li>" + value + "</li>";
+        }
+
+        const fruits1 = ["Banana", "Orange", "Apple"];
+        fruits1.push("Lemon");  // Adds a new element (Lemon) to fruits
+        fruits1[fruits1.length] = "Mango";
+        fruits1[8]="cheri";
+
+        const person1 = [];
+        person1["firstName"] = "John";
+        person1["lastName"] = "Doe";
+        person1["age"] = 46;
+        person1.length;     // Will return 0
+        person1[0];     
+
+        // Create an array with 40 undefined elements:
+        const points = new Array(40);  
+        console.log(points);
+
+        console.log(Array.isArray(points)); //return True   
+
+        //ToString method
+        console.log(fruits1);
+
+        //The join() method also joins all array elements into a string.
+        //It behaves just like toString(), but in addition you can specify the separator:
+
+        document.getElementById("demo").innerHTML = fruits1.join(" * ");
+
+        //pop method
+        fruits1.pop(); //it remove last element from the list
+        //push method
+        fruits1.push("Kiwi");
+
+        //shift method
+
+        fruits1.shift(); //The shift() method removes the first array element and "shifts" all other elements to a lower index.
+
+        fruits1.unshift("lemon"); //The unshift() method adds a new element to an array (at the beginning), and "unshifts" older elements:
+
+        const fruits4 = ["Banana", "Orange", "Apple", "Mango"];
+        fruits4.splice(2, 0, "Lemon", "Kiwi");
+
+        /* The first parameter (2) defines the position where new elements should be added (spliced in).
+
+The second parameter (0) defines how many elements should be removed.
+
+The rest of the parameters ("Lemon" , "Kiwi") define the new elements to be added.
+
+The splice() method returns an array with the deleted items:*/
+        const fruits5 = ["Banana", "Orange", "Apple", "Mango"];
+        fruits5.splice(2, 2, "Lemon", "Kiwi");
+
+        fruits5.splice(0, 1);   // Removes the first element
+        fruits5.splice(0,2); //remove 2 elements
+        const myGirls = ["Cecilie", "Lone"];
+        const myBoys = ["Emil", "Tobias", "Linus"];
+
+        // Concatenate (join) myGirls and myBoys
+        const myChildren = myGirls.concat(myBoys);  
+
+        //Use the splice() method to remove "Orange" and "Apple" from fruits.
+
+
+        const fruits6 = ["Banana", "Orange", "Apple", "Kiwi"];
+        fruits6.splice(1, 2);
+
+
+        //The sort() method sorts an array alphabetically:
+
+        const fruits7= ["Banana", "Orange", "Apple", "Mango"];
+        fruits7.sort();        // First sort the elements of fruits
+        fruits7.reverse();     // Then reverse the order of the elements
+
+        const points3 = [40, 100, 1, 5, 25, 10];
+        points3.sort(function(a, b){return a - b}); //to sort numerically 
+
+      
+const points2 = [40, 100, 1, 5, 25, 10];
+document.getElementById("demo1").innerHTML = points2;
+
+function myFunction1() {
+  points2.sort();
+  document.getElementById("demo1").innerHTML = points2;
+}
+
+function myFunction2() {
+  points2.sort(function(a, b){return a - b});
+  document.getElementById("demo1").innerHTML = points2;
+}
+//You can use Math.max.apply to find the highest number in an array:
+function myArrayMax(arr) {
+  return Math.max.apply(null, arr);
+}
+
+function myArrayMin(arr) {
+  return Math.min.apply(null, arr);
+}
+
+const numbers4 = [45, 4, 9, 16, 25];
+txt = "";
+numbers4.forEach(myFunction);
+
+function myFunction(value, index, array) {
+  txt += value + "<br>";
+}
+
+/* Array.map()
+The map() method creates a new array by performing a function on each array element.
+
+The map() method does not execute the function for array elements without values.
+
+The map() method does not change the original array.
+
+This example multiplies each array value by 2:
+
+Example*/
+const numbers11 = [45, 4, 9, 16, 25];
+const numbers21 = numbers11.map(myFunction);
+
+function myFunction(value, index, array) {
+  return value * 2;
+}
+
+
+function myFunction(value) {
+  return value * 2;
+}
+
+/*Array.filter()
+The filter() method creates a new array with array elements that passes a test.
+
+This example creates a new array from elements with a value larger than 18:
+*/
+const numbers18 = [45, 4, 9, 16, 25];
+const over18 = numbers18.filter(myFunction);
+
+function myFunction(value, index, array) {
+  return value > 18;
+}
+/*Array.reduce()
+The reduce() method runs a function on each array element to produce (reduce it to) a single value.
+
+The reduce() method works from left-to-right in the array. See also reduceRight().
+
+The reduce() method does not reduce the original array.
+
+This example finds the sum of all numbers in an array:*/
+
+let sum = numbers18.reduce(myFunction);
+
+function myFunction(total, value) {
+  return total + value;
+}
+
+/*
+Array.reduceRight()
+The reduceRight() method runs a function on each array element to produce (reduce it to) a single value.
+
+The reduceRight() works from right-to-left in the array. See also reduce().
+
+The reduceRight() method does not reduce the original array.
+
+This example finds the sum of all numbers in an array:
+*/
+let sum21 = numbers18.reduceRight(myFunction);
+
+function myFunction(total, value, index, array) {
+  return total + value;
+}
+
+/*
+Array.every()
+The every() method check if all array values pass a test.
+
+This example check if all array values are larger than 18:
+*/
+let allOver18 = numbers18.every(myFunction);
+console.log(allOver18)
+function myFunction(value, index, array) {
+  return value > 18;
+}
+
+/*Array.some()
+The some() method check if some array values pass a test.
+
+This example check if some array values are larger than 18:
+*/
+const numbers = [45, 4, 9, 16, 25];
+let someOver18 = numbers.some(myFunction);
+
+function myFunction(value, index, array) {
+  return value > 18;
+}
+/*Array.indexOf()
+The indexOf() method searches an array for an element value and returns its position.
+
+Note: The first item has position 0, the second item has position 1, and so on.
+
+Search an array for the item "Apple":
+*/
+const fruits21 = ["Apple", "Orange", "Apple", "Mango"];
+let position = fruits21.indexOf("Apple") + 1;
+
+/*Array.lastIndexOf()
+Array.lastIndexOf() is the same as Array.indexOf(), but returns the position of the last occurrence of the specified element.
+
+Search an array for the item "Apple":
+*/
+let position2 = fruits21.lastIndexOf("Apple") + 1;
+
+/*Array.includes()
+ECMAScript 2016 introduced Array.includes() to arrays. This allows us to check if an element is present in an array (including NaN, unlike indexOf).
+*/
+const fruits22 = ["Banana", "Orange", "Apple", "Mango"];
+
+fruits22.includes("Mango"); // is true
+
+/*Array.find()
+The find() method returns the value of the first array element that passes a test function.
+
+This example finds (returns the value of) the first element that is larger than 18:
+*/
+const numbers23 = [4, 9, 16, 25, 29];
+let first = numbers23.find(myFunction);
+
+function myFunction(value, index, array) {
+  return value > 18;
+}
+/*rray.findIndex()
+The findIndex() method returns the index of the first array element that passes a test function.
+
+This example finds the index of the first element that is larger than 18:
+
+*/
+let first1 = numbers21.findIndex(myFunction);
+
+function myFunction(value, index, array) {
+  return value > 18;
+}
+/*
+Array.from()
+The Array.from() method returns an Array object from any object with a length property or any iterable object.
+
+Create an Array from a String:
+*/
+Array.from("ABCDEFG")   // Returns [A,B,C,D,E,F,G]
+
+/*Array.Keys()
+The Array.keys() method returns an Array Iterator object with the keys of an array.
+
+Create an Array Iterator object, containing the keys of the array:
+*/
+const fruits25 = ["Banana", "Orange", "Apple", "Mango"];
+const keys2 = fruits25.keys();
+
+for (let x of keys2) {
+  text += x + "<br>";
+}
+    </script>
+</body>
+</html>

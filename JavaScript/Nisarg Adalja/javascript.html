@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavaScript</title>
+<link rel="stylesheet" href="assests/css/bootstrap.min.css">
+  <script src="assests/js/jquery-3.6.0.js"></script>
+  <script src="assests/js/bootstrap.bundle.js"></script>
+
+  <style>
+        :root{
+            --item:1;
+        }
+        .dropdown-item{
+            display:inline;
+        }
+         nav{
+            display:inline;
+            justify-content:center;
+            width:100vw;
+        }
+        .navbar{
+            width:100vw !important;
+        }
+        .dropdown{
+            margin-left:5vw;
+        }
+        li a{
+            display:inline;
+        }
+
+        ol {
+    counter-reset: item;
+    padding-left: 10px;
+}
+li {
+    display: block
+}
+li:before {
+    content: counters(item, ".") " ";
+    counter-increment: item
+}
+        .btn{
+            display:inline-block;
+           /* width:18vw !important;*/
+        }
+          @media only screen and (min-width:300px) and (max-width:600px){
+              .btn{
+            display:inline-block;
+            width:85vw !important;
+            margin-left:1vw !important;
+        }
+        }
+        @media only screen and (min-width:600px) and (max-width:992px){
+              .btn{
+            display:inline-block;
+            width:50vw !important;
+        }
+        }
+        @media  only screen and (min-width:992px) and (min-width:1200px){
+    
+          .dropdown{
+              width:21vw !important;
+            margin-left:3vw !important;
+        }
+        #navbarSupportedContent{
+            width:100vw !important;
+        }
+        
+        .btn{
+            display:inline-block;
+            width:10vw !important;
+        }
+        
+      }
+       
+    </style>
+</head>
+<body>
+
+<ol class="navbar navbar-expand-lg navbar-light bg-dark nav" start="2">
+ <div class="container-fluid bg-dark">
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+     <div id="navbarSupportedContent" class="ms-0 navbar-collapse collapse">
+    
+    <div class="dropdown">
+  <!-- <li class="btn btn-primary btn-lg bn dropdown-toggle" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">Utilites</li>  -->
+  <select class="btn btn-success btn-lg" aria-labelledby="dropdownMenuButton1">
+    <option value="none.html">Day 1</option>
+    <option class="dropdown-item" value="Day1/practice/practice.html">Day 1 practice</option>
+    <option class="dropdown-item" value="Day1/assignment/assignment.html">Day 1 assignment</option>
+    <option class="dropdown-item" value="Day1/additional/variables.html">Variables</option>
+    <option class="dropdown-item" value="Day1/additional/functions.html">Function</option>
+    <option class="dropdown-item" value="Day1/additional/ifelse.html">conditional construct</option>
+    <option class="dropdown-item" value="Day1/additional/forloop.html">for/While/foreach</option>
+    <option class="dropdown-item" value="Day1/additional/arrays.html">Array</option>   
+    <option class="dropdown-item" value="Day1/additional/switch.html">Switch</option>  
+    <option class="dropdown-item" value="Day1/additional/operators.html">operators</option> 
+    <option class="dropdown-item" value="Day1/additional/excercise.html">excercise</option> 
+       <option class="dropdown-item" value="Day1/additional/practice1.html">practice 1</option> 
+    <option class="dropdown-item" value="Day1/additional/practice2.html">practice 2</option> 
+  </select>
+</div>
+<div class="dropdown">
+  <!-- <li class="btn btn-success bn btn-lg dropdown-toggle" type="button" id="dropdownMenuButton2" data-bs-toggle="dropdown" aria-expanded="false">CSS Components</li> -->
+  <select class="btn btn-success btn-lg dropdown-toggle" aria-labelledby="dropdownMenuButton2">
+    <option value="none.html">Day 2</option>
+    <option class="dropdown-item" value="Day2/practice/practice.html">Practice</a></li>
+
+    <option class="dropdown-item" value="Day2/assignments/assignments.html">Assignments</a></li>
+
+    <option class="dropdown-item" value="Day2/additional/arrays.html">Arrays Method</a></li>
+
+    <option class="dropdown-item" value="Day2/additional/string.html">String Method</a></li>
+
+    <option class="dropdown-item" value="Day2/additional/numbers.html">Numbers Methods</a></li>
+
+    <option class="dropdown-item" value="Day2/additional/dates.html">Dates Methods</a></li>
+
+    <option class="dropdown-item" value="Day2/additional/exercise.html">Exercise</a></li>
+
+    <option class="dropdown-item" value="Day2/additional/additional.html">Additional</a></li>
+        
+  </select>
+</div>
+<div class="dropdown">
+  <!-- <li class="btn btn-success bn btn-lg dropdown-toggle" type="button" id="dropdownMenuButton2" data-bs-toggle="dropdown" aria-expanded="false">CSS Components</li> -->
+  <select class="btn btn-success btn-lg dropdown-toggle" aria-labelledby="dropdownMenuButton2">
+    <option value="none.html">Day 3</option>
+    <option class="dropdown-item" value="Day3/practice/practice1.html">Practice 1</option>
+        <option class="dropdown-item" value="Day3/practice/practice2.html">Practice 2</option>
+            <option class="dropdown-item" value="Day3/practice/practice3.html">Practice 3</option>
+            <option class="dropdown-item" value="Day3/practice/practice4.html">Practice 4</option>
+            <option class="dropdown-item" value="Day3/practice/practice5.html">Practice 5</option>
+            <option class="dropdown-item" value="Day3/practice/practice6.html">Practice 6</option>
+            <option class="dropdown-item" value="Day3/practice/practice7.html">Practice 7</option>
+            <option class="dropdown-item" value="Day3/practice/practice8.html">Practice 8</option>
+            <option class="dropdown-item" value="Day3/practice/practice9.html">Practice 9</option>
+            <option class="dropdown-item" value="Day3/practice/practice10.html">Practice 10</option>
+            <option class="dropdown-item" value="Day3/practice/practice11.html">Practice 11</option>
+            <option class="dropdown-item" value="Day3/practice/practice12.html">Practice 12</option>
+
+    <option class="dropdown-item" value="Day3/assignments/assignments.html">Assignments</option>
+
+    <option class="dropdown-item" value="Day3/additional/DOM.html">DOM Method</a></li>
+
+  </select>
+</div>
+
+<div class="dropdown">
+  <!-- <li class="btn btn-success bn btn-lg dropdown-toggle" type="button" id="dropdownMenuButton2" data-bs-toggle="dropdown" aria-expanded="false">CSS Components</li> -->
+  <select class="btn btn-success btn-lg dropdown-toggle" aria-labelledby="dropdownMenuButton2">
+    <option value="none.html">Day 4</option>
+    <option class="dropdown-item" value="Day4/practice/practice.html">Practice 1</option>
+        <option class="dropdown-item" value="Day4/practice/practice1.html">Practice 2</option>
+            <option class="dropdown-item" value="Day4/practice/practice2.html">Practice 3</option>
+            <option class="dropdown-item" value="Day4/practice/practice3.html">Practice 4</option>
+            
+    <option class="dropdown-item" value="Day4/assignments/assignment.html">Assignments</option>
+
+    <option class="dropdown-item" value="Day4/additional/callback.html">CallBack</option>
+
+    <option class="dropdown-item" value="Day4/additional/var_let.html">Var and Let keyword</option>
+
+    <option class="dropdown-item" value="Day4/additional/promise.html">Promises</option>
+
+    <option class="dropdown-item" value="Day4/additional/async_await.html">Async & Await</option>
+
+  </select>
+</div>
+
+<div class="dropdown">
+  <!-- <li class="btn btn-success bn btn-lg dropdown-toggle" type="button" id="dropdownMenuButton2" data-bs-toggle="dropdown" aria-expanded="false">CSS Components</li> -->
+  <select class="btn btn-success bn btn-lg dropdown-toggle" aria-labelledby="dropdownMenuButton2">
+    <option value="none.html">Day 5</option>
+    <option class="dropdown-item" value="Day5/practice/practice.html">Practice exercise</option>
+            
+    <option class="dropdown-item" value="Day5/assignments/assignment.html">Assignments</option>
+
+    <option class="dropdown-item" value="Day5/additional/function.html">Function Practice</option>
+
+  </select>
+</div>
+
+<div class="dropdown">
+  <!-- <li class="btn btn-success bn btn-lg dropdown-toggle" type="button" id="dropdownMenuButton2" data-bs-toggle="dropdown" aria-expanded="false">CSS Components</li> -->
+  <select class="btn btn-success bn btn-lg dropdown-toggle" aria-labelledby="dropdownMenuButton2">
+    <option value="none.html">Day 6</option>
+    <option class="dropdown-item" value="Day6/practice/practice.html">Practice 1</option>
+        <option class="dropdown-item" value="Day6/practice/practice1.html">Practice 2</option>
+        <option class="dropdown-item" value="Day6/practice/web_storage_api.html">Web Storage</option>
+        <option class="dropdown-item" value="Day6/practice/fetch_api.html">Web Fetch API</option>
+         <option class="dropdown-item" value="Day6/practice/geoLocation_api.html">Geo Location API</option>
+
+
+    <option class="dropdown-item" value="Day6/assignments/assignment.html">Assignments</option>
+
+    <option class="dropdown-item" value="Day6/additional/apis.html">APIS Practice</option>
+
+    <option class="dropdown-item" value="Day6/additional/web_workers_api.html">Web Worker Api</option>
+
+    <option class="dropdown-item" value="Day6/additional/cookies.html">Cookies</option>
+
+
+  </select>
+</div>
+</div>
+</ol>
+</div>
+<div id="container" class="container mt-5">
+
+</div>
+<script>
+    $('select').click(function(){
+        console.log("hii");
+        console.log($(this).val());
+        $("#container").load($(this).val());
+
+    });
+</script>
+</html>

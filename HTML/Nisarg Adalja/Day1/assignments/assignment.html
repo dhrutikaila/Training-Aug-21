@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        nav {
+            background-color: lightgray;
+            display: flex;
+            flex-direction: row;
+            height: 15vh !important;
+            width: 100vw !important;
+        }
+
+        #logo {
+            display: flex;
+            justify-content: center;
+
+        }
+
+        div img {}
+
+        div {
+            font-size: 30px;
+            margin-left: auto;
+            margin-top: 5vh !important;
+            margin-bottom: 0px;
+        }
+
+        div a {
+            text-decoration: none;
+            color: grey;
+            /* margin-left:3vw !important; */
+            margin-right: 3vw !important;
+            /* justify-content:center;*/
+        }
+
+        article {
+
+            height: 85vh;
+            width: 79vw;
+            float: left;
+            background-image: url("../../../HTML/Nisarg Adalja/assests/images/html5.jpg");
+            background-repeat: no-repeat;
+            background-size: cover;
+        }
+
+        h1 {
+            margin-top: 40px !important;
+        }
+        li{
+            font-size:30px;
+        }
+        aside {
+            display: flex;
+            flex-direction: column;
+            float: left;
+            height: 85vh;
+            width: 18vw;
+            background-color: orange;
+        }
+
+        /* Dropdown Button */
+
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+        }
+
+        .navbar {
+            overflow: hidden;
+            display: flex;
+            flex-direction: column;
+            background-color: #333;
+        }
+
+        .navbar a {
+            float: left;
+            font-size: 20px;
+            color: white;
+            text-align: left;
+            padding: 14px 16px;
+            text-decoration: none;
+        }
+
+        .dropdown {
+            float: left;
+            overflow: hidden;
+        }
+
+        .dropdown .dropbtn {
+            font-size: 20px;
+            border: none;
+            outline: none;
+            color: white;
+            padding: 0px 0px;
+            background-color: inherit;
+            font-family: inherit;
+            margin: 0;
+        }
+
+        .navbar a:hover,
+        .dropdown:hover .dropbtn {
+            background-color: red;
+        }
+
+        .dropdown-content {
+            display: none;
+            position: absolute;
+            background-color: #f9f9f9;
+            min-width: 160px;
+            box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+            z-index: 1;
+        }
+
+        .dropdown-content a {
+            float: none;
+            color: black;
+            padding: 0px 0px;
+            text-decoration: none;
+            display: block;
+            text-align: left;
+        }
+
+        .dropdown-content a:hover {
+            background-color: #ddd;
+        }
+
+        .dropdown:hover .dropdown-content {
+            display: block;
+        }
+        .dropdown-content a:active {
+            background-color: #ddd;
+        }
+
+        .dropdown:active .dropdown-content {
+            display: block;
+        }
+    </style>
+</head>
+<body>
+      <nav>
+        <div id="logo">
+            <img src="https://tutorials.rxtrainees.radixweb.net/wp-content/uploads/2020/12/logo_2500X1875.jpg"
+                height="50px" width="200px">
+        </div>
+        <div>
+            <a href="../../../../Modules/Project/Nisarg Adalja/nisargProject.html">HOME</a>
+            <a href="../../../../Modules/Project/Nisarg Adalja/htmlfile.html">HTML</a>
+            <a href="../../../../Modules/Project/Nisarg Adalja/cssfile.html">CSS</a>
+            <a href="../../../../Modules/Project/Nisarg Adalja/Bootstrap.html">Bootstrap</a>
+            <a href="../../../../Modules/Project/Nisarg Adalja/javascript.html">JAVASCRIPT</a>
+            <a href="../../../../Modules/Project/Nisarg Adalja/jquery.html">JQUERY</a>
+            <a href="../../../../Modules/Project/Nisarg Adalja/project.html">PORJECT</a>
+        </div>
+    </nav>
+    <aside>
+     <ol>
+            <li>Day-1
+                <ul>
+                    <div class="dropdown">
+                        <button class="dropbtn">Additional Exercise</button>
+                        <div class="dropdown-content">
+                            <a href="../additional/additional.html">additional.html</a>
+                        </div>
+                    </div>
+                    <div class="dropdown">
+                        <button class="dropbtn">Assignment Exercise</button>
+                        <div class="dropdown-content">
+                            <a href="assignment.html">assignment.html</a>
+                        </div>
+                    </div>
+                    <div class="dropdown">
+                        <button class="dropbtn">Practice Exercise</button>
+                        <div class="dropdown-content">
+                            <a href="../practice/practice.html">practice.html</a>
+                             <a href="../practice/practice1.html">practice1.html</a>
+                              <a href="../practice/login.html">login.html</a>
+                        </div>
+                    </div>
+
+                </ul>
+            </li>
+             <li>Day-2
+                <ul>
+                    <div class="dropdown">
+                        <button class="dropbtn">Additional Exercise</button>
+                        <div class="dropdown-content">
+                            <a href="../../Day2/additional/additional.html">additional.html</a>
+                        </div>
+                    </div>
+                    <div class="dropdown">
+                        <button class="dropbtn">Assignment Exercise</button>
+                        <div class="dropdown-content">
+                            <a href="../../Day2/assignment/assignment.html">assignment.html</a>
+                        </div>
+                    </div>
+                    <div class="dropdown">
+                        <button class="dropbtn">Practice Exercise</button>
+                        <div class="dropdown-content">
+                            <a href="../../Day2/practice/practice.html">practice.html</a>
+                        </div>
+                    </div>
+
+                </ul>
+            </li>
+
+        </ol>
+      
+    </aside>
+    <article>
+    <form method="post" action="">
+        <label for="name">Employee Name : </label><br>
+        <input type="text" id="name" pattern="[a-zA-Z]{3-20}" required><br>
+        <label for="age">Age : </label><br>
+        <input type="age" min="10" max="60" id="age" required /><br>
+        <label for="gender">Gender : </label><br>
+        <input type="radio" id="gender" name="gender" value="male" checked="True">male<br>
+        <input type="radio" id="gender" name="gender" value="female">female<br>
+        <label for="designation">Designation : </label><br>
+        <input type="text" id="designation" required><br>
+        <label for="salary">Salary : </label><br>
+        <input type="number" id="salary" min="5000"  max="1000000" required><br>
+        <label for="location">Location: </label><br>
+        <select id="location" name="Location">
+            <option value="Ahmedabad" selected>Ahmedabad</option>
+            <option value="Gandhinagar">Gandhinagar</option>
+            <option vlue="Bhavnagar">Bhavnagar</option>
+            <option value="Surat">Surat</option>
+        </select>
+       <br>
+        <label for="email">email : </label><br>
+        <input type="email" id="email" required><br>
+        <!--  <input type="email" id="email" required multiple><br> --><!--In this we can pass multiple email seperated by commas -->
+        <label for="joiningDate">Joining Date : </label><br>
+        <input type="date" id="joiningDate" required><br>
+        <label for="number">Contact Number : </label><br>
+        <input type="number" id="number" pattern="[6-9]{2}[0-9]{8}" required><br>
+        <!--<input type="tel" id="number" pattern="[6-9]{2}[0-9]{8}" required>-->
+        <br>
+        <input type="submit" value="submit">       
+    </form>
+    </article>
+</body>
+</html>

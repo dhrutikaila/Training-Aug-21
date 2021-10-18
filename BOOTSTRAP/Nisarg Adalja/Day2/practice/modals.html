@@ -1,0 +1,699 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-F3w7mX95PdgyTmZZMECAngseQB83DfGTowi0iMjiWaeVhAn4FJkqJByhZMI3AhiU" crossorigin="anonymous">
+ <style>
+        :root{
+            --item:1;
+        }
+        .dropdown-item{
+            display:inline;
+        }
+         nav{
+            display:inline;
+            justify-content:center;
+            width:100vw;
+        }
+        .navbar{
+            width:100vw !important;
+        }
+        .dropdown{
+            margin-left:5vw;
+        }
+        li a{
+            display:inline;
+        }
+
+        ol {
+    counter-reset: item;
+    padding-left: 10px;
+}
+li {
+    display: block
+}
+li:before {
+    content: counters(item, ".") " ";
+    counter-increment: item
+}
+        .btn{
+            display:inline-block;
+           /* width:18vw !important;*/
+        }
+          @media only screen and (min-width:300px) and (max-width:600px){
+              .btn{
+            display:inline-block;
+            width:85vw !important;
+            margin-left:1vw !important;
+        }
+        }
+        @media only screen and (min-width:600px) and (max-width:992px){
+              .btn{
+            display:inline-block;
+            width:50vw !important;
+        }
+        }
+        @media  only screen and (min-width:992px) and (min-width:1200px){
+    
+          .dropdown{
+              width:21vw !important;
+            margin-left:3vw !important;
+        }
+        #navbarSupportedContent{
+            width:100vw !important;
+        }
+        
+        .btn{
+            display:inline-block;
+            width:21vw !important;
+        }
+        
+      }
+       
+    </style>
+</head>
+
+<body>
+
+    <ol class="navbar navbar-expand-lg navbar-light bg-dark nav" start="2">
+        <div class="container-fluid bg-dark">
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+                aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div id="navbarSupportedContent" class="ms-0 navbar-collapse collapse">
+
+                <div class="dropdown">
+                    <li class="btn btn-primary btn-lg bn dropdown-toggle" type="button" id="dropdownMenuButton1"
+                        data-bs-toggle="dropdown" aria-expanded="false">Utilites</li>
+                    <ol class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
+                        <li><a class="dropdown-item" href="../../Day1/practice/Utilities/BasicTypography.html">Basic
+                                Typography</a></li>
+                        <li><a class="dropdown-item"
+                                href="../../Day1/practice/Utilities/text_alignment_display.html">Text Alignment &
+                                Display</a></li>
+                        <li><a class="dropdown-item"
+                                href="../../Day1/practice/Utilities/floats_positions.html">Floats_positions</a></li>
+                        <li><a class="dropdown-item" href="../../Day1/practice/Utilities/colors_background.html">Colors
+                                & Background</a></li>
+                        <li><a class="dropdown-item" href="../../Day1/practice/Utilities/spacing.html">Spacing</a></li>
+                        <li><a class="dropdown-item" href="../../Day1/practice/Utilities/sizing.html">Sizing</a></li>
+                        <li><a class="dropdown-item"
+                                href="../../Day1/practice/Utilities/breakpoints.html">BreakPoints</a></li>
+
+                    </ol>
+                </div>
+                <div class="dropdown">
+                    <li class="btn btn-success bn btn-lg dropdown-toggle" type="button" id="dropdownMenuButton2"
+                        data-bs-toggle="dropdown" aria-expanded="false">CSS Components</li>
+                    <ol class="dropdown-menu" aria-labelledby="dropdownMenuButton2">
+
+                        <li><a class="dropdown-item" href="../../Day1/practice/Components/Buttons.html">Buttons</a></li>
+
+                        <li><a class="dropdown-item" href="../../Day1/practice/Components/navbar.html">Navbar</a></li>
+
+                        <li><a class="dropdown-item" href="../../Day1/practice/Components/ListGroup.html">ListGroup &
+                                Bedges</a></li>
+
+                        <li><a class="dropdown-item" href="../../Day1/practice/Components/Forms.html">Form</a></li>
+
+                        <li><a class="dropdown-item" href="../../Day1/practice/Components/InputGroups.html">Input
+                                Groups</a></li>
+
+                        <li><a class="dropdown-item" href="../../Day1/practice/Components/alerts_progress.html">Alerts &
+                                Progress</a></li>
+
+                        <li><a class="dropdown-item" href="../../Day1/practice/Components/tables_pagination.html">Tables
+                                & Pagination</a></li>
+
+                        <li><a class="dropdown-item" href="../../Day1/practice/Components/card.html">Cards</a></li>
+
+                        <li><a class="dropdown-item" href="../../Day1/practice/Components/MediaObjects.html">Media
+                                Objects</a></li>
+
+                        <li><a class="dropdown-item" href="../../Day1/practice/Components/InputGroups.html">Input
+                                Groups</a></li>
+
+                    </ol>
+                </div>
+
+                <div class="dropdown">
+                    <li class="btn btn-warning bn btn-lg dropdown-toggle" type="button" id="dropdownMenuButton3"
+                        data-bs-toggle="dropdown" aria-expanded="false">Grid & Flexbox</li>
+                    <ol class="dropdown-menu" aria-labelledby="dropdownMenuButton3">
+                        <li><a class="dropdown-item" href="grid.html">Grid System</a></li>
+                        <li><a class="dropdown-item" href="grid-alignment.html">Grid Alignment</a></li>
+                        <li><a class="dropdown-item" href="flexbox.html">Flexbox</a></li>
+                        <li><a class="dropdown-item" href="automargins_wrapping.html">Auto Margins & wrap</a></li>
+                    </ol>
+                </div>
+
+                <div class="dropdown">
+                    <li class="btn btn-danger bn btn-lg dropdown-toggle" type="button" id="dropdownMenuButton4"
+                        data-bs-toggle="dropdown" aria-expanded="false">
+                        JavaScript Widgets</li>
+                    <ol class="dropdown-menu" aria-labelledby="dropdownMenuButton4">
+                        <li><a class="dropdown-item" href="carousel.html">Carousel</a></li>
+                        <li><a class="dropdown-item" href="collapse.html">Collapse</a></li>
+                        <li><a class="dropdown-item" href="tooltips.html">Tooltips</a></li>
+                        <li><a class="dropdown-item" href="popovers.html">Popovers</a></li>
+                        <li><a class="dropdown-item" href="modals.html">Modals</a></li>
+                    </ol>
+                </div>
+            </div>
+    </ol>
+
+    <div class="container mt-5">
+        <!-- Modal
+Use Bootstrap’s JavaScript modal plugin to add dialogs to your site for lightboxes, user notifications, or completely custom content. -->
+        <!-- Button trigger modal -->
+        <!-- Live demo
+Toggle a working modal demo by clicking the button below. It will slide down and fade in from the top of the page. -->
+
+        <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">
+            Launch demo modal
+        </button>
+
+        <!-- Modal -->
+        <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="exampleModalLabel">Modal title</h5>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body">
+                        ...
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                        <button type="button" class="btn btn-primary">Save changes</button>
+                    </div>
+                </div>
+            </div>
+        </div><br><br>
+        <!-- Static backdrop
+When backdrop is set to static, the modal will not close when clicking outside it. Click the button below to try it.
+ -->
+
+        <!-- Button trigger modal -->
+        <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#staticBackdrop1">
+            Launch static backdrop modal
+        </button>
+
+        <!-- Modal -->
+        <div class="modal fade" id="staticBackdrop1" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1"
+            aria-labelledby="staticBackdropLabel" aria-hidden="true">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="staticBackdropLabel">Modal title</h5>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body">
+                        ...
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                        <button type="button" class="btn btn-primary">Understood</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+        <!-- Button trigger modal -->
+        <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#staticBackdrop2">
+            Launch static backdrop modal
+        </button>
+
+        <!-- Modal -->
+        <div class="modal fade" id="staticBackdrop2" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1"
+            aria-labelledby="staticBackdropLabel" aria-hidden="true">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="staticBackdropLabel">Modal title</h5>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body">
+                        ...
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                        <button type="button" class="btn btn-primary">Understood</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <br><br>
+        <!-- Scrollable modal -->
+        <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#staticBackdrop3">
+            Launch static backdrop modal
+        </button>
+
+        <!-- Modal -->
+        <div class="modal fade" id="staticBackdrop3" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1"
+            aria-labelledby="staticBackdropLabel" aria-hidden="true">
+
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="staticBackdropLabel">Modal title</h5>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body">
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Est vero molestiae dolore
+                            perferendis
+                            modi accusamus ducimus voluptatem debitis magnam, aliquam aperiam obcaecati enim, ad esse!
+                            Ab
+                            consequatur sed facilis porro.</p>
+                        <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Dolore aspernatur minima quis
+                            dolorum
+                            placeat voluptates est veritatis officia repudiandae! Hic aut dolore sequi, voluptates ut
+                            sed
+                            molestiae esse minima fugit Lorem ipsum dolor sit, amet consectetur adipisicing elit.
+                            Excepturi
+                            explicabo, animi consequuntur, voluptates repudiandae voluptate dolore corrupti minima eaque
+                            officiis sunt cupiditate maiores earum, cumque similique autem inventore repellat provident.
+                        </p>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Est vero molestiae dolore
+                            perferendis
+                            modi accusamus ducimus voluptatem debitis magnam, aliquam aperiam obcaecati enim, ad esse!
+                            Ab
+                            consequatur sed facilis porro.</p>
+                        <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Dolore aspernatur minima quis
+                            dolorum
+                            placeat voluptates est veritatis officia repudiandae! Hic aut dolore sequi, voluptates ut
+                            sed
+                            molestiae esse minima fugit Lorem ipsum dolor sit, amet consectetur adipisicing elit.
+                            Excepturi
+                            explicabo, animi consequuntur, voluptates repudiandae voluptate dolore corrupti minima eaque
+                            officiis sunt cupiditate maiores earum, cumque similique autem inventore repellat provident.
+                        </p>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Est vero molestiae dolore
+                            perferendis
+                            modi accusamus ducimus voluptatem debitis magnam, aliquam aperiam obcaecati enim, ad esse!
+                            Ab
+                            consequatur sed facilis porro.</p>
+                        <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Dolore aspernatur minima quis
+                            dolorum
+                            placeat voluptates est veritatis officia repudiandae! Hic aut dolore sequi, voluptates ut
+                            sed
+                            molestiae esse minima fugit Lorem ipsum dolor sit, amet consectetur adipisicing elit.
+                            Excepturi
+                            explicabo, animi consequuntur, voluptates repudiandae voluptate dolore corrupti minima eaque
+                            officiis sunt cupiditate maiores earum, cumque similique autem inventore repellat provident.
+                        </p>
+
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                        <button type="button" class="btn btn-primary">Understood</button>
+                    </div>
+                </div>
+            </div>
+        </div><br><br>
+        <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#staticBackdrop4">
+            Launch static backdrop modal
+        </button>
+
+        <!-- Modal -->
+        <div class="modal fade" id="staticBackdrop4" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1"
+            aria-labelledby="staticBackdropLabel" aria-hidden="true">
+
+            <!-- Vertically centered modal -->
+            <div class="modal-dialog modal-dialog-centered">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="staticBackdropLabel">Modal title</h5>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body">
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Est vero molestiae dolore
+                            perferendis
+                            modi accusamus ducimus voluptatem debitis magnam, aliquam aperiam obcaecati enim, ad esse!
+                            Ab
+                            consequatur sed facilis porro.</p>
+                        <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Dolore aspernatur minima quis
+                            dolorum
+                            placeat voluptates est veritatis officia repudiandae! Hic aut dolore sequi, voluptates ut
+                            sed
+                            molestiae esse minima fugit Lorem ipsum dolor sit, amet consectetur adipisicing elit.
+                            Excepturi
+                            explicabo, animi consequuntur, voluptates repudiandae voluptate dolore corrupti minima eaque
+                            officiis sunt cupiditate maiores earum, cumque similique autem inventore repellat provident.
+                        </p>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Est vero molestiae dolore
+                            perferendis
+                            modi accusamus ducimus voluptatem debitis magnam, aliquam aperiam obcaecati enim, ad esse!
+                            Ab
+                            consequatur sed facilis porro.</p>
+                        <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Dolore aspernatur minima quis
+                            dolorum
+                            placeat voluptates est veritatis officia repudiandae! Hic aut dolore sequi, voluptates ut
+                            sed
+                            molestiae esse minima fugit Lorem ipsum dolor sit, amet consectetur adipisicing elit.
+                            Excepturi
+                            explicabo, animi consequuntur, voluptates repudiandae voluptate dolore corrupti minima eaque
+                            officiis sunt cupiditate maiores earum, cumque similique autem inventore repellat provident.
+                        </p>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Est vero molestiae dolore
+                            perferendis
+                            modi accusamus ducimus voluptatem debitis magnam, aliquam aperiam obcaecati enim, ad esse!
+                            Ab
+                            consequatur sed facilis porro.</p>
+                        <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Dolore aspernatur minima quis
+                            dolorum
+                            placeat voluptates est veritatis officia repudiandae! Hic aut dolore sequi, voluptates ut
+                            sed
+                            molestiae esse minima fugit Lorem ipsum dolor sit, amet consectetur adipisicing elit.
+                            Excepturi
+                            explicabo, animi consequuntur, voluptates repudiandae voluptate dolore corrupti minima eaque
+                            officiis sunt cupiditate maiores earum, cumque similique autem inventore repellat provident.
+                        </p>
+
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                        <button type="button" class="btn btn-primary">Understood</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Vertically centered scrollable modal -->
+        <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#staticBackdrop5">
+            Launch static backdrop modal
+        </button>
+
+        <!-- Modal -->
+        <div class="modal fade" id="staticBackdrop5" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1"
+            aria-labelledby="staticBackdropLabel" aria-hidden="true">
+
+            <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="staticBackdropLabel">Modal title</h5>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body">
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Est vero molestiae dolore
+                            perferendis
+                            modi accusamus ducimus voluptatem debitis magnam, aliquam aperiam obcaecati enim, ad esse!
+                            Ab
+                            consequatur sed facilis porro.</p>
+                        <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Dolore aspernatur minima quis
+                            dolorum
+                            placeat voluptates est veritatis officia repudiandae! Hic aut dolore sequi, voluptates ut
+                            sed
+                            molestiae esse minima fugit Lorem ipsum dolor sit, amet consectetur adipisicing elit.
+                            Excepturi
+                            explicabo, animi consequuntur, voluptates repudiandae voluptate dolore corrupti minima eaque
+                            officiis sunt cupiditate maiores earum, cumque similique autem inventore repellat provident.
+                        </p>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Est vero molestiae dolore
+                            perferendis
+                            modi accusamus ducimus voluptatem debitis magnam, aliquam aperiam obcaecati enim, ad esse!
+                            Ab
+                            consequatur sed facilis porro.</p>
+                        <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Dolore aspernatur minima quis
+                            dolorum
+                            placeat voluptates est veritatis officia repudiandae! Hic aut dolore sequi, voluptates ut
+                            sed
+                            molestiae esse minima fugit Lorem ipsum dolor sit, amet consectetur adipisicing elit.
+                            Excepturi
+                            explicabo, animi consequuntur, voluptates repudiandae voluptate dolore corrupti minima eaque
+                            officiis sunt cupiditate maiores earum, cumque similique autem inventore repellat provident.
+                        </p>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Est vero molestiae dolore
+                            perferendis
+                            modi accusamus ducimus voluptatem debitis magnam, aliquam aperiam obcaecati enim, ad esse!
+                            Ab
+                            consequatur sed facilis porro.</p>
+                        <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Dolore aspernatur minima quis
+                            dolorum
+                            placeat voluptates est veritatis officia repudiandae! Hic aut dolore sequi, voluptates ut
+                            sed
+                            molestiae esse minima fugit Lorem ipsum dolor sit, amet consectetur adipisicing elit.
+                            Excepturi
+                            explicabo, animi consequuntur, voluptates repudiandae voluptate dolore corrupti minima eaque
+                            officiis sunt cupiditate maiores earum, cumque similique autem inventore repellat provident.
+                        </p>
+
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                        <button type="button" class="btn btn-primary">Understood</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <br><br>
+        <h1>Tooltips and popovers
+            Tooltips and popovers can be placed within modals as needed. When modals are closed, any tooltips and
+            popovers
+            within are also automatically dismissed.</h1>
+        <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#staticBackdrop6">
+            Launch static backdrop modal
+        </button>
+
+        <!-- Modal -->
+        <div class="modal fade" id="staticBackdrop6" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1"
+            aria-labelledby="staticBackdropLabel" aria-hidden="true">
+
+            <div class="modal-dialog">
+                <div class="modal-dialog">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h5 class="modal-title" id="staticBackdropLabel">Modal title</h5>
+                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                        </div>
+
+                        <div class="modal-body">
+                            <h5>Popover in a modal</h5>
+                            <p>This <a href="#" role="button" class="btn btn-secondary popover-test"
+                                    title="Popover title"
+                                    data-bs-content="Popover body content is set in this attribute.">button</a> triggers
+                                a
+                                popover on click.</p>
+                            <hr>
+                            <h5>Tooltips in a modal</h5>
+                            <p><a href="#" class="tooltip-test" title="Tooltip">This link</a> and <a href="#"
+                                    class="tooltip-test" title="Tooltip">that link</a> have tooltips on hover.</p>
+                        </div>
+
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                            <button type="button" class="btn btn-primary">Understood</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div><br><br>
+
+        <br><br>
+        <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#staticBackdrop7">
+            Launch static backdrop modal
+        </button>
+
+        <!-- Modal -->
+        <div class="modal fade" id="staticBackdrop7" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1"
+            aria-labelledby="staticBackdropLabel" aria-hidden="true">
+
+
+            <div class="modal-dialog">
+                <div class="modal-dialog">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h5 class="modal-title" id="staticBackdropLabel">Modal title</h5>
+                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                        </div>
+
+                        <div class="modal-body">
+                            <div class="container-fluid">
+                                <div class="row">
+                                    <div class="col-md-4">.col-md-4</div>
+                                    <div class="col-md-4 ms-auto">.col-md-4 .ms-auto</div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-md-3 ms-auto">.col-md-3 .ms-auto</div>
+                                    <div class="col-md-2 ms-auto">.col-md-2 .ms-auto</div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-md-6 ms-auto">.col-md-6 .ms-auto</div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-sm-9">
+                                        Level 1: .col-sm-9
+                                        <div class="row">
+                                            <div class="col-8 col-sm-6">
+                                                Level 2: .col-8 .col-sm-6
+                                            </div>
+                                            <div class="col-4 col-sm-6">
+                                                Level 2: .col-4 .col-sm-6
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                            <button type="button" class="btn btn-primary">Understood</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div><br><br>
+
+        <!-- Varying modal content
+Have a bunch of buttons that all trigger the same modal with slightly different contents? Use event.relatedTarget and HTML data-bs-* attributes to vary the contents of the modal depending on which button was clicked.
+
+Below is a live demo followed by example HTML and JavaScript. For more information, read the modal events docs for details on relatedTarget. -->
+
+        <h1>Varing Modal Content</h1>
+        <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal8"
+            data-bs-whatever="@mdo">Open modal for @mdo</button>
+        <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal8"
+            data-bs-whatever="@fat">Open modal for @fat</button>
+        <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal8"
+            data-bs-whatever="@getbootstrap">Open modal for @getbootstrap</button>
+
+        <div class="modal fade" id="exampleModal8" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="exampleModalLabel">New message</h5>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body">
+                        <form>
+                            <div class="mb-3">
+                                <label for="recipient-name" class="col-form-label">Recipient:</label>
+                                <input type="text" class="form-control" id="recipient-name">
+                            </div>
+                            <div class="mb-3">
+                                <label for="message-text" class="col-form-label">Message:</label>
+                                <textarea class="form-control" id="message-text"></textarea>
+                            </div>
+                        </form>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                        <button type="button" class="btn btn-primary">Send message</button>
+                    </div>
+                </div>
+            </div>
+        </div><br><br>
+
+        <!-- Toggle between modals
+Toggle between multiple modals with some clever placement of the data-bs-target and data-bs-toggle attributes. For example, you could toggle a password reset modal from within an already open sign in modal. Please note multiple modals cannot be open at the same time—this method simply toggles between two separate modals. -->
+        <h1>Toggle between modals</h1><br><br>
+        <div class="modal fade" id="exampleModalToggle" aria-hidden="true" aria-labelledby="exampleModalToggleLabel"
+            tabindex="-1">
+            <div class="modal-dialog modal-dialog-centered">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="exampleModalToggleLabel">Modal 1</h5>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body">
+                        Show a second modal and hide this one with the button below.
+                    </div>
+                    <div class="modal-footer">
+                        <button class="btn btn-primary" data-bs-target="#exampleModalToggle2" data-bs-toggle="modal"
+                            data-bs-dismiss="modal">Open second modal</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="modal fade" id="exampleModalToggle2" aria-hidden="true" aria-labelledby="exampleModalToggleLabel2"
+            tabindex="-1">
+            <div class="modal-dialog modal-dialog-centered">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="exampleModalToggleLabel2">Modal 2</h5>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body">
+                        Hide this modal and show the first with the button below.
+                    </div>
+                    <div class="modal-footer">
+                        <button class="btn btn-primary" data-bs-target="#exampleModalToggle" data-bs-toggle="modal">Back
+                            to first</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <a class="btn btn-primary" data-bs-toggle="modal" href="#exampleModalToggle" role="button">Open first modal</a>
+        <br><br>
+        <pre>
+    <!-- Optional sizes
+Modals have three optional sizes, available via modifier classes to be placed on a .modal-dialog. These sizes kick in at certain breakpoints to avoid horizontal scrollbars on narrower viewports.
+
+Size	Class	Modal max-width
+Small	.modal-sm	300px
+Default	None	500px
+Large	.modal-lg	800px
+Extra large	.modal-xl	1140px
+Our default modal without modifier class constitutes the “medium” size modal. -->
+</pre>
+        <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#staticBackdrop11">
+            Launch static backdrop modal
+        </button>
+        <div class="modal fade" id="staticBackdrop11" aria-hidden="true" aria-labelledby="exampleModalToggleLabel"
+            tabindex="-1">
+
+            <div class="modal-dialog modal-xl">...</div>
+        </div>
+
+        <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#staticBackdrop12">
+            Launch static backdrop modal
+        </button>
+        <div class="modal fade" id="staticBackdrop12" aria-hidden="true" aria-labelledby="exampleModalToggleLabel"
+            tabindex="-1">
+
+            <div class="modal-dialog modal-lg">...</div>
+        </div>
+        <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#staticBackdrop13">
+            Launch static backdrop modal
+        </button>
+        <div class="modal fade" id="staticBackdrop13" aria-hidden="true" aria-labelledby="exampleModalToggleLabel"
+            tabindex="-1">
+
+            <div class="modal-dialog modal-sm">...</div>
+        </div>
+        <pre>
+<!-- Fullscreen Modal -->
+<!-- Another override is the option to pop up a modal that covers the user viewport, available via modifier classes that are placed on a .modal-dialog. -->
+
+<!-- Class	Availability -->
+<!-- .modal-fullscreen	Always -->
+<!-- .modal-fullscreen-sm-down	Below 576px -->
+<!-- .modal-fullscreen-md-down	Below 768px -->
+<!-- .modal-fullscreen-lg-down	Below 992px -->
+<!-- .modal-fullscreen-xl-down	Below 1200px -->
+<!-- .modal-fullscreen-xxl-down	Below 1400px -->
+</pre>
+
+
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-/bQdsTh/da6pkI1MST/rWKFNjaCP5gBSY4sEBT38Q/9RBh9AH40zEOg7Hlq2THRZ" crossorigin="anonymous">
+    </script>
+</body>
+
+
+
+
+</html>

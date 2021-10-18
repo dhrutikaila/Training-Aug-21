@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>async_await</title>
+</head>
+<body>
+    <script>
+        async function f() {
+        return 1;
+        }   
+
+        async function f() {
+          return Promise.resolve(1);
+    }
+
+    f().then(alert); 
+
+    async function f() {
+
+  var promise = new Promise((resolve, reject) => {
+    setTimeout(() => resolve("done!"), 1000)
+  });
+
+  var result = await promise; // wait until the promise resolves (*)
+
+  alert(result); // "done!"
+}
+
+f();
+
+async function showAvatar() {
+
+  // read our JSON
+  
+  // read github user
+  let githubResponse = await fetch(`https://api.github.com/users/nisarg291`);
+  let githubUser = await githubResponse.json();
+
+  // show the avatar
+  let img = document.createElement('img');
+  img.src = githubUser.avatar_url;
+  img.className = "promise-avatar-example";
+  document.body.append(img);
+
+  // wait 3 seconds
+  await new Promise((resolve, reject) => setTimeout(resolve, 5000));
+
+  img.remove();
+
+  return githubUser;
+}
+
+class Thenable {
+  constructor(num) {
+    this.num = num;
+  }
+  then(resolve, reject) {
+    alert(resolve);
+    // resolve with this.num*2 after 1000ms
+    setTimeout(() => resolve(this.num * 2), 1000); // (*)
+  }
+}
+
+async function f() {
+  // waits for 1 second, then result becomes 2
+  let result = await new Thenable(5);
+  alert(result);
+}
+
+f();
+
+showAvatar();
+    </script>
+</body>
+</html>

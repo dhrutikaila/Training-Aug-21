@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-F3w7mX95PdgyTmZZMECAngseQB83DfGTowi0iMjiWaeVhAn4FJkqJByhZMI3AhiU" crossorigin="anonymous">
+
+</head>
+
+<body>
+    <div class="container mt5">
+        <h1>University Of Mumbai</h1>
+        <div id="time"></div>
+        <div class="card mt-5" id="card">
+            <div class="card-header" id="ch"></div>
+            <div class="card-body" id="question"></div>
+            <div id="submitbutton" class="card-footer"></div>
+        </div>
+
+        
+        <div class="" id="result"></div>
+    </div>
+    <script>
+        /*
+         University of Mumbai needs to set an online exam for their students. For that they need to set a timer for three hours. After 3 hours exams should be finished.
+
+Note: Use promises and callbacks
+        */
+        var result = document.getElementById("result");
+        var time = document.getElementById("time");
+
+        function sleep(ms) {
+            return new Promise(resolve => setTimeout(resolve, ms));
+        }
+
+        /*  async function examstart(){
+              console.log("exam start");
+              //for(var count=0;count<40;count++){
+              for(var count=0;count<3600*6;count++){
+              var dt=new Date();
+              var hour=dt.getHours();
+              var minutes=dt.getMinutes();
+              var seconds=dt.getSeconds();
+              result.innerHTML="Exam Started";
+              time.innerHTML=hour+':'+minutes+':'+seconds+' ';
+              count=count+1;
+              await sleep(1000);
+              }
+          }
+
+          function examend(){
+              console.log("exam end");
+              result.innerHTML="Exam Ended";
+          } 
+          async function call(){
+          examstart();
+          await sleep(3600*3*1000);
+          //await sleep(20000);//for 20 second it shows exam Ended after 20 second
+          //sleep((3600*3*1000)); //for 3 hours 3600*3*1000
+          examend();*/
+        var hour = 0;
+        var min = 0;
+        var sec = 0;
+      
+        
+       
+        var btns = document.getElementById("submitbutton");
+        var ques = document.getElementById("question");
+        var number = 0;
+        var correct = 0;
+        var obj;
+        var finish=false;
+    function submit(){
+        finish=true;
+        document.getElementById("card").style.display="none";
+        result.innerHTML='Your exam submited successfully';
+
+    }
+        function questions(count) {
+            console.log("hii");
+            /*  const fs = require('fs');
+              let rawdata = fs.readFileSync('questions.json');
+              let question = JSON.parse(rawdata);
+              console.log(question);*/
+             fetch('http://127.0.0.1:5500/JavaScript/Nisarg%20Adalja/Day4/assignments/questions.json')
+	            .then(response => response.json())
+	            .then(function(data)
+                {
+                    console.log(data);
+                    var obj=data;
+                     
+            console.log(obj);
+            if (count==9){
+                console.log();
+                 ques.innerHTML = obj.questions[count].question +
+                    `<br>1. <div class="form-check"><input type="radio" class="form-check-input col-2" name="option" id="option">&nbsp;<label class="form-check-label col-8">` + obj.questions[count]
+                    .answerChoices[0] + `</label></div><br> 2. <div class="form-check"><input type="radio" class="form-check-input" name="option" id="option">&nbsp;<label class="form-check-label">` + obj
+                    .questions[count].answerChoices[1] +
+                    `</label></div><br>3. <div class="form-check"><input type="radio" class="form-check-input" name="option" id="option">&nbsp;<label class="form-check-label">` + obj.questions[count]
+                    .answerChoices[2] + `</label></div><br>4. <div class="form-check"><input type="radio" class="form-check-input" name="option" id="option">&nbsp;<label class="form-check-label">` + obj
+                    .questions[count].answerChoices[3]+`</label></div>`;
+                ch.innerHTML = "question : " + (count + 1);
+                btns.innerHTML = `<button class="btn btn-lg btn-success" onclick="submit();">submit</button>`;
+            }
+            else{
+                console.log(obj.questions[count].question);
+                ques.innerHTML = obj.questions[count].question[0] +
+                    `<br>1. <input type="radio" class="form-check-input col-2" name="option" id="option">&nbsp;<label class="form-check-label col-8">` + obj.questions[count]
+                    .answerChoices[0] + `</label><br>2. <input type="radio" class="form-check-input" name="option" id="option">&nbsp;<label class="form-check-label">` + obj
+                    .questions[count].answerChoices[1] +
+                    `</label><br>3. <input type="radio" class="form-check-input" name="option" id="option">&nbsp;<label class="form-check-label">` + obj.questions[count]
+                    .answerChoices[2] + `</label><br>4. <input type="radio" class="form-check-input" name="option" id="option">&nbsp;<label class="form-check-label">` + obj
+                    .questions[count].answerChoices[3]+`</label>`;
+                ch.innerHTML = "question : " + (count + 1);
+                btns.innerHTML = `<button class="btn btn-lg btn-success" onclick="questions(number);">Next</button>`;
+            }
+            number=number+1;
+
+                })
+                .catch(err => console.error(err));
+
+           
+        }
+
+        async function examstart() {
+
+            while (true && finish == false) {
+                if (sec == 0 && min == 0 && hour == 0) {
+                    result.innerHTML = "Exam Started";
+                }
+                if (sec < 60) {
+                    await sleep(1000);
+                    sec = sec + 1;
+                    time.innerHTML = hour + ':' + min + ':' + sec;
+
+                } else {
+                    min = min + 1;
+                    sec = 0;
+                    time.innerHTML = hour + ':' + min + ':' + sec;
+                }
+                if (min > 60) {
+                    hour = hour + 1;
+                    min = 0;
+                    time.innerHTML = hour + ':' + min + ':' + sec;
+                }
+                if (hour == 0 && min == 1 && sec == 0) {
+                    result.innerHTML = "Exam Ended";
+                    document.getElementById("card").style.display="none";
+                    finish=true;
+                    break;
+                }
+
+            }
+        }
+        questions(0);
+        examstart();
+    </script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-/bQdsTh/da6pkI1MST/rWKFNjaCP5gBSY4sEBT38Q/9RBh9AH40zEOg7Hlq2THRZ" crossorigin="anonymous">
+    </script>
+</body>
+
+</html>

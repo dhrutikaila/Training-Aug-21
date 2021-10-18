@@ -1,0 +1,471 @@
+ body{
+      width:100vw !important;
+    }
+    html,body{
+  overflow-x: hidden;
+  overflow-y: auto;}
+    .navbar {
+      width:95vw !important;
+      background: #10847e;
+   
+      /* height:35% !important;*/
+    }
+
+    .search-input {
+      border-radius: 0px !important;
+    }
+    #offerHeading{
+        font-family: Open Sans,sans-serif !important;
+    }
+    .search {
+      background: #f4f7fb;
+      border-bottom-right-radius: 4px !important;
+      border-top-right-radius: 4px !important;
+      opacity: 1;
+
+    }
+
+    .brand {
+      margin-right: 0px !important;
+      margin-left:0px !important;
+    }
+
+    .brand-img {
+      margin-left: 70px !important;
+      width: 150px !important;
+      margin-right: 50px !important;
+    }
+
+    .nav-links {
+      background: #10847e;
+
+
+    }
+
+    .links {
+      text-decoration: none !important;
+      background: #10847e;
+      margin-left: 50px;
+    }
+
+    .dropdown {
+      margin-left: -10%;
+    }
+
+    .button {
+      background: rgba(0, 0, 0, .18);
+    }
+
+    .button-text {
+      font-size: 14px;
+    }
+
+    .rounded-circle {
+      width: 8px !important;
+      height: 8px !important;
+    }
+
+    .carousel-control-prev {
+      margin-left: -90px !important;
+    }
+
+    .carousel-control-next {
+      margin-right: -90px !important;
+    }
+
+    .carousel {
+      width: 100% !important;
+    }
+    .cards .card{
+        min-height:180px;
+    }
+    .card .card-row {
+      background: rgba(53, 194, 169, .24);
+      max-height:110px;
+    }
+    .card-text{
+        font-size:14px !important;
+    }
+    .swiper-slide .card .row{
+        height:100%;
+        width:auto;
+        width:100%;
+        max-height:15vh;
+        min-height:15vh;
+    }
+    .btn-2 {
+      background: #fc8019;
+    }
+
+    .collapse {
+      position: relative !important;
+    }
+    .block{
+      background-color: #a291fa;
+      background-image:url(https://assets.pharmeasy.in/web-assets/dist/f5c40209.svg);
+      display: flex;
+    min-height: 94px;
+    border-radius: 6px;
+    }
+    ._2V9Eq{
+      min-width: 150px;
+    }
+    ._23uAK {
+    max-width: 210px;
+    max-height: 100%;
+}
+    ._27xbr{
+          height: 136px;
+          width:100px;
+    position: absolute;
+    bottom:0px !important;
+    right:5px !important;
+    }
+    .swiper-slide-active{
+      width:20vw !important;
+      height:15vh !important;
+    }
+    .img-link{
+      width:23vw !important;
+    }
+    .safety{
+      width:10vw !important;
+      height:15vh !important;
+      min-height:15vh !important;
+    }
+    #labtest-swiper{
+    /**/
+   
+     background: #d4e2fa;
+    }
+    
+    
+    #pe-swiper-slider{
+     
+      height: 340px !important;
+     background: #d4e2fa !important;
+      
+    }
+    .YjxnR {
+    position: relative;
+    margin-bottom: 60px;
+    padding-top: 60px;
+    width: 100%;
+}
+._3Tn87 {
+    max-width: 1366px;
+}
+.swiper-wrapper {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-transition-property: -webkit-transform;
+    transition-property: -webkit-transform;
+    -o-transition-property: transform;
+    transition-property: transform;
+    transition-property: transform,-webkit-transform;
+    -webkit-box-sizing: content-box;
+    box-sizing: content-box;
+}
+.swiper-container1 .swiper-wrapper {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-transition-property: -webkit-transform;
+    transition-property: -webkit-transform;
+    -o-transition-property: transform;
+    transition-property: transform;
+    transition-property: transform,-webkit-transform;
+    -webkit-box-sizing: content-box;
+    box-sizing: content-box;
+}
+
+._3PTRn {
+    position: relative;
+    min-width: 0;
+}
+._2MupT {
+    width: auto;
+    max-width: 100%;
+}
+    .swiper-card{
+      z-index:100;
+          width: auto;
+         max-width: 100%;
+    }
+    ._2z8Mm {
+    min-width: 299px;
+    width: 299px;
+    min-height: 280px;
+    border-radius: 6px;
+    padding: 20px 0 15px;
+    border: 2px solid #dfe3e6;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    -webkit-transition: all .2s;
+    -o-transition: all .2s;
+    transition: all .2s;
+    position: relative;
+}
+._2jHx3 {
+    margin-left: 0;
+    font-size: 14px;
+    color: #fff;
+    font-weight: 700;
+    position: absolute;
+    top: -2px;
+    right: -2px;
+    padding: 5px 5px 5px 25px;
+    border-top-right-radius: 6px;
+    overflow: hidden;
+    z-index:100;
+}
+.LMEaN{
+  position:absolute;
+  bottom:0px;
+}
+.btn-order{
+  position:relative;
+  bottom:0px;
+  right:-6px;
+  border-top-right-radius:0px;
+  border-bottom-right-radius:0px;
+}
+.btn-order:hover{
+  background:green;
+  color:white;
+}
+._2z8Mm:hover{
+ border:2px solid darkGreen;
+}
+.last-Slider{
+  background:#aee2ff;
+}
+.swiper-brand{
+  width:12vw !important;
+  height:35vh !important;
+}
+.swiper-brand .card-body{
+  width:12vw !important;
+  height:35vh !important;
+}
+.swiper-brand .card-body .card-image{
+  width:12vw !important;
+  height:30vh !important;
+
+}
+ #sliderWrapperOfBrands .swiper-slide-active{
+      width:10vw !important;
+      height:35vh !important;
+    }
+    @media only screen and (min-width:1192px) and (max-width:1290px) {
+      body{
+      width:100vw !important;
+    }
+      .nav1 {
+        width: 95vw !important;
+        padding-left: 0px !important;
+        margin-left: 0px !important;
+      }
+      .swiper-slide-active{
+      width:20vw !important;
+      height:15vh !important;
+    }
+    .img-link{
+      width:23vw !important;
+       height:15vh !important;
+    }
+    .swiper-slide .card .row{
+        height:100%;
+        width:auto;
+        max-height:150px;
+        min-height:150px;
+    }
+    .safety{
+      width:10vw !important;
+      height:15vh !important;
+      min-height:15vh !important;
+    }
+      .navbar {
+      width:95vw !important;
+      background: #10847e;
+   
+      /* height:35% !important;*/
+    }
+      .brand-img {
+        margin-left: 70px !important;
+        width: 150px !important;
+        margin-right: 50px !important;
+      }
+
+      .brand {
+        margin-right: 10px !important;
+      }
+      .card-text{
+        font-size:12px !important;
+    }
+
+    }
+
+    @media only screen and (min-width:992px) and (max-width:1102px) {
+      body{
+      width:100vw !important;
+    }
+     .swiper-slide-active{
+      width:20vw !important;
+      height:15vh !important;
+    }
+    .img-link{
+      width:23vw !important;
+       height:15vh !important;
+    }
+    .safety{
+      width:10vw !important;
+      height:15vh !important;
+      min-height:15vh !important;
+    }
+    .navbar {
+      width:100% !important;
+      background: #10847e;
+   
+      /* height:35% !important;*/
+    }
+    .card-text{
+        font-size:10px !important;
+    }
+    .swiper-slide .card .row{
+        height:100%;
+        width:auto;
+        max-height:180px;
+        min-height:180px;
+    }
+      .nav1 {
+        width: 100% !important;
+        padding-left: 0px !important;
+        margin-left: 0px !important;
+      }
+
+      .brand {
+        margin-right: 20px !important;
+      }
+
+      .brand-img {
+        margin-left: 50px !important;
+        width: 150px !important;
+        margin-right: 50px !important;
+      }
+
+      .links {
+        text-decoration: none !important;
+        background: #10847e;
+        margin-left: 30px;
+      }
+    }
+
+    @media only screen and (max-width:792px) and (imn-width:992px) {
+      .button-text {
+        font-size: 10px;
+      }
+       .swiper-slide-active{
+      width:15vw !important;
+      height:25vh !important;
+    }
+    .card-text{
+        font-size:8px !important;
+    }
+    .img-link{
+      width:23vw !important;
+       height:15vh !important;
+    }
+    .safety{
+      width:10vw !important;
+      height:15vh !important;
+      min-height:15vh !important;
+    }
+
+      .brand {
+        margin-right: 20px !important;
+      }
+
+      .brand-img {
+        margin-left: 50px !important;
+        width: 150px !important;
+        margin-right: 50px !important;
+      }
+
+      .navbar-brand {
+        margin-bottom: 10px !important;
+      }
+
+      .search-input {
+        border-radius: 0px !important;
+        /*width:50% !important;*/
+        /* margin-top: 10px;*/
+      }
+
+      .dropdown {
+        margin-left: -10%;
+        width: 55% !important;
+        padding-left: 5px !important;
+        /* margin-top:10px;*/
+      }
+
+      #get-started-button {
+        margin-left: 10px !important;
+        margin-top: 10px !important;
+      }
+
+      .brand-img {
+        margin-left: 100px !important;
+        width: 150px !important;
+        margin-right: 0px !important;
+        margin-bottom: 10px !important;
+      }
+
+      .nav-links {
+
+      }
+
+      .links {
+        text-decoration: none !important;
+        background: #10847e;
+        margin-left: 10px;
+      }
+    }
+    @media only screen and (max-width:792px){
+      .swiper-slide-active{
+      width:15vw !important;
+      height:10vh !important;
+    }
+    .img-link{
+      width:20vw !important;
+       height:10vh !important;
+    }
+    .card-text{
+        font-size:8px !important;
+    }
+    .card-body{
+        height:100%;
+        min-height:250px;
+    }
+    .safety{
+      width:13vw !important;
+      height:10vh !important;
+      min-height:10vh !important;
+      /*margin-right:5px !important;*/
+    }
+
+    }

@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <div id="demo"></div>
+    <input id="id1" type="number" min="100" max="300" required>
+    <button onclick="myFunction()">OK</button>
+    <input id="id2" type="number" max="300" required>
+    <button onclick="myFunction1()">OK</button>
+
+    <input id="id3" type="number" min="100" required>
+    <button onclick="myFunction2()">OK</button>
+
+    <button onclick="myFunction3()">Go Back</button>
+    <button onclick="myFunction4()">Go Back 2 Pages</button>
+
+    <p id="demo1"></p>
+
+    <h2>JavaScript Web Workers API</h2>
+    <p>Count numbers: <output id="result"></output></p>
+    <button onclick="startWorker()">Start Worker</button>
+    <button onclick="stopWorker()">Stop Worker</button>
+    <script>
+        /*
+        What is Web API?
+        API stands for Application Programming Interface.
+
+        A Web API is an application programming interface for the Web.
+
+        A Browser API can extend the functionality of a web browser.
+
+        A Server API can extend the functionality of a web server.
+        */
+        /*Browser APIs
+        All browsers have a set of built-in Web APIs to support complex operations, and to help accessing data.
+
+        For example, the Geolocation API can return the coordinates of where the browser is located.*/
+        const myElement = document.getElementById("demo");
+
+        function getLocation() {
+            if (navigator.geolocation) {
+                navigator.geolocation.getCurrentPosition(showPosition);
+            } else {
+                myElement.innerHTML = "Geolocation is not supported by this browser.";
+            }
+        }
+
+        function showPosition(position) {
+            myElement.innerHTML = "Latitude: " + position.coords.latitude +
+                "<br>Longitude: " + position.coords.longitude;
+        }
+        getLocation();
+        //showPosition({});
+
+        //form validation apis
+
+        /* JavaScript Validation API
+        Constraint Validation DOM Methods
+        Property	Description
+        checkValidity()	Returns true if an input element contains valid data.
+        setCustomValidity()	Sets the validationMessage property of an input element.
+        If an input field contains invalid data, display a message:
+
+        The checkValidity() Method */
+        function myFunction() {
+            const inpObj = document.getElementById("id1");
+            if (!inpObj.checkValidity()) {
+                document.getElementById("demo1").innerHTML = inpObj.validationMessage;
+            } else {
+                inpObj.setCustomValidity("this is not valid input number must be between 150 to 300");
+                document.getElementById("demo1").innerHTML = "thi is valid Input";
+
+            }
+        }
+        /*
+        Validity Properties
+        The validity property of an input element contains a number of properties related to the validity of data:
+
+        Property            Description
+        customError         Set to true, if a custom validity message is set.
+        patternMismatch     Set to true, if an element 's value does not match its pattern attribute.
+        rangeOverflow       Set to true, if an element 's value is greater than its max attribute.
+        rangeUnderflow      Set to true, if an element 's value is less than its min attribute.
+        stepMismatch        Set to true, if an element 's value is invalid per its step attribute.
+        tooLong             Set to true, if an element 's value exceeds its maxLength attribute.
+        typeMismatch        Set to true, if an element 's value is invalid per its type attribute.
+        valueMissing        Set to true, if an element(with a required attribute) has no value.
+        valid               Set to true, if an element 's value is valid.*/
+
+        //rangeoverflow
+        function myFunction1() {
+            let text = "Value OK";
+            if (document.getElementById("id2").validity.rangeOverflow) {
+                text = "Value too large";
+            }
+            document.getElementById("demo1").innerHTML = text;
+
+        }
+        //range Underflow
+        function myFunction2() {
+            let text = "Value OK";
+
+            if (document.getElementById("id3").validity.rangeUnderflow) {
+                text = "Value too small";
+            }
+            document.getElementById("demo1").innerHTML = text;
+        }
+        //Web History API
+        //The Web History API provides easy methods to access the windows.history object.
+
+        //The window.history object contains the URLs (Web Sites) visited by the user.
+
+        //The Web History API is supported in all browsers:
+
+        //Yes	Yes	Yes	Yes	Yes
+        //The History back() Method
+        //The back() method loads the previous URL in the windows.history list.
+
+        //It is the same as clicking the "back arrow" in your browser.
+        function myFunction3() {
+            window.history.back();
+        }
+
+        //The History go() Method
+        //The go() method loads a specific URL from the history list:
+        function myFunction4() {
+            window.history.go(-2);
+        }
+
+        /*Web Storage API
+        The Web Storage API is a simple syntax for storing and retrieving data in the browser. It is very easy to use:
+        */
+
+        /*
+        The localStorage Object
+
+        The localStorage object provides access to a local storage for a particular Web Site. It allows you to store, read, add, modify, and delete data items for that domain.
+        The data is stored with no expiration date, and will not be deleted when the browser is closed.
+        The data will be available for days, weeks, and years.
+        */
+        /*The setItem() Method
+T       he localStorage.setItem() method stores a data item in a storage.
+        It takes a name and a value as parameters:*/
+        localStorage.setItem("name", "Nisarg Adalja");
+
+        /*The getItem() Method
+        The localStorage.getItem() method retrieves a data item from the storage.*/
+        console.log(localStorage.getItem("name"));
+
+        //to delete the localstorage we have remove method
+        localStorage.removeItem("name");
+
+
+        /*The sessionStorage Object
+
+        The sessionStorage object is identical to the localStorage object.
+
+        The difference is that the sessionStorage object stores data for one session.
+
+        The data is deleted when the browser is closed. also deleted after specific time*/
+
+        //The setItem() Method
+        //The sessionStorage.setItem() method stores a data item in a storage.
+
+        //It takes a name and a value as parameters:
+        sessionStorage.setItem("name", "nisarg adalja");
+
+        /*The getItem() Method
+        The sessionStorage.getItem() method retrieves a data item from the storage.
+
+        It takes a name as parameter:*/
+
+        sessionStorage.getItem("name");
+
+        //to delete the session we have remove method
+        sessionStorage.removeItem("name");
+
+        /*Storage Object Properties and Methods
+        Property/Method	Description
+        key(n)	                    Returns the name of the nth key in the storage
+        length	                    Returns the number of data items stored in the Storage object
+        getItem(keyname)	        Returns the value of the specified key name
+        setItem(keyname, value)	    Adds that key to the storage, or update that key's value if it already exists
+        removeItem(keyname)     	Removes that key from the storage
+        clear()	                    Empty all key out of the storage */
+
+        /*
+        Related Pages for Web Storage API
+
+        Property	Description
+        window.localStorage	    Allows to save key/value pairs in a web browser. Stores the data with no expiration date
+        window.sessionStorage	Allows to save key/value pairs in a web browser. Stores the data for one session*/
+
+
+
+
+        /*Web Workers API
+
+        A web worker is a JavaScript running in the background, without affecting the performance of the page.
+
+        What is a Web Worker?
+        When executing scripts in an HTML page, the page becomes unresponsive until the script is finished.
+
+        A web worker is a JavaScript that runs in the background, independently of other scripts, without affecting the performance of the page. You can continue to do whatever you want: clicking, selecting things, etc., while the web worker runs in the background.*/
+
+
+        function startWorker() {
+            if (typeof (w) == "undefined") {
+                w = new Worker("demo_workers.js");
+            }
+            w.onmessage = function (event) {
+                document.getElementById("result").innerHTML = event.data;
+            };
+        }
+
+        function stopWorker() {
+            w.terminate();
+            w = undefined;
+        }
+    </script>
+     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-/bQdsTh/da6pkI1MST/rWKFNjaCP5gBSY4sEBT38Q/9RBh9AH40zEOg7Hlq2THRZ" crossorigin="anonymous">
+    </script>
+</body>
+
+</html>

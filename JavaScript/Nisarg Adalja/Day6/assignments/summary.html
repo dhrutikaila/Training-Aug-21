@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-F3w7mX95PdgyTmZZMECAngseQB83DfGTowi0iMjiWaeVhAn4FJkqJByhZMI3AhiU" crossorigin="anonymous">
+
+</head>
+
+<body>
+    <div class="container" id="main">
+        <div class="row pt-3 pb-3 border border-dark">
+            <div class="col-sm-2">no.</div>
+            <div class="col-sm-2">Name</div>
+            <div class="col-sm-2">price</div>
+            <div class="col-sm-2">quantity</div>
+            <div class="col-sm-2">Total</div>
+        </div>
+    </div>
+    <script>
+        var cart =JSON.parse(localStorage.getItem("cart"));
+        var finaltotal=0;
+        for (var i = 0; i < cart.products.length; i++) {
+            var div = document.createElement('div');
+            div.setAttribute("class", "row pb-3 pt-3 border border-dark");
+            div.setAttribute("id", (i + 1));
+            var id = document.createElement('div');
+            id.setAttribute("class", "col-sm-2");
+            id.setAttribute("id", "id" + (i + 1));
+            id.innerHTML = (i + 1);
+            div.appendChild(id);
+            var productName = document.createElement('div');
+            productName.setAttribute("class", "col-sm-2");
+            productName.innerHTML = cart.products[i].name;
+            div.appendChild(productName);
+            var price = document.createElement('div');
+            price.setAttribute("class", "col-sm-2");
+            price.setAttribute("id", "price" + (i + 1));
+            price.innerHTML = cart.products[i].price;
+            div.appendChild(price);
+            var quantity = document.createElement('div');
+            quantity.setAttribute("class", "col-sm-2");
+            quantity.setAttribute("id", "quantity");
+            quantity.innerHTML = cart.products[i].quantity;
+            div.appendChild(quantity);
+             var total = document.createElement('div');
+            total.setAttribute("class", "col-sm-2");
+            total.setAttribute("id", "total");
+            total.innerHTML = cart.products[i].totalPrice;
+            finaltotal+=cart.products[i].totalPrice;
+            div.appendChild(total);
+
+            document.getElementById("main").appendChild(div);
+            
+        }
+        var div=document.createElement("div");
+            div.setAttribute("class", "col-sm-12");
+            div.innerHTML="Total Price "+finaltotal;
+
+            document.getElementById("main").appendChild(div);
+            
+
+    </script>
+</body>
+
+</html>

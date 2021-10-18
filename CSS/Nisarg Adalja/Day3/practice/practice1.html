@@ -1,0 +1,779 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #box1, #box2, #box3{
+            border:1px solid black;
+            float:left;
+            height:20vh;
+            width:20vw;
+            margin-top:5vh !important;
+            margin-bottom:3vh !important;
+            margin-left:3vw !important;
+            /*margin-right:3vw !important;*/
+        }
+        #box1{
+            background-color:blue;
+        }
+        #box2{
+            background-color:red;
+        }
+        #box3{
+            background-color:green;
+        }
+        #container{
+            border:1px solid black;
+            height:30vh;
+            width:100vw;
+        }
+        .par{
+            height:10vh !important;
+            width:20vw !important;
+            border:3px solid red;
+            overflow:scroll;
+        }
+        .par1{
+            float:right;
+            height:10vh !important;
+            width:20vw !important;
+            border:3px solid red;
+            overflow:visible;
+        }
+        .par2{
+            height:10vh !important;
+            width:20vw !important;
+            border:3px solid red;
+            overflow:hidden;
+        }
+        .par3{
+            height:10vh !important;
+            width:20vw !important;
+            border:3px solid red;
+            overflow:auto;
+        }
+    </style>
+    <style>
+
+        #nav1{
+            background-color: lightgray;
+            display: flex;
+            flex-direction: row;
+            height: 15vh !important;
+            width: 100vw !important;
+        }
+
+        #logo {
+            display: flex;
+            justify-content: center;
+
+        }
+
+        div img {}
+
+        div {
+            font-size: 30px;
+            margin-left: auto;
+            margin-top: 0vh !important;
+            margin-bottom: 0px;
+        }
+
+        div a {
+            text-decoration: none;
+            color: grey;
+            /* margin-left:3vw !important; */
+            margin-right: 3vw !important;
+            /* justify-content:center;*/
+        }
+
+        article {
+
+            height: 85vh;
+            width: 79vw;
+            float: left;
+            background-image: url("../../../HTML/Nisarg Adalja/assests/images/html5.jpg");
+            background-repeat: no-repeat;
+            background-size: cover;
+        }
+
+        h1 {
+            margin-top: 40px !important;
+        }
+        li{
+            font-size:30px;
+        }
+        aside {
+            display: flex;
+            flex-direction: column;
+            float: left;
+            height: 85vh;
+            width: 18vw;
+            background-color: orange;
+        }
+        header{
+            width:100% !important;
+        }
+        /* Dropdown Button */
+
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+        }
+
+        .navbar {
+            overflow: hidden;
+            display: flex;
+            flex-direction: column;
+            background-color: #333;
+        }
+
+        .navbar a {
+            float: left;
+            font-size: 20px;
+            color: white;
+            text-align: left;
+            padding: 14px 16px;
+            text-decoration: none;
+        }
+
+        .dropdown {
+            float: left;
+            overflow: hidden;
+        }
+
+        .dropdown .dropbtn {
+            font-size: 20px;
+            border: none;
+            outline: none;
+            color: white;
+            padding: 0px 0px;
+            background-color: inherit;
+            font-family: inherit;
+            margin: 0;
+        }
+
+        .navbar a:hover,
+        .dropdown:hover .dropbtn {
+            background-color: red;
+        }
+
+        .dropdown-content {
+            display: none;
+            position: absolute;
+            background-color: #f9f9f9;
+            min-width: 160px;
+            box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+            z-index: 1;
+        }
+
+        .dropdown-content a {
+            float: none;
+            color: black;
+            padding: 0px 0px;
+            text-decoration: none;
+            display: block;
+            text-align: left;
+        }
+
+        .dropdown-content a:hover {
+            background-color: #ddd;
+        }
+
+        .dropdown:hover .dropdown-content {
+            display: block;
+        }
+        .dropdown-content a:active {
+            background-color: #ddd;
+        }
+
+        .dropdown:active .dropdown-content {
+            display: block;
+        }
+
+        /* Dropdown Button */
+
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+        }
+
+        .navbar {
+            overflow: hidden;
+            display: flex;
+            flex-direction: column;
+            background-color: #333;
+        }
+
+        .navbar a {
+            float: left;
+            font-size: 20px;
+            color: white;
+            text-align: left;
+            padding: 14px 16px;
+            text-decoration: none;
+        }
+
+        .dropdown {
+            float: left;
+            overflow: hidden;
+        }
+
+        .dropdown .dropbtn {
+            font-size: 20px;
+            border: none;
+            outline: none;
+            color: white;
+            padding: 0px 0px;
+            background-color: inherit;
+            font-family: inherit;
+            margin: 0;
+        }
+
+        .navbar a:hover,
+        .dropdown:hover .dropbtn {
+            background-color: red;
+        }
+
+        .dropdown-content {
+            display: none;
+            position: absolute;
+            background-color: #f9f9f9;
+            min-width: 160px;
+            box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+            z-index: 1;
+        }
+
+        .dropdown-content a {
+            float: none;
+            color: black;
+            padding: 0px 0px;
+            text-decoration: none;
+            display: block;
+            text-align: left;
+        }
+
+        .dropdown-content a:hover {
+            background-color: #ddd;
+        }
+
+        .dropdown:hover .dropdown-content {
+            display: block;
+        }
+        .dropdown-content a:active {
+            background-color: #ddd;
+        }
+
+        .dropdown:active .dropdown-content {
+            display: block;
+        }
+    </style>
+    <style>
+        header{
+            background-color:red;
+            height:15vh;
+            width:100vw;
+        }
+        #nav{
+            
+            color:white !important;
+            font-size:20px;
+            
+            float:right;
+            margin-right:40vh !important;
+            margin-top:5vh !important;
+        }
+        nav a{
+            text-decoration:none;
+             color:white !important;
+            font-size:20px;
+            margin-left:3vw !important;
+         margin-right:3vw !important;
+        }
+        aside{
+            float:left;
+            height:70vh !important;
+            width:20%;
+            background-color:yellow;
+        }
+        article{
+            float:left;
+            height:70vh !important;
+            width:77vw !important;
+            background-color:orange;
+        }
+        footer{
+            clear:left;
+            background-color:pink;
+        }
+    </style>
+     <style>
+
+        nav {
+            background-color: lightgray;
+            display: flex;
+            flex-direction: row;
+            height: 15vh !important;
+            width: 100vw !important;
+        }
+
+        #logo {
+            display: flex;
+            justify-content: center;
+
+        }
+
+        div img {}
+
+        div {
+            font-size: 30px;
+            margin-left: auto;
+            margin-top: 0vh !important;
+            margin-bottom: 0px;
+        }
+
+        div a {
+            text-decoration: none;
+            color: grey;
+            /* margin-left:3vw !important; */
+            margin-right: 3vw !important;
+            /* justify-content:center;*/
+        }
+
+        article {
+
+            height: 85vh;
+            width: 79vw;
+            float: left;
+            background-image: url("../../../HTML/Nisarg Adalja/assests/images/html5.jpg");
+            background-repeat: no-repeat;
+            background-size: cover;
+        }
+
+        h1 {
+            margin-top: 40px !important;
+        }
+        li{
+            font-size:30px;
+        }
+        aside {
+            display: flex;
+            flex-direction: column;
+            float: left;
+            height: 85vh;
+            width: 18vw;
+            background-color: orange;
+        }
+
+        /* Dropdown Button */
+
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+        }
+
+        .navbar {
+            overflow: hidden;
+            display: flex;
+            flex-direction: column;
+            background-color: #333;
+        }
+
+        .navbar a {
+            float: left;
+            font-size: 20px;
+            color: white;
+            text-align: left;
+            padding: 14px 16px;
+            text-decoration: none;
+        }
+
+        .dropdown {
+            float: left;
+            overflow: hidden;
+        }
+
+        .dropdown .dropbtn {
+            font-size: 20px;
+            border: none;
+            outline: none;
+            color: white;
+            padding: 0px 0px;
+            background-color: inherit;
+            font-family: inherit;
+            margin: 0;
+        }
+
+        .navbar a:hover,
+        .dropdown:hover .dropbtn {
+            background-color: red;
+        }
+
+        .dropdown-content {
+            display: none;
+            position: absolute;
+            background-color: #f9f9f9;
+            min-width: 160px;
+            box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+            z-index: 1;
+        }
+
+        .dropdown-content a {
+            float: none;
+            color: black;
+            padding: 0px 0px;
+            text-decoration: none;
+            display: block;
+            text-align: left;
+        }
+
+        .dropdown-content a:hover {
+            background-color: #ddd;
+        }
+
+        .dropdown:hover .dropdown-content {
+            display: block;
+        }
+        .dropdown-content a:active {
+            background-color: #ddd;
+        }
+
+        .dropdown:active .dropdown-content {
+            display: block;
+        }
+
+        /* Dropdown Button */
+
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+        }
+
+        .navbar {
+            overflow: hidden;
+            display: flex;
+            flex-direction: column;
+            background-color: #333;
+        }
+
+        .navbar a {
+            float: left;
+            font-size: 20px;
+            color: white;
+            text-align: left;
+            padding: 14px 16px;
+            text-decoration: none;
+        }
+
+        .dropdown {
+            float: left;
+            overflow: hidden;
+        }
+
+        .dropdown .dropbtn {
+            font-size: 20px;
+            border: none;
+            outline: none;
+            color: white;
+            padding: 0px 0px;
+            background-color: inherit;
+            font-family: inherit;
+            margin: 0;
+        }
+
+        .navbar a:hover,
+        .dropdown:hover .dropbtn {
+            background-color: red;
+        }
+
+        .dropdown-content {
+            display: none;
+            position: absolute;
+            background-color: #f9f9f9;
+            min-width: 160px;
+            box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+            z-index: 1;
+        }
+
+        .dropdown-content a {
+            float: none;
+            color: black;
+            padding: 0px 0px;
+            text-decoration: none;
+            display: block;
+            text-align: left;
+        }
+
+        .dropdown-content a:hover {
+            background-color: #ddd;
+        }
+
+        .dropdown:hover .dropdown-content {
+            display: block;
+        }
+        .dropdown-content a:active {
+            background-color: #ddd;
+        }
+
+        .dropdown:active .dropdown-content {
+            display: block;
+        }
+    </style>
+    <style>
+        body{
+        }
+        header{
+            background-color:#425061;
+            height:30vh;
+            width:82vw;
+        }
+        header h1{
+            color:white;
+            display:inline !important;
+            float:left;
+            margin-top:9vh;
+            margin-left:6vw;
+        }
+        header h2{
+            display:inline !important;
+            color:lightblue;
+            float:left;
+            clear:left;
+            margin-left:6vw !important;
+            margin-top :0vh !important;
+        }
+        header p{
+            display:inline;
+            color:lightblue;
+            float:left;
+            clear:left;
+            margin-left:6vw !important;
+            margin-top :2vh !important;
+        }
+        header img{
+            border:5px solid #313b47;
+            border-radius:50%;
+            float:right;
+            margin-top:6vh;
+            margin-right:6vw;
+        }
+        #contact{
+
+            height:25vh;
+            width:82vw;
+            background-color:#313b47 !important;
+        }
+        .details{
+            width:40vw !important;
+            float:left;
+        }
+        .details i{
+            color: white !important;
+            margin-top:3vh;
+            margin-left:6vw;
+            background-color:#313b47 !important;
+        }
+        i+a{
+            margin-left:1vw;
+            font-size: 12px;
+            text-decoration:none;
+            color:white;
+            margin-top:0vh !important;
+        }
+        i+p{
+            color:white !important;
+            margin-left:9vw;
+            font-size: 12px;
+            margin-top :-2vh !important;
+        }
+        .education{
+            display:inline;
+            margin-left:5vw !important;
+            margin-top:3vh !important;
+            width:33vw;
+            float:left;
+
+        }
+        .education h1{
+            color:#449399 !important;
+            text-decoration:underline;
+        }
+        .skills{
+            display: inline;
+            margin-top:5vh !important;
+            width:30vw;
+            float:right !important;
+            clear:left !important; 
+        }
+        .skills h1{
+           
+            color:#449399 !important;
+            text-decoration:underline;
+        }
+        .skills h2{
+            margin-top:5vh !important;
+        }
+        body{
+            background-color: aqua;
+        }
+        .main{
+            display: inline !important;
+            float:left !important;
+            width:45vw !important; 
+        }
+        .main1{
+            display: inline !important;
+            float:right !important;
+            margin-right:20px !important;
+
+        }
+        .skills span{
+            color:white !important;
+            display:inline-block !important;
+            height:5vh !important;
+            background-color:#449399;
+            border-radius:10px !important;
+            padding-top:10px !important;
+            margin-top:10px !important;
+            margin-left:5px !important;
+            margin-right: 5px !important;
+        }
+        .internships{
+
+        }
+        p a{
+            text-decoration:none;
+            color:black;
+        }
+    </style>
+</head>
+<body>
+    <nav>
+        <div id="logo">
+            <img src="https://tutorials.rxtrainees.radixweb.net/wp-content/uploads/2020/12/logo_2500X1875.jpg"
+                height="50px" width="200px">
+        </div>
+        <div>
+            <a href="../../../../Modules/Project/Nisarg Adalja/nisargProject.html">HOME</a>
+            <a href="../../../../Modules/Project/Nisarg Adalja/htmlfile.html">HTML</a>
+            <a href="../../../../Modules/Project/Nisarg Adalja/cssfile.html">CSS</a>
+            <a href="../../../../Modules/Project/Nisarg Adalja/Bootstrap.html">Bootstrap</a>
+            <a href="../../../../Modules/Project/Nisarg Adalja/javascript.html">JAVASCRIPT</a>
+            <a href="../../../../Modules/Project/Nisarg Adalja/jquery.html">JQUERY</a>
+            <a href="../../../../Modules/Project/Nisarg Adalja/project.html">PORJECT</a>
+        </div>
+    </nav>
+    <aside>
+      <ol>
+            <li>Day-3
+                <ul>
+                    <div class="dropdown">
+                        <button class="dropbtn">Additional Exercise</button>
+                        <div class="dropdown-content">
+                            <a href="../additional/additional.html">additional.html</a>
+                        </div>
+                    </div>
+                    <div class="dropdown">
+                        <button class="dropbtn">Assignment Exercise</button>
+                        <div class="dropdown-content">
+                            <a href="../assignments/about.html">about.html</a>
+                              <a href="../assignments/assignments.html">assignment.html</a>
+                                <a href="../assignments/contact.html">contact.html</a>
+                        </div>
+                    </div>
+                    <div class="dropdown">
+                        <button class="dropbtn">Practice Exercise</button>
+                        <div class="dropdown-content">
+                            <a href="practice.html">practice.html</a>
+                             <a href="practice1.html">practice1.html</a>
+                            
+                        </div>
+                    </div>
+
+                </ul>
+            </li>
+             <li>Day-4
+                <ul>
+                    <div class="dropdown">
+                        <button class="dropbtn">Additional Exercise</button>
+                        <div class="dropdown-content">
+                            <a href="../../Day4/additional/additional.html">additional.html</a>
+                        </div>
+                    </div>
+                    <div class="dropdown">
+                        <button class="dropbtn">Assignment Exercise</button>
+                        <div class="dropdown-content">
+                            <a href="../../Day4/assignment/assignment.html">assignment.html</a>
+                        </div>
+                    </div>
+                    <div class="dropdown">
+                        <button class="dropbtn">Practice Exercise</button>
+                        <div class="dropdown-content">
+                            <a href="../../Day4/practice/practice.html">practice.html</a>
+                        </div>
+                    </div>
+
+                </ul>
+            </li>
+             <li>Day-5
+                <ul>
+                    <div class="dropdown">
+                        <button class="dropbtn">Additional Exercise</button>
+                        <div class="dropdown-content">
+                            <a href="../../Day5/additional/additional.html">additional.html</a>
+                        </div>
+                    </div>
+                    <div class="dropdown">
+                        <button class="dropbtn">Assignment Exercise</button>
+                        <div class="dropdown-content">
+                            <a href="../../Day5/assignments/assignment.html">assignment.html</a>
+                        </div>
+                    </div>
+                    <div class="dropdown">
+                        <button class="dropbtn">Practice Exercise</button>
+                        <div class="dropdown-content">
+                            <a href="../../Day5/practice/practice.html">practice.html</a>
+                        </div>
+                    </div>
+
+                </ul>
+            </li>
+        </ol>
+    </aside>
+    <article>
+    <div id="container">
+        <div id="box1">
+        </div>
+        <div id="box2">
+
+        </div>
+        <div id="box3">
+
+        </div>
+    </div>
+    <div>
+        <!-- Overflow scroll we can see full text using scrolling in specfic height and width of div   -->
+        <!-- It add scroll even if it is not neccessory means it always add scroll bar even if it is not necessory -->
+        <div class="par">
+            Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quae qui molestias inventore ipsum temporibus totam ipsam pariatur quod illum non. Iure nesciunt quibusdam modi autem optio incidunt nostrum est consequuntur?
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Adipisci provident, eum vero dicta quo nihil modi rem vitae eveniet inventore quos sit mollitia, harum fugiat praesentium cupiditate molestiae ea voluptatem!
+        </div>
+        <!-- overflow visible  it show the div border and it show text overflowed to the div means text is overflow from the div -->
+         <div class="par1">
+            Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quae qui molestias inventore ipsum temporibus totam ipsam pariatur quod illum non. Iure nesciunt quibusdam modi autem optio incidunt nostrum est consequuntur?
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Adipisci provident, eum vero dicta quo nihil modi rem vitae eveniet inventore quos sit mollitia, harum fugiat praesentium cupiditate molestiae ea voluptatem!
+        </div>
+        <!-- overflow  hidden it shows only some text which ficed in the div and other text is hidden -->
+         <div class="par2">
+            Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quae qui molestias inventore ipsum temporibus totam ipsam pariatur quod illum non. Iure nesciunt quibusdam modi autem optio incidunt nostrum est consequuntur?
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Adipisci provident, eum vero dicta quo nihil modi rem vitae eveniet inventore quos sit mollitia, harum fugiat praesentium cupiditate molestiae ea voluptatem!
+        </div>
+        <!-- Overflow  auto by default it same as overflow scroll  -->
+        <!--  
+      Similar to scroll, but it adds scrollbars only when necessary -->
+    <div class="par3">
+        Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quae qui molestias inventore ipsum temporibus totam ipsam pariatur quod illum non. Iure nesciunt quibusdam modi autem optio incidunt nostrum est consequuntur?
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Adipisci provident, eum vero dicta quo nihil modi rem vitae eveniet inventore quos sit mollitia, harum fugiat praesentium cupiditate molestiae ea voluptatem!
+    </div>
+    </div>
+    </article>
+</body>
+</html>

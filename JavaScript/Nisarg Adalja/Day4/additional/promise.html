@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Promise</title>
+</head>
+
+<body>
+    <Script>
+        var promise = new Promise(function (resolve, reject) {
+            // executor (the producing code, "singer")
+        });
+
+        var promise = new Promise(function (resolve, reject) {
+            // the function is executed automatically when the promise is constructed
+
+            // after 1 second signal that the job is done with the result "done"
+            setTimeout(() => resolve("this is resolve function call after 5 sec"), 5000);
+        });
+        promise.then(result => alert(result), // shows "done!" after 1 second
+            error => alert(error));
+        var promise = new Promise(function (resolve, reject) {
+            resolve("done");
+            reject(new Error("…")); // ignored
+            setTimeout(() => resolve("…")); // ignored
+        });
+
+        promise.then(
+            function (result) {
+
+            },
+            function (error) {
+
+            }
+        );
+
+        var promise = new Promise(function (resolve, reject) {
+            setTimeout(() => resolve("this is also resolve function call after 1 second!"), 1000);
+        });
+
+        // resolve runs the first function in .then
+        promise.then(
+            result => alert(result), // shows "done!" after 1 second
+            error => alert(error) // doesn't run
+        );
+
+        var promise = new Promise(resolve => {
+            setTimeout(() => resolve("done!"), 1000);
+        });
+        promise.then(alert);
+
+        var promise = new Promise((resolve, reject) => {
+            setTimeout(() => resolve("result"), 2000)
+        });
+        promise.finally(() => alert("Promise ready"));
+        promise.then(result => alert(result)); // <-- .then handles the result
+
+        var promise = new Promise((resolve, reject) => {
+            throw new Error("error");
+        });
+        promise.finally(() => alert("Promise ready"));
+        promise.catch(err => alert(err)); // <-- .catch handles the error object
+
+        function loadScript(src, callback) {
+            let script = document.createElement('script');
+            script.src = src;
+
+            script.onload = () => callback(null, script);
+            script.onerror = () => callback(new Error(`Script load error for ${src}`));
+
+            document.head.append(script);
+        }
+    </Script>
+</body>
+
+</html>

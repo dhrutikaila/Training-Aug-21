@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM</title>
+    <style>
+        body{
+            background-color:cyan;
+        }
+        div {
+            position:relative;
+            top:100px;
+            left:100px;
+            text-align: center;
+  width: 150px;
+  height: 150px;
+  background-color: skyblue;
+  border:5px solid black;
+}
+        @keyframes example {
+        from {background-color: red;}
+        to {background-color: yellow;}
+     
+    }   
+    @keyframes example{
+        0%{
+            background-color:red;
+            border-radius:0%;
+            transform:rotate(0deg);
+            box-shadow:2px 2px 2px 2px black;
+            z-index:1;
+        }
+        25%{
+            background-color:pink;
+            transform:rotate(30deg);
+            border-radius:5%;
+             box-shadow:4px 4px 4px 4px rgba(23, 23, 23, 0.2);
+             z-index:10;
+        }
+        50%{
+            background-color:orange;
+            transform:rotate(90deg);
+            border-radius:10%;
+             box-shadow:6px 6px 6px 6px rgba(44, 23, 23, 0.4);
+             z-index:50;
+        }
+        75%{
+            background-color:green;
+            transform:rotate(180deg);
+            border-radius:15%;
+             box-shadow:8px 8px 8px 8px rgba(44, 44, 44, 0.6);
+             z-index:100;
+        }
+        100%{
+            background-color:orange;
+            transform:rotate(360deg);
+            border-radius:25%;
+             box-shadow:10px 10px 10px 10px rgba(66, 66,66,1);
+             z-index:500;
+        }
+    }
+    </style>
+</head>
+<body>
+    <div id="demo"></div>
+
+    <script>
+        //Document Object Modal
+        /* What is the HTML DOM?
+        The HTML DOM is a standard object model and programming interface for HTML. It defines:
+
+        The HTML elements as objects
+        The properties of all HTML elements
+        The methods to access all HTML elements
+        The events for all HTML elements*/
+        //methods
+           /*
+        Finding HTML Elements
+        Method	                                Description
+        document.getElementById(id)          	Find an element by element id
+        document.getElementsByTagName(name)	    Find elements by tag name
+        document.getElementsByClassName(name)	Find elements by class name
+        */
+        var demo=document.getElementById("demo");
+        //1.getElementById()
+
+        document.getElementById("demo").innerHTML="this demo txt";
+
+        /*
+        Changing HTML Elements
+        Property	             Description
+        element.innerHTML =      new html content	Change the inner HTML of an element
+        element.attribute =      new value	Change the attribute value of an HTML element
+        element.style.property = new style	Change the style of an HTML element
+
+        Method	                                Description
+        element.setAttribute(attribute, value)	Change the attribute value of an HTML elements
+        */
+        document.getElementById("demo").style.backgroundColor="red";
+        demo.style.alignItems="center";
+        demo.style.display="none";
+        demo.style.display="";
+        demo.style.scrollBy="x";
+        demo.style.animationName="example";
+        demo.style.animationDuration="10s";
+        demo.style.animationDelay="5s";
+        //demo.style.animationDirection="rotate";
+        //demo.style.animationDelay="50";
+        demo.style.alignSelf="center";
+
+        /*
+        Adding and Deleting Elements
+        Method	Description
+        document.createElement(element)	Create an HTML element
+        document.removeChild(element)	Remove an HTML element
+        document.appendChild(element)	Add an HTML element
+        document.replaceChild(new, old)	Replace an HTML element
+        document.write(text)            Write into the HTML output stream
+        */
+
+        /* 
+Property	Description	DOM
+document.anchors	        Returns all <a> elements that have a name attribute	1
+document.applets	        Deprecated	1
+document.baseURI	        Returns the absolute base URI of the document	3
+document.body	            Returns the <body> element	1
+document.cookie     	    Returns the document's cookie	1
+document.doctype    	    Returns the document's doctype	3
+document.documentElement	Returns the <html> element	3
+document.documentMode	    Returns the mode used by the browser	3
+document.documentURI	    Returns the URI of the document	3
+document.domain         	Returns the domain name of the document server	1
+document.domConfig	        Obsolete.	3
+document.embeds	            Returns all <embed> elements	3
+document.forms          	Returns all <form> elements	1
+document.head	            Returns the <head> element	3
+document.images	            Returns all <img> elements	1
+document.implementation	    Returns the DOM implementation	3
+document.inputEncoding	    Returns the document's encoding (character set)	3
+document.lastModified	    Returns the date and time the document was updated	3
+document.links	            Returns all <area> and <a> elements that have a href attribute	1
+document.readyState	        Returns the (loading) status of the document	3
+document.referrer       	Returns the URI of the referrer (the linking document)	1
+document.scripts	        Returns all <script> elements	3
+document.title	            Returns the <title> element	1
+document.URL	            Returns the complete URL of the document	1
+
+document.strictErrorChecking    Returns if error checking is enforced	3
+
+*/
+        var h6=document.createElement("h6");
+        h6.innerHTML="this my h6 Text";
+        demo.appendChild(h6);
+        console.log(document.anchors);
+        console.log(document.applets);
+        console.log(document.baseURI);
+        console.log(document.body);
+        console.log(document.body.div);
+        console.log(document.cookie);
+        console.log(document.doctype);
+        console.log(document.documentElement);
+        console.log(document.images);
+        console.log(document.links);
+     
+        /* Finding HTML Elements by CSS Selectors
+        If you want to find all HTML elements that match a specified CSS selector (id, class names, types, attributes, values of attributes, etc), use the querySelectorAll() method.*/
+        const x = document.querySelectorAll("p.intro");
+
+        
+
+    </script>
+</body>
+</html>

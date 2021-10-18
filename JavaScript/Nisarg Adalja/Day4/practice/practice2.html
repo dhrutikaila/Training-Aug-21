@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        //Explain difference between var and let keyword using example. 
+
+        var a=10;
+        {
+            var a=78;
+            console.log(a); //78
+        }
+        console.log(a); //78
+        var a=10;
+        {
+            let a=78;
+            console.log(a); //78
+        }
+        console.log(a);
+
+        let b=78;
+        {
+            let b=50;  
+            console.log(b); //50
+        }
+        let c=70;
+        //let c=50; //it give error   Uncaught SyntaxError: Identifier 'c' has already been declared
+
+        let d=80;
+        //var d=70;//also give error
+
+        var e=90;
+     //   let e=80; //it give error
+
+        var f=70;
+        var f=90; //it does not give error
+        console.log(f);
+    </script>
+</body>
+</html>

@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Traversing</title>
+    <link rel="stylesheet" href="../../assests/css/bootstrap.min.css">
+    <script src="../../assests/js/jquery-3.6.0.js"></script>
+    <script src="../../assests/js/bootstrap.bundle.js"></script>
+
+    <style>
+        .ancestors * {
+            display: block;
+            border: 2px solid lightgrey;
+            color: lightgrey;
+            padding: 5px;
+            margin: 15px;
+        }
+
+        .siblings * {
+            display: block;
+            border: 2px solid lightgrey;
+            color: lightgrey;
+            padding: 5px;
+            margin: 15px;
+        }
+    </style>
+</head>
+
+<body class="">
+
+    <div class="ancestors">
+        <div style="width:500px;">div (great-grandparent)
+            <ul>ul (grandparent)
+                <li>li (direct parent)
+                    <span>span</span>
+                </li>
+            </ul>
+        </div>
+
+        <div style="width:500px;">div (grandparent)
+            <p>p (direct parent)
+                <span>span</span>
+            </p>
+        </div>
+    </div>
+
+    <div>div (parent)
+        <p>p</p>
+        <span>span</span>
+        <h2>h2</h2>
+        <h3>h3</h3>
+        <p>p</p>
+    </div>
+    <script>
+        /*jQuery Traversing
+        What is Traversing ?
+            jQuery traversing, which means "move through", are used to "find"(
+            or select) HTML elements based on their relation to other elements
+            .Start with one selection and move through that selection until you reach the elements you desire.
+
+        The image below illustrates an HTML page as a tree(DOM tree).With jQuery traversing, you can easily move up(
+                ancestors), down(descendants) and sideways(siblings) in the tree, starting from the selected(
+            current) element.This movement is called traversing - or moving through - the DOM tree.
+
+        jQuery Dimensions
+        Illustration explained:
+
+            The < div > element is the parent of < ul > , and an ancestor of everything inside of it
+        The < ul > element is the parent of both < li > elements, and a child of < div >
+            The left < li > element is the parent of < span > , child of < ul > and a descendant of < div >
+            The < span > element is a child of the left < li > and a descendant of < ul > and < div >
+            The two < li > elements are siblings(they share the same parent)
+        The right < li > element is the parent of < b > , child of < ul > and a descendant of < div >
+            The < b > element is a child of the right < li > and a descendant of < ul > and < div >
+            An ancestor is a parent, grandparent, great - grandparent, and so on.
+        A descendant is a child, grandchild, great - grandchild, and so on.
+        Siblings share the same parent.
+
+        Traversing the DOM
+        jQuery provides a variety of methods that allow us to traverse the DOM.
+
+        The largest category of traversal methods are tree - traversal.
+
+        The next chapters will show us how to travel up, down and sideways in the DOM tree.
+
+        jQuery Traversing Reference
+        For a complete overview of all jQuery Traversing methods, please go to our jQuery Traversing Reference.*/
+
+        /*Traversing Up the DOM Tree
+        Three useful jQuery methods for traversing up the DOM tree are:
+
+        parent()
+        parents()
+        parentsUntil()*/
+
+        /*jQuery parent() Method
+        The parent() method returns the direct parent element of the selected element.
+
+        This method only traverse a single level up the DOM tree.
+
+        The following example returns the direct parent element of each < span > elements:
+        */
+
+        $(document).ready(function () {
+            $("span").parent();
+            $("span").parents();
+            $("span").parents().css({
+                "color": "red",
+                "border": "2px solid red"
+            });
+
+            /*jQuery parents() Method
+            The parents() method returns all ancestor elements of the selected element, all the way up to the document's root element (<html>).
+
+            The following example returns all ancestors of all <span> elements: */
+
+            /* You can also use an optional parameter to filter the search for ancestors.
+
+             The following example returns all ancestors of all <span> elements that are <ul> elements:*/
+
+
+            $("span").parents("ul").css("color", 'black');
+
+            /*jQuery parentsUntil() Method
+            The parentsUntil() method returns all ancestor elements between two given arguments.
+
+            The following example returns all ancestor elements between a < span > and a < div > element:*/
+
+            $("span").parentsUntil("div").css({
+                "color": 'blue',
+                "border": "3px solid orange"
+            });
+
+
+            /*jQuery Traversing - Descendants
+            With jQuery you can traverse down the DOM tree to find descendants of an element.
+
+            A descendant is a child, grandchild, great - grandchild, and so on.
+
+            Traversing Down the DOM Tree
+            Two useful jQuery methods
+            for traversing down the DOM tree are:
+
+            children()
+            find()
+            jQuery children() Method
+            The children() method returns all direct children of the selected element.
+
+            This method only traverses a single level down the DOM tree.
+
+            The following example returns all elements that are direct children of each < div > elements: */
+
+            alert($("div").children().html());
+
+            //You can also use an optional parameter to filter the search for children.
+
+            //The following example returns all <p> elements with the class name "first", that are direct children of <div>:
+
+            alert($("div").children("p.first").html());
+
+            /*jQuery find() Method
+            The find() method returns descendant elements of the selected element,
+                all the way down to the last descendant.
+
+            The following example returns all < span > elements that are descendants of < div >:*/
+
+            $("div").find("span");
+
+            $("div").find("*");
+
+            /*jQuery Traversing - Siblings
+            With jQuery you can traverse sideways in the DOM tree to find siblings of an element.
+
+            Siblings share the same parent.
+
+            Traversing Sideways in The DOM Tree
+            There are many useful jQuery methods
+            for traversing sideways in the DOM tree:
+
+            siblings()
+            next()
+            nextAll()
+            nextUntil()
+            prev()
+            prevAll()
+            prevUntil()
+            jQuery siblings() Method
+            The siblings() method returns all sibling elements of the selected element.
+
+            The following example returns all sibling elements of < h2 >: */
+
+            $("h2").siblings().css("color", "blue");
+
+            /*You can also use an optional parameter to filter the search for siblings.
+
+            The following example returns all sibling elements of <h2> that are <p> elements */
+
+            $("h2").siblings("p").css("color","green");
+
+            /*jQuery next() Method
+            The next() method returns the next sibling element of the selected element.
+
+            The following example returns the next sibling of <h2>:*/
+
+            $("h2").next().css("color","black");
+
+            /* jQuery nextAll() Method
+             The nextAll() method returns all next sibling elements of the selected element.
+
+             The following example returns all next sibling elements of < h2 >:*/
+            $("h2").nextAll().css("color","grey");
+
+            /*jQuery nextUntil() Method
+            The nextUntil() method returns all next sibling elements between two given arguments.
+
+            The following example returns all sibling elements between a <h2> and a <h6> element: */
+
+            $("h2").nextUntil("h6").css("color","gold");
+
+            /*jQuery prev(), prevAll() & prevUntil() Methods
+            The prev(), prevAll() and prevUntil() methods work just like the methods above but with reverse functionality: they return previous sibling elements (traverse backwards along sibling elements in the DOM tree, instead of forward).
+            */
+
+            
+        });
+    </script>
+</body>
+
+</html>

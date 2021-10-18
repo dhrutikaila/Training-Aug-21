@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Geo Location API</title>
+     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-F3w7mX95PdgyTmZZMECAngseQB83DfGTowi0iMjiWaeVhAn4FJkqJByhZMI3AhiU" crossorigin="anonymous">
+
+</head>
+
+<body>
+
+    <button onclick="getLocation()">Try It</button>
+    <p id="demo" class="h-10"></p>
+
+    <button onclick="getLocation1()">Try It</button>
+    <p id="demo1"></p>
+    <button onclick="getLocation2()">Try It</button>
+    <p id="demo2"></p>
+    <button onclick="getLocation3()">Try It</button>
+    <p id="demo3"></p>
+    <script>
+        /*Web Geolocation API
+        Locate the User's Position
+        The HTML Geolocation API is used to get the geographical position of a user.
+
+        Since this can compromise privacy, the position is not available unless the user approves it.
+
+        */
+        /*Using the Geolocation API
+        The getCurrentPosition() method is used to return the user's position.
+        The example below returns the latitude and longitude of the user's position:*/
+        
+
+        var x = document.getElementById("demo");
+
+        function getLocation() {
+            if (navigator.geolocation) {
+                navigator.geolocation.getCurrentPosition(showPosition);
+            } else {
+                x.innerHTML = "Geolocation is not supported by this browser.";
+            }
+        }
+
+        function showPosition(position) {
+            x.innerHTML = "Latitude: " + position.coords.latitude +
+                "<br>Longitude: " + position.coords.longitude;
+        }
+    var x = document.getElementById("demo1");
+
+function getLocation1() {
+  if (navigator.geolocation) {
+    navigator.geolocation.getCurrentPosition(showPosition1, showError);
+  } else { 
+    x.innerHTML = "Geolocation is not supported by this browser.";
+  }
+}
+
+function showPosition1(position) {
+  x.innerHTML = "Latitude: " + position.coords.latitude + 
+  "<br>Longitude: " + position.coords.longitude;
+}
+
+function showError(error) {
+  switch(error.code) {
+    case error.PERMISSION_DENIED:
+      x.innerHTML = "User denied the request for Geolocation."
+      break;
+    case error.POSITION_UNAVAILABLE:
+      x.innerHTML = "Location information is unavailable."
+      break;
+    case error.TIMEOUT:
+      x.innerHTML = "The request to get user location timed out."
+      break;
+    case error.UNKNOWN_ERROR:
+      x.innerHTML = "An unknown error occurred."
+      break;
+  }
+}
+var x = document.getElementById("demo2");
+
+        function getLocation2() {
+            if (navigator.geolocation) {
+                navigator.geolocation.watchPosition(showPosition2);
+            } else {
+                x.innerHTML = "Geolocation is not supported by this browser.";
+            }
+        }
+        function showPosition2(position) {
+            let latlon = position.coords.latitude + "," + position.coords.longitude;
+
+            let img_url = "https://maps.googleapis.com/maps/api/staticmap?center=" + latlon + "&zoom=14&size=400x300&sensor=false&key=AIzaSyD5Izt9YC3iF8nrlmuyzvBJcyCnNYOshjY";
+
+            document.getElementById("mapholder").innerHTML = "<img src='" + img_url + "'>";
+        }
+
+        var x = document.getElementById("demo3");
+
+        function getLocation3() {
+            if (navigator.geolocation) {
+                navigator.geolocation.watchPosition(showPosition3);
+            } else {
+                x.innerHTML = "Geolocation is not supported by this browser.";
+            }
+        }
+
+        function showPosition3(position) {
+            x.innerHTML = "Latitude: " + position.coords.latitude +
+                "<br>Longitude: " + position.coords.longitude;
+        }
+    </script>
+     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-/bQdsTh/da6pkI1MST/rWKFNjaCP5gBSY4sEBT38Q/9RBh9AH40zEOg7Hlq2THRZ" crossorigin="anonymous">
+    </script>
+</body>
+
+</html>
