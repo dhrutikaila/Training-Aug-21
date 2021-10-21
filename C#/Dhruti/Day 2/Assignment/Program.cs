@@ -8,10 +8,6 @@ namespace Assignment2
 {
     class Program
     {
-
-
-
-
         // private backing fields for properties
         string _firstname;
         string _lastname;
