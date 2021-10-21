@@ -1,7 +1,0 @@
-C:\Users\dotnet\source\repos\VoteData\VoteData\bin\Debug\VoteData.exe.config
-C:\Users\dotnet\source\repos\VoteData\VoteData\bin\Debug\VoteData.exe
-C:\Users\dotnet\source\repos\VoteData\VoteData\bin\Debug\VoteData.pdb
-C:\Users\dotnet\source\repos\VoteData\VoteData\obj\Debug\VoteData.csproj.AssemblyReference.cache
-C:\Users\dotnet\source\repos\VoteData\VoteData\obj\Debug\VoteData.csproj.CoreCompileInputs.cache
-C:\Users\dotnet\source\repos\VoteData\VoteData\obj\Debug\VoteData.exe
-C:\Users\dotnet\source\repos\VoteData\VoteData\obj\Debug\VoteData.pdb

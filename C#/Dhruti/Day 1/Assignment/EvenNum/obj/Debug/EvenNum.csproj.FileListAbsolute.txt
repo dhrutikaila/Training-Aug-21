@@ -1,7 +1,0 @@
-C:\Users\dotnet\source\repos\VoteData\EvenNum\bin\Debug\EvenNum.exe.config
-C:\Users\dotnet\source\repos\VoteData\EvenNum\bin\Debug\EvenNum.exe
-C:\Users\dotnet\source\repos\VoteData\EvenNum\bin\Debug\EvenNum.pdb
-C:\Users\dotnet\source\repos\VoteData\EvenNum\obj\Debug\EvenNum.csproj.AssemblyReference.cache
-C:\Users\dotnet\source\repos\VoteData\EvenNum\obj\Debug\EvenNum.csproj.CoreCompileInputs.cache
-C:\Users\dotnet\source\repos\VoteData\EvenNum\obj\Debug\EvenNum.exe
-C:\Users\dotnet\source\repos\VoteData\EvenNum\obj\Debug\EvenNum.pdb
