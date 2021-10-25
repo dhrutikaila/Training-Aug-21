@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css">
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC"
+      crossorigin="anonymous"
+    />
+    <script
+      src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"
+      integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js"
+      integrity="sha384-cVKIPhGWiC2Al4u+LWgxfKTRIcfu0JTxR+EQDz/bgldoEyl4H0zUF0QKbrJ0EcQF"
+      crossorigin="anonymous"
+    ></script>
+    <script>
+        let r=4;
+        let r=8;
+    </script>
+  </head>
+  <body>
+    <div class="container">
+      <div class="row">
+        <div class="col">
+          <h3 class="display-1 text-primary text-center">
+            Welcome to the RadixWeb
+          </h3>
+          <h5 class="display-4 text-warning text-center">
+            Day 18 Practice - 2
+          </h5>
+        </div>
+      </div>
+      <div class="row ">
+        <div class="col-8 mx-auto bg-light border border-primary border-2">
+          <!-- <h2 class="text-center">Difference between var and let keyword</h2> -->
+          <table class="table table-condensed table-hover table-striped table-bordered  caption-top">
+            <caption class="h4 text-center">Difference between var and let keyword</caption>
+            <tr>
+              <td>
+              </td>
+              <td>
+                <span class="display-6 fw-bold">var </span>
+                
+              </td>
+              <td>
+                <span class="display-6 fw-bold">let </span>
+                
+              </td>
+            </tr>
+            <tr>
+                <td>
+                    <span class="fs-4 fw-bold">Redeclare</span>
+                </td>
+                <td>
+                  <i class="bi bi-check2 text-success display-5"></i>
+                  
+                </td>
+                <td>
+                  <i class="bi bi-x text-danger display-5"></i>
+                
+                </td>
+              </tr>
+              <tr>
+                <td>
+                    <span class="fs-4 fw-bold">Reassign</span>
+                </td>
+                <td>
+                  <i class="bi bi-check2 text-success display-5"></i>
+                  
+                </td>
+                <td>
+                  <i class="bi bi-check2 text-success display-5 p-0"></i>
+                
+                </td>
+              </tr>
+              <tr>
+                <td>
+                    <span class="fs-4 fw-bold">Scope</span>
+                </td>
+                <td>
+                  <span class="h4">Global</span>
+                  
+                </td>
+                <td>
+                  <span class="h4">Block</span>
+                
+                </td>
+              </tr>
+              <tr>
+                <td>
+                    <span class="fs-4 fw-bold">Hoisting</span>
+                </td>
+                <td>
+                  <span class="h4 text-primary">with undefined value</i></span>
+                  
+                </td>
+                <td>
+                  <span class="h4 text-danger">with error</span>
+                
+                </td>
+              </tr>
+              <tr>
+                <td>
+                    <span class="fs-4 fw-bold">Priority</span>
+                </td>
+                <td>
+                  <span class="h4">Lower</span>
+                  
+                </td>
+                <td>
+                  <span class="h4">Higher</span>
+                
+                </td>
+              </tr>
+          </table>
+          <hr>
+          <div class="mt-5" >
+            <h3>Redeclare of var and let</h3>
+            <p class="fs-5" style="background-color: 
+            #E0FFFF;">
+            var <br>
+              {<br>
+                  &nbsp;&nbsp;&nbsp;&nbsp;var x = 20;<br>
+                  &nbsp;&nbsp;&nbsp;&nbsp;var x = 22;<br>
+                  &nbsp;&nbsp;&nbsp;&nbsp;console.log(x);<span class="text-muted"> // 22</span><br>
+              } <br>
+              let <br>
+              {<br>
+                &nbsp;&nbsp;&nbsp;&nbsp;let x = 20;<br>
+                &nbsp;&nbsp;&nbsp;&nbsp;let x = 22; <span class="text-muted"> // Uncaught SyntaxError: Identifier 'x' has already been declared</span><br>
+                
+            }
+            </p>
+            <h3>Reassign of var and let</h3>
+            <p class="fs-5" style="background-color: 
+            #F0F8FF;">
+            var <br>
+              {<br>
+                  &nbsp;&nbsp;&nbsp;&nbsp;var x = 20;<br>
+                  &nbsp;&nbsp;&nbsp;&nbsp; x = 22;<br>
+                  &nbsp;&nbsp;&nbsp;&nbsp;console.log(x);<span class="text-muted">// 22</span><br>
+              } <br>
+              let    <br>
+              {<br>
+                &nbsp;&nbsp;&nbsp;&nbsp;let x = 20;<br>
+                &nbsp;&nbsp;&nbsp;&nbsp; x = 22;<br>
+                &nbsp;&nbsp;&nbsp;&nbsp;console.log(x);<span class="text-muted">// 22</span><br>
+            } <br>
+            </p>
+          </div>
+        </div>
+
+        <!-- <div class="col-6  bg-secondary">
+          <h3>Code</h3>
+          <p>
+            var empObj = { <br>
+                name : "Dilip Kumavat",<br>
+                address : "A-28 vasant society,ishwarnagar,ahmedabad",<br>
+                fieldName : "IT",<br>
+                designation : "Developer"<br>
+            }<br>
+            
+            var getData = {<br>
+                data : function(city,country){<br>
+                    console.log(`Name : ${this.name}`);<br>
+                    console.log(`Address : ${this.address}`);<br>
+                    console.log(`fielddName : ${this.fieldName}`);<br>
+                    console.log("Designation : ",this.designation);<br>
+                    console.log("city : ",city);<br>
+                    console.log("country : ",country);<br>
+                }<br>
+            }<br>
+            
+            getData.data.apply(empObj,["Ahmedabad","India"]);
+          </p>
+        </div> -->
+      </div>
+      
+    </div>
+  </body>
+</html>
+x

@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Document</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous" />
+  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"
+    integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p"
+    crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js"
+    integrity="sha384-cVKIPhGWiC2Al4u+LWgxfKTRIcfu0JTxR+EQDz/bgldoEyl4H0zUF0QKbrJ0EcQF"
+    crossorigin="anonymous"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script>
+    function selectRadio(evt) {
+      
+      $(document).ready(function () {
+        var selectedRadioButton = evt.target.getAttribute("data-bs-name");
+        $("#radioLabel").text("You Have Selected : " + selectedRadioButton);
+
+        // ($("<label></label>").text("You Have Selected : ").css("background-color","yellow")).insertBefore("#"+evt.target.id);
+        // $(evt.target.id).before($("<label>You Have Selected</label>"))
+      });
+    }
+  </script>
+</head>
+
+<body>
+  <div class="container">
+    <div class="row">
+      <div class="col">
+        <h3 class="display-1 text-primary text-center">
+          Welcome to the RadixWeb
+        </h3>
+        <h5 class="display-4 text-warning text-center">
+          Day 22 Practice - 1
+        </h5>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-auto mx-auto border m-5 p-5 border-primary">
+        <label for="">Please Select Your Technology : </label>
+        <input type="radio" name="tech" id="PHP" class="mx-2" data-bs-name="PHP" onclick="selectRadio(event)" value="PHP" />PHP
+        <input type="radio" name="tech" id="ASP.NET" data-bs-name="ASP.NET" class="mx-2" value="aso"
+          onclick="selectRadio(event)" />ASP.NET
+        <input type="radio" name="tech" id="ASP" data-bs-name="ASP" class="mx-2" onclick="selectRadio(event)" />ASP
+        <input type="radio" name="tech" id="JSP" data-bs-name="JSP" class="mx-2" onclick="selectRadio(event)" />JSP
+        <input type="radio" name="tech" id="PERL" class="mx-2" data-bs-name="PERL" onclick="selectRadio(event)" />PERL
+        <input type="radio" name="tech" id="COLD_FUSION" data-bs-name="Cold Fusion" class="mx-2"
+          onclick="selectRadio(event)" />Cold Fusion
+        <input type="radio" name="tech" id="OTHER" data-bs-name="other" class="mx-2"
+          onclick="selectRadio(event)" />Other
+        <label for="" id="radioLabel" class="d-block m-4"></label>
+      </div>
+    </div>
+  </div>
+</body>
+
+</html>

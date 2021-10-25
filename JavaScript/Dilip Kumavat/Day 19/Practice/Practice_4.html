@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC"
+      crossorigin="anonymous"
+    />
+    <script
+      src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"
+      integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js"
+      integrity="sha384-cVKIPhGWiC2Al4u+LWgxfKTRIcfu0JTxR+EQDz/bgldoEyl4H0zUF0QKbrJ0EcQF"
+      crossorigin="anonymous"
+    ></script>
+    <script src="./Js/Practice_4.js"></script>
+
+  </head>
+  <body>
+    <div class="container">
+      <div class="row">
+        <div class="col">
+          <h3 class="display-1 text-primary text-center">
+            Welcome to the RadixWeb
+          </h3>
+          <h5 class="display-4 text-warning text-center">
+            Day 19 Practice - 4
+          </h5>
+        </div>
+      </div>
+      <div class="row border border-primary border-2">
+        <div class="col-6  bg-light">
+          <h2>call Method </h2>
+          <p>
+            The call() method calls a function functionName with a given this value and arguments. <br>
+
+            The first argument of the call() method thisArg is the this value. It allows you to set the this value to any given object.<br>
+            
+            The remaining arguments of the call() method arg1, arg2,… are the arguments of the function.<br>
+            
+            When you invoke a function, the JavaScript engine invokes the call() method of that function object.<br>
+          </p>
+          
+          <hr>
+          <p>
+              <h5>Output</h5>
+            Name : Dilip Kumavat <br>
+            Address : A-28 vasant society,ishwarnagar,ahmedabad <br>
+            fielddName : IT <br>
+            Designation :  Developer <br>
+            city :  Ahmedabad <br>
+            country :  India <br>
+          </p>
+          
+        </div>
+
+        <div class="col-6  bg-secondary">
+          <h3>Code</h3>
+          <p>
+            var empObj = { <br>
+                name : "Dilip Kumavat",<br>
+                address : "A-28 vasant society,ishwarnagar,ahmedabad",<br>
+                fieldName : "IT",<br>
+                designation : "Developer"<br>
+            }<br>
+            
+            var getData = {<br>
+                data : function(city,country){<br>
+                    console.log(`Name : ${this.name}`);<br>
+                    console.log(`Address : ${this.address}`);<br>
+                    console.log(`fielddName : ${this.fieldName}`);<br>
+                    console.log("Designation : ",this.designation);<br>
+                    console.log("city : ",city);<br>
+                    console.log("country : ",country);<br>
+                }<br>
+            }<br>
+            
+            getData.data.call(empObj,"Ahmedabad","India");
+          </p>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-auto"></div>
+      </div>
+    </div>
+  </body>
+</html>

@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-F3w7mX95PdgyTmZZMECAngseQB83DfGTowi0iMjiWaeVhAn4FJkqJByhZMI3AhiU"
+      crossorigin="anonymous"
+    />
+  </head>
+  <body>
+    <header class="mb-5">
+      <h1 class="display-3 text-center my-3">Float and Position</h1>
+      <div class="container">
+        <div class="row">
+          <div class="col-md-3">
+            <div class="dropdown w-100">
+              <button class="btn btn-primary dropdown-toggle w-100" type="button" data-bs-toggle="dropdown">
+               2:Utilities
+              </button>
+              <ul class="dropdown-menu w-100">
+                <li><a class="dropdown-item" href="./2_2 Basic_Typography.html">2.2 Basic Typography</a></li>
+                <li><a href="./2_3 text_alignement_display.html" class="dropdown-item">2.3 Text Alignment & Display</a></li>
+                <li><a href="./2_4_float_&_Poistion.html" class="dropdown-item">2.4 Float & Position</a></li>
+                <li><a href="./2_5_colors_background.html" class="dropdown-item">2.5 Colors & Background</a></li>
+                <li><a href="./2_6_spacing.html" class="dropdown-item">2.6 Spacing</a></li>
+                <li><a href="./2_7_sizing.html" class="dropdown-item">2.7 Sizing</a></li>
+                <li><a href="./2_8_breakpoints.html" class="dropdown-item">2.8 Breakpoints</a></li>
+              </ul>
+            </div>
+          </div>
+          <div class="col-md-3">
+           <div class="dropdown">
+             <button class="btn btn-success dropdown-toggle w-100" type="button" data-bs-toggle="dropdown">
+              3:CSS Component
+             </button>
+             <ul class="dropdown-menu w-100">
+               <li><a href="../Css Components/3_2_buttons.html" class="dropdown-item">3.2 Buttons</a></li>
+               <li><a href="../Css Components/3_3_navbar.html" class="dropdown-item">3.3 Navbar</a></li>
+               <li><a href="../Css Components/3_4_list_groups_badges.html" class="dropdown-item">3.4 Lists Group & Badges</a></li>
+               <li><a href="../Css Components/3_5_forms.html" class="dropdown-item">3.5 Forms</a></li>
+               <li><a href="../Css Components/3_6_input_groups.html" class="dropdown-item">3.6 Input Groups</a></li>
+               <li><a href="../Css Components/3_7_alerts_progress.html" class="dropdown-item">3.7 Alerts & Progress</a></li>
+               <li><a href="../Css Components/3_8_table_pagination.html" class="dropdown-item">3.8 Table & Pagination</a></li>
+               <li><a href="../Css Components/3_9_cards.html" class="dropdown-item">3.9 Cards</a></li>
+               <li><a href="../Css Components/3_10_media_object.html" class="dropdown-item">3.10 Media Objects</a></li>
+             </ul>
+           </div>
+          </div>
+          <div class="col-md-3">
+           <div class="dropdown">
+             <button class="btn btn-warning dropdown-toggle w-100" type="button" data-bs-toggle="dropdown">
+              4:Grid System & flex box
+             </button>
+             <ul class="dropdown-menu w-100">
+               <li><a href="../Grid_System_&_flex_box/4_2_grid_system.html" class="dropdown-item">4.2 Grid System</a></li>
+               <li><a href="../Grid_System_&_flex_box/4_3_grid_alignment.html" class="dropdown-item">4.3 Grid Alignment</a></li>
+               <li><a href="../Grid_System_&_flex_box/4_4_flexbox.html" class="dropdown-item">4.4 Flexbox</a></li>
+               <li><a href="../Grid_System_&_flex_box/4_5_auto_margins_wrapping_order.html" class="dropdown-item">4.5 Auto margins and Wrapping Order Grid Alignment</a></li>
+             </ul>
+           </div>
+          </div>
+          <div class="col-md-3">
+           <div class="dropdown">
+             <button class="btn btn-danger dropdown-toggle w-100" type="button" data-bs-toggle="dropdown">
+              5 : Javascript Widgets
+             </button>
+             <ul class="dropdown-menu w-100">
+               <li><a href="../Javascrip_widgets/5_2_carousel.html" class="dropdown-item">5.2 Carousel</a></li>
+               <li><a href="../Javascrip_widgets/5_3_collapse.html" class="dropdown-item">5.3 Collapse</a></li>
+               <li><a href="../Javascrip_widgets/5_4_tooltips.html" class="dropdown-item">5.4 Tooltips</a></li>
+               <li><a href="../Javascrip_widgets/5_5_popovers.html" class="dropdown-item">5.5 Popovers</a></li>
+               <li><a href="../Javascrip_widgets/5_6_modals.html" class="dropdown-item">5.6 Modals</a></li>
+             </ul>
+           </div>
+          </div>
+        </div>
+      </div>
+    </header>
+    <div class="container">
+      <!-- FLOATS -->
+      <div class="float-start">Float left</div>
+      <br />
+      <div class="float-end">Float right</div>
+      <br />
+      <div class="float-none">Float none</div>
+      <br />
+
+      <!-- RESPONSIVE FLOATS -->
+      <div class="float-sm-end">Float right on small or wider</div>
+      <br />
+      <div class="float-md-end">Float right on medium or wider</div>
+      <br />
+      <div class="float-lg-end">Float right on large or wider</div>
+      <br />
+      <div class="float-xl-end">Float right on extra large or wider</div>
+      <br />
+
+      <div class="float-sm-start">Float left on small or wider</div>
+      <br />
+      <div class="float-md-start">Float left on medium or wider</div>
+      <br />
+      <div class="float-lg-start">Float left on large or wider</div>
+      <br />
+      <div class="float-xl-start">Float left on extra large or wider</div>
+      <br />
+
+      <div class="float-sm-none">Float none on small or wider</div>
+      <br />
+      <div class="float-md-none">Float none on medium or wider</div>
+      <br />
+      <div class="float-lg-none">Float none on large or wider</div>
+      <br />
+      <div class="float-xl-none">Float none on extra large or wider</div>
+      <br />
+
+      <br />
+      <br />
+
+      <!-- CLEARFIX -->
+      <div class="bg-success clearfix">
+        <button class="float-start btn btn-warning">Float Left</button>
+        <button class="float-end btn btn-warning">Float Right</button>
+      </div>
+
+      <!-- FIXED TOP -->
+      <h3 class="fixed-top">Fixed Top</h3>
+
+      <p>
+        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quae iure
+        natus, fuga provident molestias, voluptates molestiae aperiam sit dicta
+        a assumenda nesciunt quos adipisci reprehenderit animi ipsum unde quasi
+        nobis veniam, modi. Fuga natus harum, maxime corporis rerum, maiores
+        delectus aliquam aut quo incidunt dignissimos temporibus? Vitae dolorem
+        accusamus voluptatibus illo aut nam praesentium obcaecati quaerat
+        cupiditate distinctio tempora eius esse fuga, repellat fugit harum quia
+        nihil sit in debitis expedita. Eos, voluptates eum rem voluptatum
+        tempore accusamus soluta enim, animi in voluptatibus aliquam distinctio
+        totam repudiandae necessitatibus quidem consequatur incidunt aliquid ad!
+        Inventore ratione, consequatur eligendi iusto esse iure officia
+        praesentium magni in! Nemo tempora, voluptatem facilis reprehenderit
+        minima reiciendis alias similique est rem debitis id expedita voluptatum
+        porro fugiat magni inventore neque.
+      </p>
+
+      <!-- FIXED STICKY -->
+      <h3 class="float-end sticky-top">Sticky</h3>
+
+      <p>
+        Est molestias sunt quae quibusdam sequi odit, iusto expedita tempore
+        aspernatur ipsum, necessitatibus rerum debitis, harum, voluptatibus
+        dolorem. Reprehenderit ex aperiam tempore. Cumque ut iste ullam non
+        pariatur, qui architecto, commodi illo praesentium debitis similique,
+        molestiae harum distinctio inventore incidunt enim atque repudiandae
+        eius molestias exercitationem tempore odio dignissimos iusto officia.
+        Libero quasi dicta quos est eveniet magni deserunt aut vero id ad,
+        incidunt nostrum provident tempora modi placeat voluptatem, quod
+        excepturi ipsam aspernatur necessitatibus molestias possimus veritatis
+        sequi. Minus ducimus maiores debitis, nulla magni eum ratione numquam
+        deleniti sunt et dolorum necessitatibus cumque fugit libero recusandae
+        impedit, quaerat, nemo. Vel temporibus amet alias mollitia aspernatur
+        error sint, doloremque, porro blanditiis quia atque ratione reiciendis,
+        praesentium sed doloribus excepturi. Eius tenetur quis veniam enim atque
+        fugit, a itaque dignissimos iusto, tempore fugiat minima libero quasi
+        exercitationem corrupti nam sequi, doloremque quae repudiandae quisquam
+        iure nisi totam consectetur. Corrupti corporis doloribus dolore iusto
+        perspiciatis ipsum, enim sapiente nobis ullam delectus aperiam eaque
+        harum sequi porro! Reprehenderit hic dolores repellat deleniti, illo
+        nostrum nam at odio quasi quis eaque asperiores culpa doloremque ad
+        velit ullam ratione omnis quae adipisci autem necessitatibus. Quod nam
+        non maiores assumenda quae eius nobis cum suscipit, optio aliquid beatae
+        modi tempora delectus voluptatibus debitis earum natus amet libero
+        itaque quasi expedita, maxime repudiandae! Repudiandae sunt similique
+        eum, provident deserunt vitae. Maxime nostrum, nemo quia eius rerum quas
+        recusandae. Molestiae ullam dignissimos illo eum necessitatibus culpa
+        ea, distinctio maiores molestias aliquam, eligendi soluta cumque odio
+        quaerat cupiditate similique in accusamus dolorum nobis. Ea, rem fugit.
+        Minima quae magni laboriosam possimus corporis quidem recusandae
+        aspernatur dignissimos accusamus adipisci, maiores, tenetur excepturi
+        doloremque eum consequuntur? Expedita possimus sit, vel neque fugiat quo
+        ab? Quaerat alias, molestias rerum repudiandae, iste, voluptatem
+        consequatur ex enim tenetur quidem expedita, provident vel reiciendis.
+        Ea ipsam suscipit ex ab nulla est, aspernatur nesciunt consequatur
+        cumque laudantium. Unde ab earum eius vero obcaecati reiciendis omnis
+        quod culpa harum, modi, possimus molestiae voluptatibus beatae, minima
+        ad accusamus quibusdam! Dolor nostrum impedit culpa nemo expedita,
+        numquam dignissimos totam ex reprehenderit consectetur neque dicta
+        deserunt, recusandae porro ipsa accusamus maxime soluta eum facilis
+        temporibus nesciunt accusantium. Placeat provident facere blanditiis
+        doloremque eos tempora officia doloribus deserunt molestias voluptates
+        velit hic, tenetur cupiditate ab. Hic, unde!
+      </p>
+
+      <!-- FIXED BOTTOM -->
+      <h3 class="fixed-bottom">Fixed Bottom</h3>
+    </div>
+    <script
+      src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"
+      integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js"
+      integrity="sha384-cVKIPhGWiC2Al4u+LWgxfKTRIcfu0JTxR+EQDz/bgldoEyl4H0zUF0QKbrJ0EcQF"
+      crossorigin="anonymous"
+    ></script>
+</html>

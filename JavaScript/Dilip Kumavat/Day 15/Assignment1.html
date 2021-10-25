@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      input[type="radio"] {
+        margin-top: -1px;
+        vertical-align: baseline;
+        padding: 10px;
+        margin: 10px;
+      }
+    </style>
+  </head>
+  <body>
+    <label>Please enter first number : </label>
+    <input type="number" name="first_number" id="first_number" required />
+    <br />
+    <br />
+    <label>Please enter second number : </label>
+    <input type="number" name="second_number" id="second_number" required />
+    <br />
+    <br />
+    <label>Operation : </label>
+    <input type="radio" name="operation" value="+" required /> Addition
+    <input type="radio" name="operation" value="-" required /> Subtraction
+    <input type="radio" name="operation" value="*" required /> Multiplication
+    <input type="radio" name="operation" value="/" required /> division
+    <br />
+    <br />
+
+    <button value="submit" onclick="check()">Calculate</button>
+    <button value="reset" onclick="reset()">reset</button>
+
+    <p>Final Result is : <input type="text" name="" id="result" /></p>
+
+    <script src="./Js/Assignment1.js"></script>
+  </body>
+</html>

@@ -1,0 +1,22 @@
+[
+    {
+        "id" : 1,
+        "name" : "Dilip Kumavat",
+        "colleg" : "Git"
+    },
+    {
+        "id" : 2,
+        "name" : "Neel Patel",
+        "colleg" : "L j"
+    },
+    {
+        "id" : 3,
+        "name" : "Darshan shah",
+        "colleg" : "VGEC"
+    },
+    {
+        "id" : 4,
+        "name" : "Prerak modi",
+        "colleg" : "Nirama university"
+    }
+]
