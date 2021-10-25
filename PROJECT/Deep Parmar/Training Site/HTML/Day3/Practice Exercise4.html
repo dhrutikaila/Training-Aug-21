@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Practice Exercise4</title>
+    <style>
+        .header_news {
+            background-color: rgb(165, 199, 241);
+            margin: 10px;
+            padding: 10px;
+            height: 3vh;
+            width: 20%;
+        }
+
+        .content{
+            margin: 0px 3vw;
+            padding: 10px;
+        }
+
+        #main {
+            margin: 10px;
+            padding: 2px;
+            line-height: 25px;
+        }
+
+        .footer_news>p {
+            background-color: rgb(103, 212, 245);
+            height: 2vh;
+            width: 100%;
+            position: relative;
+            bottom: 60vh;
+        }
+
+    </style>
+    <link rel="stylesheet" href="../../ASSETS/CSS/Project.css">
+    <script src="https://kit.fontawesome.com/e153b670c8.js" crossorigin="anonymous"></script>
+</head>
+
+<body>
+    <!-- Header Part -->
+    <header>
+        <img src="../../ASSETS/Images/Radixweb.png" alt="Radixweb_Logo" id="radixweb">
+        <nav>
+            <ul>
+                <li><a href="../../Tutorial Site.html">HOME</a></li>
+                <li><a href="../../HTML.html">HTML</a></li>
+                <li><a href="../../CSS.html">CSS</a></li>
+                <li><a href="../../BOOTSTRAP.html">BOOTSTRAP</a></li>
+                <li><a href="../../JAVASCRIPT.html">JAVASCRIPT</a></li>
+                <li><a href="../../JQUERY.html">JQUERY</a></li>
+                <li><a href="../../PROJECT.html">PROJECT</a></li>
+            </ul>
+        </nav>
+    </header>
+
+
+    <!-- Main container -->
+    <div class="main">
+        <!-- sidebar -->
+        <div class="sidebar">
+            <ol class="mainfolder">
+                <li><i class="fas fa-folder-open">Day-3</i>
+                    <ul class="folder">
+                        <li><i class="fas fa-folder-open"></i>Practice Exercise
+                            <ol class="subfolder">
+                                <li><a href="Practice Exercise1.html">Student Report Card</a></li>
+                                <li><a href="Practice Exercise2.html">Arrange Department</a></li>
+                                <li><a href="Practice Exercise3.html">Create Login Form</a></li>
+                                <li><a href="Practice Exercise4.html">Article tag display news</a></li>
+                                <li><a href="Practice Exercise5.html">Horizontal menu</a></li>
+                            </ol>
+                        </li>
+                        <li><i class="fas fa-folder-open"></i>Assignment
+
+                            <ol class="subfolder">
+                                <li><a href="Assignment.html">Design a form for storing employee
+                                        details</a></li>
+                            </ol>
+                        </li>
+                    </ul>
+                </li>
+                <li><i class="fas fa-folder-open">Day-4</i>
+                    <ul class="folder">
+                        <li><i class="fas fa-folder-open"></i>Practice Exercise
+
+                            <ol class="subfolder">
+                                <li><a href="../Day4/HTML/Practice Exercise1.html">Alignment to center to student Report
+                                        Card</a></li>
+                                <li><a href="../Day4/HTML/Practice Exercise2.html">Provide Border to paragraph</a></li>
+                                <li><a href="../Day4/HTML/Practice Exercise3.html">list in horizontal order</a></li>
+                                <li><a href="../Day4/HTML/Practice Exercise4.html">universal selector</a></li>
+                                <li><a href="../Day4/HTML/Practice Exercise5.html">apply all h1 and h2 blue color.</a>
+                                </li>
+                            </ol>
+                        </li>
+                        <li><i class="fas fa-folder-open"></i>Assignment
+                            <ol class="subfolder">
+                                <li><a href="../Day4/HTML/Assignment.html">Create personalized resume</a></li>
+                            </ol>
+                        </li>
+                    </ul>
+                </li>
+            </ol>
+        </div>
+        <!-- Rightside content -->
+        <div class="content">
+            <!--Use Article tag display one latest news.-->
+            <h2>Using Article tag display one latest news.</h2>
+            <hr><br>
+            <article>
+                <header class="header_news">
+                    <h2>Daily News</h2>
+                    <!-- <h4>Here's how much money India's richest YouTube stars earn</h4> -->
+                </header>
+
+                <p id="main">
+                    Carry Minati has net worth of USD 4 million The 22-year-old Carry Minati or Ajey Nagar is a Content
+                    Creator
+                    on Youtube and has a net worth of USD 4 million.
+                    Carry Minati was born on June 12, 1999 in Faridabad, Haryana. He is an Indian comedian, rapper,
+                    gamer.
+                    He posts videos of satirical parodies, live gaming.
+                </p>
+
+                <footer class="footer_news">
+                    <p style="text-align:center;">Posted on &nbsp;<time datetime="2021-09-13 4:00">13 September
+                            2021</time>&copy; By Deep Parmar.
+                    </p>
+                </footer>
+            </article>
+
+        </div>
+    </div>
+    <!-- footer -->
+
+    <footer>
+        <p>&copy;Deep Parmar</p>
+    </footer>
+
+</body>
+
+</html>

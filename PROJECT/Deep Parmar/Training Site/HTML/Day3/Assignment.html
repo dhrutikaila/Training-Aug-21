@@ -1,0 +1,175 @@
+<!--Design a form for storing employee details. (Employee name, age, Gender, designation, salary, location, Email ID, Date of Joining and contact number)-->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Employee Details</title>
+    <style>
+        .content{
+            margin: 0px 3vw;
+            padding: 20px;
+        }
+        h2,h3{
+            margin:2vh 0px;
+            background-color:rgb(207, 211, 216); 
+            width: 100%; 
+            height: 4vh;
+            text-align:center
+        }
+        .tblcontent tr,td{
+            margin: 20px;
+            padding: 10px;
+            font-size: 20px;
+        }
+    </style>
+    <link rel="stylesheet" href="../../ASSETS/CSS/Project.css">
+    <script src="https://kit.fontawesome.com/e153b670c8.js" crossorigin="anonymous"></script>
+</head>
+
+<body>
+    <!-- Header Part -->
+    <header>
+        <img src="../../ASSETS/Images/Radixweb.png" alt="Radixweb_Logo" id="radixweb">
+        <nav>
+            <ul>
+                <li><a href="../../Tutorial Site.html">HOME</a></li>
+                <li><a href="../../HTML.html">HTML</a></li>
+                <li><a href="../../CSS.html">CSS</a></li>
+                <li><a href="../../BOOTSTRAP.html">BOOTSTRAP</a></li>
+                <li><a href="../../JAVASCRIPT.html">JAVASCRIPT</a></li>
+                <li><a href="../../JQUERY.html">JQUERY</a></li>
+                <li><a href="../../PROJECT.html">PROJECT</a></li>
+            </ul>
+        </nav>
+    </header>
+
+
+
+    <!-- Main container -->
+    <div class="main">
+        <!-- sidebar -->
+        <div class="sidebar">
+            <ol class="mainfolder">
+                <li><i class="fas fa-folder-open">Day-3</i>
+                    <ul class="folder">
+                        <li><i class="fas fa-folder-open"></i>Practice Exercise
+                            <ol class="subfolder">
+                                <li><a href="Practice Exercise1.html">Student Report Card</a></li>
+                                <li><a href="Practice Exercise2.html">Arrange Department</a></li>
+                                <li><a href="Practice Exercise3.html">Create Login Form</a></li>
+                                <li><a href="Practice Exercise4.html">Article tag display news</a></li>
+                                <li><a href="Practice Exercise5.html">Horizontal menu</a></li>
+                            </ol>
+                        </li>
+                        <li><i class="fas fa-folder-open"></i>Assignment
+
+                            <ol class="subfolder">
+                                <li><a href="Assignment.html">Design a form for storing employee
+                                        details</a></li>
+                            </ol>
+                        </li>
+                    </ul>
+                </li>
+                <li><i class="fas fa-folder-open">Day-4</i>
+                    <ul class="folder">
+                        <li><i class="fas fa-folder-open"></i>Practice Exercise
+
+                            <ol class="subfolder">
+                                <li><a href="../Day4/HTML/Practice Exercise1.html">Alignment to center to student Report
+                                        Card</a></li>
+                                <li><a href="../Day4/HTML/Practice Exercise2.html">Provide Border to paragraph</a></li>
+                                <li><a href="../Day4/HTML/Practice Exercise3.html">list in horizontal order</a></li>
+                                <li><a href="../Day4/HTML/Practice Exercise4.html">universal selector</a></li>
+                                <li><a href="../Day4/HTML/Practice Exercise5.html">apply all h1 and h2 blue color.</a>
+                                </li>
+                            </ol>
+                        </li>
+                        <li><i class="fas fa-folder-open"></i>Assignment
+                            <ol class="subfolder">
+                                <li><a href="../Day4/HTML/Assignment.html">Create personalized resume</a></li>
+                            </ol>
+                        </li>
+                    </ul>
+                </li>
+            </ol>
+        </div>
+
+        <!-- Rightside content -->
+        <div class="content">
+            <h2>Assignment:</h2>
+            <h3>Design a form for storing employee details. (Employee name, age, Gender, designation, salary, location, Email
+                ID, Date of Joining and contact number)</h3>
+            <hr><br>
+            <form>
+                <fieldset>
+                    <legend>Employee Details:</legend>
+                    <table class="tblcontent">
+                        <tr>
+                            <td><label for="Employee Name">Employee Name: </label></td>
+                            <td> <input type="text" name="EmpName" min="1" max="20" placeholder="Employee Name" required></td>
+                        </tr>
+                        <tr>
+                            <td><label for="Age">Age: </label> </td>
+                            <td> <input type="number" name="Age" min="1" max="200" placeholder="Age" required></td>
+                        </tr>
+                        <tr>
+                            <td><label for="Gender">Gender: </label> </td>
+                            <td> <input type="radio" name="Gender" value="Male" required>Male
+                                <input type="radio" name="Gender" value="Female" required>Female
+                                <input type="radio" name="Gender" value="Other" required>Other
+                            </td>
+                        </tr>
+                        <tr>
+                            <td><label for="Designation">Designation:</td>
+                            <td> <input type="text" name="Designation" placeholder="Designation" required></label></td>
+                        </tr>
+                        <tr>
+                            <td><label for="Salary">Salary: </label> </td>
+                            <td>
+                                <input type="number" name="salry" max="10000000" placeholder="Salary" required></td>
+                        </tr>
+                        <tr>
+                            <td><label for="Location">Choose Location:</label></td>
+                            <td><select name="Location">
+                                    <option value="">--Location---</option>
+                                    <option value="Ahmedabad">Ahmedabad</option>
+                                    <option value="Surat">Surat</option>
+                                    <option value="Rajkot">Rajkot</option>
+                                    <option value="Bhavnagar">Bhavnagar</option>
+                                    <option value="Gandhinagar">Gandhinagar</option>
+                                </select></td>
+                        </tr>
+                        <tr>
+                            <td><label for="Email">Email Id: </label> </td>
+                            <td> <input type="email" name="email" placeholder="email@gmail.com" required></td>
+                        </tr>
+                        <tr>
+                            <td><label for="Date Of Joining">Date Of Joining: </label> </td>
+                            <td> <input type="date" name="JoiningDate" required></td>
+                        </tr>
+                        <tr>
+                            <td><label for="Contact Number">Contact Number: </label> </td>
+                            <td> <input type="number" min="1111111111" max="9999999999" name="ContNumber" placeholder="Contact Number" required></td>
+                        </tr>
+                        <tr>
+                            <td><input type="submit" value="Submit">&nbsp;&nbsp;<input type="reset" value="Reset"></td>
+                        </tr>
+                    </table>
+                </fieldset>
+            </form>
+        </div>
+
+    </div>
+
+    <!-- footer -->
+
+    <footer>
+        <p>&copy;Deep Parmar</p>
+    </footer>
+
+
+</body>
+
+</html>

@@ -1,0 +1,312 @@
+<!-- Design a form for storing employee details. (EmployeeID, Employee name, age, Gender, designation, salary, location, Email ID, Date of Joining and contact number)
+Validation required
+EmployeeID should be at least 5 character long. use regular Expression
+Age should be a number
+Each field should contain value
+Email ID should be in proper format
+Date of joining should be in date format
+Location should be in the drop down list
+Use radio buttons for Gender -->
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Assignment</title>
+    <link rel="stylesheet" href="../../../ASSETS/CSS/Style.css">
+    <script src="https://kit.fontawesome.com/e153b670c8.js" crossorigin="anonymous"></script>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+</head>
+
+<body>
+
+    <!-- Progessbar part -->
+    <div class="progressbar"></div>
+    <!-- Header Part -->
+    <header>
+        <nav class="navbar navbar-expand-lg navbar-light d-flex justify-content-between" style="background-color: #d1ecf1">
+            <img src="../../../ASSETS/Images/Radixweb.png" alt="Radixweb_Logo" id="radixweb">
+            <button class="navbar-toggler ms-auto" type="button" data-bs-toggle="collapse" data-bs-target="#navbarToggler">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarToggler">
+                <ul class="navbar-nav ms-auto  mb-2 mb-lg-0">
+                    <li class="nav-item mx-4"><a class="nav-link fs-4" href="../../../Tutorial Site.html">HOME</a></li>
+                    <li class="nav-item mx-4"><a class="nav-link fs-4" href="../../../HTML.html">HTML</a></li>
+                    <li class="nav-item mx-4"><a class="nav-link fs-4" href="../../../CSS.html">CSS</a></li>
+                    <li class="nav-item mx-4"><a class="nav-link fs-4" href="../../../BOOTSTRAP.html">BOOTSTRAP</a></li>
+                    <li class="nav-item mx-4"><a class="nav-link fs-4" href="../../../JAVASCRIPT.html">JAVASCRIPT</a>
+                    </li>
+                    <li class="nav-item mx-4"><a class="nav-link fs-4" href="../../../JQUERY.html">JQUERY</a></li>
+                    <li class="nav-item mx-4"><a class="nav-link fs-4" href="../../../PROJECT.html">PROJECT</a></li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Main container -->
+    <div id="main">
+        <!-- sidebar -->
+        <div id="sidebar" style="background-color: #f6e1c6;">
+            <ol id="mainfolder" class="ms-4">
+                <li><i class="fas fa-folder-open">Day-15</i>
+                    <ul class="folder">
+                        <li><i class="fas fa-folder-open"></i>Practice Exercise
+                            <ol class="subfolder">
+                                <li><a href="../../Day15/Practice/Practice.html">Practice</a>
+                                </li>
+                                <li><a href="../../Day15/Practice/Practice Exercise1.html">Practice Exercise-1</a>
+                                </li>
+                                <li><a href="../../Day15/Practice/Practice Exercise2.html">Practice Exercise-2</a>
+                                </li>
+                            </ol>
+                        </li>
+                        <li><i class="fas fa-folder-open"></i>Assignment
+                            <ol class="subfolder">
+                                <li><a href="../../Day15/Assignment/Assignment.html">Assignment</a></li>
+                            </ol>
+                        </li>
+                    </ul>
+                </li>
+                <li><i class="fas fa-folder-open">Day-16</i>
+                    <ul class="folder">
+                        <li><i class="fas fa-folder-open"></i>Practice Exercise
+
+                            <ol class="subfolder">
+                                <li><a href="../../Day16/Practice/Practice.html">Practice</a>
+                                </li>
+                                <li><a href="../../Day16/Practice/Practice Exercise1.html">Practice Exercise-1</a>
+                                </li>
+                                <li><a href="../../Day16/Practice/Practice Exercise2.html">Practice Exercise-2</a>
+                                </li>
+                                <li><a href="../../Day16/Practice/Practice Exercise3.html">Practice Exercise-3</a>
+                                </li>
+                                <li><a href="../../Day16/Practice/Practice Exercise4.html">Practice Exercise-4</a>
+                                </li>
+                                <li><a href="../../Day16/Practice/Practice Exercise5.html">Practice Exercise-5</a>
+                                </li>
+                            </ol>
+                        </li>
+                        <li><i class="fas fa-folder-open"></i>Assignment
+                            <ol class="subfolder">
+                                <li><a href="../../Day16/Assignment/Assignment.html">Assignment</a></li>
+                            </ol>
+                        </li>
+                    </ul>
+                </li>
+                <li><i class="fas fa-folder-open">Day-17</i>
+                    <ul class="folder">
+                        <li><i class="fas fa-folder-open"></i>Practice Exercise
+
+                            <ol class="subfolder">
+                                <li><a href="../../Day17/Practice/Practice.html">Practice</a>
+                                </li>
+                                <li><a href="../../Day17/Practice/Practice Exercise1.html">Practice Exercise-1</a>
+                                </li>
+                                <li><a href="../../Day17/Practice/Practice Exercise2.html">Practice Exercise-2</a>
+                                </li>
+                                <li><a href="../../Day17/Practice/Practice Exercise3.html">Practice Exercise-3</a>
+                                </li>
+                                <li><a href="../../Day17/Practice/Practice Exercise4.html">Practice Exercise-4</a>
+                                </li>
+                                <li><a href="../../Day17/Practice/Practice Exercise5.html">Practice Exercise-5</a>
+                                </li>
+                                <li><a href="../../Day17/Practice/Practice Exercise6.html">Practice Exercise-6</a>
+                                </li>
+                                <li><a href="../../Day17/Practice/Practice Exercise7.html">Practice Exercise-7</a>
+                                </li>
+                                <li><a href="../../Day17/Practice/Practice Exercise8.html">Practice Exercise-8</a>
+                                </li>
+                                <li><a href="../../Day17/Practice/Practice Exercise9.html">Practice Exercise-9</a>
+                                </li>
+                            </ol>
+                        </li>
+                        <li><i class="fas fa-folder-open"></i>Assignment
+                            <ol class="subfolder">
+                                <li><a href="../../Day17/Assignment/Assignment.html">Assignment</a></li>
+                            </ol>
+                        </li>
+                    </ul>
+                </li>
+                <li><i class="fas fa-folder-open">Day-18</i>
+                    <ul class="folder">
+                        <li><i class="fas fa-folder-open"></i>Practice Exercise
+
+                            <ol class="subfolder">
+                                <li><a href="../../Day18/Practice/Practice.html">Practice</a>
+                                </li>
+                                <li><a href="../../Day18/Practice/Practice Exercise1.html">Practice Exercise-1</a>
+                                </li>
+                                <li><a href="../../Day18/Practice/Practice Exercise2.html">Practice Exercise-2</a>
+                                </li>
+                                <li><a href="../../Day18/Practice/Practice Exercise3.html">Practice Exercise-3</a>
+                                </li>
+                            </ol>
+                        </li>
+                        <li><i class="fas fa-folder-open"></i>Assignment
+                            <ol class="subfolder">
+                                <li><a href="../../Day18/Assignment/Assignment.html">Assignment</a></li>
+                            </ol>
+                        </li>
+                    </ul>
+                </li>
+                <li><i class="fas fa-folder-open">Day-19</i>
+                    <ul class="folder">
+                        <li><i class="fas fa-folder-open"></i>Practice Exercise
+
+                            <ol class="subfolder">
+                                <li><a href="../../Day19/Practice/Practice.html">Practice</a>
+                                </li>
+                                <li><a href="../../Day19/Practice/Practice Exercise1.html">Practice Exercise-1</a>
+                                </li>
+                                <li><a href="../../Day19/Practice/Practice Exercise2.html">Practice Exercise-2</a>
+                                </li>
+                                <li><a href="../../Day19/Practice/Practice Exercise3.html">Practice Exercise-3</a>
+                                </li>
+                                <li><a href="../../Day19/Practice/Practice Exercise4.html">Practice Exercise-4</a>
+                                </li>
+                                <li><a href="../../Day19/Practice/Practice Exercise5.html">Practice Exercise-5</a>
+                                </li>
+                                <li><a href="../../Day19/Practice/Practice Exercise6.html">Practice Exercise-6</a>
+                                </li>
+                    </ul>
+                    </li>
+                    <li><i class="fas fa-folder-open">Day-20</i>
+                        <ul class="folder">
+                            <li><i class="fas fa-folder-open"></i>Practice Exercise
+
+                                <ol class="subfolder">
+                                    <li><a href="../../Day20/Practice/Practice.html">Practice</a>
+                                    </li>
+                                    <li><a href="../../Day20/Practice/Practice Exercise.html">Practice Exercise</a>
+                                    </li>
+                                </ol>
+                            </li>
+                            <li><i class="fas fa-folder-open"></i>Assignment
+                                <ol class="subfolder">
+                                    <li><a href="../../Day20/Assignment/Assignment.html">Assignment</a></li>
+                                </ol>
+                            </li>
+                        </ul>
+                    </li>
+                    </ol>
+        </div>
+
+        <!-- Rightside content -->
+        <div id="content" class="my-5">
+
+            <h2 style="height: 5vh; color:cadetblue; text-align:center" class="mt-5">Design a form for storing employee details.
+            </h2>
+            <div class="container w-50 border border-2 shadow rounded mt-5 ">
+                <form id="form_id ">
+                    <!-- Use grid layout for getting Employee Details -->
+                    <div class="row ">
+                        <div class="col-6 mb-3 mt-3 ">
+                            <label for="Employee Id " class="form-label text-muted fs-5 ">EmployeeID</label>
+                        </div>
+                        <div class="col-6 mb-3 mt-3 ">
+                            <input type="text " id="EmpId" name="EmpId" class="form-control" placeholder="Employee Id " required>
+                        </div>
+
+                        <div class="col-6 mb-3 ">
+                            <label for="Employee Name " class="form-label text-muted fs-5 ">Employee Name: </label>
+                        </div>
+                        <div class="col-6 mb-3 ">
+                            <input type="text " id="EmpName" name="EmpName" class="form-control" placeholder="Employee Name " required>
+                        </div>
+
+
+                        <div class="col-6 mb-3 ">
+                            <label for="Age" class="form-label text-muted fs-5">Age: </label>
+                        </div>
+                        <div class="col-6 mb-3 ">
+                            <input type="number" name="Age " id="EmpAge" class="form-control" min="1 " max="200 " placeholder="Employee age " required>
+                        </div>
+
+                        <div class="col-6 mb-3 ">
+                            <label for="Gender" class="form-label text-muted fs-5">Gender: </label>
+                        </div>
+
+                        <!-- radio button use for Gender -->
+                        <div class="col-6 mb-3 ">
+                            <input type="radio" id="Male" class="form-check-input ms-1 " name="Gender" value="Male" required>
+                            <label for="gender " class="form-check-label ">Male</label>
+                            <input type="radio" id="Female" class="form-check-input ms-1 " name="Gender" value="Female" required>
+                            <label for="gender " class="form-check-label ">Female</label>
+                            <input type="radio" id="Other" class="form-check-input ms-1 " name="Gender" value="Other" required>
+                            <label for="gender " class="form-check-label ">Other</label>
+                        </div>
+
+                        <div class="col-6 mb-3 ">
+                            <label for="Designation" class="form-label text-muted fs-5 ">Designation:</label>
+                        </div>
+                        <div class="col-6 ">
+                            <input type="text" id="EmpDesignation" name="Designation" class="form-control" placeholder="Designation " required>
+                        </div>
+
+                        <div class="col-6 mb-3 ">
+                            <label for="Salary" class="form-label text-muted fs-5 ">Salary: </label>
+                        </div>
+                        <div class="col-6 mb-3 ">
+                            <input type="number" id="EmpSalary" name="salry" class="form-control" max="10000000" placeholder="Salary " required>
+                        </div>
+                        <!-- Here use Dropdown For Location -->
+                        <div class="col-12 mb-3 ">
+                            <label for="Location" class="form-label text-muted fs-5">Choose Location:</label>
+                            <select class="form-select" id="EmpLocation" name="Location">
+                                <option value=" " selected>--Location---</option>
+                                <option value="Ahmedabad">Ahmedabad</option>
+                                <option value="Surat">Surat</option>
+                                <option value="Rajkot">Rajkot</option>
+                                <option value="Bhavnagar">Bhavnagar</option>
+                                <option value="Gandhinagar">Gandhinagar</option>
+                            </select>
+                        </div>
+
+                        <div class="col-6 mb-3 ">
+                            <label for="Email" class="form-label text-muted fs-5">Email Id: </label>
+                        </div>
+                        <div class="col-6 mb-3 ">
+                            <input type="email" id="EmpGmail" name="email" class="form-control" placeholder="email@gmail.com " required>
+                        </div>
+
+                        <div class="col-6 mb-3 ">
+                            <label for="Date Of Joining " class="form-label text-muted fs-5 ">Date Of Joining: </label>
+                        </div>
+                        <div class="col-6 mb-3 ">
+                            <input type="date" id="EmpDate" name="JoiningDate" class="form-control" required>
+                        </div>
+
+                        <div class="col-6 mb-3 ">
+                            <label for="Contact Number" class="form-label text-muted fs-5">Contact Number: </label>
+                        </div>
+                        <div class="col-6 mb-4 ">
+                            <input type="number" id="EmpPhoneNo" name="ContNumber" class="form-control" placeholder="Contact Number " required>
+                        </div>
+
+                        <!-- pass value of all field to checkDeatil() function when we push submit button  -->
+                        <div class="col-12 mb-3 d-flex justify-content-end ">
+                            <button type="submit" class="btn btn-primary me-3 mb-3 " onclick="checkDeatil(EmpId.value,EmpName.value,EmpAge.value,EmpDesignation.value,EmpSalary.value,EmpGmail.value,EmpDate.value,EmpPhoneNo.value)">
+                                Submit</button>
+                            <button type="reset" class="btn btn-secondary mb-3 ">Reset</button>
+                        </div>
+                    </div>
+                </form>
+
+            </div>
+        </div>
+
+        <!-- Footer -->
+        <footer id="footer ">
+            <p>&copy;Deep Parmar</p>
+        </footer>
+
+        <!-- Add Javascript file -->
+        <script src="Script/Assignment.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js " integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM " crossorigin="anonymous "></script>
+
+</body>
+
+</html>

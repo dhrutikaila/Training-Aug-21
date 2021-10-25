@@ -1,0 +1,43 @@
+<!-- Using Function Apply pass employee object to a function defined in the function.-->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Practice Exercise5</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+
+</head>
+
+<body>
+
+    <h2 style="height: 5vh; color:cadetblue; text-align:center" class="mt-5">Using Function Apply pass employee object
+        to a function defined in the function.</h2>
+    <div class="container border mt-5 w-25">
+        <p class="fs-4 text-muted my-3">Employee Details using Apply:</p>
+        <ul id="emp_data" class="text-info fs-5"></ul>
+    </div>
+
+    <script>
+        const employeeData = {
+            fullData: function () {
+                return "<li>" + "Employee Name = " + this.Name + "</li>" + "<li>" + "Employee Address = " + this.Address + "</li>" + "<li>" + "Employee Designation = " + this.Designation + "</li>";
+            }
+        }
+        var employee = {
+            Name: "Deep",
+            Address: "Ahmedabad",
+            Designation: ".Net Developer"
+        }
+
+        document.getElementById("emp_data").innerHTML = employeeData.fullData.apply(employee); 
+        
+    </script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+        crossorigin="anonymous"></script>
+</body>
+
+</html>

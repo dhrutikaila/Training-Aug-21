@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Practice Exercise3</title>
+    <style>
+        .visible,
+        .hidden,
+        .scroll,
+        .auto,
+        .overflow_x_y {
+            padding: 20px;
+            margin: 20px;
+            background-color: aquamarine;
+            color: black;
+            font-size: 1.5em;
+            height: 10vh;
+            width: 25vw;
+        }
+
+        .leftbar,
+        .rightbar {
+            display: inline-block;
+        }
+
+        .visible+h2 {
+            margin-top: 15vh;
+        }
+
+        h2 {
+            margin: 20px;
+        }
+
+        .visible {
+            overflow: visible;
+        }
+
+        .hidden {
+            overflow: hidden;
+        }
+
+        .scroll {
+            overflow: scroll;
+        }
+
+        .auto {
+            overflow: auto;
+        }
+
+        .overflow_x_y {
+            overflow-x: hidden;
+            overflow-y: auto;
+        }
+    </style>
+    <link rel="stylesheet" href="CSS/Practice Exercise.css">
+</head>
+
+<body>
+    <h2>Suppose we have a div with specific height and width and we need to arrange more text into it. Use overflow
+        properties.</h2>
+
+    <br>
+    <hr>
+    <br>
+    <h2>CSS Overflow visible</h2>
+    <div class="leftbar">
+        <div class="visible">
+            <p>By default, the overflow is visible, meaning that it is not clipped and it renders outside the element's
+                box:
+            </p>
+            <div>You can use the overflow property when you want to have better control of the layout. The overflow
+                property
+                specifies what happens if content overflows an element's box.</div>
+        </div>
+
+        <h2>CSS Overflow hidden</h2>
+        <div class="hidden">
+            <p>With the hidden value, the overflow is clipped, and the rest of the content is hidden:</p>
+            <div>You can use the overflow property when you want to have better control of the layout. The overflow
+                property
+                specifies what happens if content overflows an element's box.</div>
+        </div>
+
+        <h2>CSS Overflow scroll</h2>
+        <div class="scroll">
+            <p>Setting the overflow value to scroll, the overflow is clipped and a scrollbar is added to scroll inside
+                the
+                box. Note that this will add a scrollbar both horizontally and vertically (even if you do not need it):
+            </p>
+            <div>You can use the overflow property when you want to have better control of the layout. The overflow
+                property
+                specifies what happens if content overflows an element's box.</div>
+        </div>
+    </div>
+
+    <div class="rightbar">
+        <h2>CSS Overflow auto</h2>
+        <div class="auto">
+            <p>The auto value is similar to scroll, only it add scrollbars when necessary:</p>
+            <div>You can use the overflow property when you want to have better control of the layout. The overflow
+                property
+                specifies what happens if content overflows an element's box.</div>
+        </div>
+
+        <h2>CSS Overflow x-y</h2>
+        <div class="overflow_x_y">
+            <p>You can also change the overflow of content horizontally or vertically.</p>
+            <p>overflow-x specifies what to do with the left/right edges of the content.<br>
+                overflow-y specifies what to do with the top/bottom edges of the content.</p>
+            <div>You can use the overflow property when you want to have better control of the layout. The overflow
+                property
+                specifies what happens if content overflows an element's box.</div>
+        </div>
+    </div>
+
+</html>

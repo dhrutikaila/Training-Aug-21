@@ -1,0 +1,182 @@
+<!-- Label : “Please select your technology :”
+– Consider following set of radio buttons :-
+“PHP”, “ASP.NET”, “ASP”, “JSP”, “PERL”, “Cold Fusion”, “Other”. Layout these buttons in a Horizontal manner.
+– Clicking on a particular radio button should display the related technology name besides label : “You have  selected : “.
+– Use multiple “span” HTML element for displaying the related message.
+– Note that radio button should be selectable by clicking on the corresponding label.-->
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Practice Exercise3</title>
+    <link rel="stylesheet" href="../../../ASSETS/CSS/Style.css">
+    <script src="https://kit.fontawesome.com/e153b670c8.js" crossorigin="anonymous"></script>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <script src="../../jQuery/jQuery.js"></script>
+    <script>
+        $(document).ready(function() {
+            $("#PHP").click(function() {
+                $("#display").html("<br> You have  selected : " + $("#PHP").attr("value"));
+            })
+            $("#ASP_NET").click(function() {
+                $("#display").html("<br> You have  selected : " + $("#ASP_NET").attr("value"));
+            })
+            $("#ASP").click(function() {
+                $("#display").html("<br> You have  selected : " + $("#ASP").attr("value"));
+            })
+            $("#JSP").click(function() {
+                $("#display").html("<br> You have  selected : " + $("#JSP").attr("value"));
+            })
+            $("#PERL").click(function() {
+                $("#display").html("<br> You have  selected : " + $("#PERL").attr("value"));
+            })
+            $("#Cold_Fusion").click(function() {
+                $("#display").html("<br> You have  selected : " + $("#Cold_Fusion").attr("value"));
+            })
+            $("#Other").click(function() {
+                $("#display").html("<br> You have  selected : " + $("#Other").attr("value"));
+            })
+
+
+        })
+    </script>
+
+</head>
+
+<body>
+
+    <!-- Progessbar part -->
+    <div class="progressbar"></div>
+    <!-- Header Part -->
+    <header>
+        <nav class="navbar navbar-expand-lg navbar-light d-flex justify-content-between" style="background-color: #d1ecf1">
+            <img src="../../../ASSETS/Images/Radixweb.png" alt="Radixweb_Logo" id="radixweb">
+            <button class="navbar-toggler ms-auto" type="button" data-bs-toggle="collapse" data-bs-target="#navbarToggler">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarToggler">
+                <ul class="navbar-nav ms-auto  mb-2 mb-lg-0">
+                    <li class="nav-item mx-4"><a class="nav-link fs-4" href="../../../Tutorial Site.html">HOME</a></li>
+                    <li class="nav-item mx-4"><a class="nav-link fs-4" href="../../../HTML.html">HTML</a></li>
+                    <li class="nav-item mx-4"><a class="nav-link fs-4" href="../../../CSS.html">CSS</a></li>
+                    <li class="nav-item mx-4"><a class="nav-link fs-4" href="../../../BOOTSTRAP.html">BOOTSTRAP</a></li>
+                    <li class="nav-item mx-4"><a class="nav-link fs-4" href="../../../JAVASCRIPT.html">JAVASCRIPT</a>
+                    </li>
+                    <li class="nav-item mx-4"><a class="nav-link fs-4" href="../../../JQUERY.html">JQUERY</a></li>
+                    <li class="nav-item mx-4"><a class="nav-link fs-4" href="../../../PROJECT.html">PROJECT</a></li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Main container -->
+    <div id="main">
+        <!-- sidebar -->
+        <div id="sidebar" style="background-color: #f6e1c6;">
+            <ol id="mainfolder" class="ms-4">
+                <li><i class="fas fa-folder-open">Day-22/23</i>
+                    <ul class="folder">
+                        <li><i class="fas fa-folder-open"></i>Practice Exercise
+                            <ol class="subfolder">
+                                <li><a href="Practice.html">Practice</a>
+                                </li>
+                                <li><a href="Practice Exercise1.html">Practice Exercise-1</a>
+                                </li>
+                                <li><a href="Practice Exercise2.html">Practice Exercise-2</a>
+                                </li>
+                                <li><a href="Practice Exercise3.html">Practice Exercise-3</a>
+                                </li>
+                            </ol>
+                        </li>
+                        <li><i class="fas fa-folder-open"></i>Assignment
+                            <ol class="subfolder">
+                                <li><a href="../Assignment/Assignment.html">Assignment</a></li>
+                            </ol>
+                        </li>
+                    </ul>
+                </li>
+                <li><i class="fas fa-folder-open">Day-24</i>
+                    <ul class="folder">
+                        <li><i class="fas fa-folder-open"></i>Practice Exercise
+
+                            <ol class="subfolder">
+                                <li><a href="../../Day24/Practice/Practice.html">Practice</a>
+                                </li>
+
+                            </ol>
+                        </li>
+                        <li><i class="fas fa-folder-open"></i>Assignment
+                            <ol class="subfolder">
+                                <li><a href="../../Day24/Assignment/Assignment.html">Assignment</a></li>
+                            </ol>
+                        </li>
+                    </ul>
+                </li>
+            </ol>
+        </div>
+
+        <!-- Rightside content -->
+        <div id="content" class="my-5">
+
+            <h2 style="height: 5vh; color:cadetblue; text-align:center" class="mt-5">Clicking on a particular radio button should display the related technology name besides label </h2>
+
+            <div class="container text-center bg-warning border mt-5 w-75">
+                <form id="myform">
+                    <div class="row ms-5">
+                        <div class="col-12">
+                            <label for="input" class="text-primary fs-2 my-3">Please Select Your Technology :</label>
+                        </div>
+                        <div class="col-auto ms-4">
+                            <input type="radio" class="form-check-input" name="technology" id="PHP" value="PHP">
+                            <label class="form-check-label" id="PHP_label" for="PHP">PHP</label>
+                        </div>
+                        <div class="col-auto ms-4">
+                            <input type="radio" class="form-check-input" name="technology" id="ASP_NET" value="ASP NET">
+                            <label class="form-check-label" id="ASP_NET_label" for="ASP.NET">ASP.NET</label>
+                        </div>
+                        <div class="col-auto ms-4">
+                            <input type="radio" class="form-check-input" name="technology" id="ASP" value="ASP">
+                            <label class="form-check-label" id="ASP_label" for="ASP">ASP</label>
+                        </div>
+                        <div class="col-auto ms-4">
+                            <input type="radio" class="form-check-input" name="technology" id="JSP" value="JSP">
+                            <label class="form-check-label" id="JSP_label" for="JSP">JSP</label>
+                        </div>
+                        <div class="col-auto ms-4">
+                            <input type="radio" class="form-check-input" name="technology" id="PERL" value="PERL">
+                            <label class="form-check-label" id="PERL_label" for="PERL">PERL</label>
+                        </div>
+                        <div class="col-auto ms-4">
+                            <input type="radio" class="form-check-input" name="technology" id="Cold_Fusion" value="Cold Fusion">
+                            <label class="form-check-label" id="Cold_Fusion_label" for="Cold Fusion">Cold Fusion</label>
+                        </div>
+                        <div class="col-auto ms-4">
+                            <input type="radio" class="form-check-input" name="technology" id="Other" value="Other">
+                            <label class="form-check-label" id="Other_label" for="Other">Other</label>
+                        </div>
+
+                        <div class="col-12">
+                            <label class="text-success fs-3" id="display"></label>
+                        </div>
+
+                    </div>
+                </form>
+            </div>
+        </div>
+
+        <!-- Footer -->
+        <footer id="footer">
+            <p>&copy;Deep Parmar</p>
+        </footer>
+
+
+
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+
+
+</body>
+
+</html>

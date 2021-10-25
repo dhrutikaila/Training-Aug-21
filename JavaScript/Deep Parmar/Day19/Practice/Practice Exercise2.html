@@ -1,0 +1,43 @@
+<!-- Using Function Constructor, find the area of rectangle -->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Practice Exercise2</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+
+</head>
+
+<body>
+
+    <h2 style="height: 5vh; color:cadetblue; text-align:center" class="mt-5">Using Function Constructor, find the area
+        of rectangle</h2>
+    <div class="container border mt-5 w-25">
+        <div class="form-group">
+            <label for="lenght" class="form-label text-muted fs-4 my-3">Enter lenght of rectangle</label>
+            <input type="number" name="num" id="lenght" class="form-control mb-3" placeholder="Enter lenght">
+            <label for="width" class="form-label text-muted fs-4 mb-3">Enter width of rectangle</label>
+            <input type="number" name="num" id="width" class="form-control mb-3" placeholder="Enter width">
+        </div>
+        <button class="btn btn-primary my-3" onclick="areaRectangle()">Find Area</button>
+        <div id="area" class="text-success fs-4 my-3"></div>
+    </div>
+
+    <script>
+        function areaRectangle(){
+            var Rec_lenght=parseInt(document.getElementById("lenght").value);
+            var Rec_width=parseInt(document.getElementById("width").value);
+            var Rec_area = new Function("recLenght", "recwidth", "return recLenght * recwidth");
+            var area=Rec_area(Rec_lenght,Rec_width);
+            document.getElementById("area").innerHTML="Area Of Rctangle is :"+area;
+        }
+    </script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+        crossorigin="anonymous"></script>
+</body>
+
+</html>

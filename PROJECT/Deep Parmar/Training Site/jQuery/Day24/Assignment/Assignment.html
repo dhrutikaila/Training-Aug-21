@@ -1,0 +1,152 @@
+<!-- Create one paragraph, add some dummy text and apply blue background color using jquery -->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Assignment</title>
+    <link rel="stylesheet" href="../../../ASSETS/CSS/Style.css">
+    <script src="https://kit.fontawesome.com/e153b670c8.js" crossorigin="anonymous"></script>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <script src="../../jQuery/jQuery.js"></script>
+    <script>
+        $(document).ready(function() {
+            $("#button").click(function() {
+
+                $.getJSON("https://gorest.co.in/public-api/users", function(jsonData, status) {
+                    if (status == "success") {
+                        $.each(jsonData.data, function(index, element) {
+                            $("#tbldata").append(
+                                "<tr>" +
+                                "<td>" + element.id + "</td>" +
+                                "<td>" + element.name + "</td>" +
+                                "<td>" + element.email + "</td>" +
+                                "<td>" + element.gender + "</td>" +
+                                "<td>" + element.status + "</td>" +
+                                "</tr>");
+
+                            // Another way:  
+                            // $("#tbldata").append($("<tr></tr>").append($("<td></td>").text(element.id)).append($("<td></td>").text(element.name)).append($("<td></td>").text(element.email)).append($("<td></td>").text(element.gender)).append($("<td></td>").text(element.status)));
+                            // ($("<td></td>").text("abc")).appendTo($("<tr></tr>").appendTo("#tbldata"));
+                        });
+                    } else {
+                        alert("Error: " + status);
+                    }
+                });
+
+            });
+        });
+    </script>
+
+
+</head>
+
+<body>
+
+    <!-- Progessbar part -->
+    <div class="progressbar"></div>
+    <!-- Header Part -->
+    <header>
+        <nav class="navbar navbar-expand-lg navbar-light d-flex justify-content-between" style="background-color: #d1ecf1">
+            <img src="../../../ASSETS/Images/Radixweb.png" alt="Radixweb_Logo" id="radixweb">
+            <button class="navbar-toggler ms-auto" type="button" data-bs-toggle="collapse" data-bs-target="#navbarToggler">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarToggler">
+                <ul class="navbar-nav ms-auto  mb-2 mb-lg-0">
+                    <li class="nav-item mx-4"><a class="nav-link fs-4" href="../../../Tutorial Site.html">HOME</a></li>
+                    <li class="nav-item mx-4"><a class="nav-link fs-4" href="../../../HTML.html">HTML</a></li>
+                    <li class="nav-item mx-4"><a class="nav-link fs-4" href="../../../CSS.html">CSS</a></li>
+                    <li class="nav-item mx-4"><a class="nav-link fs-4" href="../../../BOOTSTRAP.html">BOOTSTRAP</a></li>
+                    <li class="nav-item mx-4"><a class="nav-link fs-4" href="../../../JAVASCRIPT.html">JAVASCRIPT</a>
+                    </li>
+                    <li class="nav-item mx-4"><a class="nav-link fs-4" href="../../../JQUERY.html">JQUERY</a></li>
+                    <li class="nav-item mx-4"><a class="nav-link fs-4" href="../../../PROJECT.html">PROJECT</a></li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Main container -->
+    <div id="main">
+        <!-- sidebar -->
+        <div id="sidebar" style="background-color: #f6e1c6;">
+            <ol id="mainfolder" class="ms-4">
+                <li><i class="fas fa-folder-open">Day-22/23</i>
+                    <ul class="folder">
+                        <li><i class="fas fa-folder-open"></i>Practice Exercise
+                            <ol class="subfolder">
+                                <li><a href="Practice.html">Practice</a>
+                                </li>
+                                <li><a href="Practice Exercise1.html">Practice Exercise-1</a>
+                                </li>
+                                <li><a href="Practice Exercise2.html">Practice Exercise-2</a>
+                                </li>
+                                <li><a href="Practice Exercise3.html">Practice Exercise-3</a>
+                                </li>
+                            </ol>
+                        </li>
+                        <li><i class="fas fa-folder-open"></i>Assignment
+                            <ol class="subfolder">
+                                <li><a href="../Assignment/Assignment.html">Assignment</a></li>
+                            </ol>
+                        </li>
+                    </ul>
+                </li>
+                <li><i class="fas fa-folder-open">Day-24</i>
+                    <ul class="folder">
+                        <li><i class="fas fa-folder-open"></i>Practice Exercise
+
+                            <ol class="subfolder">
+                                <li><a href="../../Day24/Practice/Practice.html">Practice</a>
+                                </li>
+
+                            </ol>
+                        </li>
+                        <li><i class="fas fa-folder-open"></i>Assignment
+                            <ol class="subfolder">
+                                <li><a href="../../Day24/Assignment/Assignment.html">Assignment</a></li>
+                            </ol>
+                        </li>
+                    </ul>
+                </li>
+            </ol>
+        </div>
+
+        <!-- Rightside content -->
+        <div id="content">
+            <h2 style="height: 5vh; color:cadetblue; text-align:center" class="mt-5">Use getJSON method access web api and display the result in one table.</h2>
+
+            <div class="container border border-3 mb-5 mt-5 w-50">
+                <h4 class="text-muted my-4">Click Below Button To see The API Data in Table Format</h4>
+                <button id="button" class="btn btn-primary mb-3">Click Here</button>
+                <table id="table" class="table table-hover">
+                    <thead>
+                        <tr>
+                            <th>Id</th>
+                            <th>Name</th>
+                            <th>Email</th>
+                            <th>Gender</th>
+                            <th>Status</th>
+                        </tr>
+                    </thead>
+
+                    <tbody id="tbldata">
+
+                    </tbody>
+                </table>
+            </div>
+        </div>
+
+        <!-- Footer -->
+        <footer id="footer">
+            <p>&copy;Deep Parmar</p>
+        </footer>
+
+
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+
+</body>
+
+</html>

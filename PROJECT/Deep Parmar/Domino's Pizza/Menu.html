@@ -1,0 +1,463 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="https://docs.google.com/uc?id=1oX_kwBWqhFCyaRxzl0LPgxlATPYOoaiY" type="image/png">
+    <title>Menu</title>
+    <link rel="stylesheet" href="Bootstrap/bootstrap.min.css">
+    <link rel="stylesheet" href="CSS/Home.css">
+    <script src="JavaScript/jquery-3.6.0.min.js"></script>
+    <script src="https://kit.fontawesome.com/e153b670c8.js" crossorigin="anonymous"></script>
+</head>
+
+<body>
+    <!-- header section start  -->
+    <header id="header">
+        <nav class="navbar navbar-expand-lg navbar-dark w-100">
+            <a href="#" class="navbar-brand"><img class="ms-3" src="https://docs.google.com/uc?id=1BuCu1xyFNMUK4DfOZ34N9yWtzEwMab1Z" alt="Dominos_Logo"></a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarToggler">
+                <img src="https://docs.google.com/uc?id=1RlhyZyYpBcqYETXP7YBkAHv1CL83nT-i" alt="menu" width="24px">
+            </button>
+            <div class="collapse navbar-collapse" id="navbarToggler">
+                <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+                    <li class="nav-item ms-lg-0 ms-4 me-xl-4 me-lg-0">
+                        <a class="nav-link fs-4" href="Home.html">Home</a></li>
+                    <li class="nav-item ms-lg-0 ms-4 me-xl-4 me-lg-0">
+                        <a class="nav-link fs-4" href="Deals_Offers.html">Deals & Offers</a></li>
+                    <li class="nav-item ms-lg-0 ms-4 me-xl-4 me-lg-0">
+                        <a class="nav-link fs-4" href="Menu.html">Menu</a></li>
+                    <li class="nav-item ms-lg-0 ms-4 me-xl-4 me-lg-0">
+                        <a class="nav-link fs-4" href="Order_History.html">Order History</a></li>
+                    <li class="nav-item ms-lg-0 ms-4 me-xl-4 me-lg-0">
+                        <a class="nav-link fs-4 me-5" href="Feedback.html">Feedback</a></li>
+                </ul>
+            </div>
+        </nav>
+        <div class="d-flex" id="header_icon">
+            <div class="fs-3 my-3 btn"><a href="#Favorite" data-bs-toggle="modal" id="hart"><i class="fas fa-heart"></i></a></div>
+            <div class="fs-3 my-3 btn"><a href="#cart_Summary" data-bs-toggle="modal" id="cart"><i
+                        class="fas fa-shopping-cart"></i></a></div>
+            <div class="fs-3 my-3 me-2 btn dropdown">
+                <a href="#" class="dropdown-toggle" data-bs-toggle="dropdown" id="user"><i class="fas fa-user"></i></a>
+                <div class="dropdown-menu">
+                    <div class="dropdown-item"><i class="fs-4 me-3 fas fa-user-tie"></i> <span id="userName">UserName</span></div>
+                    <div class="dropdown-item"><i class="fs-4  me-3 fas fa-phone-square-alt"></i> <span id="contactNumber">ContactNumber</span></div>
+                    <div class="dropdown-item" id="role"><i class="fs-3 fas fa-plus-circle"></i> <a href="#addPizza" data-bs-toggle="modal" class="d-inline text-dark">ADD PIZZA</a></div>
+                    <div class="dropdown-divider"></div>
+                    <div class="dropdown-item">
+                        <a href="index_Login.html" onclick="clearUserData()" class="fs-5 text-muted text-decoration-none">
+                            Sign Out<img width="28px" class="ms-5"
+                                src="https://docs.google.com/uc?id=1mb9j1UYDN4NGHmd07LfOAwWcC9_er8_u">
+                        </a>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </header>
+    <!-- header section end  -->
+
+
+    <!-- body section -->
+    <div>
+        <div id="main_section">
+            <div id="categories" class="d-lg-block">
+                <ul>
+                    <li>
+                        <a onclick="closeMenuBtn()" class="btn btn-close ms-auto d-lg-none"></a>
+                    </li>
+                    <li>
+                        <a href="#Categories">
+                            <img src="https://docs.google.com/uc?id=1Qhcze0xh02XM7SoIwo4PTyw8tH2S3vV7">Categories
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#BESTSELLERS">
+                            <img src="https://docs.google.com/uc?id=1_zZazbBnL8pKnf66vnUXT2CQ5wRlKwMg">BESTSELLERS
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#VEG_PIZZA">
+                            <img src="https://docs.google.com/uc?id=1_zZazbBnL8pKnf66vnUXT2CQ5wRlKwMg">VEG PIZZA
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#NON_VEG_PIZZA">
+                            <img src="https://docs.google.com/uc?id=1_zZazbBnL8pKnf66vnUXT2CQ5wRlKwMg">NON-VEG PIZZA
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#NEW_LAUNCHES">
+                            <img src="https://docs.google.com/uc?id=1_zZazbBnL8pKnf66vnUXT2CQ5wRlKwMg">NEW LAUNCHES
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#MEALS_COMBOS">
+                            <img src="https://docs.google.com/uc?id=1_zZazbBnL8pKnf66vnUXT2CQ5wRlKwMg">MEALS & COMBOS
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#PIZZA_MANIA">
+                            <img src="https://docs.google.com/uc?id=1_zZazbBnL8pKnf66vnUXT2CQ5wRlKwMg">PIZZA MANIA
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#SPECIALITY_CHICKEN">
+                            <img src="https://docs.google.com/uc?id=1_zZazbBnL8pKnf66vnUXT2CQ5wRlKwMg">SPECIALITY CHICKEN
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#SIDES">
+                            <img src="https://docs.google.com/uc?id=1_zZazbBnL8pKnf66vnUXT2CQ5wRlKwMg">SIDES
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#BEVERAGES">
+                            <img src="https://docs.google.com/uc?id=1_zZazbBnL8pKnf66vnUXT2CQ5wRlKwMg">BEVERAGES
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#DESSERT">
+                            <img src="https://docs.google.com/uc?id=1_zZazbBnL8pKnf66vnUXT2CQ5wRlKwMg">DESSERT
+                        </a>
+                    </li>
+                </ul>
+            </div>
+
+            <!-- Menu content block-->
+            <div id="menu">
+                <div class="container">
+                    <div id="BESTSELLERS" class="mt-5">
+                        <div class="menu_hr"></div>
+                        <div class="cat_box">
+                            <div class="cat_name">BESTSELLERS</div>
+                        </div>
+
+                        <!-- All pizza -->
+                        <div class="row row-cols-1 row-cols-md-2 row-cols-lg-3 mb-3 g-4" id="Bestsellers">
+                        </div>
+                    </div>
+
+
+                    <div id="VEG_PIZZA">
+                        <div class="menu_hr"></div>
+                        <div class="cat_box">
+                            <div class="cat_name"> <img src="https://docs.google.com/uc?id=1O-YlCvu6OSKx2ymKPy7qBzmOeV_nNjDH" width="20px" height="20px">
+                                <span class="text-success fw-bold ms-1">VEG PIZZA</span>
+                            </div>
+                        </div>
+                        <!-- All pizza -->
+                        <div class="row row-cols-1 row-cols-md-2 row-cols-lg-3 mb-3 g-4" id="VegPizza">
+                        </div>
+                    </div>
+
+
+                    <div id="NON_VEG_PIZZA">
+                        <div class="menu_hr"></div>
+                        <div class="cat_box">
+                            <div class="cat_name">
+                                <img src="https://docs.google.com/uc?id=1wvdcu7_CRbIsO1f1fFzDYv_I-WiSbFGB" width="20px" height="20px">
+                                <span class="text-danger fw-bold ms-1">NON-VEG PIZZA</span>
+                            </div>
+                        </div>
+                        <!-- All pizza -->
+                        <div class="row row-cols-1 row-cols-md-2 row-cols-lg-3 mb-3 g-4" id="NonVegPizza">
+                        </div>
+                    </div>
+
+
+                    <div id="NEW_LAUNCHES">
+                        <div class="menu_hr"></div>
+                        <div class="cat_box">
+                            <div class="cat_name">NEW_LAUNCHES</div>
+                        </div>
+                        <!-- All pizza -->
+                        <div class="row row-cols-1 row-cols-md-2 row-cols-lg-3 mb-3 g-4" id="NewLaunches">
+                        </div>
+                    </div>
+
+
+                    <div id="MEALS_COMBOS">
+                        <div class="menu_hr"></div>
+                        <div class="cat_box">
+                            <div class="cat_name">MEALS & COMBOS</div>
+                        </div>
+                        <!-- All pizza -->
+                        <div class="row row-cols-1 row-cols-md-2 row-cols-lg-3 mb-3 g-4" id="MealsCombos">
+                        </div>
+                    </div>
+
+
+                    <div id="PIZZA_MANIA">
+                        <div class="menu_hr"></div>
+                        <div class="cat_box">
+                            <div class="cat_name">PIZZA MANIA</div>
+                        </div>
+                        <!-- All pizza -->
+                        <div class="row row-cols-1 row-cols-md-2 row-cols-lg-3 mb-3 g-4" id="PizzaMania">
+                        </div>
+                    </div>
+
+
+                    <div id="SPECIALITY_CHICKEN">
+                        <div class="menu_hr"></div>
+                        <div class="cat_box">
+                            <div class="cat_name">SPECIALITY CHICKEN</div>
+                        </div>
+                        <!-- All pizza -->
+                        <div class="row row-cols-1 row-cols-md-2 row-cols-lg-3 mb-3 g-4" id="SpecialityChicken">
+                        </div>
+                    </div>
+
+
+                    <div id="SIDES">
+                        <div class="menu_hr"></div>
+                        <div class="cat_box">
+                            <div class="cat_name">SIDES</div>
+                        </div>
+                        <!-- All pizza -->
+                        <div class="row row-cols-1 row-cols-md-2 row-cols-lg-3 mb-3 g-4" id="Sides">
+                        </div>
+                    </div>
+
+
+                    <div id="BEVERAGES">
+                        <div class="menu_hr"></div>
+                        <div class="cat_box">
+                            <div class="cat_name">BEVERAGES</div>
+                        </div>
+                        <!-- All pizza -->
+                        <div class="row row-cols-1 row-cols-md-2 row-cols-lg-3 mb-3 g-4" id="Beverages">
+                        </div>
+                    </div>
+
+
+                    <div id="DESSERT">
+                        <div class="menu_hr"></div>
+                        <div class="cat_box">
+                            <div class="cat_name">DESSERT</div>
+                        </div>
+                        <!-- All pizza -->
+                        <div class="row row-cols-1 row-cols-md-2 row-cols-lg-3 mb-3 g-4" id="Dessert">
+                        </div>
+                    </div>
+
+
+                    <a id="menu-btn" onclick="openMenuBtn()" class="btn btn-success d-lg-none">
+                        <img src="https://docs.google.com/uc?id=1CdL57dqI3i4yW33lsiHulm1zD-7Do4DK" alt="Menu" width="32px">
+                        <span class="fs-5 ms-1 fw-bold">Menu</span>
+                    </a>
+                </div>
+            </div>
+
+            <!-- Cart item block -->
+            <div id="checkout">
+                <div id="cart_box" class="card">
+                    <div class="card mb-2 Shopping_Cart">
+                        <div id="cart_Img">
+                            <img src="https://docs.google.com/uc?id=1zJlfJLNsi26xJ35d88Tb2UoTmAxYYEH0" width="100%" alt="Empty_cart">
+                        </div>
+                    </div>
+                    <div class="bg-white shadow-lg" id="checkout_box">
+                        <div id="subtotal" class="d-flex fw-bold mt-1 mx-1 justify-content-between">
+                            <p class="mb-0">Subtotal</p>
+                            <p class="mb-0">&#8377;&nbsp;<span class="subtotal_price"></span></p>
+                        </div>
+                        <button type="button" class="w-100 btn btn-success" data-bs-target="#Order" data-bs-toggle="modal">CHECKOUT</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Modal For Cart Summary -->
+        <div class="modal fade" id="cart_Summary" data-bs-backdrop="static">
+            <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title">Cart Summary</h5>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+                    </div>
+                    <div class="modal-body">
+                        <div class="card Shopping_Cart">
+                            <div id="cart_Img">
+                                <img src="https://docs.google.com/uc?id=1zJlfJLNsi26xJ35d88Tb2UoTmAxYYEH0" width="100%" alt="Empty_cart">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="modal-footer">
+                        <div class="fw-bold d-flex mt-1 mx-3">
+                            <p class="mb-0 fs-5 position-absolute start-0 ms-3">Subtotal :&nbsp;</p>
+                            <p class="mb-0 fs-5">&#8377;&nbsp;<span class="subtotal_price"></span></p>
+                        </div>
+                        <button type="button" class="btn btn-success w-100" data-bs-target="#Order" data-bs-toggle="modal">CHECKOUT</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Modal For Favorite  -->
+        <div class="modal fade" id="Favorite" data-bs-backdrop="static">
+            <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title">Favorite</h5>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+                    </div>
+                    <div class="modal-body">
+                        <div class="row row-cols-md-2 row-cols-1" id="Favorite_Item">
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+        <!-- This Modal use For Add Pizza In Specific Category -->
+        <div class="modal fade" id="addPizza" data-bs-backdrop="static">
+            <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title">ADD PIZZA</h5>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+                    </div>
+                    <div class="modal-body">
+                        <div class="container">
+                            <form>
+                                <div class="mb-3">
+                                    <label for="Pizza_Category" class="fs-5">Select Pizaa Category :</label>
+                                    <Select class="form-select" id="Pizza_Category">
+                                        <option value="">---Select Category---</option>
+                                        <option value="Bestsellers">BESTSELLERS</option>
+                                        <option value="VegPizza">VEG PIZZA</option>
+                                        <option value="Nonveg">NON-VEG PIZZA</option>
+                                        <option value="NewLaunches">NEW LAUNCHES</option>
+                                        <option value="MealsCombos">MEALS & COMBOS</option>
+                                        <option value="PizzaMania">PIZZA MANIA</option>
+                                        <option value="SpecialityChicken">SPECIALITY CHICKEN</option>
+                                        <option value="Sides">SIDES</option>
+                                        <option value="Beverages">BEVERAGES</option>
+                                        <option value="Dessert">DESSERT</option>
+                                    </Select>
+                                </div>
+                                <div class="mb-3">
+                                    <label for="Pizza Name" class="form-label fs-5">Pizza Name</label>
+                                    <input type="text" class="form-control" id="Pizza_Name" placeholder="Pizza Name">
+                                </div>
+                                <div class="mb-3">
+                                    <label for="Pizza Description" class="form-label fs-5">Pizza Description</label>
+                                    <input type="text" class="form-control" id="Pizza_Description" placeholder="Description">
+                                </div>
+                                <div class="mb-3">
+                                    <label class="form-label mb-2 fs-5">Pizza Type :</label><br>
+                                    <input type="radio" class="form-check-input mb-2" name="Pizza Type" id="Veg">
+                                    <label for="pizza Type" class="form-label text-muted">VEG</label>
+                                    <input type="radio" class="form-check-input ms-2" name="Pizza Type" id="Nonveg">
+                                    <label for="pizza Type" class="form-label text-muted">NON-VEG</label>
+                                </div>
+                                <div class="mb-3 d-flex">
+                                    <label for="Pizza Price" class="form-label fs-5">Price : </label>
+                                    <input type="number" class="form-control w-50" id="Pizzaprice" placeholder="Price">
+                                </div>
+                                <div class="mb-3">
+                                    <label for="Pizzaimage" class="form-label fs-5">Enter Pizza Image Url :</label>
+                                    <div class="input-group mb-3">
+                                        <span class="input-group-text" id="src">URL :</span>
+                                        <input type="text" class="form-control" id="Pizzaimage">
+                                    </div>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" data-bs-dismiss="modal" onclick="addPizza(Pizza_Category.value,Pizza_Name.value,Pizza_Description.value,Pizzaprice.value,Pizzaimage.value)" class="btn btn-success w-100">ADD</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Modal For Checkout Button -->
+        <div class="modal fade" id="Order" data-bs-backdrop="static">
+            <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title">Checkout</h5>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+                    </div>
+                    <div class="modal-body">
+                        <div class="container">
+                            <form>
+                                <div class="mb-3">
+                                    <label for="Address" class="form-label">Address :</label>
+                                    <textarea class="form-control" id="Address" rows="3" placeholder="Address"></textarea>
+                                </div>
+                                <div class="mb-3">
+                                    <input type="radio" class="form-check-input mb-2" name="PizzaDelivery" id="Delivery">
+                                    <label for="Delivery" class="form-label">Delivery</label>
+                                    <input type="radio" class="form-check-input" name="PizzaDelivery" id="PickUp_Dinein">
+                                    <label for="Pick Up/Dine-in" class="form-label">Pick Up/Dine-in</label>
+                                </div>
+                                <div class="mb-3">
+                                    <button class="btn btn-primary" type="button" data-bs-toggle="collapse" data-bs-target="#Collapse_Cart" aria-expanded="true" aria-controls="Collapse_Cart">
+                                        Cart Summary
+                                    </button>
+                                    <div class="card Shopping_Cart" id="Collapse_Cart">
+                                        <div id="cart_Img">
+                                            <img src="https://docs.google.com/uc?id=1zJlfJLNsi26xJ35d88Tb2UoTmAxYYEH0" width="100%" alt="Empty_cart">
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="mb-1">
+                                    <div class="fw-bold">
+                                        <p class="mb-0 fs-5 d-inline">Total :&nbsp;</p>
+                                        <p class="mb-0 fs-5 d-inline">&#8377;&nbsp;<span class="subtotal_price"></span></p>
+                                    </div>
+                                </div>
+
+                            </form>
+                        </div>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" data-bs-dismiss="modal" onclick="Order(Address.value)" class="btn btn-success w-100">ORDER</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+        <footer id="footer">
+            <div id="main_footer_section" class="pt-5" style="font-size: 20px;">
+                <div id="footer_section_1">
+                    <img src="https://docs.google.com/uc?id=10wcxugcWtf3jafQnqqhg1-Snrr5hs_1L" alt="Dominos_Logo">
+                    <ul>
+                        <li><a href="#">Disclaimer</a></li>
+                        <li><a href="#">Privacy Policy</a></li>
+                        <li><a href="#">Faq</a></li>
+                        <li><a href="#">Terms & Conditions</a></li>
+                        <li><a href="#">Feedback</a></li>
+                    </ul>
+                </div>
+                <div id="footer_section_2">
+                    <h3 class="text-muted">DOWNLOAD APP</h3>
+                    <div id="footer_icon" class="d-flex">
+                        <img src="https://docs.google.com/uc?id=1x0sVGCzW4lF9XncoUA_S9q1_lSyc6hhd" class="me-3" alt="google_store">
+                        <img src="https://docs.google.com/uc?id=1xyVYiTAsJvY4KFKEkqwK7AOpYsNWcS5J" alt="app_store">
+                    </div>
+                </div>
+            </div>
+            <br>
+            <div class="text-center fs-4" id="copy_right">
+                <p class="text-muted">All Rights Reserved. Copyright © Jubilant FoodWorks Ltd.</p>
+            </div>
+        </footer>
+
+    </div>
+
+    <script src="JavaScript/bootstrap.bundle.min.js"></script>
+    <script src="JavaScript/Login_Credentials.js"></script>
+    <script src="JavaScript/Menu.js"></script>
+</body>
+
+</html>

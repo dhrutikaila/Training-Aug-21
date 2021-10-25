@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="https://docs.google.com/uc?id=1oX_kwBWqhFCyaRxzl0LPgxlATPYOoaiY" type="image/png">
+    <title>Feedback</title>
+    <link rel="stylesheet" href="Bootstrap/bootstrap.min.css">
+    <link rel="stylesheet" href="CSS/Home.css">
+    <script src="JavaScript/jquery-3.6.0.min.js"></script>
+    <script src="https://kit.fontawesome.com/e153b670c8.js" crossorigin="anonymous"></script>
+    <style>
+        #Main_Container {
+            height: 80vh;
+            background-image: url('https://docs.google.com/uc?id=134pkaGmGZ2lR1imZrrhPUbrucSF_o9am');
+            background-repeat: no-repeat;
+            background-size: 100vw 80vh;
+            z-index: -1;
+            margin-top: 10vh;
+        }
+        
+        #submit {
+            border-radius: 30px;
+            padding: 10px 30px;
+        }
+    </style>
+
+</head>
+
+<body>
+    <!-- header section start  -->
+    <header id="header">
+        <nav class="navbar navbar-expand-lg navbar-dark w-100">
+            <a href="#" class="navbar-brand"><img class="ms-3" src="https://docs.google.com/uc?id=1BuCu1xyFNMUK4DfOZ34N9yWtzEwMab1Z" alt="Dominos_Logo"></a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarToggler">
+                <img src="https://docs.google.com/uc?id=1RlhyZyYpBcqYETXP7YBkAHv1CL83nT-i" alt="menu" width="24px">
+            </button>
+            <div class="collapse navbar-collapse" id="navbarToggler">
+                <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+                    <li class="nav-item ms-lg-0 ms-4 me-xl-4 me-lg-0">
+                        <a class="nav-link fs-4" href="Home.html">Home</a></li>
+                    <li class="nav-item ms-lg-0 ms-4 me-xl-4 me-lg-0">
+                        <a class="nav-link fs-4" href="Deals_Offers.html">Deals & Offers</a></li>
+                    <li class="nav-item ms-lg-0 ms-4 me-xl-4 me-lg-0">
+                        <a class="nav-link fs-4" href="Menu.html">Menu</a></li>
+                    <li class="nav-item ms-lg-0 ms-4 me-xl-4 me-lg-0">
+                        <a class="nav-link fs-4" href="Order_History.html">Order History</a></li>
+                    <li class="nav-item ms-lg-0 ms-4 me-xl-4 me-lg-0">
+                        <a class="nav-link fs-4 me-5" href="Feedback.html">Feedback</a></li>
+                </ul>
+            </div>
+        </nav>
+        <div class="d-flex" id="header_icon">
+            <div class="fs-3 my-3 btn"><a href="#" id="hart"><i class="fas fa-heart"></i></a></div>
+            <div class="fs-3 my-3 btn"><a href="#cart_Summary" data-bs-toggle="modal" id="cart"><i
+                        class="fas fa-shopping-cart"></i></a></div>
+            <div class="fs-3 my-3 me-2 btn dropdown">
+                <a href="#" class="dropdown-toggle" data-bs-toggle="dropdown" id="user"><i class="fas fa-user"></i></a>
+                <div class="dropdown-menu">
+                    <div class="dropdown-item"><i class="fs-4 me-3 fas fa-user-tie"></i> <span id="userName">UserName</span></div>
+                    <div class="dropdown-item"><i class="fs-4  me-3 fas fa-phone-square-alt"></i> <span id="contactNumber">ContactNumber</span></div>
+                    <div class="dropdown-divider"></div>
+                    <div class="dropdown-item">
+                        <a href="index_Login.html" onclick="clearUserData()" class="fs-5 text-muted text-decoration-none">
+                            Sign Out<img width="28px" class="ms-5"
+                                src="https://docs.google.com/uc?id=1mb9j1UYDN4NGHmd07LfOAwWcC9_er8_u">
+                        </a>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </header>
+    <!-- header section end  -->
+
+
+    <!-- body section -->
+    <div class="container-fluid" id="Main_Container">
+        <div class="container bg-white w-50 pt-5">
+            <Form>
+                <div class="col-12 text-center fs-4 fw-bold text-success mb-5">WE WOULD LOVE TO HEAR FROM YOU</div>
+                <div class="row">
+                    <div class="col-6 mb-4">
+                        <input type="text" class="form-control" placeholder="Name" id="Name" required>
+                    </div>
+                    <div class="col-6 mb-4">
+                        <input type="text" class="form-control" placeholder="Last Name" id="LastName" required>
+                    </div>
+                    <div class="col-6 mb-4">
+                        <input type="text" class="form-control" placeholder="Contact Number" id="ContactNumber" maxlength="10" required>
+                    </div>
+                    <div class="col-6 mb-4">
+                        <input type="text" class="form-control" placeholder="Email id" id="EmailId" required>
+                    </div>
+                    <div class="col-12 mb-4">
+                        <textarea class="form-control" id="Feedback" rows="3" placeholder="Write your Message.." required></textarea>
+                    </div>
+                    <div class="col-12 text-center mb-5">
+                        <button type="submit" class="btn btn-success fs-5" onclick="Submit(Name.value,LastName.value,ContactNumber.value,EmailId.value,Feedback.value)" id="submit">Submit</button>
+                    </div>
+                </div>
+            </Form>
+        </div>
+    </div>
+
+
+    <footer id="footer">
+        <div id="main_footer_section" class="pt-5" style="font-size: 20px;">
+            <div id="footer_section_1">
+                <img src="https://docs.google.com/uc?id=10wcxugcWtf3jafQnqqhg1-Snrr5hs_1L" alt="Dominos_Logo">
+                <ul>
+                    <li><a href="#">Disclaimer</a></li>
+                    <li><a href="#">Privacy Policy</a></li>
+                    <li><a href="#">Faq</a></li>
+                    <li><a href="#">Terms & Conditions</a></li>
+                    <li><a href="#">Feedback</a></li>
+                </ul>
+            </div>
+            <div id="footer_section_2">
+                <h3 class="text-muted">DOWNLOAD APP</h3>
+                <div id="footer_icon" class="d-flex">
+                    <img src="https://docs.google.com/uc?id=1x0sVGCzW4lF9XncoUA_S9q1_lSyc6hhd" class="me-3" alt="google_store">
+                    <img src="https://docs.google.com/uc?id=1xyVYiTAsJvY4KFKEkqwK7AOpYsNWcS5J" alt="app_store">
+                </div>
+            </div>
+        </div>
+        <br>
+        <div class="text-center fs-4" id="copy_right">
+            <p class="text-muted">All Rights Reserved. Copyright © Jubilant FoodWorks Ltd.</p>
+        </div>
+    </footer>
+
+
+
+    <script src="JavaScript/bootstrap.bundle.min.js"></script>
+    <script src="JavaScript/Login_Credentials.js"></script>
+    <script src="JavaScript/Feedback.js"></script>
+</body>
+
+</html>

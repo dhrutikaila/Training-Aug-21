@@ -3,7 +3,7 @@
 -- [1] Write a query that displays the FirstName and the length of the FirstName for all employees whose name starts with the letters �A�, �J� or �M�.
 --     Give each column an appropriate label. Sort the results by the employees� FirstName.
 
-SELECT [Name]=FirstName,LEN(FirstName) AS Length_Of_FirstName FROM Employees WHERE FirstName LIKE 'A%' OR FirstName LIKE 'J%'OR FirstName LIKE 'M%'  ORDER BY FirstName
+
 
 -- [2] Write a query to display the FirstName and Salary for all employees. 
 --     Format the salary to be 10 characters long, left-padded with the $ symbol. Label the column SALARY.
@@ -15,7 +15,7 @@ SELECT [Name]=FirstName,LEN(FirstName) AS Length_Of_FirstName FROM Employees WHE
 -- [3] Write a query to display the employees with their code, first name, last name and hire date 
 --     who hired either on seventh day of any month or seventh month in any year.
 
-SELECT EmployeeID,FirstName,LastName,HireDate FROM Employees WHERE DATEPART(DD,HireDate) LIKE 07 OR DATEPART(MM,HireDate) LIKE 07
+
 
 -- ANOTHER WAY:-
 --SELECT EmployeeID,FirstName,LastName,HireDate FROM Employees WHERE HireDate LIKE '%07' OR HireDate LIKE '____-07%'
