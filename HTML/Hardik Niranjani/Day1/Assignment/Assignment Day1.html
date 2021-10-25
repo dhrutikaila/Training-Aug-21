@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Html - Assignment</title>
+    <style>
+
+        h3{
+            margin-left: 20px;
+        }
+        .container{
+            margin-left: 20px;
+            margin-bottom: 50px;
+        }
+    </style>
+</head>
+<body>
+    <h3>Assignment Day1</h3>
+    <pre style="margin-left:-38px">
+        Design a form for storing employee details. (Employee name, age, Gender, designation, salary, location, Email ID, Date of Joining 
+        and contact number)
+            i. Validation required
+                1.Age should be a number
+                2.Each field should contain value
+                3.Email ID should be in proper format
+                4.Date of joining should be in date format
+            ii.Location should be in the drop down list
+            iii.Use radio buttons for Gender
+    </pre>
+   
+    <br>
+    <hr><br>
+    <div class="container">
+        <form>
+            <h2>Employee Details</h2>
+            Name: <input type='text' name='name' autocomplete="off" required><br><br>
+            Age : <input type='number' name='age' required><br><br>
+            Gender: <input type='radio' name='gender' value='Female'> Female
+            <input type='radio' name='gender' value='Male'> Male
+            <input type='radio' name='gender' value='Other'> Other
+            <br><br>
+            Designation: <input type='text' name='designation' autocomplete="off" required><br><br>
+            Salary: <input type='number' name='Salary' autocomplete="off" required><br><br>
+            Location: <select name='location'>
+                <option values='rajkot' default>Rajkot</option>
+                <option values='ahmedabad'>Ahmedabad</option>
+                <option values='gandhinagar'>Gandhinagar</option>
+                <option values='vadodara'>Vadodara</option>
+                <option values='surat'>Surat</option>
+            </select><br><br>
+            Email: <input type='email' name='Email' autocomplete="off" required><br><br>
+            Date of Joining: <input type='date' name='DOJ' required><br><br>
+            Contact No: <input type='tel' name='ContactNo' autocomplete="off" required><br><br>
+            <input type='submit' value='submit'>
+            <input type='reset' value='reset'>
+        </form>
+    </div>
+</body>
+</html>
+

@@ -1,0 +1,207 @@
+*{
+    margin:0;
+    padding: 0;
+}
+.index__body{
+    width: 100vw;
+    height: 100vh;
+    z-index: 100;
+    margin-top: 0px;
+    overflow-x: hidden;
+    background: url("../Assets/Netflix_Addmovie3.jpg");
+}
+.index__body::after{
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+    background: rgba(0, 0, 0, 0.6);
+    box-shadow: inset 10px 120px 250px #000000;
+}
+.index__header{
+    margin-top:0px;
+    z-index: 2;
+    background-color: rgba(48, 46, 46, 0.178);
+    justify-content: space-between;
+    width:fit-content;
+    height:50px;
+    position: sticky;
+}
+
+.add_movie_button{
+    font-family: 'Netflix Sans','Helvetica Neue',Helvetica,Arial,sans-serif;
+    /* background-color: #F40612; */
+    width:fit-content;
+    padding: 5px;
+    height:40px;
+    font-size:16px;
+    margin-top: -20px;
+    float: right; 
+    z-index: 2;
+}
+.logout_btn {
+    font-family: 'Netflix Sans','Helvetica Neue',Helvetica,Arial,sans-serif;
+    /* background-color: #F40612; */
+    width:90px;
+    padding: 5px;
+    height:40px;
+    font-size:16px;
+    margin-top: -20px;
+    float: right; 
+    z-index: 2;
+    
+}
+
+.dropdown_profile{
+    width:90px;
+    padding: 5px;
+    height:40px;
+    font-size:16px;
+    margin-top: -20px;
+    float: right; 
+    z-index: 2;
+    outline:none;
+    border: none;
+}
+.dropdown_profile:focus{
+    outline:none;
+    border: none;
+}
+.index__header > img{
+    cursor: pointer;
+    margin-top:-30px;
+    margin-left: -50px;
+    z-index: 2;
+    width: 90px;
+    height: 60px;
+}
+
+.profile_img{
+    margin-top:-20px;
+    /* box-shadow: -1px 0px 8px rgba(143, 143, 143, 0.315); */
+    box-shadow: 0px 0px 5px 1px #cccccce3;
+    z-index: 2;
+    border-radius: 10px;
+    width: 40px;
+    height: 40px;
+}
+.index__body_mid{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-top:8%;
+}
+.head1{
+    text-align: center;
+    z-index: 2;
+    width:600px;
+}
+.head2{
+    padding-left:-20px;
+    z-index: 2;
+}
+.head3{
+    z-index: 2;
+}
+
+.index__body_mid_signup{
+    width: 100%;
+}
+.index__body_mid_signup > input{
+    flex: 1;
+}
+.index__body_mid_signup > button{
+    font-family: 'Netflix Sans','Helvetica Neue',Helvetica,Arial,sans-serif;
+    font-size:19px;
+    text-align: center;
+    flex: 0.3;
+    background-color: #F40612;
+}
+
+
+
+/* Add movie form style */
+.form_title{
+    color: #cccccc;
+    z-index: 2;
+    
+}
+
+.add_movie_form{
+    box-shadow: 0px 0px 5px 5px #cccccce3;
+    background-color: #a0a0a063;
+    padding:50px;
+    border-radius: 10px;
+}
+
+.add_movie_form_relese_date_btn{
+    flex:0.8;
+    background-color: #F40612;
+    font-family: 'Netflix Sans','Helvetica Neue',Helvetica,Arial,sans-serif;
+    width:fit-content;
+    padding: 5px;
+    height:40px;
+    font-size:16px;
+    float: right; 
+    z-index: 3;
+}
+.add_movie_form_relese_date_input{
+    flex:2.8; 
+    color: #cccccc;
+    background-color: #333333;
+    border: none;
+}
+
+.add_movie_form_relese_date_input:focus{
+    background-color: #333333;
+    color: #cccccc;
+    border: none;
+    outline: none;
+}
+.add_movie_form > button{
+    width:100%;
+    text-align: center;
+    align-items: center;
+}
+
+.add_movie_form > input{
+    /* color: #8c8c80; */
+    color: #cccccc;
+    background-color: #333333;
+    border: none;
+}
+.add_movie_form > input:focus{
+    background-color: #333333;
+    color: #cccccc;
+    /* color: #8c8c80; */
+    border: none;
+    outline: none;
+}
+
+.add_movie_form> div > input{
+    background-color: #333333;
+    
+}
+
+.add_movie_form> div > label{
+    color: #cccccc;
+    /* color: #8c8c80; */
+}
+
+.add_movie_form > textarea{
+    color: #cccccc;
+    /* color: #8c8c80; */
+    background-color: #333333;
+    border: none;
+}
+.add_movie_form > textarea:focus{
+    background-color: #333333;
+    color: #cccccc;
+    /* color: #8c8c80; */
+    border: none;
+    outline: none;
+}
