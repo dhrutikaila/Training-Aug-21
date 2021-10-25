@@ -1,0 +1,34 @@
+{
+    "Products" : [
+        {
+            "Name" : "cheese",
+            "Price" : 2.50,
+            "Location" : "Refrigerated food"
+        },
+        {
+            "Name" :" Creeps",
+            "Price" : 3,
+            "Location" : "the Snack isle"
+        },
+        {
+            "Name" : "pizza",
+            "Price" : 4,
+            "Location" : "Refrigerated food"
+        },
+        {
+            "Name" : "Chocolate",
+            "Price" : 1.50,
+            "Location" :"the Snack isle"
+        },
+        {
+            "Name" :"self-raising flour",
+            "Price" : 1.50,
+            "Location" : "Home Baking"
+        },
+        {
+            "Name" : "Ground almonds",
+            "Price" : 3,
+            "Location" :"Home Baking"
+        }
+    ]
+}

@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="../bootstrap.min.css">
+</head>
+
+<body>
+    <script src="../bootstrap.min.js"></script>
+</body>
+<div class="container">
+    <!-- ? Popover -->
+    <button class="btn btn-dark" data-bs-toggle="popover" data-bs-placement="top" data-bs-title="Popover Title"
+        data-bs-content="Lorem ipsum dolor sit amet consectetur adipisicing elit.">
+        Toggle Popover Top
+    </button>
+    <button class="btn btn-dark" data-bs-toggle="popover" data-bs-placement="right" data-bs-title="Popover Title"
+        data-bs-content="Lorem ipsum dolor sit amet consectetur adipisicing elit.">
+        Toggle Popover Right
+    </button>
+    <button class="btn btn-dark" data-bs-toggle="popover" data-bs-placement="bottom" data-bs-title="Popover Title"
+        data-bs-content="Lorem ipsum dolor sit amet consectetur adipisicing elit.">
+        Toggle Popover Bottom
+    </button>
+    <button class="btn btn-dark" data-bs-toggle="popover" data-bs-placement="left" data-bs-title="Popover Title"
+        data-bs-content="Lorem ipsum dolor sit amet consectetur adipisicing elit.">
+        Toggle Popover Left
+    </button>
+    <br /><br />
+
+    <!-- ? Dismissible Popover -->
+    <button id="dismissible-popover" class="btn btn-dark" data-bs-toggle="popover" data-bs-placement="top"
+        data-bs-title="Dismissible Popover" data-bs-content="Lorem ipsum dolor sit amet consectetur adipisicing elit."
+        data-bs-trigger="focus">
+        Dismissible popover
+    </button>
+    <br />
+    <hr />
+
+    <!-- ? Control with JS -->
+    <button class="btn btn-secondary" onclick="showPopover()">
+        Show Popover
+    </button>
+    <button class="btn btn-secondary" onclick="hidePopover()">
+        Hide Popover
+    </button>
+    <button class="btn btn-secondary" onclick="togglePopover()">
+        Toggle Popover
+    </button>
+</div>
+<br /><br />
+</div>
+
+</html>

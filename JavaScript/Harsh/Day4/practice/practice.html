@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <p id="Demo"></p>
+
+    <!-- function sequence -->
+    <!-- <script>
+        function myDisplay(some) {
+            document.getElementById("Demo").innerHTML = some;
+        }
+        function myFirst() {
+            myDisplay("Hello");
+        }
+        function mySecond() {
+            myDisplay("Hii");
+        }
+        myFirst();
+        mySecond(); -->
+    <!-- </script> -->
+
+    <!-- sequence control -->
+    <!-- <script>
+        function myDisplay(some) {
+            document.getElementById("Demo").innerHTML = some
+        }
+        function calculator(num1, num2) {
+            var sum = num1 + num2;
+            return (sum);
+        }
+        var cal = calculator(5, 5);
+        myDisplay(cal);
+    </script> -->
+    <!-- <script>
+        function myDisplay(some) {
+            document.getElementById("Demo").innerHTML = some;
+        }
+        function Calculator(num1, num2) {
+            sum = num1 + num2;
+            myDisplay(sum);
+        }
+        Calculator(5,5);
+    </script> -->
+
+    <!-- JavaScript Callback Function -->
+
+    <!-- <script>
+        function myDisplay(some) {
+            document.getElementById("Demo").innerHTML = some;
+        }
+        function Calculator(num1, num2, myCallback) {
+            var sum = num1 + num2;
+            myCallback(sum);
+        }
+        Calculator(5, 5, myDisplay)
+    </script> -->
+
+    <!--Asynchronous  JavaScript-->
+    <!-- Waiting For Timeout -->
+    <!-- <script>
+        setTimeout(myFunction, 3000);
+        function myFunction() {
+            document.getElementById("Demo").innerHTML = "Hii"
+        }
+    </script> -->
+    <!-- <script>
+        setTimeout(function () { myFunction("Hii"); }, 3000);
+        function myFunction(value) {
+            document.getElementById("Demo").innerHTML = value;
+        }
+    </script> -->
+
+    <!-- waiting for the intervals -->
+    <!-- <script>
+        setInterval(myFunction, 1000);
+        function myFunction() {
+            document.getElementById("Demo").insertAdjacentHTML("beforeend", "Hii");
+        }
+    </script> -->
+    <!-- <script>
+        setInterval(myFunction, 1000);
+        function myFunction() {
+            document.getElementById("Demo").innerHTML = "Hii"
+        }
+    </script> -->
+    <!-- <script>
+        setInterval(myFunction, 1000);
+        function myFunction() {
+            var a = new Date();
+            document.getElementById("Demo").innerHTML = a.getHours() + ":" + a.getMinutes() + ":" + a.getSeconds();
+        }
+    </script> -->
+
+</body>
+
+</html>

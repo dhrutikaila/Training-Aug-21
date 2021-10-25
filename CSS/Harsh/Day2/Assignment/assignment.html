@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>layout</title>
+    <style>
+        .header {
+            height: 60px;
+            background-color: red;
+            width: 1333px;
+        }
+
+        .leftbar {
+            height: 400px;
+            width: 200px;
+            background-color: yellow;
+            float: left;
+        }
+
+        .sidebar {
+            background-color: sandybrown;
+            height: 400px;
+            width: 1133px;
+            float: left;
+        }
+
+        .footer {
+            background-color: violet;
+            height: 70px;
+            width: 1333px;
+            clear: left;
+        }
+
+        img {
+            position: relative;
+            top: 10px;
+            left: 100px;
+        }
+
+        ul {
+            position: relative;
+            left: 800px;
+            bottom: 50px;
+        }
+
+        li {
+            display: inline-block;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="header">
+        <img src="./assets/logo.png" alt="no image" height="40" wideth="20">
+        <ul type="disc">
+            <li style="position: relative;top:10px;"><a href="https://google.com"><b>Home</b></a></li>
+            <li style="position: relative;top:10px;left: 10px;"><a href="https://google.com"><b>AboutUS</b></a></li>
+            <li style="position: relative;top:10px;left: 20px;"><a href="https://google.com"><b>ContactUS</b></a></li>
+        </ul>
+    </div>
+    <div class="leftbar">
+    </div>
+    <div class="sidebar">
+    </div>
+    <div class="footer"></div>
+</body>
+
+</html>

@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .font {
+            font-weight: bold;
+            font-size: xx-large;
+        }
+
+        .color {
+            color: blue;
+        }
+    </style>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"
+        integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+</head>
+
+<body>
+
+
+    <p id="test" style="background-color: blue;">Lorem ipsum dolor sit amet.</p>
+    <p class="test1">Lorem, ipsum.</p>
+    <p id="test2">Lorem ipsum dolor sit amet.</p>
+    <p id="test3">Lorem, ipsum.</p>
+    <p id="test4">Lorem ipsum dolor sit amet.</p>
+    <p id="test5">This is some <b>Bold</b> text in paragraph</p>
+    First Name:<input type="text" name="firstName" id="input1" value="Manav">
+    Last Name:<input type="text" name="lastName" id="input2">
+    <a href="https://www.w3schools.com" id="anchor1">w3school</a>
+    <button>Submit</button>
+    <script>
+        // jQuery selectors
+        // $("button").click(function () {
+        //     $("p").hide();
+        // });
+        // $("button").click(function () {
+        //     $("#test").hide();
+        // });
+        // $("button").click(function () {
+        //     $(".test1").hide();
+        // });
+
+        // $("button").click(function () {
+        //     $("p.test1").hide();
+        // });
+
+        // jquery selectors
+        // $("*"):select all the elements
+        // $(this):select the current html elements
+        // $("p:first"):select the first < p> element
+        // $("tr:even"):select all even < tr> elements
+        // $("tr:odd"):select all odd < tr> elements
+        // $(":button"):select all button elements and input elements of type = "button"
+        // $("ul li:first"): select first < li> element of the first < ul>
+        // $("ul li:first-child"):select first < li> element of every < ul>
+        // $("[href]"):select all the elements with an href attribute
+        // $("a[target='_blank']"):select all < a> elements with a target attribute value equal to "_blank"
+        // $("a[target!='_blank']"):select all < a> elements with a target attribute value  NOT equal to "_blank"
+
+
+        // jQuery Events
+        // $("p").click(function () {
+        // $("#test").hide();
+        // });
+
+        // $("p").dblclick(function () {
+        // $(".test1").hide();
+        // })
+
+        // $("#test").mouseenter(function () {
+        // alert("you entered in p tag");
+        // })
+
+        // $(".test1").mouseleave(function () {
+        // alert("leave from p tag");
+        // })
+
+        // $("#test2").mouseup(function () {0
+        // alert("mouse up over p tag");
+        // })
+        // $("#test3").mousedown(function () {
+        // alert("mouse down over p tag");
+        // })
+
+        //  $("#test4").hover(function () { alert("you entered in p tag"); }, function ()
+        // { alert("leave from p tag"); })
+
+        // $("#input1").focus(function () {
+        // $(this).css("background-color", "yellow")
+        // })
+        // $("#input1").blur(function () {
+        // $(this).css("background-color", "blue")
+        // })
+
+        // $("#test").on("click", function () {
+        // $(this).hide();
+        // });
+
+        // $("#test").on({
+        // mouseenter: function () {
+        // $(this).css("background-color", "lightgrey");
+        // },
+        // mouseleave: function () {
+        // $(this).css("background-color", "lightblue");
+        // },
+        // click: function () {
+        // $(this).css("background-color", "yellow");
+        // },
+        // })
+
+        // DOM
+        // $("#test5").click(function () {
+        // alert("Text :" + $("#test5").text());
+        // })
+        // $("#test5").click(function () {
+        // alert("Text :" + $("#test5").html());
+        // })
+        // $("button").click(function () {
+        //     alert("val :" + $("#input1").val());
+        // })
+        // $("button").click(function () {
+        //     alert($("#anchor1").attr("href"));
+        // })
+        // $("button").click(function () {
+        //     $("#test5").text("Hello world");
+        // });
+        // $("button").click(function () {
+        //     $("#test5").html("<b> Hello world </b>");
+        // });
+        // $("button").click(function () {
+        //     $("#input1").val("Raj");
+        // });
+        // $("button").click(function () {
+        //     $("#test5").text(function (i, origText) {
+        //         return "Old text: " + origText + " New text: Hello world(index: " + i + ")";
+        //     });
+        // });
+        // $("button").click(function () {
+        //     $("#test5").html(function (i, origText) {
+        //         return "Old text: " + origText + " New text: Hello <b>world</b>(index: " + i + ")";
+        //     });
+        // });
+        // $("#anchor1").click(function () {
+        //     $("#anchor1").attr("href", "https://www.google.com")
+        // });
+        // $("button").click(function () {
+        //     $("#anchor1").attr({ "href": "https://www.google.com", "title": "w3school jQuery Tutorial" })
+        // });
+        // $("#anchor1").click(function () {
+        //     $("#anchor1").attr("href", function (i, origValue) {
+        //         return origValue + "jQuery";
+        //     })
+        // });
+
+        // $("#test5").append("some appended text");
+        // $("#test5").prepend("some prepended text");
+
+        // function textAppend() {
+
+        //     var text1 = "<p>text.</p>";
+        //     var text2 = document.createElement("p");
+        //     text2.innerHTML = "text."
+        //     var text3 = $("<p></p>").text("text.");
+        //     $("body").append(text1, text2, text3);
+        // }
+
+        // $("#test5").after("some text after");
+        // $("#test5").before("some text before");
+        // $("button").click(function () {
+
+        //     var text1 = "<p>text.</p>";
+        //     var text2 = document.createElement("p");
+        //     text2.innerHTML = "text."
+        //     var text3 = $("<p></p>").text("text.");
+        //     $("#test5").after(text1, text2, text3);
+        // });
+
+        // $("#test5").remove();
+        // $("p").remove("#test5");
+        // $("#test5").empty();
+
+        // $("button").click(function () {
+        //     $("#test2").addClass("font");
+        //     $("#test5").addClass("color");
+        // });
+
+        // $("button").click(function () {
+        //     $("#test5").addClass("font color");
+        // });
+        // $("#test5").click(function () {
+        //     $("#test5").removeClass("font color");
+        // });
+
+        // $("button").click(function () {
+        //     $("#test5").toggleClass("font color");
+        // });
+        // $("button").click(function () { alert($("p").css("background-color")); });
+        // $("button").click(function () {
+        //     $("#test5").css("background-color", "blue");
+        // });
+        // $("button").click(function () {
+        //     $("#test5").css({ "background-color": "blue", "font-size": "200%" });
+        // })
+        // $("#test5").click(function () {
+        //     $("#test5").hide();
+        // });
+        // $("button").click(function () {
+        //     $("#test5").show();
+        // });
+        $("button").click(function () {
+            $("#test5").toggle();
+        })
+
+
+
+
+
+
+    </script>
+</body>
+
+</html>

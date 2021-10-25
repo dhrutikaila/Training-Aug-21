@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <p id="demo"></p>
+
+    <input type="text" id="myText" value="Hello">
+    <button onclick="fn()">Location</button>
+    <button onclick="fn1()">HistoryBack</button>
+
+
+    <script>
+        // 1.Use the getElementById method to find the < p > element, and change its text to "Hello".
+        document.getElementById("demo").innerHTML = "Hello";
+
+        // 2.Use the getElementsByTagName method to find the first <p> element, and change its text to "Hello".
+        document.getElementsByTagName("p")[0].innerHTML = "Hello";
+
+        // 3.Use HTML DOM to change the value of the image's src attribute.
+        // document.getElementById("image").src = "pic_mountain.jpg";
+
+        // 4.Use HTML DOM to change the value of the input field.
+        document.getElementById("myText").value = "Have a nice day!";
+
+        // 5.Change the text color of the <p> element to "red".
+        document.getElementById("demo").style.color = "red";
+
+        // 6.Use the CSS display property to hide the p element.
+        document.getElementById("demo").style.display = "none";
+
+        // 7.Use Window.location object to navigate on another page
+
+        function fn() { window.location.replace("https://www.google.com") }
+
+
+        // 8.Use Window.history object to move to previous url in the history list
+
+        function fn1() { window.history.back(); }
+
+        // 9.Try to change windows height and width using Windows object
+
+        window.innerHeight = 1000px;
+
+
+    </script>
+</body>
+
+</html>
