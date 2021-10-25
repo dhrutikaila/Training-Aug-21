@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h2>Callback</h2>
+    <p id="demo"></p>
+    <p id="prac"></p>
+    <p id="calc"></p><hr>
+    <p id="time"></p>
+
+    <script>
+        function calculaotr(num1,num2,thecallback){
+            let mul=num1*num2;
+            thecallback(mul)
+        }
+
+        function display(res){
+            document.getElementById("demo").innerHTML="The answer is :"+res;
+        }
+
+        calculaotr(25,5,display)
+
+        // Asynchronous functions 
+
+        setTimeout(prac,5000);
+
+        function prac(){
+            document.getElementById("prac").innerHTML="Hello!"
+        }
+
+       setInterval(time,1000);
+
+       function time(){
+           let d=new Date();
+           document.getElementById("time").innerHTML=d.getHours()+":"+d.getMinutes()+":"+d.getSeconds();
+
+       }
+
+    
+    </script>
+</body>
+</html>

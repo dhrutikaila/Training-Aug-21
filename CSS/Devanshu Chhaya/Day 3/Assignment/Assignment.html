@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+* {
+  box-sizing: border-box;
+}
+
+.flex-container {
+  display: flex;
+  font-size: 30px;
+  text-align: center;
+  margin:20px;
+  height:100px;
+  align-items:center;
+  
+  background-color:cornflowerblue;
+}
+
+.flex-container>button{
+  background-color:navy;
+  color: aliceblue;
+  padding: 10px;
+  margin:20px 40px 20px 0px;
+  width:100px;
+}
+
+.flex-container>button:hover{
+  background-color: lightblue;
+  color: black;
+  font-weight: bold;
+}
+
+h1{
+  padding:70px
+}
+/* Responsive layout - makes a one column-layout instead of two-column layout */
+@media (max-width: 700px) {
+  .flex-container {
+    flex-direction: column;
+  }
+}
+</style>
+</head>
+<body>
+
+<div class="flex-container">
+  <h1>ABC</h1>
+  <button type="menu">Github</button>
+  <button type="menu">HTML</button>
+  <button type="menu">CSS</button>
+  <button type="menu">Java Script</button>
+  <button type="menu">SQL</button>
+  
+</div>
+
+</body>
+</html>

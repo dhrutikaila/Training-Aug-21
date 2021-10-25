@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <p id="details"></p>
+    <p id="details2"></p>
+    <script>
+        const employee={
+            details: function(){
+                return "Name: " +this.firstname+" || Address: "+this.address+" || Designation: "+this.designation
+            }
+
+        }
+
+        const employee1={
+            firstname:"Ajay",
+            address:"Dwarka",
+            designation:"Sr.manager"
+        }
+
+        const employee2={
+            firstname:"Milan",
+            address:"Jamnagar",
+            designation:"Manager"
+        }
+
+        document.getElementById("details").innerHTML=employee.details.call(employee1)
+        document.getElementById("details2").innerHTML=employee.details.call(employee2)
+        
+        
+    </script>
+</body>
+</html>

@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<p id="demo"></p><hr>
+<p id="location"></p>
+<hr>
+<button onclick="gotogoogle()">Google Search</button>
+<hr>
+<p id="navigator"></p>
+<hr>
+<p id="appname"></p>
+<hr>
+<p id="codename"></p>
+<hr>
+<p id="browser"></p>
+<hr>
+<p id="lan"></p>
+<hr>
+<p id="isonline"></p>
+
+
+<script>
+    function gotogoogle(){
+
+window.location.assign("https://www.google.com")
+}
+
+document.getElementById("demo").innerHTML = 
+"Screen width is " + screen.width;
+
+document.getElementById("demo").innerHTML = 
+"Screen height is " + screen.height;
+
+// window.location //
+
+document.getElementById("location").innerHTML = 
+"The full URL of this page is:<br>" + window.location.href;
+
+document.getElementById("location").innerHTML = 
+"Page hostname is: " + window.location.hostname;
+
+
+
+document.getElementById("navigator").innerHTML =
+"navigator.cookieEnabled is " + navigator.cookieEnabled;
+
+document.getElementById("javaenable").innerHTML = navigator.javaEnabled();
+
+document.getElementById("appname").innerHTML =
+"navigator.appName is " + navigator.appName;
+
+document.getElementById("codename").innerHTML =
+"navigator.appCodeName is " + navigator.appCodeName;
+
+document.getElementById("browser").innerHTML =
+"navigator.product is " + navigator.product;
+
+document.getElementById("lan").innerHTML = navigator.language;
+
+document.getElementById("isonline").innerHTML = navigator.onLine;
+</script>
+
+</body>
+</html>

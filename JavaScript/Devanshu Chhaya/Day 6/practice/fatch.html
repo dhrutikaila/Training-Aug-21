@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Fetch</h1>
+    <p id="demo"></p><br>   
+    <p id="fetch"></p><br>
+    <p id="fetch2"></p>
+   <hr>
+   
+   <script>
+        let file="try.txt"
+
+        fetch(file)
+        .then(x => x.text())
+        .then(y => document.getElementById("demo").innerHTML=y);
+
+        getText("try.txt")
+
+        async function getText(file){
+        let x=await fetch(file);
+        let y=await x.text();
+        document.getElementById("fetch").innerHTML=y
+        }
+
+        getText2("try.txt")
+        async function getText2(file){
+        let obj=await fetch(file);
+        let text=await obj.text();
+        document.getElementById("fetch2").innerHTML=text
+        }
+
+    </script>
+</body>
+</html>

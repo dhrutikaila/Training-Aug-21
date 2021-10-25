@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .Item1{grid-area: header;}
+        .Item2{grid-area: menu;}
+        .Item3{grid-area: main;}
+        .Item4{grid-area: right;}
+        .Item5{grid-area: footer;}
+
+        .grid-container{
+            background-color:slategrey;
+            display: grid;
+            grid-template-areas: 'header header header header header header'
+                                 'menu main main main right right'
+                                 'menu footer footer footer footer footer';
+            padding: 20px;
+            grid-gap: 10px;
+
+        }
+        .grid-container>div{
+            background-color:khaki;
+            padding:20px 0px;
+            text-align: center;
+
+        }
+    </style>
+</head>
+<body>
+    <div class="grid-container">
+        <div class="Item1">Header</div>
+        <div class="Item2">Menu</div>
+        <div class="Item3">Main</div>
+        <div class="Item4">Right</div>
+        <div class="Item5">Footer</div>
+    
+    </div>
+</body>
+</html>

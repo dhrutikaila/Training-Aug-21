@@ -1,0 +1,88 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>html demo</title>
+  <style>
+  p {
+    margin: 8px;
+    font-size: 20px;
+    color: blue;
+    cursor: pointer;
+  }
+  b {
+    text-decoration: underline;
+  }
+  button {
+    cursor: pointer;
+  }
+  </style>
+  <script src="https://code.jquery.com/jquery-3.5.0.js"></script>
+</head>
+<body>
+ <h3>Text()</h3>
+  <button id="text">Return the text content of all p elements</button>
+
+<hr>
+<h3>html()</h3>
+
+<p>
+  <b>Click</b> to change the <span id="tag">html</span>
+</p>
+<p>
+  to a <span id="text">text</span> node.
+</p>
+<p>
+  This <button name="nada">button</button> does nothing.
+</p>
+<hr>
+<h3>val()</h3>
+
+<select id="single">
+  <option>Single</option>
+  <option>Single2</option>
+</select>
+ 
+<select id="multiple" multiple="multiple">
+  <option selected="selected">Multiple</option>
+  <option>Multiple2</option>
+  <option selected="selected">Multiple3</option>
+</select>
+<br>
+
+<p id="value"></p><hr>
+
+<h3>arr()</h3>
+<p>Once there was a <em title="huge, gigantic">large</em> dinosaur...</p>
+The title of the emphasis is:<div></div>
+
+<script>
+
+$(document).ready(function(){
+  $("#text").click(function(){
+    alert($("p").text());
+  })
+})
+
+$( "p" ).click(function() {
+  var htmlString = $( this ).html();
+  $( this ).text( htmlString );
+});
+
+function displayVals(){
+  var singlevalue = $("#single").val();
+  var multiplevalues = $("#multiple").val() || [];
+  $("#value").html("<strong>Sinle: </strong>"+ singlevalue + "<strong>  Multiple: </strong>"+ multiplevalues.join(","));
+
+}
+
+$("select").change(displayVals);
+displayVals();
+
+var title = $("em").attr("title")
+$("div").text(title)
+
+</script>
+ 
+</body>
+</html>

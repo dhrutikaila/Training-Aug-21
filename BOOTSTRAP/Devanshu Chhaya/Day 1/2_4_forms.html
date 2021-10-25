@@ -1,0 +1,211 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-F3w7mX95PdgyTmZZMECAngseQB83DfGTowi0iMjiWaeVhAn4FJkqJByhZMI3AhiU" crossorigin="anonymous">
+
+    <title>Forms</title>
+  </head>
+    <body>
+        <header>
+            <h1 class="display-3 text-center my-4">Forms</h1>
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-3">
+                        <div class="dropdown">
+                            <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
+                                Typography & Utilites
+                            </button>
+                            <div class="dropdown-menu">
+                                <a class="dropdown-item" href="../Day 1/1_1_typography.html">Typography</a>
+                                <a class="dropdown-item" href="../Day 1/1_2_textalighnment.html">Text Alignment & Display</a>
+                                <a class="dropdown-item" href="../Day 1/1_3_float_and_fixposition.html">Floats & Position</a>
+                                <a class="dropdown-item" href="../Day 1/1_4_colors_backround.html">Colors & Background</a>
+                                <a class="dropdown-item" href="../Day 1/1_5_spacing.html">Spacing</a>
+                                <a class="dropdown-item" href="../Day 1/1_6_sizing_border.html">Sizing</a>
+                                <a class="dropdown-item" href="../Day 1/1_7_breakpoint.html">Breakpoints</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-3">
+                        <div class="dropdown">
+                            <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton2" data-bs-toggle="dropdown" aria-expanded="false">
+                                CSS Components
+                            </button>
+                            <div class="dropdown-menu">
+                                <a class="dropdown-item" href="../Day 1/2_1_buuttons.html">Buttons</a>
+                                <a class="dropdown-item" href="../Day 1/2_2_navbar.html">Navbar</a>
+                                <a class="dropdown-item" href="../Day 1/2_3_listandbadges.html">List Groups & Badges</a>
+                                <a class="dropdown-item" href="../Day 1/2_4_forms.html">Forms</a>
+                                <a class="dropdown-item" href="../Day 1/2_5_input_group.html">Input Groups</a>
+                                <a class="dropdown-item" href="../Day 1/2_6_alertsprogressbar.html">Alerts & Progress</a>
+                                <a class="dropdown-item" href="../Day 1/2_7_Tablespagination.html">Tables & Pagination</a>
+                                <a class="dropdown-item" href="../Day 1/2_8_cards.html">Cards</a>
+                                <a class="dropdown-item" href="../Day 1/2_9_mediaobjects.html">Media Objects</a>
+                                <a class="dropdown-item" href="">3.11 Jumbotron</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-3">
+                        <div class="dropdown">
+                            <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton3" data-bs-toggle="dropdown" aria-expanded="false">
+                                Grid System & Flex Box
+                            </button>
+                            <div class="dropdown-menu">
+                                <a class="dropdown-item" href="../Day 2/3_1_grid.html">4.2 Grid System</a>
+                                <a class="dropdown-item" href="../Day 2/3_2_gridalignment.html">4.3 Grid Alignment</a>
+                                <a class="dropdown-item" href="../Day 2/3_3_flexbox.html">4.4 Flexbox</a>
+                                <a class="dropdown-item" href="../Day 2/3_4automargin_wrapping.html">4.5 Auto Margins & Wrap</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-3">
+                        <div class="dropdown">
+                            <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton4" data-bs-toggle="dropdown" aria-expanded="false">
+                                Java Script Widgets
+                            </button>
+                            <div class="dropdown-menu">
+                                <a class="dropdown-item" href="../Day 2/4_1_carousal.html">5.2 Carousel</a>
+                                <a class="dropdown-item" href="../Day 2/4_2_colleps.html">5.3 Collapse</a>
+                                <a class="dropdown-item" href="../Day 2/4_3_Tooltips.html">5.4 Tooltips</a>
+                                <a class="dropdown-item" href="../Day 2/4_4_popovers.html">5.5 Popovers</a>
+                                <a class="dropdown-item" href="../Day 2/4_5_models.html">5.6 Modals</a>
+                                <a class="dropdown-item" href="../">5.7 ScrollSpy</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <hr>
+        </header>
+    
+        <div class="container">
+            <!--##################START HERE#####################-->
+    
+            <!-- FORM -->
+            <form>
+                <!-- TEXT FIELD GROUPS -->
+                <div class="form-group">
+                    <label for="name">Name</label>
+                    <input type="text" id="name" class="form-control form-control-sm" placeholder="Enter name">
+                </div>
+                <div class="form-group">
+                    <label for="email">Email address</label>
+                    <input type="email" id="email" class="form-control form-control-lg" placeholder="Enter email">
+                </div>
+                <div class="form-group">
+                    <label for="company">Company</label>
+                    <input type="text" id="company" class="form-control" placeholder="Enter company name">
+                </div>
+                <div class="form-group">
+                    <label for="password">Password</label>
+                    <input type="password" id="password" class="form-control" placeholder="Password">
+                </div>
+                <!-- SELECT -->
+                <div>
+                    <label for="gender" class="form-group">Gender</label>
+                    <select id="gender" class="form-control">
+                        <option>Male</option>
+                        <option>Female</option>
+                    </select>
+                </div>
+                <!-- TEXTAREA -->
+                <div class="form-group">
+                    <label for="message">Message</label>
+                    <textarea class="form-control" id="message" rows="3" class="form-control-file"></textarea>
+                </div>
+                <!-- FILE INPUT -->
+                <div class="form-group">
+                    <label for="file">File input</label>
+                    <input type="file" class="form-control" id="file">
+                    <small id="fileHelp" class="form-text">Max 3mb size</small>
+                </div>
+                <!-- CUSTOM FILE INPUT -->
+                <div class="form-group">
+                    <input type="file" class="form-control" id="myfile">
+                    <label for="myfile">Choose file</label>
+                </div>
+                <br>
+                <br>
+                <!-- RANGE -->
+                <div>
+                    <label for="membership">Membership Level</label>
+                    <input type="range">
+                </div>
+    
+                <br>
+    
+                <button type="submit" class="btn btn-primary">Submit</button>
+            </form>
+    
+            <br>
+            <br>
+    
+            <!-- INLINE FORM -->
+            <form class="form-inline">
+                <input type="text" id="username" class="form-control" placeholder="Enter username">
+                <input type="text" id="password" class="form-control" placeholder="Password">
+                <div class="form-check">
+                    <label class="form-check-lable">Remember me</label>
+                        <input type="checkbox" class="form-check-input" checked>
+                    
+                </div>
+    
+                <button class="btn btn-primary" type="submit">Submit</button>
+            </form>
+    
+            <br>
+            <br>
+    
+            <!-- FORM ROW -->
+            <form>
+                <div class="row">
+                    <div class="col-auto">
+                        <input class="form-control" type="text" placeholder="First name">
+                    </div>
+                    <div class="col-auto">
+                        <input class="form-control" type="text" placeholder="Last name">
+                    </div>
+                </div>
+            </form>
+    
+            <br>
+            <br>
+    
+            <!-- VALIDATION -->
+            <div class="form-group">
+                <label for="username">Username</label>
+                <input type="text" class="form-control is-valid" id="username">
+            </div>
+            <div class="form-group">
+                <label for="password">Password</label>
+                <input type="text" class="form-control is-invalid" id="password">
+                <div class="invalid-feedback">
+                    Password not strong enough
+                </div>
+            </div>
+            <div class="from-group">
+                <label for="password2">Confirm Password</label>
+                <input type="text" class="from-control" id="password2">
+                <div class="invalid-feedback">
+                    Password does not match
+                </div>
+            </div>
+            
+        </div>
+    <!-- Optional JavaScript; choose one of the two! -->
+
+    <!-- Option 1: Bootstrap Bundle with Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-/bQdsTh/da6pkI1MST/rWKFNjaCP5gBSY4sEBT38Q/9RBh9AH40zEOg7Hlq2THRZ" crossorigin="anonymous"></script>
+
+    <!-- Option 2: Separate Popper and Bootstrap JS -->
+    <!--
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.3/dist/umd/popper.min.js" integrity="sha384-W8fXfP3gkOKtndU4JGtKDvXbO53Wy8SZCQHczT5FMiiqmQfUpWbYdTil/SxwZgAN" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/js/bootstrap.min.js" integrity="sha384-skAcpIdS7UcVUC05LJ9Dxay8AXcDYfBJqt1CJ85S/CFujBsIzCIv+l9liuYLaMQ/" crossorigin="anonymous"></script>
+    -->
+  </body>
+</html>

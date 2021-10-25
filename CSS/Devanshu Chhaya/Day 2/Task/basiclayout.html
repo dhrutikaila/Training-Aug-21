@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My first Layout</title>
+</head>
+<style>
+    #header{
+        background-color: coral;
+        height:100px;
+        text-align: center;
+        position: relative;
+        border: 3px solid #73AD21
+    }
+    #navbar{
+        background-color: cornsilk;
+        position: absolute;
+        top: 50px;
+        height: 47%;
+        width:100%;
+        
+    }
+    .links{
+        display:inline;
+    }
+
+    #sidebar{
+        background-color:violet;
+        float:left;
+        height:500px;
+        width: 30%;
+    }
+
+    #mainsection{
+        background-color: chartreuse;
+        height: 500px;
+        width: 70%;
+        float:left
+    }
+
+    #footer{
+        background-color: yellow;
+        width:100%;
+        height:50px;
+        display: block;
+        clear: both;
+    }
+</style>
+<body>
+    <header id="header">
+        <section id="title">        
+            <h1>Name Of the Company</h1>
+        </section>
+        <section id="navbar">
+            <ul >
+                <li class="links"><button><a href="#Home">Home   </a></button></li>
+                <li class="links"><button><a href="#contact">Contact  </a></button> </li>
+                <li class="links"><button><a href="#AboutUs">AboutUs</a></button> </li>
+            </ul>
+        </section>    
+    </header>
+
+    <aside id="sidebar">
+            
+
+    </aside>
+
+    <section id="mainsection">
+            
+    </section>
+    <footer id="footer">
+        
+    </footer>
+</body>
+</html>

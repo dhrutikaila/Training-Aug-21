@@ -1,0 +1,146 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-uWxY/CJNBR+1zjPWmfnSnVxwRheevXITnMqoEIeG1LJrdI0GlVs/9cVSyPYXdcSF" crossorigin="anonymous">
+
+    <title>Hello, world!</title>
+</head>
+
+<body onload="getdata()">
+    <div class="display-3 text-center fw-bolder">Shop Now</div>
+    <div class="container" id="maindiv">
+        <div class="row">
+            <div class="col" style="border:1px solid ;">ProductId</div>
+            <div class="col" style="border:1px solid ;">ProductName</div>
+            <div class="col" style="border:1px solid ;">Price</div>
+            <div class="col" style="border:1px solid ;">Quantity</div>
+            <div class="col" style="border:1px solid ;">Add to cart</div>
+        </div>
+
+    </div>
+
+    <div class="container text-center">
+    <button class="btn btn-danger mt-2" onclick="cartsummary()">Summary</button>
+</div>
+    
+    <script>
+        function getdata() {
+            fetch("items.json")
+                .then(response => {
+                    return response.json();
+                    
+                })
+                .then(jsondata => {
+                    var string = JSON.stringify(jsondata.Products)
+                    localStorage.setItem("prod", string)
+                })
+
+            localStorage.setItem("cart","")    
+
+            var div = document.getElementById("maindiv")
+
+            var products = JSON.parse(localStorage.getItem("prod"))
+            console.log(products)
+
+            for (var i in products)
+             {
+                               
+                var createrow = document.createElement("div")
+                createrow.setAttribute("class", "row")
+
+                var createcol1 = document.createElement("div")
+                createcol1.setAttribute("class", "col border border-dark text-center")
+
+                var createcol2 = document.createElement("div")
+                createcol2.setAttribute("class", "col border border-dark text-center")
+
+                var createcol3 = document.createElement("div")
+                createcol3.setAttribute("class", "col border border-dark text-center")
+
+                var createcol4 = document.createElement("div")
+                createcol4.setAttribute("class", "col border border-dark text-center")
+
+                var createcol5 = document.createElement("div")
+                createcol5.setAttribute("class", "col border border-dark text-center")
+
+                var id = document.createTextNode(products[i].ProductID)
+                var name = document.createTextNode(products[i].ProductName)
+                var price = document.createTextNode(products[i].Price)
+                var quantity = document.createTextNode(products[i].Quantity)
+                var action = document.createTextNode("Add to Cart")
+
+                var button = document.createElement("button")
+                button.setAttribute("id", "btn" + i)
+                button.setAttribute("class", "btn btn-primary")
+                var buttonid = "addtocart(" + (parseInt(i) + 1) + ")"
+                button.setAttribute("onclick", buttonid)
+                button.appendChild(action)
+
+                createcol1.appendChild(id)
+                createcol2.appendChild(name)
+                createcol3.appendChild(price)
+                createcol4.appendChild(quantity)
+                createcol5.appendChild(button)
+
+                createrow.appendChild(createcol1)
+                createrow.appendChild(createcol2)
+                createrow.appendChild(createcol3)
+                createrow.appendChild(createcol4)
+                createrow.appendChild(createcol5)
+
+                div.appendChild(createrow)
+            }
+            
+            
+        }
+        function addtocart(id)
+            {
+                    var product = JSON.parse(localStorage.getItem("prod"))
+                    var cart = localStorage.getItem("cart")
+                    for(i in product){
+                        if(product[i].ProductID==parseInt(id)){
+                            localStorage.setItem("cart", cart+ product[i].ProductID+ " ")
+                        }
+                    }
+            }
+
+        function cartsummary(){
+            var products = JSON.parse(localStorage.getItem("prod"))
+            var cart = localStorage.getItem("cart")
+            var cartarrray = cart.split(",")
+
+            for(i in products){
+                if (cartarrray.includes(products[i].ProductID.toString())){
+                    console.log("ProductId: "+products[i].ProductID + 
+                    " Name :"+ products[i].ProductName +
+                    " Price:"+ products[i].Price+
+                    " Quantity"+ products[i].Quantity
+                    )
+                }
+            }
+        }
+    </script>
+
+
+    <!-- Optional JavaScript; choose one of the two! -->
+
+    <!-- Option 1: Bootstrap Bundle with Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-kQtW33rZJAHjgefvhyyzcGF3C5TFyBQBA13V1RKPf4uH+bwyzQxZ6CmMZHmNBEfJ"
+        crossorigin="anonymous"></script>
+
+    <!-- Option 2: Separate Popper and Bootstrap JS -->
+    <!--
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.10.2/dist/umd/popper.min.js" integrity="sha384-7+zCNj/IqJ95wo16oMtfsKbZ9ccEh31eOz1HGyDuCQ6wgnyJNSYdrPa03rtR1zdB" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.2/dist/js/bootstrap.min.js" integrity="sha384-PsUw7Xwds7x08Ew3exXhqzbhuEYmA2xnwc8BuD6SEr+UmEHlX8/MCltYEodzWA4u" crossorigin="anonymous"></script>
+    -->
+</body>
+
+</html>

@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <p id="demo"></p><hr>
+    <p id="promise"></p><hr>
+    <p id="file"></p>
+    <script>
+        function myDisplayer(some){
+            document.getElementById("demo").innerHTML=some;
+        }
+
+        let myPromise=new Promise(function(myResolve,myReject){
+            let x=0;
+
+            if(x==0){
+                myResolve("Resolved");
+            }
+            else{
+                myReject("Rejected");
+            }
+        });
+
+        myPromise.then(
+            function(value) {myDisplayer(value);},
+            function(error) {myDisplayer(error);}
+        )
+
+        let myPromisewithSettimeout=new Promise(function (Resolve,Reject){
+            setTimeout(function(){Resolve("This is promise practice");},3000)
+        });
+        myPromisewithSettimeout.then(function(value){
+            document.getElementById("promise").innerHTML=value;
+        }) ;
+
+       function filedata(some){
+           document.getElementById("file").innerHTML=some
+       }
+
+       let promiseoffile= new Promise(function(resolve,reject){
+        let req = new XMLHttpRequest();
+        req.open('GET', "Task.html");
+        req.onload=function(){
+            if(req.status==200){
+                resolve(req.response);
+            }
+            else{
+                reject("Fail to open")
+            }
+            req.send();
+        }
+
+
+        });
+
+        promiseoffile.then(
+            function(value){filedata(value);},
+            function(error){filedata(value);}
+        )
+
+    </script>
+
+</body>
+</html>

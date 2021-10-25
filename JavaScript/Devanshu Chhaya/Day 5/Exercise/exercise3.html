@@ -1,0 +1,28 @@
+<!-- Explain usage of Function Hosing using example -->
+<!-- Hoisting is a JavaScript technique which moves variables and function declarations to the top of their scope before code execution begins.
+    Within a scope no matter where functions or variables are declared, they're moved to the top of their scope.
+    Note that hoisting only moves the declaration while assignments are left in place. -->
+
+
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        console.log(functionBelow("Hello"));
+        function functionBelow(greet) {
+            return `${greet} world`;
+        }
+        console.log(functionBelow("Hi"));
+    </script>
+</body>
+
+</html>

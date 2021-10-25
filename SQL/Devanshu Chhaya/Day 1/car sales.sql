@@ -8,7 +8,7 @@ CREATE TABLE Employee(
 	ManagerID INT CONSTRAINT fk_manager FOREIGN KEY REFERENCES Employee(EmployeeID) ON DELETE NO ACTION ,
 	SalesManID INT, 
 );	
-Drop TABLE Employee;
+
 INSERT INTO Employee VALUES 
 (1,'dev','chhaya','drchhaya','6546546542','20210523',NULL,NULL),
 (2,'RAJ','SHARMA','rajj','3213213225','20200221',1,101),
