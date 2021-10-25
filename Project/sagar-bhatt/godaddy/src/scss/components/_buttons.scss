@@ -1,0 +1,133 @@
+@use "../custom" as *;
+.btn {
+  border-radius: 0;
+}
+
+.btn-dark {
+  color: $white;
+  background-color: $black;
+  font-weight: bold;
+
+  &:hover {
+    background-color: $black;
+  }
+}
+
+.btn-light {
+  color: $black;
+  background-color: $white;
+  font-weight: bold;
+  border: 2px solid $black;
+
+  &:hover,
+  &:focus,
+  &:active {
+    background-color: $white;
+    color: $black;
+    box-shadow: none;
+    border: 2px solid $black;
+  }
+}
+
+.btn-custom {
+  position: relative;
+  font-weight: bold;
+  text-align: center;
+  margin: 0.75rem;
+  padding: 0.8rem 3rem;
+  display: flex;
+
+  span {
+    vertical-align: top;
+    transition: all 0.3s ease-in-out;
+  }
+
+  &:hover {
+    span {
+      margin-left: -15px;
+      padding-right: 15px;
+    }
+  }
+  &::after {
+    position: absolute;
+    left: 65%;
+    z-index: -10;
+    content: url(../../images/svg/right-arrow-white.svg);
+  }
+  &:hover::after {
+    left: 70%;
+    z-index: 1;
+    fill: $black !important;
+    transition: left 0.3s ease-in-out;
+  }
+}
+
+.btn-product {
+  position: relative;
+  font-weight: normal;
+  text-align: center;
+  margin: 0.75rem;
+  padding: 0.8rem 3rem;
+  display: flex;
+
+  span {
+    vertical-align: top;
+    transition: all 0.3s ease-in-out;
+  }
+
+  &:hover {
+    background-color: $black;
+    color: $white;
+    span {
+      margin-left: -30px;
+      padding-right: 30px;
+    }
+  }
+  &::after {
+    position: absolute;
+    left: 65%;
+    z-index: -10;
+    content: url(../../images/svg/right-arrow-white.svg);
+  }
+  &:hover::after {
+    left: 70%;
+    z-index: 1;
+    fill: $black !important;
+    transition: left 0.3s ease-in-out;
+  }
+}
+
+.btn-content {
+  position: relative;
+  font-weight: normal;
+  text-align: center;
+  margin: 0.75rem;
+  padding: 0.8rem 3rem;
+  display: flex;
+  color: $black;
+  background-color: $white;
+
+  span {
+    vertical-align: top;
+    transition: all 0.3s ease-in-out;
+  }
+
+  &:hover {
+    span {
+      margin-left: -15px;
+      padding-right: 15px;
+    }
+  }
+  &::after {
+    position: absolute;
+    left: 65%;
+    z-index: -10;
+    content: url(../../images/svg/right-arrow-black.svg);
+  }
+  &:hover::after {
+    left: 72%;
+    z-index: 1;
+    fill: $black !important;
+    transition: left 0.3s ease-in-out;
+  }
+}

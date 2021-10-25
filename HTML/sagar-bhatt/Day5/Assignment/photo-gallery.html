@@ -1,0 +1,101 @@
+<!--
+    ? Create Photo Album Gallery, which must be responsive. Using Media Queries Implement this task.
+-->
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Photo Gallery</title>
+    <style>
+      * {
+        box-sizing: border-box;
+        margin: 0;
+        padding: 0;
+      }
+      body {
+        background-color: #3f3f3f;
+        font: 1.2rem "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
+          "Lucida Sans", Arial, sans-serif;
+      }
+      .container {
+        padding: 20px;
+      }
+      h1 {
+        text-align: center;
+        color: #ffe984;
+        margin-bottom: 10px;
+      }
+      .img-container {
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-gap: 10px;
+        padding: 10px;
+        border: 1px groove #202020;
+        border-radius: 5px;
+        background-color: #ffffff;
+      }
+      img {
+        width: 100%;
+        vertical-align: middle;
+        border-radius: 5px;
+        filter: grayscale(100%) opacity(50%); /* blur(1px) */
+        margin-top: 10px;
+      }
+      img:first-child {
+        margin-top: 0px;
+      }
+      @media only screen and (min-width: 768px) {
+        .img-container {
+          grid-template-columns: 1fr 1fr;
+        }
+      }
+      @media only screen and (min-width: 992px) {
+        .img-container {
+          grid-template-columns: repeat(4, 1fr);
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <h1>Image Gallery - Grid</h1>
+      <div class="img-container">
+        <div class="col-6 col-4">
+          <img src="https://picsum.photos/id/684/600/400" alt="image" />
+          <img src="https://picsum.photos/id/1025/600/300" alt="image" />
+          <img src="https://picsum.photos/id/1020/600/400" alt="image" />
+          <img src="https://picsum.photos/id/237/600/300" alt="image" />
+          <img src="https://picsum.photos/id/684/600/400?blur=5" alt="image" />
+        </div>
+        <div class="col-6 col-4">
+          <img src="https://picsum.photos/id/598/600/300" alt="image" />
+          <img src="https://picsum.photos/id/642/600/400" alt="image" />
+          <img src="https://picsum.photos/id/211/600/300" alt="image" />
+          <img src="https://picsum.photos/id/1076/600/400" alt="image" />
+          <img src="https://picsum.photos/id/1081/600/400" alt="image" />
+        </div>
+        <div class="col-6 col-4">
+          <img src="https://picsum.photos/id/743/600/400" alt="image" />
+          <img src="https://picsum.photos/id/870/600/400" alt="image" />
+          <img src="https://picsum.photos/id/945/600/300" alt="image" />
+          <img src="https://picsum.photos/id/949/600/400" alt="image" />
+          <img src="https://picsum.photos/id/972/600/300" alt="image" />
+        </div>
+        <div class="col-6 col-4">
+          <img src="https://picsum.photos/id/1060/600/400" alt="image" />
+          <img src="https://picsum.photos/id/30/600/300" alt="image" />
+          <img src="https://picsum.photos/id/42/600/400" alt="image" />
+          <img src="https://picsum.photos/id/431/600/300" alt="image" />
+          <img src="https://picsum.photos/id/250/600/400" alt="image" />
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
+
+<!--
+    TODO: https://www.w3schools.com/css/tryit.asp?filename=trycss_ex_images_filters
+    TODO: https://www.w3schools.com/css/tryit.asp?filename=trycss3_flexbox_image_gallery
+-->

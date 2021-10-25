@@ -1,0 +1,333 @@
+<!-- TODO: https://getbootstrap.com/docs/5.0/examples/cheatsheet/ -->
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Bootstrap Sandbox</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-F3w7mX95PdgyTmZZMECAngseQB83DfGTowi0iMjiWaeVhAn4FJkqJByhZMI3AhiU"
+      crossorigin="anonymous"
+    />
+
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.9.0/css/all.min.css"
+      integrity="sha512-q3eWabyZPc1XTCmF+8/LuE1ozpg5xxn7iO89yfSOd5/oKvyqLngoNGsx8jq92Y8eXJ/IRxQbEC+FGSYxtk2oiw=="
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="../Project/assets/css/style.css" />
+  </head>
+  <body>
+    <!-- * header -->
+    <header>
+      <div class="logo">
+        <span>
+          <a href="../../../Project/sagar-bhatt/web-tutorials/index.html">
+            RadixWeb
+          </a>
+        </span>
+      </div>
+      <nav>
+        <input type="checkbox" id="click" />
+        <label for="click" class="menu-btn">
+          <i class="fas fa-bars"></i>
+        </label>
+        <ul>
+          <li>
+            <a href="../../../Project/sagar-bhatt/web-tutorials/index.html">
+              Home
+            </a>
+          </li>
+          <li>
+            <a href="../../../HTML/sagar-bhatt/Project/index.html">HTML/CSS</a>
+          </li>
+          <li><a href="../Project/index.html" class="active">Bootstrap</a></li>
+          <!-- <li><a href="#">SCSS</a></li> -->
+          <li>
+            <a href="../../../JavaScript/sagar-bhatt/Project/index.html">
+              Javascript
+            </a>
+          </li>
+          <li>
+            <a href="../../../jQuery/sagar-bhatt/Project/index.html">
+              jQuery
+            </a>
+          </li>
+        </ul>
+      </nav>
+    </header>
+    <!-- * main section -->
+    <article>
+      <section>
+        <div class="container bg-light">
+          <div class="display-4 text-center text-muted text-capitalize pb-2">
+            Text Alignment & Display
+          </div>
+        </div>
+        <div class="container bg-light font-monospace">
+          <!-- * Bootstrap Content -->
+          <ul class="nav nav-pills nav-fill text-capitalize nav-justified">
+            <li class="nav-item mx-2 dropdown bg-dark bg-opacity-50 my-1">
+              <button
+                class="btn nav-link dropdown-toggle text-white"
+                data-bs-toggle="dropdown"
+              >
+                2-Utilities
+              </button>
+              <div class="dropdown-menu w-100 overflow-auto">
+                <a class="dropdown-item" href="./2-2-basic-typography.html">
+                  2.2 Basic Typography
+                </a>
+                <a
+                  class="dropdown-item"
+                  href="./2-3-text-alignment-display.html"
+                >
+                  2.3 Text Alignment & Display
+                </a>
+                <a class="dropdown-item" href="./2-4-floats-position.html">
+                  2.4 Floats & Positions
+                </a>
+                <a class="dropdown-item" href="./2-5-colors-background.html">
+                  2.5 Colors & Background
+                </a>
+                <a class="dropdown-item" href="./2-6-spacing.html">
+                  2.6 Spacing
+                </a>
+                <a class="dropdown-item" href="./2-7-sizing.html">
+                  2.7 Sizing
+                </a>
+                <a
+                  class="dropdown-item"
+                  href="../2-utilities/2-8-breakpoints.html"
+                >
+                  2.8 Breakpoints
+                </a>
+              </div>
+            </li>
+            <li
+              class="nav-item mx-2 dropdown mx-2 bg-danger bg-opacity-50 my-1"
+            >
+              <button
+                class="btn nav-link dropdown-toggle text-white"
+                data-bs-toggle="dropdown"
+              >
+                3-CSS Component
+              </button>
+              <div class="dropdown-menu w-100 overflow-auto">
+                <a
+                  class="dropdown-item"
+                  href="../3-components/3-2-buttons.html"
+                >
+                  3.2 Buttons
+                </a>
+                <a class="dropdown-item" href="../3-components/3-3-navbar.html">
+                  3.3 Navbar
+                </a>
+                <a
+                  class="dropdown-item"
+                  href="../3-components/3-4-list-groups-badges.html"
+                >
+                  3.4 List Groups & Badges
+                </a>
+                <a class="dropdown-item" href="../3-components/3-5-forms.html">
+                  3.5 Forms
+                </a>
+                <a
+                  class="dropdown-item"
+                  href="../3-components/3-6-input-groups.html"
+                >
+                  3.6 Input Groups
+                </a>
+                <a
+                  class="dropdown-item"
+                  href="../3-components/3-7-alerts-progress.html"
+                >
+                  3.7 Alerts & Progress
+                </a>
+                <a
+                  class="dropdown-item"
+                  href="../3-components/3-8-tables-pagination.html"
+                >
+                  3.8 Tables & Pagination
+                </a>
+                <a class="dropdown-item" href="../3-components/3-9-cards.html">
+                  3.9 Cards
+                </a>
+                <!-- <a
+                  class="dropdown-item"
+                  href="../3-components/3-10-media-objects.html"
+                >
+                  3.10 Media Objects
+                </a> -->
+              </div>
+            </li>
+            <li class="nav-item mx-2 dropdown bg-warning my-1">
+              <button
+                class="btn nav-link dropdown-toggle text-white"
+                data-bs-toggle="dropdown"
+              >
+                4-Grid & Flexbox
+              </button>
+              <div class="dropdown-menu w-100 overflow-auto">
+                <a
+                  class="dropdown-item"
+                  href="../4-grid-flexbox/4-2-grid-system.html"
+                >
+                  4.2 Grid System
+                </a>
+                <a
+                  class="dropdown-item"
+                  href="../4-grid-flexbox/4-3-grid-alignment.html"
+                >
+                  4.3 Grid Alignment
+                </a>
+                <a
+                  class="dropdown-item"
+                  href="../4-grid-flexbox/4-4-flexbox.html"
+                >
+                  4.4 Flexbox
+                </a>
+                <a
+                  class="dropdown-item"
+                  href="../4-grid-flexbox/4-5-auto-margins-wrap.html"
+                >
+                  4.5 Auto Margins & wrap
+                </a>
+              </div>
+            </li>
+            <li class="nav-item mx-2 dropdown bg-success bg-opacity-50 my-1">
+              <button
+                class="btn nav-link dropdown-toggle text-white"
+                data-bs-toggle="dropdown"
+              >
+                5-JavaScript Widgets
+              </button>
+              <div class="dropdown-menu w-100 overflow-auto">
+                <a
+                  class="dropdown-item"
+                  href="../5-javascript-widgets/5-2-carousel.html"
+                >
+                  5.2 Carousel
+                </a>
+                <a
+                  class="dropdown-item"
+                  href="../5-javascript-widgets/5-3-collapse.html"
+                >
+                  5.3 Collapse
+                </a>
+                <a
+                  class="dropdown-item"
+                  href="../5-javascript-widgets/5-4-tooltips.html"
+                >
+                  5.4 Tooltips
+                </a>
+                <a
+                  class="dropdown-item"
+                  href="../5-javascript-widgets/5-5-popovers.html"
+                >
+                  5.5 Popovers
+                </a>
+                <a
+                  class="dropdown-item"
+                  href="../5-javascript-widgets/5-6-modals.html"
+                >
+                  5.6 Modals
+                </a>
+              </div>
+            </li>
+          </ul>
+          <hr />
+          <!--
+        ? Justify using css
+        TODO: text-align: justify
+      -->
+          <p style="text-align: justify">
+            Lorem ipsum dolor sit, amet consectetur adipisicing elit. Architecto
+            quod maiores, illo nisi voluptas repellat neque et accusamus dolorem
+            molestias inventore quibusdam commodi vel perferendis ea aperiam ex
+            assumenda sit magnam ad nostrum placeat! Quaerat, tempore suscipit
+            cumque eveniet mollitia sit error! Doloribus molestiae libero sit
+            eveniet unde, repellat accusamus.
+          </p>
+
+          <!--
+        ? Alignment classes
+        TODO: .text-start, .text-end, text-center
+      -->
+          <p class="text-start">text aligned on left(start)</p>
+          <p class="text-center">text aligned on center</p>
+          <p class="text-end">text aligned on right(end)</p>
+
+          <!-- Responsive align
+        TODO: .start, .center, .end: .text-sm-end, .text-md-end, .text-lg-end, .text-xl-end, .text-xxl-end
+      -->
+          <p class="text-sm-end">End aligned on small or wider</p>
+          <p class="text-md-end">End aligned on medium or wider</p>
+          <p class="text-lg-end">End aligned on large or wider</p>
+          <p class="text-xl-end">End aligned on xl or wider</p>
+          <p class="text-xxl-end">End aligned on xxl or wider</p>
+
+          <p class="text-sm-start">Start aligned on small or wider</p>
+          <p class="text-md-start">Start aligned on medium or wider</p>
+          <p class="text-lg-start">Start aligned on large or wider</p>
+          <p class="text-xl-start">Start aligned on xl or wider</p>
+          <p class="text-xxl-start">Start aligned on xxl or wider</p>
+
+          <p class="text-sm-center">Center aligned on small or wider</p>
+          <p class="text-md-center">Center aligned on medium or wider</p>
+          <p class="text-lg-center">Center aligned on large or wider</p>
+          <p class="text-xl-center">Center aligned on xl or wider</p>
+          <p class="text-xxl-center">Center aligned on xxl or wider</p>
+
+          <!-- ? Vertical alignment
+        TODO: .align-baseline, .align-top, .align-bottom, .align-middle, .align-text-top, .align-text-bottom
+      -->
+          <span class="align-baseline">align-baseline</span>
+          <span class="align-top">align-top</span>
+          <span class="align-bottom">align-bottom</span>
+          <span class="align-middle">align-middle</span>
+          <span class="align-text-top">align-text-top</span>
+          <span class="align-text-bottom">align-text-bottom</span>
+          <br />
+          <!--
+        ? TURN BLOCK TO Inline
+        TODO: .d-inline
+      -->
+          <h1 class="d-inline bg-warning">Hello</h1>
+          <h1 class="d-inline bg-warning">Goodbye</h1>
+          <br /><br />
+          <!--
+        ? TURN INLINE TO BLOCK
+        TODO: .d-block
+      -->
+          <span class="d-block bg-warning">Block</span>
+          <br />
+          <!--
+        ? Inline Block
+        TODO: d.inline-block
+      -->
+          <div class="d-inline-block bg-warning">
+            <h3>Hello</h3>
+            This is inline
+          </div>
+          <div class="d-inline-block bg-warning">
+            <h3>Hello</h3>
+            This is inline
+          </div>
+        </div>
+      </section>
+    </article>
+    <!-- lottieFiles Js -->
+    <script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script>
+
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-/bQdsTh/da6pkI1MST/rWKFNjaCP5gBSY4sEBT38Q/9RBh9AH40zEOg7Hlq2THRZ"
+      crossorigin="anonymous"
+    ></script>
+  </body>
+</html>

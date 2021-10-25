@@ -1,0 +1,104 @@
+<!--
+    ? 7-Flexbox image gallery:
+        * https://www.w3schools.com/css/tryit.asp?filename=trycss3_flexbox_image_gallery
+        * https://www.w3schools.com/css/css3_images.asp
+
+-->
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Image Gallery</title>
+    <style>
+      * {
+        box-sizing: border-box;
+        margin: 0;
+        padding: 0;
+      }
+      body {
+        background-color: #3f3f3f;
+        font: 1.2rem "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
+          "Lucida Sans", Arial, sans-serif;
+      }
+      .container {
+        padding: 20px;
+      }
+      h1 {
+        text-align: center;
+        color: #ffe984;
+        margin-bottom: 10px;
+      }
+      .flex-container {
+        display: flex;
+        flex-wrap: wrap;
+        padding: 5px;
+        border: 1px groove #202020;
+        border-radius: 5px;
+        background-color: #ffffff;
+      }
+      .flex-item {
+        flex: 1 1 25%;
+        max-width: 25%;
+        padding: 0 5px;
+      }
+      /* https://www.w3schools.com/css/tryit.asp?filename=trycss_ex_images_filters */
+      .flex-item img {
+        width: 100%;
+        margin-top: 10px;
+        vertical-align: middle;
+        border-radius: 5px;
+        filter: grayscale(100%);
+      }
+      @media (max-width: 992px) {
+        .flex-item {
+          flex: 1 1 50%;
+          max-width: 50%;
+        }
+      }
+      @media only screen and (max-width: 768px) {
+        .flex-item {
+          flex: 100%;
+          max-width: 100%;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <h1>Image Gallery - Flexbox</h1>
+      <div class="flex-container">
+        <div class="flex-item">
+          <img src="https://picsum.photos/id/684/600/400" alt="image" />
+          <img src="https://picsum.photos/id/1025/600/300" alt="image" />
+          <img src="https://picsum.photos/id/1020/600/400" alt="image" />
+          <img src="https://picsum.photos/id/237/600/300" alt="image" />
+          <img src="https://picsum.photos/id/684/600/400?blur=5" alt="image" />
+        </div>
+        <div class="flex-item">
+          <img src="https://picsum.photos/id/598/600/300" alt="image" />
+          <img src="https://picsum.photos/id/642/600/400" alt="image" />
+          <img src="https://picsum.photos/id/211/600/300" alt="image" />
+          <img src="https://picsum.photos/id/1076/600/400" alt="image" />
+          <img src="https://picsum.photos/id/1081/600/400" alt="image" />
+        </div>
+        <div class="flex-item">
+          <img src="https://picsum.photos/id/743/600/400" alt="image" />
+          <img src="https://picsum.photos/id/870/600/400" alt="image" />
+          <img src="https://picsum.photos/id/945/600/300" alt="image" />
+          <img src="https://picsum.photos/id/949/600/400" alt="image" />
+          <img src="https://picsum.photos/id/972/600/300" alt="image" />
+        </div>
+        <div class="flex-item">
+          <img src="https://picsum.photos/id/1060/600/400" alt="image" />
+          <img src="https://picsum.photos/id/30/600/300" alt="image" />
+          <img src="https://picsum.photos/id/42/600/400" alt="image" />
+          <img src="https://picsum.photos/id/431/600/300" alt="image" />
+          <img src="https://picsum.photos/id/250/600/400" alt="image" />
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

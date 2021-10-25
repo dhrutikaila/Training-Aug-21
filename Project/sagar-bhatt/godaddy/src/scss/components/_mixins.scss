@@ -1,0 +1,11 @@
+// @mixin block-spacer(margin-top, margin-bottom, padding-left/right) {
+@mixin block-spacer($mt: auto, $mb: auto, $p: 4vw) {
+  width: 100%;
+  line-height: 24px;
+  padding-right: $p !important;
+  padding-left: $p !important;
+  margin-top: $mt;
+  margin-bottom: $mb;
+  margin-right: auto;
+  margin-left: auto;
+}

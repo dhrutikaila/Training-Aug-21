@@ -1,0 +1,455 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Assignment Day 3</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-F3w7mX95PdgyTmZZMECAngseQB83DfGTowi0iMjiWaeVhAn4FJkqJByhZMI3AhiU"
+      crossorigin="anonymous"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.9.0/css/all.min.css"
+      integrity="sha512-q3eWabyZPc1XTCmF+8/LuE1ozpg5xxn7iO89yfSOd5/oKvyqLngoNGsx8jq92Y8eXJ/IRxQbEC+FGSYxtk2oiw=="
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="../../Project/assets/css/style.css" />
+  </head>
+  <body>
+    <header>
+      <div class="logo">
+        <span>
+          <a href="../../../../Project/sagar-bhatt/web-tutorials/index.html">
+            RadixWeb
+          </a>
+        </span>
+      </div>
+      <nav>
+        <input type="checkbox" id="click" />
+        <label for="click" class="menu-btn">
+          <i class="fas fa-bars"></i>
+        </label>
+        <ul>
+          <li>
+            <a href="../../../../Project/sagar-bhatt/web-tutorials/index.html">
+              Home
+            </a>
+          </li>
+          <li>
+            <a href="../../../../HTML/sagar-bhatt/Project/index.html"
+              >HTML/CSS</a
+            >
+          </li>
+          <li>
+            <a href="../../../../Bootstrap/sagar-bhatt/Project/index.html">
+              Bootstrap
+            </a>
+          </li>
+          <!-- <li><a href="#">SCSS</a></li> -->
+          <li>
+            <a href="../../Project/index.html" class="active"> Javascript </a>
+          </li>
+          <li>
+            <a href="../../../../jQuery/sagar-bhatt/Project/index.html">
+              jQuery
+            </a>
+          </li>
+        </ul>
+      </nav>
+    </header>
+    <article>
+      <aside>
+        <!-- * Day-1 -->
+        <div class="folder-container">
+          <div class="folder">Day1</div>
+          <div class="sub-folder">Practice</div>
+          <div class="file">
+            <a href="../../Day1/Practice/practical-1.html">
+              JavaScript Practical 1
+            </a>
+          </div>
+          <div class="file">
+            <a href="../../Day1/Practice/practical-2.html">
+              JavaScript Practical 2
+            </a>
+          </div>
+          <div class="sub-folder">Assignment</div>
+          <div class="file">
+            <a href="../../Day1/Assignment/assignment.html">
+              JavaScript Assignment
+            </a>
+          </div>
+        </div>
+        <!-- * Day-2 -->
+        <div class="folder-container">
+          <div class="folder">Day2</div>
+          <div class="sub-folder">Practice</div>
+          <div class="file">
+            <a href="../../Day2/Practice/practicals.html">
+              JavaScript Practicals
+            </a>
+          </div>
+          <div class="sub-folder">Assignment</div>
+          <div class="file">
+            <a href="../../Day2/Assignment/assignment.html">
+              JavaScript Assignment
+            </a>
+          </div>
+        </div>
+        <!-- * Day-3 -->
+        <div class="folder-container">
+          <div class="folder">Day3</div>
+          <div class="sub-folder">Practice</div>
+          <div class="file">
+            <a href="../Practice/practicals.html" target="_blank">
+              JavaScript Practicals
+            </a>
+          </div>
+          <div class="sub-folder">Assignment</div>
+          <div class="file">
+            <a href="./assignment.html"> JavaScript Assignment </a>
+          </div>
+        </div>
+        <!-- * Day-4 -->
+        <div class="folder-container">
+          <div class="folder">Day4</div>
+          <div class="sub-folder">Practice</div>
+          <div class="file">
+            <a href="../../Day4/Practice/practical-1.html">
+              JavaScript Practicals
+            </a>
+          </div>
+          <div class="sub-folder">Assignment</div>
+          <div class="file">
+            <a href="../../Day4/Assignment/assignment.html">
+              JavaScript Assignment
+            </a>
+          </div>
+        </div>
+        <!-- * Day-5 -->
+        <div class="folder-container">
+          <div class="folder">Day5</div>
+          <div class="sub-folder">Practice</div>
+          <div class="file">
+            <a href="../../Day5/Practice/practicals.html">
+              JavaScript Practicals
+            </a>
+          </div>
+        </div>
+        <!-- * Day-6 -->
+        <div class="folder-container">
+          <div class="folder">Day6</div>
+          <div class="sub-folder">Practice</div>
+          <div class="file">
+            <a href="../../Day6/Practice/practical-1.html">
+              JavaScript Practicals
+            </a>
+          </div>
+          <div class="sub-folder">Assignment</div>
+          <div class="file">
+            <a href="../../Day6/Assignment/assignment.html">
+              JavaScript Assignment
+            </a>
+          </div>
+        </div>
+      </aside>
+      <section>
+        <div class="container-fluid font-monospace pt-1">
+          <div class="accordion" id="accordionBasic">
+            <div class="accordion-item">
+              <div class="accordion-header fs-5" id="headingOne">
+                <button
+                  class="accordion-button"
+                  data-bs-toggle="collapse"
+                  data-bs-target="#collapseOne"
+                  aria-expanded="true"
+                  aria-controls="collapseOne"
+                >
+                  Assignment: 1 Design a form for storing employee details.
+                </button>
+              </div>
+              <div
+                class="accordion-collapse collapse show"
+                id="collapseOne"
+                aria-labelledby="headingOne"
+                data-bs-parent="#accordionBasic"
+              >
+                <div class="accordion-body bg-light fs-5 text-dark">
+                  <form id="employeeForm">
+                    <div class="row mb-3">
+                      <div class="col-auto">
+                        <label class="form-label" for="txtEmpId">
+                          Employee Id:
+                        </label>
+                      </div>
+                      <div class="col-auto">
+                        <input
+                          id="txtEmpId"
+                          class="form-control"
+                          type="text"
+                          name="txtEmpId"
+                          placeholder="Enter Employee Id"
+                        />
+                        <div id="validateEmpId" class="invalid-feedback">
+                          Please enter employee id.
+                        </div>
+                      </div>
+                    </div>
+                    <div class="row mb-3">
+                      <div class="col-auto">
+                        <label class="form-label" for="txtEmpName">
+                          Employee Name:
+                        </label>
+                      </div>
+                      <div class="col-auto">
+                        <input
+                          id="txtEmpName"
+                          class="form-control"
+                          type="text"
+                          name="txtEmpName"
+                          placeholder="Enter Employee Name"
+                        />
+                        <div id="validateEmpName" class="invalid-feedback">
+                          Please enter employee name.
+                        </div>
+                      </div>
+                    </div>
+                    <div class="row mb-3">
+                      <div class="col-auto">
+                        <label class="form-label" for="txtEmpAge">
+                          Employee Age:
+                        </label>
+                      </div>
+                      <div class="col-auto">
+                        <input
+                          id="txtEmpAge"
+                          class="form-control"
+                          type="text"
+                          name="txtEmpAge"
+                          placeholder="Enter Employee Age"
+                        />
+                        <div id="validateEmpAge" class="invalid-feedback">
+                          Please enter employee age.
+                        </div>
+                      </div>
+                    </div>
+                    <div class="row mb-3">
+                      <div class="col-auto">
+                        <fieldset>
+                          <legend>Gender:</legend>
+                          <div class="form-check-inline">
+                            <input
+                              class="form-check-input"
+                              type="radio"
+                              name="rbGender"
+                              id="male"
+                              value="1"
+                            />
+                            <label class="form-check-label" for="male">
+                              Male
+                            </label>
+                          </div>
+                          <div class="form-check-inline">
+                            <input
+                              class="form-check-input"
+                              type="radio"
+                              name="rbGender"
+                              id="female"
+                              value="2"
+                            />
+                            <label class="form-check-label" for="female">
+                              Female
+                            </label>
+                          </div>
+                          <div class="form-check-inline">
+                            <input
+                              class="form-check-input"
+                              type="radio"
+                              name="rbGender"
+                              id="others"
+                              value="3"
+                            />
+                            <label class="form-check-label" for="others">
+                              Others
+                            </label>
+                          </div>
+                        </fieldset>
+                        <div id="validateEmpGender" class="invalid-feedback">
+                          Please choose an option.
+                        </div>
+                      </div>
+                    </div>
+                    <div class="row mb-3">
+                      <div class="col-auto">
+                        <label class="form-label" for="txtEmpDesignation">
+                          Employee Designation:
+                        </label>
+                      </div>
+                      <div class="col-auto">
+                        <input
+                          id="txtEmpDesignation"
+                          class="form-control"
+                          type="text"
+                          name="txtEmpDesignation"
+                          placeholder="Enter Designation"
+                          list="lstEmpDesignation"
+                        />
+                        <datalist id="lstEmpDesignation">
+                          <option label="Manager" value="Manager"></option>
+                          <option label="Trainee" value="Trainee"></option>
+                          <option
+                            label="Junior Developer"
+                            value="Junior Developer"
+                          ></option>
+                          <option
+                            label="Senior Developer"
+                            value="Senior Developer"
+                          ></option>
+                        </datalist>
+                        <div
+                          id="validateEmpDesignation"
+                          class="invalid-feedback"
+                        >
+                          Please enter employee designation.
+                        </div>
+                      </div>
+                    </div>
+                    <div class="row mb-3">
+                      <div class="col-auto">
+                        <label class="form-label" for="txtEmpSalary">
+                          Employee Salary:
+                        </label>
+                      </div>
+                      <div class="col-auto">
+                        <input
+                          id="txtEmpSalary"
+                          class="form-control"
+                          type="text"
+                          name="txtEmpSalary"
+                          placeholder="Enter Employee Salary"
+                        />
+                        <div id="validateEmpSalary" class="invalid-feedback">
+                          Please enter employee salary.
+                        </div>
+                      </div>
+                    </div>
+                    <div class="row mb-3">
+                      <div class="col-auto">
+                        <label for="selEmpCity">Employee City:</label>
+                      </div>
+                      <div class="col-auto">
+                        <select
+                          id="selEmpCity"
+                          class="form-select"
+                          name="selEmpCity"
+                        >
+                          <option value="" selected disabled>
+                            Please select an option
+                          </option>
+                          <option value="ahmedabad">Ahmedabad</option>
+                          <option value="vadodara">Vadodara</option>
+                          <option value="surat">Surat</option>
+                          <option value="rajkot">Rajkot</option>
+                        </select>
+                        <div id="validateEmpCity" class="invalid-feedback">
+                          Please select city.
+                        </div>
+                      </div>
+                    </div>
+                    <div class="row mb-3">
+                      <div class="col-auto">
+                        <label class="form-label" for="txtEmpEmail">
+                          Employee Email:
+                        </label>
+                      </div>
+                      <div class="col-auto">
+                        <input
+                          id="txtEmpEmail"
+                          class="form-control"
+                          type="text"
+                          name="txtEmpEmail"
+                          placeholder="Enter Employee Email"
+                        />
+                        <div id="validateEmpEmail" class="invalid-feedback">
+                          Please enter employee email.
+                        </div>
+                      </div>
+                    </div>
+                    <div class="row mb-3">
+                      <div class="col-auto">
+                        <label class="form-label" for="dtEmpDOJ">
+                          Date of Joining:
+                        </label>
+                      </div>
+                      <div class="col-auto">
+                        <input
+                          id="dtEmpDate"
+                          class="form-control"
+                          type="date"
+                          name="dtEmpDate"
+                          placeholder="Date of Joining"
+                        />
+                        <div id="validateEmpDOJ" class="invalid-feedback">
+                          Please select date of joining.
+                        </div>
+                      </div>
+                    </div>
+                    <div class="row mb-3">
+                      <div class="col-auto">
+                        <label class="form-label" for="txtEmpContact">
+                          Contact Number:
+                        </label>
+                      </div>
+                      <div class="col-auto">
+                        <input
+                          id="txtEmpContact"
+                          class="form-control"
+                          type="text"
+                          name="txtEmpContact"
+                          placeholder="Enter Contact Number"
+                        />
+                        <div id="validateEmpContact" class="invalid-feedback">
+                          Please enter employee contact number.
+                        </div>
+                      </div>
+                    </div>
+                    <div class="row mb-3">
+                      <div class="col-auto">
+                        <input
+                          id="btnSubmit"
+                          class="btn btn-dark bg-secondary"
+                          type="button"
+                          value="Submit"
+                        />
+                        <input
+                          id="btnReset"
+                          class="btn btn-warning bg-warning bg-opacity-50"
+                          type="reset"
+                          value="Reset"
+                        />
+                      </div>
+                    </div>
+                    <div class="row mb-3">
+                      <div id="result" class="col-auto d-none"></div>
+                    </div>
+                  </form>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </article>
+
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-/bQdsTh/da6pkI1MST/rWKFNjaCP5gBSY4sEBT38Q/9RBh9AH40zEOg7Hlq2THRZ"
+      crossorigin="anonymous"
+    ></script>
+    <script src="./js/assignment.js"></script>
+  </body>
+</html>
