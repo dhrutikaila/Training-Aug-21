@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Media Queries Practice</title>
+    <style>
+        .container {
+            margin: 10px;
+            padding: 10px;
+            border: 10px solid blue;
+        }
+
+        /* Extra small devices (phones, 600px and down) */
+        @media only screen and (max-width: 600px) {
+          .container {
+            background-color: red;
+          }
+        }
+
+        /* Small devices */
+        @media only screen and (min-width: 600px) {
+          .container {
+            background: lightgreen;
+          }
+        }
+
+        /* Medium devices */
+        @media only screen and (min-width: 768px) {
+          .container {
+            background: blue;
+          }
+        }
+
+        /* Large devices */
+        @media only screen and (min-width: 992px) {
+          .container {
+            background: orange;
+          }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <h1>Heading</h1>
+        <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Voluptate dolorum quibusdam in aperiam distinctio, minus facere illo natus fugit minima!</p>
+    </div>
+
+</body>
+</html>

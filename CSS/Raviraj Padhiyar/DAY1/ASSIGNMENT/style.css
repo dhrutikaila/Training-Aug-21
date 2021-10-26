@@ -1,0 +1,146 @@
+@import url(https://fonts.googleapis.com/css?family=Lato:400,700,900);
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: lato;
+}
+
+body {
+  margin: 0;
+  background-color: #fff;
+}
+
+header h1,
+.links {
+  display: inline-block;
+}
+
+header h1 {
+  font-size: 48px;
+  font-weight: 500;
+  font-family: lato;
+  font-variant: small-caps;
+  padding: 50px 100px;
+  letter-spacing: 20px;
+}
+
+.links a {
+  padding: 20px;
+  text-decoration: none;
+  color: black;
+}
+
+.sidebar {
+  float: right;
+  width: 20vw;
+  padding: 80px 0;
+}
+
+.container {
+  width: 70vw;
+  float: left;
+  padding: 80px 100px;
+}
+
+.Exp {
+  padding-bottom: 50px;
+}
+
+.Exp h2 {
+  font-size: 32px;
+  margin-bottom: 30px;
+  font-weight: 400;
+  font-variant: small-caps;
+}
+
+.Exp hgroup h3 {
+  letter-spacing: 4px;
+  font-weight: 400;
+  padding-bottom: 10px;
+}
+
+.Exp hgroup h5 {
+  letter-spacing: 4px;
+  font-weight: 400;
+  padding-bottom: 10px;
+}
+
+.Education h2 {
+  font-size: 32px;
+  margin-bottom: 30px;
+  font-weight: 400;
+  font-variant: small-caps;
+}
+
+.clg {
+  padding: 10px 0;
+}
+
+.clg h3 {
+  letter-spacing: 4px;
+  font-weight: 400;
+  padding-bottom: 10px;
+}
+
+.clg h5 {
+  letter-spacing: 4px;
+  font-weight: 400;
+  padding-bottom: 10px;
+}
+
+.school {
+  padding: 20px 0;
+}
+.school h3 {
+  letter-spacing: 4px;
+  font-weight: 400;
+  padding-bottom: 10px;
+}
+
+.school h5 {
+  letter-spacing: 4px;
+  font-weight: 400;
+  padding-bottom: 10px;
+}
+
+.skills {
+  padding-bottom: 30px;
+}
+
+.skills h2 {
+  font-weight: 500;
+  font-variant: small-caps;
+  padding: 0 0 20px 0;
+}
+
+.skills ul {
+  list-style: none;
+  padding: 0 0 15px 0;
+}
+
+.skills li {
+  padding: 0 0 10px 0;
+}
+
+.hobby h2 {
+  font-weight: 500;
+  font-variant: small-caps;
+  padding: 0 0 20px 0;
+}
+
+.hobby h2 {
+  font-weight: 500;
+  font-variant: small-caps;
+  padding: 0 0 20px 0;
+}
+
+.hobby ul {
+  list-style: none;
+  padding: 0 0 15px 0;
+}
+
+.hobby li {
+  padding: 0 0 10px 0;
+}

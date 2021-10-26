@@ -1,0 +1,702 @@
+[
+  {
+    "productId": 0,
+    "productName": "boAt Rockerz 450 Bluetooth Headset ",
+    "brand": "boat",
+    "category": "electronics",
+    "imgurl": "https://rukminim1.flixcart.com/image/416/416/ksw4ccw0/headphone/w/g/r/rockerz-450-boat-original-imag6cqqh49wjfy5.jpeg",
+    "mrp": "3989",
+    "msrp": "1399",
+    "stock": "5"
+  },
+  {
+    "productId": 1,
+    "productName": "POCO X3 Pro (Steel Blue, 128 GB)",
+    "brand": "POCO",
+    "category": "mobiles",
+    "imgurl": "https://rukminim1.flixcart.com/image/416/416/kr9jafk0/mobile/m/m/y/x3-pro-mzb08t9in-poco-original-imag52znesm3hemf.jpeg",
+    "mrp": "23999",
+    "msrp": "18999",
+    "stock": "2"
+  },
+  {
+    "productId": 2,
+    "productName": "POCO M2 Pro (Green and Greener, 64 GB)",
+    "brand": "POCO",
+    "category": "mobiles",
+    "imgurl": "https://rukminim1.flixcart.com/image/416/416/kcauaa80/mobile/c/w/a/poco-m2-pro-mzb9625in-original-imaftga2ytmnt7ac.jpeg",
+    "mrp": "16999",
+    "msrp": "11999",
+    "stock": "2"
+  },
+  {
+    "productId": 3,
+    "productName": "Apple iPhone XR (Black, 128 GB)",
+    "brand": "Apple",
+    "category": "mobiles",
+    "imgurl": "https://rukminim1.flixcart.com/image/416/416/jnj7iq80/mobile/u/b/g/apple-iphone-xr-mryj2hn-a-original-imafa6zkm7qhv2zd.jpeg",
+    "mrp": "52900",
+    "msrp": "49999",
+    "stock": "3"
+  },
+  {
+    "productId": 4,
+    "productName": "LG 139 cm (55 inch) Ultra HD (4K) LED Smart TV",
+    "brand": "LG",
+    "category": "appliances",
+    "imgurl": "https://rukminim1.flixcart.com/image/312/312/kqse07k0/television/j/r/b/43up7500ptz-43up7500ptz-lg-original-imag4q3zcqt5n3yv.jpeg",
+    "mrp": "59990",
+    "msrp": "37499",
+    "stock": "2"
+  },
+  {
+    "productId": 5,
+    "productName": "NN1805NL01 Neo Gents IV Analog Watch",
+    "brand": "Titan",
+    "category": "fashion",
+    "imgurl": "https://rukminim1.flixcart.com/image/800/960/jrjizrk0/watch/u/w/3/1805nl01-titan-original-imafdarcgyhhtusg.jpeg",
+    "mrp": "5695",
+    "msrp": "5000",
+    "stock": "10"
+  },
+  {
+    "productId": 6,
+    "productName": "Men Slim Fit Checkered Formal Shirt",
+    "brand": "LOUIS PHILIPPE ",
+    "category": "fashion",
+    "imgurl": "https://rukminim1.flixcart.com/image/800/960/kfk0e4w0-0/shirt/n/y/t/38-lpsfmslpi94587-louis-philippe-original-imafvzgjramfaazh.jpeg",
+    "mrp": "1999",
+    "msrp": "999",
+    "stock": "10"
+  },
+  {
+    "productId": 7,
+    "productName": "Men Grey Sports Sandal",
+    "brand": "PUMA",
+    "category": "fashion",
+    "imgurl": "https://rukminim1.flixcart.com/image/800/960/kufuikw0/sandal/y/3/j/8-36488912-8-puma-iron-gate-sunflower-black-original-imag7kfksgs6yfkd.jpeg?q=50",
+    "mrp": "2499",
+    "msrp": "1399",
+    "stock": "15"
+  },
+  {
+    "productId": 8,
+    "productName": "Jutis For Men  (Black)",
+    "brand": "Pahnawa ",
+    "category": "fashion",
+    "imgurl": "https://rukminim1.flixcart.com/image/800/960/kfeamq80-0/shoe/d/b/i/f98-10-pahnawa-black-original-imafvuvdfunxuabb.jpeg",
+    "mrp": "549",
+    "msrp": "249",
+    "stock": "20"
+  },
+  {
+    "productId": 9,
+    "productName": "LD Victory Casuals For Men ",
+    "brand": "NIKE",
+    "category": "fashion",
+    "imgurl": "https://rukminim1.flixcart.com/image/800/960/kg15ocw0-0/shoe/5/4/a/at4249-001nike-nike-black-white-original-imafwcajen36ah86.jpeg?q=50",
+    "mrp": "5995",
+    "msrp": "3999",
+    "stock": "5"
+  },
+  {
+    "productId": 10,
+    "productName": "Men Slim Fit Printed Spread Collar Formal Shirt",
+    "brand": "PETER ENGLAND ",
+    "category": "fashion",
+    "imgurl": "https://rukminim1.flixcart.com/image/800/960/ko382a80/shirt/b/b/i/38-pesfwslpi22034-peter-england-original-imag2md5hfyhejqf.jpeg?q=50",
+    "mrp": "1299",
+    "msrp": "899",
+    "stock": "5"
+  },
+  {
+    "productId": 11,
+    "productName": "Women Black Heels Sandal",
+    "brand": "Denill",
+    "category": "fashion",
+    "imgurl": "https://rukminim1.flixcart.com/image/800/960/jybvafk0/sandal/e/a/z/h-h4-8-denill-black-original-imafghbr4ytgtmng.jpeg",
+    "mrp": "999",
+    "msrp": "499",
+    "stock": "8"
+  },
+  {
+    "productId": 12,
+    "productName": "Men Solid Pure Cotton Straight Kurta",
+    "brand": "allan peter ",
+    "category": "fashion",
+    "imgurl": "https://rukminim1.flixcart.com/image/800/960/kfh5ifk0-0/kurta/8/u/r/xl-sws2701-allan-peter-original-imafvxcfcsg4dzab.jpeg?q=50",
+    "mrp": "1749",
+    "msrp": "499",
+    "stock": "10"
+  },
+  {
+    "productId": 13,
+    "productName": "1862SL01 Analog Watch - For Men",
+    "brand": "Titan",
+    "category": "fashion",
+    "imgurl": "https://rukminim1.flixcart.com/image/800/960/ktn9pjk0/watch/1/g/f/1-1862sl01-titan-men-original-imag6y5g4wkxf27f.jpeg?q=50",
+    "mrp": "2395",
+    "msrp": "2034",
+    "stock": "3"
+  },
+  {
+    "productId": 14,
+    "productName": "Color Block Men Round Neck Black T-Shirt",
+    "brand": "Seven Rocks",
+    "category": "fashion",
+    "imgurl": "https://rukminim1.flixcart.com/image/800/960/khmbafk0-0/t-shirt/w/j/s/xs-t322-blwh-seven-rocks-original-imafxhagtyj2xvpn.jpeg?q=50",
+    "mrp": "1299",
+    "msrp": "399",
+    "stock": "10"
+  },
+  {
+    "productId": 15,
+    "productName": "Ketava IV DP Slippers",
+    "brand": "PUMA",
+    "category": "fashion",
+    "imgurl": "https://rukminim1.flixcart.com/image/800/960/kgcl7680-0/slipper-flip-flop/u/s/5/6-380299-puma-black-silver-spectra-yellow-original-imafwhjunxbmqqmh.jpeg?q=50",
+    "mrp": "1299",
+    "msrp": "849",
+    "stock": "15"
+  },
+  {
+    "productId": 16,
+    "productName": " Shoe For Men Party Wear For Men",
+    "brand": "Bantox ",
+    "category": "fashion",
+    "imgurl": "https://rukminim1.flixcart.com/image/800/960/kjq1mkw0-0/shoe/j/2/z/104-40-bantox-brown-original-imafz7xbhxdpyrye.jpeg?q=50",
+    "mrp": "999",
+    "msrp": "402",
+    "stock": "4"
+  },
+  {
+    "productId": 17,
+    "productName": "realme Narzo 50A (Oxygen Blue, 64 GB)",
+    "brand": "realme",
+    "category": "mobiles",
+    "imgurl": "https://rukminim1.flixcart.com/image/416/416/ktx9si80/mobile/d/n/p/narzo-50a-rmx3430-realme-original-imag75kymngzyabx.jpeg",
+    "mrp": "12999",
+    "msrp": "11999",
+    "stock": "5"
+  },
+  {
+    "productId": 18,
+    "productName": "realme GT Master Edition (Luna White, 128 GB)",
+    "brand": "realme",
+    "category": "mobiles",
+    "imgurl": "https://rukminim1.flixcart.com/image/416/416/ksgehzk0/mobile/n/b/z/gt-master-edition-rmx3360-realme-original-imag6yg7hbzxuc6s.jpeg",
+    "mrp": "26999",
+    "msrp": "25999",
+    "stock": "2"
+  },
+  {
+    "productId": 19,
+    "productName": "realme GT Master Edition (Voyager Grey, 256 GB)",
+    "brand": "realme",
+    "category": "mobiles",
+    "imgurl": "https://rukminim1.flixcart.com/image/416/416/ksgehzk0/mobile/l/1/e/gt-master-edition-rmx3360-realme-original-imag6yg6urzhabz3.jpeg",
+    "mrp": "31999",
+    "msrp": "29999",
+    "stock": "3"
+  },
+  {
+    "productId": 20,
+    "productName": "REDMI 9i (Midnight Black, 64 GB)",
+    "brand": "Redmi",
+    "category": "mobiles",
+    "imgurl": "https://rukminim1.flixcart.com/image/416/416/kesv0y80/mobile/h/p/q/redmi-9i-mzb0814in-original-imafvehkgzghyqtp.jpeg",
+    "mrp": "9999",
+    "msrp": "8799",
+    "stock": "5"
+  },
+  {
+    "productId": 21,
+    "productName": "POCO F3 GT (Predator Black, 128 GB) ",
+    "brand": "POCO",
+    "category": "mobiles",
+    "imgurl": "https://rukminim1.flixcart.com/image/416/416/krf91u80/mobile/i/f/m/f3-gt-mzb09huin-poco-original-imag57hec6wkrk77.jpeg?q=70",
+    "mrp": "34999",
+    "msrp": "28999",
+    "stock": "2"
+  },
+  {
+    "productId": 22,
+    "productName": "OPPO Reno6 5G (Aurora, 128 GB)",
+    "brand": "OPPO",
+    "category": "mobiles",
+    "imgurl": "https://rukminim1.flixcart.com/image/416/416/kr2e3680/mobile/b/q/v/reno6-5g-cph2251-oppo-original-imag4xp73qsqrtnt.jpeg",
+    "mrp": "35999",
+    "msrp": "29990",
+    "stock": "3"
+  },
+  {
+    "productId": 23,
+    "productName": "Infinix Smart 5 (Aegean Blue, 32 GB)",
+    "brand": "Infinix",
+    "category": "mobiles",
+    "imgurl": "https://rukminim1.flixcart.com/image/416/416/kkyc9zk0/mobile/9/9/b/smart-5-x688c-infinix-original-imagy6wkafwrgj9z.jpeg",
+    "mrp": "8999",
+    "msrp": "7499",
+    "stock": "5"
+  },
+  {
+    "productId": 24,
+    "productName": "MOTOROLA G40 Fusion (Dynamic Gray, 128 GB)",
+    "brand": "MOTOROLA",
+    "category": "mobiles",
+    "imgurl": "https://rukminim1.flixcart.com/image/416/416/knoxnrk0/mobile/s/d/d/g40-fusion-panv0002in-panv0006in-panv0010in-motorola-original-imag2aqcxrhhuwfh.jpeg?q=70",
+    "mrp": "19999",
+    "msrp": "16499",
+    "stock": "5"
+  },
+  {
+    "productId": 25,
+    "productName": "SAMSUNG 1.5 Ton 5 Star Split Inverter AC - White",
+    "brand": "Samsung",
+    "category": "appliances",
+    "imgurl": "https://rukminim1.flixcart.com/image/312/312/knni7ww0/air-conditioner-new/m/l/v/ar18aynzbbe-split-samsung-fixed-speed-original-imag2ay7t8daqqhk.jpeg",
+    "mrp": "56989",
+    "msrp": "33990",
+    "stock": "3"
+  },
+  {
+    "productId": 26,
+    "productName": "Blue Star 1.2 Ton 3 Star Split Inverter AC - White",
+    "brand": "Blue start",
+    "category": "appliances",
+    "imgurl": "https://rukminim1.flixcart.com/image/416/416/k51cpe80/air-conditioner-new/v/2/h/ic315aatu-1-2-split-inverter-blue-star-original-imafnt5gjzmjgkak.jpeg?q=70",
+    "mrp": "50000",
+    "msrp": "31990",
+    "stock": "2"
+  },
+  {
+    "productId": 27,
+    "productName": "LG 190 L Direct Cool Single Door 4 Star Refrigerator",
+    "brand": "LG",
+    "category": "appliances",
+    "imgurl": "https://rukminim1.flixcart.com/image/416/416/korijrk0/refrigerator-new/d/m/k/gl-b201aspy-4-2020-lg-original-imag35kexvgtzgnf.jpeg?q=70",
+    "mrp": "18190",
+    "msrp": "15089",
+    "stock": "1"
+  },
+  {
+    "productId": 28,
+    "productName": "SAMSUNG 192 L Direct Cool Single Door 2 Star Refrigerator",
+    "brand": "SAMSUNG",
+    "category": "appliances",
+    "imgurl": "https://rukminim1.flixcart.com/image/416/416/kl2mljk0/refrigerator-new/m/i/v/rr19a241bgs-nl-2-2021-samsung-original-imagy9pyfszpmgwm.jpeg?q=70",
+    "mrp": "14990",
+    "msrp": "12690",
+    "stock": "1"
+  },
+  {
+    "productId": 29,
+    "productName": "SAMSUNG 198 L Direct Cool Single Door 4 Star Refrigerator",
+    "brand": "SAMSUNG",
+    "category": "appliances",
+    "imgurl": "https://rukminim1.flixcart.com/image/416/416/k4ss2a80/refrigerator-new/j/w/v/rr21t2h2wcu-hl-5-samsung-original-imafnmkbyzev8szv.jpeg?q=70",
+    "mrp": "19990",
+    "msrp": "16990",
+    "stock": "1"
+  },
+  {
+    "productId": 30,
+    "productName": "Panasonic 23 L Convection Microwave Oven",
+    "brand": "Panasonic",
+    "category": "appliances",
+    "imgurl": "https://rukminim1.flixcart.com/image/416/416/microwave-new/s/g/h/panasonic-nn-ct353b-original-imae4ty4sphv6vva.jpeg?q=70",
+    "mrp": "13890",
+    "msrp": "10999",
+    "stock": "2"
+  },
+  {
+    "productId": 31,
+    "productName": "Voltas Beko DT8B Free Standing 8 Place Settings Dishwasher",
+    "brand": "Voltas",
+    "category": "appliances",
+    "imgurl": "https://rukminim1.flixcart.com/image/416/416/kh2b4i80/dishwasher-new/2/n/z/dt8b-voltas-beko-original-imafx5ma4bu9hcgw.jpeg?q=70",
+    "mrp": "28990",
+    "msrp": "21498",
+    "stock": "1"
+  },
+  {
+    "productId": 32,
+    "productName": "Pigeon Amaze Plus Electric Kettle",
+    "brand": "Pigeon",
+    "category": "appliances",
+    "imgurl": "https://rukminim1.flixcart.com/image/416/416/kuipea80/electric-kettle/k/u/y/favourite-pigeon-original-imag7mzd7efhkvnr.jpeg?q=70",
+    "mrp": "1195",
+    "msrp": "645",
+    "stock": "3"
+  },
+  {
+    "productId": 33,
+    "productName": "acer Aspire 7 Core i5 10th Gen",
+    "brand": "acer",
+    "category": "electronics",
+    "imgurl": "https://rukminim1.flixcart.com/image/416/416/kp1imq80/computer/u/b/z/na-gaming-laptop-acer-original-imag3d63hk3h8nm2.jpeg?q=70",
+    "mrp": "89999",
+    "msrp": "54998",
+    "stock": "1"
+  },
+  {
+    "productId": 34,
+    "productName": "acer Predator Helios 300 Octa Core i7 10th Gen ",
+    "brand": "acer",
+    "category": "electronics",
+    "imgurl": "https://rukminim1.flixcart.com/image/416/416/kgsb1jk0/computer/f/j/g/acer-na-gaming-laptop-original-imafwxxuee4hzaq2.jpeg?q=70",
+    "mrp": "149990",
+    "msrp": "110998",
+    "stock": "1"
+  },
+  {
+    "productId": 35,
+    "productName": "acer Nitro 5 Ryzen 7 Octa Core ",
+    "brand": "acer",
+    "category": "electronics",
+    "imgurl": "https://rukminim1.flixcart.com/image/416/416/kmns7m80/computer/o/0/x/na-gaming-laptop-acer-original-imagfgq66pufmnny.jpeg?q=70",
+    "mrp": "119990",
+    "msrp": "104990",
+    "stock": "1"
+  },
+  {
+    "productId": 36,
+    "productName": "ASUS ROG Strix G15 (2021) Ryzen 7 Octa Core 4800H",
+    "brand": "ASUS",
+    "category": "electronics",
+    "imgurl": "https://rukminim1.flixcart.com/image/416/416/ko382a80/computer/b/v/u/na-gaming-laptop-asus-original-imag2mrvrxgsaahh.jpeg?q=70",
+    "mrp": "90990",
+    "msrp": "67990",
+    "stock": "1"
+  },
+  {
+    "productId": 37,
+    "productName": "ASUS TUF Gaming F15 Core i5 10th Gen",
+    "brand": "ASUS",
+    "category": "electronics",
+    "imgurl": "https://rukminim1.flixcart.com/image/416/416/ku4ezrk0/computer/2/z/l/fx506hcb-hn228t-gaming-laptop-asus-original-imag7bhenhg7nqvh.jpeg?q=70",
+    "mrp": "89990",
+    "msrp": "59989",
+    "stock": "1"
+  },
+  {
+    "productId": 38,
+    "productName": "SAMSUNG EVO Plus 32 GB SD Card Class 10 95 MB/s Memory Card",
+    "brand": "SAMSUNG",
+    "category": "electronics",
+    "imgurl": "https://rukminim1.flixcart.com/image/416/416/kf0087k0/memory-card/microsdxc/v/s/n/samsung-evo-32-gb-original-imafvjgfnnwh2zhj.jpeg?q=70",
+    "mrp": "999",
+    "msrp": "399",
+    "stock": "1"
+  },
+  {
+    "productId": 39,
+    "productName": "Mi 3i 10000 mAh Power Bank",
+    "brand": "Mi",
+    "category": "electronics",
+    "imgurl": "https://rukminim1.flixcart.com/image/416/416/kfcv6vk0/power-bank/q/z/q/power-bank-10000-plm13zm-mi-original-imafvtreeefx5thb.jpeg?q=70",
+    "mrp": "1299",
+    "msrp": "999",
+    "stock": "5"
+  },
+  {
+    "productId": 40,
+    "productName": "Mi 3i 20000 mAh Power Bank",
+    "brand": "Mi",
+    "category": "electronics",
+    "imgurl": "https://rukminim1.flixcart.com/image/416/416/kfcv6vk0/power-bank/r/f/5/power-bank-20000-plm18zm-mi-original-imafvtc7x9zgrzbz.jpeg?q=70",
+    "mrp": "2199",
+    "msrp": "1599",
+    "stock": "5"
+  },
+  {
+    "productId": 41,
+    "productName": "DELL KM117 Wireless Laptop Keyboard",
+    "brand": "DELL",
+    "category": "electronics",
+    "imgurl": "https://rukminim1.flixcart.com/image/416/416/k3g73bk0/keyboard/laptop-keyboard/t/e/x/dell-km117-original-imafmktgbfwxy8bp.jpeg?q=70",
+    "mrp": "1999",
+    "msrp": "1299",
+    "stock": "5"
+  },
+  {
+    "productId": 42,
+    "productName": "D-Link DIR-650IN 300 Mbps Wireless Router",
+    "brand": "D-Link",
+    "category": "electronics",
+    "imgurl": "https://rukminim1.flixcart.com/image/416/416/kbnz8nk0/router/x/y/k/d-link-dir-650in-original-imafsysqj3f3tec5.jpeg?q=70",
+    "mrp": "1652",
+    "msrp": "899",
+    "stock": "2"
+  },
+  {
+    "productId": 43,
+    "productName": "DELL MS 116 Wired Optical Mouse",
+    "brand": "DELL",
+    "category": "electronics",
+    "imgurl": "https://rukminim1.flixcart.com/image/416/416/k4a7c7k0/mouse/m/h/t/dell-ms116-wired-optical-mouse-3yrs-warranty-original-imafmktgxyt5ge9k.jpeg?q=70",
+    "mrp": "450",
+    "msrp": "279",
+    "stock": "2"
+  },
+  {
+    "productId": 44,
+    "productName": "Large 32 L Backpack Marvel 10 32 Ltrs Red Casual Backpack",
+    "brand": "SKYBAGS ",
+    "category": "other",
+    "imgurl": "https://rukminim1.flixcart.com/image/800/960/kua4r680/backpack/z/g/s/9-marvel-10-32-ltrs-red-casual-backpack-marvel-10-13-skybags-original-imag7fpccqaknh4e.jpeg?q=50",
+    "mrp": "3500",
+    "msrp": "1299",
+    "stock": "5"
+  },
+  {
+    "productId": 45,
+    "productName": "Cricket Wicket Stumps Set - 3 Stumps + 2 Bails + 1 Stand",
+    "brand": "Liffo",
+    "category": "other",
+    "imgurl": "https://rukminim1.flixcart.com/image/416/416/ktbu6q80/wicket/y/4/j/wicket-heavy-plastic-cricket-wicket-stumps-set-3-stumps-2-bails-original-imag6zyxatfsbrdp.jpeg?q=70",
+    "mrp": "748",
+    "msrp": "359",
+    "stock": "5"
+  },
+  {
+    "productId": 46,
+    "productName": "Adrenex by Flipkart Maestro 2 panel White Cricket Leather ball",
+    "brand": "Adrenex",
+    "category": "other",
+    "imgurl": "https://rukminim1.flixcart.com/image/416/416/jucz98w0/ball/q/u/9/150-170-standard-7-1-adrenex-maestro-leather-ball-white-1-original-imaffgcycdpyxdkq.jpeg?q=70",
+    "mrp": "599",
+    "msrp": "299",
+    "stock": "5"
+  },
+  {
+    "productId": 47,
+    "productName": "HRX Limited Signature Edition Vinyl Coated Fixed Weight Dumbbell ",
+    "brand": "HRX",
+    "category": "other",
+    "imgurl": "https://rukminim1.flixcart.com/image/416/416/ktyp8cw0/dumbbell/5/2/s/limited-signature-edition-vinyl-coated-hrx-original-imag76vyyvdaxguu.jpeg?q=70",
+    "mrp": "1199",
+    "msrp": "599",
+    "stock": "2"
+  },
+  {
+    "productId": 48,
+    "productName": "LYCAN 5kg ( pair ) Pvc Hex Dumbbells Fixed Weight Dumbbell",
+    "brand": "LYCAN",
+    "category": "other",
+    "imgurl": "https://rukminim1.flixcart.com/image/416/416/krqoknk0/dumbbell/6/x/o/5kg-pair-pvc-hex-dumbbells-10-lycan-original-imag5gh55vhbfxw2.jpeg?q=70",
+    "mrp": "1499",
+    "msrp": "599",
+    "stock": "5"
+  },
+  {
+    "productId": 49,
+    "productName": "Adrenex by Flipkart Convertible Dumbbells Kit 16 Kg For Home Gym Adjustable Dumbbell",
+    "brand": "Adrenex",
+    "category": "other",
+    "imgurl": "https://rukminim1.flixcart.com/image/416/416/kubk70w0/dumbbell/x/1/k/convertible-dumbbells-kit-16-kg-for-home-gym-16-adrenex-by-original-imag7hydhcet5jst.jpeg?q=70",
+    "mrp": "4299",
+    "msrp": "1599",
+    "stock": "3"
+  },
+  {
+    "productId": 50,
+    "productName": "Flipkart SmartBuy Induction Bottom Pan 26 cm diameter",
+    "brand": "Flipkart",
+    "category": "Home-decoration",
+    "imgurl": "https://rukminim1.flixcart.com/image/416/416/kuipea80/pot-pan/l/a/9/ven17871p30s3nsibly-flipkart-smartbuy-original-imag7m55hjdqyqhg.jpeg?q=70",
+    "mrp": "2169",
+    "msrp": "899",
+    "stock": "5"
+  },
+  {
+    "productId": 51,
+    "productName": "Pigeon Non-stick Fry Pan without Lid 280 mm Fry Pan",
+    "brand": "Pigeon",
+    "category": "Home-decoration",
+    "imgurl": "https://rukminim1.flixcart.com/image/416/416/pot-pan/t/y/6/165-pigeon-original-imadvz4zufdehcgp.jpeg?q=70",
+    "mrp": "1145",
+    "msrp": "898",
+    "stock": "5"
+  },
+  {
+    "productId": 52,
+    "productName": "Greenchef Unique 5 L Induction Bottom Pressure Cooker",
+    "brand": "Greenchef",
+    "category": "Home-decoration",
+    "imgurl": "https://rukminim1.flixcart.com/image/416/416/kpydrbk0/pressure-cooker/g/d/k/yes-greenchef-multipurpose-ib-5lts-greenchef-original-imag42jyjbhhzbux.jpeg?q=70",
+    "mrp": "2995",
+    "msrp": "1888",
+    "stock": "5"
+  },
+  {
+    "productId": 53,
+    "productName": "Prestige Popular 2 L, 3 L, 5 L Pressure Cooker ",
+    "brand": "Prestige",
+    "category": "Home-decoration",
+    "imgurl": "https://rukminim1.flixcart.com/image/416/416/jy90eq80/pressure-cooker/q/x/g/10039-prestige-original-imafggwrhybztbqp.jpeg?q=70",
+    "mrp": "3799",
+    "msrp": "2799",
+    "stock": "2"
+  },
+  {
+    "productId": 54,
+    "productName": "Flipkart Perfect Homes Felix Fabric 3 Seater Sofa",
+    "brand": "Flipkart",
+    "category": "Home-decoration",
+    "imgurl": "https://rukminim1.flixcart.com/image/416/416/kmccosw0/sofa-sectional/5/f/v/symmetrical-maroon-polycotton-felix-maroon-flipkart-perfect-original-imagf9qyzjwjkgud.jpeg?q=70",
+    "mrp": "17000",
+    "msrp": "8999",
+    "stock": "1"
+  },
+  {
+    "productId": 55,
+    "productName": "Art Amori Digital Reprint 12 inch x 18 inch Painting",
+    "brand": "Art Amori",
+    "category": "Home-decoration",
+    "imgurl": "https://rukminim1.flixcart.com/image/416/416/jz1l7rk0/poster/u/6/g/medium-radhe-krishna-religious-three-piece-mdf-painting-mdf-tps-original-imafjykkauhhwzy2.jpeg?q=70",
+    "mrp": "699",
+    "msrp": "149",
+    "stock": "5"
+  },
+  {
+    "productId": 56,
+    "productName": "Flipkart Perfect Homes Artifical Flowers for Home Decor",
+    "brand": "Flipkart",
+    "category": "Home-decoration",
+    "imgurl": "https://rukminim1.flixcart.com/image/416/416/kh0vonk0/artificial-flower/g/y/u/artifical-flowers-flipkart-perfect-homes-original-imafx444tpsangy8.jpeg?q=70",
+    "mrp": "799",
+    "msrp": "359",
+    "stock": "5"
+  },
+  {
+    "productId": 57,
+    "productName": "RoyalOak Palma Solid Wood 4 Seater Dining Set",
+    "brand": "RoyalOak",
+    "category": "Home-decoration",
+    "imgurl": "https://rukminim1.flixcart.com/image/416/416/ktyp8cw0/dining-set/j/g/o/na-rubber-wood-rectangle-4-seater-dt306bl-4-royaloak-brown-original-imag76qmham45m6n.jpeg?q=70",
+    "mrp": "23999",
+    "msrp": "14999",
+    "stock": "2"
+  },
+  {
+    "productId": 58,
+    "productName": "Godrej Interio Terra Engineered Wood King Drawer Bed",
+    "brand": "Godrej",
+    "category": "Home-decoration",
+    "imgurl": "https://rukminim1.flixcart.com/image/416/416/jy4q3680/bed/g/c/7/king-na-particle-board-56101515sd00052-godrej-interio-wenge-original-imafgftemrfcmwan.jpeg?q=70",
+    "mrp": "41999",
+    "msrp": "38599",
+    "stock": "1"
+  },
+  {
+    "productId": 59,
+    "productName": "Artesia Sheesham Wood Solid Wood Bedside Table ",
+    "brand": "Artesia",
+    "category": "Home-decoration",
+    "imgurl": "https://rukminim1.flixcart.com/image/416/416/jza5uvk0/side-table/g/t/y/rosewood-sheesham-scfp-843-bedside-table-decorhand-black-original-imaffpxvpxpypnyh.jpeg?q=70",
+    "mrp": "2499",
+    "msrp": "1599",
+    "stock": "5"
+  },
+  {
+    "productId": 60,
+    "productName": "ROYAL HANDICRAFTS SZHC Wooden Square Folding Table",
+    "brand": "ROYAL",
+    "category": "Home-decoration",
+    "imgurl": "https://rukminim1.flixcart.com/image/416/416/kmwcuq80/side-table/p/v/d/rosewood-sheesham-wooden-foldable-end-table-serving-table-tray-original-imaff4hygtemz2rq.jpeg?q=70",
+    "mrp": "699",
+    "msrp": "349",
+    "stock": "5"
+  },
+  {
+    "productId": 61,
+    "productName": "Happilo 100% Natural Cashews, Almonds ",
+    "brand": "Happilo",
+    "category": "grocery",
+    "imgurl": "https://rukminim1.flixcart.com/image/416/416/kgcl7680/nut-dry-fruit/h/y/z/400-100-natural-pouch-happilo-original-imafwhmvnj3dqxsz.jpeg?q=70",
+    "mrp": "690",
+    "msrp": "371",
+    "stock": "5"
+  },
+  {
+    "productId": 62,
+    "productName": "7UP Plastic Bottle  (2.25 L)",
+    "brand": "7UP",
+    "category": "grocery",
+    "imgurl": "https://rukminim1.flixcart.com/image/416/416/jesunbk0/aerated-drink/r/2/h/2-25-na-plastic-bottle-7up-original-imaf3em4mdqmxcxz.jpeg?q=70",
+    "mrp": "90",
+    "msrp": "65",
+    "stock": "20"
+  },
+  {
+    "productId": 63,
+    "productName": "AASHIRVAAD Atta with Multigrains (5 kg)  (5 kg)",
+    "brand": "AASHIRVAAD",
+    "category": "grocery",
+    "imgurl": "https://rukminim1.flixcart.com/image/416/416/ks4yz680/flour/v/w/k/shudh-chakki-atta-whole-wheat-flour-aashirvaad-original-imag5rszzwgbbx8h.jpeg?q=70",
+    "mrp": "206",
+    "msrp": "168",
+    "stock": "10"
+  },
+  {
+    "productId": 64,
+    "productName": "MDH Chunky Chat Masala  (50 g)",
+    "brand": "MDH",
+    "category": "grocery",
+    "imgurl": "https://rukminim1.flixcart.com/image/416/416/j4fwpzk0/spice-masala/b/p/h/50-box-chaat-masala-mdh-powder-original-imaevahf9fggvmfr.jpeg?q=70",
+    "mrp": "35",
+    "msrp": "35",
+    "stock": "5"
+  },
+  {
+    "productId": 65,
+    "productName": "Amul Taaza Homogenised Toned Milk",
+    "brand": "Amul",
+    "category": "grocery",
+    "imgurl": "https://rukminim1.flixcart.com/image/416/416/j3nbwy80/milk/h/w/z/200-toned-amul-original-imaeun95kbwpfemf.jpeg?q=70",
+    "mrp": "15",
+    "msrp": "13",
+    "stock": "20"
+  },
+  {
+    "productId": 66,
+    "productName": "MDH MEAT KA MASALA  (100 g)",
+    "brand": "MDH",
+    "category": "grocery",
+    "imgurl": "https://rukminim1.flixcart.com/image/416/416/j4sronk0/spice-masala/x/t/u/100-box-meat-masala-mdh-powder-original-imaevmuh6wweanrs.jpeg?q=70",
+    "mrp": "73",
+    "msrp": "58",
+    "stock": "5"
+  },
+  {
+    "productId": 67,
+    "productName": "Mountain Dew Plastic Bottle  (2 L)",
+    "brand": "Mountain Dew",
+    "category": "grocery",
+    "imgurl": "https://rukminim1.flixcart.com/image/416/416/jvtujrk0/aerated-drink/c/j/z/2-na-plastic-bottle-mountain-dew-original-imafghffgvun9fbn.jpeg?q=70",
+    "mrp": "90",
+    "msrp": "90",
+    "stock": "10"
+  },
+  {
+    "productId": 68,
+    "productName": "AASHIRVAAD Atta with Multigrains (5 kg)  (5 kg)",
+    "brand": "AASHIRVAAD",
+    "category": "grocery",
+    "imgurl": "https://rukminim1.flixcart.com/image/416/416/krayqa80/flour/e/l/r/5-atta-with-multigrains-5-kg-1-multigrain-flour-aashirvaad-original-imag54nfyrkghzg9.jpeg?q=70",
+    "mrp": "550",
+    "msrp": "449",
+    "stock": "5"
+  },
+  {
+    "productId": 69,
+    "productName": "Amul Lactose Free Milk",
+    "brand": "Amul",
+    "category": "grocery",
+    "imgurl": "https://rukminim1.flixcart.com/image/416/416/kmwcuq80/milk/n/6/c/lactose-free-milk-tetrapack-toned-amul-original-imagfzxmzmh7wqf4.jpeg?q=70",
+    "mrp": "25",
+    "msrp": "21",
+    "stock": "10"
+  }
+]

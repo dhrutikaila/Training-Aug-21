@@ -1,0 +1,494 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="./css/all.min.css" />
+    <link rel="stylesheet" href="./css/bootstrap.css" />
+    <link rel="stylesheet" href="./css/admin.css" />
+  </head>
+
+  <body>
+    <!-- nav -->
+    <nav id="navbar" class="navbar navbar-expand-sm navbar-dark">
+      <div class="container-fluid">
+        <!-- toggle btn -->
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navnbarnav"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <a class="navbar-brand ms-auto" href="#">
+          <img
+            class="img-fluid logo-img"
+            src="https://static-assets-web.flixcart.com/www/linchpin/fk-cp-zion/img/flipkart-plus_8d85f4.png"
+            alt="#"
+          />
+          <p class="logo-text">
+            Explore
+            <span class="plus"
+              >Plus
+              <img
+                src="https://static-assets-web.flixcart.com/www/linchpin/fk-cp-zion/img/plus_aef861.png"
+                alt="#"
+            /></span>
+          </p>
+        </a>
+        <form>
+          <div class="input-group">
+            <input
+              id="search-bar"
+              class="form-control"
+              type="search"
+              placeholder="Search for products, brand and more"
+            />
+            <span class="input-group-text"><i class="fas fa-search"></i></span>
+          </div>
+        </form>
+        <div class="collapse navbar-collapse" id="navbarnav">
+          <ul class="navbar-nav">
+            <li class="nav-item">
+              <div class="account-nav">
+                <button
+                  type="button"
+                  class="btn"
+                  data-bs-toggle="modal"
+                  data-bs-target="#login-modal"
+                >
+                  LogIn
+                </button>
+              </div>
+            </li>
+            <li class="nav-item">
+              <div class="more-nav">More<span></span></div>
+            </li>
+          </ul>
+        </div>
+        <div class="cart">
+          <i class="fas fa-shopping-cart"></i
+          ><span class="d-none d-sm-block">Cart</span>
+        </div>
+      </div>
+    </nav>
+
+    <section id="admin-op">
+      <div class="container-fluid">
+        <div class="admin-detail p-5 d-none d-md-block">
+          <div class="card">
+            <img
+              class="card-img-top img-fluid mb-3"
+              src="https://i.pravatar.cc/300"
+              alt="#"
+            />
+            <div class="card-title">
+              <h2>
+                <span class="firstName"></span>
+                <span class="LastName"></span>
+              </h2>
+            </div>
+            
+          </div>
+        </div>
+        <div class="operations p-3">
+          <ul
+            class="nav nav-pills mb-2 pb-2"
+            id="operations-nav"
+            role="tablist"
+          >
+            <li class="nav-item" role="presentation">
+              <button
+                class="nav-link active"
+                id="pills-allProduct-tab"
+                data-bs-toggle="pill"
+                data-bs-target="#pills-allProduct"
+                type="button"
+                role="tab"
+              >
+                All Product
+              </button>
+            </li>
+            <li class="nav-item" role="presentation">
+              <button
+                class="nav-link"
+                id="pills-addProduct-tab"
+                data-bs-toggle="pill"
+                data-bs-target="#pills-addProduct"
+                type="button"
+                role="tab"
+              >
+                Add Product
+              </button>
+            </li>
+            <li class="nav-item" role="presentation">
+              <button
+                class="nav-link"
+                id="pills-rmProduct-tab"
+                data-bs-toggle="pill"
+                data-bs-target="#pills-rmProduct"
+                type="button"
+                role="tab"
+              >
+                Remove product
+              </button>
+            </li>
+            <li class="nav-item" role="presentation">
+              <button
+                class="nav-link"
+                id="pills-more-tab"
+                data-bs-toggle="pill"
+                data-bs-target="#pills-more"
+                type="button"
+                role="tab"
+              >
+                More
+              </button>
+            </li>
+          </ul>
+          <div class="tab-content" id="pills-tabContent">
+            <div
+              class="tab-pane fade show active"
+              id="pills-allProduct"
+              role="tabpanel"
+            >
+              <table class="table table-hover">
+                <thead>
+                  <tr>
+                    <th>ProductID</th>
+                    <th>Category</th>
+                    <th>ProductName</th>
+                    <th>brand</th>
+                    <th>mrp</th>
+                    <th>msrp</th>
+                    <th>img</th>
+                    <th>Available Stock</th>
+                    <th>update info</th>
+                  </tr>
+                </thead>
+                <tbody></tbody>
+              </table>
+            </div>
+            <div class="tab-pane fade" id="pills-addProduct" role="tabpanel">
+              <form class="mb-3" id="add-product-form">
+                <!-- <div class="mb-3">
+                  <label class="form-label" for="productID">ProductID :</label>
+                  <input class="form-control" type="number" name="productID" id="productID">
+                </div> -->
+                <div class="mb-3">
+                  <label class="form-label" for="ProductName"
+                    >Product Name</label
+                  >
+                  <input
+                    class="form-control"
+                    type="text"
+                    name="productName"
+                    id="productName"
+                    placeholder="Enter Product Name"
+                    required
+                  />
+                </div>
+                <div class="mb-3">
+                  <label class="form-label" for="productBrand">Brand :</label>
+                  <input
+                    class="form-control"
+                    type="text"
+                    name="productBrand"
+                    id="productBrand"
+                    placeholder="Enter Product Brand"
+                    required
+                  />
+                </div>
+                <div class="mb-3">
+                  <label class="form-label" for="category-select"
+                    >Category :</label
+                  >
+                  <select
+                    class="form-select mb-3"
+                    id="category-select"
+                    required
+                  >
+                    <option selected disabled>Choose Category</option>
+                    <option value="grocery">Grocery</option>
+                    <option value="mobiles">Mobiles</option>
+                    <option value="fashion">Fashion</option>
+                    <option value="electronics">Electronics</option>
+                    <option value="Home-decoration">Home Decoration</option>
+                    <option value="appliances">Appliances</option>
+                    <option value="other">Beuaty,toys & More</option>
+                  </select>
+                </div>
+                <div class="mb-3">
+                  <label class="form-label" for="product-img-url"
+                    >Image URL :</label
+                  >
+                  <input
+                    class="form-control"
+                    type="url"
+                    name="product-img-url"
+                    id="product-img-url"
+                    placeholder="Enter img url"
+                    required
+                  />
+                </div>
+                <div class="mb-3">
+                  <label class="form-label" for="product-mrp">MRP</label>
+                  <input
+                    class="form-control"
+                    type="number"
+                    name="proudct-mrp"
+                    id="product-mrp"
+                    placeholder="Enter Product MRP"
+                    required
+                  />
+                </div>
+                <div class="mb-3">
+                  <label class="form-label" for="product-msrp">MSRP</label>
+                  <input
+                    class="form-control"
+                    type="number"
+                    name="proudct-msrp"
+                    id="product-msrp"
+                    placeholder="Enter Product MSRP"
+                    required
+                  />
+                </div>
+                <div class="mb-3">
+                  <label for="product-stock" class="form-label">Stock :</label>
+                  <input
+                    class="form-control"
+                    type="number"
+                    name="product-stock"
+                    id="product-stock"
+                    placeholder="Enter Available Stock"
+                    required
+                  />
+                </div>
+                <div class="mb-3">
+                  <input
+                    type="submit"
+                    class="btn btn-primary"
+                    id="add-product-btn"
+                    value="Add Product"
+                  />
+                </div>
+              </form>
+            </div>
+            <div class="tab-pane fade" id="pills-rmProduct" role="tabpanel">
+              Remove Product
+            </div>
+            <div class="tab-pane fade" id="pills-more" role="tabpanel">
+              More
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <footer>
+      <div class="container-fluid">
+        <div class="footer-links">
+          <div class="about">
+            <h4>About</h4>
+            <ul>
+              <li><a href="">Contact Us</a></li>
+              <li><a href="">About Us</a></li>
+              <li><a href="">Carrers</a></li>
+              <li><a href="">Flipkart Stories</a></li>
+              <li><a href="">Press</a></li>
+              <li><a href="">Flipkart Wholesale</a></li>
+              <li><a href="">Corporate Information</a></li>
+            </ul>
+          </div>
+          <div class="help">
+            <h4>help</h4>
+            <ul>
+              <li><a href="">Payments</a></li>
+              <li><a href="">Shipping</a></li>
+              <li><a href="">Cancellation & Returns</a></li>
+              <li><a href="">FAQ</a></li>
+              <li><a href="">Report Infringment</a></li>
+            </ul>
+          </div>
+          <div class="Policy">
+            <h4>Policy</h4>
+            <ul>
+              <li><a href="">Return Policy</a></li>
+              <li><a href="">Terms Of Use</a></li>
+              <li><a href="">Security</a></li>
+              <li><a href="">Privacy</a></li>
+              <li><a href="">Sitemap</a></li>
+              <li><a href="">EPR Compiliance</a></li>
+            </ul>
+          </div>
+          <div class="Social">
+            <h4>Social</h4>
+            <ul>
+              <li><a href="">Faceboook</a></li>
+              <li><a href="">Twitter</a></li>
+              <li><a href="">YouTube</a></li>
+            </ul>
+          </div>
+          <div class="break"></div>
+          <div class="mai-address">
+            <h4>Mail Us</h4>
+            <p>
+              Flipkart Internet Private Limited, <br />
+              Buildings Alyssa, Begonia & <br />
+              Clove Embassy Tech Village, <br />
+              Outer Ring Road, Devarabeesanahalli Village, <br />
+              Bengaluru, 560103, <br />
+              Karnataka, India
+            </p>
+          </div>
+          <div class="office-address">
+            <h4>Registered Office Address</h4>
+            <p>
+              Flipkart Internet Private Limited, Buildings Alyssa, Begonia &
+              <br />
+              Clove Embassy Tech Village, <br />
+              Outer Ring Road, Devarabeesanahalli Village, <br />
+              Bengaluru, 560103, <br />
+              Karnataka, India <br />
+              CIN : U51109KA2012PTC066107 <br />
+              Telephone: 1800 202 9898
+            </p>
+          </div>
+        </div>
+        <div class="copyright">
+          <div>Sell On Flipkart</div>
+          <div>Advertise</div>
+          <div>GiftCards</div>
+          <div>Help Center</div>
+          <div>&copy; 2007-2021 Flipkart.com</div>
+          <div class="partner-icons">
+            <ul></ul>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <!-- modals -->
+    <!-- data update modal -->
+    <div class="modal fade" id="updProductForm-modal">
+      <div class="modal-dialog modal-lg modal-dialog-centered mx-auto">
+        <div class="modal-content">
+          <div class="modal-body">
+            <header>
+              <h3>Product Update Form</h3>
+            </header>
+            <div class="update-form">
+              <form class="mb-3" id="update-product-form">
+                <div class="mb-3">
+                  <label class="form-label" for="ProductName"
+                    >Product Name</label
+                  >
+                  <input
+                    class="form-control"
+                    type="text"
+                    name="productName"
+                    id="upd-productName"
+                    placeholder="Enter Product Name"
+                    required
+                  />
+                </div>
+                <div class="mb-3">
+                  <label class="form-label" for="productBrand">Brand :</label>
+                  <input
+                    class="form-control"
+                    type="text"
+                    name="productBrand"
+                    id="upd-productBrand"
+                    placeholder="Enter Product Brand"
+                    required
+                  />
+                </div>
+                <div class="mb-3">
+                  <label class="form-label" for="category-select"
+                    >Category :</label
+                  >
+                  <select
+                    class="form-select mb-3"
+                    id="upd-category-select"
+                    required
+                  >
+                    <option selected disabled>Choose Category</option>
+                    <option value="grocery">Grocery</option>
+                    <option value="mobiles">Mobiles</option>
+                    <option value="fashion">Fashion</option>
+                    <option value="electronics">Electronics</option>
+                    <option value="Home-decoration">Home Decoration</option>
+                    <option value="appliances">Appliances</option>
+                    <option value="other">Beuaty,toys & More</option>
+                  </select>
+                </div>
+                <div class="mb-3">
+                  <label class="form-label" for="product-img-url"
+                    >Image URL :</label
+                  >
+                  <input
+                    class="form-control"
+                    type="url"
+                    name="product-img-url"
+                    id="upd-product-img-url"
+                    placeholder="Enter img url"
+                    required
+                  />
+                </div>
+                <div class="mb-3">
+                  <label class="form-label" for="product-mrp">MRP</label>
+                  <input
+                    class="form-control"
+                    type="number"
+                    name="proudct-mrp"
+                    id="upd-product-mrp"
+                    placeholder="Enter Product MRP"
+                    required
+                  />
+                </div>
+                <div class="mb-3">
+                  <label class="form-label" for="product-msrp">MSRP</label>
+                  <input
+                    class="form-control"
+                    type="number"
+                    name="proudct-msrp"
+                    id="upd-product-msrp"
+                    placeholder="Enter Product MSRP"
+                    required
+                  />
+                </div>
+                <div class="mb-3">
+                  <label for="product-stock" class="form-label">Stock :</label>
+                  <input
+                    class="form-control"
+                    type="number"
+                    name="product-stock"
+                    id="upd-product-stock"
+                    placeholder="Enter Available Stock"
+                    required
+                  />
+                </div>
+                <div class="mb-3">
+                  <input
+                    type="submit"
+                    class="btn btn-primary"
+                    id="upd-product-btn"
+                    value="Update Product"
+                  />
+                </div>
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script src="./js/jquery.min.js"></script>
+    <script src="./js/popper.min.js"></script>
+    <script src="./js/bootstrap.min.js"></script>
+    <script src="./js/admin.js"></script>
+  </body>
+</html>

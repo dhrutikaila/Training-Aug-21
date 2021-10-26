@@ -1,0 +1,59 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+header {
+  background-color: red;
+  width: 100vw;
+  height: 10vh;
+}
+
+header .logo {
+  display: inline-block;
+  font-size: 2em;
+  padding: 15px 50px;
+}
+
+header nav {
+  float: right;
+  text-align: right;
+  padding: 15px 100px;
+}
+
+nav a {
+  padding: 25px 50px;
+  text-decoration: none;
+  font-size: 1.2em;
+  color: lavender;
+}
+
+.leftbar {
+  background-color: yellow;
+  height: 80vh;
+  width: 30vw;
+  float: left;
+  text-align: center;
+  padding-top: 100px;
+  font-size: 3em;
+}
+
+.main {
+  background-color: brown;
+  float: left;
+  width: 69%;
+  height: 80vh;
+  text-align: center;
+  padding-top: 100px;
+  font-size: 3em;
+}
+
+footer {
+  float: left;
+  background-color: grey;
+  width: 100vw;
+  height: 10vh;
+  text-align: center;
+  font-size: 3em;
+}

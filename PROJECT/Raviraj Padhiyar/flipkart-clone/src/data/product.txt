@@ -1,0 +1,114 @@
+[
+    {
+        "productId":1,
+        "categoryId":3,
+        "categoryTitle":"electronics",
+        "subCategory":"Audio&Video",
+        "subSubCategory":"Headphones",
+        "brand":"Boat",
+        "imgUrl":"https://rukminim1.flixcart.com/image/416/416/ksw4ccw0/headphone/w/g/r/rockerz-450-boat-original-imag6cqqh49wjfy5.jpeg?q=70",
+        "title":{
+            "shortTitle":"boAt Rockerz 450 Bluetooth Headset",
+            "longTitle":"boAt Rockerz 450 Bluetooth Headset  (Luscious Black, On the Ear)"
+        },
+        "price":{
+            "mrp":3990,
+            "sellingPrice":1399
+        },
+        "description":"Are you looking for a headset that features eye-catching aesthetics and dual modes? If yes, bring home the boAt Rockerz 450 that has an AUX-mode as well as the Bluetooth connectivity feature. The 40-mm drivers and adjustable earcups ensure you enjoy a comfortable listening experience that is immersive."
+    },
+    {
+        "productId":2,
+        "categoryId":4,
+        "category":"Home",
+        "subCategory":"Furniture",
+        "subSubCategory":"HomeTemple",
+        "brand":"Wallwey",
+        "imgUrl":"https://rukminim1.flixcart.com/image/416/416/knw2v0w0/home-temple/z/j/z/temlpe035gnena-wallwey-d-cor-original-imag2gxuznkcquuu.jpeg?q=70",
+        "title":{
+            "shortTitle":"Wallwey décor 035G Engineered Wood Home Temple",
+            "longTitle":"Wallwey décor 035G Engineered Wood Home Temple  (Height: 35.5, DIY(Do-It-Yourself))"
+        },
+        "price":{
+            "mrp":2199,
+            "sellingPrice":851
+        },
+        "description":"wallwey Is A Well Known Brand For Premium Quality. Temple are a practical way to improve the decor as well as storage options in your home decor. It’s Time To Design Your Wall With Creativity.This Exclusively Designed Temple Give A Rich Look To Your Home. It Brings A Warm Feeling Of Peace And Spirituality. TheTemple Can Be Used For Wedding Gifting Purpose, Any Inauguration, Birthday, Anniversary etc."
+    },
+    {
+        "productId":3,
+        "categoryId":1,
+        "category":"Mobile",
+        "subCategory":"SmartPhone",
+        "subSubCategory":"POCO Mobile",
+        "brand":"POCO",
+        "imgUrl":"https://rukminim1.flixcart.com/image/416/416/kcauaa80/mobile/2/p/u/poco-m2-pro-mzb9621in-original-imaftg9fkdpgbgxq.jpeg?q=70",
+        "images":[
+            "https://rukminim1.flixcart.com/image/416/416/kcauaa80/mobile/2/p/u/poco-m2-pro-mzb9621in-original-imaftg9fkdpgbgxq.jpeg?q=70"
+        ],
+        "title":{
+            "shortTitle":"POCO M2 Pro",
+            "longTitle":"POCO M2 Pro (Two Shades of Black, 64 GB)  (6 GB RAM)"
+        },
+        "price":{
+            "mrp":17999,
+            "sellingPrice":12999
+        },
+        "description":"Thanks to its Qualcomm Snapdragon 720G processor, Qualcomm Adreno 618 GPU, and up to 6 GB of RAM, this smartphone is armed to its teeth to offer you breezy-smooth smartphone performance."
+    },
+    {
+        "productId":4,
+        "categoryId":2,
+        "category":"fashion",
+        "subCategory":"watch",
+        "subSubCategory":"analog",
+        "brand":"timex",
+        "imgUrl":"https://rukminim1.flixcart.com/image/800/960/ken59jk0-0/watch/h/8/s/tw00zr347-timex-original-imafva9zqe6m4x2t.jpeg?q=50",
+        "images":[
+            "https://rukminim1.flixcart.com/image/800/960/ken59jk0-0/watch/h/8/s/tw00zr347-timex-original-imafva9zqe6m4x2t.jpeg?q=50"
+        ],
+        "title":{
+            "shortTitle":"TW00ZR347 Analog Watch",
+            "longTitle":"TW00ZR347 Analog Watch - For Men#JustHere"
+        },
+        "price":{
+            "mrp":2495,
+            "sellingPrice":641
+        },
+        "description":"Quality Timekeeping since 1854. Our Roots date back to 1854 in Waterbury, Connecticut, a time when, HOW you made something was just as important as WHAT you made."
+    },
+    {
+        "productId":5,
+        "categoryId":5,
+        "category":"appliances",
+        "subCategory":"Television",
+        "subSubCategory":"smartTv",
+        "brand":"Redmi",
+        "imgUrl":"https://rukminim1.flixcart.com/image/416/416/kq6yefk0/television/n/w/v/l32m5-al-mi-original-imag4967mvqvpvgp.jpeg?q=70",
+        "images":[
+            "https://rukminim1.flixcart.com/image/416/416/kq6yefk0/television/n/w/v/l32m5-al-mi-original-imag4967mvqvpvgp.jpeg?q=70"
+        ],
+        "title":{
+            "shortTitle":"Mi 4A PRO 80 cm (32 inch)",
+            "longTitle":"Mi 4A PRO 80 cm (32 inch) HD Ready LED Smart Android TV"
+        },
+        "price":{
+            "mrp":19999,
+            "sellingPrice":14999
+        },
+        "description":"There is no fun in watching your favourite movie or show on a TV where the display quality is poor. Now, boost the fun and watch them all in good and clear-quality on this 80 cm (32) Mi smart TV. Its HD Ready display can accentuate your viewing experience and make it better. You can even access video streaming apps on it and never run out of quality-content to watch and enjoy. It comes with 2 speakers that deliver powerful audio which lets you experience the environment of a cinema hall right in your bedroom or living room."
+    }
+]
+
+
+"productId":1,
+"CategoryID":1,
+"categoryTitle":"",
+"imgUrl":"",
+"mrp":0,
+"msrp":0,
+"title":"",
+"longTitle":"",
+"brand":"",
+"rating":0.0,
+"avability":true
