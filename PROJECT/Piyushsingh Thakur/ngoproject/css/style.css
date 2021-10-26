@@ -1,0 +1,130 @@
+@import url('https://fonts.googleapis.com/css2?family=Oswald&display=swap');
+.icons{
+    position: fixed;
+    top: 30%;
+    right: 0%;
+    display: flex;
+    flex-direction: column;
+    z-index: 10;
+}
+.icons a{
+    text-decoration: none;
+    width: 190px;
+    text-transform: uppercase;
+    padding: 10px;
+    font-size: 22px;
+    margin: 2px;
+    text-align: left;
+    border-radius: 50px 0 0 50px;
+    font-family: 'Oswald',sans-serif;
+    transform: translate(150px);
+    transition: all 0.7s;
+}
+
+.icons a:hover{
+    transform: translate(0px, 0px);
+    color: white;
+}
+
+.icons a:hover i{
+    transform: rotate(360deg);
+}
+
+.icons a i{
+    margin-right: 25px;
+    background-color: #fff;
+    height: 30px;
+    width: 30px;
+    color: black;
+    text-align: center;
+    line-height: 30px;
+    border-radius: 50%;
+    transition: all 0.7s;
+}
+
+.icons a i.fa-facebook{
+    color: #2C80D3;
+}
+
+.icons a i.fa-instagram{
+    color: #BC2A8D;
+}
+
+.icons a i.fa-youtube{
+    color: #fa0910;
+}
+
+.icons a i.fa-twitter{
+    color: #53c5ff;
+}
+
+.facebook{
+    background-color: #2C80D3;
+    color: white;
+}
+
+.instagram{
+    background-color: #BC2A8D;
+    color: white;
+}
+
+.youtube{
+    background-color: #fa0910;
+    color: white;
+}
+
+.twitter{
+    background-color: #53c5ff;
+    color: white;
+}
+
+/* design for emailbox */
+.email-box{
+    height: 40px;
+    display: flex;
+    justify-content: center;
+}
+
+.email-box i{
+    background-color: #2f3542;
+    width: 40px;
+    line-height: 40px;
+    text-align: center;
+    color: white;
+   
+}
+
+.tbox,.btn{
+    border: none;
+    outline: none;
+}
+
+.tbox{
+    display: none;
+    background-color: rgb(78, 68, 68) !important;
+}
+.btn{
+    background-color: #2f3542;
+    color: white;
+    padding: 0 10px;
+    text-transform: uppercase;
+    cursor: pointer;
+}
+
+.email-box:hover >.tbox,.tbox:focus{
+    display: block;
+    width: 260px;
+}
+/* emailbox css end */
+.nd button a{
+    text-decoration: none;
+    color: white;
+    
+}
+
+/* work images */
+.work {
+    border: dotted 1px black;
+    padding: 5px 20px;
+    min-height: 170px;
+}
