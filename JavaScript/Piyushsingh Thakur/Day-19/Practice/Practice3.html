@@ -1,0 +1,44 @@
+<!-- !Explain usage of Function Hosing using example -->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>js practice</title>
+</head>
+
+<body>
+    <h1>check console</h1>
+    <script>
+        //in hoisting function and varible declaration moved at the top of there scope
+        sum(2, 2)
+        function sum(a, b) {
+            c = a + b;
+            console.log(c);
+        }
+
+        //exceptions
+
+        // here we are creating function inside () so if we call function before declaation it will shows error
+
+        add(2, 3)
+            (function add(a, b) {
+                c = a + b;
+                console.log(c);
+            }
+            )
+
+        //here it shows undefined because of variable\
+        
+        var add11 = function add1(x, y) {
+            z = x + y;
+            return z;
+            console.log(z);
+        }
+        add1(3, 4)
+    </script>
+</body>
+
+</html>

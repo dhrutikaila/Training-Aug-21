@@ -1,0 +1,37 @@
+<!-- Write a JavaScript function to split a string and convert it into an array of words -->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./../../bootstrap.css">
+    <title>JS Day16 Practice2</title>
+</head>
+
+<body>
+    <div class="container p-3 mt-5">
+        <form>
+            <p class="display-4">Task-2</p>
+            <div class="form-group">
+                <label for="string2">Enter String :</label>
+                <input id="string2" class="form-control" type="text" placeholder="Please Enter String">
+            </div>
+            <input type="submit" value="Submit" class="btn btn-success" onclick="return splitStr()">
+            <p id="demo" class="lead p-3"></p>
+        </form>
+    </div>
+
+</body>
+<script>
+    function splitStr() {
+        var str2 = document.getElementById('string2').value;
+        var splitString = str2.split(" ");
+        document.getElementById("demo").innerHTML = splitString;
+        console.log(splitString);
+        return false;
+    }
+</script>
+
+</html>

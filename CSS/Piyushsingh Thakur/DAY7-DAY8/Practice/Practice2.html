@@ -1,0 +1,76 @@
+<!-- Media queries with breakpoint -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Media Query</title>
+    <style>
+
+        body{
+            background-color: rgb(153, 160, 64);
+        }
+        center{
+            background-color: rgb(219, 198, 9);
+        }
+        .box{
+            background-color: rgb(245, 196, 196);
+            font-size: 55px;
+            text-align: center;
+            display: none;
+        }
+
+        #box1{
+    background-color: pink;
+}
+
+#box2{
+    background-color: orange;
+}
+
+#box3{
+    background-color: blue;
+}
+#box4{
+    background-color: green;
+}
+
+        @media(max-width: 400px)  {
+            #box1{
+                display: block;
+            }   
+        }
+        
+        @media(min-width:401px) and (max-width: 600px)   {
+            #box2{
+                display: block;
+            }   
+        }
+        
+        @media(min-width:601px) and (max-width: 900px)   {
+            #box3{
+                display: block;
+            }   
+        }
+        @media(min-width:901px) and (max-width: 1400px)   {
+            #box4{
+                display: block;
+            }   
+        }
+    </style>
+</head>
+<body>
+
+    <center>
+        <h1> DAY7-8 PRACTICE2 </h1>
+        <h2>Media Query with breakpoint</h2>
+    </center>
+
+    <div class="box" id="box1"><h3>I am mobile</h3></div>
+    <div class="box" id="box2"><h3>I am tablet</h3></div>
+    <div class="box" id="box3"><h3>I am laptop</h3></div>
+    <div class="box" id="box4"><h3>I am monitor</h3></div>
+</body>
+</html>

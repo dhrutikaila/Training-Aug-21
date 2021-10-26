@@ -1,0 +1,52 @@
+<!-- relative: we can use top bottom property
+it is relative to its relative  position 
+apni normal jaga ke hisab se move hoga -->
+<!-- absoult: abosoult is same as relative but it is relative as its parent
+yani vo uske parent k hisab se move karega -->
+<!-- fixed: fixed position me bahi pe chipka rahega -->
+<!-- sticky:scroll karne me bi vahi bana rahega -->
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Position</title>
+    <style>
+        body{
+            height: 20000000px
+        }
+        .box{
+            display: inline-block;
+            border: 2px solid red;
+            width: 150px;
+            height: 150px;
+            margin: 4px;
+        }
+
+        #box2{
+            position: absolute;
+            top: 80px;
+            right: 0;
+        }
+        #box1{
+            position: fixed;
+        }
+        /* #box3{
+            position: relative;
+        } */
+
+        #box4{
+            position: sticky;
+        }
+    </style>
+</head>
+<body>
+    <div class="box" id="box1">1</div>
+    <div class="box" id="box2">2</div>
+    <div class="box" id="box3">3</div>
+    <div class="box" id="box4">4</div>
+</body>
+</html>

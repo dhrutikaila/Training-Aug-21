@@ -1,0 +1,39 @@
+<!-- Write a JavaScript function to check whether a string is blank or not -->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./../../bootstrap.css">
+    <title>JS Day16 Practice1</title>
+</head>
+
+<body>
+    <div class="container p-3 mt-5">
+        <form>
+            <p class="display-4">Task-1</p>
+            <div class="form-group">
+                <label for="string1">Enter String :</label>
+                <input id="string1" class="form-control" type="text" placeholder="Please Enter String">
+            </div>
+            <input type="submit" value="Submit" class="btn btn-success" onclick="return checkStr()">
+        </form>
+    </div>
+
+</body>
+<script>
+    function checkStr() {
+        var str1 = document.getElementById('string1').value;
+        if (str1 == "") {
+            alert("String is blank");
+        }
+        else {
+            alert("String is not blank");
+        }
+        return false;
+    }
+</script>
+
+</html>

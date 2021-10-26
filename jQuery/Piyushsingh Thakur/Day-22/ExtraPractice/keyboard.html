@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #box {
+            background-color: azure;
+            border: 2px solid black;
+            padding: 10px;
+            margin: 10px;
+        }
+    </style>
+</head>
+
+<body>
+    <script src="jquery-3.6.0.min.js"></script>
+
+
+    <h1>hello world </h1>
+    <div class="test" id="box">
+        <h1>heading inside div</h1>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestias, adipisci odit porro aspernatur molestiae
+            totam.</p>
+    </div>
+</body>
+<script>
+    $(document).ready(function () {
+        $('body').keypress(function () {
+            $(this).css('background-color', 'orange')
+        })
+
+        $('body').keyup(function () {
+            $(this).css('background-color', 'red')
+        })
+
+        $('body').keydown(function () {
+            $(this).css('background-color', 'black')
+        })
+    })
+</script>
+
+</html>

@@ -1,0 +1,39 @@
+<!-- Using Function Constructor, find the area of rectangle -->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercise 2</title>
+    <link rel="stylesheet" href="../../bootstrap.css">
+</head>
+
+<body>
+    <h1 class="display-4 text-center bg-info text-white p-3">Area of Rectangle</h1>
+    <div class="container m-5 bg-light ">
+        <h4>Area of Rectangle</h4>
+        <form>
+            <label for="">Enter length of Rectangle: </label>
+            <input type="text" name="radius" id="l" class="form-control">
+            <label for="">Enter breadth of Rectangle: </label>
+            <input type="text" name="radius" id="b" class="form-control">
+            <center>
+                <button class="btn btn-info mt-3" type="button" onclick="area()">
+                    Calculate area
+                </button>
+            </center>
+        </form>
+        <p id="demo" class="text-muted mt-2"></p>
+    </div>
+</body>
+<script>
+    function area() {
+        var l = parseInt(document.getElementById("l").value);
+        var b = parseInt(document.getElementById("b").value);
+        var rectangle = new Function("l", "b", "return l * b");
+        document.getElementById("demo").innerHTML = "Area of a rectangle : " + rectangle(l, b);
+    }
+</script>
+
+</html>

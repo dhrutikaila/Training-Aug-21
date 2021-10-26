@@ -1,0 +1,40 @@
+<!-- Function Closure -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Function Clouser</title>
+</head>
+<body>
+  <h1>
+      check console
+  </h1>  
+</body>
+<script>
+    // const outerFun =(a)=>{
+    //     let b=10;
+    //     const innerFun=()=>{
+    //         let sum = a+b;
+    //         console.log(`The sum of two number is ${sum}`);
+    //     }
+    //     innerFun();
+    // }
+
+    // outerFun(12);
+
+
+    const outerFun =(a)=>{
+        let b=10;
+        const innerFun=()=>{
+            let sum = a+b;
+            console.log(`The sum of two number is ${sum}`);
+        }
+       return innerFun;
+    }
+    let practice =outerFun(12);
+    console.dir(practice)
+    practice();
+</script>
+</html>

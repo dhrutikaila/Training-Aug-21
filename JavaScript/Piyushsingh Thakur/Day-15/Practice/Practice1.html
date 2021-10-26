@@ -1,0 +1,58 @@
+<!-- Accept three numbers from the user using prompt, find the greater of these the numbers and do the sum of that numbers which are greater than 40. -->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+
+  <title>Exercise1</title>
+  <script>
+    function findGreater() {
+      var num1 = parseInt(prompt("Enter Number1 : ", 0));
+      var num2 = parseInt(prompt("Enter Number2 : ", 0));
+      var num3 = parseInt(prompt("Enter Number3 : ", 0));
+      var total = 0;
+
+      if (num1 > num2 && num1 > num3) {
+        alert("Num1 is Greater : " + num1);
+      }
+      else if (num2 > num1 && num2 > num3) {
+        alert("Num2 is Greater : " + num2);
+      }
+      else {
+        alert("Num3 is Greater : " + num3);
+      }
+
+      if (num1 > 40) {
+        total += num1;
+      }
+
+      if (num2 > 40) {
+        total += num2;
+      }
+
+      if (num3 > 40) {
+        total += num3;
+      }
+
+      alert("Total of numbers which is greater than 40 : " + total);
+    }
+  </script>
+</head>
+
+<body>
+
+  <div class="container w-50 text-center bg-light border border-dark mt-5 p-5">
+    <h1 class="display-4">Exercise1</h1>
+
+    <p class="lead">Click below button to Enter Numbers </p>
+
+    <button class="btn btn-primary" onclick="findGreater()">Click Here</button>
+  </div>
+
+</body>
+
+</html>

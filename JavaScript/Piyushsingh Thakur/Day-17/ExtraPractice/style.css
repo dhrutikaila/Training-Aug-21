@@ -1,0 +1,54 @@
+/* .container{
+    border: 2px solid black;
+}
+
+.container-fluid{
+    border: 5px solid red;
+}
+
+.row{
+    border: 2px solid blueviolet;
+}
+
+.col{
+    border: 5px solid rgb(32, 45, 161);
+}
+
+.col-1 ,.col-2 ,.col-3 ,.col-4 ,.col-5 ,.col-6 ,.col-7 ,.col-8 ,
+.col-9 ,.col-10 ,.col-11 ,.col-12 {
+    border: 3px solid black;
+
+} */
+
+center{
+    color: cornsilk;
+}
+body{
+    background-color: rgb(40, 46, 36);
+}
+#header{
+    background-color: rgb(230, 194, 34);
+    padding: 10px;
+
+}
+#menu{
+    background-color: rgb(226, 191, 203);
+    padding: 4px;
+
+}
+#menu ul{
+    list-style: none;
+}
+#menu ul li{
+    display: inline-block;
+}
+#content{
+    background-color: rgb(234, 245, 245);
+    color: rgb(29, 29, 28);
+}
+#sidebar{
+    background-color: rgb(141, 167, 179);
+}
+#footer{
+    background-color: rgb(230, 194, 34);
+}

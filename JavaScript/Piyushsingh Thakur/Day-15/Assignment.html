@@ -1,0 +1,68 @@
+<!-- Create an application for performing basic math operations like Addition, Subtraction,   Multiplication and Division.
+
+Consider following elements:
+
+ Label : “Please enter first number : ” with Text Box
+ Label : “Please enter second number : ” with Text Box
+ Label : “Please select operation you want to perform : ” with set of Radio Buttons like “Addition”, “Subtraction”, “Multiplication” and “Division” presented in vertical manner.
+Two buttons,  “Calculate” and “Reset”
+ Label: “Result is: ” with final result – Place all the checks to make sure that user enters only numeric values for text boxes. Clicking on “Calculate” button will perform the requested operation and   the result will be displayed below “Calculate” and “Reset” buttons in the form of text,   e.g. : “Result is : 10”. – Clicking on “Reset” button will reset all the form information including radio button   selection and result text. -->
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../bootstrap.css">
+    <title>JS ASSIGNMENT</title>
+</head>
+
+<body>
+    <center>
+        <h1 class="display-4">Calculator</h1><br><br>
+        <div class="container">
+
+
+            <form action="#" class="form-group" id="calculater">
+                <label for="num1">Please Enter Number1</label>
+                <input type="number" id="num1" placeholder="Number 1"><br><br>
+
+                <label for="num2">Please Enter Number2</label>
+                <input type="number" id="num2" placeholder="Number 2"><br><br>
+
+                <label for="operation">Please select operation you want to perform : </label>
+                <br><br>
+
+
+                <input type="radio" name="operation" id="add" value="addition">
+                <label for="add">Addition</label>
+
+
+                <input type="radio" name="operation" id="minus" value="subtraction">
+                <label for="minus">Subtraction</label><br><br>
+
+
+                <input type="radio" name="operation" id="multi" value="multiplication">
+                <label for="multi">Multiplication</label>
+
+
+                <input type="radio" name="operation" id="division" value="division">
+                <label for="division">Division</label><br><br>
+
+                <input type="button" class="btn btn-primary" value="Calculate" onclick="cal()">
+                &nbsp;&nbsp;
+                <button class="btn btn-primary" id="reset" onclick="reset()">Reset</button>
+                <br><br>
+
+                <span for="result" id="result">Your Answer is:</span>
+
+            </form>
+        </div>
+    </center>
+
+<script src="assignment.js"></script>
+</body>
+
+</html>

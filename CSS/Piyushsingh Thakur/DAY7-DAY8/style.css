@@ -1,0 +1,63 @@
+.wrap{
+    display: flex;
+    flex-flow: row wrap;
+    text-align: center;
+}
+
+.wrap >*{
+    padding: 10px;
+    margin: 10px;
+    flex: 1 100%;
+    border-radius: 10px;
+}
+
+.header{
+    background-color: tomato;
+    height: 120px;
+    margin-top: 10px;
+}
+.footer{
+    background-color: lightcoral;
+    height: 80px;
+}
+.main{
+    text-align: left;
+    background-color: rgb(35, 129, 129);
+    height: 300px;
+    font-size: 24px;
+}
+
+.aside1{
+    background-color: gold;
+}
+.aside2{
+    background-color: orange;
+}
+
+@media all and (min-width:800px){
+    .main{
+        flex: 3;
+    }
+
+    .aside1{
+        order: 0;
+    }
+
+    .aside2{
+        order: 2;
+    }
+
+    .main{
+        order: 2;
+    }
+    
+    .footer{
+        order: 4;
+    }
+}
+
+@media all and (min-width:600px){
+ .aside{
+     flex: 1;
+ }
+}

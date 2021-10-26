@@ -1,0 +1,76 @@
+<!-- – Put a droplist with 5 country name from list object using jquery
+
+                  (Eg. India, United Kingdom..). Default value should “Please select”.
+
+                – Bellow droplist all country name which are in the dropdown that should display with Label :
+
+                  “Your Selected Country : “.
+
+                – By default all country name should display.
+
+                – Only that country name should appear which are you select from dropdown.
+
+                  All other label should be disappear.
+
+                – When i select ‘Please select’, all countries name should get displayed. -->
+
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>jQuery Assignment</title>
+    <link rel="stylesheet" href="bootstrap.css">
+</head>
+
+<body>
+    <script src="jquery.js"></script>
+    <center>
+        <h1>jQuery Assignment Dropdownlist</h1><br><br>
+        <div id="box">
+            <form action="">
+
+                <label for="country">Choose a car:</label>
+                <select name="country" id="country">
+                    <option>Please Select Your Country</option>
+                    <option value="India">India</option>
+                    <option value="USA">USA</option>
+                    <option value="Canada">Canada</option>
+                    <option value="UK">UK</option>
+                    <option value="UAE">UAE</option>
+                </select>
+            </form><br><br>
+
+            <ul id="list" style="list-style:none">
+                <li>India</li>
+                <li>USA</li>
+                <li>Canada</li>
+                <li>UK</li>
+                <li>UAE</li>
+            </ul>
+
+            <h3 id="main"></h3>
+        </div>
+    </center>
+</body>
+<script>
+    $(document).ready(function () {
+        $(document).ready(function () {
+            $('#country').change(function () {
+                var a = $('#country option:selected').text();
+                console.log(a);
+                $('#main').text('You Have Selected :' + $(this).val());
+
+            })
+
+            $('#country').change(function () {
+                $('#list').css('display', 'none')
+            })
+        })
+    })
+</script>
+
+</html>

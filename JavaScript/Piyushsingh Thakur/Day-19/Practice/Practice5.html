@@ -1,0 +1,44 @@
+<!-- Using Function Apply pass employee object to a function defined in the function. -->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JS Day 19 Practice</title>
+    <link rel="stylesheet" href="../../bootstrap.css">
+</head>
+
+<body>
+    <h1 class="display-4 text-center bg-info text-white p-3">Function Call Practice</h1>
+    <div class="container bg-light">
+
+        <p class="text-white bg-dark" id="demo"></p>
+        <p class="text-white bg-dark" id="demo1"></p>
+    </div>
+
+    <script>
+        var employee = {
+            employeeDetails: function (lang) {
+                return this.name + "   " + this.address + "   " + this.designation+"   "+lang;
+            }
+        }
+        var employee1 = {
+            name: "Piyush",
+            address: "Ahmedabad",
+            designation: "Trainee engineer"
+        }
+        var employee2 = {
+            name: "Hit",
+            address: "Ahmedabad",
+            designation: " Engineer"
+        }
+        x = employee.employeeDetails.apply(employee1,["node js"]); 
+        y = employee.employeeDetails.apply(employee2,["dot net"]); 
+        document.getElementById("demo").innerHTML = x;
+        document.getElementById("demo1").innerHTML = y;
+    </script>
+</body>
+
+</html>

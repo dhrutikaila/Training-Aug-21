@@ -1,0 +1,43 @@
+<!-- There is one Hide/show the text inside the #helpText span element when the user’s mouse passes over the text “ -->
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jquery Practice2</title>
+    <style>
+        #box {
+            background-color: azure;
+            border: 2px solid black;
+            padding: 10px;
+            margin: 10px;
+        }
+    </style>
+</head>
+
+<body>
+    <script src="jquery-3.6.0.min.js"></script>
+    <div class="test" id="box">
+        <h1> hover on me</h1>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestias, adipisci odit porro aspernatur molestiae
+            totam.</p>
+    </div>
+</body>
+<script>
+    $(document).ready(function () {
+        $('#box').mouseover(function () {
+            $('#box').css('display', 'none')
+        })
+
+        $('#box').mouseleave(function () {
+            $('#box').css('display', 'block')
+        })
+
+
+    })
+</script>
+
+</html>

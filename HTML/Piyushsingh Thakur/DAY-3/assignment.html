@@ -1,0 +1,59 @@
+<!-- Design a form for storing employee details. (Employee name, age, Gender, designation, salary, location, Email ID, Date of Joining and contact number)
+Validation required
+Age should be a number
+Each field should contain value
+Email ID should be in proper format
+Date of joining should be in date format
+Location should be in the drop down list
+Use radio buttons for Gender -->
+
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Employee Details Form</title>
+</head>
+
+<center>
+
+    <body>
+
+
+        <h1>Employee Detail Form</h1>
+        <form action="">
+            <label for="name">First name:</label>
+            <input type="text" placeholder="Enter Your Name" required><br><br>
+            <label for="Age">Age:</label>
+            <input type="number" placeholder="Enter Your Age" required><br><br>
+            <p>Select Your Gender</p>
+              <input type="radio" name="Gender" value="Male" required>
+              <label for="Male">Male</label>
+              <input type="radio" name="Gender" value="Female" required>
+              <label for="Female">Female</label><br><br>
+            <label for="Designation">Designation:</label>
+            <input type="text" placeholder="Enter Your Designation" required><br><br>
+            <label for="Salary">Salary:</label>
+            <input type="number" placeholder="Enter Your Salary" required><br><br>
+              <label for="Location">Select Your Location:</label>
+            <select name="Location" required>
+                <option value="Ahmedabad">Ahmedabad</option>
+                <option value="Surat">Surat</option>
+                <option value="Baroda">Baroda</option>
+                <option value="Rajkot">Rajkot</option>
+            </select> <br><br>
+            <label for="Email">Email:</label>
+            <input type="email" placeholder="Enter Your Email" required><br><br>
+            <label for="Date Of Joining">Date Of Joining:</label>
+            <input type="date" required><br><br>
+
+            <button type="submit">Submit Details</button>
+        </form>
+
+    </body>
+</center>
+
+</html>
