@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <p id="p1"></p>
+    <p id="p2"></p>
+    <p id="p3"></p>
+    <p id="p4"></p>
+    <p id="p5"></p>
+    <p id="p6"></p>
+    <p id="p7"></p>
+    <p id="p8"></p>
+    <p id="p9"></p>
+    <p id="p10"></p>
+    <p id="p11"></p>
+    <p id="p12"></p>
+    <p id="p13"></p>
+    <p id="p14"></p>
+    <p id="p15"></p>
+
+    <script>
+
+        // toString method
+        var arr = ['P', 'r', 'i', 't'];
+        document.getElementById('p1').innerHTML = arr.toString();
+
+        // join method
+        var arr = ['P', 'r', 'i', 't'];
+        document.getElementById('p2').innerHTML = arr.join(' - ');
+
+        // Push and pop method
+        var arr = ['P', 'r', 'i', 't'];
+        arr.pop()
+        arr.push('p');
+        document.getElementById('p3').innerHTML = arr;
+
+        // shift method // removes first element from array
+        var arr = ['P', 'r', 'i', 't'];
+        arr.shift()
+        // var x = arr.shift();
+        document.getElementById('p4').innerHTML = arr;
+
+        // unshift method // add element at beginning
+        var arr = ['P', 'r', 'i', 't'];
+        arr.unshift('1')
+        document.getElementById('p5').innerHTML = arr;
+        document.getElementById("p6").innerHTML = arr.unshift("2"); // returns length
+
+        // length
+        var arr = ['P', 'r', 'i', 't'];
+        document.getElementById('p7').innerHTML = arr.length;
+
+        // delete
+        var arr = ['P', 'r', 'i', 't'];
+        delete arr[2]; // changes element to undefined
+        document.getElementById('p8').innerHTML = arr;
+
+        // splice method
+        // splice(startIndex,NumberOfElementsToRemove)
+        // splice(position,NumberOfElementsToRemove,...restParameters to Add)
+        var arr = ['P', 'r', 'i', 't'];
+        arr.splice(1, 2);
+        document.getElementById('p9').innerHTML = arr;
+        arr.splice(1, 0, 'r', 'i');
+        document.getElementById('p10').innerHTML = arr;
+
+        // concat method
+        var a = [1, 2, 3];
+        var b = [4, 5, 6];
+        var c = [7, 8, 9];
+
+        var d = a.concat(b);
+        document.getElementById('p11').innerHTML = d;
+
+        var e = a.concat(b, c)
+        document.getElementById('p12').innerHTML = e;
+
+        var f = c.concat(10);
+        document.getElementById('p13').innerHTML = f;
+
+        // slice method // it creates new array
+        var fruits = ["Banana", "Orange", "Lemon", "Apple", "Mango"];
+        
+        var s1 = fruits.slice(3);
+        document.getElementById('p14').innerHTML = s1
+        
+        var s2 = fruits.slice(1,3); // (startIndex,EndIndex)
+        document.getElementById('p15').innerHTML = s2
+
+    </script>
+
+</body>
+
+</html>

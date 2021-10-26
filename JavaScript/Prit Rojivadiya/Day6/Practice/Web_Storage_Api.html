@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        // set and get items
+
+        localStorage.setItem("name", "Prit Rojivadiya");
+        document.write(localStorage.getItem("name"));
+
+
+        // storage key
+        
+        var x = localStorage.key(0)
+        document.write("<br>"+x);
+
+
+        // storage length
+
+        var len = localStorage.length;
+        document.write("<br>"+len+"<br>");
+
+
+        // getitems
+
+        document.write(localStorage.getItem("name") + "<br>");
+        document.write(localStorage.name + "<br>");
+        document.write(localStorage["name"] + "<br>");
+    
+        
+        // set items
+        
+        localStorage.setItem('time',Date.now())
+        document.write(localStorage.time + "<br>");
+
+
+        // remove items
+
+        localStorage.removeItem('time')
+
+        for(let i = 0;i<localStorage.length;i++){
+            document.writeln(localStorage.key(i))
+        }
+
+
+        // clear (remove all storage items)
+
+        localStorage.clear()
+        
+
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        // apply method
+        const person = {
+            Name: function(){
+                return this.fname + " " +this.lname;
+            } 
+        }
+
+        const person1 = {
+            fname: 'Prit',
+            lname: 'Rojivadiya'
+        }
+
+        console.log(person.Name.apply(person1));
+
+
+        // apply method with parameter 
+        // same as call method but the difference is it takes arguments as an array
+        const p = {
+            fullname: function(city,country){
+                return this.fname + " "+this.lname+" "+city+" "+country;
+            }
+        }
+
+        const p1 = {
+            fname: 'Prit',
+            lname: 'Rojivadiya'
+        }
+
+        console.log(p.fullname.apply(p1,["Navsari","India"]));
+    </script>
+</body>
+</html>

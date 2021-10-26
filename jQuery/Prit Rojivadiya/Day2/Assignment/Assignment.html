@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+</head>
+<body>
+    <div class="container">
+    <table class="table table-bordered table-striped">
+        <thead>
+            <tr>
+                <th>id</th>
+                <th>name</th>
+                <th>email</th>
+                <th>gender</th>
+                <th>status</th>
+            </tr>
+        </thead>
+        <tbody id="tblData">
+        </tbody>
+    </table>
+</div>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+    <script>
+        
+        // Use getJSON method access this web api  https://gorest.co.in/public-api/users and 
+        // display the result in one table.
+
+        $(document).ready(function(){
+            $.getJSON("https://gorest.co.in/public-api/users",function(datas,status){
+                // console.log(datas.data);
+                let elements = datas.data;
+                $.each(elements,function(index,element){
+                    console.log(element)
+                    $('#tblData')
+                        .append($('<tr></tr>')
+                            .append($('<td></td>').text(element.id))
+                            .append($('<td></td>').text(element.name))
+                            .append($('<td></td>').text(element.email))
+                            .append($('<td></td>').text(element.gender))
+                            .append($('<td></td>').text(element.status))
+                    )
+                })
+            })
+        })
+
+    </script>
+</body>
+</html>

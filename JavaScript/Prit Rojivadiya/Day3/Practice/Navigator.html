@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <p id="p1">Cookie Enabled is: </p>
+    <p id="p2">App name is: </p>
+    <p id="p3">App code name is: </p>
+    <p id="p4">Product name is: </p>
+    <p id="p5">App version is: </p>
+    <p id="p6">User agent is: </p>
+    <p id="p7">Platform is: </p>
+
+    <script>
+
+        // check cookie is enabled or not
+        document.getElementById('p1').innerHTML += navigator.cookieEnabled;
+        
+        // application name
+        document.getElementById('p2').innerHTML += navigator.appName;
+        
+        // application code name
+        document.getElementById('p3').innerHTML += navigator.appCodeName;
+        
+        // product name of browser engine
+        document.getElementById('p4').innerHTML += navigator.product;
+        
+        // broswer version
+        document.getElementById('p5').innerHTML += navigator.appVersion;
+        
+        // browser agent
+        document.getElementById('p6').innerHTML += navigator.userAgent;
+        
+        // plateform
+        document.getElementById('p7').innerHTML += navigator.platform;
+
+
+
+
+
+    </script>
+</body>
+</html>

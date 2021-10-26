@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .flex_container1{
+            display: flex;
+            /* flex-direction: column; */
+            /* flex-direction: column-reverse; */
+            flex-direction: row-reverse;
+            background-color: indianred;
+        }
+        .flex_container1 > div{
+            height: 100px;
+            width: 100px;
+            margin: 10px;
+            padding: 10px;
+            background-color: lawngreen;
+        }
+        .flex_container2{
+            display: flex;
+            background-color: rgb(124, 131, 235);
+            margin-top: 20px;
+            height: 500px;
+            justify-content: center;
+            /* align-items: center; */
+            /* align-items: stretch; */
+            align-items: flex-end;
+            /* align-items: baseline; */ /*when height of divs are not same*/
+        }
+        .flex_container2 > div{
+            height: 100px;
+            width: 100px;
+            margin: 10px;
+            padding: 10px;
+            background-color: rgb(240, 121, 66);
+        }
+        .flex_container3{
+            display: flex;
+            flex-wrap: wrap;
+            /* flex-wrap: wrap-reverse; */
+            justify-content: space-evenly;
+            background-color: rgb(124, 131, 235);
+            margin-top: 20px;
+        }
+        .flex_container3 > div{
+            height: 100px;
+            width: 100px;
+            margin: 10px;
+            padding: 10px;
+            background-color: rgb(240, 121, 66);
+        }
+        .flex_container4{
+            display: flex;
+            /* justify-content: space-evenly; */
+            /* justify-content: flex-end; */
+            /* justify-content: space-between; */
+            /* justify-content: space-around; */
+            justify-content: center;
+            background-color: indianred;
+            margin-top: 20px;
+        }
+        .flex_container4 > div{
+            height: 100px;
+            width: 100px;
+            margin: 10px;
+            padding: 10px;
+            background-color: lawngreen;
+        }
+        .flex_container5{
+            height: 500px;
+            display: flex;
+            /* align-content: space-around; */
+            align-content: space-evenly;
+            /* align-content: space-between; */
+            /* align-content: flex-end; */
+            /* align-items: flex-end; */
+            flex-wrap: wrap;
+            background-color: lawngreen;
+            margin-top: 20px;
+        }
+        .flex_container5 > div{
+            height: 100px;
+            width: 100px;
+            background-color: lightcoral;
+        }
+    </style>
+</head>
+<body>
+    <div class="flex_container1">
+        <div class="div1">1</div>
+        <div class="div2">2</div>
+        <div class="div3">3</div>
+    </div>
+
+    <div class="flex_container2">
+        <div class="div1">1</div>
+        <div class="div2">2</div>
+        <div class="div3">3</div>
+    </div>
+
+    <div class="flex_container3">
+        <div class="div1">1</div>
+        <div class="div2">2</div>
+        <div class="div3">3</div>
+        <div class="div3">4</div>
+        <div class="div3">5</div>
+        <div class="div3">6</div>
+        <div class="div3">7</div>
+        <div class="div3">8</div>
+        <div class="div3">9</div>
+    </div>
+
+    <div class="flex_container4">
+        <div class="div1">1</div>
+        <div class="div2">2</div>
+        <div class="div3">3</div>
+    </div>
+
+    <div class="flex_container5">
+        <div class="div1">1</div>
+        <div class="div2">2</div>
+        <div class="div3">3</div>
+        <div class="div3">4</div>
+        <div class="div3">5</div>
+        <div class="div3">6</div>
+        <div class="div3">7</div>
+        <div class="div3">8</div>
+        <div class="div3">9</div>
+        <div class="div3">10</div>
+        <div class="div3">11</div>
+        <div class="div3">12</div>
+        <div class="div3">13</div>
+        <div class="div3">14</div>
+    </div>
+
+</body>
+</html>

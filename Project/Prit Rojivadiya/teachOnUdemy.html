@@ -1,0 +1,474 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <link rel="stylesheet" href="./Assets/css/style.css">
+    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css"
+        integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous" />
+    <link rel="icon" href="./Assets/images/udemyIcon.png" type="image/icon type">
+    <title>Teach on udemy</title>
+    <style>
+        .TeachHeader {
+            position: relative;
+            top: 3px;
+        }
+
+        @media screen and (min-width: 768px) {
+            .header-content {
+                padding: 20px;
+                width: 350px;
+                position: absolute;
+                top: 40%;
+                left: 30%;
+                transform: translate(-50%, -50%);
+            }
+        }
+
+        .howToBegin .nav-tabs button.active {
+            border: 2px solid blueviolet;
+        }
+
+        .howToBegin nav {
+            box-shadow: none;
+        }
+    </style>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+</head>
+
+<body>
+    <nav class="navbar navbar-expand-lg navbar-light bg-white p-3">
+        <div class="container-fluid">
+            <!-- <a class="navbar-brand mx-3 logo h1 text-primary" href="./index.html">Udemy</a> -->
+            <a class="navbar-brand mx-3 logo h1 text-primary" href="./index.html"><img
+                    src="./Assets/images/logo-udemy.svg" height="44px" width="100px" alt=""></a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+                aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav mb-2 me-auto mb-lg-0">
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button"
+                            data-bs-toggle="dropdown" aria-expanded="false">
+                            Categories
+                        </a>
+                        <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                            <li><a class="dropdown-item" href="./JScourse.html">Javascript</a></li>
+                            <li><a class="dropdown-item" href="./pythonCourse.html">Python</a></li>
+                            <li><a class="dropdown-item" href="./webCourses.html">Web development</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item">
+                        <div class="input-icons">
+                            <i class="fas fa-search icon btn" type="button" onclick="myfun()"></i>
+                            <input type="text" class="form-control input-field nav-link"
+                                placeholder="Search for anything" id="searchbar" aria-label="Username"
+                                aria-describedby="basic-addon1" />
+                        </div>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" target="_blank" href="./udemyBusiness.html">Udemy Business</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active border-bottom border-4" target="_blank" href="./teachOnUdemy.html">
+                            <span style="color: blueviolet;"> Teach on Udemy </span> </a>
+                    </li>
+                </ul>
+                <form class="d-flex">
+                    <a class="nav-link" href="./cart.html"><i class="fas fa-shopping-cart"></i></a>
+                    <button class="btn btn-outline-dark me-2" onclick="openSignin()"> Log In </button>
+                    <button class="btn btn-dark me-2" onclick="openSignup()">Sign Up</button>
+                    <button class="btn btn-outline-dark" type="button" data-bs-target="#langModal"
+                        data-bs-toggle="modal"><i class="fas fa-globe"></i></button>
+                </form>
+            </div>
+        </div>
+    </nav>
+
+    <!-- header -->
+    <div class="TeachHeader">
+        <img class="img-fluid d-none d-sm-block" src="./Assets/images/people/teacher2.jpg" alt="">
+        <img class="img-fluid d-block d-sm-none" src="./Assets/images/people/teacher.jpg" alt="">
+        <div class="header-content p-4">
+            <h1>Come teach <br class="d-none d-sm-block"> with us</h1>
+            <p>Become an instructor and change lives — including your own</p>
+            <button class="btn btn-dark w-100" data-bs-target="#signupModal" data-bs-toggle="modal">Get Started</button>
+        </div>
+    </div>
+
+    <!-- reasons -->
+    <div class="container my-5">
+        <h1 class="text-center my-3">So many reasons to start</h1>
+        <div class="row">
+            <div class="col-12 col-md-4 text-center">
+                <img src="./Assets/images/reasons/value-prop-teach-v3.jpg" alt="">
+                <h3>Teach your way</h3>
+                <p>Publish the course you want, in the way you want, and always have of control your own content.</p>
+            </div>
+            <div class="col-12 col-md-4 text-center">
+                <img src="./Assets/images/reasons/value-prop-inspire-v3.jpg" alt="">
+                <h3>Inspire learners</h3>
+                <p>Teach what you know and help learners explore their interests, gain new skills, and advance their
+                    careers.</p>
+            </div>
+            <div class="col-12 col-md-4 text-center">
+                <img src="./Assets/images/reasons/value-prop-get-rewarded-v3.jpg" alt="">
+                <h3>Get rewarded</h3>
+                <p>Expand your professional network, build your expertise, and earn money on each paid enrollment.</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- information -->
+    <div class="info p-5" style="background-color: blueviolet;">
+        <div class="row text-center text-white">
+            <div class="col">
+                <h1><b>40M</b></h1>
+                <p>Students</p>
+            </div>
+            <div class="col">
+                <h1><b>65+</b></h1>
+                <p>Languages</p>
+            </div>
+            <div class="col">
+                <h1><b>480M</b></h1>
+                <p>Enrollments</p>
+            </div>
+            <div class="col">
+                <h1><b>180+</b></h1>
+                <p>Countries</p>
+            </div>
+            <div class="col">
+                <h1><b>7000+</b></h1>
+                <p>Customrs</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- how to begin -->
+    <div class="container my-5 howToBegin">
+        <h1 class="text-center my-5" style="color: blueviolet;">how to begin</h1>
+        <nav>
+            <div class="nav nav-tabs w-75 nav-fill me-auto ms-auto my-3" id="nav-tab" role="tablist">
+                <button class="nav-link active" id="nav-home-tab" data-bs-toggle="tab" data-bs-target="#nav-home"
+                    type="button" role="tab" aria-controls="nav-home" aria-selected="true">
+                    <h3> Plan your curriculam </h3>
+                </button>
+                <button class="nav-link" id="nav-profile-tab" data-bs-toggle="tab" data-bs-target="#nav-profile"
+                    type="button" role="tab" aria-controls="nav-profile" aria-selected="false">
+                    <h3> Record your video </h3>
+                </button>
+                <button class="nav-link" id="nav-contact-tab" data-bs-toggle="tab" data-bs-target="#nav-contact"
+                    type="button" role="tab" aria-controls="nav-contact" aria-selected="false">
+                    <h3> Launch your course </h3>
+                </button>
+            </div>
+        </nav>
+        <div class="tab-content" id="nav-tabContent">
+            <div class="tab-pane fade show active" id="nav-home" role="tabpanel" aria-labelledby="nav-home-tab">
+                <div class="row">
+                    <div class="col-12 col-sm-6 p-5 align-self-center">
+                        <p>You start with your passion and knowledge. Then choose a promising topic with the help of our
+                            Marketplace Insights tool.
+                            The way that you teach — what you bring to it — is up to you.</p>
+                        <b>How we help you</b>
+                        <p>We offer plenty of resources on how to create your first course. And, our instructor
+                            dashboard and curriculum pages help keep you organized.</p>
+                    </div>
+                    <div class="col-12 col-sm-6 p-5">
+                        <img class="img-fluid" src="./Assets/images/teachudemy/plan-your-curriculum-v3.jpg" alt="">
+                    </div>
+                </div>
+            </div>
+            <div class="tab-pane fade" id="nav-profile" role="tabpanel" aria-labelledby="nav-profile-tab">
+                <div class="row">
+                    <div class="col-12 col-sm-6 p-5 align-self-center">
+                        <p>Use basic tools like a smartphone or a DSLR camera. Add a good microphone and you’re ready to
+                            start.
+                            If you don’t like being on camera, just capture your screen. Either way, we recommend two
+                            hours or more of video for a paid course.</p>
+                        <b>How we help you</b>
+                        <p>Our support team is available to help you throughout the process and provide feedback on test
+                            videos..</p>
+                    </div>
+                    <div class="col-12 col-sm-6 p-5">
+                        <img class="img-fluid" src="./Assets/images/teachudemy/record-your-video-v3.jpg" alt="">
+                    </div>
+                </div>
+            </div>
+            <div class="tab-pane fade" id="nav-contact" role="tabpanel" aria-labelledby="nav-contact-tab">
+                <div class="row">
+                    <div class="col-12 col-sm-6 p-5 align-self-center">
+                        <p>Gather your first ratings and reviews by promoting your course through social media and your
+                            professional networks.
+                            Your course will be discoverable in our marketplace where you earn revenue from each paid
+                            enrollment.</p>
+                        <b>How we help you</b>
+                        <p>Our custom coupon tool lets you offer enrollment incentives while our global promotions drive
+                            traffic to courses. There’s even more opportunity for courses chosen for Udemy Business.</p>
+                    </div>
+                    <div class="col-12 col-sm-6 p-5">
+                        <img class="img-fluid" src="./Assets/images/teachudemy/launch-your-course-v3.jpg" alt="">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- carousel -->
+
+    <div class="container my-5">
+        <div id="carouselExampleControls" class="carousel slide" data-bs-ride="carousel">
+            <div class="carousel-inner">
+                <div class="carousel-item active">
+                    <div class="row">
+                        <div class="imgContainer col-sm-6 text-center">
+                            <img src="./Assets/images/reviews/frank-1x-v2.jpg" class="img-fluid" alt="...">
+                        </div>
+                        <div class="content col-sm-6 align-self-center text-sm-center p-sm-5">
+                            <p>“I’m proud to wake up knowing my work is helping people around the world improve their
+                                careers and build great things. While being a full-time instructor is hard work, it lets
+                                you
+                                work when, where, and how you want.”</p>
+                            <b>Frank Kane</b>
+                            <p>Data Science & IT Certifications</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="carousel-item">
+                    <div class="row">
+                        <div class="imgContainer col-sm-6 text-center">
+                            <img src="./Assets/images/reviews/paulo-1x.jpg" class="img-fluid" alt="...">
+                        </div>
+                        <div class="content col-sm-6 align-self-center text-sm-center p-sm-5">
+                            <p>““Udemy has changed my life. It’s allowed me to follow my passion and become a teacher I
+                                love to see my students succeed and hear them say they’ve learned more, quicker, from my
+                                courses than they did in college. It’s so humbling.”</p>
+                            <b>Paulo Dichone</b>
+                            <p>Developer (Android Speciality)</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="carousel-item">
+                    <div class="row">
+                        <div class="imgContainer col-sm-6 text-center">
+                            <img src="./Assets/images/reviews/deborah-1x.jpg" class="img-fluid" alt="...">
+                        </div>
+                        <div class="content col-sm-6 align-self-center text-sm-center p-sm-5">
+                            <p>“Teaching on Udemy has provided me with two important elements: the opportunity to reach
+                                more learners than I ever would be able to on my own and a steady stream of extra
+                                income. ”</p>
+                            <b>Deborah Grayson Riege</b>
+                            <p>Leadership, Communication</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleControls"
+                data-bs-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Previous</span>
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleControls"
+                data-bs-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Next</span>
+            </button>
+        </div>
+    </div>
+
+
+
+    <div class="my-5 container-fluid">
+        <div class="row">
+            <div class="col-md-3 col-12 col-sm-6">
+                <img class="img-fluid" src="./Assets/images/teachudemy/support-1-v3.jpg" alt="">
+            </div>
+            <div class="col-md-6 col-12 col-sm-6 p-5 text-center align-self-center">
+                <h1>You won’t have to do it alone</h1>
+                <p>Our <b> Instructor Support Team </b> is here to answer your questions and review your test video,
+                    while our <b> Teaching Center </b> gives you plenty of resources to help you through the process.
+                    Plus, get the support of experienced instructors in our <b> online community. </b> </p>
+            </div>
+            <div class="d-none d-sm-none d-md-block col-md-3 col-12">
+                <img class="img-fluid" src="./Assets/images/teachudemy/support-2-v3.jpg" alt="">
+            </div>
+        </div>
+    </div>
+
+    <!-- become instructor today -->
+    <div class="text-center bg-light p-5">
+        <h1 class="text-center">Become an instructor today</h1>
+        <p>Join one of the world’s largest online learning marketplaces.</p>
+        <button class="btn btn-dark" data-bs-target="#signupModal" data-bs-toggle="modal">Get Started</button>
+    </div>
+
+
+    <div class="bg-dark p-4 text-white border-bottom">
+        <div class="row">
+            <div class="col-md-6 col-12"> <b> Top companies choose <span style="color: blueviolet;"> Udemy Business
+                    </span> to build in-demand career skills. </b> </div>
+            <div class="col-md-6 col-12">
+                <div class="row">
+                    <div class="col">
+                        <img class="img-fluid" src="./Assets/images/logos/apple-dark.svg" alt="">
+                    </div>
+                    <div class="col"><img class="img-fluid" src="./Assets/images/logos/box-dark.svg" alt=""></div>
+                    <div class="col"><img class="img-fluid" src="./Assets/images/logos/volkswagen-dark.svg" alt="">
+                    </div>
+                    <div class="col"><img class="img-fluid" src="./Assets/images/logos/netflix-dark.svg" alt=""></div>
+                    <div class="col"><img class="img-fluid" src="./Assets/images/logos/eventbrite-dark.svg" alt="">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- teacher sign up modal -->
+    <div class="modal fade" id="signupModal" tabindex="-1" aria-labelledby="signupModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="signupModalLabel">Become a udemy instructor!</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <p>Discover a supportive community of online instructors. Get instant access to all course creation
+                        resources.</p>
+                    <form class="row row-cols-lg-auto g-3 align-items-center">
+                        <div class="col-12">
+                            <label class="visually-hidden" for="inlineFormInputGroupUsername">Username</label>
+                            <input type="text" class="form-control" id="inlineFormInputGroupUsername"
+                                placeholder="Username">
+                        </div>
+                        <div class="col-12">
+                            <label class="visually-hidden" for="inlineFormInputGroupEmail">Email</label>
+                            <input type="text" class="form-control" id="inlineFormInputGroupEmail" placeholder="Email">
+                        </div>
+                        <div class="col-12">
+                            <label class="visually-hidden" for="inlineFormInputGroupPwd">Password</label>
+                            <input type="password" class="form-control" id="inlineFormInputGroupPwd"
+                                placeholder="Password" autocomplete="">
+                        </div>
+
+                        <div class="col-12">
+                            <button type="submit" class="btn btn-primary">Sign Up</button>
+                        </div>
+                    </form>
+                </div>
+                <div class="text-center border-top p-3">
+                    Already have an account? <a href=""> Log In </a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- modal -->
+    <div class="modal fade" id="langModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel">Choose a language</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <div class="row">
+                        <div class="col-12 col-sm-6 col-md-4">
+                            <ul class="list-unstyled">
+                                <li>English</li>
+                                <li>Deutsch</li>
+                                <li>Italiano</li>
+                            </ul>
+                        </div>
+                        <div class="col-12 col-sm-6 col-md-4">
+                            <ul class="list-unstyled">
+                                <li>Polski</li>
+                                <li>Indonesian</li>
+                                <li>Nederlands</li>
+                            </ul>
+                        </div>
+                        <div class="col-12 col-sm-6 col-md-4">
+                            <ul class="list-unstyled">
+                                <li>Portugues</li>
+                                <li>Romana</li>
+                                <li>Gujarati</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <footer class="bg-dark text-white p-5" id="IndexFooter">
+        <div class="row">
+            <div class="col-sm-3 col-12">
+                <ul class="list-unstyled">
+                    <li><a href="">Udemy Business</a></li>
+                    <li><a href="">Teach on Udemy</a></li>
+                    <li><a href="">Get the app</a></li>
+                    <li><a href="">About Us</a></li>
+                    <li><a href="">Contact Us</a></li>
+                </ul>
+            </div>
+            <div class="col-sm-3 col-12">
+                <ul class="list-unstyled">
+                    <li><a href="">Career</a></li>
+                    <li><a href="">Blog</a></li>
+                    <li><a href="">Help and Support</a></li>
+                    <li><a href="">Affiliate</a></li>
+                </ul>
+            </div>
+            <div class="col-sm-3 col-12 me-md-auto">
+                <ul class="list-unstyled">
+                    <li><a href="">Terms</a></li>
+                    <li><a href="">Privacy policy</a></li>
+                    <li><a href="">Sitemap</a></li>
+                </ul>
+            </div>
+            <div class="col-sm-3 col-12 text-sm-end">
+                <button class="btn btn-outline-light" data-bs-target="#langModal" data-bs-toggle="modal"><i
+                        class="fas fa-globe"></i> English</button>
+            </div>
+        </div>
+        <div class="row mt-5 justify-content-between">
+            <div class="col-sm-4">
+                <img src="./Assets/images/logo-udemy-inverted.svg" height="44px" width="100px" alt="">
+            </div>
+            <div class="col-sm-4 text-sm-end">
+                <p> © Copyrigt since 2021</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // sign in window
+        function openSignin() {
+            window.open('./Signin.html')
+        }
+
+        // sign up window
+        function openSignup() {
+            window.open('./Signup.html')
+        }
+    </script>
+
+    <script src="./Assets/js/courses.js"></script>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+        crossorigin="anonymous"></script>
+
+</body>
+
+</html>

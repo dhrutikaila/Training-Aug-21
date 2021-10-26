@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+
+        // search method
+        var s = 'Prit Rojivadiya';
+        document.write(s.search('Rojivadiya') + "<br>");
+
+        // replace method
+        var s = 'Hello World';
+        document.write(s.replace('World', 'Radix') + "<br>");
+
+        // incasesensitive match
+        var s = 'abc def'
+        document.write(s.replace(/ABC/i, 'pqr') + "<br>");
+        document.write(s.match(/DEF/i) + "<br>")
+
+        // global search
+        var s = 'ab ab ab bc cd bc';
+        document.write(s.match('bc') + "<br>")
+        document.write(s.match(/bc/g) + "<br>")
+
+        // multiline search
+        var s = 'THIS \n this'
+        document.write(s.match(/is/m) + "<br>")
+
+        // Brackets
+        var s = '123,23,456,345,23'
+        var text = "re, green, red, green, gren, gr, blue, yellow";
+        document.write(s.match(/[23]/g) + "<br>")
+        document.write(s.match(/[1-3]/g) + "<br>")
+        document.write(text.match(/(green|yellow)/g) + "<br>")
+
+        // metacharacters
+        var s = '012Hello';
+        document.write(s.match(/\d/g) + '<br>')
+        var s = 'ollehe hello hello hello hello'
+        document.write(s.match(/\s/g) + '<br>')
+        document.write(s.search(/\bhe/) + "<br>")
+        document.write(s.search(/he\b/) + "<br>")
+        var text = "Visit W3Schools. Hello World!";
+        document.write(text.match(/\u0057/g) + "<br>");
+
+        // Quantifiers
+        var s = 'helllo helo'
+        document.write(s.match(/l+/g) + "<br>") // 1 or more occurance
+        document.write(s.match(/l*/g) + "<br>") // 0 or more
+        document.write(s.match(/l?/g) + "<br>") // 0 or 1
+
+        // test method // returns true or false
+        var pattern = /hi/
+        document.write(pattern.test("hi I am Prit") + "<br>")
+        document.write(/Hi/.test("hI I am Prit") + "<br>")
+        
+        // exec method // returns found text as object else returns null object
+        document.write(/hi/.exec("hi I am Prit") + "<br>")
+        
+        // valid phonenumber
+        var phone = /^[6-9][0-9]{9}$/
+        var num = '7529630000'
+        if(num.match(phone)){
+            document.write('valid number <br>')
+        }else{
+            document.write('Invalid number')
+        }
+
+        // valid email
+        var mailPattern = /^([a-z]+)([0-9]+)@([a-z]+).[a-z]{2,3}(.[a-z]{2})+$/
+        var mail = 'abc123@gmail.co.in'
+        if(mail.match(mailPattern)){
+            document.write('valid mail <br>')
+        }else{
+            document.write('Invalid mail')
+        }
+
+
+    </script>
+</body>
+
+</html>

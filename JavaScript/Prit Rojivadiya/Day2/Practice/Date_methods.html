@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+
+        var d = new Date();
+        document.write(d + "<br>")
+        
+        var d = new Date(2020,11,4);
+        document.write(d + "<br>")
+        document.write(d.toString() + "<br>")
+        
+        var d = new Date(1632829085722);
+        document.write(d + "<br>")
+
+        // getTime method
+        document.write(d.getTime() + "<br>")
+        
+        // getFullYear method
+        document.write(d.getFullYear() + "<br>")
+
+        // getMonth
+        document.write(d.getMonth() + "<br>")
+
+        // getDate
+        document.write(d.getDate() + "<br>")
+        
+        // getHours
+        document.write(d.getHours() + "<br>")
+
+        // getMinutes
+        document.write(d.getMinutes() + "<br>")
+
+        // getSeconds
+        document.write(d.getSeconds() + "<br>")
+
+        // getMilliseconds
+        document.write(d.getMilliseconds() + "<br>")
+
+        // getDay
+        document.write(d.getDay() + "<br>")
+        
+        // getUTCDate
+        document.write(d.getUTCDate() + "<br>")
+
+        // setDate
+        d.setDate(2)
+        document.write(d + "<br>")
+        
+        // setFullYear
+        d.setFullYear(2018)
+        document.write(d + "<br>")
+
+        // comparing dates
+        var d1 = new Date();
+        var d2 = new Date(2021,8,27);
+
+        if(d1>d2){
+            document.write('today is greater than ' + d2)
+        }else{
+            document.write('today is not greate then ' + d2)
+        }
+
+
+
+    </script>
+</body>
+</html>

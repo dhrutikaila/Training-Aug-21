@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <!-- using entities -->
+
+    <h1> Hello I am &Popf;rit</h1>
+
+    <a href="https:/www.google.com" target="_blank">Google</a>
+    <!-- by default target is self -->
+    <br>
+
+    <!-- common html tags -->
+
+    <p>This is <b> paragraph </b> </p>
+
+    <h1>This is heading 1</h1>
+    <h2>This is heading 2</h2>
+
+    <img src="https://source.unsplash.com/user/erondu/1600x900" alt="bgImage" height="300px" width="300px">
+
+    <!-- tables -->
+
+    <table border="1">
+
+        <caption style="color: darkblue;">Products Detail</caption>
+
+        <colgroup span="2" style="background-color: rgb(127, 207, 151);">
+        </colgroup>
+        <colgroup style="background-color: burlywood;"></colgroup>
+
+        <!-- <tr><th colspan="3">Product table</tr></tr> -->
+        <thead>
+            <tr>
+                <th scope="col">ProductID</th>
+                <th scope="col">ProductName</th>
+                <th scope="col">Price</th>
+            </tr>
+        </thead>
+        <tfoot>
+            <tr>
+                <th scope="col">Total</th>
+                <th scope="col">95000</th>
+            </tr>
+        </tfoot>
+        <tr>
+            <td>1</td>
+            <td>Dell</td>
+            <td>45000</td>
+        </tr>
+        <tr>
+            <td>2</td>
+            <td>Leanovo</td>
+            <td>50000</td>
+        </tr>
+    </table>
+
+    <!-- ordered list -->
+
+    <ol reversed type="i">
+        <li>dell</li>
+        <li>Leanovo</li>
+        <li>HP</li>
+        <li>Asus</li>
+    </ol>
+
+    <!-- <ul style="list-style-type: circle;"> -->
+    <ul type='circle'>
+        <li>dell
+            <ol>
+                <li>dell vostro</li>
+                <li>dell inspiron</li>
+            </ol>
+        </li>
+        <li>Leanovo</li>
+        <li>HP</li>
+        <li>Asus</li>
+    </ul>
+
+    <!-- symantic tags -->
+
+    <mark>hello</mark>  
+
+    <header>
+        Hello World
+    </header>
+    <nav>
+        <a href="https:/www.google.com">Google</a>
+        <a href="https:/www.amazon.com">Amazon</a>
+    </nav>
+    <article>
+        <p>Publishing article</p>
+    </article>
+    <aside>
+        hello
+    </aside>
+    <footer>
+        Copyright &#169; since 2021
+    </footer>
+
+    <section>
+        <hgroup>
+            <h1>heading 1</h1>
+            <h2>heading 2</h2>
+            <h3>heading 3</h3>
+            <h4>heading 4</h4>
+        </hgroup>
+        <article>
+            <p>Publishing new article</p>
+        </article>
+    </section>
+
+    <address>
+        306,Sainath complex <br>
+        Anand Nagar, Shantadevi Road <br>
+        Navsari
+    </address>
+
+    <cite>this is cite tag</cite>
+    <br>
+    <s>striked</s>
+
+    <input type="range" name="" id="" min="1" max="10">
+    <br>
+    Progress-bar : <progress value="5" max="10"></progress>
+
+    Meter: <meter value="10" min="0" max="100" low="20" high="70"></meter><br>
+    Meter: <meter value="50" min="0" max="100" low="20" high="70" optimum="50"></meter><br>
+    Meter: <meter value="80" min="0" max="100" low="20" high="70"></meter><br>
+
+    <!-- form -->
+
+    <form method="GET" id="myForm">
+        <fieldset>
+            <label for="">Name</label>
+            <input type="text" name="" id="" required pattern="[a-z]{4}">
+        </fieldset>
+        <br>
+        Email <input type="email" name="" id="" placeholder="Enter email address">
+        <br>
+        Password <input type="password" name="" id="" autofocus="autofocus">
+        <button type="submit">Submit</button>
+    </form>
+
+    <input type="text" form="myForm" placeholder="formfield"> <!-- because of form attribute, data in this field will also submitted when you click on submit button-->
+
+    <dl>
+        <dt>Coffee</dt>
+        <dd>- black hot drink</dd>
+        <dt>Milk</dt>
+        <dd>- white cold drink</dd>
+    </dl>
+
+    <!-- global attribute -->
+    <p hidden>This paragraph should be hidden.</p>
+
+    <a href="https://www.w3schools.com/html/" accesskey="h">HTML</a><br> <!-- press alt + accesskey -->
+    <a href="https://www.w3schools.com/css/" accesskey="c">CSS</a>
+
+    <p contenteditable="true">This is an editable paragraph.</p>
+
+    <p dir="rtl">Write this text right-to-left!</p>
+    <p dir="ltr">Write this text right-to-left!</p>
+
+    <p draggable="true">This is a draggable paragraph.</p>
+
+    <p lang="fr">Ceci est un paragraphe.</p>
+
+    <p contenteditable="true" spellcheck="true">This is a paragraph</p>
+
+    <div tabindex="1">W3Schools</div><br>
+    <div tabindex="3">Google</div><br>
+    <div tabindex="2">Microsoft</div>
+
+    <p><abbr title="World Health Organization">WHO</abbr> was founded in 1948.</p>
+    <p title="Free Web tutorials">W3Schools.com</p>
+
+    <p translate="no">Don't translate this!</p>
+    <p>This can be translated to any language.</p>
+
+    <figure>
+        <img src="https://source.unsplash.com/user/erondu/1600x900" alt="bgImage" height="300px" width="300px">
+        <figcaption>This is random image</figcaption>
+    </figure>
+
+    
+
+</body>
+
+</html>

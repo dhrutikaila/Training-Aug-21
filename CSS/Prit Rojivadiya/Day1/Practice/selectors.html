@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        p.p1{
+            color: green;
+        }
+        .div2 p{
+            color: red;
+        }
+        div>.p2{
+            color: blue;
+        }
+        .div4 + p{
+            background-color: yellowgreen;
+        }
+        .div5 p:first-child{
+            background-color: blue;
+        }
+        .div5 p:nth-child(3){
+            background-color: red;
+        }
+        .div5 p:last-child{
+            background-color: grey;
+        }
+        .div5 p:nth-child(5)::first-letter{
+            font-size: 50px;
+        }
+    </style>
+</head>
+<body>
+    <div class="div1">
+        <p class="p1">hello</p>
+    </div>
+
+    <div class="div2">
+        <p>Lorem ipsum dolor sit amet.</p>
+        <p>Lorem ipsum dolor sit amet.</p>
+    </div>
+
+    <div class="div3">
+       <span> <p class="p2">Lorem ipsum dolor sit.</p> </span>
+    </div>
+    <div class="div4">
+        <p class="p2">Lorem ipsum dolor sit.</p>
+    </div>
+
+    <div class="div4">
+        <p>Lorem ipsum dolor sit.</p>
+    </div>
+    <p>Lorem ipsum dolor sit.</p>
+
+    <div class="div5">
+        <p>Lorem ipsum dolor sit amet.</p>
+        <p>Lorem ipsum dolor sit amet.</p>
+        <p>Lorem ipsum dolor sit amet.</p>
+        <p>Lorem ipsum dolor sit amet.</p>
+        <p>Lorem ipsum dolor sit amet.</p>
+        <p>Lorem ipsum dolor sit amet.</p>
+        <p>Lorem ipsum dolor sit amet.</p>
+        <p>Lorem ipsum dolor sit amet.</p>
+    </div>
+
+</body>
+</html>

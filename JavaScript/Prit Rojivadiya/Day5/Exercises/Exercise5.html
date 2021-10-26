@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        
+        // Using Function Apply pass employee object to a function defined in the function.
+
+        const employee = {
+            EmpDetail: function(Contact,Salary){
+                console.log(this.fname + " " +this.address+" "+this.designation+" "+Contact+" "+Salary);
+            }
+        }
+
+        let emp1 = {
+            fname: "Prit",
+            address: "Navsari, Gujarat",
+            designation: "MERN stack developer"
+        }
+
+        employee.EmpDetail.apply(emp1,[9925973300,30000]);
+
+    </script>
+</body>
+</html>

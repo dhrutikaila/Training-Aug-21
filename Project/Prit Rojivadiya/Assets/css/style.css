@@ -1,0 +1,67 @@
+/* navbar */
+
+nav{
+    box-shadow: 0px 3px 5px rgb(211, 210, 210);
+    position: sticky !important;
+    top: 0px;
+    z-index: 1;
+}
+
+nav .nav-link{
+    color: black !important;
+}
+
+nav .nav-link:hover{
+    color: blueviolet !important;
+}
+
+.input-icons i {
+    position: absolute;
+}
+  
+.input-icons {
+    width: 100%;
+    /* margin-bottom: 10px; */
+}
+  
+.icon {
+    padding: 12px;
+    min-width: 40px;
+}
+  
+.input-field {
+    width: 100%;
+    padding-left: 50px;
+    text-align: center;
+    border-radius: 50px;
+}
+
+@media screen and (min-width:1060px) {
+    nav .input-icons{
+        width: 300px;
+    }
+}
+
+/* footer */
+
+#IndexFooter a{
+    text-decoration: none;
+    color: white;
+}
+
+#IndexFooter a:hover{
+    color: blueviolet;
+}
+
+#langModal li{
+    padding: 10px;
+    display: block;
+}
+
+#langModal li:hover{
+    cursor: pointer;
+    color: blueviolet;
+}
+
+
+

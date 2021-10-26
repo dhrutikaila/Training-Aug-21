@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+
+        // toString method
+        var x = 10.10;
+        document.write(x.toString() + "<br>");
+        document.write((10 + 2).toString() + "<br>");
+
+        // toExponential method
+        var x = 55555
+        document.write(x.toExponential() + "<br>")
+        document.write(x.toExponential(2) + "<br>")
+
+        // toFixed
+        var x = 10.2222
+        document.write(x.toFixed(2) + "<br>")
+
+        // toPrecision
+        var x = 101.6
+        document.write(x.toPrecision(3) + "<br>")
+
+        // Number
+        document.write(Number(true) + "<br>");
+        document.write(Number(false) + "<br>");
+        document.write(Number("10") + "<br>");
+        document.write(Number("  10") + "<br>");
+        document.write(Number("10  ") + "<br>");
+        document.write(Number(" 10  ") + "<br>");
+        document.write(Number("10.33") + "<br>");
+        document.write(Number("10,33") + "<br>");
+        document.write(Number("10 33") + "<br>");
+        document.write(Number("John") + "<br>");
+        document.write(Number(new Date("1970-01-01")) + "<br>");
+        document.write(Number(new Date()) + "<br>");
+
+        // parseInt
+        document.write(parseInt("-10") + "<br>");       
+        document.write(parseInt("-10.33") + "<br>");    
+        document.write(parseInt("10") + "<br>");        
+        document.write(parseInt("10.33") + "<br>");     
+        document.write(parseInt("10 20 30") + "<br>");   
+        document.write(parseInt("10 years") + "<br>");   
+        document.write(parseInt("years 10") + "<br>");   
+
+        // parseFloat
+        document.write(parseFloat("-10") + "<br>");       
+        document.write(parseFloat("-10.33") + "<br>");    
+        document.write(parseFloat("10") + "<br>");        
+        document.write(parseFloat("10.33") + "<br>");     
+        document.write(parseFloat("10 20 30") + "<br>");   
+        document.write(parseFloat("10 years") + "<br>");   
+        document.write(parseFloat("years 10") + "<br>");  
+
+        // maxvalue
+        document.write(Number.MAX_VALUE + "<br>")
+        // minvalue
+        document.write(Number.MIN_VALUE + "<br>")
+        // positive infinity
+        document.write(Number.POSITIVE_INFINITY + "<br>")
+        // negative infinity
+        document.write(Number.NEGATIVE_INFINITY + "<br>")
+
+    </script>
+</body>
+
+</html>

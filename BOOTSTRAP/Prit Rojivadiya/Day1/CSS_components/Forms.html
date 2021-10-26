@@ -1,0 +1,149 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+        integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+
+    <title>Hello, world!</title>
+</head>
+
+<body>
+    <div class="container">
+
+        <!-- form -->
+        <h2>Form</h2>
+        <form action="">
+            <div class="form-group">
+                <label for="name">Name</label>
+                <input class="form-control form-control-sm" type="text" id="name" placeholder="Enter your name">
+            </div>
+
+            <div class="form-group">
+                <label for="email">Email</label>
+                <input class="form-control form-control-lg" type="email" id="email" placeholder="Enter mail">
+                <small class="form-text text-muted">Your email will not be shared</small>
+            </div>
+
+            <div class="form-group">
+                <label for="pwd">Password</label>
+                <input class="form-control" type="password" id="pwd" placeholder="enter password" readonly>
+            </div>
+
+            <div class="form-group">
+                <label for="gender">Gender</label>
+                <select class="form-control" id="gender">
+                    <option value="male">Male</option>
+                    <option value="female">Female</option>
+                </select>
+            </div>
+
+            <div class="form-group">
+                <label for="message">Message</label>
+                <textarea id="message" class="form-control" rows="3"></textarea>
+            </div>
+
+            <div class="form-group">
+                <label for="file">File input</label>
+                <input type="file" class="form-control-file" id="file">
+                <small class="fileHelp form-text text-muted">Max 3mb size</small>
+            </div>
+
+            <!-- form check -->
+            <fieldset class="form-group">
+                <legend>What are you using this service for?</legend>
+                <div class="form-check">
+                    <label class="form-check-label"> <input class="form-check-input" type="radio" value="option1"
+                            checked> Personal</label>
+                </div>
+                <div class="form-check">
+                    <label class="form-check-label"> <input class="form-check-input" type="radio" value="option2"
+                            checked> Professional</label>
+                </div>
+                <div class="form-check">
+                    <label class="form-check-label"> <input class="form-check-input" type="radio" value="option3"
+                            checked> Testing</label>
+                </div>
+            </fieldset>
+
+                <div class="form-check">
+                    <label for="checkbox" class="form-check-label">
+                        <input type="checkbox" class="form-check-input" id="checkbox">
+                        Sign up for newsletter
+                    </label>
+                </div>
+
+                <button type="submit" class="btn btn-primary">Submit</button>
+
+        </form>
+
+
+        <br><br>
+
+        <!-- inline form -->
+        <form class="form-inline">
+            <input type="text" id="uname" class="form-control mr-2" placeholder="Enter username">
+            <input type="password" id="pwd" class="form-control mr-2" placeholder="Enter Password">
+            <div class="form-ckeck">
+                <label class="form-check-label">
+                    <input type="checkbox" class="form-check-input"> Remember Me
+                </label>
+            </div>
+            <button type="submit" class="btn btn-info">Submit</button>
+        </form>
+
+        <br><br>
+
+        <!-- form row -->
+        <form>
+            <div class="form-row">
+                <div class="col">
+                    <input type="text" class="form-control" placeholder="Enter FirstName">
+                </div>
+                <div class="col">
+                    <input type="text" class="form-control" placeholder="Enter LastName">
+                </div>
+            </div>
+        </form>
+
+        <br><br>
+
+        <!-- validation -->
+        <div class="form-group">
+            <label for="uname">Username</label>
+            <input type="text" class="form-control is-valid" id="uname" placeholder="Enter Username">
+        </div>
+
+        <div class="form-group">
+            <label for="password">Password</label>
+            <input type="password" class="form-control is-invalid" id="password" placeholder="Enter Password">
+            <div class="invalid-feedback">Password not strong enough</div>
+        </div>
+
+        <div class="form-group">
+            <label for="password2">Confirm Password</label>
+            <input type="password" class="form-control is-invalid" id="password2" placeholder="Confirm Password">
+            <div class="invalid-feedback">Password do not match</div>
+        </div>
+
+    </div>
+
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+        integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+        crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
+        integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+        crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
+        integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+        crossorigin="anonymous"></script>
+</body>
+
+</html>

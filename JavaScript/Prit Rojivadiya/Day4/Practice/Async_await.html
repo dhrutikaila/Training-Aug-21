@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <p>Author: <span id="author"></span></p>
+    <p>Quote: <span id="quotes"></span></p> 
+    <button onclick="getQuote()">New Quote</button>
+    <script>
+        
+        // basic async await
+        async function f(){
+            const response = await fetch('https://api.github.com/users')
+            const users = await response.json();
+            return users;
+        }
+        let a = f();
+        a.then((data)=>{console.log(data)})
+        .catch((error)=>{console.log(error)});
+        console.log(a);
+        
+
+
+
+        // fetching data from api
+        const api = "https://type.fit/api/quotes";
+        var jsonData;
+        async function getData(){
+            const apiData = await fetch(api);
+            console.log(apiData);
+            jsonData = await apiData.json();
+            console.log(jsonData)
+            getQuote();
+        }
+        
+        function getQuote(){
+            let n = Math.floor(Math.random()*1643)
+            document.getElementById('author').innerHTML = jsonData[n].author
+            document.getElementById('quotes').innerHTML = jsonData[n].text
+        }
+
+        getData();
+
+    </script>
+</body>
+</html>

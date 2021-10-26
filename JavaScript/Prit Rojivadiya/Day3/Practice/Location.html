@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <p id="p1">location of current page is:- </p>
+    <p id="p2">hostname is:- </p>
+    <p id="p3">path is:- </p>
+    <p id="p4">protocol is:- </p>
+    <p id="p5">port number is:- </p>
+    <button onclick="changeDoc()">New Doc</button>
+    <button onclick="reload()">Force Reload</button>
+    <button onclick="replceUrl()">Replace URL</button>
+    <script>
+
+        // location.href = 'http://www.google.com'
+
+
+        // current page location
+        document.getElementById('p1').innerHTML += location.href
+        
+        // hostname
+        document.getElementById('p2').innerHTML += location.hostname
+        
+        // path name
+        document.getElementById('p3').innerHTML += location.pathname
+        
+        // protocol
+        document.getElementById('p4').innerHTML += location.protocol
+        
+        // port number
+        document.getElementById('p5').innerHTML += location.port
+
+        // assign method
+        function changeDoc(){
+            location.assign('http://www.google.com');
+        }
+
+        // reload function
+        function reload(){
+            location.reload();
+        }
+
+        // replace url
+        function replceUrl(){
+            location.replace("https://www.google.com");
+        }
+
+
+
+
+    </script>
+</body>
+</html>

@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <span id="hr"></span> : <span id="min"></span> : <span id="sec"></span>
+
+    <h1>Student List</h1>
+    <ul id="stu"></ul>
+    <script>
+
+        function add(a, b, callback) {
+            callback(a + b)
+        }
+
+        function print(c) {
+            console.log(c);
+        }
+
+        add(10, 20, print);
+
+        add(10, 20, function (c) {
+            console.log(c);
+        })
+
+        add(10, 20, (c) => {
+            console.log(c)
+        })
+
+
+        setInterval(() => {
+            let dt = new Date();
+            document.getElementById('hr').innerHTML = dt.getHours();
+            document.getElementById('min').innerHTML = dt.getMinutes();
+            document.getElementById('sec').innerHTML = dt.getSeconds();
+        }, 1000)
+
+
+        const students = [
+            { name: "Prit", Subject: "Javascript" },
+            { name: "Raj", Subject: "ML" }
+        ]
+
+        function enrollStudent(student,callback){
+            setTimeout(()=>{
+                students.push(student);
+                console.log('student has been enrolled')
+                callback();
+            },3000)
+        }
+        function getStudents(){
+            setTimeout(()=>{
+                let str = "";
+                students.forEach((student)=>{
+                    str += `<li> ${student.name} </li>`
+                });
+                document.getElementById('stu').innerHTML = str;
+                console.log('student has been fetched')
+            },1000)
+        }
+
+        let newStu = {name:'Man',Subject:'Flutter'}
+        enrollStudent(newStu,getStudents);
+        // getStudents();
+
+    </script>
+</body>
+
+</html>

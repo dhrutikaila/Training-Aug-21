@@ -1,0 +1,619 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <link rel="stylesheet" href="./Assets/css/style.css">
+    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css"
+        integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous" />
+    <link rel="icon" href="./Assets/images/udemyIcon.png" type="image/icon type">
+    <title>Udemy</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <style>
+        .logo {
+            animation: rotate 3s linear infinite;
+        }
+
+        @keyframes rotate {
+            0% {
+                transform: rotate(0deg)
+            }
+
+            25% {
+                transform: rotate(30deg)
+            }
+
+            50% {
+                transform: rotate(0deg);
+            }
+
+            75% {
+                transform: rotate(-30deg);
+            }
+
+            100% {
+                transform: rotate(0deg);
+            }
+        }
+
+        #head {
+            position: relative;
+            top: 10px;
+        }
+
+        @media screen and (min-width: 768px) {
+            .header-content {
+                background-color: white;
+                box-shadow: 5px 5px 10px;
+                padding: 20px;
+                width: 350px;
+                position: absolute;
+                top: 40%;
+                left: 30%;
+                transform: translate(-50%, -50%);
+            }
+        }
+
+        #categories img:hover {
+            transform: scale(1.04);
+        }
+
+        @media screen and (max-width: 576px) {
+            #categories b {
+                display: inline-block;
+                padding: 10px;
+                border: 2px solid black;
+                border-radius: 50px;
+            }
+        }
+
+        #featuredCourse span {
+            color: blue;
+            border-bottom: 2px solid blue;
+            font-weight: bold;
+        }
+
+        #featuredCourse span:hover {
+            cursor: pointer;
+            color: blueviolet;
+            border-bottom: 2px solid blueviolet;
+        }
+
+        .Newcourses {
+            width: 100%;
+            overflow-x: scroll !important;
+        }
+
+        .diffCourses button {
+            font-size: 20px;
+            font-weight: bolder !important;
+            color: black;
+        }
+
+        .diffCourses button.active {
+            color: blueviolet !important;
+            border: none;
+        }
+    </style>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+</head>
+
+<body>
+    <nav class="navbar navbar-expand-lg navbar-light bg-white p-3">
+        <div class="container-fluid">
+            <!-- <a class="navbar-brand mx-3 logo h1 text-primary" href="./index.html">Udemy</a> -->
+            <a class="navbar-brand mx-3 logo h1 text-primary" href="./index.html"><img
+                    src="./Assets/images/logo-udemy.svg" height="44px" width="100px" alt=""></a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+                aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav mb-2 me-auto mb-lg-0">
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button"
+                            data-bs-toggle="dropdown" aria-expanded="false">
+                            Categories
+                        </a>
+                        <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                            <li><a class="dropdown-item" href="./JScourse.html">Javascript</a></li>
+                            <li><a class="dropdown-item" href="./pythonCourse.html">Python</a></li>
+                            <li><a class="dropdown-item" href="./webCourses.html">Web development</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item">
+                        <div class="input-icons">
+                            <i class="fas fa-search icon btn" type="button" onclick="myfun()"></i>
+                            <input type="text" class="form-control input-field nav-link"
+                                placeholder="Search for anything" id="searchbar" aria-label="Username"
+                                aria-describedby="basic-addon1" />
+                        </div>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" target="_blank" href="./udemyBusiness.html">Udemy Business</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" target="_blank" href="./teachOnUdemy.html">Teach on Udemy</a>
+                    </li>
+                </ul>
+                <form class="d-flex">
+                    <a class="nav-link" href="./cart.html"><i class="fas fa-shopping-cart"></i></a>
+                    <button class="btn btn-outline-dark me-2" onclick="openSignin()"> Log In </button>
+                    <button class="btn btn-dark me-2" onclick="openSignup()">Sign Up</button>
+                    <button class="btn btn-outline-dark" type="button" data-bs-target="#langModal"
+                        data-bs-toggle="modal"><i class="fas fa-globe"></i></button>
+                </form>
+            </div>
+        </div>
+    </nav>
+
+    <!-- header -->
+
+    <div class="container" id="head">
+        <div class="image-container">
+            <img class="img-fluid" src="./Assets/images/headerImg.jpg" alt="">
+        </div>
+        <div class="header-content">
+            <h5>Festival Season Sale
+                <span style="color: blueviolet;">
+                    <div class="spinner-grow" role="status">
+                        <span class="visually-hidden"></span>
+                    </div>
+                </span>
+            </h5>
+            <p>Stock up on courses and boost your skills for as little as ₹455 through Oct 30</p>
+            <div class="input-group">
+                <span class="input-group-text" style="background: none;" id="basic-addon1"><i
+                        class="fas fa-search"></i></span>
+                <input type="text" class="form-control" placeholder="What do you want to learn" aria-label="Username"
+                    aria-describedby="basic-addon1">
+            </div>
+        </div>
+    </div>
+
+    <div class="container p-sm-5 my-5">
+        <h2>A broad Selection of courses</h2>
+        <p>Choose from 155,000 online video courses with new additions published every month</p>
+        <ul class="nav nav-tabs diffCourses" id="myTab" role="tablist">
+            <li class="nav-item" role="presentation">
+                <button class="nav-link active" id="Python-tab" data-bs-toggle="tab" data-bs-target="#Python"
+                    type="button" role="tab" aria-controls="Python" aria-selected="true"
+                    onclick="getName('pythonCourses')">Python</button>
+            </li>
+            <li class="nav-item" role="presentation">
+                <button class="nav-link" id="Excel-tab" data-bs-toggle="tab" data-bs-target="#Excel" type="button"
+                    role="tab" aria-controls="Excel" aria-selected="false"
+                    onclick="getName('excelCourses')">Excel</button>
+            </li>
+            <li class="nav-item" role="presentation">
+                <button class="nav-link" id="Web-tab" data-bs-toggle="tab" data-bs-target="#WebDevelopment"
+                    type="button" role="tab" aria-controls="Web Development" aria-selected="false"
+                    onclick="getName('webCourses')">Web
+                    Development</button>
+            </li>
+            <li class="nav-item" role="presentation">
+                <button class="nav-link" id="Javascript-tab" data-bs-toggle="tab" data-bs-target="#JavaScript"
+                    type="button" role="tab" aria-controls="JavaScript" aria-selected="false"
+                    onclick="getName('javascriptCourses')">JavaScript</button>
+            </li>
+            <li class="nav-item" role="presentation">
+                <button class="nav-link" id="DataScience-tab" data-bs-toggle="tab" data-bs-target="#DataScience"
+                    type="button" role="tab" aria-controls="Data Science" aria-selected="false"
+                    onclick="getName('dataScienceCourses')">Data Science</button>
+            </li>
+            <li class="nav-item" role="presentation">
+                <button class="nav-link" id="AWS-tab" data-bs-toggle="tab" data-bs-target="#AWSCertification"
+                    type="button" role="tab" aria-controls="AWS Certification" aria-selected="false"
+                    onclick="getName('awsCourses')">AWS
+                    Certification</button>
+            </li>
+        </ul>
+        <div class="tab-content" id="myTabContent">
+            <div class="tab-pane fade show active p-sm-5 p-3 border" id="Python" role="tabpanel"
+                aria-labelledby="Python-tab">
+                <h3>Expand your career opportunities with Python</h3>
+                <p>Whether you work in machine learning or finance, or are pursuing a career in web development or data
+                    science, Python is one of the most important skills you can learn. Python's simple syntax is
+                    especially suited for desktop, web, and business applications. Python's design philosophy emphasizes
+                    readability and usability. </p>
+                <div class="d-flex" style="overflow-x: scroll;" id="pythonCourses">
+
+                </div>
+            </div>
+            <div class="tab-pane fade p-5 border" id="Excel" role="tabpanel" aria-labelledby="Excel-tab">
+                <h3>Analyze and visualize data with Excel</h3>
+                <p>Regardless of the industry you work in, Microsoft Office Excel is an invaluable spreadsheet program
+                    for organizing and representing data. Excel offers functions, formulas, and pivot tables to help you
+                    aggregate and then analyze large sets of information. </p>
+                <div class="d-flex" style="overflow-x: scroll;" id="excelCourses">
+
+                </div>
+            </div>
+            <div class="tab-pane fade p-5 border" id="WebDevelopment" role="tabpanel" aria-labelledby="Web-tab">
+                <h3>Build websites and applications with Web Development</h3>
+                <p>The world of web development is as wide as the internet itself. Much of our social and vocational
+                    lives play out on the internet, which prompts new industries aimed at creating, managing, and
+                    debugging the websites and applications that we increasingly rely on.</p>
+                <div class="d-flex" style="overflow-x: scroll;" id="webCourses">
+
+                </div>
+            </div>
+            <div class="tab-pane fade p-5 border" id="JavaScript" role="tabpanel" aria-labelledby="Javascript-tab">
+                <h3>Grow your software development skills with JavaScript</h3>
+                <p>JavaScript is one of the most ubiquitous programming languages on the planet, mostly because it's the
+                    backbone of interactive web applications. On top of that, JavaScript is a great language for
+                    beginners because it gives them a chance to write code that does something visual.</p>
+                <div class="d-flex" style="overflow-x: scroll;" id="javascriptCourses">
+
+                </div>
+            </div>
+            <div class="tab-pane fade p-5 border" id="DataScience" role="tabpanel" aria-labelledby="DataScience-tab">
+                <h3>Lead data-driven decisions with Data Science</h3>
+                <p>Data science is everywhere. Better data science practices are allowing corporations to cut
+                    unnecessary costs, automate computing, and analyze markets. Essentially, data science is the key to
+                    getting ahead in a competitive global climate.</p>
+                <div class="d-flex" style="overflow-x: scroll;" id="dataScienceCourses">
+
+                </div>
+            </div>
+            <div class="tab-pane fade p-5 border" id="AWSCertification" role="tabpanel" aria-labelledby="AWS-tab">
+                <h3>Become an expert in cloud computing with AWS Certification</h3>
+                <p>Because Amazon Web Services is a constantly evolving cloud ecosystem, staying up with new AWS
+                    services and features can be a chore. That’s why earning an AWS certification is such a great IT
+                    career move. In the eyes of future employers, you are an AWS authority.</p>
+                <div class="d-flex" style="overflow-x: scroll;" id="awsCourses">
+
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="container-fluid bg-light p-3">
+        <h2 class="text-center d-sm-none">Why learn on udemy?</h2>
+        <div class="row">
+            <div class="col-sm-4 col-12 text-center d-flex justify-content-evenly align-items-center p-3">
+                <div><i class="fas fa-play-circle fa-2x"></i></div>
+                <div>Learn in-demand skills with over 155,000 video courses </div>
+            </div>
+            <div class="col-sm-4 col-12 text-center d-flex justify-content-evenly align-items-center p-3">
+                <div><i class="fas fa-star fa-2x"></i></div>
+                <div>Choose courses taught by real-world experts </div>
+            </div>
+            <div class="col-sm-4 col-12 text-center d-flex justify-content-evenly align-items-center p-3">
+                <div><i class="fas fa-infinity fa-2x"></i></div>
+                <div>Learn at your own pace, with lifetime access on mobile and desktop </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- courses -->
+    <div class="container my-5">
+        <h3 class="my-4">Hot and new courses in English</h3>
+        <div class="Newcourses d-flex flex-nowrap">
+            <!-- <div class="card" style="min-width: 18rem;">
+                <img src="./Assets/images/people/teacher.jpg" class="card-img-top" alt="...">
+                <div class="card-body">
+                    <h5 class="card-title">Card title</h5>
+                    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the
+                        card's content.</p>
+                    <a href="#" class="btn btn-primary">Go somewhere</a>
+                </div>
+            </div> -->
+        </div>
+    </div>
+
+    <!-- categories -->
+    <div class="container mt-5" id="categories">
+        <h2 class="mb-3">Top categories</h2>
+        <div class="row text-center">
+            <div class="col-12 col-sm-6 col-md-3 p-2">
+                <img class="img-fluid d-none d-sm-block" src="./Assets/images/categories/design.jpg" alt="design">
+                <b>Design</b>
+            </div>
+            <div class="col-12 col-sm-6 col-md-3 p-2">
+                <img class="img-fluid d-none d-sm-block" src="./Assets/images/categories/development.jpg"
+                    alt="development">
+                <b>Development</b>
+            </div>
+            <div class="col-12 col-sm-6 col-md-3 p-2">
+                <img class="img-fluid d-none d-sm-block" src="./Assets/images/categories/marketing.jpg" alt="marketing">
+                <b>Marketing</b>
+            </div>
+            <div class="col-12 col-sm-6 col-md-3 p-2">
+                <img class="img-fluid d-none d-sm-block" src="./Assets/images/categories/software.jpg" alt="software">
+                <b>Software</b>
+            </div>
+        </div>
+        <div class="row text-center">
+            <div class="col-12 col-sm-6 col-md-3 p-2">
+                <img class="img-fluid d-none d-sm-block" src="./Assets/images/categories/pd.jpg" alt="pd">
+                <b>Personal Development</b>
+            </div>
+            <div class="col-12 col-sm-6 col-md-3 p-2">
+                <img class="img-fluid d-none d-sm-block" src="./Assets/images/categories/business.jpg" alt="business">
+                <b>Business</b>
+            </div>
+            <div class="col-12 col-sm-6 col-md-3 p-2">
+                <img class="img-fluid d-none d-sm-block" src="./Assets/images/categories/photography.jpg"
+                    alt="photography">
+                <b>Photography</b>
+            </div>
+            <div class="col-12 col-sm-6 col-md-3 p-2">
+                <img class="img-fluid d-none d-sm-block" src="./Assets/images/categories/music.jpg" alt="music">
+                <b>Music</b>
+            </div>
+        </div>
+    </div>
+
+    <!-- featured course -->
+
+    <div class="container-fluid bg-light my-5 p-5" id="featuredCourse">
+        <h3>Featured topics by category</h3>
+        <br>
+        <div class="row mt-3">
+            <div class="col-12 col-sm-6 col-md-3">
+                <ul class="list-unstyled">
+                    <h5> Development </h5>
+                    <li> <span> Python </span> <br> 31,554,265 students </li> <br>
+                    <li> <span> Web Development </span> <br> 10,015,608 students </li> <br>
+                    <li> <span> Machine learning </span> <br> 6,258,477 students </li> <br>
+                </ul>
+            </div>
+            <div class="col-12 col-sm-6 col-md-3">
+                <ul class="list-unstyled">
+                    <h5> Business </h5>
+                    <li> <span> Financial analysis </span> <br> 1,081,277 students </li> <br>
+                    <li> <span> SQL </span> <br> 4,822,795 students </li> <br>
+                    <li> <span> PMP </span> <br> 1,453,204 students </li> <br>
+                </ul>
+            </div>
+            <div class="col-12 col-sm-6 col-md-3">
+                <ul class="list-unstyled">
+                    <h5> IT and Software </h5>
+                    <li> <span> AWS Certification </span> <br> 4,703,605 students </li> <br>
+                    <li> <span> Ethical Hacking </span> <br> 9,758,901 students </li> <br>
+                    <li> <span> Cyber Security </span> <br> 3,460,815 students </li> <br>
+                </ul>
+            </div>
+            <div class="col-12 col-sm-6 col-md-3">
+                <ul class="list-unstyled">
+                    <h5> Design </h5>
+                    <li> <span> Photoshop </span> <br> 10,076,226 students </li> <br>
+                    <li> <span> Graphic Design </span> <br> 2,963,264 students </li> <br>
+                    <li> <span> Drawing </span> <br> 2,275,952 students </li> <br>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <div class="container my-5">
+        <div class="row justify-content-center align-items-center">
+            <div class="col-12 col-md-4 text-center">
+                <img class="img-fluid" src="./Assets/images/people/instructor.jpg" alt="instructor">
+            </div>
+            <div class="col-12 col-md-4 text-center">
+                <h2>Become an instructor</h2>
+                <p>Instructors from around the world teach millions of students on Udemy. We provide the tools and
+                    skills to teach what you love.</p>
+                <button class="btn btn-dark">Start teaching today</button>
+            </div>
+        </div>
+    </div>
+
+    <div class="container-fluid my-5 bg-light p-4">
+        <div class="row">
+            <h2 class="text-center">Trusted by companies of all size</h2>
+        </div>
+        <div class="row justify-content-center">
+            <div class="col-sm-2 text-center"><img src="./Assets/images/logos/apple-dark.svg" width="44px" height="44px"
+                    alt=""></div>
+            <div class="col-sm-2 text-center"><img src="./Assets/images/logos/box-dark.svg" width="67px" height="44px"
+                    alt=""></div>
+            <div class="col-sm-2 text-center"><img src="./Assets/images/logos/netflix-dark.svg" width="101px"
+                    height="44px" alt=""></div>
+            <div class="col-sm-2 text-center"><img src="./Assets/images/logos/volkswagen-dark.svg" width="44px"
+                    height="44px" alt=""></div>
+            <div class="col-sm-2 text-center"><img src="./Assets/images/logos/eventbrite-dark.svg" width="115px"
+                    height="44px" alt=""></div>
+        </div>
+    </div>
+
+    <div class="container my-5">
+        <div class="row justify-content-center align-items-center">
+            <div class="col-12 col-md-4 text-center">
+                <h2><img src="./Assets/images/logo-udemy.svg" height="44px" width="100px" alt=""> <span
+                        style="color: blueviolet;">Business</span></h2>
+                <p>Get unlimited access to 6,000+ of Udemy’s top courses for your team. Learn and improve skills across
+                    business, tech, design, and more.</p>
+                <button class="btn btn-dark">Get Udemy Business</button>
+            </div>
+            <div class="col-12 col-md-4 text-center">
+                <img class="img-fluid" src="./Assets/images/people/bw.jpg" alt="instructor">
+            </div>
+        </div>
+    </div>
+
+    <div class="container my-5">
+        <div class="row justify-content-center align-items-center">
+            <div class="col-12 col-md-4 text-center">
+                <img class="img-fluid" src="./Assets/images/people/transform.jpg" alt="instructor">
+            </div>
+            <div class="col-12 col-md-4 text-center">
+                <h2>Transform your life through education</h2>
+                <p>Learners around the world are launching new careers, advancing in their fields, and enriching their
+                    lives.</p>
+                <button class="btn btn-dark">Find out how</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- modal -->
+    <div class="modal fade" id="langModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel">Choose a language</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <div class="row">
+                        <div class="col-12 col-sm-6 col-md-4">
+                            <ul class="list-unstyled">
+                                <li>English</li>
+                                <li>Deutsch</li>
+                                <li>Italiano</li>
+                            </ul>
+                        </div>
+                        <div class="col-12 col-sm-6 col-md-4">
+                            <ul class="list-unstyled">
+                                <li>Polski</li>
+                                <li>Indonesian</li>
+                                <li>Nederlands</li>
+                            </ul>
+                        </div>
+                        <div class="col-12 col-sm-6 col-md-4">
+                            <ul class="list-unstyled">
+                                <li>Portugues</li>
+                                <li>Romana</li>
+                                <li>Gujarati</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <footer class="bg-dark text-white p-5" id="IndexFooter">
+        <div class="row">
+            <div class="col-sm-3 col-12">
+                <ul class="list-unstyled">
+                    <li><a href="">Udemy Business</a></li>
+                    <li><a href="">Teach on Udemy</a></li>
+                    <li><a href="">Get the app</a></li>
+                    <li><a href="">About Us</a></li>
+                    <li><a href="">Contact Us</a></li>
+                </ul>
+            </div>
+            <div class="col-sm-3 col-12">
+                <ul class="list-unstyled">
+                    <li><a href="">Career</a></li>
+                    <li><a href="">Blog</a></li>
+                    <li><a href="">Help and Support</a></li>
+                    <li><a href="">Affiliate</a></li>
+                </ul>
+            </div>
+            <div class="col-sm-3 col-12 me-md-auto">
+                <ul class="list-unstyled">
+                    <li><a href="">Terms</a></li>
+                    <li><a href="">Privacy policy</a></li>
+                    <li><a href="">Sitemap</a></li>
+                </ul>
+            </div>
+            <div class="col-sm-3 col-12 text-sm-end">
+                <button class="btn btn-outline-light" data-bs-target="#langModal" data-bs-toggle="modal"><i
+                        class="fas fa-globe"></i> English</button>
+            </div>
+        </div>
+        <div class="row mt-5 justify-content-between">
+            <div class="col-sm-4">
+                <img src="./Assets/images/logo-udemy-inverted.svg" height="44px" width="100px" alt="">
+            </div>
+            <div class="col-sm-4 text-sm-end">
+                <p> © Copyrigt since 2021</p>
+            </div>
+        </div>
+    </footer>
+    <script src="./Assets/js/courses.js"></script>
+    <script>
+
+        function getName(e) {
+            console.log(e);
+            var pcs = JSON.parse(localStorage.getItem(e));
+            var pc = "";
+            pcs.forEach(p => {
+                pc += `
+                <div class="row">
+                <div class="card h-100" style="min-width: 18rem;">
+                    <img src="${p.img}" class="card-img-top" alt="...">
+                    <div class="card-body d-flex flex-column justify-content-around">
+                            <b>${p.heading}</b>
+                            <p>₹${p.price}</p>
+                            <button class = "btn btn-success">Buy Course</button>
+                    </div>
+                    </div>
+                </div>
+                `
+            });
+            // console.log(pc)
+            var y = document.getElementById(e);
+            y.innerHTML = pc
+        }
+
+        $(document).ready(function () {
+            var courses = JSON.parse(localStorage.getItem("NewCourses"));
+            var newCrs = ""
+            courses.forEach(course => {
+                newCrs += `
+                <div class="row">
+                <div class="card h-100" style="min-width: 18rem;">
+                    <img src="${course.img}" class="card-img-top" alt="...">
+                    <div class="card-body d-flex flex-column justify-content-around">
+                            <b>${course.heading}</b>
+                            <p>₹${course.price}</p>
+                            <button class = "btn btn-success">Buy Course</button>
+                    </div>
+                    </div>
+                </div>
+                `
+            });
+            var x = document.getElementsByClassName("Newcourses")[0];
+            x.innerHTML = newCrs
+
+            var pcs = JSON.parse(localStorage.getItem("pythonCourses"));
+            var pc = "";
+            pcs.forEach(p => {
+                pc += `
+                <div class="row">
+                <div class="card h-100" style="min-width: 18rem;">
+                    <img src="${p.img}" class="card-img-top" alt="...">
+                    <div class="card-body d-flex flex-column justify-content-around">
+                            <b>${p.heading}</b>
+                            <p>₹${p.price}</p>
+                            <button class = "btn btn-success">Buy Course</button>
+                    </div>
+                    </div>
+                </div>
+                `
+            });
+            // console.log(pc)
+            var y = document.getElementById("pythonCourses");
+            y.innerHTML = pc
+
+        })
+
+        // sign in window
+        function openSignin() {
+            window.open('./Signin.html')
+        }
+
+        // sign up window
+        function openSignup() {
+            window.open('./Signup.html')
+        }
+    </script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+        crossorigin="anonymous"></script>
+</body>
+
+</html>

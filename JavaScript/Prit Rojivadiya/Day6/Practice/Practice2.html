@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        
+        // Keep above JSON Data into a file, using Web Fetch API read that data.
+        var jsonData
+        async function getData(){
+            const file = './productData.json';
+            const objData = await fetch(file);
+            jsonData = await objData.json();
+            jsonData = jsonData.products;
+            console.log(jsonData)
+            jsonData.forEach(element => {
+                document.write(`${element.Name} -- ${element.Price} -- ${element.Location} <br>`);    
+            });
+        }
+
+        getData();
+
+        
+
+
+    </script>
+</body>
+</html>

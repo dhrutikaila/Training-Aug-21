@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <p class="heading">This is heading</p>
+    <p id="heading2">This is heading 2</p>
+    <p>This is para 3</p>
+    <p id="para4">This is para3</p>
+    <input type="number" name="" id="input1" value=1>
+    <input type="radio" name="r1" id="r1" value="r1">Radio1
+    <input type="radio" name="r1" id="r2" value="r2">Radio1
+    <input type="radio" name="r1" id="r3" value="r3">Radio1
+    <br>
+    <p id="time"></p>
+    <button onclick="document.getElementById('time').innerHTML = Date()">DateTime</button>
+    <p id="mover" onmouseover="changeFontSize()" onmouseout="normal()" >Onmouseover effect</p>
+
+    <script>
+
+        function changeFontSize(){
+            document.getElementById('mover').style.fontSize = "100px";  
+        }
+        function normal(){
+            document.getElementById('mover').style.fontSize = "50px";
+        }
+
+        // javascript variables
+
+        var x = 10;
+        var y = 20;
+        var z = x + y;
+        document.write("sum of " + x + " and " + y + " is " + z);
+        document.write("<br>")
+
+        // data types
+
+        var a = 1
+        document.write(typeof (a) + " " + a + "<br>")
+        var b = "prit"
+        document.write(typeof (b) + " " + b + "<br>")
+        var c = true
+        document.write(typeof (c) + " " + c + "<br>")
+        var d = null
+        document.write(typeof (d) + " " + d + "<br>")
+        var e;
+        document.write(typeof (e) + " " + e + "<br>")
+
+        // functions
+
+        var n1 = 10;
+        var n2 = 20;
+
+        function add(num1, num2) {
+            return num1 + num2;
+        }
+
+        document.write(add(n1, n2) + "<br>");
+
+        // conditional construct
+
+        var age = 21;
+        if (age >= 18) {
+            document.write("you are eligible to vote <br>")
+        } else {
+            document.write("You are not eligible to vote <br>")
+        }
+
+        var weekday = 4;
+        switch (weekday) {
+            case 1: document.write("Monday");
+                break;
+            case 2: document.write("Tuesday");
+                break;
+            case 3: document.write("Wednesday");
+                break;
+            case 4: document.write("Thursday <br>");
+                break;
+            case 5: document.write("Friday");
+                break;
+            case 6: document.write("Saturday");
+                break;
+            case 7: document.write("Sunday");
+                break;
+        }
+
+        // for loop
+
+        for (let i = 0; i < 10; i++) {
+            document.write(i + 1);
+        }
+        document.write("<br>")
+
+        // foreach loop
+
+        var arr = ['a', 'b', 'c', 'd'];
+        for (let x of arr) {
+            document.write(x);
+        }
+        document.write("<br>")
+        for (let x in arr) {
+            document.write(arr[x]);
+        }
+        document.write("<br>")
+
+        // while loop
+
+        var num = 0;
+        while (num < 10) {
+            document.write(num + " ")
+            num++;
+        }
+        document.write("<br>")
+
+        // Array
+
+        var array1 = new Array(1, 2, 3, 4, 5, 6);
+        document.write(array1 + "<br>");
+
+        var array2 = ['a', 1, 'r']
+        document.write(array2 + "<br>")
+
+        // Methods
+
+        var h = document.getElementsByClassName('heading')[0].innerHTML;
+        console.log(h)
+        var i = document.getElementById('heading2').innerHTML;
+        console.log(i);
+        var j = document.getElementsByName('r1')
+        console.log(j);
+        var k = document.getElementById('r1').value;
+        console.log(k);
+        var l = document.getElementsByTagName('p')[2].innerHTML;
+        console.log(l);
+        var m = document.getElementById('input1').value;
+        console.log(m);
+        var n = document.getElementById('para4').innerHTML = "this is para 4";
+        console.log(n);
+
+        // object methods
+
+        const person = {
+            firstName: "Prit",
+            lastName: "Rojivadiya",
+            id: 5566,
+            fullName: function () {
+                return this.firstName + " " + this.lastName;
+            }
+        };
+
+        document.write(person.fullName() + "<br>");
+
+        // built in methods
+
+        var msg = "hello";
+        document.write(msg.toUpperCase() + "<br>");
+        document.write(msg.toLowerCase() + "<br>");
+        document.write(msg[0] +"<br>");
+        document.write(msg[0].toUpperCase() + msg.slice(1).toLowerCase() +"<br>");
+
+
+
+        
+
+    </script>
+</body>
+
+</html>

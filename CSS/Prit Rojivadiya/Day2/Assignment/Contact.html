@@ -1,0 +1,171 @@
+<!-- Create Basic layout of the application which contain header, footer, leftbar and sidebar.
+Header keep brand logo and navigation bar for home, aboutus and contact us. 
+Navigation should work properly. -->
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            display: flex;
+            flex-direction: column;
+            height: 100vh;
+        }
+
+        header {
+            height: 10vh;
+            background-color: rgb(234, 236, 86);
+            padding: 20px;
+            top: 0;
+            position: sticky;
+        }
+
+        .menu li {
+            display: inline-block;
+            padding: 12px;
+            font-weight: bold;
+        }
+
+        .menu li:hover {
+            background-color: yellow;
+            border-radius: 20px;
+            cursor: pointer;
+        }
+
+        .logo {
+            float: left;
+        }
+
+        .navbar {
+            float: right;
+        }
+
+        a{
+            text-decoration: none;
+        }
+
+        main{
+            background-color: rgb(202, 192, 192);
+        }
+        .aside {
+            width: 20%;
+            height: 100%;
+            background-color: burlywood;
+            /* background-image: lawngreen; */
+            background-size: cover;
+            float: left;
+            padding: 20px;
+        }
+
+        .section {
+            width: 80%;
+            height: 100%;
+            background-color: rgb(69, 248, 78);
+            float: right;
+            padding: 20px;
+        }
+
+        .section p{
+            text-align: justify;
+            /* padding: 10px; */
+            margin: 10px;
+        }
+
+        img{
+            float: right;
+            margin-bottom: 10px;
+        }
+
+        .p1{
+            clear: right;
+            
+        }
+
+        footer {
+            height: 5vh;
+            width: 100%;
+            background-color: royalblue;
+            margin-top: auto;
+            padding: 10px;
+            position: relative;
+        }
+
+        .footerText {
+            text-align: center;
+            font-weight: bold;
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <div class="logo">
+            <img src="./Assets/logo.png" alt="logo" height="40px">
+        </div>
+        <nav class="navbar">
+            <ul class="menu">
+                <li> <a href="./index.html">Home</a> </li>
+                <li> <a href="./About.html">About Us</a> </li>
+                <li> <a href="./Contact.html">Contact Us</a> </li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <div class="column aside" style="text-align: center;">
+            <h1>Latest Articles</h1>
+            <br>
+            <br>
+            <figure>
+                <img src="https://source.unsplash.com/user/erondu/1600x900" alt="bgImage" height="250px" width="250px">
+                <figcaption>random image</figcaption>
+            </figure>
+            <br>
+            <br>
+            <figure>
+                <img src="https://source.unsplash.com/user/erondu/1600x900" alt="bgImage" height="250px" width="250px">
+                <figcaption>random image</figcaption>
+            </figure>
+            <br>
+            <br>
+            <figure>
+                <img src="https://source.unsplash.com/user/erondu/1600x900" alt="bgImage" height="250px" width="250px">
+                <figcaption>random image</figcaption>
+            </figure>
+        </div>
+        <div class="column section">
+           <h1 style="text-align: center;">Contact Page</h1>
+           <p>
+               Lorem ipsum dolor sit amet consectetur adipisicing elit. Esse totam consectetur iure magni! Laudantium maxime voluptatum, rem at ipsam, ducimus distinctio vel fuga porro voluptatem, iste repudiandae obcaecati nemo dignissimos.
+               Repellat cupiditate alias praesentium voluptas quaerat aliquam tempore sunt dolore dolores saepe repudiandae consectetur commodi laboriosam assumenda velit, illo iste? Recusandae nesciunt saepe eos officiis ipsam! Sit magnam quo dolorum?
+               Quaerat placeat veritatis vitae, dicta repellendus illo, nostrum vel perspiciatis maxime nam eligendi deleniti voluptatibus porro distinctio consequuntur blanditiis itaque adipisci reprehenderit exercitationem praesentium tempore consequatur! Nulla repudiandae fuga nesciunt.
+           </p>
+           <br><br>
+           <div class="div1">
+            <img src="https://source.unsplash.com/user/erondu/1600x900" alt="bgImage" height="250px" width="250px">
+            <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Natus officia nisi ut! Voluptatem tenetur, soluta, quaerat consequuntur culpa, exercitationem doloremque optio quam repudiandae facilis illum similique laboriosam quas modi! Quidem?
+            Quae dolore aut ducimus a delectus? Doloremque impedit ex temporibus possimus soluta, nulla dignissimos quaerat porro ipsum perspiciatis, libero fugit error similique nam? Aliquid nostrum aliquam quos quo rem eaque.
+            Consequuntur repudiandae, modi quae facere nisi velit quo minus eligendi, harum voluptatibus praesentium animi officia molestiae ex ipsa blanditiis id totam accusamus porro odio vel. Consequatur eum repellendus non tempore?</p>
+           </div>
+           <p class="p1">Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempore repudiandae dolorem voluptate libero debitis explicabo maiores praesentium. Illo quasi sit odit itaque dicta. Quam veniam odit quia corrupti voluptates cum.
+           Ipsa modi magni soluta! Eveniet molestiae repellendus neque recusandae commodi, fugit porro doloribus aspernatur, placeat perferendis facere corrupti fugiat, sunt consequuntur fuga repellat at quibusdam veniam iure labore quo minima.
+           Et officiis quas ut est veniam a ipsa vel, ipsum quidem, nostrum magnam voluptatum officia magni, voluptas natus aliquam dolorum. Totam molestias, rerum odio commodi laboriosam dolorum provident iste consectetur?</p>
+        </div>
+    </main>
+   
+    <footer>
+        <p class="footerText">Copyright &#169; Since 2021</p>
+    </footer>
+</body>
+
+</html>
