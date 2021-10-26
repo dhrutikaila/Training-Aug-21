@@ -1,0 +1,11 @@
+/* Practice 4 */
+.example{
+    font-size: 50px;
+    background-color: Red;
+}
+@media only screen and (max-width:700px){
+    .example{
+        font-size: 30px;
+        background-color: yellow;
+    }
+}

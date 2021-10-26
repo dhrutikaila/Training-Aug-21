@@ -1,0 +1,9 @@
+/* Practice 1 */
+.container-main{
+    border: 3px solid blue;
+}
+@media only screen and (max-width: 800px){
+    .container-main{
+    border: 5px solid red;
+    }
+}

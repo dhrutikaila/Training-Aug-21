@@ -1,0 +1,83 @@
+<!-- Try some operation with list like push, pop, shifting, deleting element -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Practice_Exercise (Day-16)</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+        crossorigin="anonymous"></script>
+</head>
+<body>
+    <div class="container bg-dark">
+        <h2 class="text-primary">Main Array</h2><br>
+        <p id="array" class="text-light"></p>
+        <br>
+        <hr>
+        <h2 class="text-success">Push Operation <small class="text-muted">(Haryana Added) </small></h2><br>
+        <p id="push" class="text-light"></p>
+        <br>
+        <hr>
+        <h2 class="text-info">Pop Operation <small class="text-muted">(Haryana Removed)</small></h2><br>
+        <p id="pop" class="text-light"></p>
+        <br>
+        <hr>
+        <h2 class="text-warning">Shift Operation <small class="text-muted">(Gujarat Removed)</small></h2><br>
+        <p id="shift" class="text-light"></p>
+        <br>
+        <hr>
+        <h2 class="text-danger">Unshift Operation <small class="text-muted">(Tamilnadu Added)</small></h2><br>
+        <p id="unshift" class="text-light"></p>
+        <br>
+        <hr>
+    </div>
+
+    <script>
+        var states = ["Gujarat", "Rajasthan", "Madhya Pradesh", "Maharashtra", "Punjab"];
+        var res = "";
+
+        for(var i=0; i<states.length; i++){
+            res += states[i] + ", ";
+            document.getElementById("array").innerHTML = res;
+        }
+
+        //push operation
+        states.push("Haryana");
+        var res1 = "";
+        for(var i=0; i<states.length; i++){
+            res1 += states[i] + ", ";
+            document.getElementById("push").innerHTML = res1;
+        }
+
+        //pop operation
+        states.pop();
+        var res2 = "";
+        for(var i=0; i<states.length; i++){
+            res2 += states[i] + ", ";
+            document.getElementById("pop").innerHTML = res2;
+        }
+
+        //Shift operation
+        states.shift();
+        var res3 = "";
+        for(var i=0; i<states.length; i++){
+            res3 += states[i] + ", ";
+            document.getElementById("shift").innerHTML = res3;
+        }
+
+        //UnShift operation
+        states.unshift("Tamilnadu");
+        var res4 = "";
+        for(var i=0; i<states.length; i++){
+            res4 += states[i] + ", ";
+            document.getElementById("unshift").innerHTML = res4;
+        }
+        
+    </script>
+
+</body>
+</html>

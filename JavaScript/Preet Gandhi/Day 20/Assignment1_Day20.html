@@ -1,0 +1,139 @@
+<!-- Display Product information in Grid format with AddToCart option. once a user click on AddtoCart button should be stored in local storage. Click on cart summary will display that data into console.
+
+ProductID	ProductName	Price	Quantity	 	 
+1	Cheese	100	1	Add to Cart	 
+2	Pen	150	2	Add to Cart	 
+3	Butter	100	1	Add to Cart	 
+4	Pencil	10	1	Add to Cart	 
+Cart Summary -->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Assignment1 (Day 20)</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+        crossorigin="anonymous"></script>
+</head>
+
+<body onload="tableCreate()">
+    <div class="container">
+        <div class="row">
+            <div class="col">
+                <table class="table table-striped mt-5" id="myTable">
+                    <thead>
+                        <tr>
+                            <th>ProductId</th>
+                            <th>ProductName</th>
+                            <th>Price</th>
+                            <th>Quantity</th>
+                            <th>Cart Option</th>
+                        </tr>
+                    </thead>
+                </table>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col">
+                <button class="btn btn-primary w-100 text-start" id="cartSummary" onclick="consoleData()">Cart
+                    Summary</button>
+            </div>
+        </div>
+
+    </div>
+
+    <script>
+        var jsonData = [
+            {
+                ProductId: 1,
+                ProductName: "Cheese",
+                Price: 100,
+                Quantity: 1,
+            },
+            {
+                ProductId: 2,
+                ProductName: "Pen",
+                Price: 150,
+                Quantity: 2,
+            },
+            {
+                ProductId: 3,
+                ProductName: "Butter",
+                Price: 100,
+                Quantity: 1,
+            },
+            {
+                ProductId: 4,
+                ProductName: "Pencil",
+                Price: 10,
+                Quantity: 1,
+            }
+        ];
+
+        // CREATING TABLE
+        function tableCreate() {
+            var table = document.getElementById("myTable");
+            jsonData.forEach((obj, index) => {
+                var tr = document.createElement("tr");
+                var data1 = document.createElement("td");
+                var data2 = document.createElement("td");
+                var data3 = document.createElement("td");
+                var data4 = document.createElement("td");
+                var data5 = document.createElement("td");
+                var cartButton = document.createElement("button");
+                cartButton.setAttribute("id", index);
+                cartButton.addEventListener("click", saveData);
+
+
+                // console.log(obj);
+                data1.innerHTML = obj.ProductId;
+                data2.innerHTML = obj.ProductName;
+                data3.innerHTML = obj.Price;
+                data4.innerHTML = obj.Quantity;
+                cartButton.innerHTML = "Add To Cart";
+
+                data5.appendChild(cartButton);
+                tr.appendChild(data1);
+                tr.appendChild(data2);
+                tr.appendChild(data3);
+                tr.appendChild(data4);
+                tr.appendChild(data5);
+                table.appendChild(tr);
+            })
+        }
+
+        //FUNCTION TO SAVE DATA INTO localStorage
+        function saveData(event) {
+            console.log(jsonData);
+            if (localStorage.Product_Details) {
+                var storeData = new Array(localStorage.getItem("Product_Details"));
+                console.log(event.target.id);
+                storeData.push(jsonData[event.target.id].ProductName);
+                localStorage.setItem("Product_Details", storeData);
+            }
+            else {
+                localStorage.setItem("Product_Details", jsonData[event.target.id].ProductName);
+            }
+        }
+
+        //FUNCTION TO PRINT DATA INTO console FROM localStorage
+        function consoleData() {
+            if (localStorage.Product_Details) {
+                var getData = localStorage.getItem("Product_Details");
+                console.log(getData);
+            }
+            else {
+                console.log("Cart is empty");
+            }
+
+        }
+
+    </script>
+</body>
+
+</html>

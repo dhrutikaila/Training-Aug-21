@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tooltips</title>
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    
+</head>
+
+<body>
+    <header>
+        <h1 class="display-3 my-4 text-center">Tooltips</h1>
+        <div class="container">
+            <div class="row">
+                <div class="col-md-3">
+                    <div class="dropdown">
+                        <button class="btn btn-primary w-100 dropdown-toggle" type="button" data-bs-toggle="dropdown" >
+                            2: Utilities
+                        </button>
+                        <div class="dropdown-menu w-100 ">
+                            <a class="dropdown-item" href="../Utilities/2_2_Basic_Typography.html">2.2 Basic Typography</a>
+                            <a class="dropdown-item" href="../Utilities/2_3_Text_Alignment_Display.html">2.3 Text Alignment & Display</a>
+                            <a class="dropdown-item" href="../Utilities/2_4_Floats_Fixed_Positions.html">2.4 Floats & Fixed Position</a>
+                            <a class="dropdown-item" href="../Utilities/2_5_Colors_Backgrounds.html">2.5: Colors & Backgrounds</a>
+                            <a class="dropdown-item" href="../Utilities/2_6_Spacing.html">2.6 Spacing</a>
+                            <a class="dropdown-item" href="../Utilities/2_7_Sizing_Borders.html">2.7 Sizing Borders</a>
+                            <a class="dropdown-item" href="../Utilities/2_8_Breakpoints.html">2.8 Breakpoints</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-3">
+                    <div class="dropdown">
+                        <button class="btn btn-success w-100 dropdown-toggle" type="button" data-bs-toggle="dropdown">
+                            3: CSS Components
+                        </button>
+                        <div class="dropdown-menu w-100 ">
+                            <a class="dropdown-item" href="../CSS Components/3_2_Buttons.html">3.2 Buttons</a>
+                            <a class="dropdown-item" href="../CSS Components/3_3_Navbar_Navs.html">3.3 Navbar & Navs</a>
+                            <a class="dropdown-item" href="../CSS Components/3_4_ListGroups_Badges.html">3.4 ListGroups & Badges</a>
+                            <a class="dropdown-item" href="../CSS Components/3_5_Forms.html">3.5: Forms</a>
+                            <a class="dropdown-item" href="../CSS Components/3_6_Input_Groups.html">3.6 Input Groups</a>
+                            <a class="dropdown-item" href="../CSS Components/3_7_Alerts_Progress_Bars.html">3.7 Alerts & Progress Bars</a>
+                            <a class="dropdown-item" href="../CSS Components/3_8_Tables_Pagination.html">3.8 Tables & Pagination</a>
+                            <a class="dropdown-item" href="../CSS Components/3_9_Cards.html">3.9 Cards</a>
+                            <a class="dropdown-item" href="../CSS Components/3_10_Media_Objects.html">3.10 Media Objects</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-3">
+                    <div class="dropdown">
+                        <button class="btn btn-warning w-100 dropdown-toggle" type="button"  data-bs-toggle="dropdown">
+                            4: Grid & Flexbox
+                        </button>
+                        <div class="dropdown-menu w-100 ">
+                            <a class="dropdown-item" href="../Grid_Flexbox/4_2_Grid_System.html">4.2 Grid System</a>
+                            <a class="dropdown-item" href="../Grid_Flexbox/4_3_Grid_Alignment.html">4.3 Grid Alignment</a>
+                            <a class="dropdown-item" href="../Grid_Flexbox/4_4_Flexbox_Classes.html">4.4 Flexbox Classes</a>
+                            <a class="dropdown-item" href="../Grid_Flexbox/4_5_Auto_Margin_Wrap_Order.html">4.5: Auto Margin wrap& Ordering</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-3">
+                    <div class="dropdown">
+                        <button class="btn btn-danger w-100 dropdown-toggle" type="button" data-bs-toggle="dropdown">
+                            5: JavaScript Widgets
+                        </button>
+                        <div class="dropdown-menu w-100 ">
+                            <a class="dropdown-item" href="5_2_Carousel_Slider.html">5.2 Carousel Slider</a>
+                            <a class="dropdown-item" href="5_3_Collapse_Accordian.html">5.3 Collapse & Accordian</a>
+                            <a class="dropdown-item" href="5_4_Tooltips.html">5.4 Tooltips</a>
+                            <a class="dropdown-item" href="5_5_Popover.html">5.5: Popover</a>
+                            <a class="dropdown-item" href="5_6_Modals.html">5.6 Modals</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <hr>
+    </header>
+
+    <div class="container">
+        <!--###################START HERE######################-->
+        <br>
+        <!-- TOOLTIPS -->
+      <button class="btn btn-primary" data-bs-toggle="tooltip" data-bs-placement="top" title="Tooltip on top" id="top">Tooltip On Top</button>
+      <button class="btn btn-success" data-bs-toggle="tooltip" data-bs-placement="Right" title="Tooltip on Right" id="right">Tooltip On Right</button>
+    <button class="btn btn-success" data-bs-toggle="tooltip" data-bs-placement="bottom" title="Tooltip on bottom" id="bottom">Tooltip On Bottom</button>
+    <button class="btn btn-danger" data-bs-toggle="tooltip" data-bs-placement="left" title="Tooltip on left" id="left">Tooltip On Left</button>
+
+    <br />
+    <br />
+
+    <!-- TOOLTIPS WITH HTML -->
+    <button id="hello" type="button" class="btn btn-primary" data-bs-toggle="tooltip" dat-bs-placement="top" data-bs-html="true" title="<h3>Hello World</h3><p>Lorem ipsum</p>">Tooltip with HTML</button>
+
+    <hr />
+
+    <!-- TRIGGER WITH JS -->
+    <button class="btn btn-secondary" onclick="show()">Show Tooltip</button>
+
+    <button class="btn btn-secondary" onclick="remove()">Hide Tooltip</button>
+
+    <button class="btn btn-secondary" onclick="removeOradd()">
+      Toggle Tooltip
+    </button>
+
+    </div>
+
+    <div style="margin-top:500px;"></div>
+
+    <!-- <script
+      src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"
+      integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p"
+      crossorigin="anonymous"
+    ></script> -->
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+
+    <script>
+        let tooltipTriggerList = [].slice.call(
+          document.querySelectorAll('[data-bs-toggle="tooltip"]')
+        );
+  
+        let tooltipList = tooltipTriggerList.map(function (tooltipTriggerEl) {
+          return new bootstrap.Tooltip(tooltipTriggerEl);
+        });
+  
+        
+        
+        function show() {
+          
+  
+          tooltipList.map((element) => {
+            element.enable();
+          });
+        }
+  
+        function remove() {
+          tooltipList.map((element) => {
+            element.disable();
+          });
+        }
+  
+        function removeOradd() {
+          tooltipList.map((element) => {
+            element.toggle();
+          });
+        }
+      </script>
+    
+</body>
+
+</html>

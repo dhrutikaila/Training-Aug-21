@@ -1,0 +1,47 @@
+{"carsData": [
+    {
+        "image":"./Assets/MarutiBaleno.jpg",
+        "name":"2020 Maruti Baleno",
+        "owner":"1st Owner",
+        "kms":8206,
+        "type":"Petrol",
+        "amount":673999,
+        "downpayment":14993
+    },
+    {
+        "image":"./Assets/MarutiAlto.jpg",
+        "name":"2011 Maruti Alto K10",
+        "owner":"1st Owner",
+        "kms":20354,
+        "type":"Petrol",
+        "amount":212799,
+        "downpayment":4734
+    },
+    {
+        "image":"./Assets/MarutiAlto-2.jpg",
+        "name":"2020 Maruti Alto",
+        "owner":"1st Owner",
+        "kms":3356,
+        "type":"Petrol",
+        "amount":381499,
+        "downpayment":8486
+    },
+    {
+        "image":"./Assets/DatsunRediGo.jpg",
+        "name":"2017 Datsun Redi Go",
+        "owner":"2nd Owner",
+        "kms":20417,
+        "type":"Petrol",
+        "amount":237299,
+        "downpayment":5279
+    },
+    {
+        "image":"./Assets/MarutiNewWagon.jpg",
+        "name":"2019 Maruti New Wagon-R",
+        "owner":"1st Owner",
+        "kms":11817,
+        "type":"Petrol",
+        "amount":468599,
+        "downpayment":10424
+    }
+]}

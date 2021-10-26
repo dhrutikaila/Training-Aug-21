@@ -1,0 +1,11 @@
+/* Practice 3 */
+.example{
+    padding: 30px;
+    color: black;
+    background-color: yellow;
+}
+@media only screen and (max-width:800px){
+    .example{
+        display:none;
+    }
+}

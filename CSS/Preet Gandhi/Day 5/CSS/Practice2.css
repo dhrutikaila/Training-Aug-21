@@ -1,0 +1,41 @@
+/* Practice 2 */
+/* Static Position */
+h1{
+    position: static;
+  left: 30px;
+  border: 3px solid #73AD21;
+}
+
+/* Relative Position */
+h2{
+    position: relative;
+    position: relative;
+    left: 30px;
+    border: 3px solid #73AD21;
+} 
+
+/* Fixed Position */
+h3{
+  position: fixed;
+  bottom: 30px;
+  right: 30px;
+  width: 300px;
+  border: 3px solid #73AD21;
+}
+
+/* Absolute Position */
+p {
+    position: relative;
+    width: 400px;
+    height: 200px;
+    border: 3px solid #73AD21;
+  }
+  
+  p {
+    position: absolute;
+    top: 150px;
+    right: 50px;
+    width: 200px;
+    height: 100px;
+    border: 3px solid #73AD21;
+  }

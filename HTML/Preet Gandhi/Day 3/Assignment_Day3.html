@@ -1,0 +1,43 @@
+<!--1)Design a form for storing employee details. (Employee name, age, Gender, designation, salary, location, Email ID, Date of Joining and contact number)
+Validation required
+1)Age should be a number
+2)Each field should contain value
+3)Email ID should be in proper format
+4)Date of joining should be in date format
+5)Location should be in the drop down list
+6)Use radio buttons for Gender -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Assignment_Day3</title>
+</head>
+<body>
+    <div>
+        <form>
+            <h3>Employee Details</h3>
+            <label>Name: </label><input type="text" name="name" required><br><br>
+            <label>Age: </label><input type="number" name="age" required><br><br>
+            <label>Gender: </label><input type="radio" name="gender" value="male" required>Male 
+                                <input type="radio" name="gender" value="female" required>Female
+                                <input type="radio" name="gender" value="other" required>Other <br><br>
+            <label>Designation: </label><input type="text" name="designation" required><br><br>
+            <label>Salary: </label><input type="number" name="salry" required><br><br>
+            <label>Location: </label><select name="location">
+                                    <option value="ahmedabad">Ahmedabad</option>
+                                    <option value="vadodara">Vadodara</option>
+                                    <option value="rajkot">Rajkot</option>
+                                    <option value="surat">Surat</option>
+                                    </select><br><br>
+            <label>Email: </label><input type="email" name="email" required><br><br>
+            <label>Date of Joining: </label><input type="date" name="joiningdate" required><br><br>
+            <label>Contact No: </label><input type="tel" name="contactno" required><br><br>
+            <input type="submit" value="Submit">
+            <input type="reset" value="Reset">
+        </form>
+    </div>
+</body>
+</html>

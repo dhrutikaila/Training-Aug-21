@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Practice_Exercise2 (Day 24)</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous" />
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+        crossorigin="anonymous"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <link rel="stylesheet" href="../../../style.css">
+    <script src="https://kit.fontawesome.com/e153b670c8.js" crossorigin="anonymous"></script>
+</head>
+<style>
+    .descendants * {
+        display: block;
+        border: 2px solid lightgrey;
+        color: lightgrey;
+        padding: 5px;
+        margin: 15px;
+    }
+</style>
+
+<body>
+    <div class="container-div">
+        <nav class="navbar">
+            <ul>
+                <li class="navbar-logo"><a href="../../../index.html"><img src="../../../Assets/Radix.jpg"></a></li>
+                <li class="navbar-links"><a href="../../../index.html">Home</a></li>
+                <li class="navbar-links"><a href="../../../HTML/html.html">Html</a></li>
+                <li class="navbar-links"><a href="../../../CSS/css.html">Css</a></li>
+                <li class="navbar-links"><a href="../../../Bootstrap/bootstrap.html">Bootstrap</a></li>
+                <li class="navbar-links"><a href="../../../Javascript/javascript.html">Javascript</a></li>
+                <li class="navbar-links"><a href="../../jquery.html">JQuery</a></li>
+                <li class="navbar-links"><a href="../../../Project/project.html">Project</a></li>
+            </ul>
+        </nav>
+        <div class="sidebar">
+            <ol>
+                <li><i class="fas fa-folder-open">&nbsp;&nbsp;&nbsp;Day 22_23</i>
+                    <ul class="folder">
+                        <li><i class="fas fa-folder-open">&nbsp;&nbsp;Practice Exercise</i>
+                            <ol class="subfolder" type="a">
+                                <li><a href="../../Day 22_23/Practice_Exerecise/Practice_Exercise1.html">Practice
+                                        Exercise1</a></li>
+                                <li><a href="../../Day 22_23/Practice_Exerecise/Practice_Exercise2.html">Practice
+                                        Exercse2</a>
+                                </li>
+                                <li><a href="../../Day 22_23/Practice_Exerecise/Practice_Exercise3.html">Practice
+                                        Exercse3</a>
+                                </li>
+                            </ol>
+                        </li>
+                        <li><i class="fas fa-folder-open">&nbsp;&nbsp;Assignment</i>
+                            <ol class="subfolder" type="a">
+                                <li><a href="../../Day 22_23/Assignment/Assignment1_Day22_23.html">Assignment1</a></li>
+                            </ol>
+                        </li>
+                    </ul>
+                </li><br>
+                <li><i class="fas fa-folder-open">&nbsp;&nbsp;&nbsp;Day24</i>
+                    <ul class="folder">
+                        <li><i class="fas fa-folder-open">&nbsp;&nbsp;Practice Exercise</i>
+                            <ol class="subfolder" type="a">
+                                <li><a href="Practice_Exercise1.html">Practice
+                                        Exercise1</a>
+                                </li>
+                                <li><a href="Practice_Exercise2.html">Practice
+                                        Exercse2</a>
+                                </li>
+                                <li><a href="Practice_Exercise3.html">Practice
+                                        Exercise3</a>
+                                </li>
+                            </ol>
+                        </li>
+                        <li><i class="fas fa-folder-open">&nbsp;&nbsp;Assignment</i>
+                            <ol class="subfolder" type="a">
+                                <li><a href="../Assignment/Assignment_Day24.html">Assignment1</a></li>
+                            </ol>
+                        </li>
+                    </ul>
+                </li><br>
+            </ol>
+        </div>
+        <main>
+            <div class="container">
+                <div class="row mt-4">
+                    <div class="col-auto mx-auto">
+                        <h2 class="text-center">Descendants</h2>
+                        <div class="descendants">
+                            <div class="descendants div1" style="width:500px;">div (current element)
+                                <p class="first">p (child)
+                                    <span>span (grandchild)</span>
+                                </p>
+                            </div>
+                            <hr><br>
+                            <div class="decendants div2">
+                                <p>p (child)
+                                    <span>span (grandchild)</span>
+                                </p>
+                                <p>p (child)
+                                    <span>span (grandchild)</span>
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </main>
+    </div>
+
+    <script>
+        // childeren
+        $(document).ready(function () {
+            $(".div1").children("p.first").css({ "color": "red", "border": "2px solid red" });
+        });
+
+        // find
+        $(document).ready(function () {
+            $(".div2").find("*").css({ "color": "red", "border": "2px solid red" });
+        });
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,40 @@
+.container{
+    display: grid;
+    height: 100vh;
+    /* grid-template-columns: 1fr 1fr;
+    grid-template-rows: 0.8fr 0.8fr 0.8fr 0.8fr; */
+    grid-template-areas: "imageone imageone imageone"
+                         "imagetwo imagefour imagefour"
+                         "imagetwo imagefour imagefour"
+                         "imagetwo imagethree imagethree";
+    grid-gap: 0.7rem;    
+}
+
+.image1{
+    grid-area: imageone;
+    background: red;
+}
+
+.image2{
+    grid-area: imagetwo;
+    background-color:  goldenrod;
+}
+
+.image3{
+    grid-area: imagethree;
+    background-color: maroon;
+}
+
+.image4{
+    grid-area: imagefour;
+    background-color: violet;
+}
+
+@media only screen and (max-width:700px){
+    .container{
+        grid-template-areas: "imageone"
+                             "imagetwo"
+                             "imagethree"
+                             "imagefour";
+    }
+}

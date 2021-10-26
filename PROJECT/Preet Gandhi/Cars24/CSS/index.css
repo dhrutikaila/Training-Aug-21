@@ -1,0 +1,238 @@
+body{
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+li{
+    list-style: none;
+}
+/* navbar */
+.cars24-logo {
+    height: 40px;
+    width: 80px;
+}
+.toggle-button{
+    color:blue;
+    font-size: 30px;
+    float: right;
+    margin-right: 40px;
+    cursor: pointer;
+    display: none;
+}
+
+
+
+/* .container {
+    padding: 0 !important;
+    margin-left: auto !important;
+    margin-right: auto !important;
+}
+
+.row,
+.col {
+    margin-left: 0 !important;
+    margin-right: 0 !important;
+} */
+
+/* modal */
+.outlineInput:focus{
+    outline: 2px solid #ffc107;
+}
+.modal-img{
+    height: 60px;
+    width: 60px;
+}
+.otherCities{
+    width: 1200px;
+    height: 120px;
+    overflow-x: scroll;
+    overflow-y: scroll;
+}
+/* div1 */
+.carBrandList{
+    list-style: none;
+}
+.carBrandLogo{
+    height: 40px;
+    width: 80px;
+}
+.homePage-img{
+    width: 670px;
+    height: 450px;
+}
+
+
+/* div4 */
+.experts-img{
+    height: 200px;
+    width: 200px;
+}
+
+/* div5 */
+.location-card{
+    height: 150px;
+    width: 250px;
+}
+.location-card:hover{
+    background: #e2e4e7;
+    transition: .5s;
+}
+
+.slick-prev, .slick-next{
+    background: none;
+    border: none;
+}
+
+/* .nearestBranch-img{
+    margin-left: 930px;
+    margin-top: 10%;
+    width: 60%;
+    height: 50%;
+    transform: translate(-50%,-50%);
+    display: block;
+} */
+
+/* div6 */
+.seller-card{
+    height: 200px;
+    width: 450px;
+}
+
+.seller-symbol{
+    border: 1px solid black;
+    border-radius: 100%;
+}
+
+/* div7 */
+.news-card{
+    height: 175px;
+    width: 400px;
+    color: gray;
+    border: none;
+}
+.news-card:hover{
+    color: black;
+    box-shadow: 0px 4px 8px 0px lightgray;
+    transition: .5s;
+}
+
+/* div8 */
+.sell-car-col{
+    margin-left: 80px;
+    margin-top: 80px;
+}
+.home-img3{
+    height: 100%;
+    width: 80%;
+    margin-left: 145px;
+}
+.position-fixed{
+    bottom: 100px;
+    right: 40px;
+}
+
+
+@media (max-width: 992px){
+    .navbar-nav{
+        font-size: small;
+    }
+    /* div1 */
+    .homePage-img{
+        display: none;
+    }
+    /* div4 */
+    .expert-2, .expert-4{
+        padding-top: 40px;
+    }
+    /* div5 */
+    .input-group{
+        display: none;
+    }
+    .sellCar-btn{
+        font-size: small;
+    }
+    .seller-card{
+    height: 220px;
+    width: 450px;
+    font-size: smaller; 
+    }
+    /* div8 */
+    .home-img3{
+    display: none;
+    }
+    .div8-btn{
+        margin-bottom: 60px;
+    }
+    
+}
+
+@media (max-width:600px){
+    /* navbar */
+    .navbar-nav{
+        font-size: smaller;
+    }
+    .toggle-button{
+        display: flex;
+    }
+    .navbar-links{
+        /* display: none; */
+        width: 100%;
+    }
+    .navbar2{
+        flex-direction: column;
+        align-items: flex-start;
+    }
+    .navbar-links ul{
+        margin-top: 6px;
+        display: dlex;
+        width: 100%;
+        
+    }
+    .navbar-links li{
+        text-align: center;
+    }
+    .navbar-links li a{
+        padding: .5rem 1rem;
+    }
+    .navbar-links:active{
+        display: block;
+    }
+
+    /* div1 */
+    .homePage-img{
+        display: none;
+    }
+
+    /* div5 */
+    .input-group{
+        display: none;
+    }
+
+    .sellCar-btn{
+        font-size: small;
+    }
+    .seller-card{
+    height: 220px;
+    width: 450px;
+    font-size: smaller; 
+}
+/* div8 */
+    .home-img3{
+    display: none;
+}
+    .div8-btn{
+        margin-bottom: 60px;
+    }
+
+    /* need help */
+    .position-fixed{
+        font-size: small;
+    }
+
+    /* footer */
+    .ftr-usefulLinks, .ftr-topBrands, .ftr-topCities{
+        margin-top: 30px;
+    }
+
+}
+
+
+

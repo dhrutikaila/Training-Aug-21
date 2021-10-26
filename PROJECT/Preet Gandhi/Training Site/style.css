@@ -1,0 +1,114 @@
+.container-div{
+    display: grid;
+    height: 100vh;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-rows: 0.2fr 1.5fr 1.2fr 0.4fr;
+    grid-template-areas: "nav nav nav nav"
+                         "sidebar main main main"
+                         "sidebar main main main"
+                         "sidebar main main main";
+    grid-gap: 0.2rem;
+    font-size: 20px;
+}
+
+nav{
+    background-color: lightseagreen;
+    grid-area: nav;
+}
+
+.navbar ul{
+    display: flex;
+    width: 97%;
+    align-items: center;
+    background-color: lightseagreen;
+}
+.navbar li{
+    list-style-type: none;
+    padding: 10px;
+}
+.navbar a{
+    text-decoration: none;
+    color: white;
+    font-size: 22px;
+}
+.navbar-logo{
+    flex: 1;
+}
+img{
+    height: 100px;
+    width: 100px;
+    margin-left: 10%;
+    margin-top: 3px;
+}
+.navbar-links{
+    margin: 10px;
+}
+.navbar-links:hover{
+    background-color: yellowgreen;
+    transition: .5s;
+    border-radius: 4px;
+}
+
+.main-img{
+    margin-left: 0px;
+    /* width: 1338px;
+    height: auto; */
+     width: 1338px;
+    height: 500px;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+} 
+
+/* ----------------------- */
+.sidebar{
+    grid-area: sidebar;
+    background-color: aquamarine;
+    overflow: auto;
+    /* text-align: center; */
+    /* padding-top: 50px; */
+}
+
+main{
+    grid-area: main;
+    background-color: whitesmoke;
+    overflow: auto;
+    /* text-align: center;
+    padding-top: 50px; */
+}
+
+.subfolder a{
+    text-decoration: none;
+    color: black;
+}
+
+
+/* @media (max-width:700px){
+    .navbar ul{
+        flex-wrap: wrap;
+    }
+    .navbar-links{
+        
+        width: 100%;
+        text-align:center;
+    }
+    img{
+        margin-left: 42%;
+        margin-right: auto;
+    }
+}
+
+@media (max-width:600px){
+    .navbar ul{
+        flex-wrap: wrap;
+    }
+    .navbar-links{
+        
+        width: 100%;
+        text-align:center;
+    }
+    img{
+        margin-left: 42%;
+        margin-right: auto;
+    }
+} */

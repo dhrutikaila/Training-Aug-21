@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cars 24 - Register</title>
+    <!-- bootstrap -->
+    <link rel="shortcut icon" href="Assets/favicon.ico" type="image/x-icon">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous" />
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+        crossorigin="anonymous"></script>
+    <!-- jQuery -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <!-- font awesome -->
+    <script src="https://kit.fontawesome.com/e153b670c8.js" crossorigin="anonymous"></script>
+    <!-- slick -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.css">
+    <!-- external css -->
+    <link rel="stylesheet" href="CSS/register.css">
+</head>
+
+<body>
+    <div class="container-fluid">
+        <div class="card registerCard rounded">
+            <div class="row">
+                <div class="col-xl-12 p-5">
+                    <div class="card-body ">
+                        <p class="text-center fs-5 fw-bolder text-secondary">Register today to transform the Used Car Industry!</p>
+                        <div class="input-group w-75 mt-5 registerCardContent d-flex">
+                            <input class="form-control" id="name" type="text" placeholder="Full Name">
+                            <input class="form-control ms-3" id="pincode" type="number" placeholder="Pincode">
+                            <!-- <a href="" class="input-group-text text-secondary text-decoration-none">Get OTP</a> -->
+                        </div>
+                        <div class="input-group w-75 mt-4 registerCardContent">
+                            <input class="form-control" id="mobile" type="number" placeholder="Mobile Number">
+                            <input class="form-control ms-3" id="email" type="email" placeholder="Email">
+                        </div>
+                        <button type="button" class="btn btn-warning w-75 mt-4 text-light fw-bolder registerButton"
+                            onclick="register()">Register Now</button><br>
+                        <p class="error-message d-none text-danger ms-5">Please enter all details correctly</p>
+                        <div class="text-center mt-3 registerCardContent">
+                            <a href="index.html" class="text-decoration-none text-secondary">Go Back</a>
+                        </div>
+                        <div>
+                            <p class="t_and_c text-secondary">We respect your privacy. Your information is confidential with us.</p>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+
+        </div>
+    </div>
+</body>
+<script src="JS/register.js"></script>
+<!-- slick -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.js"></script>
+</body>
+
+</html>

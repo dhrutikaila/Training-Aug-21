@@ -1,0 +1,62 @@
+<!-- Accept three numbers from the user using prompt, find the greater of these the numbers and do the sum of that numbers which are greater than 40. -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Practice_Exercise1 (Day-15)</title>
+</head>
+<style>
+    h2{
+        color: red;
+    }
+    #one,#two,#three{
+        color: lightcoral;
+    }
+    #greater,#addition{
+        color: green;
+    }
+</style>
+<body>
+    <h2>Practice Exercise1 (Day-15)</h2>
+    <p id="one"></p>
+    <p id="two"></p>
+    <p id="three"></p>
+    <p id="greater"></p>
+    <p id="addition"></p>
+
+    <script>
+        var num1 = parseInt(prompt("Enter number 1"));
+        document.getElementById("one").innerHTML = "First Number: " + num1;
+        var num2 = parseInt(prompt("Enter number 2"));
+        document.getElementById("two").innerHTML = "Second Number: " + num2;
+        var num3 = parseInt(prompt("Enter number 3"));
+        document.getElementById("three").innerHTML = "Third Number: " + num3;
+
+        var largestNumber = document.getElementById("greater")
+        if(num1>num2 && num1>num3){
+            largestNumber.innerHTML = "Largest Number: " + num1;
+        }
+        if(num2>num1 && num2>num3){
+            largestNumber.innerHTML = "Largest Number: " + num2;
+        }
+        if(num3>num1 && num3>num2){
+            largestNumber.innerHTML = "Largest Number: " + num3;
+        }
+
+        var sum=0;
+        if(num1 > 40){
+            sum += num1;
+        }
+        if(num2 > 40){
+            sum += num2;
+        }
+        if(num3 > 40){
+            sum += num3;
+        }
+
+        document.getElementById("addition").innerHTML = "Sum of numbers which is greater then '40':  " + sum;
+    </script>
+</body>
+</html>
