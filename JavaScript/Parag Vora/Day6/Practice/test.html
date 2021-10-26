@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <table border="2px">
+        <tr>
+            <th>Name</th>
+            <th>Price</th>
+        </tr>
+        <tr id="row1">
+            <form>
+                <td>P1</td>
+                <input type="hidden" id="productName" name="productName" value="P1">
+                <td>$5</td>
+                <input type="hidden" id="productPrice" name="productPrice" value="5">
+                <td><input type="button" onclick="makeOrder('row1')" value="Make Order"></td>
+            </form>
+        </tr>
+        <tr id="row2">
+            <form>
+                <td>P2</td>
+                <input type="hidden" id="productName" name="productName" value="P2">
+                <td>$6</td>
+                <input type="hidden" id="productPrice" name="productPrice" value="6">
+                <td><input type="button" onclick="makeOrder('row2')" value="Make Order"></td>
+            </form>
+        </tr>
+    </table>
+
+    <script>
+        function makeOrder(rowId) {
+            var n = document.getElementById(rowId).childNodes[5].value;
+            var p = document.getElementById(rowId).childNodes[9].value;
+            alert("n=" + n);
+            alert("p=" + p);
+            //var win=window.open("/user/makeOrder?productName=" + n + "&productPrice=" + p);
+        }
+        
+    </script>
+</body>
+
+</html>

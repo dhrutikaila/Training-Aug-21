@@ -1,0 +1,71 @@
+<!-- Make a function that takes in a single parameter and returns a new promise. using setTimeout, after 5000 milliseconds, the promise will either resolove or reject. if the input is a string, the promise resolves with that reverse string . if the input is anything but a string it rejects with that same input call the function wrong Input -->
+
+<!doctype html>
+<html lang="en">
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+
+    <title>Task 3</title>
+</head>
+
+<body>
+    <p id="test"></p>
+    <p id="rev"></p>
+    <script>
+        setTimeout(() => {
+        function Display(some) {
+            return new Promise((resolve, reject) => {
+                let successMessage = {
+                    status: 'success',
+                    message: 'all fine..'
+                };
+                let errorMessage = {
+                    status: 'error',
+                    message: 'oops..there was an error!'
+                };
+                if (typeof (some) == 'string') {
+                    var rev = reverseString(some);
+                    document.getElementById('rev').innerHTML ="reverse of string is :"+ rev;
+                    resolve(successMessage);
+                }
+                else
+                {
+                    wrongInput();
+                    reject(errorMessage);
+                }
+            })
+        }
+    
+        Display('parag').then(
+            (successMessage)=>
+            {
+                document.getElementById('test').innerHTML = successMessage.status;
+            },
+            (errorMessage) =>
+            {
+                document.getElementById('test').innerHTML = errorMessage.status;
+            }
+        )
+    }, 5000);
+        function reverseString(str) 
+        {
+            return str.split('').reverse().join('');
+        }
+        function wrongInput()
+        {
+            document.getElementById('rev').innerHTML = 'Oops there was an error..!'
+        }
+    </script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+        crossorigin="anonymous"></script>
+</body>
+
+</html>

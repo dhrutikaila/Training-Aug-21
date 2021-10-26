@@ -1,0 +1,54 @@
+<!-- Store following JSON data into localstorage,read that data and print it into console. -->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Task 1</title>
+    <script src="./task1.js"></script>
+</head>
+
+<body onload="getData()">
+    <table id="myTable">
+        <thead>
+            <tr>
+                <th>Name</th>
+                <th>Price</th>
+                <th>Location</th>
+            </tr>
+        </thead>
+    </table>
+    <script>
+        function getData() {
+            var localdata = localStorage.getItem("Product_data");
+            var jsondata = JSON.parse(localdata);
+            var table = document.getElementById('myTable');
+            jsondata.forEach((obj) => {
+                var row = getElement(obj);
+                table.appendChild(row);
+            });
+        }
+        function getElement(obj) {
+            var row = document.createElement("tr");
+            var td1 = document.createElement("td");
+            var td2 = document.createElement("td");
+            var td3 = document.createElement("td");
+            // console.log(obj[1].Name);
+            var td1text = document.createTextNode(obj.Name);
+            var td2text = document.createTextNode(obj.price);
+            var td3text = document.createTextNode(obj.Location);
+
+            td1.appendChild(td1text);
+            td2.appendChild(td2text);
+            td3.appendChild(td3text);
+            row.appendChild(td1);
+            row.appendChild(td2);
+            row.appendChild(td3);
+            return row;
+        }
+    </script>
+</body>
+
+</html>

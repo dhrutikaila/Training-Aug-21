@@ -1,0 +1,44 @@
+<!-- Write a JavaScript function to split a string and convert it into an array of words -->
+
+<!doctype html>
+<html lang="en">
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+
+    <title>Task 2</title>
+</head>
+
+<body>
+    <label for="Str1" class="ms-5">Enter the string</label>
+    <input type="text" name="str1" id="str1" class="form-control w-50 ms-5">
+    <label for="char1" class="ms-5">Enter the character to split string</label>
+    <input type="text" name="char1" id="char1" class="form-control w-50 ms-5">
+    <input type="button" value="Split string" class="btn btn-success ms-5   w-25" onclick="splitString((document.getElementById('str1').value),(document.getElementById('char1').value))">
+    <label for="ans" class="m-5"></label>
+    <p id="ans" class="ms-5 mt-2" name="ans">Result is shown here:<br></p>
+    <script>    
+        function splitString(str,char) 
+        {
+            
+            var myArray = str.split(char);
+           for(x in myArray)
+           {     
+               document.getElementById('ans').innerHTML += (myArray[x]+"<br>");
+           }
+        } 
+    </script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+        crossorigin="anonymous"></script>
+
+
+</body>
+
+</html>

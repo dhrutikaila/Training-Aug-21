@@ -1,0 +1,33 @@
+[
+    {
+        "Name" : "Cheese",
+        "price":2.50,
+        "Location":"Refrigerated foods"
+    },
+    {
+        "Name" : "Crisps",
+        "price":3,
+        "Location":"the Snack isle"
+    },
+    {
+        "Name" : "Pizza",
+        "price":4,
+        "Location":"Refrigerated foods"
+    },
+    {
+        "Name" : "Chocolate",
+        "price":1.50,
+        "Location":"the Snack isle"
+    },
+    {
+        "Name" : "Self-raising flour",
+        "price":1.50,
+        "Location":"Home baking"
+    },
+    {
+        "Name" : "Ground almonds",
+        "price":3,
+        "Location":"Home baking"
+    }
+    
+]
