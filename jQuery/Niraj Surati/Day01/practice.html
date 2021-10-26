@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="assets/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        #dataHide2{
+            border: 1px solid green;
+            margin-top: 20px;
+        }
+        .square{
+            border: 1px solid red;
+            height: 200px;
+            width: 200px;
+            background-color: lavender;
+            margin: 10px;
+        }
+    </style>
+    
+</head>
+<body>
+    <div>
+        <h1>Practice Selector</h1>
+        <h2></h2>
+        <div id="idDemo"></div>
+        <h4 id="dblClk">Double Click me</h4>
+        <div id="showHide"></div>
+        <div>
+            <button class="btn btn-primary" id="hideBtn">Hide</button>
+            <button class="btn btn-success" id="showBtn">Show</button>
+            <button class="btn btn-warning" id="toggleBtn">Toggle</button>
+            <button class="btn btn-primary" id="fadeInBtn">Fade In</button>
+            <button class="btn btn-success" id="fadeOutBtn">Fade Out</button>
+            <button class="btn btn-warning" id="fadeToggleBtn">Fade Toggle</button>
+            <button class="btn btn-danger" id="fadeToBtn">Fade To</button>
+            <p id="dataHide">Lorem ipsum dolor sit amet consectetur adipisicing elit. Soluta quas ea non doloribus nobis suscipit porro qui, repellat possimus consequuntur architecto blanditiis voluptate expedita ratione odio optio veritatis molestias nulla.</p>
+        </div>
+        <div>
+            <button class="btn btn-primary" id="slideDownBtn">Slide Down</button>
+            <button class="btn btn-success" id="slideUpBtn">Slide Up</button>
+            <button class="btn btn-warning" id="slideToggleBtn">Slide Toggle</button>
+            <p id="dataHide2">Lorem ipsum dolor sit amet consectetur adipisicing elit. Soluta quas ea non doloribus nobis suscipit porro qui, repellat possimus consequuntur architecto blanditiis voluptate expedita ratione odio optio veritatis molestias nulla.</p>
+        </div>
+        <hr>
+        <h5 id="h5">Animate</h5>
+        <div class="d-block"> 
+            <button class="btn btn-warning" id="sqreBtn">Animate</button>
+            <div class="square" id="square">
+                square 1
+            </div>
+        </div>
+        <div class="d-block my-5">
+            <button class="btn btn-success" id="squreBtn2">Animate 2</button>
+            <button class="btn btn-danger" id="stopBtn">Stop</button>
+            <div class="square" id="square2">
+                square 2
+            </div>
+        </div>
+        <div id="removeDemo">
+            <div class='h1Demo'>hi</div>
+        </div>
+        <div id="removeDemo2">
+            <div class='h1Demo2'>hi</div>
+        </div>
+    </div>
+    <script src="assets/js/bootstrap.bundle.min.js"></script>
+    <script src="assets/js/jquery-3.6.0.min.js"></script>
+    <script>
+
+        $(document).ready(function(){
+            $("div:first").addClass("container");
+            $("h2").addClass("text-success text-primary");
+            $("h2").text("Added through jQuery");
+            $("#idDemo").ready(function(){$("#idDemo").append("<button>Click Here to change value</button>").click(function(){
+                var demo = $("<h4/>").addClass("text-danger").text("Added Through button");
+                $("#idDemo").append(demo);
+                $("#idDemo").wrapInner("<button>Click Here to Hide</button>").click(function(){
+                    $("#idDemo").hide();
+                });                    
+            })
+            });
+
+            $("#dblClk").dblclick(function(){
+                $(this).text("Clicked Twice");
+            });
+            $("#hideBtn").click(function(){
+                $("#dataHide").hide(2000);
+            });
+            $("#showBtn").click(function(){
+                $("#dataHide").show(2000);
+            });
+            $("#toggleBtn").click(function(){
+                $("#dataHide").toggle(2000);
+            });
+            $("#fadeInBtn").click(function(){
+                $("#dataHide").fadeIn();
+            });
+            $("#fadeOutBtn").click(function(){
+                $("#dataHide").fadeOut();
+            });
+            $("#fadeToggleBtn").click(function(){
+                $("#dataHide").fadeToggle();
+            });
+            $("#fadeToBtn").click(function(){
+                $("#dataHide").fadeTo("slow",0.5);
+            });
+            $("#slideDownBtn").click(function(){
+                $("#dataHide2").slideDown();
+            });
+            $("#slideUpBtn").click(function(){
+                $("#dataHide2").slideUp();
+            }); 
+            $("#slideToggleBtn").click(function(){
+                $("#dataHide2").slideToggle("slow",);
+            });
+            $("#sqreBtn").click(function(){
+                $("#square").animate({height:'toggle'}, "slow");
+                $("#square").animate({height:'toggle'}, "slow");
+            });
+            $("#squreBtn2").click(function(){
+                $("#square2").animate({height:'toggle'}, 5000,function(){
+                    alert("animation stopped");
+                });
+            });
+            $("#stopBtn").click(function(){
+                $("#square2").stop();
+            });
+            var demoLink = $("<a />").attr({"href":"https://www.google.com", "target":"_blank"});
+            $("#h5").css("color","red").wrap(demoLink); 
+            $("div").remove(".h1Demo");
+            $("#removeDemo2").empty();
+        });
+    </script>
+</body>
+</html>

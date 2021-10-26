@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Assignment-4</title>
+    <link href="../assets/css/bootstrap.min.css" rel="stylesheet" />
+</head>
+<body>
+    <div class="container">
+        <hr>
+        <div class="h2 text-center my-3">Exam</div>
+        <div class="h4 text-end my-3" id="time">03:00:00</div>
+        <hr>
+        <form>
+            <div>
+                <ul>
+                    <div class="ulHead">JavaScript is a _____ language.</div>
+                    <li><input type="radio" name="radio1"> Object-Oriented</li>
+                    <li><input type="radio" name="radio1"> High-level</li>
+                    <li><input type="radio" name="radio1"> Assembly-language</li>
+                    <li><input type="radio" name="radio1"> Object-Based</li>
+                </ul>
+            </div>
+            <div>
+                <ul>
+                    <div class="ulHead">JavaScript is ideal to _____.</div>
+                    <li><input type="radio" name="radio2"> make computations in HTML simpler</li>
+                    <li><input type="radio" name="radio2"> minimize storage requirements on the web server</li>
+                    <li><input type="radio" name="radio2"> increase the download time for the client</li>
+                    <li><input type="radio" name="radio2"> increase the loading time of the website</li>
+                </ul>
+            </div>
+            <div>
+                <ul>
+                    <div class="ulHead">Which of the following is not considered as an error in JavaScript?</div>
+                    <li><input type="radio" name="radio3"> Syntax error</li>
+                    <li><input type="radio" name="radio3"> Missing of semicolons"</li>
+                    <li><input type="radio" name="radio3"> Division by zero</li>
+                    <li><input type="radio" name="radio3"> Missing of Bracket</li>
+                </ul>
+            </div>
+            <div>
+                <ul>
+                    <div class="ulHead">JavaScript can be written _____.</div>
+                    <li><input type="radio" name="radio4"> directly into JS file and included into HTML</li>
+                    <li><input type="radio" name="radio4"> directly on the server page</li>
+                    <li><input type="radio" name="radio4"> directly into HTML pages</li>
+                    <li><input type="radio" name="radio4"> directly into the css file</li>
+                </ul>
+            </div>
+            <div>
+                <ul>
+                    <div class="ulHead">The expression of calling (or executing) a function or method in JavaScript is called _____.</div>
+                    <li><input type="radio" name="radio5"> Primary expression</li>
+                    <li><input type="radio" name="radio5"> Functional expression</li>
+                    <li><input type="radio" name="radio5"> Invocation expression</li>
+                    <li><input type="radio" name="radio5"> Property Access Expression</li>
+                </ul>
+            </div>
+            <button class="btn btn-success"> Submit </button>
+        </form>
+    </div>
+    <script src="../assets/js/bootstrap.min.js"></script>
+    <script>
+        let liObj = document.getElementsByTagName("ul");
+        for(row of liObj){
+        row.style.listStyleType = "none";
+        }
+        let ulHeadObj = document.getElementsByClassName("ulHead");
+        for(row of ulHeadObj){
+            row.classList.add("fw-bold");
+            }
+
+        function startTimer(duration, display) {
+            var timer = duration, hours, minutes, seconds;
+            setInterval(function () {
+                hours = parseInt((timer / 60)/60, 10);
+                minutes = parseInt((timer / 60) % 60, 10);
+                seconds = parseInt(timer % 60, 10);
+                
+                hours = hours < 10 ? "0" + hours : hours;
+                minutes = minutes < 10 ? "0" + minutes : minutes;
+                seconds = seconds < 10 ? "0" + seconds : seconds;
+        
+                display.textContent = hours + ":" +minutes + ":" + seconds;
+        
+                if (--timer < 0) {
+                    
+                    window.open("demo.html","_self");
+                }
+            }, 1000);
+        }
+        window.onload = function () {
+            var timer = 60 * 60 * 3  ,
+                display = document.querySelector('#time');
+            startTimer(timer, display);
+            
+        };
+    </script>
+</body>
+</html>

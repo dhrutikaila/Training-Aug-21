@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Practical-1</title>
+    <link href="../assets/css/bootstrap.min.css" rel="stylesheet">
+</head>
+<body>
+    <div class="container">
+        <div class="h3 my-4 text-center" >Practical-1</div>
+        <hr>
+        
+    </div>
+    <script src="../assets/js/bootstrap.bundle.min.js"></script>
+    <script src="../assets/js/jquery-3.6.0.min.js"></script>
+    <script>
+        //Create one paragraph, add some dummy text and apply blue background color using jquery
+        $(document).ready(function(){
+            var pText = "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Totam, maxime neque. Dolores minima quia possimus mollitia quibusdam, quos exercitationem, ipsum nulla debitis ducimus sunt repudiandae ipsa voluptate atque voluptatum earum soluta, similique officiis reprehenderit! Soluta ipsam voluptatum aspernatur ad quam."
+
+            var pTag = $("<p />").text(pText).addClass("text-light bg-info p-3").css("border","1px solid black");
+            $(".container").append(pTag);
+        })
+    </script>
+</body>
+</html>

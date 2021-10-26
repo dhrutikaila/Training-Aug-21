@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Javascript</title>
+</head>
+<body>
+    <button class="btn" onclick="hideH1()"> 
+        Hide
+    </button>
+    <button class="btn" onclick="showH1()"> 
+        Show
+    </button>
+    <h1 id="first"></h1>
+    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Optio repudiandae inventore cupiditate illum facere ullam beatae sint ut dolorem quibusdam?</p>
+    <div id="var1">10</div>
+    <div id="var2"></div>
+    <div id="var3"></div>
+    <br>
+    <!-- let example -->
+    <h4>Let Example</h4>
+    <div id="letDemo"></div>
+    <div id="letDemo2"></div>
+    <!-- const example -->
+    <h4>Const Example</h4>
+    <div id="constDemo"></div>
+    <!-- function example -->
+    <h4>Const Example</h4>
+    <div onmouseover="add(30,39)">Hover here</div>
+    <div id="resultFunction"></div>
+    <!-- Condition  -->
+    <h4>If-else Example</h4>
+    <div id="ifResult"></div>
+    <!-- switch case  -->
+    <h4>Switch</h4>
+    <div>Today is </div>
+    <div id="scResult"></div>
+    <!-- for -->
+    <h4>for</h4>
+    <div id="forResult"></div>
+    <script>
+        document.getElementById('first').innerHTML = "Hello World";
+        document.getElementById('first').style.fontSize = "100px";
+        var var1 = document.getElementById('var1').innerHTML;
+        document.getElementById('var2').innerHTML= var1;
+        hideH1 = () => (document.getElementById('first').style.display="none");
+        showH1 = () => (document.getElementById('first').style.display="block");
+        document.getElementsByTagName('p')[0].style.border="1px solid black";
+        console.log(document.getElementById('first').innerHTML);
+        console.log(document.getElementsByClassName('btn'));
+        console.log(document.querySelector('#first').innerHTML);
+        console.log(document.querySelectorAll('button'));
+
+        /* Variables */
+        var x = 5, y = 6;
+        var z = x + y;
+        console.log(z);
+        var result = document.createElement('div');
+        var resultText= document.createTextNode('This is the example of variable '+z);
+        result.appendChild(resultText);
+        document.querySelector('#var3').appendChild(result);
+
+        var pi = 3.14;
+        var person = 'niraj surati';
+        alert('pi: '+pi  +'\nperson: '+person);
+        
+        /* let */
+        let n = 50;
+        document.getElementById('letDemo').innerHTML=n;
+        {
+            let n = 40;
+            document.getElementById('letDemo2').innerHTML="same variable: "+n;
+        }
+
+        /* const */
+        const m = 100;
+        document.getElementById('constDemo').innerHTML="Const Variable:"+m;
+
+        /*data type*/
+
+        let length = 20;
+        let lastName = 'surati';
+        let obj = {
+            firstname:"niraj",
+            lastName:"surati"
+        };
+
+        let arrExample = ['first','last'];
+        
+        /* function */
+        function add(x,y){
+            document.getElementById('resultFunction').innerHTML = parseInt(x)+parseInt(y);
+        }
+        
+        /* condition */
+        if(x>y){
+            alert(x+' is greater')
+        }else{
+            alert(y+' is greater')
+        }
+
+        let n1 = 10;
+        let n2 = 20; 
+        if(n1>n2){
+            document.getElementById('ifResult').innerHTML = n1+" is greater."
+        }else if(n1 == n2){
+            document.getElementById('ifResult').innerHTML = n2+n1+" are equal."
+        }else {
+            document.getElementById('ifResult').innerHTML = n2+" are equal"
+            }
+        switch (new Date().getDay()) {
+            case 0:
+                document.getElementById('scResult').innerHTML=  "Sunday";
+                break;
+            case 1:
+                document.getElementById('scResult').innerHTML=  "Monday";
+                break;
+            case 2:
+                document.getElementById('scResult').innerHTML=  "Tuesday";
+                break;
+            case 3:
+                document.getElementById('scResult').innerHTML=  "Wednesday";
+                break;
+            case 4:
+                document.getElementById('scResult').innerHTML= "Thursday";
+                break;
+            case 5:
+                document.getElementById('scResult').innerHTML= "Friday";
+                break;
+            case 6:
+                document.getElementById('scResult').innerHTML= "Saturday";
+            default:
+                document.getElementById('scResult').innerHTML= "unknown";
+            }
+            /* for loop */
+            let arrayObj = ["bmw", "toyota", "ford"];
+            let text = ""
+            for(let i=0; i < arrayObj.length; i++){
+                text = text + arrayObj[i] + '<br>';
+            }
+            document.getElementById('forResult').innerHTML = text;
+            
+    </script>
+</body>
+</html>

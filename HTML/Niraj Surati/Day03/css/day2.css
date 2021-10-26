@@ -1,0 +1,97 @@
+body{
+    background-image:url("../assets/2.png");
+    background-size: 100% 100%;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    padding: 0px;
+    margin: 0px;
+    overflow: hidden;
+}
+.navbar{  
+    text-align: right;
+    text-justify: auto;
+}
+.navbar li{
+    text-decoration: none;
+    display: inline;
+    padding: 5px;
+    margin: 5px;
+    color: rgb(210, 105, 30);
+    font-weight: bolder;
+}
+header{
+    display: block;
+    width: 100%;
+    height: 60px;
+    border-style: groove;
+    overflow: hidden;
+    background-color: rgb(230, 230, 250, .9);
+}
+.sidebar-main{
+    display: flex;
+    height: 500px;
+    width: 10%;
+    background-color: rgb(220, 245, 179, .9);
+    float: left;
+    box-shadow: inset 0 0 5px black;
+}
+.content-side{
+    text-align: center;
+    width: 100%;
+    margin-top: 10px;
+}
+.content-side div{
+    list-style-type: none;
+    color:rgb(189, 45, 8);
+    display: block;
+    font-weight: bolder;
+    block-size:  40px;
+    width: 100%;
+    background-color: rgb(199, 199, 250, .9);
+    border:1px solid black;
+    padding-top: 15px;
+}
+.content-main{
+    display: flex;
+    /* flex-direction: row;
+    flex-flow: row wrao; */
+    /* flex-wrap: row wrap; */
+    flex-flow: row wrap;
+    height: 500px;
+    width: 90%;
+    float: right;
+    overflow:auto;
+    color: rgb(245, 230, 230);
+    font-weight: bolder;
+    background-color: rgb(80, 79, 79, .9);
+}
+.content-left{
+    float: left;
+    height: 474px;
+    width: 48%;
+    padding: 10px;
+    border-style: solid;
+    box-shadow: inset 0     0 5px red;
+}
+.content-right{
+    float: right;
+    height: 474px;
+    width: 48%;
+    padding: 10px;   
+    border-style: solid;
+    border-left: 0;
+    box-shadow: inset 0 0 5px red;
+
+}
+.footer-main{
+    display: flex;
+    align-items: center;
+    height: 60px;
+    width: 100%;
+    background-color: rgba(170, 128, 128, 0.9);
+    font-size: 15px;
+    font-weight: bold;
+    color:rgb(238, 224, 224);
+    text-align: center;
+    padding-left: 150px ;
+}
+

@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flexbox</title>
+    <link href="../assets/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        .r-hl{
+            background-color: rgb(236, 236, 253);
+            border: 1px solid rgb(250, 51, 77);
+            height: 224px;
+        }
+        .i-hl{
+            border: 1px solid rgb(0, 0, 0);
+        }
+    </style>
+</head>
+<body>
+    <!-- navbar-start -->
+    <div class="container">
+        <div class="display-5 text-center">Flexbox</div>
+        <div class="container my-3">
+            <nav class="navbar nav navbar-expand-sm nav-pills nav-fill nav-justified "> 
+                <div class="nav-item dropdown mx-3">
+                    <button class="btn btn-primary  dropdown-toggle  w-100" id="nav-utilities-nav" data-bs-toggle="dropdown" data-bs-target="#nav-utilities">
+                        2: Utilities
+                    </button>
+                    <div class="dropdown-menu overflow-auto w-100" id="nav-utilities" >
+                        <a href="../2-utilities/2_2_basic_typography.html" class="dropdown-item">2.2 Basic Typography</a>
+                        <a href="../2-utilities/2_3_text_alignment.html" class="dropdown-item">2.3 Text Alignment </a>
+                        <a href="../2-utilities/2_4_floats_positions.html" class="dropdown-item">2.4 Floats & Position</a>
+                        <a href="../2-utilities/2_5_color.html"  class="dropdown-item">2.5 Colors & Background</a>
+                        <a href="../2-utilities/2_6_spacing.html"  class="dropdown-item">2.6 Spacing</a>
+                        <a href="../2-utilities/2_7_sizing.html"  class="dropdown-item">2.7 Sizing</a>
+                        <a href="../2-utilities/2_8_breakpoints.html"  class="dropdown-item">2.8 Breakpoints</a>
+                    </div>
+                </div> 
+                <div class="nav-item dropdown mx-3">
+                    <button class="btn btn-success dropdown-toggle w-100" id="nav-comp-nav" data-bs-toggle="dropdown">
+                        3: CSS Components
+                    </button>
+                    <div class="dropdown-menu  overflow-auto w-100">
+                        <a href="../3-componants/3_2_buttons.html" class="dropdown-item">3.2 Buttons</a>
+                        <a href="../3-componants/3_3_navbar.html" class="dropdown-item">3.3 Navbar</a>
+                        <a href="../3-componants/3_4_list-group.html" class="dropdown-item">3.4 List-group</a>
+                        <a href="../3-componants/3_5_Forms.html" class="dropdown-item">3.5 Forms</a>
+                        <a href="../3-componants/3_6_input_addons.html" class="dropdown-item">3.6 Input Addons</a>
+                        <a href="../3-componants/3_7_Alerts_progress_bar.html" class="dropdown-item">3.7 Alerts & Progressbar</a>
+                        <a href="../3-componants/3_8_tables_pagination.html" class="dropdown-item">3.8 Tables & Pagination</a>
+                        <a href="../3-componants/3_9_cards.html" class="dropdown-item">3.9 Cards</a>
+                    </div>
+                </div>    
+                <div class="nav-item dropdown mx-3">    
+                    <button class="btn btn-warning dropdown-toggle w-100" id="nav-grid-nav" data-bs-toggle="dropdown">
+                        4: Grid & Flexbox
+                    </button>
+                    <div class="dropdown-menu overflow-auto w-100">
+                        <a href="../4-Grid&Flexbox/4_2_grid_system.html" class="dropdown-item">4.2 Grid System</a>
+                        <a href="../4-Grid&Flexbox/4_3_grid_alignment.html" class="dropdown-item">4.2 Grid Alignment</a>
+                        <a href="../4-Grid&Flexbox/4_5_flexbox.html" class="dropdown-item">4.2 Flexbox</a>
+                        <a href="../4-Grid&Flexbox/4_6_automargin.html" class="dropdown-item">4.2 Auto Margin</a>
+                    </div>
+                </div>
+                <div class="nav-item dropdown mx-3">
+                    <button class="btn btn-danger dropdown-toggle w-100" id="nav-js-nav" data-bs-toggle="dropdown">
+                        5: javascript Widgets
+                    </button>
+                    <div class="dropdown-menu overflow-auto w-100">
+                        <a href="../5-javascript_widgets/5_2_carousel.html" class="dropdown-item">5.2 Carousel </a>
+                        <a href="../5-javascript_widgets/5_3_collapse.html" class="dropdown-item">5.3 Collapse </a>
+                        <a href="../5-javascript_widgets/5_4_tooltips.html" class="dropdown-item">5.4 Tooltips</a>
+                        <a href="../5-javascript_widgets/5_5_popovers.html" class="dropdown-item">5.5 Popovers</a>
+                        <a href="../5-javascript_widgets/5_6_modals.html" class="dropdown-item">5.6 Modals</a>
+                    </div>  
+                </div> 
+            </nav>
+        </div>
+        <hr class="text-secondary">
+    </div>
+    <!-- navbar-end -->
+    <div class="container">
+        <!-- Flex-Row -->
+        <div class="h3 text-center my-3">Flex Row</div>
+        <div class="d-flex flex-sm-row my-3 r-hl">
+            <div class="p-4 i-hl">Item-1</div>
+            <div class="p-4 i-hl">Item-2</div>
+            <div class="p-4 i-hl">Item-3</div>
+        </div>
+        <div class="d-flex flex-sm-row-reverse my-3 r-hl">
+            <div class="p-4 i-hl">Item-1</div>
+            <div class="p-4 i-hl">Item-2</div>
+            <div class="p-4 i-hl">Item-3</div>
+        </div>
+        <div class="d-flex flex-sm-row justify-content-sm-start my-3 r-hl">
+            <div class="p-4 i-hl">Item-1</div>
+            <div class="p-4 i-hl">Item-2</div>
+            <div class="p-4 i-hl">Item-3</div>
+        </div>
+        <div class="d-flex flex-sm-row justify-content-sm-center my-3 r-hl">
+            <div class="p-4 i-hl">Item-1</div>
+            <div class="p-4 i-hl">Item-2</div>
+            <div class="p-4 i-hl">Item-3</div>
+        </div>
+        <div class="d-flex flex-sm-row justify-content-sm-end my-3 r-hl">
+            <div class="p-4 i-hl">Item-1</div>
+            <div class="p-4 i-hl">Item-2</div>
+            <div class="p-4 i-hl">Item-3</div>
+        </div>
+        <div class="d-flex flex-sm-row justify-content-sm-around my-3 r-hl">
+            <div class="p-4 i-hl">Item-1</div>
+            <div class="p-4 i-hl">Item-2</div>
+            <div class="p-4 i-hl">Item-3</div>
+        </div>
+        <div class="d-flex flex-sm-row justify-content-sm-between my-3 r-hl">
+            <div class="p-4 i-hl">Item-1</div>
+            <div class="p-4 i-hl">Item-2</div>
+            <div class="p-4 i-hl">Item-3</div>
+        </div>
+        <div class="d-flex flex-sm-row justify-content-sm-evenly my-3 r-hl">
+            <div class="p-4 i-hl">Item-1</div>
+            <div class="p-4 i-hl">Item-2</div>
+            <div class="p-4 i-hl">Item-3</div>
+        </div>
+        <hr>
+        <!-- Columns -->
+        <div class="h3 text-center my-3">Flex Columns</div>
+        <div class="d-flex flex-sm-column my-3 r-hl">
+            <div class="p-3 i-hl">Item-1</div>
+            <div class="p-3 i-hl">Item-2</div>
+            <div class="p-3 i-hl">Item-3</div>
+        </div>
+        <div class="d-flex flex-sm-column-reverse my-3 r-hl">
+            <div class="p-3 i-hl">Item-1</div>
+            <div class="p-3 i-hl">Item-2</div>
+            <div class="p-3 i-hl">Item-3</div>
+        </div>
+        <hr>
+        <!-- Alignments -->
+        <div class="h3 text-center my-3">Alignments</div>
+        <div class="d-flex flex-sm-row align-items-sm-start my-3 r-hl">
+            <div class="p-4 i-hl">Item-1</div>
+            <div class="p-4 i-hl">Item-2</div>
+            <div class="p-4 i-hl">Item-3</div>
+        </div>
+        <div class="d-flex flex-sm-row align-items-sm-center my-3 r-hl">
+            <div class="p-4 i-hl">Item-1</div>
+            <div class="p-4 i-hl">Item-2</div>
+            <div class="p-4 i-hl">Item-3</div>
+        </div>
+        <div class="d-flex flex-sm-row align-items-sm-end my-3 r-hl">
+            <div class="p-4 i-hl">Item-1</div>
+            <div class="p-4 i-hl">Item-2</div>
+            <div class="p-4 i-hl">Item-3</div>
+        </div>
+        <div class="d-flex flex-sm-row align-items-sm-baseline my-3 r-hl">
+            <div class="p-4 i-hl">Item-1</div>
+            <div class="p-4 i-hl">Item-2</div>
+            <div class="p-4 i-hl">Item-3</div>
+        </div>
+        <div class="d-flex flex-sm-row align-items-sm-stretch my-3 r-hl">
+            <div class="p-4 i-hl">Item-1</div>
+            <div class="p-4 i-hl">Item-2</div>
+            <div class="p-4 i-hl">Item-3</div>
+        </div>
+        <div class="d-flex flex-sm-row my-3 r-hl">
+            <div class="p-4 i-hl align-self-sm-start">Item-1</div>
+            <div class="p-4 i-hl align-self-sm-end">Item-2</div>
+            <div class="p-4 i-hl align-self-sm-center">Item-3</div>
+            <div class="p-4 i-hl align-self-sm-baseline">Item-4</div>
+            <div class="p-4 i-hl align-self-sm-stretch">Item-5</div>
+        </div>
+    </div>
+    <script src="../assets/js/bootstrap.bundle.min.js" type="text/javascript"></script>
+</body>
+</html>

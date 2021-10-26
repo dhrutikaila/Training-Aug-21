@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+    <style>
+        body{
+            background-color: lavender;
+            font-family: Georgia, 'Times New Roman', Times, serif;
+            display: flex;
+            flex-direction: column;
+        }
+        table{
+            height: 600px;
+            width: 40%;  
+            border-color: black;    
+            border-style:solid;
+            border-width:1px 1px;   
+            border-collapse:collapse;
+        }
+        thead{
+            height: 100px;
+            font-size: 30px;
+            background-color: yellowgreen;
+            color: red;          
+        }
+        tbody{
+            height: 430px;
+            font-size: 15px; 
+            background-color: rgb(235, 247, 185);
+            border-style: none;    
+        }
+        
+        tfoot{
+            height: 70px;
+            font-size: 30px;
+            background-color:thistle;   
+        }
+        input[type="text"],input[type="number"],input[type="email"],input[type="date"],select{
+            height: 20px;
+            width: 400px;
+        }
+        #submit{
+            height: 30px;
+            width: 100px;
+        }
+    </style>
+</head>
+<body>
+    <table align="center">
+        <form method="post" action="">
+            <thead>
+                <tr>
+                    <th colspan="2">Employee Details</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Name:</td>
+                    <td><input type="text" id="name" name="name" placeholder="Enter Name" required /></td>
+                </tr>
+                <tr>
+                    <td>Age:</td>
+                    <td><input type="number" id="age" name="age" placeholder="Enter age" min="18" required /></td>
+                </tr>
+                <tr>
+                    <td>Gender:</td>
+                    <td>
+                        <input type="radio" id="gender" name="gender" value="male" required />Male
+                        <input type="radio" id="gender" name="gender" value="female" required />Female       
+                    </td>
+                </tr>
+                <tr>
+                    <td>Designation:</td>
+                    <td><input type="text" id="designation" name="designation" placeholder="Enter Designation" required /></td>
+                </tr>
+                <tr>
+                    <td>Salary:</td>
+                    <td><input type="number" id="salary" name="salary" placeholder="Enter Salary" min="0" required /></td>
+                </tr>
+                <tr>
+                    <td>Location:</td>
+                    <td>
+                       <select id="location" name="location" required> 
+                            <option value="ahmedabad" selected>Ahmedabad</option>
+                            <option value="surat">Surat</option>
+                            <option value="vadodara">Vadodara</option>
+                       </select>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Email:</td>
+                    <td><input type="email" id="email" name="email" placeholder="Enter Email" required /></td>
+                </tr>
+                <tr>
+                    <td>Date of Joining:</td>
+                    <td><input type="Date" id="doj" name="doj" required /></td>
+                </tr>
+            </tbody>
+            <tfoot>
+                <tr>
+                    <th colspan="2"><input type="submit" id="submit" name="submit" value="Login"></th>
+                </tr>   
+            </tfoot>
+        </form>
+    </table>
+</body>
+</html>

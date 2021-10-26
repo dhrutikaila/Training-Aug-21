@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Date</title>
+    <link rel="stylesheet" href="../assets/css/bootstrap.min.css">
+</head>
+<body>
+    <div class="container">
+        <div class="h3 text-center my-3">Date</div>
+        <div>date: <span id="a1"></span></div>
+    </div>
+    <script src="../assets/js/bootstrap.min.js"></script>
+    <script>
+        let a = new Date();
+        console.log(a);
+        a = new Date(2021,04,12,0,0,0,0)
+        console.log(a);
+        a = new Date(2021,05)
+        console.log(a);
+        a = new Date("October 10, 2015 12:25:00");
+        console.log(a);
+        a = new Date(2000000000000000)
+        console.log(a);
+        a = new Date();
+        document.getElementById('a1').innerHTML = a.toDateString();
+
+        /* ISO date*/
+        a = new Date('2018');
+        console.log(a);
+
+        a = new Date('jan 12 2018');
+        console.log(a);
+
+        /* get methods */
+        a = new Date();
+        console.log(a.getTime());
+        console.log(a.getFullYear());
+        console.log(a.getMonth()+1);
+        console.log(a.getDate());
+        console.log(a.getHours());
+        console.log(a.getMinutes());
+        console.log(a.getSeconds());
+        console.log(a.getMilliseconds());
+        console.log(a.getDay());
+
+        /* set methods */
+
+        console.log(a.setDate(14));
+        console.log(a);
+        console.log(a.setFullYear(2019));
+        console.log(a);
+        console.log(a.setFullYear(2012,09,22));
+        console.log(a);
+        console.log(a.setMonth(3));
+        console.log(a);
+        console.log(a.setDate(10));
+        console.log(a);
+        console.log(a.setHours(18));
+        console.log(a.setMinutes(30));
+        console.log(a.setSeconds(14));
+        console.log(a);
+
+        b = new Date();
+        if(b>a){
+            console.log(b);
+        }
+        else
+        {
+            console.log(a);
+        }
+
+    </script>
+</body>
+</html>

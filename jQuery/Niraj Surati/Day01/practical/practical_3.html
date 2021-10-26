@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="../assets/css/bootstrap.min.css" rel="stylesheet">
+</head>
+<body>
+    <div class="container">
+        <div class="h3 my-4 text-center" >Practical-3</div>
+        <hr>
+        <div>
+            <h3 class="text-center my-4">
+                Select any one following technology.
+            </h3>
+        </div>
+        <fieldset class="row">
+            <div id="divMain" class="d-flex col-md-8 mx-auto justify-content-center">
+                <div class="radioLable">
+                    
+                    <label class="form-check-label"><input type="radio" name="tech" value="PHP" class="form-check-input" /> PHP</label>
+                </div>
+                <div>
+                    <label class="form-check-label"><input type="radio" name="tech" value="ASP.NET" class="form-check-input" /> ASP.NET</label>
+                </div>
+                <div>
+                    <label class="form-check-label"><input type="radio" name="tech" value="ASP" class="form-check-input" /> ASP</label>
+                </div>
+                <div>
+                    <label class="form-check-label"><input type="radio" name="tech" value="JSP" class="form-check-input" /> JSP</label>
+                </div>
+                <div>
+                    <label class="form-check-label"><input type="radio" name="tech" value="PERL" class="form-check-input" /> PERL</label>
+                </div>
+                <div>
+                    <label class="form-check-label"><input type="radio" name="tech" value="Cold Fusion" class="form-check-input" /> Cold Fusion</label>
+                </div>  
+                <div>
+                    <label class="form-check-label"><input type="radio" name="tech" value="Other" class="form-check-input" /> Other</label>
+                </div>
+            </div>
+        </fieldset>
+        <div class="text-center my-4">
+            <h3 class="text-primary">Result : <span id="result"></span></h3>
+        </div>
+        <div>
+            <p>
+                <span id="PHP">
+                    PHP is scripting language.
+                </span>
+                <span id="ASP.NET">
+                    Asp.Net is language.
+                </span>
+                <span id="ASP">
+                    Asp is language.
+                </span>
+                <span id="JSP">
+                    Jsp is language.
+                </span>
+                <span id="PERL">
+                    Perl is language.
+                </span>
+                <span id="Cold Fusion">
+                    Cold Fusion is language.
+                </span>
+                <span id="Other">
+                    Other languages python maybe?
+                </span>
+            </p>    
+        </div>
+    </div>
+    <script src="../assets/js/bootstrap.bundle.min.js"></script>
+    <script src="../assets/js/jquery-3.6.0.min.js"></script>
+    <script>
+        $(document).ready(function(){
+            $('p span').hide();
+            
+            $("#divMain div").addClass('mx-2');
+            $("#divMain div label").addClass('px-1');
+            $("input[name='tech']").change(function(){
+                $('p span').hide();
+                let resVal = $("input[name='tech']:checked").val();
+                $("#result").addClass("text-success").text(resVal);
+                console.log(resVal);
+                $("[id = '"+resVal+"']").show();
+            });
+        
+        });
+
+    </script>
+</body>
+</html>

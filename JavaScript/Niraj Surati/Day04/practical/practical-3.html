@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="../assets/css/bootstrap.min.css" rel="stylesheet" />
+    <title>Document</title>
+</head>
+<body>
+    <div class="container">
+        <div class="h3 text-center my-3 text-light">Promise</div>
+        <div class="row justify-content-sm-center">
+            <div class="col-8">
+                <input type="text" class="form-control my-3" id="textID" placeholder="Enter String">
+                <!-- <button type="button" ;" class="btn btn-success my-2">Check</button>  -->
+            </div>
+            <div class="col-md-6  d-flex flex-sm-row bg-warning"   style="border:1px solid black">
+                <div class="h5 my-3">Result:</div>
+                <div class="h5 my-3 ms-3" id="display"></div>
+            <div>
+            </div>
+        </div>
+        <script src="../assets/js/bootstrap.min.js"></script>
+        <script>
+            // setTimeout(myFun, 5000);
+            // setInterval(function(){ setTimeout(myFun, 5000)},1000);
+            //onclick="checkString(textID.value)
+            // display function 
+            document.body.style.backgroundColor = "#192734"
+        let txtID = document.querySelector('#textID');
+        txtID.onkeyup = () =>{checkString(txtID.value);};
+        
+            
+        function display(some)
+        {
+            document.getElementById('display').innerHTML =  some;
+        }
+        
+        // making promise
+        function checkString(textID)
+        {
+            let myPromise = new Promise((resolve, reject) => {
+                let txt = textID;
+                console.log(txt);
+                console.log(typeof(txt));
+                if(typeof(txt) == 'string'){
+                    txt = txt.split('').reverse().join('');
+                    resolve(txt);
+                    console.log(txt);
+                }
+                else{
+                    let message = "oops something is wrong!";
+                    reject(message);
+                }
+                
+            });
+            
+        myPromise.then(
+                (value) =>  {display(value);}, 
+                (error) => {display(error);}          
+                );
+            } 
+
+            // async function
+
+            //async function doWork(txtID){
+            //    try{
+            //        const response = await checkString(textID);
+            //        console.log(response);
+            //        const dis = await display(response);
+            //        
+            //        console.log(dis);
+            //    }
+            //    catch (err){
+            //        const dis = await display(err);
+            //    }
+            //}
+        </script>
+    </body>
+    </html>

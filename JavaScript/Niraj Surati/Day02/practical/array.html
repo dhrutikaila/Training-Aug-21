@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Array</title>
+    <link rel="stylesheet" href="../assets/css/bootstrap.min.css">
+</head>
+<body>
+    <div class="container">
+        <div class="h3 text-center my-3">Arrays</div>
+        <div>Array: <span id="a1"></span></div>
+        <div>Array changed: <span id="a2"></span></div>
+        <div>Array object: <span id="a3"></span></div>
+        <div>Json: <span id="a4"></span></div>
+        <hr>
+        <div>Array to string: <span id="a5"></span></div>
+        <div>Join : <span id="a6"></span></div>
+        <div>Pop : <span id="a7"></span></div>
+        <div>Push : <span id="a8"></span></div>
+        <div>shift : <span id="a9"></span></div>
+        <div>unshift : <span id="a10"></span></div>
+        <div>delete : <span id="a11"></span></div>
+        <div>splice : <span id="a12"></span></div>
+        <div>splice delete: <span id="a13"></span></div>
+        <div>merge array: <span id="a14"></span></div>
+        <div>slice array: <span id="a15"></span></div>
+    </div>
+    <script src="../assets/js/bootstrap.min.js"></script>
+    <script>
+        let cars = ['saab', 'volvo', 'bmw'];
+        document.getElementById('a1').innerHTML = cars;
+        console.log(cars[0]); // first
+        console.log(cars[cars.length - 1]); //last
+        cars[0] = "lambo";
+        document.getElementById('a2').innerHTML = cars;
+        let arrObj =['string', 123,]; 
+        document.getElementById('a3').innerHTML = arrObj;
+        let jsonObj = {key:"value",key2:"value2"};
+        document.getElementById('a4').innerHTML = jsonObj.key +' '+jsonObj.key2;
+
+        cars.push("ferrari");
+        console.log(cars);
+        
+        /* methods */
+        document.getElementById('a5').innerHTML = cars.toString();
+
+        document.getElementById('a6').innerHTML = cars.join('-');
+        cars.push('newCar')
+        document.getElementById('a7').innerHTML = cars.join('-');
+        cars.pop();
+        document.getElementById('a8').innerHTML = cars.join('-');
+        cars.shift();
+        document.getElementById('a9').innerHTML = cars.join('-');
+        cars.unshift('newCar');
+        document.getElementById('a10').innerHTML = cars.join('-');
+        delete cars[0];
+        document.getElementById('a11').innerHTML = cars.join('-');
+
+        cars.splice(0, 1, 'NewCar1', 'NewCar2');
+        document.getElementById('a12').innerHTML = cars.join('-');
+        cars.splice(0, 1);
+        document.getElementById('a13').innerHTML = cars.join('-');
+        let newCar = cars.concat(arrObj);
+        document.getElementById('a14').innerHTML = newCar.join('-');
+        let sliceCar = newCar.slice(2);
+        document.getElementById('a15').innerHTML = sliceCar.join('-');
+
+        let sortDemo = ["a","c","x","p","s"];
+        console.log(sortDemo.sort());
+
+        console.log(sortDemo.reverse());
+
+    </script>
+</body>
+</html>

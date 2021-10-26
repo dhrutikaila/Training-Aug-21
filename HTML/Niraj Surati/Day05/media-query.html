@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Media</title>
+    <style>
+        body{
+            background-color: lavender;
+
+        }
+        .b-container{
+            border: 3px blue solid;
+            padding: 5px;
+        }
+        @media only screen and (max-width:992px) {
+            .b-container{
+                border: 3px rgb(241, 220, 24) solid;
+                font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+                padding: 4px;
+            }
+        }
+        @media only screen and (max-width:768px) {
+            .b-container{
+                border: 3px rgb(4, 247, 85) solid;
+                font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+                padding: 3px;
+            }
+        }
+        @media only screen and (max-width:576px) {
+            .b-container{
+                border: 3px rgb(248, 6, 58) solid;
+                font-family: Georgia, 'Times New Roman', Times, serif;
+                padding: 2px;
+            }
+            h1{
+                display: none;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="b-container">
+        <h1>Try to resize the screen! Color will change and this will be hidden after 576px.</h1>
+        <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Modi, eos eligendi molestias dolore inventore culpa quae harum ullam quia officia cumque? Quasi sed inventore voluptates provident id praesentium porro facilis qui molestiae itaque accusamus harum atque quae veritatis, deleniti totam iusto illum magnam nostrum dolore perferendis cupiditate corrupti in? Sequi.
+        </p>
+    </div>
+</body>
+</html>

@@ -1,0 +1,829 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>YouTube</title>
+
+    <!-- Bootstrap Stylesheet -->
+    <link rel="stylesheet" href="assets/css/bootstrap.min.css">
+
+    <!-- Custom Style -->
+    <link rel="stylesheet" id="theme-style">
+    <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+    
+    <!-- Navbar start -->
+
+    <div class="nav-body d-flex justify-content-between align-items-center">
+        <div class="logo-side d-flex align-items-center justify-content-center">
+                <div class="logo-body d-flex" id="micIconId">
+                    <button type="button" class="btn logo-button d-flex align-items-center justify-content-center" id="barsIconButton">
+                    </button>
+                </div>  
+                
+                <span class="logo-md d-flex align-items-center justify-content-center" id="youTubeLogo"> 
+                    <!-- <img src="assets/icons/youtube.png" alt="Youtube-logo" class="logo-img"> -->
+                </span>
+        </div>
+        <div class="search-box d-flex">
+            <div class="search-body d-flex">
+                <div class="input-search-body d-flex align-items-center justify-content-center" id="searchBodyId">
+                    <input type="text" placeholder="Search" id="searchBodyButton" class="form-control input-search" />
+                </div>
+                <div class="search-icon-body  d-flex" id="searchIconId">
+                    <button type="button" class="btn search-button" id="searchIconButton">
+                    </button>
+                </div> 
+            </div>
+            <div class="icon-body d-flex" id="micIconId">
+                <button type="button" class="btn icon-button mic-button d-flex align-items-center justify-content-center" id="micIconButton">
+                </button>
+            </div>         
+        </div>
+        <div class="profile-box d-flex justify-content-end">
+            <div class="profile-body d-flex">
+                <button type="button" class="btn icon-button d-flex align-items-center justify-content-center icon-p" id="mSearchIconButton">
+                </button>
+                
+                    <button type="button" class="btn icon-button d-flex align-items-center justify-content-center icon-p dropdown" id="videoIconButton" data-bs-toggle="dropdown" data-bs-target="#video-content"> 
+                    </button>
+                    <!-- Youtube video -->
+                    <div class="dropdown-menu dropdown-color  video-dropdown" id="#video-content">
+                        <a href="#" class="profile-section-link video-section-link  d-flex align-items-center">
+                            <div class="profile-section-link-img" id="play-logo">
+                            </div>
+                            <div class="profile-section-link-content">
+                                Upload video
+                            </div>
+                        </a>
+                        <a href="#" class="profile-section-link video-section-link  d-flex align-items-center">
+                            <div class="profile-section-link-img" id="live-logo">
+                            </div>
+                            <div class="profile-section-link-content">
+                                Go live
+                            </div>
+                        </a>
+                    </div>
+
+                    <button type="button" class="btn icon-button d-flex  align-items-center justify-content-center icon-p" id="menuIconButton" data-bs-toggle="dropdown" data-bs-target="#apps-content">
+                    </button>
+                    <!-- apps dropdown -->
+                    <div class="dropdown-menu dropdown-color overflow-auto apps-dropdown" id="#apps-content">
+                        <div class="pm-8">
+                            <a href="#" class="profile-section-link apps-section-link d-flex align-items-center">
+                                <div class="profile-section-link-img" id="YouTube-TV-logo">
+                                </div>
+                                <div class="profile-section-link-content">
+                                    YouTube TV
+                                </div>
+                            </a>
+                        </div>
+                        <div class="dropdown-divider"></div>
+                        <div class="pm-8">
+                            <a href="#" class="profile-section-link apps-section-link d-flex align-items-center">
+                                <div class="profile-section-link-img" id="YouTube-Music-logo">
+                                </div>
+                                <div class="profile-section-link-content">
+                                    YouTube Music
+                                </div>
+                            </a>
+                            <a href="#" class="profile-section-link apps-section-link d-flex align-items-center">
+                                <div class="profile-section-link-img" id="YouTube-Kids-logo">
+                                </div>
+                                <div class="profile-section-link-content">
+                                    YouTube Kids
+                                </div>
+                            </a>
+                        </div>
+                        <div class="dropdown-divider"></div>
+                        <div class="pm-8">
+                            <a href="#" class="profile-section-link apps-section-link d-flex align-items-center">
+                                <div class="profile-section-link-img YouTube-Play-logo">
+                                </div>
+                                <div class="profile-section-link-content">
+                                    Creator Academy
+                                </div>
+                            </a>
+                            <a href="#" class="profile-section-link apps-section-link d-flex align-items-center">
+                                <div class="profile-section-link-img YouTube-Play-logo">
+                                </div>
+                                <div class="profile-section-link-content">
+                                    YouTube for Artists
+                                </div>
+                            </a>
+                        </div>
+                    </div>
+
+                <button type="button" class="btn icon-button d-flex align-items-center justify-content-center icon-p" id="bellIconButton">
+                </button>
+                <!-- dropdown-profile -->
+                <div class="dropup dropstart">
+                    <button type="button" class="btn profile-button dropdown d-flex align-items-center justify-content-center  icon-p" id="profileIconButton" data-bs-toggle="dropdown" data-bs-target="#profile-content">
+                        <img  src="assets/img/deku.jpeg" alt="image" class="rounded-circle profile-image" />
+                    </button>
+                    <div class="dropdown-menu dropdown-color overflow-auto profile-dropdown profile-index" id="#profile-content">
+                        <div class="profile-dropdown-header d-flex" >
+                            <div class="profile-header-body d-flex">
+                                <div class="profile-header-image">
+                                    <img  src="assets/img/deku.jpeg" alt="image" class="rounded-circle" />
+                                </div>
+                                <div class="profile-header-title">
+                                    <div class="profile-header-item">
+                                        Niraj Surati
+                                    </div>
+                                    <div class="profile-header-link">
+                                        <a href="#">
+                                            Manage your Google Account
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="dropdown-divider"></div>
+                        <div class="profile-dropdown-container">
+                            <div class="profile-dropdown-section">
+                                <!-- 
+                                    <a href="" class="dropdown-item">a</a>
+                                -->
+                                <div class="profile-section-item">
+                                    <a href="#" class="profile-section-link d-flex align-items-center">
+                                        <div class="profile-section-link-img" id="profile-logo">
+                                        </div>
+                                        <div class="profile-section-link-content">
+                                            Your channel
+                                        </div>
+                                    </a>
+                                    <a  href="#" class="profile-section-link d-flex align-items-center">
+                                        <div class="profile-section-link-img" id="money-logo">
+                                        </div>
+                                        <div class="profile-section-link-content">
+                                            Purchases and memberships
+                                        </div>
+                                    </a>
+                                    <a href="#" class="profile-section-link d-flex align-items-center">
+                                        <div class="profile-section-link-img" id="setting-logo">
+                                        </div>
+                                        <div class="profile-section-link-content">
+                                            Creator Studio
+                                        </div>
+                                    </a>
+                                    <a href="#" class="profile-section-link d-flex align-items-center">
+                                        <div class="profile-section-link-img" id="profile-1-logo">
+                                        </div>
+                                        <div class="profile-section-link-content">
+                                            Switch account
+                                        </div>
+                                        <div class="profile-section-link-dropdown link-dropdown-logo d-flex-end">
+                                            
+                                        </div>
+                                    </a>
+                                    <a href="#" class="profile-section-link d-flex align-items-center">
+                                        <div class="profile-section-link-img" id="exit-logo">
+                                        </div>
+                                        <div class="profile-section-link-content">
+                                            Sign out
+                                        </div>
+                                    </a>
+                                </div>
+                                <div class="dropdown-divider"></div>
+                                <div class="profile-section-item2">
+
+                                    <a class="profile-section-link d-flex align-items-center"
+                                    href="javascript:void(0)"
+                                    id="theme-toggler"
+                                    onclick="toggleTheme()">
+                                        <div class="profile-section-link-img" id="moon-logo">
+                                        </div>
+                                        <div class="profile-section-link-content" id="theme-text">
+                                            Appearance: Device theme
+                                        </div>
+                                        <div class="profile-section-link-dropdown link-dropdown-logo d-flex-end">
+                                        </div>
+                                    </a>
+
+                                    <a href="#" class="profile-section-link d-flex align-items-center">
+                                        <div class="profile-section-link-img" id="translate-logo">
+                                        </div>
+                                        <div class="profile-section-link-content">
+                                            Language: English
+                                        </div>
+                                        <div class="profile-section-link-dropdown link-dropdown-logo d-flex-end">
+                                        </div>
+                                    </a>
+                                    <a href="#" class="profile-section-link d-flex align-items-center">
+                                        <div class="profile-section-link-img" id="web-logo">
+                                        </div>
+                                        <div class="profile-section-link-content">
+                                            Location: India
+                                        </div>
+                                        <div class="profile-section-link-dropdown link-dropdown-logo d-flex-end">
+                                            
+                                        </div>
+                                    </a>
+                                    <a href="#" class="profile-section-link d-flex align-items-center">
+                                        <div class="profile-section-link-img" id="settings-logo">
+                                        </div>
+                                        <div class="profile-section-link-content">
+                                            Settings
+                                        </div>
+                                    </a>
+                                    <a href="#" class="profile-section-link d-flex align-items-center">
+                                        <div class="profile-section-link-img" id="shield-logo">
+                                        </div>
+                                        <div class="profile-section-link-content">
+                                            Your data in YouTube
+                                        </div>
+                                    </a>
+                                    <a href="#" class="profile-section-link d-flex align-items-center">
+                                        <div class="profile-section-link-img" id="question-mark-logo">
+                                        </div>
+                                        <div class="profile-section-link-content">
+                                            Help
+                                        </div>
+                                    </a>
+                                    <a href="#" class="profile-section-link d-flex align-items-center">
+                                        <div class="profile-section-link-img" id="exclamation-mark-logo">
+                                        </div>
+                                        <div class="profile-section-link-content">
+                                            Send feedback
+                                        </div>
+                                    </a>
+                                    <a href="#" class="profile-section-link d-flex align-items-center">
+                                        <div class="profile-section-link-img" id="keyboard-logo">
+                                        </div>
+                                        <div class="profile-section-link-content">
+                                            Keyboard Shortcuts
+                                        </div>
+                                    </a>
+                                </div>
+                                <div class="dropdown-divider"></div>
+                                <div class="profile-section-item3">
+                                    <a href="#" class="profile-section-link d-flex align-items-center">
+                                        <div class="profile-section-link-content">
+                                            Restricted Mode: Off
+                                        </div>
+                                        <div class="profile-section-link-img">
+                                        </div>
+                                        <div class="profile-section-link-dropdown link-dropdown-logo d-flex-end">
+                                            
+                                        </div>
+                                    </a>
+                                </div>
+                                <br><br><br><br>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- dropdown-theme -->
+                
+
+                
+            </div>
+            <!-- <div class="profile-body bg-danger d-flex icon-p">
+            </div>
+            <div class="profile-body bg-danger d-flex icon-p">
+            </div> -->
+        </div>
+    </div>
+    <!-- Navbar end -->
+    <div class="d-flex">
+    
+    <!-- Sidebar Start -->
+        <div class="sidebar d-flex flex-row">
+            <div class="sidebar-body"> 
+                <div class="section-body">
+                    <a href="#" class="section-link d-flex align-items-center">
+                        <div class="section-link-img" id="home-logo">
+                        </div>
+                        <div class="section-link-content">
+                            Home
+                        </div>
+                    </a>
+                    <a href="#" class="section-link d-flex align-items-center">
+                        <div class="section-link-img" id="explore-logo">
+                        </div>
+                        <div class="section-link-content">
+                            Explore
+                        </div>
+                    </a>
+                    <a href="#" class="section-link d-flex align-items-center">
+                        <div class="section-link-img" id="subscriptions-logo">
+                        </div>
+                        <div class="section-link-content">
+                            Subscriptions
+                        </div>
+                    </a>
+                    <div class="section-sub-body">
+                        <a href="#" class="section-link d-flex align-items-center">
+                            <div class="section-link-img" id="library-logo">
+                            </div>
+                            <div class="section-link-content">
+                                Library
+                            </div>
+                        </a>
+                        <a href="#" class="section-link d-flex align-items-center">
+                            <div class="section-link-img" id="history-logo">
+                            </div>
+                            <div class="section-link-content">
+                                History
+                            </div>
+                        </a>
+                        <a href="#" class="section-link d-flex align-items-center">
+                            <div class="section-link-img" id="your-videos-logo">
+                            </div>
+                            <div class="section-link-content">
+                                Your&nbsp;videos
+                            </div>
+                        </a>
+                        <a href="#" class="section-link d-flex align-items-center">
+                            <div class="section-link-img" id="watch-later-logo">
+                            </div>
+                            <div class="section-link-content">
+                                Watch&nbsp;later
+                            </div>
+                        </a>
+                        <a href="#" class="section-link d-flex align-items-center">
+                            <div class="section-link-img" id="liked-videos-logo">
+                            </div>
+                            <div class="section-link-content">
+                                Liked&nbsp;videos
+                            </div>
+                        </a>
+                        <a href="#" class="section-link d-flex align-items-center">
+                            <div class="section-link-img down-arrow-logo" >
+                            </div>
+                            <div class="section-link-content">
+                                Show&nbsp;more
+                            </div>
+                        </a>
+                    </div>
+                </div>
+                <div class="subscription-body">
+                    <div class="heading-sub">
+                        SUBSCRIPTIONS
+                    </div>
+                    <a href="#" class="section-link d-flex align-items-center">
+                        <div class="section-link-img sub-profile-img" >
+                        </div>
+                        <div class="section-link-content">
+                            PewDiePie
+                        </div>
+                    </a>
+                    <a href="#" class="section-link d-flex align-items-center">
+                        <div class="section-link-img sub-profile-img" >
+                        </div>
+                        <div class="section-link-content">
+                            JackSepticEye
+                        </div>
+                    </a>
+                    <a href="#" class="section-link d-flex align-items-center">
+                        <div class="section-link-img sub-profile-img" >
+                        </div>
+                        <div class="section-link-content">
+                            BeardMeetsFood
+                        </div>
+                    </a>
+                    <a href="#" class="section-link d-flex align-items-center">
+                        <div class="section-link-img sub-profile-img" >
+                        </div>
+                        <div class="section-link-content">
+                            TonyTo
+                        </div>
+                    </a>
+                    <a href="#" class="section-link d-flex align-items-center">
+                        <div class="section-link-img sub-profile-img" >
+                        </div>
+                        <div class="section-link-content">
+                            Markiplier
+                        </div>
+                    </a>
+                    <a href="#" class="section-link d-flex align-items-center">
+                        <div class="section-link-img sub-profile-img" >
+                        </div>
+                        <div class="section-link-content">
+                            Sadist
+                        </div>
+                    </a>
+                    <a href="#" class="section-link d-flex align-items-center">
+                        <div class="section-link-img sub-profile-img">
+                        </div>
+                        <div class="section-link-content">
+                            Dream
+                        </div>
+                    </a>
+                    <a href="#" class="section-link d-flex align-items-center">
+                        <div class="section-link-img down-arrow-logo sub-profile-img" >
+                        </div>
+                        <div class="section-link-content">
+                            Show&nbsp;more
+                        </div>
+                    </a>
+                </div>
+                <div class="section-two-body">
+                    <div class="heading-sub">
+                        MORE&nbsp;FROM&nbsp;YOUTUBE
+                    </div>
+                    <a href="#" class="section-link d-flex align-items-center">
+                        <div class="section-link-img" id="premium-logo">
+                        </div>
+                        <div class="section-link-content">
+                            YouTube&nbsp;Premium
+                        </div>
+                    </a>
+                    <a href="#" class="section-link d-flex align-items-center">
+                        <div class="section-link-img" id="films-logo">
+                        </div>
+                        <div class="section-link-content">
+                            Films
+                        </div>
+                    </a>
+                    <a href="#" class="section-link d-flex align-items-center">
+                        <div class="section-link-img" id="gaming-logo">
+                        </div>
+                        <div class="section-link-content">
+                            Gaming
+                        </div>
+                    </a>
+                    <a href="#" class="section-link d-flex align-items-center">
+                        <div class="section-link-img" id="live-s-logo">
+                        </div>
+                        <div class="section-link-content">
+                            Live
+                        </div>
+                    </a>
+                    <a href="#" class="section-link d-flex align-items-center">
+                        <div class="section-link-img" id="fashion-logo">
+                        </div>
+                        <div class="section-link-content">
+                            Fashion&nbsp;&amp;&nbsp;beauty
+                        </div>
+                    </a>
+                    <a href="#" class="section-link d-flex align-items-center">
+                        <div class="section-link-img" id="bulb-logo">
+                        </div>
+                        <div class="section-link-content">
+                            Learning
+                        </div>
+                    </a>
+                    <a href="#" class="section-link d-flex align-items-center">
+                        <div class="section-link-img" id="sport-logo">
+                        </div>
+                        <div class="section-link-content">
+                            Sport
+                        </div>
+                    </a>
+                </div>
+                <div class="section-three-body">
+                    <a href="#" class="section-link d-flex align-items-center">
+                        <div class="section-link-img" id="settings-s-logo">
+                        </div>
+                        <div class="section-link-content">
+                            Settings
+                        </div>
+                    </a>
+                    <a href="#" class="section-link d-flex align-items-center">
+                        <div class="section-link-img" id="report-logo">
+                        </div>
+                        <div class="section-link-content">
+                            Report&nbsp;history
+                        </div>
+                    </a>
+                    <a href="#" class="section-link d-flex align-items-center">
+                        <div class="section-link-img" id="help-logo">
+                        </div>
+                        <div class="section-link-content">
+                            Help
+                        </div>
+                    </a>
+                    <a href="#" class="section-link d-flex align-items-center">
+                        <div class="section-link-img" id="send-feedback-logo">
+                        </div>
+                        <div class="section-link-content">
+                            Send&nbsp;feedback
+                        </div>
+                    </a>
+                </div>
+                <div class="sidebar-footer">
+                    <div class="sidebar-footer-item">
+                        <a href="#" class="sidebar-footer-link">
+                            About
+                        </a>
+                        <a href="#" class="sidebar-footer-link">
+                            Press
+                        </a>
+                        <a href="#" class="sidebar-footer-link">
+                            Copyright
+                        </a>
+                        <a href="#" class="sidebar-footer-link">
+                            Contact&nbsp;us
+                        </a>
+                        <a href="#" class="sidebar-footer-link">
+                            Advertise
+                        </a>
+                        <a href="#" class="sidebar-footer-link">
+                            Developers
+                        </a>
+                    </div>
+                    <div class="sidebar-footer-item">
+                        <a href="#" class="sidebar-footer-link">
+                            Terms
+                        </a>
+                        <a href="#" class="sidebar-footer-link">
+                            Privacy
+                        </a>
+                        <a href="#" class="sidebar-footer-link">
+                            Policy&nbsp;&emsp;&nbsp;Safety
+                        </a>
+                        <a href="#" class="sidebar-footer-link">
+                            How&nbsp;YouTube&nbsp;Works
+                        </a>
+                        <a href="#" class="sidebar-footer-link">
+                            Test&nbsp;new&nbsp;features
+                        </a>
+                    </div>
+                    <div class="sidebar-footer-item pb-3">
+                        <a href="#" class="sidebar-footer-link text-muted">
+                            © 2021 Google LLC
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    
+        <!-- Sidebar End -->
+        <!-- Main Body Start  -->
+        <div class="main-body d-flex flex-column">
+            <!-- Tags Start -->
+            <div class="tag-body d-flex w-100">
+                <div class="tag-item d-flex align-items-center ms-4">
+                    <a href="#" class="tag-link">All</a>
+                </div>
+                <div class="tag-item d-flex align-items-center">
+                    <a href="#" class="tag-link">Funny</a>
+                </div>
+                <div class="tag-item d-flex align-items-center">
+                    <a href="#" class="tag-link">Trending</a>
+                </div>
+                <div class="tag-item d-flex align-items-center">
+                    <a href="#" class="tag-link">Food</a>
+                </div>
+                <div class="tag-item d-flex align-items-center">
+                    <a href="#" class="tag-link">Anime</a>
+                </div>
+                <div class="tag-item d-flex align-items-center">
+                    <a href="#" class="tag-link">Codding</a>
+                </div>
+                <div class="tag-item d-flex align-items-center">
+                    <a href="#" class="tag-link">Genshin Impact</a>
+                </div>
+                <div class="tag-item d-flex align-items-center">
+                    <a href="#" class="tag-link">Minecraft</a>
+                </div>
+                <div class="tag-item d-flex align-items-center">
+                    <a href="#" class="tag-link">Ganyu</a>
+                </div>
+                <div class="tag-item d-flex align-items-center">
+                    <a href="#" class="tag-link">One piece</a>
+                </div>
+                <div class="tag-item d-flex align-items-center">
+                    <a href="#" class="tag-link">Python</a>
+                </div>
+                <div class="tag-item d-flex align-items-center">
+                    <a href="#" class="tag-link">Naruto</a>
+                </div>
+                <div class="tag-item d-flex align-items-center tag-nav">
+                    <a href="#" class="tag-link link-dropdown-logo"></a>
+                </div>
+            </div>
+            <!-- Tags End -->
+
+                <!-- Video Section Start -->
+                <div class="videos-main-body d-flex">
+                    <div class="card-main card d-flex">
+                        <div class="card-body d-flex">
+                            <img src="https://picsum.photos/id/684/600/400" class="card-thumbnail" alt="">
+                        </div>
+            
+                        <div class="card-footer d-flex">
+                            <div class="card-footer-profile d-flex">
+                                <a href="#">
+                                    <img  src="assets/img/deku.jpeg" alt="image" class="rounded-circle card-footer-profile-img" />
+                                </a>
+                            </div>
+                            <div class="card-footer-content d-flex flex-column">
+                                <div class="card-footer-content-header">
+                                    Title
+                                </div>
+                                <div class="card-footer-content-desc d-flex flex-column">
+                                    <div>JackSepticEye</div>
+                                    <div class="d-flex">15M views &nbsp<i class="fa fa-circle align-self-center " aria-hidden="true"></i>&nbsp8 years ago</div>
+                                </div>
+                            </div>
+                            <div>
+                                <i class="fa fa-ellipsis-v align-self-center " aria-hidden="true"></i>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card-main card d-flex">
+                        <div class="card-body d-flex">
+                            <img src="https://picsum.photos/id/684/600/400" class="card-thumbnail" alt="">
+                        </div>
+            
+                        <div class="card-footer d-flex">
+                            <div class="card-footer-profile d-flex">
+                                <a href="#">
+                                    <img  src="assets/img/deku.jpeg" alt="image" class="rounded-circle card-footer-profile-img" />
+                                </a>
+                            </div>
+                            <div class="card-footer-content d-flex flex-column">
+                                <div class="card-footer-content-header">
+                                    Title
+                                </div>
+                                <div class="card-footer-content-desc d-flex flex-column">
+                                    <div>JackSepticEye</div>
+                                    <div class="d-flex">15M views &nbsp<i class="fa fa-circle align-self-center " aria-hidden="true"></i>&nbsp8 years ago</div>
+                                </div>
+                            </div>
+                            <div>
+                                <i class="fa fa-ellipsis-v align-self-center " aria-hidden="true"></i>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card-main card d-flex">
+                        <div class="card-body d-flex">
+                            <img src="https://picsum.photos/id/684/600/400" class="card-thumbnail" alt="">
+                        </div>
+            
+                        <div class="card-footer d-flex">
+                            <div class="card-footer-profile d-flex">
+                                <a href="#">
+                                    <img  src="assets/img/deku.jpeg" alt="image" class="rounded-circle card-footer-profile-img" />
+                                </a>
+                            </div>
+                            <div class="card-footer-content d-flex flex-column">
+                                <div class="card-footer-content-header">
+                                    Title
+                                </div>
+                                <div class="card-footer-content-desc d-flex flex-column">
+                                    <div>JackSepticEye</div>
+                                    <div class="d-flex">15M views &nbsp<i class="fa fa-circle align-self-center " aria-hidden="true"></i>&nbsp8 years ago</div>
+                                </div>
+                            </div>
+                            <div>
+                                <i class="fa fa-ellipsis-v align-self-center " aria-hidden="true"></i>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card-main card d-flex">
+                        <div class="card-body d-flex">
+                            <img src="https://picsum.photos/id/684/600/400" class="card-thumbnail" alt="">
+                        </div>
+            
+                        <div class="card-footer d-flex">
+                            <div class="card-footer-profile d-flex">
+                                <a href="#">
+                                    <img  src="assets/img/deku.jpeg" alt="image" class="rounded-circle card-footer-profile-img" />
+                                </a>
+                            </div>
+                            <div class="card-footer-content d-flex flex-column">
+                                <div class="card-footer-content-header">
+                                    Title
+                                </div>
+                                <div class="card-footer-content-desc d-flex flex-column">
+                                    <div>JackSepticEye</div>
+                                    <div class="d-flex">15M views &nbsp<i class="fa fa-circle align-self-center " aria-hidden="true"></i>&nbsp8 years ago</div>
+                                </div>
+                            </div>
+                            <div>
+                                <i class="fa fa-ellipsis-v align-self-center " aria-hidden="true"></i>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card-main card d-flex">
+                        <div class="card-body d-flex">
+                            <img src="https://picsum.photos/id/684/600/400" class="card-thumbnail" alt="">
+                        </div>
+            
+                        <div class="card-footer d-flex">
+                            <div class="card-footer-profile d-flex">
+                                <a href="#">
+                                    <img  src="assets/img/deku.jpeg" alt="image" class="rounded-circle card-footer-profile-img" />
+                                </a>
+                            </div>
+                            <div class="card-footer-content d-flex flex-column">
+                                <div class="card-footer-content-header">
+                                    Title
+                                </div>
+                                <div class="card-footer-content-desc d-flex flex-column">
+                                    <div>JackSepticEye</div>
+                                    <div class="d-flex">15M views &nbsp<i class="fa fa-circle align-self-center " aria-hidden="true"></i>&nbsp8 years ago</div>
+                                </div>
+                            </div>
+                            <div>
+                                <i class="fa fa-ellipsis-v align-self-center " aria-hidden="true"></i>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card-main card d-flex">
+                        <div class="card-body d-flex">
+                            <img src="https://picsum.photos/id/684/600/400" class="card-thumbnail" alt="">
+                        </div>
+            
+                        <div class="card-footer d-flex">
+                            <div class="card-footer-profile d-flex">
+                                <a href="#">
+                                    <img  src="assets/img/deku.jpeg" alt="image" class="rounded-circle card-footer-profile-img" />
+                                </a>
+                            </div>
+                            <div class="card-footer-content d-flex flex-column">
+                                <div class="card-footer-content-header">
+                                    Title
+                                </div>
+                                <div class="card-footer-content-desc d-flex flex-column">
+                                    <div>JackSepticEye</div>
+                                    <div class="d-flex">15M views &nbsp<i class="fa fa-circle align-self-center " aria-hidden="true"></i>&nbsp8 years ago</div>
+                                </div>
+                            </div>
+                            <div>
+                                <i class="fa fa-ellipsis-v align-self-center " aria-hidden="true"></i>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card-main card d-flex">
+                        <div class="card-body d-flex">
+                            <img src="https://picsum.photos/id/684/600/400" class="card-thumbnail" alt="">
+                        </div>
+            
+                        <div class="card-footer d-flex">
+                            <div class="card-footer-profile d-flex">
+                                <a href="#">
+                                    <img  src="assets/img/deku.jpeg" alt="image" class="rounded-circle card-footer-profile-img" />
+                                </a>
+                            </div>
+                            <div class="card-footer-content d-flex flex-column">
+                                <div class="card-footer-content-header">
+                                    Title
+                                </div>
+                                <div class="card-footer-content-desc d-flex flex-column">
+                                    <div>JackSepticEye</div>
+                                    <div class="d-flex">15M views &nbsp<i class="fa fa-circle align-self-center " aria-hidden="true"></i>&nbsp8 years ago</div>
+                                </div>
+                            </div>
+                            <div>
+                                <i class="fa fa-ellipsis-v align-self-center " aria-hidden="true"></i>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card-main card d-flex">
+                        <div class="card-body d-flex">
+                            <img src="https://picsum.photos/id/684/600/400" class="card-thumbnail" alt="">
+                        </div>
+            
+                        <div class="card-footer d-flex">
+                            <div class="card-footer-profile d-flex">
+                                <a href="#">
+                                    <img  src="assets/img/deku.jpeg" alt="image" class="rounded-circle card-footer-profile-img" />
+                                </a>
+                            </div>
+                            <div class="card-footer-content d-flex flex-column">
+                                <div class="card-footer-content-header">
+                                    Title
+                                </div>
+                                <div class="card-footer-content-desc d-flex flex-column">
+                                    <div>JackSepticEye</div>
+                                    <div class="d-flex">15M views &nbsp<i class="fa fa-circle align-self-center " aria-hidden="true"></i>&nbsp8 years ago</div>
+                                </div>
+                            </div>
+                            <div>
+                                <i class="fa fa-ellipsis-v align-self-center " aria-hidden="true"></i>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            <!-- Video Section End -->
+        </div>
+        <!-- Main Body End -->
+    </div>
+    <!-- Bootstrap Min.js -->
+    <script src="assets/js/bootstrap.bundle.min.js"></script>
+
+    <!-- Jquery Min.js -->
+    <script src="assets/js/jquery-3.6.0.min.js"></script>
+
+    <!-- Font Awesome -->
+    <script src="https://kit.fontawesome.com/c7ca47b678.js" crossorigin="anonymous"></script>
+
+    <!-- custom Js -->
+    <script src="assets/js/dark_icon.js"></script>
+    <script src="assets/js/dark_theme.js"></script>
+    <script src="assets/js/youtube.js"></script>
+
+    <!-- ionicons Js -->
+    <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+    <script  src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+</body>
+</html>

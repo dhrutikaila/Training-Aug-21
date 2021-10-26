@@ -1,0 +1,201 @@
+*{
+    padding:0;
+    margin:0;
+    box-sizing: border-box;      
+}
+body{
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    color: #ffffff;
+}
+header {
+    background-color: #3f2860;
+    padding: 10px;
+    font-weight: bold;
+}
+header .logo {
+    float: left;
+}
+header .logo span {
+    color: #ffffff;
+    align-self: center;
+    font: bold 1.5rem sans-serif, Cursive, Arial, Helvetica ;
+}
+header .logo a {
+    color: #ffffff;
+    text-decoration: none;
+}
+nav .menu-btn i {
+    color: #ffffff;
+    cursor: pointer;
+}
+header nav {
+    text-align: right;
+    padding: 10px;
+}
+#click {
+    display: none;
+}
+header ul {
+    text-align: center;
+    list-style: none;
+    display: none;
+}
+#click:checked ~ ul {
+    left: 0%;
+    display: contents;
+}
+header ul li {
+    padding: 5px 0;
+}
+header nav a {
+    text-decoration: none;
+    color: #ffffff;
+    position: relative;
+}
+header nav .active {
+    color: #ff9900;
+    border: 2px solid #ff9900;
+    padding: 10px;
+    
+}
+
+article {
+    
+    display: grid;
+    grid-template-columns: auto;
+    gap: 10px;
+    
+}
+aside {
+    padding: 20px;
+    color: white;
+    text-transform: capitalize;
+    background-color: #2b2301;
+}
+.folder-container {
+    margin-bottom: 30px;
+}
+aside div.folder {
+    color: #ff9900;
+}
+aside div.sub-folder {
+    margin-top: 10px;
+    margin-left: 20px;
+    margin-bottom: 5px;
+    color: #e2da99;
+    text-transform: capitalize;
+}
+aside div.sub-folder:before,
+aside div.folder:before {
+    font-family: "Font Awesome 5 Free";
+    font-weight: 900;
+    content: "\f07c";
+    margin-right: 5px;
+    color: #e2da99;
+}
+aside div.file {
+    margin-bottom: 5px;
+    margin-left: 40px;
+}
+aside div.file:before {
+    font-family: "Font Awesome 5 Free";
+    font-weight: 300;
+    content: "\f15c";
+    margin-right: 5px;
+    color: #ff9900;
+}
+aside div a {
+    color: #e2da99;
+}
+aside div a:hover {
+    color: #ff9900;
+}
+aside div a:active {
+    color: #ff9900;
+}
+section {
+    padding: 35px !important;
+    border: 3px groove #000000;
+    margin: 10px;
+    margin-left: 0;
+}
+
+/* Media Queries */
+@media only screen and (min-width: 500px) {
+    aside {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+    }
+}
+@media only screen and (min-width: 768px) {
+    header {
+        display: grid;
+        grid-template-columns: auto 1fr;
+        align-items: center;
+    }
+    header .logo span {
+        font-size: 1.5rem;
+    }
+    header .menu-btn i {
+        display: none;
+    }
+    #click:checked ~ ul,
+    header nav ul {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-evenly;
+    }
+    /* header nav ul li a::after {
+        content: "";
+        position: absolute;
+        width: 0%;
+        height: 3px;
+        background-color: #ffffff;
+        left: 0;
+        bottom: -10px;
+        
+    } */
+    header nav ul li a:hover{
+        border: 2px solid #ff9900;
+        padding: 10px;
+    }
+    header nav ul li a:hover::after {
+        width: 100%;
+    }
+    header nav ul li .active::after {
+        background-color: #ff9900;
+    }
+    aside {
+        grid-template-columns: repeat(3, auto);
+    }
+    section {
+        min-height: 70vh;
+    }
+}
+@media only screen and (min-width: 992px) {
+    body {
+        font-size: 1.1rem;
+    }
+    header {
+        display: grid;
+        grid-template-columns: auto auto;
+        align-items: center;
+    }
+    header .logo span {
+        font-size: 2rem;
+    }
+    article {
+        grid-template-columns: auto 1fr;
+    }
+    aside {
+        display: block;
+    }
+    section {
+        min-height: 90vh;
+    }
+}
+@media only screen and (min-width: 1200px) {
+    body {
+        font-size: 1.2rem;
+    }
+}

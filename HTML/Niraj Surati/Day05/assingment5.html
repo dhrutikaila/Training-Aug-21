@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Assignment 5</title>
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+        body {
+            background-color: lavender;
+            font-family: Verdana, Geneva, Tahoma, sans-serif;
+        }
+        .container {
+            padding: 20px;
+        }
+        h1 {
+            text-align: center;
+            color: #f85235;
+            margin-bottom: 10px;
+        }
+        .img-container {
+            display: grid;
+            grid-template-columns: 1fr;
+            grid-gap: 10px;
+            border-radius: 3px;
+            border: 1px groove #202020;
+            padding: 10px;
+            background-color: #d7eefd;
+        }
+        img {
+            width: 100%;
+            vertical-align: middle;
+            border-radius: 3px;
+            margin-top: 10px;
+        }
+        @media only screen and (min-width: 768px) {
+            .img-container {
+                grid-template-columns: 1fr 1fr;
+            }
+        }
+        @media only screen and (min-width: 992px) {
+            .img-container {
+                grid-template-columns: repeat(4, 1fr);
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Assignment-5</h1>
+        <div class="img-container">
+            <div class="">
+                <img src="https://picsum.photos/id/111/600/400" alt="img">
+                <img src="https://picsum.photos/id/112/600/300" alt="img">
+                <img src="https://picsum.photos/id/113/600/400" alt="img">
+                <img src="https://picsum.photos/id/114/600/300" alt="img">
+                <img src="https://picsum.photos/id/115/600/400" alt="img">
+            </div>
+            <div class="">
+                <img src="https://picsum.photos/id/116/600/300" alt="img">
+                <img src="https://picsum.photos/id/117/600/400" alt="img">
+                <img src="https://picsum.photos/id/118/600/300" alt="img">
+                <img src="https://picsum.photos/id/119/600/400" alt="img">
+                <img src="https://picsum.photos/id/120/600/400" alt="img">
+            </div>
+            <div class="">
+                <img src="https://picsum.photos/id/121/600/400" alt="img">
+                <img src="https://picsum.photos/id/122/600/300" alt="img">
+                <img src="https://picsum.photos/id/123/600/400" alt="img">
+                <img src="https://picsum.photos/id/124/600/300" alt="img">
+                <img src="https://picsum.photos/id/125/600/400" alt="img">
+            </div>
+            <div class="img-item">
+                <img src="https://picsum.photos/id/126/600/400" alt="img">
+                <img src="https://picsum.photos/id/127/600/400" alt="img">
+                <img src="https://picsum.photos/id/128/600/300" alt="img">
+                <img src="https://picsum.photos/id/129/600/400" alt="img">
+                <img src="https://picsum.photos/id/130/600/300" alt="img">
+            </div>
+        </div> 
+    </div>
+</body>
+</html>

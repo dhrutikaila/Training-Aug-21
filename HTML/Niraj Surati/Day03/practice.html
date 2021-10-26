@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>day-3</title>
+    <style>
+        .div-main{
+            height:200px;
+            width: 200px;
+            border: 1px solid black;
+        }
+        .pos-static{
+            position: relative;
+            left:50px;
+        }
+        .pos-fixed{
+            position: fixed;
+            right: 0;
+            bottom: 0;
+        }
+        .pos-absolute{
+            position: absolute;
+            left: 400px;
+            top:100px;
+        }
+        .pos-sticky{
+            position: sticky;
+            left:900px;
+            top:0px;
+        }
+    </style>
+</head>
+<body>
+    <div class="pos-static div-main">relative</div>
+    <div class="pos-static div-main">relative</div>
+    <div class="pos-static div-main">relative</div>
+    <div class="pos-static div-main">relative</div>
+    <div class="pos-static div-main">relative</div>
+    <div class="pos-static div-main">relative</div>
+    <div class="pos-fixed div-main">fixed</div>
+    <div class="pos-absolute div-main">absolute</div>
+    <div class="pos-sticky div-main">sticky</div>
+
+</body>
+</html>
