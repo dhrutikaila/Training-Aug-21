@@ -1,0 +1,56 @@
+<!--
+    Write a JavaScript function to check whether a string is blank or not
+-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>string blank </title>
+</head>
+<body style="text-align: center;border: green solid 5px;">
+    <p id="demo"></p>
+    <p id="use"></p>
+  <script>
+      var txt=("good to know .new things from here");
+      var name=("");
+      function isempty(txt){
+          return(txt || txt.length===0);
+      }
+console.log(isempty(""))
+console.log(isempty("dhruti patel"))
+
+  </script> 
+  <script>
+  // 2.Write a JavaScript function to split a string and convert it into an array of words
+  var text = "dhruti patel";
+     var myArr = text.split("");
+     text = "";
+      for (let i = 0; i < myArr.length; i++) {
+      text += myArr[i] + "<br>"
+           }
+document.getElementById("demo").innerHTML = text;
+
+//3 .Write a JavaScript function to extract a specified number of characters from a string.
+truncate_string=function(str1,length){
+    if((str1.constructor === String)&&(length>0)){
+        return str1.slice(0,length);
+    }
+};
+console.log(truncate_string("dhruti",4));
+//4 .Write a JavaScript function to get the current date
+var d = new Date();
+document.getElementById("use").innerHTML = d.getDate();
+
+// 5. Try some operation with list like push, pop, shifting, deleting element
+var arr=["dhruti","kp","kasti","miki"];
+arr.pop();
+arr.push("willy");
+arr.push("puff","geo");
+arr.shift();
+
+
+  </script>
+</body>
+</html>

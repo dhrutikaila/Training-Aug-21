@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    
+</head>
+<body>
+    <p id="width"></p>
+    <p id="depth"></p>
+    <p id="demo"></p>
+   
+  
+
+    <script>
+        //window size
+        var w = window.innerWidth;
+        var h = window.innerHeight;
+
+        //windows hight width property
+    document.getElementById("width").innerHTML =
+    "Browser inner window width: " + window.innerWidth + "px<br>" +
+    "Browser inner window height: " + window.innerHeight + "px";
+      document.getElementById("demo").innerHTML =
+      "Available Screen Width: " + window.screen;
+    
+    
+      //pixel depth
+    document.getElementById("depth").innerHTML = 
+    "Screen pixel depth is " + screen.pixelDepth;
+
+   
+    </script>
+    
+</body>
+</html>

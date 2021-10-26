@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+
+<h1 id="demo"></h1>
+<script>
+
+function add(a,b,callback)
+{
+    callback (a+b);
+}
+function print(c)
+{
+    console.log(c);
+}
+add(10,12,print)
+
+// callback anonymous function 
+function add(a,b,callback)
+{
+    callback(a+b);
+}
+add(10,12,function(c){
+    console.log(c)
+})
+
+//callback with arrow function
+
+function add(a,b,callback)
+{
+    callback(a+b);
+}
+add(1,4,(c)=>{
+    console.log(c)
+})
+
+
+
+//asynchronous function
+setTimeout(myFunction, 3000);
+
+function myFunction() {
+  document.getElementById("demo").innerHTML = "Wait is over!!";
+}
+
+//asynchronous
+setInterval(myFunction,1000);
+
+function myFunction(){
+    let d=new Date
+   // document.readyState(d.getHours()+":"+d.getMinutes()+":"+d.getSeconds());
+}
+
+
+
+</script>
+
+</body>
+</html>

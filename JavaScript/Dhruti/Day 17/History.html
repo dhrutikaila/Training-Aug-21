@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>history</title>
+    <script >
+        function goBack() {
+        window.history.back()
+        window.history.go(1);
+      }
+      function goForward(){
+          window.history.forward()
+      }
+    </script>
+</head>
+<body>
+
+    <input type="button" value="Back" onclick="goBack()">
+    
+     <input type="button" value="Forward" onclick="goForward()"><br><br>
+     <button onclick="setTimeout(myFunction, 3000)">Set time out</button>
+     <button onclick="clearTimeout">Stop it</button>
+     <script>
+     function myFunction() {
+       alert('Hello');
+     }
+     </script>
+     <p id="demo"></p>
+
+     <script>
+     setInterval(myTimer, 1000);
+     
+     function myTimer() {
+       const d = new Date();
+       document.getElementById("demo").innerHTML = d.toLocaleTimeString();
+     }
+     </script>
+     
+</body>
+</html>

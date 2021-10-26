@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    
+</head>
+<body>
+    
+
+    <!--Use the getElementById method to find the <p> element, and change its text to "Hello".-->
+
+
+        <p id="demo"></p>
+        
+        <script>
+        document.getElementById("demo").innerHTML
+         = "Hello";
+        </script>
+
+        <script>
+            //tagname
+        document.getElementsByTagName("p")[0].innerHTML
+         = "Hello";
+        </script>
+        <p class="test"></p>
+        <p class="test"></p>
+        
+        <script>
+            //CLASS name 
+        document.getElementsByClassName("test")[0].innerHTML
+         = "Hello";
+        </script>
+        <img id="image" src="smiley.gif">
+
+        <script>
+        document.getElementById("image")
+        .src
+         = "pic_mountain.jpg";
+        </script>
+                    
+            <input type="text" id="myText" value="Hello">
+
+            <script>
+                //INPUT FIELD value
+            document.getElementById("myText")
+            .value
+            = "Have a nice day!";
+            </script>
+
+            <p id="demo"></p>
+
+            <script>
+                //style color
+            document.getElementById("demo")
+            .style.color= "red";
+            </script>
+
+            
+                <p id="demo"></p>
+
+                <script>
+                    //font size 
+                document.getElementById("demo")
+                .style.fontSize = "40px";
+                </script>
+
+                
+                        <p id="demo"></p>
+
+                        <script>
+                            //display the property
+                        document.getElementById("demo")
+                        .style.display = "none";
+                        </script>
+
+                    <button id="demo">Click me1</button>
+
+                    <script>
+                        //eventlistener function
+                    document.getElementById("demo").
+                    addEventListener
+                    ("click", myFunction);
+                    </script>
+
+</body>
+</html>

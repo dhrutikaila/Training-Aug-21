@@ -1,0 +1,58 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <p id="demo"></p>
+    <p id="host"></p>
+    <p id="path"></p>
+    <h3 id="protocol"></h3>
+    <h3 id="port"></h3>
+    <script>
+        //href by loacting page current page loction show
+        document.getElementById("demo").innerHTML =
+        "Page location is " + window.location.href;
+
+       //window location Hostname
+       document.getElementById("host").innerHTML =
+        "Page hostname is " + window.location.hostname;
+
+        //Window Location Pathname
+        document.getElementById("path").innerHTML =
+        "Page path is " + window.location.pathname;
+
+        //Window Location Protocol
+        document.getElementById("protocol").innerHTML =
+        "Page protocol is " + window.location.protocol;
+
+        //Window Location Port
+        document.getElementById("port").innerHTML =
+        "Port number is " + window.location.port;
+       
+        // 7.Use Window.location object to navigate on another page
+        function newDoc() {
+            window.location.assign("https://www.w3schools.com") }
+        
+     //prompt box
+        var person = prompt("Please enter your name", "dhruti patel");
+        var text;
+        if (person == null || person == "") {
+        text = "User cancelled the prompt.";
+        } else {
+        text = "Hello " + person + "! How are you today?";
+        }
+       //alert box line brek
+        alert("Hello\nHow are you?");
+    
+        
+   
+    </script>
+    
+<input type="button" value="Location assign" onclick="newDoc()">
+</body>
+</html>

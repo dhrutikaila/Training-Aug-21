@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h3 id="demo"></h3>
+    <h3 id="de"></h3>
+    <h3 id="d1"></h3>
+                    <script>
+                //Using Function Expression, find the area of circle
+                function area(radius){
+                    this.radius=radius;
+                    //area meethod
+                    this.area=function(){
+                        return Math.PI*this.radius*this.radius;
+                    };
+                
+                }
+                var c = new area(4); 
+                console.log('area=',c.area().toFixed(2));
+
+                const x = function (a, b) {return Math.PI* a * b};
+                        let z = x(4, 3);
+                //Using Function Constructor, find the area of rectangle
+                const myFunction = function (l,b) {return l * b};
+  
+                       document.getElementById("demo").innerHTML = myFunction(4,5);
+                       
+                //Explain usage of Function Hosing using example
+                y = 5; // Assign 5 to y
+
+            elem = document.getElementById("de"); // Find an element 
+                elem.innerHTML = y;           // Display y in the element
+
+               var y; // Declare y
+
+                 //Using Function call create employee object with field Name, Address and Designation and pass it to function.
+                 const employee = {
+                    fullName: function(name, Address,Designation) {
+                        return this.name + " " + this.Address + "," + city + "," + country +this.Designation+",";
+                    }
+                    }
+                    const person1 = {
+                    name:"John",
+                    Address: "delhi",
+                    Designation:"HR"
+                    }
+                    employee.name.call(person1, "Oslo", "Norway",".net");
+
+                //Explain Function closure with practical
+                                
+                const add = (function () {
+                let counter = 0;
+                return function () {counter += 1; return counter;}
+                })();
+
+                function myFunction(){
+                document.getElementById("d1").innerHTML = add();
+                }  
+                //Using Function Apply pass employee object to a function defined in the function.
+                
+                employee.name.apply(person1, ["Oslo", "Norway","net"]);
+              
+                    </script>
+</body>
+</html>

@@ -1,0 +1,32 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>load method</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/css/bootstrap.min.css" rel="stylesheet">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script>
+        $(document).ready(function(){
+          $("button").click(function(){
+            $("#div1").load("demo_test.txt", function(responseTxt, statusTxt, xhr){
+              if(statusTxt == "success")
+                alert("External content loaded successfully!");
+              if(statusTxt == "error")
+                alert("Error: " + xhr.status + ": " + xhr.statusText);
+            });
+          });
+        });
+        </script>
+        </head>
+        <body>
+        
+        <div id="div1"><h2>Let jQuery AJAX Change This Text</h2></div>
+        
+        <button>Get External Content</button>
+        
+    
+</body>
+</html>
