@@ -1,0 +1,111 @@
+html,body{
+    overflow-x: hidden;
+}
+@media only screen and (max-width: 600px) {
+    #nav2{
+        display: inline-block;
+    }
+    .input-group{
+        width: 300px !important;
+    }
+}
+@media only screen and (max-width: 600px) {
+        .carddata{
+            flex-wrap: wrap;
+        }
+}
+@media only screen and (max-width: 600px) {
+    .carddetail{
+        width: 100%;
+    }
+}
+@media only screen and (max-width: 600px) {
+    .cardimage{
+       grid-template-columns: 100px 100px;
+    }
+}
+@media only screen and (max-width: 600px) {
+    #responsive {
+            display: flex;
+            flex-wrap: wrap;  
+            height: 200px;
+            width: 100%;
+            margin-bottom: -100px;
+        }
+    #nav3{
+        display: none;
+    }
+    }
+@media only screen and (min-width: 600px) {
+        #responsive .resnavbar, .resnav {
+                display: none;
+            }
+        #nav3{
+            display: flex;
+            flex-wrap: wrap;
+            margin-top: -1px;
+            margin-bottom: -55px;
+        }
+    }
+@media only screen and (min-width:900px){
+        #responsive .resnavbar, .resnav{
+            display: none;
+        }
+        #nav3{
+            display: flex;
+            flex-wrap: wrap;
+            margin-top: -1px;
+            margin-bottom: -55px;
+        }
+    }
+
+.navbar-text{
+    color: #FFFFFF;
+}
+.fade-button {
+    background-color: white;
+    border: gray solid 1px;
+    color: #00AFEF;
+    padding: 5px 5px;
+    text-align: center;
+    font-size: 10px;
+    margin-left: 5px;
+    margin-right: 5px;
+    transition: 0.3s;
+    /* margin: 10px 60px; */
+    width: 190px;
+}
+
+.fade-button:hover {
+    background-color: #00AFEF;
+    color: white;
+}
+@media only screen and (max-width: 600px) {
+    .item1
+     {
+        display: none;
+     }
+    .item2
+     {
+        display: inline-block;
+        text-align: start;
+        font-size: 12px;
+        font-weight: bold;
+    }
+    #nav1 
+    {
+         height: 40px;
+     }
+}
+  input::-webkit-input-placeholder {
+            font-size: 11px;
+        }
+
+
+        .feedback {
+            transition: all 0.6s ease-out;
+            cursor: pointer
+        }
+        .feedback:hover {
+            transform: scale(1.2)
+        }

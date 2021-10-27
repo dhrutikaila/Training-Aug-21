@@ -1,0 +1,40 @@
+<!--You have one h1 and one paragraph in your page with blue color border. 
+    For all the media screen and query selector (maximum width 500px) it should be change to red color border.-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Media Query Example</title>
+    <style>
+        h1{
+            text-align: center;
+            color: aqua;
+        }
+        p{
+            border-color: blue;
+            border-style: solid;
+           text-align: center;
+        }
+        @media only screen and (max-width:500px) {
+            p{
+            border-color: red;
+            border-style: solid;
+            }}
+            @media only screen and (min-width:600px) {
+            p{
+            border-color: green;
+            border-style: solid;
+            }
+        }
+    </style>
+</head>
+<body>
+    <p>
+        <h1>Media Query Practice Exercise</h1>
+        Resize the browser window and check whether it is working or not .
+        if the size is 500px or less than 500 px the border should be in Red colour otherwise it is blue colour.
+    </p>
+</body>
+</html>

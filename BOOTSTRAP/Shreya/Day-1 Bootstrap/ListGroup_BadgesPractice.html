@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>List group and badges</title>
+    <link rel="stylesheet" href="js/bootstrap.min.css">
+</head>
+
+<body>
+    <script src="js/bootstrap.bundle.min.js"></script>
+    <h1 class="display-4 text-center">Basic Typography</h1>
+    <div class="container ">
+        <div class="row">
+            <div class="col">
+                <div class="btn-group">
+                    <button class="btn btn-primary dropdown-toggle" data-bs-toggle="dropdown" type="button">
+                        Utilities
+                    </button>
+                    <ul class="dropdown-menu">
+                        <li><a href="BasicTypography.html" class="dropdown-item">Basic Typography</a></li>
+                        <li><a href="TextAndDisplay_alignment.html" class="dropdown-item">Text Alignment & Display</a>
+                        </li>
+                        <li><a href="Float_PositionPractice.html" class="dropdown-item">Float & Position</a></li>
+                        <li><a href="TextColor.html" class="dropdown-item">Colors & Background</a></li>
+                        <li><a href="Sizing_BorderPractice.html" class="dropdown-item">Sizing</a></li>
+                        <li><a href="BreakPointExample.html" class="dropdown-item">Breakpoints</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="col">
+                <div class="btn-group">
+                    <button class="btn btn-success dropdown-toggle" data-bs-toggle="dropdown" type="button">
+                        CSS components
+                    </button>
+                    <ul class="dropdown-menu">
+                        <li><a href="Button_ButtonGroup.html" class="dropdown-item">Buttons & Buttons Groups</a></li>
+                        <li><a href="NavbarPractice.html" class="dropdown-item">Navbars & Nav</a></li>
+                        <li><a href="ListGroup_BadgesPractice.html" class="dropdown-item">ListGroups & Badges</a></li>
+                        <li><a href="InputGroupPractice.html" class="dropdown-item">Input Groups</a></li>
+                        <li><a href="Alerts_Progressbar.html" class="dropdown-item">Alerts and Progress Bars</a></li>
+                        <li><a href="Table_Pagination.html" class="dropdown-item">Tables & Pagination</a></li>
+                        <li><a href="Card_CardGroup.html" class="dropdown-item">Working with Cards</a></li>
+                        <li><a href="Media_Object.html" class="dropdown-item">Media Objects</a></li>
+                        <li><a href="Breadcrum.html" class="dropdown-item">Breadcrumbs</a></li>
+                        <li><a href="CarouselPractice.html" class="dropdown-item">Carousel</a></li>
+                        <li><a href="Badge.html" class="dropdown-item">Badge</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="col">
+                <div class="btn-group">
+                    <button id="btnGroupDrop3" class="btn btn-warning dropdown-toggle" data-bs-toggle="dropdown"
+                        type="button">
+                        Grid & flexbox
+                    </button>
+                    <ul class="dropdown-menu" id="btnGroupDrop3">
+                        <li><a href="GridPractice.html" class="dropdown-item"> Grid Alignment</a></li>
+                        <li><a href="FlexClass.html" class="dropdown-item">Flexbox Classes</a></li>
+                        <li><a href="AutoMargin_Ordering.html" class="dropdown-item"> Auto Margin wrap & Ordering</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div class="col">
+                <div class="btn-group ">
+                    <button id="btnGroupDrop3" class="btn btn-danger dropdown-toggle" data-bs-toggle="dropdown"
+                        type="button">
+                        Javascript Widgets
+                    </button>
+                    <ul class="dropdown-menu" id="btnGroupDrop3">
+                        <li><a href="Collapse_Accordion.html" class="dropdown-item">Collapse & Accordion</a></li>
+                        <li><a href="Tooltip.html" class="dropdown-item">Tooltips</a></li>
+                        <li><a href="Popover.html" class="dropdown-item">Popovers</a></li>
+                        <li><a href="ModalPractice.html" class="dropdown-item">Modals</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+    <hr>
+    <div class="content">
+        <ul class="list-group mt-5 mb-5">
+            <li class="list-group-item">Item 1</li>
+            <li class="list-group-item">Item 2</li>
+            <li class="list-group-item">Item 3</li>
+            <li class="list-group-item">Item 4</li>
+            <li class="list-group-item">Item 5</li>
+        </ul>
+        <!--Actinable list group-->
+        <h4>Actionable group</h4>
+        <ul class="list-group mt-5 mb-5">
+            <a class="list-group-item list-group-item-action" href="#">Item 1</a>
+            <a class="list-group-item list-group-item-action" href="#">Item 2</a>
+            <a class="list-group-item list-group-item-action" href="#">Item 3</a>
+            <a class="list-group-item list-group-item-action" href="#">Item 4</a>
+            <a class="list-group-item list-group-item-action" href="#">Item 5</a>
+        </ul>
+        <!--Flush :-- remove some borders and rounded corners to the list-->
+        <h4>Flush Example</h4>
+        <ul class="list-group list-group-flush">
+            <li class="list-group-item">Item 1</li>
+            <li class="list-group-item">Item 2</li>
+            <li class="list-group-item">Item 3</li>
+            <li class="list-group-item">Item 4</li>
+            <li class="list-group-item">Item 5</li>
+        </ul>
+        <!-- numbered list group items-->
+        <h4>numbered Example</h4>
+        <ul class="list-group list-group-numbered mb-5">
+            <li class="list-group-item">Item 1</li>
+            <li class="list-group-item">Item 2</li>
+            <li class="list-group-item">Item 3</li>
+            <li class="list-group-item">Item 4</li>
+            <li class="list-group-item">Item 5</li>
+        </ul>
+        <h4>Horizontal Example</h4>
+        <ul class="list-group list-group-horizontal ">
+            <li class="list-group-item">Item 1</li>
+            <li class="list-group-item">Item 2</li>
+            <li class="list-group-item">Item 3</li>
+            <li class="list-group-item">Item 4</li>
+            <li class="list-group-item">Item 5</li>
+        </ul><br>
+        <h4>contextual classes</h4>
+        <ul class="list-group mt-3">
+            <li class="list-group-item">Item 1</li>
+            <li class="list-group-item list-group-item-primary">Item 2</li>
+            <li class="list-group-item list-group-item-secondary">Item 3</li>
+            <li class="list-group-item list-group-item-info">Item 4</li>
+            <li class="list-group-item list-group-item-warning">Item 5</li>
+            <li class="list-group-item list-group-item-light">Item 5</li>
+            <li class="list-group-item list-group-item-success">Item 5</li>
+            <li class="list-group-item list-group-item-dark">Item 5</li>
+            <li class="list-group-item list-group-item-danger">Item 5</li>
+        </ul><br>
+        <!--actionable contextual classes-->
+        <h4>Actionable contextual classes</h4>
+        <ul class="list-group mt-3 mb-3">
+            <li class="list-group-item">Item 1</li>
+            <li class="list-group-item list-group-item-primary list-group-item-action">Item 2</li>
+            <li class="list-group-item list-group-item-secondary list-group-item-action">Item 3</li>
+            <li class="list-group-item list-group-item-info list-group-item-action">Item 4</li>
+            <li class="list-group-item list-group-item-warning list-group-item-action">Item 5</li>
+            <li class="list-group-item list-group-item-light list-group-item-action">Item 5</li>
+            <li class="list-group-item list-group-item-success list-group-item-action">Item 5</li>
+            <li class="list-group-item list-group-item-dark list-group-item-action">Item 5</li>
+            <li class="list-group-item list-group-item-danger list-group-item-action">Item 5</li>
+        </ul>
+        <!--badges-->
+        <h4>Badges</h4>
+        <ul class="list-group mt-3">
+            <li class="list-group-item">Item 1</li>
+            <li class="list-group-item d-flex justify-content-between align-items-center">Item 2
+                <span class="badge bg-primary rounded-pill"></span>
+            </li>
+            <li class="list-group-item">Item 3</li>
+            <li class="list-group-item">Item 4</li>
+            <li class="list-group-item">Item 5</li>
+        </ul>
+
+    </div>
+</body>
+
+</html>

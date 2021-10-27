@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <form action="">
+        <br>
+        <label for="date">Please enter date :</label>
+        <input type="text" id="dtDate" placeholder="mm-dd-yyyy format"><br><br>
+        <button type="button" onclick="dateCheck()">Click here</button>
+        <p id="error"></p>
+        <p id="dated"></p>
+    </form>
+    <script>
+        function dateCheck() {
+            var date = document.getElementById('dtDate').value;
+            //check whether date is entered or not 
+            if (date == " ") {
+                alert("please enter date");
+            }
+            //pattern for checking date format
+            var datepat = /^([0][0-9]|11|12)\-([0-2][0-9]|30|31)\-(19|20)\d{2}$/g;
+            if (date.match(datepat) == null) {
+                alert("Date must be in proper format")
+            }
+            //convert string date to array by using split 
+            var data = date.split('-');
+            var month = parseInt(data[0]);
+            var day = parseInt(data[1]);
+            var year = parseInt(data[2]);
+            //check wether month is less than 12 and day is less than 31
+            if (month > 12 && day > 31) {
+                document.getElementById('error').innerHTML = 'Please enter valid month or day';
+            }
+            //check the 30 days month if days is greater 30 than its give error
+            if (month == 4 || month == 6 || month == 9 || month == 11) {
+                if (day > 30) {
+                    document.getElementById('error').innerHTML = 'Please check the day because this is 30 days month';
+                }
+            }
+            //for leap year
+            else if (month == 2) {
+                if (year % 4 == 0 || year % 100 == 0 || year % 400 == 0) {
+                    //if day is greater than 29 it gives error in leap year
+                    if (day > 29) {
+                        document.getElementById('error').innerHTML = 'Please enter valid day because it is leap year';
+                    }
+                }
+            }
+            //print the correct date
+            document.getElementById('dated').innerHTML = 'this is correct date format ' + date;
+        }
+    </script>
+</body>
+
+</html>

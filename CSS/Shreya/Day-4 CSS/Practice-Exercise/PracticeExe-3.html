@@ -1,0 +1,33 @@
+<!--Hide elements with Media queries
+https://www.w3schools.com/css/tryit.asp?filename=tryresponsive_mediaquery_breakpoints-->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #remove {
+            background-color: blue;
+            padding: 20px;
+        }
+
+        @media screen and (max-width: 600px) {
+            #remove {
+                display: none;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <h2>Hide elements on different screen sizes</h2>
+    
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellendus, fugit quia? Ipsum, vitae quasi! Sapiente sunt saepe quam 
+        voluptatum dignissimos laborum tempora vero amet, exercitationem libero laudantium, voluptates veniam asperiores.</p>
+        <p id = "remove">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Placeat illum dicta laboriosam ex. Dicta eos hic 
+            ex earum sint porro! Recusandae quia dolores hic blanditiis repudiandae nulla delectus iusto dolorum.</p>
+</body>
+</html>

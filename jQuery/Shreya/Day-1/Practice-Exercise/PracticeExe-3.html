@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PracticeExe-3</title>
+    <script src="../jquery-3.6.0.min.js"></script>
+</head>
+
+<body>
+    <form action="">
+        <label for="subject">Please select your technology... </label>
+        <br><br>
+        <input type="radio" id="sub1" value="PHP" name="sub">PHP
+        <input type="radio" id="sub2" value="ASP.NET" name="sub">ASP.NET
+        <input type="radio" id="sub3" value="ASP" name="sub">ASP
+        <input type="radio" id="sub4" value="JSP" name="sub">JSP
+        <input type="radio" id="sub4" value="perl" name="sub">perl
+        <input type="radio" id="sub5" value="Cold Fusion" name="sub">Cold Fusion
+        <input type="radio" id="sub6" value="Other" name="sub">Other
+        <hr>
+        <span id="result"></span>
+    </form>
+    <script>
+        $(document).ready(function () {
+                $(":radio").click(function(){   
+                //console.log("hii");
+                var res = $("input[name='sub']:checked").val();
+                 //console.log(res);
+                $("#result").html("You have selected "+res);
+                });
+            });
+    </script>
+</body>
+
+</html>

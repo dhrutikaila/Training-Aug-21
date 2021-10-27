@@ -1,0 +1,43 @@
+<!--Use Window.location object to navigate on another page-->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <button onclick="myFun()">Click here !</button>
+    <button onclick="myHistory()">Click Here for history!</button>
+    <br>
+    <br>
+    <button onclick="openWindow()">Open Window</button>
+    <button onclick="ResizeWindow()">Resize Window</button>
+
+    <script>
+        //when we click on the button it will navigate to google.com
+        function myFun() {
+            window.location.href = "https://www.google.com/";
+        }
+        //it work as a google back (loads the previous url) 
+        function myHistory() {
+            console.log("Myhistory called")
+            window.history.back();
+        }
+        var myWindow ;
+        //open a new window
+        function openWindow() {
+          myWindow =  window.open("","","width = 100,height = 100");
+        }
+        //resize the window
+        function ResizeWindow() {
+           myWindow = window.resizeTo(250, 250);
+           myWindow.focus();
+        }
+    </script>
+</body>
+
+</html>

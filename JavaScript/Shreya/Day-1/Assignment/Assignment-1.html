@@ -1,0 +1,109 @@
+<!--
+    Create an application for performing basic math operations like Addition, Subtraction,   Multiplication and Division.
+
+Consider following elements:
+
+ Label : “Please enter first number : ” with Text Box
+ Label : “Please enter second number : ” with Text Box
+ Label : “Please select operation you want to perform : ” with set of Radio Buttons like “Addition”, “Subtraction”, “Multiplication”
+  and “Division” presented in vertical manner.
+Two buttons,  “Calculate” and “Reset”
+ Label: “Result is: ” with final result – Place all the checks to make sure that user enters only numeric values
+  for text boxes. Clicking on “Calculate” button will perform the requested operation and   the result will be displayed 
+  below “Calculate” and “Reset” buttons in the form of text,   e.g. : “Result is : 10”. –
+  Clicking on “Reset” button will reset all the form information including radio button   selection and result text.
+-->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> Java script Assignment-1</title>
+    <link rel="stylesheet" href="bootstrap.min.css">
+</head>
+<body>
+    <script src="bootstrap.bundle.min.js"></script>
+    <div class="container">
+        <form action="">
+            <div class="raw mt-3">
+                <div class="col-3">
+                    <label for="name">Please Enter first number</label>
+                    <input type="text" id="num1" placeholder="Enter number" class="form-control">
+                </div>
+            </div>
+            <div class="raw mt-3">
+                <div class="col-3">
+                    <label for="name">Please Enter second number</label>
+                    <input type="text" id="num2" placeholder="Enter number" class="form-control">
+                </div>
+            </div>
+            <div class="raw mt-3">
+                <div class="col-3">
+                    <div class="form-check">
+                        <input class="form-check-input" type="radio" name="opr" id="addition">
+                        <label class="form-check-label" for="Addition"  value="addition"> Addition</label>
+                    </div>
+                    <div class="form-check">
+                        <input class="form-check-input" type="radio" name="opr" id="subtraction">
+                        <label class="form-check-label" for="Subtraction"  value="subtraction"> Subtraction</label>
+                    </div>
+                    <div class="form-check">
+                        <input  class="form-check-input" type="radio" name="opr" id="multiplication">
+                        <label class="form-check-label" for="Multiplication" value="multiplication"> Multiplication</label>
+                    </div>
+                    <div class="form-check">
+                        <input class="form-check-input" type="radio" name="opr" id="division">
+                        <label class="form-check-label" for="Division"  value="division"> Division</label>
+                    </div>
+                </div>
+            </div>
+            <div class="raw mt-3">
+                <div class="col-3">
+                    <p>Result is: <span id="ans"></span></p>
+                </div>
+            </div>
+            <div class="raw mt-3">
+                <div class="col-3">
+                   <button class="btn btn-primary" type="button" onclick="calculate(opr.value)">Calculate</button>
+                   <button class="btn btn-primary" type="button" onclick="reset()">Reset</button>
+                </div>
+            </div>
+        </form>
+    </div>
+    <script>
+        function reset(){
+            document.getElementById('num1').value="";
+            document.getElementById('num2').value="";
+            document.getElementById('ans').value="";
+        }
+        function calculate(opr){
+            var no1=parseInt(document.getElementById('num1').value);
+            var no2=parseInt(document.getElementById('num2').value);
+            var res;
+            if(document.getElementById('addition').checked==true)
+            {
+                res = no1 + no2;
+                document.getElementById('ans').innerHTML ='Addition is '+ res;
+            }
+            if(document.getElementById('subtraction').checked==true)
+            {
+                res = no1 - no2;
+                document.getElementById('ans').innerHTML ='Subtraction is' + res;
+            }
+            if(document.getElementById('multiplication').checked==true)
+            {
+                res = no1 * no2;
+                document.getElementById('ans').innerHTML = 'Multiplication is '+ res;
+            }
+            if(document.getElementById('division').checked==true)
+            {
+                res = no1 / no2;
+                document.getElementById('ans').innerHTML ='Division is ' + res ;
+            }
+           
+        }
+    </script>
+</body>
+</html>

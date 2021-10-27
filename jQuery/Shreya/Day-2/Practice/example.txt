@@ -1,0 +1,3 @@
+<h2>Hello Good morning</h2>
+<h4>jQuery and AJAX Learning</h4>
+<h2 id="intro">Load method</h2>

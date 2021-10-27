@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="../jquery-3.6.0.min.js"></script>
+</head>
+
+<body>
+    <p>Please Select Country ::--</p>
+    <select name="" id="countryname">
+        <option value="Defalut">--Please Select--</option>
+    </select><br>
+    <hr>
+    <span id="result"></span>
+    <script>
+        $(document).ready(function () {
+            //var countryname = ["India", "UK", "US", "CAD", "Italy"];
+            $('#countryname').append($('<option value="India"></option>').text("India"));
+            $('#countryname').append($('<option value="UK"></option>').text("UK"));
+            $('#countryname').append($('<option value="US"></option>').text("US"));
+            $('#countryname').append($('<option value="CAD"></option>').text("CAD"));
+            $('#countryname').append($('<option value="Italy"></option>').text("Italy"));
+          
+            $('#countryname').click(function () {
+                if ($('#countryname').val() == "Defalut") {
+                    $("#result").html("<ul><li>India</li><li>UK</li><li>US</li><li>CAD</li><li>Italy</li></ul>");
+                }
+                else {
+                    $("li").hide();
+                    $('#result').html("Your selected country is :" + $(this).val());
+                }
+            });
+        });
+    </script>
+</body>
+</html>

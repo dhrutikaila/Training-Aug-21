@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <style>
+ #panel, #flip {
+  padding: 5px;
+  text-align: center;
+  background-color: #e5eecc;
+  border: solid 1px #c3c3c3;
+}
+#panel {
+  padding: 50px;
+  display: none;
+}
+    </style>
+</head>
+
+<body>
+    <p>hello everyone</p>
+    <p id="demo">Learning jquery</p>
+    <h1>Shreya Thakkar</h1>
+    <p>List-1</p>
+    <ul>
+        <li>blue</li>
+        <li>red</li>
+        <li>black</li>
+    </ul>
+    <p>List-2</p>
+    <ul>
+        <li>Car</li>
+        <li>bike</li>
+        <li>Activa</li>
+    </ul>
+    <button id="hide">Hide</button>
+   <button id="Show">Show</button>
+    <p>Select href attributes</p>
+    <a href="#">jQuery Learning</a>
+    <a href="#" target="_blank">HTML Learning</a>
+    <a href="#">CSS Learning</a><br><br>
+    <button>Click me !</button>
+    <hr>
+    <table border="1">
+        <tr>
+            <th>
+                Employee Id
+            </th>
+            <th>
+                Employee Name
+            </th>
+        </tr>
+        <tr>
+            <td>101</td>
+            <td>Shreya</td>
+        </tr>
+        <tr>
+            <td>102</td>
+            <td>Diya</td>
+        </tr>
+        <tr>
+            <td>103</td>
+            <td>Dharal</td>
+        </tr>
+        <tr>
+            <td>104</td>
+            <td>Riya</td>
+        </tr>
+        <tr>
+            <td>105</td>
+            <td>Dhyanvi</td>
+        </tr>
+        <tr>
+            <td>106</td>
+            <td>Bhavya</td>
+        </tr>
+    </table><br>    
+    <div id="div1" style="width: 100px;height: 100px; background-color: aqua;"></div><br>
+    <div id="div2" style="width: 100px;height: 100px; background-color: red;"></div><br>
+    <div id="div3" style="width: 100px;height: 100px; background-color:  yellow;"></div><br>
+    <button >Click for fade example</button>
+    <div id="flip">
+        click here
+    </div>
+    <div id="panel">
+        hello world !
+    </div>
+    <!--id selector uses the -->
+    <script>
+        $(document).ready(function () {
+            $("button").click(function () {
+                //element selector 
+                $("h1").hide();
+                $("#demo").hide();
+                //it will select the first ul of first li element 
+                $("ul li:first").hide();
+                //it will select first li of every element 
+                $("ul li:first-child").hide();
+                //select href element
+                $("[href]").hide();
+                //select href with target
+                $("a[target!='_blank']").hide();
+
+            });
+            //when we click on the p tag it will hide that element 
+            $("p").click(function () {
+                $(this).hide();
+            });
+            $("h1").dblclick(function () {
+                $(this).hide();
+            });
+            $("#demo").mouseenter(function () {
+                alert("You entered p1!");
+            });
+            //first function is execute when mouse is entered on html element nd 2nd is execute when mouse is leave that element
+            $("#demo").hover(function () {
+                alert("You entered p1!");
+            },
+            function(){
+                alert("leave the p1")
+            });
+            $("#hide").click(function(){
+                $("p").hide();
+            });
+            $("#Show").click(function(){
+                $("p").show();
+            });
+            $("button").click(function(){
+                $("#div1").fadeToggle();
+                $("#div2").fadeOut("slow");
+                $("#div3").fadeToggle(5000);
+            });
+            $("#flip").click(function(){
+                // $("#panel").slideDown("slow");
+                // $("#panel").slideUp("slow");
+                $("panel").slideToggle("slow");
+            });
+            $("#div1").animate({left:'300px'})
+
+        });
+        //even tr is yellow color by using jquery
+        $("tr:even").css("background-color", "yellow");
+    </script>
+</body>
+
+</html>

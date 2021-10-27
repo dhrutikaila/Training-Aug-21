@@ -1,0 +1,96 @@
+<!--Design a form for storing employee details. 
+    (EmployeeID, Employee name, age, Gender, designation, salary, location, Email ID, Date of Joining and contact number) Validation
+    required EmployeeID should be at least 5 character long. use regular Expression Age should be a number Each field should contain
+    value Email ID should be in proper format Date of joining should be in date format Location should be in the drop down list Use
+    radio buttons for Gender-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registration form</title>
+    <link rel="stylesheet" href="bootstrap.min.css">
+</head>
+<body>
+    <script src="bootstrap.bundle.min.js"></script>
+    <script src="form.js"></script>
+    <div class="container">
+        <h2 class="text-center mt-3">Employee Registration From</h2>
+        <div class="row mt-3">
+            <div class="col-6">
+                <label for="eid">Employee Id</label>
+                <input type="text" id="eid" placeholder="Enter employee id" class="form-control">
+            </div>
+            <br>
+            <div class="col-6">
+                <label for="ename">Employee Name</label>
+                <input type="text" id="ename" placeholder="Enter employee name" class="form-control">
+            </div>
+        </div>
+        <div class="row mt-3">
+            <div class="col-6">
+                <label for="eage">Employee Age</label>
+                <input type="text" id="eage" placeholder="Enter employee age" class="form-control">
+            </div>
+            <br>
+            <div class="col-6">
+                <label class="form-check-label" for="gender"> Gender</label>
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" name="gender" id="male">
+                    <label class="form-check-label" for="Addition">Male</label>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" name="gender" id="female">
+                    <label class="form-check-label" for="female">Female</label>
+                </div>
+            </div>
+        </div>
+        <div class="row mt-3">
+            <div class="col-6">
+                <label for="email">Employee Email</label>
+                <input type="text" id="empEmail" placeholder="Enter employee email" class="form-control">
+            </div>
+            <br>
+            <div class="col-6">
+                <label for="esalary">Employee Salary</label>
+                <input type="text" id="esalary" placeholder="Enter employee Salary" class="form-control">
+            </div>
+        </div>
+        <div class="row mt-3">
+            <div class="col-6">
+                <label for="email">Contact Number</label>
+                <input type="text" id="eContactno" placeholder="Enter employee contact number" class="form-control">
+            </div>
+            <br>
+            <div class="col-6">
+                <label for="esalary">Employee Doj</label>
+                <input type="text" id="edoj" placeholder="Enter employee date of joinig" class="form-control">
+            </div>
+        </div>
+        <div class="row mt-3">
+            <div class="col-6">
+                <label for="elocation">Employee location</label>
+                <select class="form-select" aria-label="Default select example" id="elocation">
+                    <option selected value="0">Open this select menu</option>
+                    <option value="1">Ahmedabad</option>
+                    <option value="2">Surat</option>
+                    <option value="3">Vadodara</option>
+                </select>
+            </div>
+            <div class="col-6">
+                <label for="edesignation">Employee Designation</label>
+                <input type="text" id="edesignation" placeholder="Enter employee designation" class="form-control">
+            </div>
+        </div>
+        <div class="row mt-3">
+            <div class="col-6"></div>
+            <button class="btn btn-primary" onclick="myFunc()">Submit</button>
+        </div>
+    </div>
+    </div>
+    <div id="display">
+
+    </div>
+</body>
+</html>

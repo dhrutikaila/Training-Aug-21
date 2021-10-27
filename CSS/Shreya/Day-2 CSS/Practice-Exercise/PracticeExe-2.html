@@ -1,0 +1,67 @@
+<!--Practice position properties static, relative, fixed and absolute.-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Position Propery</title>
+    <style>
+         div.static{
+            position: static;
+            border: 3px solid blue;
+            }
+            div.Relative {
+                position: relative;
+                left: 10px;
+                top: 70px;
+                width: 400px;
+                height: 100px;
+                border: 2px solid grey;
+                border: 3px solid #73AD21;
+               }
+               div.Fixed {
+                    position: fixed;
+                    top:100px;
+                    border: 3px solid #73AD21;
+                }
+                div.absolute {
+                    position: absolute;
+                    top: 80px;
+                    right: 0;
+                    width: 200px;
+                    height: 100px;
+                    border: 3px solid #73AD21;
+                    }
+                    div.sticky {
+                    position: sticky;
+                    padding: 5px;
+                    top: 900px;
+                    background-color: #cae8ca;
+                    border: 2px solid #4CAF50;
+                    }
+    </style>
+</head>
+<body>
+    
+    <div class="static">
+        position is static; which is not positioned in any special way; it is 
+        always positioned according to the normal flow of the page
+    </div>
+    <br>
+    <br>
+    <div class="Relative">
+        position is Relative; here we can set the top,right,bottom,and left properties and it will adjust away from the 
+        normal position.
+    </div>
+    
+    <div class="Fixed">
+        position is Fixed; which means it always stays in the same place even if the page is scrolled. 
+        The top, right, bottom, and left properties are used to position the element
+    </div>
+    <div class="absolute">This div element has position: absolute;</div>
+   <br>
+   <br>
+   <div class="sticky">I am sticky!</div>
+</body>
+</html>

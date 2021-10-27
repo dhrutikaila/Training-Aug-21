@@ -1,0 +1,93 @@
+<!--Image Gallery-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Image Gallery</title>
+    <style>
+        body{
+            margin-right: 10px;
+            margin-left: 10px;
+            background-color:lightpink;
+        }
+        img{
+            height: 200px;
+            width: 200px;
+        }
+        h1{
+            text-align: center;
+        }
+        .flex-container{
+        
+            display: flex;
+            flex-wrap: wrap;
+            flex-direction: row;
+            align-content: space-around;
+        }
+        .flex-container>div{
+            padding: 10px;
+            margin: 10px;
+        }
+        @media (max-width: 800px) {
+            .column {
+                flex: 50%;
+                max-width: 50%;
+                flex-direction: column;
+            }
+        }
+            @media (max-width: 600px) {
+            .column {
+                flex: 100%;
+                max-width: 100%;
+            }
+        }
+
+    </style>
+</head>
+<body>
+    <h1>Image Gallery</h1>
+    <div class="flex-container">
+        <div class="column">
+            <img src="pic1.jpeg">
+            <img src="pic2.jpeg">
+            <img src="pic3.jpeg">
+            <img src="pic4.jpeg">
+            <img src="pic5.jpeg">
+            <img src="pic6.jpeg">
+            <img src="pic1.jpeg">
+            <img src="pic2.jpeg">
+            <img src="pic3.jpeg">
+            <img src="pic4.jpeg">
+            <img src="pic5.jpeg">
+            <img src="pic6.jpeg">
+            <img src="pic1.jpeg">
+            <img src="pic2.jpeg">
+            <img src="pic3.jpeg">
+            <img src="pic4.jpeg">
+            <img src="pic5.jpeg">
+            <img src="pic6.jpeg">
+            <img src="pic1.jpeg">
+            <img src="pic2.jpeg">
+            <img src="pic3.jpeg">
+            <img src="pic4.jpeg">
+            <img src="pic5.jpeg">
+            <img src="pic6.jpeg">
+            <img src="pic6.jpeg">
+            <img src="pic1.jpeg">
+            <img src="pic2.jpeg">
+            <img src="pic3.jpeg">
+            <img src="pic4.jpeg">
+            <img src="pic1.jpeg">
+            <img src="pic2.jpeg">
+            <img src="pic3.jpeg">
+            <img src="pic4.jpeg">
+            <img src="pic5.jpeg">
+            <img src="pic6.jpeg">
+        </div>
+            
+    </div>
+    
+</body>
+</html>

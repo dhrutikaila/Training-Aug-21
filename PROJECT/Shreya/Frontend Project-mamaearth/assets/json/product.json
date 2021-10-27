@@ -1,0 +1,310 @@
+{
+    "Product": [
+       {
+           "ProductId": "101",
+           "Description": "Onion Hair Oil for Hair Regrowth and Hair Fall Control with Redensyl, 150ml",
+           "Rate": "4.8",
+           "Price":"399",
+           "cardimg":"../assets/img/img1.jpg",
+           "type" :"best seller"
+
+       },
+       {
+        "ProductId": "102",
+        "Description": "Onion Shampoo with Onion and Plant Keratin for Hair Fall Control - 250ml",
+        "Rate": "4.8",
+        "Price":"349",
+        "cardimg":"../assets/img/img3.jpg",
+        "type" :"best seller"
+    },
+    {
+        "ProductId": "103",
+        "Description": "Vitamin C Foaming Face Wash with Vitamin C and Turmeric for Skin Illumination - 150ml",
+        "Rate": "4.8",
+        "Price":"399",
+        "cardimg":"../assets/img/img4.jpeg",
+        "type" :"best seller"
+    },
+    
+    {
+        "ProductId": "104",
+        "type" :"item",
+        "carouselimag":"../assets/img/image 1.jpeg"
+    },
+    {
+        "ProductId": "105",
+        "Description": "Anti-Hair Fall Spa Kit",
+        "Rate": "4.8",
+        "Price":"349",
+        "actualPrice":"600",
+        "cardimg":"../assets/img/Best Deals/img1.jpg",
+        "type" :"best Deals"
+    },
+    {
+        "ProductId": "106",
+        "Description": "Aqua Glow Skin Refreshing Kit for Hydrated &amp; Fresh Skin",
+        "Rate": "4.9",
+        "Price":"349",
+        "actualPrice":"1025",
+        "cardimg":"../assets/img/Best Deals/img2.jpg",
+        "type" :"best Deals"
+    },
+    {
+        "ProductId": "107",
+        "Description": "Acne mark reduction kit",
+        "Rate": "4.5",
+        "Price":"349",
+        "actualPrice":"800",
+        "cardimg":"../assets/img/Best Deals/img3.jpg",
+        "type" :"best Deals"
+    },
+    {
+        "ProductId": "108",
+        "Description": "Onion Hair Oil for Hair Regrowth and Hair Fall Control, 250ml",
+        "Rate": "4.8",
+        "Price":"440",
+        "cardimg":"../assets/img/Onion Range/img1.jpg",
+        "type" :"Onion Range"
+    },
+    {
+        "ProductId": "109",
+        "Description": "Onion Shampoo with Onion &amp; Plant Keratin for Hair Fall Control - 400ml",
+        "Rate": "4.8",
+        "Price":"590",
+        "cardimg":"../assets/img/Onion Range/img2.jpg",
+        "type" :"Onion Range"
+    },
+    {
+        "ProductId": "110",
+        "Description": "Onion Conditioner for Hair Growth and Hair Fall Control with Onion and Coconut, 250ml",
+        "Rate": "4.8",
+        "Price":"420",
+        "cardimg":"../assets/img/Onion Range/img3.jpg",
+        "type" :"Onion Range"
+    },
+    {
+        "ProductId": "111",
+        "Description": "Vitamin C Face Wash with Vitamin C and Turmeric for Skin Illumination - 100ml",
+        "Rate": "4.8",
+        "Price":"249",
+        "cardimg":"../assets/img/Vitamin C/img1.jpg",
+        "type" :"Vitamin C Range"
+    },
+    {
+        "ProductId": "112",
+        "Description": "Skin Illuminate Face Serum for Radiant Skin with Vitamin C and Turmeric - 30 g",
+        "Rate": "4.8",
+        "Price":"349",
+        "cardimg":"../assets/img/Vitamin C/img2.jpg",
+        "type" :"Vitamin C Range"
+    },
+    {
+        "ProductId": "113",
+        "Description": "Vitamin C Under Eye Cream with Gotu Kola &amp;Brightening Under Eyes - 20 ml",
+        "Rate": "5.0",
+        "Price":"989",
+        "cardimg":"../assets/img/Vitamin C/img3.jpg",
+        "type" :"Vitamin C Range"
+    },
+    {
+        "ProductId": "114",
+        "Description": "Ubtan Face Mask with Saffron and Turmeric for Skin Brightening and Tan Removal - 100g",
+        "Rate": "4.8",
+        "Price":"499",
+        "cardimg":"../assets/img/Ubtan Range/img1.jpg",
+        "type" :"Ubtan Range"
+    },
+    {
+        "ProductId": "115",
+        "Description": "Ubtan Foaming Face Wash with Turmeric and Saffron for Tan Removal - 150ml",
+        "Rate": "4.9",
+        "Price":"349",
+        "cardimg":"../assets/img/Ubtan Range/img2.jpg",
+        "type" :"Ubtan Range"
+    },
+    {
+        "ProductId": "116",
+        "Description": "Ubtan Face Scrub with Turmeric and Walnut for Tan Removal - 100g",
+        "Rate": "4.8",
+        "Price":"399",
+        "cardimg":"../assets/img/Ubtan Range/img3.jpg",
+        "type" :"Ubtan Range"
+    },
+    {
+        "ProductId": "117",
+        "Description": "Onion Conditioner for Hair Growth and Hair Fall Control with Onion and Coconut, 250ml",
+        "Rate": "4.8",
+        "Price":"349",
+        "cardimg":"../assets/img/img3.jpg",
+        "type" :"Hair"
+    },
+    {
+        "ProductId": "118",
+        "Description": "Onion Conditioner for Hair Growth and Hair Fall Control with Onion and Coconut, 250ml",
+        "Rate": "4.8",
+        "Price":"349",
+        "cardimg":"../assets/img/img3.jpg",
+        "type" :"Hair"
+    } ,
+    {
+        "ProductId": "119",
+        "Description": "Onion Conditioner for Hair Growth and Hair Fall Control with Onion and Coconut, 250ml",
+        "Rate": "4.8",
+        "Price":"349",
+        "cardimg":"../assets/img/img3.jpg",
+        "type" :"Hair"
+    },
+    {
+        "ProductId": "116",
+        "Description": "Onion Conditioner for Hair Growth and Hair Fall Control with Onion and Coconut, 250ml",
+        "Rate": "4.8",
+        "Price":"349",
+        "cardimg":"../assets/img/img3.jpg",
+        "type" :"skin"
+    },
+    {
+        "ProductId": "117",
+        "Description": "Onion Conditioner for Hair Growth and Hair Fall Control with Onion and Coconut, 250ml",
+        "Rate": "4.8",
+        "Price":"349",
+        "cardimg":"../assets/img/img3.jpg",
+        "type" :"skin"
+    },
+    {
+        "ProductId": "118",
+        "Description": "Onion Conditioner for Hair Growth and Hair Fall Control with Onion and Coconut, 250ml",
+        "Rate": "4.8",
+        "Price":"349",
+        "cardimg":"../assets/img/img3.jpg",
+        "type" :"skin"
+    },
+    {
+        "ProductId": "119",
+        "Description": "Onion Conditioner for Hair Growth and Hair Fall Control with Onion and Coconut, 250ml",
+        "Rate": "4.8",
+        "Price":"349",
+        "cardimg":"../assets/img/img3.jpg",
+        "type" :"skin"
+    },
+    {
+        "ProductId": "120",
+        "Description": "Onion Conditioner for Hair Growth and Hair Fall Control with Onion and Coconut, 250ml",
+        "Rate": "4.8",
+        "Price":"349",
+        "cardimg":"../assets/img/img3.jpg",
+        "type" :"Colorcare"
+    },
+    {
+        "ProductId": "121",
+        "Description": "Onion Conditioner for Hair Growth and Hair Fall Control with Onion and Coconut, 250ml",
+        "Rate": "4.8",
+        "Price":"349",
+        "cardimg":"../assets/img/img3.jpg",
+        "type" :"colorcare"
+    },
+    {
+        "ProductId": "122",
+        "Description": "Onion Conditioner for Hair Growth and Hair Fall Control with Onion and Coconut, 250ml",
+        "Rate": "4.8",
+        "Price":"349",
+        "cardimg":"../assets/img/img3.jpg",
+        "type" :"colorcare"
+    },
+    {
+        "ProductId": "123",
+        "Description": "Onion Conditioner for Hair Growth and Hair Fall Control with Onion and Coconut, 250ml",
+        "Rate": "4.8",
+        "Price":"349",
+        "cardimg":"../assets/img/img3.jpg",
+        "type" :"Body range"
+    },
+    {
+        "ProductId": "124",
+        "Description": "Onion Conditioner for Hair Growth and Hair Fall Control with Onion and Coconut, 250ml",
+        "Rate": "4.8",
+        "Price":"349",
+        "cardimg":"../assets/img/img3.jpg",
+        "type" :"Body range"
+    },
+    {
+        "ProductId": "125",
+        "Description": "Onion Conditioner for Hair Growth and Hair Fall Control with Onion and Coconut, 250ml",
+        "Rate": "4.8",
+        "Price":"349",
+        "cardimg":"../assets/img/img3.jpg",
+        "type" :"Body range"
+    },
+    {
+        "ProductId": "126",
+        "Description": "Onion Conditioner for Hair Growth and Hair Fall Control with Onion and Coconut, 250ml",
+        "Rate": "4.8",
+        "Price":"349",
+        "cardimg":"../assets/img/img3.jpg",
+        "type" :"Baby"
+    },
+    {
+        "ProductId": "127",
+        "Description": "Onion Conditioner for Hair Growth and Hair Fall Control with Onion and Coconut, 250ml",
+        "Rate": "4.8",
+        "Price":"349",
+        "cardimg":"../assets/img/img3.jpg",
+        "type" :"Baby"
+    },
+    {
+        "ProductId": "128",
+        "Description": "Onion Conditioner for Hair Growth and Hair Fall Control with Onion and Coconut, 250ml",
+        "Rate": "4.8",
+        "Price":"349",
+        "cardimg":"../assets/img/img3.jpg",
+        "type" :"Baby"
+    },
+    {
+        "ProductId": "129",
+        "Description": "Onion Conditioner for Hair Growth and Hair Fall Control with Onion and Coconut, 250ml",
+        "Rate": "4.8",
+        "Price":"349",
+        "cardimg":"../assets/img/img3.jpg",
+        "type" :"New launches"
+    },
+    {
+        "ProductId": "130",
+        "Description": "Onion Conditioner for Hair Growth and Hair Fall Control with Onion and Coconut, 250ml",
+        "Rate": "4.8",
+        "Price":"349",
+        "cardimg":"../assets/img/img3.jpg",
+        "type" :"New launches"
+    },
+    {
+        "ProductId": "131",
+        "Description": "Onion Conditioner for Hair Growth and Hair Fall Control with Onion and Coconut, 250ml",
+        "Rate": "4.8",
+        "Price":"349",
+        "cardimg":"../assets/img/img3.jpg",
+        "type" :"New launches"
+    },
+    {
+        "ProductId": "132",
+        "Description": "Onion Conditioner for Hair Growth and Hair Fall Control with Onion and Coconut, 250ml",
+        "Rate": "4.8",
+        "Price":"349",
+        "cardimg":"../assets/img/img3.jpg",
+        "type" :"Face serum"
+    },
+    {
+        "ProductId": "133",
+        "Description": "Onion Conditioner for Hair Growth and Hair Fall Control with Onion and Coconut, 250ml",
+        "Rate": "4.8",
+        "Price":"349",
+        "cardimg":"../assets/img/img3.jpg",
+        "type" :"Face serum"
+    },
+    {
+        "ProductId": "134",
+        "Description": "Onion Conditioner for Hair Growth and Hair Fall Control with Onion and Coconut, 250ml",
+        "Rate": "4.8",
+        "Price":"349",
+        "cardimg":"../assets/img/img3.jpg",
+        "type" :"Face serum"
+    }
+	]
+}

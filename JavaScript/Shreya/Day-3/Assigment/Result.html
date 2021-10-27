@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Employee Data</title>
+    <link rel="stylesheet" href="bootstrap.min.css">
+</head>
+<body>
+    <script src="bootstrap.bundle.min.js"></script>
+    <p>Your id is: <span id="id"></span><hr>
+    Name is : <span id="name"></span><hr>
+    Age is :  <span id = "age"></span><hr>
+    email is : <span id = "email"></span><hr>
+    Salary is : <span id = "salary"></span><hr>
+    ContactNo is :  <span id = "contactno"></span><hr>
+    DOJ is :  <span id = "doj"></span><hr>
+    Loaction is :  <span id = "location"></span><hr>
+    Designation is : <span id = "designation"></span></p>
+    
+</body>
+<script>
+    document.getElementById('id').innerHTML = localStorage.getItem("id");
+    document.getElementById('name').innerHTML = localStorage.getItem("name");
+    document.getElementById('age').innerHTML = localStorage.getItem("age");
+    document.getElementById('email').innerHTML = localStorage.getItem("email");
+    document.getElementById('salary').innerHTML = localStorage.getItem("salary");
+    document.getElementById('contactno').innerHTML = localStorage.getItem("contactno");
+    document.getElementById('doj').innerHTML = localStorage.getItem("doj");
+    document.getElementById('location').innerHTML = localStorage.getItem("location");
+    document.getElementById('designation').innerHTML = localStorage.getItem("designation");
+
+</script>
+</html>

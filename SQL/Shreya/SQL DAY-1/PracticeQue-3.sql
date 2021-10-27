@@ -1,0 +1,14 @@
+CREATE TABLE Jobs (
+JobId INT PRIMARY KEY,
+JobTitle VARCHAR(20) DEFAULT ' ', 
+MinSalary INT DEFAULT 8000,
+MaxSalary INT DEFAULT NULL
+)
+
+
+
+INSERT INTO Jobs (JobId) VALUES (6)
+
+
+
+

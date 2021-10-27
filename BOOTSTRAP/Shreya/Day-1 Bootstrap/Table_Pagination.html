@@ -1,0 +1,495 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Table and pagination</title>
+    <link rel="stylesheet" href="js/bootstrap.min.css">
+</head>
+
+<body>
+    <script src="js/bootstrap.bundle.min.js"></script>
+    <h1 class="display-4 text-center">Basic Typography</h1>
+    <div class="container ">
+        <div class="row">
+            <div class="col">
+                <div class="btn-group">
+                    <button class="btn btn-primary dropdown-toggle" data-bs-toggle="dropdown" type="button">
+                        Utilities
+                    </button>
+                    <ul class="dropdown-menu">
+                        <li><a href="BasicTypography.html" class="dropdown-item">Basic Typography</a></li>
+                        <li><a href="TextAndDisplay_alignment.html" class="dropdown-item">Text Alignment & Display</a>
+                        </li>
+                        <li><a href="Float_PositionPractice.html" class="dropdown-item">Float & Position</a></li>
+                        <li><a href="TextColor.html" class="dropdown-item">Colors & Background</a></li>
+                        <li><a href="Sizing_BorderPractice.html" class="dropdown-item">Sizing</a></li>
+                        <li><a href="BreakPointExample.html" class="dropdown-item">Breakpoints</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="col">
+                <div class="btn-group">
+                    <button class="btn btn-success dropdown-toggle" data-bs-toggle="dropdown" type="button">
+                        CSS components
+                    </button>
+                    <ul class="dropdown-menu">
+                        <li><a href="Button_ButtonGroup.html" class="dropdown-item">Buttons & Buttons Groups</a></li>
+                        <li><a href="NavbarPractice.html" class="dropdown-item">Navbars & Nav</a></li>
+                        <li><a href="ListGroup_BadgesPractice.html" class="dropdown-item">ListGroups & Badges</a></li>
+                        <li><a href="InputGroupPractice.html" class="dropdown-item">Input Groups</a></li>
+                        <li><a href="Alerts_Progressbar.html" class="dropdown-item">Alerts and Progress Bars</a></li>
+                        <li><a href="Table_Pagination.html" class="dropdown-item">Tables & Pagination</a></li>
+                        <li><a href="Card_CardGroup.html" class="dropdown-item">Working with Cards</a></li>
+                        <li><a href="Media_Object.html" class="dropdown-item">Media Objects</a></li>
+                        <li><a href="Breadcrum.html" class="dropdown-item">Breadcrumbs</a></li>
+                        <li><a href="CarouselPractice.html" class="dropdown-item">Carousel</a></li>
+                        <li><a href="Badge.html" class="dropdown-item">Badge</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="col">
+                <div class="btn-group">
+                    <button id="btnGroupDrop3" class="btn btn-warning dropdown-toggle" data-bs-toggle="dropdown"
+                        type="button">
+                        Grid & flexbox
+                    </button>
+                    <ul class="dropdown-menu" id="btnGroupDrop3">
+                        <li><a href="GridPractice.html" class="dropdown-item"> Grid Alignment</a></li>
+                        <li><a href="FlexClass.html" class="dropdown-item">Flexbox Classes</a></li>
+                        <li><a href="AutoMargin_Ordering.html" class="dropdown-item"> Auto Margin wrap & Ordering</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div class="col">
+                <div class="btn-group ">
+                    <button id="btnGroupDrop3" class="btn btn-danger dropdown-toggle" data-bs-toggle="dropdown"
+                        type="button">
+                        Javascript Widgets
+                    </button>
+                    <ul class="dropdown-menu" id="btnGroupDrop3">
+                        <li><a href="Collapse_Accordion.html" class="dropdown-item">Collapse & Accordion</a></li>
+                        <li><a href="Tooltip.html" class="dropdown-item">Tooltips</a></li>
+                        <li><a href="Popover.html" class="dropdown-item">Popovers</a></li>
+                        <li><a href="ModalPractice.html" class="dropdown-item">Modals</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+    <hr>
+    <div class="content">
+        <table class="table">
+            <tr>
+                <th class="col">Sr No</th>
+                <th class="col">Employee FirstName</th>
+                <th class="col">Employee LastName</th>
+                <th class="col">Employee email</th>
+            </tr>
+            <tbody>
+                <tr>
+                    <td>1</td>
+                    <td>Shreya</td>
+                    <td>Thakkar</td>
+                    <td>Shreya@gmail.com</td>
+                </tr>
+                <tr>
+                    <td>2</td>
+                    <td>Diya</td>
+                    <td>Thakkar</td>
+                    <td>diya@gmail.com</td>
+                </tr>
+                <tr>
+                    <td>3</td>
+                    <td>Riya</td>
+                    <td>Patel</td>
+                    <td>riya@gmail.com</td>
+                </tr>
+            </tbody>
+        </table>
+        <!--Here we can change the table color,cell color n etc by using table-primary-->
+        <table class="table">
+            <tr>
+                <th class="col">class</th>
+                <th class="col">Employee FirstName</th>
+                <th class="col">Employee LastName</th>
+                <th class="col">Employee email</th>
+            </tr>
+            <tbody>
+                <tr class="table-primary">
+                    <td>Primary</td>
+                    <td>Shreya</td>
+                    <td>Thakkar</td>
+                    <td>Shreya@gmail.com</td>
+                </tr>
+                <tr class="table-success">
+                    <td>success</td>
+                    <td>Diya</td>
+                    <td>Thakkar</td>
+                    <td>diya@gmail.com</td>
+                </tr>
+                <tr class="table-warning">
+                    <td>warning</td>
+                    <td>Riya</td>
+                    <td>Patel</td>
+                    <td>riya@gmail.com</td>
+                </tr>
+            </tbody>
+        </table>
+        <h5>Stripped raw</h5>
+        <table class="table table-striped">
+            <tr>
+                <th class="col">Sr No</th>
+                <th class="col">Employee FirstName</th>
+                <th class="col">Employee LastName</th>
+                <th class="col">Employee email</th>
+            </tr>
+            <tbody>
+                <tr>
+                    <td>1</td>
+                    <td>Shreya</td>
+                    <td>Thakkar</td>
+                    <td>Shreya@gmail.com</td>
+                </tr>
+                <tr>
+                    <td>2</td>
+                    <td>Diya</td>
+                    <td>Thakkar</td>
+                    <td>diya@gmail.com</td>
+                </tr>
+                <tr>
+                    <td>3</td>
+                    <td>Riya</td>
+                    <td>Patel</td>
+                    <td>riya@gmail.com</td>
+                </tr>
+            </tbody>
+        </table>
+        <table class="table table-dark table-striped">
+            <tr>
+                <th class="col">Sr No</th>
+                <th class="col">Employee FirstName</th>
+                <th class="col">Employee LastName</th>
+                <th class="col">Employee email</th>
+            </tr>
+            <tbody>
+                <tr>
+                    <td>1</td>
+                    <td>Shreya</td>
+                    <td>Thakkar</td>
+                    <td>Shreya@gmail.com</td>
+                </tr>
+                <tr>
+                    <td>2</td>
+                    <td>Diya</td>
+                    <td>Thakkar</td>
+                    <td>diya@gmail.com</td>
+                </tr>
+                <tr>
+                    <td>3</td>
+                    <td>Riya</td>
+                    <td>Patel</td>
+                    <td>riya@gmail.com</td>
+                </tr>
+            </tbody>
+        </table>
+        <table class="table table-warning table-striped">
+            <tr>
+                <th class="col">Sr No</th>
+                <th class="col">Employee FirstName</th>
+                <th class="col">Employee LastName</th>
+                <th class="col">Employee email</th>
+            </tr>
+            <tbody>
+                <tr>
+                    <td>1</td>
+                    <td>Shreya</td>
+                    <td>Thakkar</td>
+                    <td>Shreya@gmail.com</td>
+                </tr>
+                <tr>
+                    <td>2</td>
+                    <td>Diya</td>
+                    <td>Thakkar</td>
+                    <td>diya@gmail.com</td>
+                </tr>
+                <tr>
+                    <td>3</td>
+                    <td>Riya</td>
+                    <td>Patel</td>
+                    <td>riya@gmail.com</td>
+                </tr>
+            </tbody>
+        </table>
+        <!--hover the raws via table-hover class-->
+        <h5>Hover raws</h5>
+        <table class="table table-hover table-striped">
+            <tr>
+                <th class="col">Sr No</th>
+                <th class="col">Employee FirstName</th>
+                <th class="col">Employee LastName</th>
+                <th class="col">Employee email</th>
+            </tr>
+            <tbody>
+                <tr>
+                    <td>1</td>
+                    <td>Shreya</td>
+                    <td>Thakkar</td>
+                    <td>Shreya@gmail.com</td>
+                </tr>
+                <tr>
+                    <td>2</td>
+                    <td>Diya</td>
+                    <td>Thakkar</td>
+                    <td>diya@gmail.com</td>
+                </tr>
+                <tr>
+                    <td>3</td>
+                    <td>Riya</td>
+                    <td>Patel</td>
+                    <td>riya@gmail.com</td>
+                </tr>
+            </tbody>
+        </table>
+        <!--active raws via table-active class-->
+        <h4>Active raws</h4>
+        <table class="table">
+            <tr>
+                <th class="col">Sr No</th>
+                <th class="col">Employee FirstName</th>
+                <th class="col">Employee LastName</th>
+                <th class="col">Employee email</th>
+            </tr>
+            <tbody>
+                <tr class="table-active">
+                    <td>1</td>
+                    <td>Shreya</td>
+                    <td>Thakkar</td>
+                    <td>Shreya@gmail.com</td>
+                </tr>
+                <tr>
+                    <td>2</td>
+                    <td>Diya</td>
+                    <td>Thakkar</td>
+                    <td>diya@gmail.com</td>
+                </tr>
+                <tr>
+                    <td>3</td>
+                    <td>Riya</td>
+                    <td>Patel</td>
+                    <td>riya@gmail.com</td>
+                </tr>
+            </tbody>
+        </table>
+        <!--border table via borderd class-->
+        <h4>Border table</h4>
+        <table class="table table-bordered">
+            <tr>
+                <th class="col">Sr No</th>
+                <th class="col">Employee FirstName</th>
+                <th class="col">Employee LastName</th>
+                <th class="col">Employee email</th>
+            </tr>
+            <tbody>
+                <tr>
+                    <td>1</td>
+                    <td>Shreya</td>
+                    <td>Thakkar</td>
+                    <td>Shreya@gmail.com</td>
+                </tr>
+                <tr>
+                    <td>2</td>
+                    <td>Diya</td>
+                    <td>Thakkar</td>
+                    <td>diya@gmail.com</td>
+                </tr>
+                <tr>
+                    <td>3</td>
+                    <td>Riya</td>
+                    <td>Patel</td>
+                    <td>riya@gmail.com</td>
+                </tr>
+            </tbody>
+        </table>
+        <table class="table table-bordered border-danger">
+            <tr>
+                <th class="col">Sr No</th>
+                <th class="col">Employee FirstName</th>
+                <th class="col">Employee LastName</th>
+                <th class="col">Employee email</th>
+            </tr>
+            <tbody>
+                <tr>
+                    <td>1</td>
+                    <td>Shreya</td>
+                    <td>Thakkar</td>
+                    <td>Shreya@gmail.com</td>
+                </tr>
+                <tr>
+                    <td>2</td>
+                    <td>Diya</td>
+                    <td>Thakkar</td>
+                    <td>diya@gmail.com</td>
+                </tr>
+                <tr>
+                    <td>3</td>
+                    <td>Riya</td>
+                    <td>Patel</td>
+                    <td>riya@gmail.com</td>
+                </tr>
+            </tbody>
+        </table>
+        <table class="table table-borderless">
+            <tr>
+                <th class="col">Sr No</th>
+                <th class="col">Employee FirstName</th>
+                <th class="col">Employee LastName</th>
+                <th class="col">Employee email</th>
+            </tr>
+            <tbody>
+                <tr>
+                    <td>1</td>
+                    <td>Shreya</td>
+                    <td>Thakkar</td>
+                    <td>Shreya@gmail.com</td>
+                </tr>
+                <tr>
+                    <td>2</td>
+                    <td>Diya</td>
+                    <td>Thakkar</td>
+                    <td>diya@gmail.com</td>
+                </tr>
+                <tr>
+                    <td>3</td>
+                    <td>Riya</td>
+                    <td>Patel</td>
+                    <td>riya@gmail.com</td>
+                </tr>
+            </tbody>
+        </table>
+        <!--small table-->
+        <h5>small table</h5>
+        <table class="table table-sm">
+            <tr>
+                <th class="col">Sr No</th>
+                <th class="col">Employee FirstName</th>
+                <th class="col">Employee LastName</th>
+                <th class="col">Employee email</th>
+            </tr>
+            <tbody>
+                <tr>
+                    <td>1</td>
+                    <td>Shreya</td>
+                    <td>Thakkar</td>
+                    <td>Shreya@gmail.com</td>
+                </tr>
+                <tr>
+                    <td>2</td>
+                    <td>Diya</td>
+                    <td>Thakkar</td>
+                    <td>diya@gmail.com</td>
+                </tr>
+                <tr>
+                    <td>3</td>
+                    <td>Riya</td>
+                    <td>Patel</td>
+                    <td>riya@gmail.com</td>
+                </tr>
+            </tbody>
+        </table>
+        <h5>Responsive table </h5>
+        <!--caption-->
+        <div class="table-responsive">
+            <table class="table caption-top">
+                <caption>Employee details</caption>
+                <tr>
+                    <th class="col">Sr No</th>
+                    <th class="col">Employee FirstName</th>
+                    <th class="col">Employee LastName</th>
+                    <th class="col">Employee email</th>
+                </tr>
+                <tbody>
+                    <tr>
+                        <td>1</td>
+                        <td>Shreya</td>
+                        <td>Thakkar</td>
+                        <td>Shreya@gmail.com</td>
+                    </tr>
+                    <tr>
+                        <td>2</td>
+                        <td>Diya</td>
+                        <td>Thakkar</td>
+                        <td>diya@gmail.com</td>
+                    </tr>
+                    <tr>
+                        <td>3</td>
+                        <td>Riya</td>
+                        <td>Patel</td>
+                        <td>riya@gmail.com</td>
+                    </tr>
+                </tbody>
+            </table>
+            <hr>
+            <!--page naigation example by using pagination class-->
+            <h5>Pagination practice</h5>
+            <nav aria-label="Page navigation example">
+                <ul class="pagination">
+                    <li class="page-item"><a class="page-link" href="#">Previous</a></li>
+                    <li class="page-item"><a class="page-link" href="#">1</a></li>
+                    <li class="page-item"><a class="page-link" href="#">2</a></li>
+                    <li class="page-item"><a class="page-link" href="#">3</a></li>
+                    <li class="page-item"><a class="page-link" href="#">Next</a></li>
+                </ul>
+            </nav>
+            <h5>pagination with icons</h5>
+            <nav aria-label="Page navigation example">
+                <ul class="pagination">
+                    <li class="page-item"><a class="page-link" href="#">
+                            <span aria-hidden="true">&laquo;</span></a>
+                    </li>
+                    <li class="page-item"><a class="page-link" href="#">1</a></li>
+                    <li class="page-item"><a class="page-link" href="#">2</a></li>
+                    <li class="page-item"><a class="page-link" href="#">3</a></li>
+                    <li class="page-item"><a class="page-link" href="#">
+                            <span aria-hidden="true">&raquo;</span>
+                        </a></li>
+                </ul>
+            </nav>
+            <nav aria-label="Page navigation example">
+                <ul class="pagination">
+                    <li class="page-item"><a class="page-link" href="#">Previous</a></li>
+                    <li class="page-item active"><a class="page-link" href="#">1</a></li>
+                    <li class="page-item"><a class="page-link" href="#">2</a></li>
+                    <li class="page-item"><a class="page-link" href="#">3</a></li>
+                    <li class="page-item disabled"><a class="page-link" href="#">Next</a></li>
+                </ul>
+            </nav>
+            <!--change the size via lg,sm,md-->
+            <h5>change size of pagination</h5>
+            <nav aria-label="Page navigation example">
+                <ul class="pagination pagination-lg">
+                    <li class="page-item"><a class="page-link" href="#">Previous</a></li>
+                    <li class="page-item active"><a class="page-link" href="#">1</a></li>
+                    <li class="page-item"><a class="page-link" href="#">2</a></li>
+                    <li class="page-item"><a class="page-link" href="#">3</a></li>
+                    <li class="page-item disabled"><a class="page-link" href="#">Next</a></li>
+                </ul>
+            </nav>
+            <!--change the alignment-->
+            <nav aria-label="Page navigation example">
+                <ul class="pagination justify-content-center">
+                    <li class="page-item"><a class="page-link" href="#">Previous</a></li>
+                    <li class="page-item active"><a class="page-link" href="#">1</a></li>
+                    <li class="page-item"><a class="page-link" href="#">2</a></li>
+                    <li class="page-item"><a class="page-link" href="#">3</a></li>
+                    <li class="page-item disabled"><a class="page-link" href="#">Next</a></li>
+                </ul>
+            </nav>
+        </div>
+    </div>
+</body>
+
+</html>

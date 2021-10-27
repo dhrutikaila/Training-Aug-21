@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    .ancestors * {
+      display: block;
+      border: 1px solid gray;
+      color: lightgrey;
+      padding: 5px;
+      margin: 15px;
+    }
+  </style>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script>
+    //parent() return direct parent element of selected element 
+    // $(document).ready(function()
+    // {
+    //     $("span").parent().css({"color": "black", "border": "1px solid black"});
+    //   });
+
+    //parents()
+    // $(document).ready(function()
+    // {
+    //     $("span").parents().css({"color": "black", "border": "1px solid black"});
+    //    });
+
+    //parents with specific tag
+    // $(document).ready(function()
+    //  {
+    //      $("span").parents('ul').css({"color": "black", "border": "1px solid black"});
+    // });
+
+    //parensUntill() 
+    // $(document).ready(function () {
+    //   $("span").parentsUntil('div').css({ "color": "black", "border": "1px solid black" });
+    // });
+
+    //Descendants
+
+    //children() return the direct child element of selected element
+    // $(document).ready(function () {
+    //   $("ul").children().css({ "color": "black", "border": "1px solid black" });
+    // });
+
+    //find()
+    // $(document).ready(function () {
+    //   $("div").find('li').css({ "color": "black", "border": "1px solid black" });
+    // });
+
+    //find(*) returns all descendants of ul
+    // $(document).ready(function () {
+    //   $("ul").find('*').css({ "color": "black", "border": "1px solid black" });
+    // });
+
+    //siblings
+    // $(document).ready(function () {
+    //     $("h3").siblings().css({ "color": "red", "border": "2px solid red" });
+    //   });
+
+    //filter the search for sibling
+    // $(document).ready(function () {
+    //     $("h3").siblings('span').css({ "color": "red", "border": "2px solid red" });
+    //   });
+
+    //next method returns the next sibling element of the selected element.
+    //  $(document).ready(function () {
+    //       $("h3").next().css({ "color": "red", "border": "2px solid red" });
+    //     });
+
+    //nextAll method returns all next sibling elements of the selected element
+        // $(document).ready(function () {
+        //   $("span").nextAll().css({ "color": "red", "border": "2px solid red" });
+        // });
+       
+    //nextUntil() method returns all next sibling elements between two given arguments
+    // $(document).ready(function () {
+    //       $("span").nextUntil("p").css({ "color": "red", "border": "2px solid red" });
+    //     });
+
+    //prev method returns the previous sibling element of the selected element.
+    // $(document).ready(function () {
+    //       $("h3").prev().css({ "color": "red", "border": "2px solid red" });
+    //   });
+
+
+    //prevall
+    // $(document).ready(function () {
+    //       $("h3").prevAll().css({ "color": "red", "border": "2px solid red" });
+    //    });
+
+    //prevUntil 
+      // $(document).ready(function () {
+      //       $("p").prevUntil("span").css({ "color": "red", "border": "2px solid red" });
+      //     });
+
+
+        //jQuery Filtering
+        //first method returns the first element of the specified element
+        // $(document).ready(function () {
+        //     $("span").first().css({ "color": "red", "border": "2px solid red" });
+        //   });
+
+
+        //last method returns the last element of the specified elements.
+        // $(document).ready(function () {
+        //   $("span").last().css({ "color": "red", "border": "2px solid red" });
+        // });
+
+          //eq method returns an element with a specific index number of the selected elements.
+        //   $(document).ready(function () {
+        //   $("span").eq(1).css({ "color": "red", "border": "2px solid red" });
+        // });
+
+        //filter 
+        // $(document).ready(function () {
+        //     $("p").filter(".intro").css("background-color", "yellow");
+        //   });
+
+        //not
+        $(document).ready(function () {
+            $("p").not(".intro").css("background-color", "yellow");
+          });
+        
+  </script>
+</head>
+<body>
+  <div class="ancestors">
+    <div style="width:300px;">div (great-grandparent)
+      <ul>ul (grandparent)
+        <li>li (direct parent)
+          <span>span</span>
+          <span>item1</span>
+          <span>item2</span>
+          <h3>Shreya</h3>
+          <p>Thakkar</p>
+        </li>
+        <li>li</li>
+      </ul>
+    </div>
+    <br>
+  </div>
+  <p class="intro">Java learning</p>
+  <p class="intro">ASP.NET learning</p>
+</body>
+
+</html>

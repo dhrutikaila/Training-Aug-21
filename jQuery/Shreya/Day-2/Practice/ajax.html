@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+    <script>
+        //load() method
+        // $(document).ready(function(){
+        //     $("button").click(function(){
+        //         $("#div1").load("example.txt");
+        //     });
+        // });
+
+        // $(document).ready(function(){
+        //     $("button").click(function(){
+        //         $("#div1").load("example.txt #intro");
+        //     });
+        // });
+        
+        //load the file and check the status 
+
+        $(document).ready(function(){
+            $("button").click(function(){
+                $("#div1").load("example.tt" , function(responseTxt, statusTxt, xhr){
+                    if(statusTxt=="success")
+                    {
+                        alert("Run success");
+                    }
+                    if(statusTxt=="error"){
+                        alert("error"+xhr.status +": "+xhr.statusTxt)
+                    }
+                });
+            });
+        });
+    </script>
+</head>
+<body>
+    <div id="div1">
+        <p>Hello AJAX Learning</p>
+    </div>
+    <button>Click me!</button>
+</body>
+</html>
