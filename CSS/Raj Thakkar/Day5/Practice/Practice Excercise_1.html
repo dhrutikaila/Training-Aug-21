@@ -1,0 +1,41 @@
+<!--1 You have one h1 and one paragraph in your page with blue color border. For all the media screen and query selector 
+       (maximum width 500px) it should be change to red color border-->
+
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>CSS - Practice_Exercise_1</title>
+    <style>
+        @media only screen and (max-width:500px) {
+            p {
+                border: 10px solid rgb(44, 44, 44);
+            }
+        }
+
+        @media only screen and (min-width:501px) {
+            p {
+                border: 10px solid rgb(255, 89, 89);
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div>
+        <h3>Practice 1</h3>
+        <h5>
+            You have one h1 and one paragraph in your page with blue color border. For all the media screen and query selector (maximum width 500px) it should be change to red color border.
+        </h5>
+        <br>
+        <hr><br>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Reprehenderit amet
+            optio modi distinctio quo fugit magni sunt obcaecati praesentium porro. Dolore eveniet illum,
+            quasi voluptatibus officiis vitae. Placeat, quod recusandae!
+        </p>
+    </div>
+</body>
+
+</html>

@@ -1,0 +1,74 @@
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Html - Practice_Exercise_1</title>
+    <link rel="stylesheet" href="../../../Style.css">
+    <script src="https://kit.fontawesome.com/e153b670c8.js" crossorigin="anonymous"></script>
+    <style>
+        table {
+            text-align: center;
+            background-color: Black;
+            color: cornsilk;
+            width: 100%;
+            height: 50%;
+            padding: 20%;
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- Display Student Report Card, Which contains field like Name, RollNo, Year Of Passing. Different subject marks should be displayed with its grade -->
+    <table align="center" border="1px">
+        <caption>Report Card</caption>
+        <thead>
+            <tr>
+                <th>Name</th>
+                <td colspan="2">Raj Thakkar</td>
+            </tr>
+            <tr>
+                <th>RollNo</th>
+                <td colspan="2">1</td>
+            </tr>
+            <tr>
+                <th>Year Of Passing</th>
+                <td colspan="2">2021</td>
+            </tr>
+            <tr bgcolor="Tomato">
+                <th rowspan="2">Subject</th>
+                <th colspan="2">Grade</th>
+            </tr>
+            <tr bgcolor="Tomato">
+                <th>Theory</th>
+                <th>Practical</th>
+            </tr>
+        </thead>
+        <tbody bgcolor="blue">
+            <tr>
+                <td><b>English</b></td>
+                <td>A</td>
+                <td>B+</td>
+            </tr>
+            <td><b>Maths</b></td>
+            <td>B+</td>
+            <td>C-</td>
+            </tr>
+            <tr>
+                <td><b>Science</b></td>
+                <td>B+</td>
+                <td>A-</td>
+            </tr>
+            <tr>
+                <td><b>History</b></td>
+                <td>C+</td>
+                <td>C-</td>
+            </tr>
+        </tbody>
+    </table>
+
+</body>
+
+</html>

@@ -1,0 +1,95 @@
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>CSS - Practice_Exercise_2</title>
+    <script src="https://kit.fontawesome.com/e153b670c8.js" crossorigin="anonymous"></script>
+    <style>
+        .parent_div2_1 {
+            width: 250px;
+            height: 250px;
+            background-color: cornflowerblue;
+            position: relative;
+            margin: 0;
+        }
+
+        .child_div_2_1 {
+            width: 100px;
+            height: 100px;
+            background-color: #999999;
+            position: absolute;
+            bottom: 0px;
+            right: 0px;
+
+        }
+
+        /*================================*/
+
+        .parent_div2_2 {
+            width: 250px;
+            height: 250px;
+            background-color: cornflowerblue;
+            position: static;
+        }
+
+        .child_div_2_2 {
+            width: 100px;
+            height: 100px;
+            background-color: #999999;
+            position: absolute;
+            margin-left: 300px;
+        }
+
+        /*================================*/
+        .parent_div2_3 {
+            width: 250px;
+            height: 250px;
+            background-color: cornflowerblue;
+            position: fixed;
+        }
+
+        .child_div_2_3 {
+            width: 100px;
+            height: 100px;
+            background-color: #999999;
+            position: absolute;
+            margin-left: 300px;
+
+        }
+    </style>
+</head>
+
+<body>
+
+    <h3>Practice 2</h3>
+    <p>
+        Practice position properties static, relative, fixed and absolute.
+    </p>
+    <br>
+    <hr><br>
+
+    <!--#1 Relative-->
+    <div style="display: inline-block; width:1200px;">
+        <h4>Postion Relative, absolute</h4>
+        <div class="parent_div2_1">1
+            <div class="child_div_2_1">1</div>
+        </div>
+
+        <!--#2 Static-->
+        <h4>Postion Static,absolute</h4>
+        <div class="parent_div2_2">2
+            <div class="child_div_2_2">2</div>
+        </div>
+    </div>
+
+    <!--#2 Fixed-->
+    <h4>Postion Fixed,absolute</h4>
+    <div class="parent_div2_2">3
+        <div class="child_div_2_2">3</div>
+    </div>
+
+</body>
+
+</html>

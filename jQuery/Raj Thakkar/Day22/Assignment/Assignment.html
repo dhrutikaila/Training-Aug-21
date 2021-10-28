@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <title>Assignment</title>
+</head>
+
+<body style="background-color: #fafafa;">
+    <div class="container mt-5 p-5 pt-0 border shadow rounded" style="background-color: white; width: fit-content">
+        <h1 class="display-5 mt-0 pt-3">Assignment</h1>
+        <div class="dropdown mt-4">
+            <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
+                Please select
+            </button>
+            <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
+              <li><a class="dropdown-item" id="country1">India</a></li>
+              <li><a class="dropdown-item" id="country2">Russia</a></li>
+              <li><a class="dropdown-item" id="country3">USA</a></li>
+              <li><a class="dropdown-item" id="country4">Japan</a></li>
+              <li><a class="dropdown-item" id="country5">United Kingdom</a></li>
+            </ul>
+          </div>
+          <hr>
+          <p id="result" class="text-primary display-6"></p>
+    </div>
+    <script>
+        $(document).ready(function() {
+            $("#result").html("<p>India</p><p>Russia</p><p>USA</p><p>Japan</p><p>United Kingdom</p>");
+        });
+
+        $(document).ready(function() {
+            $("button").click(function() {
+                $("#result").html("<p>India</p><p>Russia</p><p>USA</p><p>Japan</p><p>United Kingdom</p>");
+            })
+        })
+        $(document).ready(function(){
+            $("#country1").click(function(){
+                $("#result").text("Your Selected Country : India");
+            });
+        });
+
+        $(document).ready(function(){
+            $("#country2").click(function(){
+                $("#result").text("Your Selected Country : Russia");
+            });
+        });
+
+        $(document).ready(function(){
+            $("#country3").click(function(){
+                $("#result").text("Your Selected Country : USA");
+            });
+        });
+
+        $(document).ready(function(){
+            $("#country4").click(function(){
+                $("#result").text("Your Selected Country : Japan");
+            });
+        });
+
+        $(document).ready(function(){
+            $("#country5").click(function(){
+                $("#result").text("Your Selected Country : United Kingdom");
+            });
+        });
+    </script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+        crossorigin="anonymous"></script>
+</body>
+
+</html>

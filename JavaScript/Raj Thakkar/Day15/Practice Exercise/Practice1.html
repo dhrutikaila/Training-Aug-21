@@ -1,0 +1,58 @@
+<!--Accept three numbers from the user using prompt, find the greater of 
+    these the numbers and do the sum of that numbers which are greater than 40.-->
+
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Practice1</title>
+    </head>
+    <body>
+        <h2>Practice1</h2>
+        <P id="num1"></P>
+        <P id="num2"></P>
+        <P id="num3"></P>
+        <P id="greater"></P>
+        <P id="sum"></P>
+
+        
+        <script>
+            var number1 = prompt("number1");
+            document.getElementById("num1").innerHTML= "1_Number=  " + number1;
+
+            var number2 = prompt("number2");
+            document.getElementById("num2").innerHTML = "2_Number=  " + number2;
+
+            var number3 = prompt("number3");
+            document.getElementById("num3").innerHTML = "3_Number=  " + number3;
+
+            if(number1>number2 && number1>number3)
+            {
+                document.getElementById("greater").innerHTML = "Greater Number=  "  + number1;
+            }
+            if(number2>number3 && number2>number1)
+            {
+                document.getElementById("greater").innerHTML = "Greater Number=  "  + number2;
+            }
+            if(number3>number1 && number3>number2)
+            {
+                document.getElementById("greater").innerHTML = "Greater Number=  "  + number3;
+            }
+
+            var sum=0;
+            if(number1>40){
+                sum+=parseInt(number1);
+            }
+            if(number2>40){
+                sum+=parseInt(number2);
+            }
+            if(number3>40){
+                sum+=parseInt(number3);
+            }
+
+            document.getElementById("sum").innerHTML = "Sum= " + sum;
+            
+        </script>
+    </body>
+</html>

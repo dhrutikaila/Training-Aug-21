@@ -1,0 +1,25 @@
+<!--Declare array with 5 city names and iterate these values with the help of loop and display it with alert.-->
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Practice2</title>
+    </head>
+
+    <body>
+        <h2>Practice2</h2>
+        <p id="cityname"></p>
+        <script>
+            var city = ["Patan", "Ahemedabad", "Mumbai", "Surat","Gandhinagar"];
+
+            var res = "";
+            for(let i =0; i<city.length; i++)  
+            {
+                res+= city[i] +"<br>";
+                alert(city[i]);
+                document.getElementById("cityname").innerHTML = res.toString();
+            }
+        </script>
+    </body>
+</html>

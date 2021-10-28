@@ -1,0 +1,356 @@
+{
+    "restaurant": [
+        {
+            "id": 0,
+            "title": "La Pino'z",
+            "imgSrc": "../Assets/pexels-pixabay-315755.jpg",
+            "rating": 4.2,
+            "description": "Pizza, Garlic Bread..",
+            "price": 750
+        },
+        {
+            "id": 1,
+            "title": "Green House - The House",
+            "imgSrc": "../Assets/pexels-jonathan-borba-2983101.jpg",
+            "rating": 4.6,
+            "description": "Snacks, Gujarati..",
+            "price": 1500
+        },
+        {
+            "id": 2,
+            "title": "Turquiose Villa",
+            "imgSrc": "../Assets/pexels-elli-1854652.jpg",
+            "rating": 4.3,
+            "description": "Fast Food, Continental..",
+            "price": 600
+        },
+        {
+            "id": 3,
+            "title": "Tomato's",
+            "imgSrc": "../Assets/pexels-trang-doan-1092730.jpg",
+            "rating": 4.8,
+            "description": "Indian, Chinese, Continental..",
+            "price": 700
+        },
+        {
+            "id": 4,
+            "title": "Aroma - Crowne Plaza",
+            "imgSrc": "../Assets/pexels-daria-shevtsova-704569.jpg",
+            "rating": 4.6,
+            "description": "North Indian, Idli..",
+            "price": 125
+        },
+        {
+            "id": 5,
+            "title": "Earthen Oven",
+            "imgSrc": "../Assets/pexels-valeria-boltneva-842571.jpg",
+            "rating": 4.9,
+            "description": "North Indian, Dhosa..",
+            "price": 1000
+        },
+        {
+            "id": 6,
+            "title": "Mainland China",
+            "imgSrc": "../Assets/pexels-william-choquette-2641886.jpg",
+            "rating": 4.1,
+            "description": "Chinese, Oriental, Thai..",
+            "price": 900
+        },
+        {
+            "id": 7,
+            "title": "TGIH",
+            "imgSrc": "../Assets/pexels-sebastian-coman-photography-3625373.jpg",
+            "rating": 4.3,
+            "description": "Helthy food, Juices..",
+            "price": 900
+        },
+        {
+            "id": 8,
+            "title": "Swati Snacks",
+            "imgSrc": "../Assets/pexels-jan-n-g-u-y-e-n699953.jpg",
+            "rating": 4.8,
+            "description": "Indian, Dhosa..",
+            "price": 1000
+        },
+        {
+            "id": 9,
+            "title": "FitFuel & Co",
+            "imgSrc": "../Assets/pexels-lumn-604969.jpg",
+            "rating": 4.7,
+            "description": "Pizza, Burger..",
+            "price": 800
+        },
+        {
+            "id": 10,
+            "title": "Lasan Cafe",
+            "imgSrc": "../Assets/pexels-chevanon-photography-302899.jpg",
+            "rating": 4.4,
+            "description": "Coffee,Tea..",
+            "price": 100
+        },
+        {
+            "id": 11,
+            "title": "Papa Loiuse",
+            "imgSrc": "../Assets/pexels-pixabay-315755.jpg",
+            "rating": 4.2,
+            "description": "Pizza, Garlic Bread..",
+            "price": 750
+        },
+        {
+            "id": 12,
+            "title": "Blue House - The House",
+            "imgSrc": "../Assets/pexels-jonathan-borba-2983101.jpg",
+            "rating": 4.6,
+            "description": "Snacks, Gujarati..",
+            "price": 1500
+        },
+        {
+            "id": 13,
+            "title": "Portoise Villa",
+            "imgSrc": "../Assets/pexels-elli-1854652.jpg",
+            "rating": 4.3,
+            "description": "Fast Food, Continental..",
+            "price": 600
+        },
+        {
+            "id": 14,
+            "title": "Carrots's",
+            "imgSrc": "../Assets/pexels-trang-doan-1092730.jpg",
+            "rating": 4.8,
+            "description": "Indian, Chinese, Continental..",
+            "price": 700
+        },
+        {
+            "id": 15,
+            "title": "Aroune Plaza",
+            "imgSrc": "../Assets/pexels-daria-shevtsova-704569.jpg",
+            "rating": 4.6,
+            "description": "North Indian, Idli..",
+            "price": 125
+        },
+        {
+            "id": 16,
+            "title": "North in Gujrat",
+            "imgSrc": "../Assets/pexels-valeria-boltneva-842571.jpg",
+            "rating": 4.9,
+            "description": "North Indian, Dhosa..",
+            "price": 1000
+        },
+        {
+            "id": 17,
+            "title": "Chinese Pexel",
+            "imgSrc": "../Assets/pexels-william-choquette-2641886.jpg",
+            "rating": 4.1,
+            "description": "Chinese, Oriental, Thai..",
+            "price": 900
+        },
+        {
+            "id": 18,
+            "title": "La'more & More",
+            "imgSrc": "../Assets/pexels-sebastian-coman-photography-3625373.jpg",
+            "rating": 4.3,
+            "description": "Helthy food, Juices..",
+            "price": 900
+        },
+        {
+            "id": 19,
+            "title": "Beetroot Snacks",
+            "imgSrc": "../Assets/pexels-jan-n-g-u-y-e-n699953.jpg",
+            "rating": 4.8,
+            "description": "Indian, Dhosa..",
+            "price": 1000
+        },
+        {
+            "id": 20,
+            "title": "Pizza Point",
+            "imgSrc": "../Assets/pexels-lumn-604969.jpg",
+            "rating": 4.7,
+            "description": "Pizza, Burger..",
+            "price": 800
+        },
+        {
+            "id": 21,
+            "title": "Amaze Cafe",
+            "imgSrc": "../Assets/pexels-chevanon-photography-302899.jpg",
+            "rating": 4.4,
+            "description": "Coffee,Tea..",
+            "price": 100
+        },
+        {
+            "id": 22,
+            "title": "US Pizza",
+            "imgSrc": "../Assets/pexels-pixabay-315755.jpg",
+            "rating": 4.2,
+            "description": "Pizza, Garlic Bread..",
+            "price": 750
+        },
+        {
+            "id": 23,
+            "title": "Red House - The House",
+            "imgSrc": "../Assets/pexels-jonathan-borba-2983101.jpg",
+            "rating": 4.6,
+            "description": "Snacks, Gujarati..",
+            "price": 1500
+        },
+        {
+            "id": 24,
+            "title": "Fast food Villa",
+            "imgSrc": "../Assets/pexels-elli-1854652.jpg",
+            "rating": 4.3,
+            "description": "Fast Food, Continental..",
+            "price": 600
+        },
+        {
+            "id": 25,
+            "title": "Mango's",
+            "imgSrc": "../Assets/pexels-trang-doan-1092730.jpg",
+            "rating": 4.8,
+            "description": "Indian, Chinese, Continental..",
+            "price": 700
+        },
+        {
+            "id": 26,
+            "title": "Browne Plaza",
+            "imgSrc": "../Assets/pexels-daria-shevtsova-704569.jpg",
+            "rating": 4.6,
+            "description": "North Indian, Idli..",
+            "price": 125
+        },
+        {
+            "id": 27,
+            "title": "South with love",
+            "imgSrc": "../Assets/pexels-valeria-boltneva-842571.jpg",
+            "rating": 4.9,
+            "description": "North Indian, Dhosa..",
+            "price": 1000
+        },
+        {
+            "id": 28,
+            "title": "China Delight",
+            "imgSrc": "../Assets/pexels-william-choquette-2641886.jpg",
+            "rating": 4.1,
+            "description": "Chinese, Oriental, Thai..",
+            "price": 900
+        },
+        {
+            "id": 29,
+            "title": "Keventers",
+            "imgSrc": "../Assets/pexels-sebastian-coman-photography-3625373.jpg",
+            "rating": 4.3,
+            "description": "Helthy food, Juices..",
+            "price": 900
+        },
+        {
+            "id": 30,
+            "title": "Rathi Snacks",
+            "imgSrc": "../Assets/pexels-jan-n-g-u-y-e-n699953.jpg",
+            "rating": 4.8,
+            "description": "Indian, Dhosa..",
+            "price": 1000
+        },
+        {
+            "id": 31,
+            "title": "American Pizza",
+            "imgSrc": "../Assets/pexels-lumn-604969.jpg",
+            "rating": 4.7,
+            "description": "Pizza, Burger..",
+            "price": 800
+        },
+        {
+            "id": 32,
+            "title": "LD Cafe",
+            "imgSrc": "../Assets/pexels-chevanon-photography-302899.jpg",
+            "rating": 4.4,
+            "description": "Coffee,Tea..",
+            "price": 100
+        },
+        {
+            "id": 33,
+            "title": "Pizza Tune",
+            "imgSrc": "../Assets/pexels-pixabay-315755.jpg",
+            "rating": 4.2,
+            "description": "Pizza, Garlic Bread..",
+            "price": 750
+        },
+        {
+            "id": 34,
+            "title": "Black House - The House",
+            "imgSrc": "../Assets/pexels-jonathan-borba-2983101.jpg",
+            "rating": 4.6,
+            "description": "Snacks, Gujarati..",
+            "price": 1500
+        },
+        {
+            "id": 35,
+            "title": "Spanish Villa",
+            "imgSrc": "../Assets/pexels-elli-1854652.jpg",
+            "rating": 4.3,
+            "description": "Fast Food, Continental..",
+            "price": 600
+        },
+        {
+            "id": 36,
+            "title": "Potato's",
+            "imgSrc": "../Assets/pexels-trang-doan-1092730.jpg",
+            "rating": 4.8,
+            "description": "Indian, Chinese, Continental..",
+            "price": 700
+        },
+        {
+            "id": 37,
+            "title": "Crowne Plaza",
+            "imgSrc": "../Assets/pexels-daria-shevtsova-704569.jpg",
+            "rating": 4.6,
+            "description": "North Indian, Idli..",
+            "price": 125
+        },
+        {
+            "id": 38,
+            "title": "Earthen Kittle",
+            "imgSrc": "../Assets/pexels-valeria-boltneva-842571.jpg",
+            "rating": 4.9,
+            "description": "North Indian, Dhosa..",
+            "price": 1000
+        },
+        {
+            "id": 39,
+            "title": "China High",
+            "imgSrc": "../Assets/pexels-william-choquette-2641886.jpg",
+            "rating": 4.1,
+            "description": "Chinese, Oriental, Thai..",
+            "price": 900
+        },
+        {
+            "id": 40,
+            "title": "TGB",
+            "imgSrc": "../Assets/pexels-sebastian-coman-photography-3625373.jpg",
+            "rating": 4.3,
+            "description": "Helthy food, Juices..",
+            "price": 900
+        },
+        {
+            "id": 41,
+            "title": "Uma Snacks",
+            "imgSrc": "../Assets/pexels-jan-n-g-u-y-e-n699953.jpg",
+            "rating": 4.8,
+            "description": "Indian, Dhosa..",
+            "price": 1000
+        },
+        {
+            "id": 42,
+            "title": "Real Paprika",
+            "imgSrc": "../Assets/pexels-lumn-604969.jpg",
+            "rating": 4.7,
+            "description": "Pizza, Burger..",
+            "price": 800
+        },
+        {
+            "id": 43,
+            "title": "Caso y Cafe",
+            "imgSrc": "../Assets/pexels-chevanon-photography-302899.jpg",
+            "rating": 4.4,
+            "description": "Coffee,Tea..",
+            "price": 100
+        }
+    ]
+}

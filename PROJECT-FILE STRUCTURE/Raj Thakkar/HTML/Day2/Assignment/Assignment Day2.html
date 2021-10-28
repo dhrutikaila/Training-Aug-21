@@ -1,0 +1,153 @@
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+     <title>Html - Assignment</title>
+    <link rel="stylesheet" href="../../../Style.css">
+    <script src="https://kit.fontawesome.com/e153b670c8.js" crossorigin="anonymous"></script>
+    <style>
+        ul {
+            padding-left: 20px;
+            
+        }
+
+        i {
+            margin-top: 10px;
+        }
+
+        ol>ul>li>a {
+            text-decoration: none;
+            color: black;
+        }
+
+        ol>ul>li>a:hover {
+            font-weight: bold;
+        }
+
+        .body__right {
+            padding-left: 20px;
+            padding-top: 20px;
+            background-color: black;
+            color: blanchedalmond;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <nav class="navbar">
+            <div>
+                <a href="../../../TutorialSite.html">
+                    <img class="heder_logo" src="../../../Assests/adwords.png">
+                </a>
+            </div>
+
+            <ul class="nav_list">
+                <li class="list_item">
+                    <a href="../../../TutorialSite.html">Home</a>
+                </li>
+                <li class="list_item">
+                    <a href="../../html.html">HTML</a>
+                </li>
+                <li class="list_item">
+                    <a href="../../../CSS/CSS.html">CSS</a>
+                </li>
+                <li class="list_item">
+                    <a href="../../../BootStrap/BootStrap.html">Bootstrap</a>
+                </li>
+                <li class="list_item">
+                    <a href="../../../JavaScript/JavaScripts.html">JavaScript</a>
+                </li>
+                <li class="list_item">
+                    <a href="../../../jQuery/jQuery.html">jQuery</a>
+                </li>
+                <li class="list_item">
+                    <a href="../../../Project/Project.html">Project</a>
+                </li>
+            </ul>
+        </nav>
+        <div class="body">
+            <div class="body__left">
+                <p style="font-weight: bold; font-size:20px; margin-top:10px">HTML</p>
+                <i class="fas fa-folder-open" style="margin-left: -20px;">Day1</i>
+                <ol type="i">
+                    <li>Practice Exercise</li>
+                    <ul type="disc">
+                        <li><a href="../../Day1/Practice Exercise/Practice_Exercise_1.html">Practice_Exercise_1</a></li>
+                        <li><a href="../../Day1/Practice Exercise/Practice_Exercise_2.html">Practice_Exercise_2</a></li>
+                        <li><a href="../../Day1/Practice Exercise/Practice_Exercise_3.html">Practice_Exercise_3</a></li>
+                        <li><a href="../../Day1/Practice Exercise/Practice_Exercise_4.html">Practice_Exercise_4</a></li>
+                        <li><a href="../../Day1/Practice Exercise/Practice_Exercise_5.html">Practice_Exercise_5</a></li>
+                    </ul>
+                    <li>Assignment</li>
+                    <ul type="disc">
+                        <li><a href="../Assignment/Assignment Day1.html">Assignment</a></li>
+                    </ul>
+                </ol>
+                <i class="fas fa-folder-open" style="margin-left: -20px;">Day2</i>
+                <ol type="i">
+                    <li>Practice Exercise</li>
+                    <ul type="disc">
+                        <li><a href="../../Day2/Practice Exercise/Practice Exercise_1.html">Practice_Exercise_1</a></li>
+                        <li><a href="../../Day2/Practice Exercise/Practice Exercise_2.html">Practice_Exercise_2</a></li>
+                        <li><a href="../../Day2/Practice Exercise/Practice Exercise_3.html">Practice_Exercise_3</a></li>
+                        <li><a href="../../Day2/Practice Exercise/Practice Exercise_4.html">Practice_Exercise_4</a></li>
+                        <li><a href="../../Day2/Practice Exercise/Practice Exercise_5.htmls">Practice_Exercise_5</a></li>
+                    </ul>
+                    <li>Assignment</li>
+                    <ul type="disc">
+                        <li><a href="../../Day2/Assignment/Assignment Day2.html">Assignment</a></li>
+                    </ul>
+                </ol>
+            </div>
+            <div class="body__right">
+                <h3>Assignment</h3>
+                <pre style="margin-left:-120px">
+                    Design a form for storing employee details. (Employee name, age, Gender, designation, salary, location, Email ID, Date of Joining 
+                    and contact number)
+                        i. Validation required
+                            1.Age should be a number
+                            2.Each field should contain value
+                            3.Email ID should be in proper format
+                            4.Date of joining should be in date format
+                        ii.Location should be in the drop down list
+                        iii.Use radio buttons for Gender
+                </pre>
+               
+                <br>
+                <hr><br>
+                <div>
+                    <h1>Employee Form</h1>
+                    <form method="POST">
+                        <lable>Name: </lable><input type="text" name="name" required> <br><br>
+                        <lable>Age: </lable><input type="number" name="age" required min="0" max="150"><br><br>
+                        <lable>Gender: </lable>
+                            <input type="radio" name="gender" value="male" required><span>Male</span>
+                            <input type="radio" name="gender" value="female" required><span>Female</span>
+                            <input type="radio" name="gender" value="other" required><span>Other</span> <br><br>
+                        <lable>Designation: </lable><input type="text" name="designation" required><br><br>
+                        <lable>Salary: </lable><input type="number" name="salry" required><br><br>
+                        <lable>Location: </lable><select name="location" required>
+                            <option value="Gujarat">Gujarat</option>
+                            <option value="Delhi">Delhi</option>
+                            <option value="Punjab">Punjab</option>
+                            <option value="Meghalaya">Meghalaya</option></select><br><br>
+                        <lable>Email: </lable><input type="email" name="email" required><br><br>
+                        <lable>Date of Joining: </lable><input type="date" name="joiningdate" required><br><br>
+                        <lable>Contact No: </lable><input type="tel" name="contactno" required><br><br>
+                        <input type="submit" value="Submit">
+                        <input type="reset" value="Reset">
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="footer">
+        CopyRights &copy;Raj Thakkar
+    </div>
+    </div>
+</body>
+
+</html>
