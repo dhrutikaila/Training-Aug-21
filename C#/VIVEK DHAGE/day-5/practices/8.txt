@@ -1,0 +1,55 @@
+using System.Collections;    
+using System.Collections.Generic;    
+using System.Linq;    
+using System;    
+    
+namespace Collections    
+{    
+    internal class Array    
+    {    
+        private static void Main(string[] args)    
+        {    
+            var monthsofYear = new List<string>    
+            {    
+                "January",    
+                "February",    
+                "March",    
+                "April",    
+                "May",    
+                "June",    
+                "July",    
+                "August",    
+                "September",    
+                "October",    
+                "November",    
+                "December"    
+            };    
+      		
+            //Add()
+			//Remove()
+			//Clear()
+			//IsReadOnly
+            ICollection<string> collection = (ICollection<string>) monthsofYear;    			//Add method
+            collection.Add("end");
+            
+            collection.Remove("November");
+            Console.WriteLine(collection.Count);
+            
+            foreach (var months in monthsofYear)    
+            {    
+                Console.WriteLine(months);    
+            }    
+            Console.ReadLine();
+            
+            //ICollection<string> c1 = (ICollection<string>) monthsofYear;
+            //Console.WriteLine(collection.Sort);
+            collection.Clear();
+            Console.WriteLine(collection.Count);
+                
+               
+            Console.ReadLine();    
+        }    
+    
+    }    
+    
+}   

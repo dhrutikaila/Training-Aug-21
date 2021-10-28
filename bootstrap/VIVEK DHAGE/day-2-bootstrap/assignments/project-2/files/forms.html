@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta name="viewport" content="width=device-width user-scalable=false">
+    <meta charset="utf-8">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-F3w7mX95PdgyTmZZMECAngseQB83DfGTowi0iMjiWaeVhAn4FJkqJByhZMI3AhiU" crossorigin="anonymous">
+
+    <title>Forms</title>
+  </head>
+  <body>
+
+<header>
+		<h1 class="display-3 text-center my-4" >Forms</h1>
+
+<div class="container ">
+
+    <div class="row">
+
+    <div class="col-md-3  ">
+    <select class="mx-3  btn btn-success dropdown-toggle" aria-label=".form-select-sm example" onchange="location = this.value;">
+    <option selected>utilities</option>
+    <option value="typography.html">basic typography</option>
+    <option value="text-align.html">text alignment & display</option>
+    <option value="float-position.html">Float & Positions </option>
+    <option value="colors-bg.html">Colors & Backgrounds</option>
+    <option value="spacing.html">Spacing</option>
+    <option value="sizing.html">Sizing</option>
+    <option value="breakpoints.html">Breakpoints</option>
+    </select>
+    </div>
+
+    <div class="col-md-3 ">
+  <select  class="mx-3 btn btn-secondary dropdown-toggle" aria-label=".form-select-sm example"  onchange="location = this.value;">
+    <option selected>CSS-components</option>
+    <option value="buttons.html">Breakpoints</option>
+    <option value="navbar.html">navbar</option>
+    <option value="list-group-badges.html">List-Group-Badges</option>
+    <option value="forms.html">Forms</option>
+    <option value="input-grps.html">Input-groups</option>
+    <option value="alert-progress.html">alert & progress</option>
+    <option value="tables-pagination.html">Tables & Pagination</option>
+    <option value="cards.html">Cards</option>
+    <option value="media-obj.html">Media objects</option>
+
+  </select>
+  </div>
+
+
+    <div class="col-md-3 ">
+  <select class="mx-3 btn btn-primary dropdown-toggle" aria-label=".form-select-sm example" onchange="location = this.value;">
+    <option selected>Grid & Flexboxes</option>
+    <option value="grid-sys.html">Grid-system</option>
+    <option value="grid-align.html">Grid-alignment</option>
+    <option value="flexbox.html">Flexbox</option>
+    <option value="auto-mar-wrap.html">Auto margin & wrap</option>
+  </select>
+  </div>
+
+    <div class="col-md-3 ">
+  <select class="mx-3 btn btn-light dropdown-toggle" aria-label=".form-select-sm example" onchange="location = this.value;">
+    <option selected>Javascript Widgets</option>
+    <option value="carousel.html">Carousel</option>
+    <option value="collapse.html">Collapse</option>
+    <option value="tooltips.html">Tooltips</option>
+    <option value="popovers.html">Popovers</option>
+    <option value="models.html">Modals</option>
+  </select>
+  </div>
+
+  </div>
+  <hr>
+
+
+  </div>
+  </header>
+
+<div class="container">
+
+<!-- ==============================START HERE====================================== -->
+
+<form>
+  <fieldset disabled>
+    <legend>Disabled fieldset example</legend>
+    <div class="mb-3">
+      <label for="disabledTextInput" class="form-label">Disabled input</label>
+      <input type="text" id="disabledTextInput" class="form-control" placeholder="Disabled input">
+    </div>
+    <div class="mb-3">
+      <label for="disabledSelect" class="form-label">Disabled select menu</label>
+      <select id="disabledSelect" class="form-select">
+        <option>Disabled select</option>
+      </select>
+    </div>
+    <div class="mb-3">
+      <div class="form-check">
+        <input class="form-check-input" type="checkbox" id="disabledFieldsetCheck" disabled>
+        <label class="form-check-label" for="disabledFieldsetCheck">
+          Can't check this
+        </label>
+      </div>
+    </div>
+    <button type="submit" class="btn btn-primary">Submit</button>
+  </fieldset>
+</form>
+
+
+<hr>
+<hr>
+
+<form>
+  <div class="mb-3">
+    <label for="exampleInputEmail1" class="form-label">Email address</label>
+    <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+    <div id="emailHelp" class="form-text">We'll never share your email with anyone else.</div>
+  </div>
+  <div class="mb-3">
+    <label for="exampleInputPassword1" class="form-label">Password</label>
+    <input type="password" class="form-control" id="exampleInputPassword1">
+  </div>
+  <div class="mb-3 form-check">
+    <input type="checkbox" class="form-check-input" id="exampleCheck1">
+    <label class="form-check-label" for="exampleCheck1">Check me out</label>
+  </div>
+  <button type="submit" class="btn btn-primary">Submit</button>
+</form>
+
+
+<hr>
+<hr>
+<div class="row g-3 align-items-center">
+  <div class="col-auto">
+    <label for="inputPassword6" class="col-form-label">Password</label>
+  </div>
+  <div class="col-auto">
+    <input type="password" id="inputPassword6" class="form-control" aria-describedby="passwordHelpInline">
+  </div>
+  <div class="col-auto">
+    <span id="passwordHelpInline" class="form-text">
+      Must be 8-20 characters long.
+    </span>
+  </div>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- ===========================================END HERE======================================================== -->
+</div>
+
+<div style="margin-top:500px;"></div>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-F3w7mX95PdgyTmZZMECAngseQB83DfGTowi0iMjiWaeVhAn4FJkqJByhZMI3AhiU" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.3/dist/umd/popper.min.js" integrity="sha384-W8fXfP3gkOKtndU4JGtKDvXbO53Wy8SZCQHczT5FMiiqmQfUpWbYdTil/SxwZgAN" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/js/bootstrap.min.js" integrity="sha384-skAcpIdS7UcVUC05LJ9Dxay8AXcDYfBJqt1CJ85S/CFujBsIzCIv+l9liuYLaMQ/" crossorigin="anonymous"></script>
+
+  </body>
+</html>

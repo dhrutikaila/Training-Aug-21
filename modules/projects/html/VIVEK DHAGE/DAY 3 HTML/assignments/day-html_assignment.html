@@ -1,0 +1,407 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>HOME</title>
+
+<style type="text/css">
+
+*{
+	font-family: sans-serif;
+}
+
+.body{
+	height: 100vh;
+}
+
+
+	
+.container1{
+	display: grid;
+	grid-template-columns: 0.3fr 1fr;
+	grid-template-rows: 0.1fr 0.1fr 1fr 0.1fr;
+	grid-gap: 0.4rem;
+
+	grid-template-areas: 
+	"head head "
+	"nav nav "
+	"side content"
+	"foot foot";
+}
+
+.header1{
+	grid-area: head;
+	background: red;
+	color: whitesmoke;
+	text-align: center;
+	font-weight: 700;
+	font-size: 20px;	
+
+}
+
+.navigation{
+	color: white;
+	background: red;
+	grid-area: nav;
+}
+
+.nav1 > ul{
+	display: flex;
+	justify-content: center;
+	text-decoration: none;
+}    
+.list{
+	margin: 0 12px;
+	text-decoration: none;
+	color: white;
+}
+
+.footer{
+	grid-area: foot;
+	background: red;
+	color: whitesmoke;
+	text-align: center;
+	font-weight: 700;
+	font-size: 20px;	
+
+}
+
+.list{
+	
+}
+
+.side1{
+	grid-area: side;
+
+
+}
+
+.content{
+	grid-area: content;
+	display: block;
+}
+
+.content{
+	
+}
+
+
+
+
+
+
+
+</style>
+</head>
+<body class="body">
+
+<div class="container1">
+
+<div class="header1">
+	<header class="head">
+		<h1 style="font-size: 20px; padding-top: 3px;">TASK SITE</h1>
+	</header>
+</div>
+
+<div class="navigation">
+	<nav class="nav1">
+		<ul type="none">
+			<li class="list"><a href="C:\Users\om\Desktop\temporary practices\projects\task_site.html">HOME</a></li>
+			<li class="list"><a href="">SQL</a></li>
+			<li class="list" id="active"><a href="">HTML-CSS</a></li>
+			<li class="list"><a href="">JAVASCRIPT</a></li>
+			<li class="list"><a href="">JQUERY</a></li>
+		</ul>
+	</nav>
+</div>
+
+<div class="side1">
+	<aside class="sidebar">
+    <ol>
+		<li>DAY-1
+			<ul>
+				<li>
+					practices
+					<ol>
+						<li><a href="html\VIVEK DHAGE\DAY 1 HTML\practice\student_marks.html">practical</a></li>
+					</ol>
+				</li>
+				<li>assignments
+					<ol>
+						<li><a href="html\VIVEK DHAGE\DAY 1 HTML\assignment\task1.html">assignment</a></li>
+					</ol>
+				</li>
+			</ul>
+		</li>
+	</ol>
+	<ol>
+		<li>DAY-2
+			<ul>
+				<li>
+					practices
+					<ol>
+						<li><a href="html\VIVEK DHAGE\DAY 2 HTML\practice\html_day2.html">practical</a></li>
+					</ol>
+				</li>
+				<li>assignments
+					<ol>
+						<li><a href="html\VIVEK DHAGE\DAY 2 HTML\assignment\personalized_resume(day2-assignment).html">assignment</a></li>
+					</ol>
+				</li>
+			</ul>
+		</li>
+ 	</ol>
+    <ol>
+		<li>DAY-3
+			<ul>
+				<li>
+					practices
+					<ol>
+						<li><a href="html\VIVEK DHAGE\DAY 3 HTML\practices\day-3_html.html">practical</a></li>
+					</ol>
+				</li>
+				<li>assignments
+					<ol>
+						<li><a href="html\VIVEK DHAGE\DAY 3 HTML\assignments\day-html_assignment.html">assignment</a></li>
+					</ol>
+				</li>
+			</ul>
+		</li>
+	</ol>
+	<ol>
+		<li>DAY-4
+			<ul>
+				<li>
+					practices
+					<ol>
+						<li><a href="html\VIVEK DHAGE\DAY 4 HTML-CSS\practicals\practical-1.html">practical-1</a></li>
+						<li><a href="html\VIVEK DHAGE\DAY 4 HTML-CSS\practicals\practical-2.html">practical-2</a></li>
+						<li><a href="html/VIVEK DHAGE/DAY 4 HTML-CSS/practicals/practical-3.html">practical-3</a></li>
+					</ol>
+				</li>
+				<li>assignments
+					<ol>
+						<li><a href="html/VIVEK DHAGE/DAY 4 HTML-CSS/assignment/assignment-day-4.html">assignment</a></li>
+					</ol>
+				</li>
+			</ul>
+		</li>
+	</ol>
+	</aside>
+</div>
+
+
+<div class="display" style="border: 1px solid black;">
+	<div class="content">
+	<article>
+
+
+
+
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>
+		HTML-CSS DAY-3 ASSIGNMENT
+	</title>
+
+<style type="text/css">
+
+*{
+	font-family: sans-serif;
+}
+.body2{
+	background: linear-gradient(to bottom, rgb(185,185,220), 
+		rgb(40,40,70));
+}
+:root{
+	--main-radius: 5px;
+	--main-padding: 5px;
+}
+	
+.container2{
+	display: grid;
+	height: 100vh;
+	grid-template-columns: 0.6fr 1fr 0.6fr;
+	grid-template-rows: 0.2fr 0.1fr 1fr 0.1fr;
+
+	grid-gap: 0.4rem;
+
+	grid-template-areas: 
+	"head head head"
+	"nav nav nav"
+	"sidebar content rightbar"
+	"foot foot foot";
+}
+
+.nav2{
+
+	color: white;
+	background: rgb(70, 70, 70);
+	grid-area: nav;
+	border-radius: var(--main-radius);
+	padding-top: var(--main-padding);
+
+}
+.header2{
+	background: linear-gradient(to bottom, rgb(55, 55, 55), black);
+	grid-area: head ;
+	border-radius: var(--main-radius);
+	padding-top: var(--main-padding);
+	text-align: center;
+	
+	font-weight: 700;
+	font-size: 35px;
+	color: rgb(255, 255, 255);
+}
+.header2:hover{
+	background: rgb(0, 0, 0);
+}
+#dynamo{
+	padding-top: 19px;
+}
+
+.footer2{
+	background: linear-gradient(to bottom, rgb(230,230,230), rgb(160,160,160));
+	grid-area: foot;
+	border-radius: var(--main-radius);
+	padding-top: var(--main-padding);
+	text-align: center;
+	padding: 8px;
+}
+
+#sidebar{
+	background: linear-gradient(to bottom, rgb(170,150,150), rgb(98,78,78));
+	grid-area: sidebar;
+	border-radius: var(--main-radius);
+	padding-top: var(--main-padding);
+}
+#rightbar1{
+	background: linear-gradient(to bottom, rgb(170,150,150), rgb(98,78,78));
+	grid-area: rightbar;
+	border-radius: var(--main-radius);
+	padding-top: var(--main-padding);
+}
+#content1{
+	background: rgb(200, 200, 200);
+	background: linear-gradient(to bottom, rgb(240,240,240), rgb(150,150,150));
+	grid-area: content;
+	border-radius: var(--main-radius);
+	padding-top: var(--main-padding);
+
+}
+
+@media only screen and (max-width: 550px){
+	.container{
+		grid-template-columns: 1fr;
+		grid grid-template-rows: 0.4fr 0.4fr 1fr 2.2fr 1fr 0.4fr;
+		grid-template-areas: 
+		"head"
+		"nav"
+		"sidebar"
+		"content"
+		"rightbar"
+		"footer"
+	}
+}
+
+section{
+	padding: 6px;
+	font-weight: 400;
+}
+ul{
+	display:flex;
+	justify-content: center;
+	text-decoration: none;
+}
+a{
+	margin: 0px 12px;
+	text-decoration: none;
+	color: white;
+}
+a:hover{
+	color: orange;
+	border-bottom: 1px solid orange ;
+	cursor: default;
+}
+</style>
+</head>
+<body class="body2">
+
+	<div class="container2">
+		<header class="header2" id="dynamo">DYNAMO</header>
+		<nav class="nav2"> 
+			<ul class="navi" type="none">
+				<li><a href="##">HOME</a></li>
+				<li><a href="##">ABOUT-US</a></li>
+				<li><a href="##">CONTACT-US</a></li>
+			</ul>
+		</nav>
+		<div id="sidebar">
+			<section>
+				<article>
+					<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+					tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+					quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+					consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+					cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+					proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+				</article>
+			</section>
+		</div>
+		<div id="content1">
+			<section>
+				<article>
+					<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+					tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+					quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+					consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+					cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+					proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+				</article>
+			</section>
+		</div>
+		<div id="rightbar1">
+
+			<section>
+				<article>
+					<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+					tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+					quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+					consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+					cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+					proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+				</article>
+			</section>
+
+		</div>
+		<footer class="footer2">&copy; Copyrights 2021 Dynamo Inc.</footer>
+		
+
+	</div>
+
+</body>
+</html>
+
+
+
+
+
+
+
+	</article>
+</div>	
+</div>
+
+
+<footer>
+	<p>&copy; copyright </p>
+</footer>
+
+
+</div>
+</body>
+</html>
+
+

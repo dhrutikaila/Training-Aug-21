@@ -1,0 +1,219 @@
+using System;
+using System.Collections;
+
+namespace CollectionApplication
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            ArrayList al = new ArrayList();
+
+            Console.WriteLine("Adding some numbers:");
+            al.Add(45);
+            al.Add(78);
+            al.Add(33);
+            al.Add(56);
+            al.Add(12);
+            al.Add(23);
+            al.Add(9);
+
+            Console.WriteLine("Capacity: {0} ", al.Capacity);
+            Console.WriteLine("Count: {0}", al.Count);
+
+            Console.Write("Content: ");
+            foreach (int i in al)
+            {
+                Console.Write(i + " ");
+            }
+
+            Console.WriteLine();
+            Console.Write("Sorted Content: ");
+            al.Sort();
+            foreach (int i in al)
+            {
+                Console.Write(i + " ");
+            }
+            Console.WriteLine();
+            Console.ReadKey();
+        }
+    }
+}
+
+
+//------------------------------------------
+
+// arrays
+
+using System;
+
+namespace ArrayApplication {
+   class MyArray {
+      static void Main(string[] args) {
+         int []  n = new int[10]; /* n is an array of 10 integers */
+         int i,j;
+
+         /* initialize elements of array n */
+         for ( i = 0; i < 10; i++ ) {
+            n[ i ] = i + 100;
+         }
+         
+         /* output each array element's value */
+         for (j = 0; j < 10; j++ ) {
+            Console.WriteLine("Element[{0}] = {1}", j, n[j]);
+         }
+         Console.ReadKey();
+      }
+   }
+}
+
+//--------------------------multidarray
+
+using System;
+
+namespace ArrayApplication
+{
+    class MyArray
+    {
+        static void Main(string[] args)
+        {
+            /* an array with 5 rows and 2 columns*/
+            int[,] a = new int[5, 2] 
+            { 
+                { 0, 0 },
+                { 1, 2 },
+                { 2, 4 },
+                { 3, 6 },
+                { 4, 8 } 
+            };
+            int i, j;
+
+            int val = a[3, 1];
+
+            Console.WriteLine(val);
+
+            /* output each array element's value */
+            for (i = 0; i < 5; i++)
+            {
+
+                for (j = 0; j < 2; j++)
+                {
+                    Console.WriteLine("a[{0},{1}] = {2}", i, j, a[i, j]);
+                }
+            }
+            Console.ReadKey();
+        }
+    }
+}
+
+//-------------------------
+
+
+using System;
+
+namespace ArrayApplication
+{
+    class ParamArray
+    {
+
+        public int Renier(params int[] c)
+        {
+            int s = 0;
+
+            foreach(int u in c)
+            {
+                s += u;
+            }
+            return s;
+        }
+        public int AddElements(params int[] arr)
+        {
+            int sum = 0;
+
+            foreach (int i in arr)
+            {
+                sum += i;
+            }
+            return sum;
+        }
+    }
+    class TestClass
+    {
+        static void Main(string[] args)
+        {
+            ParamArray app = new ParamArray();
+            int sum = app.AddElements(512, 720, 250, 567, 889);
+
+            Console.WriteLine("The sum is: {0}", sum);
+            
+
+            ParamArray a = new ParamArray();
+            int s = a.Renier(11, 222, 33, 44, 55);
+
+            Console.WriteLine("The sum is: {0}",s);
+            Console.ReadKey();
+        }
+
+
+    }
+}
+
+//---------------
+
+
+using System;
+
+namespace ArrayApplication
+{
+    class MyArray
+    {
+        static void Main(string[] args)
+        {
+            int[] list = { 34, 72, 13, 44, 25, 30, 10 };
+            int[] temp = list;
+            Console.Write("Original Array: ");
+
+
+            string[] s =new string[4]{"a", "b", "c", "d" };
+            Console.WriteLine( s[0]);
+            Console.WriteLine(s[1]);
+            Console.WriteLine(s[2]);
+            Array.Reverse(s);
+            for (int a=0; a<s.Length; a++ )
+            {
+                Console.WriteLine(s[a]);
+            }
+            
+
+            foreach (int i in list)
+            {
+                Console.Write(i + " ");
+            }
+            Console.WriteLine();
+
+            // reverse the array
+            Array.Reverse(temp);
+            Console.Write("Reversed Array: ");
+
+            foreach (int i in temp)
+            {
+                Console.Write(i + " ");
+            }
+            Console.WriteLine();
+
+            //sort the array
+            Array.Sort(list);
+            Console.Write("Sorted Array: ");
+
+            foreach (int i in list)
+            {
+                Console.Write(i + " ");
+            }
+            Console.WriteLine();
+
+            Console.ReadKey();
+        }
+    }
+}
+
+

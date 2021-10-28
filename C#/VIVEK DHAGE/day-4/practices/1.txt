@@ -1,0 +1,38 @@
+using System;
+using System.Text;
+
+namespace HelloWorld
+{
+  class Program
+  {
+    static void Main(string[] args)
+    {
+    
+    string a = "hello";
+    StringBuilder b = new StringBuilder("hello world");
+       Console.WriteLine(b); 
+    
+    
+    b.Replace("world","universe");		 
+    Console.WriteLine(b);
+    
+    b.Append("   there..");
+    Console.WriteLine(b);
+    
+	b.Remove(6, 7);		 
+    Console.WriteLine(b);
+    
+    
+    
+    a = "hello again";
+	b.Insert(16," C#");    
+      
+      Console.WriteLine(a);    
+      Console.WriteLine(b);  
+       
+      
+      
+    }
+  }
+}
+

@@ -1,0 +1,98 @@
+using System;
+
+namespace MyApplication
+{
+  class Program
+  {
+    static void Main(string[] args)
+    {
+      Console.WriteLine(Math.Abs(-4.7));
+       Console.WriteLine(Math.Max(-4.7,5));
+        Console.WriteLine(Math.Min(-4.7,5));
+         Console.WriteLine(Math.Sqrt(2));
+          Console.WriteLine(Math.Abs(-4.7));
+           Console.WriteLine(Math.Round(4.7));
+            Console.WriteLine(Math.Floor(4.7));
+             
+     }
+  }
+}
+
+
+
+//--------------------------------------------------------
+using System;
+
+namespace MyApplication
+{
+  class Program
+  {
+    static void Main(string[] args)
+    {
+ 		
+       var r =0;
+       
+       
+       var mes = $"hello  {Math.PI*r*r:F3}.";
+       
+       
+       Console.WriteLine(mes);
+    
+     }
+  }
+}
+
+
+//--------------------------------------------------
+
+using System;
+
+namespace MyApplication
+{
+  class Program
+  {
+    static void Main(string[] args)
+    {
+ 	int[] numbers = { 2, 3, 4, 5 };
+
+Console.WriteLine(numbers.Length);
+
+ for(int i=0; i<numbers.Length; i++)
+      {
+      		Console.Write(numbers[i]  +" ");
+             Console.WriteLine(" ");
+      }
+      
+    
+    for(int i=0; i<=7; i++){
+    	for(int j=0; j<=i; j++)
+        {
+    	Console.Write("*");
+        }
+        Console.WriteLine(" ");
+    }
+    
+     }
+  }
+}
+
+//-----------------------------------------------------
+
+using System;
+
+namespace MyApplication
+{
+  class Program
+  {
+    static void Main(string[] args){
+    
+ 		int a = 10;
+        int b=20;
+        bool fact = true;
+ 		var ans = (fact)? a:b;
+        
+        Console.WriteLine(ans);
+ 
+    }
+  }
+}

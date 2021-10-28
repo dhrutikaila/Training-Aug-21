@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+  </head>
+  <body>
+
+<button type="button" onclick="clk()" name="button">call</button>
+<h1 id="span"></h1>
+
+
+    <script type="text/javascript">
+
+const fun = (function(){
+  let c = 0 ;
+  return function(){ c += 1; return c;
+    }
+})();
+
+function clk(){
+  document.getElementById("span").innerHTML="counter is : " + fun();
+}
+
+
+
+
+    </script>
+
+
+  </body>
+</html>

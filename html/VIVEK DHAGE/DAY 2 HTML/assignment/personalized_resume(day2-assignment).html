@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title></title>
+<style>
+body{
+	background-color: rgb(150, 150, 150);
+}
+
+*{
+	margin: 10px;
+	font-family: Arial;
+}
+.img1{
+	display: inline-block;
+}
+
+#basic_det{
+	float: right; 
+	margin-top: 50px;
+	margin-right: 400px;
+}
+.vl {
+  border-left: 6px solid green;
+  height: 10px;
+}
+
+img{
+	width: 150px;
+	height: 190px;
+	margin-left: 30px;
+	border: grey 5px ridge;
+
+}
+
+
+.main_container{
+	background-color: grey;
+}
+.container {
+  width: 97%;
+  padding: 4px;
+  background-color: #ddd;
+}
+table{
+	position: relative;
+	text-align: left;
+	padding-left: 4px;
+	border-collapse: collapse;
+
+		
+}
+#result_table{
+	position:relative;
+  	width:500px;
+    height:100px;
+    left:10px;
+    top:1px;
+	margin-left: 20px;
+
+}
+
+.skills {
+  text-align: right;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  color: white;
+}
+
+.html {
+	width: 90%; background-color: rgb(0, 250, 10);
+}
+.css {
+	width: 80%; background-color: rgb(0, 20, 250);
+}
+.js {
+	width: 65%; background-color: rgb(250, 20, 10);
+}
+.php {
+	width: 60%; background-color: rgb(120, 50, 10);
+}
+</style>
+
+</head>
+<body>
+<div class="main_container">
+
+
+	<div class="container" id="img1">
+		<img src="assets/img1.jpg">
+		
+		<div id="basic_det">
+			<h1>Saurabh Shukla</h1>
+			<h5>Software engineer</h5>
+		</div>
+	</div>
+
+
+
+	<div class="container">
+		<section>
+			<h4>About Me</h4>
+			<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+			tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+			quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+			consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse</p>
+		</section>
+		<hr>
+
+		<table class="tbl" id="tbl"  >
+			<tr>
+				<th>Age:</th>
+				<td>20</td>
+			</tr>
+				<tr>
+				<th>Email:</th>
+				<td>saurabh998@gmail.com</td>
+			</tr>
+				<tr>
+				<th>Phone:</th>
+				<td>+91 9846358264</td>
+			</tr>
+				<tr>
+				<th>Address:</th>
+				<td>204, maruti society, niranjan tower, samarpan road, Itava, 297-463 </td>
+			</tr>
+		</table>
+	</div>
+
+
+
+<div class="container" id="marks">
+	<table border="2" width="120px;" height="80px;" style="margin-left:440px; margin-top: 35px;" cellpadding="22"
+	cellspacing="3" id="result_table">
+		<caption>	Education details</caption>
+		
+		
+			<th>Education</th>
+			<th>marks</th>
+		</tr>
+		<tr>
+			<td>ssc</td>
+			<th>77</th>
+		</tr>
+		<tr>
+			<th>HSC</th>
+			<td>88</td>
+		</tr>
+		<tr>
+			<th>BE</th>
+			<td>79</td>
+			
+		</tr>
+		
+
+
+	</table>
+</div>
+
+
+
+<div class="container">
+		<h3>Professional skill</h3>
+
+	<h5>My Skills</h5>
+
+	<p>HTML</p>
+	<div class="container">
+  		<div class="skills html">90%</div>
+	</div>
+
+	<p>CSS</p>
+	<div class="container">
+  		<div class="skills css">80%</div>
+	</div>
+
+	<p>JavaScript</p>
+	<div class="container">
+  		<div class="skills js">65%</div>
+	</div>
+
+	<p>PHP</p>
+	<div class="container">
+  		<div class="skills php">60%</div>
+	</div>
+</div>
+
+
+<div class="container">
+	<h3>Work Experience</h3>
+	<ul type="none">
+		<li>
+			<section>
+				<h5>Front-end developer</h5>
+				<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod</p>			
+			</section>
+		</li>
+		<li>
+			<section>
+				<h5>laravel developer</h5>
+				<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod</p>			
+			</section>
+		</li>
+	</ul>
+</div>
+
+<div class="container">
+	<section>
+		<h5>Hobbies:</h5>
+		<p>cricket, cars, karate</p>
+	</section>
+		<section>
+		<h5>Languages:</h5>
+		<p>Tamil, English, Hindi</p>
+	</section>
+</div>
+
+
+
+</div>
+</body>
+</html>

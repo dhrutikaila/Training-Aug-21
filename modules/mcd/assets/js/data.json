@@ -1,0 +1,31 @@
+{ "item":[ 
+    {
+    "img":"images/pro-1.png",
+    "img_cat":"images/veg.svg",
+    "title":"Triple Cheese American Veg Burger",
+    "desc": "A crunchy Corn patty filled with Cheese, topped with Jalapenos, shredded Lettuce and more cheese, layered between our New Piri-Piri Buns." 
+      },
+
+      {
+        "img":"images/pro-2.png",
+        "img_cat":"images/veg.svg",
+        "title":"McSpicy Premium Veg Burger",
+        "desc": "A spicy Paneer patty, shredded Lettuce topped with Jalapenos and Cheese slice, Spicy Cocktail sauce & Cheese sauce layered between toasted Whole Wheat Buns." 
+          },
+
+          {
+            "img":"images/pro-3.png",
+            "img_cat":"images/nonveg.svg",
+            "title":"Triple Cheese American Chicken Burger",
+            "desc": "A flame-grilled Chicken patty filled with Cheese, topped with Jalapenos, shredded Lettuce and more Cheese, layered between layered between freshly toasted Piri Piri Buns." 
+              },
+
+              {
+              "img":"images/pro-4.png",
+                "img_cat":"images/nonveg.svg",
+                "title":"McSpicy Premium Chicken Burger",
+                "desc": "A spicy Chicken patty, shredded Lettuce topped with Jalapenos and Cheese slice, Spicy Habanero sauce & Cheese sauce layered between toasted Whole Wheat Buns." 
+                  }
+                ]
+            }
+

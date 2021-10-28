@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+  <meta charset="utf-8">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <title>practical-2</title>
+</head>
+<body>
+
+  <h1>hover here</h1>
+
+  <span id="helpText" style="border:1px solid black; "></span>
+  
+
+  <script type="text/javascript">
+
+
+
+  $("h1").hover(function(){
+    $(this).find("#helpText");
+    $("#helpText").text("hovering ")
+    console.log("hoverded");
+  },
+  function(){
+    $(this).find("#helpText");
+    $("#helpText").text("")
+    console.log("out");
+  }
+
+)
+</script>
+
+</body>
+</html>

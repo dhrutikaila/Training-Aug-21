@@ -1,0 +1,33 @@
+
+using System;
+using System.Collections;
+using System.Collections.Specialized;
+
+class prac {
+
+	public static void Main()
+	{
+
+		ListDictionary myDict = new ListDictionary();
+
+		myDict.Add("I", "first");
+		myDict.Add("II", "second");
+		myDict.Add("III", "third");
+		myDict.Add("IV", "fourth");
+		myDict.Add("V", "fifth");
+
+		ICollection icv = myDict.Values;
+        ICollection ick = myDict.Keys;
+    
+
+		foreach(String str in ick)
+		{
+			Console.WriteLine(str);
+		}
+        
+        foreach(String str in icv)
+		{
+			Console.WriteLine(str);
+		}
+	}
+}

@@ -1,0 +1,47 @@
+
+using System;
+using System.Collections.Generic;
+
+class practice {
+
+	public static void Main()
+	{
+
+		Dictionary<string, string> myDict =
+		new Dictionary<string, string>();
+
+		myDict.Add("1", "C");
+		myDict.Add("2", "C++");
+		myDict.Add("3", "Java");
+		myDict.Add("4", "Python");
+		myDict.Add("5", "C#");
+		myDict.Add("6", "HTML");
+        
+           Console.WriteLine("Total key/value pairs"+
+              " in myDict are : " + myDict.Count);
+ 
+        
+        Dictionary<string, string>.KeyCollection keyColl =
+                                              myDict.Keys;
+ 
+        
+        foreach(string s in keyColl)
+        {
+            Console.WriteLine("Key = {0}", s);
+        }
+
+		
+        
+        Console.WriteLine("Total key/value pairs"+
+			" in myDict are : " + myDict.Count);
+
+		Console.WriteLine("\nThe key/value pairs"+
+						" in myDict are : ");
+
+		foreach(KeyValuePair<string, string> kvp in myDict)
+		{
+			Console.WriteLine("Key = {0}, Value = {1}",
+							kvp.Key, kvp.Value);
+		}
+	}
+}

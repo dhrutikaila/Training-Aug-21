@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>accept numbers</title>
+
+  <style>
+
+  .container{
+    font-family:Arial;
+  }
+button{
+  position:absolute;
+  top:30%;
+  left:40%;
+}
+
+h2{
+  margin-left:10px;
+  position:absolute;
+  top:35%;
+  lef:45%;
+}
+  </style>
+  </head>
+  <body><div class="container">
+
+
+<button type="button" name="button" onclick="fun1()" >count</button>
+
+<h2 >sum of numbers which are greater than 40 is as :<span id="sum"></span></h2>
+
+
+</div>
+
+
+
+    <script type="text/javascript">
+
+
+
+function fun1(){
+
+      var first = parseInt(prompt("enter first number"));
+      var second = parseInt(prompt("enter second number"));
+      var third = parseInt(prompt("enter third number"));
+
+      if (first>second && first > third) {
+          great="first is greater";
+      }
+      else if (second>first && second> third) {
+          great="second is greater";
+      }
+      else{
+        great="third is greater";
+      }
+
+    alert(great)
+
+    var total=0;
+
+    if (first>40){
+      total+=first;
+    }
+
+    if (second>40){
+      total+=second;
+    }
+
+    if (first>40){
+      total+=third;
+    }
+
+    document.getElementById("sum").innerHTML=total;
+
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    </script>
+
+  </body>
+</html>

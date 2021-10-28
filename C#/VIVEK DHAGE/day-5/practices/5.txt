@@ -1,0 +1,63 @@
+// C# program to illustrate queue
+using System;
+using System.Collections;
+
+public class prac {
+	static public void Main()
+	{
+
+		// Create a queue
+		// Using Queue class
+		Queue my_queue = new Queue();
+
+		// Adding elements in Queue
+		// Using Enqueue() method
+		my_queue.Enqueue("todd");
+		my_queue.Enqueue("haris");
+		my_queue.Enqueue("sultan");
+		my_queue.Enqueue("arman");
+		my_queue.Enqueue("paroti");
+		my_queue.Enqueue("Kane");
+        
+         if (my_queue.Contains("haris") == true) {
+            Console.WriteLine("Element available...!!");
+        }
+        else {
+            Console.WriteLine("Element not available...!!");
+        }
+        
+        
+		foreach(var ele in my_queue)
+		{
+			Console.WriteLine(ele);
+		}
+        
+        
+        my_queue.Dequeue();
+		Console.WriteLine(my_queue);
+
+		
+        
+  
+        Console.WriteLine("Total elements present in my_queue: {0}",
+                                                    my_queue.Count);
+        my_queue.Dequeue();
+  
+  		
+        
+        Console.WriteLine("top element in my_queue: {0}",
+                                                    my_queue.Peek());
+        
+        
+        Console.WriteLine("Total elements present in my_queue: {0}",
+                                                    my_queue.Count);
+  
+        
+        my_queue.Clear();
+  
+        
+        Console.WriteLine("Total elements present in my_queue: {0}",
+                                                    my_queue.Count);
+                                                    
+	}
+}
