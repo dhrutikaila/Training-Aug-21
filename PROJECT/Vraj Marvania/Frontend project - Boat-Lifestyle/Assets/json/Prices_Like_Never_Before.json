@@ -1,0 +1,48 @@
+ 
+{     
+    "type":"Prices_Like_Never_Before",
+    "data":[
+      {
+          "name": "BOAT Airdopes 121 v2",
+        "img": "https://utioutll.sirv.com/Smart%20Watches/1_1_12.png",
+        "dis": ["Upto 75% Off On Best Sellers"," Stylish dual tone finish"," Immersive, HD sound quality"],
+        "price": "Rs. 999.00",
+        "oldprice": "Rs. 2,999.00"
+      },
+      {
+          "name": "BOAT Rockerz 245 V2",
+        "img": "https://utioutll.sirv.com/Smart%20Watches/1_1_13.png",
+        "dis": [" Enjoy a playback of 3.5H per charge"," IPX5 water and sweat resistant"," Fast Charging"],
+        "price": "Rs. 799.00",
+        "oldprice": "Rs. 2,990.00"
+      },
+      {
+          "name": "Rockerz 330",
+        "img": "https://utioutll.sirv.com/Immortal%20Gaming/f_2.png",
+        "dis": ["Immersive, HD sound quality","Immersive, HD sound quality","Immersive, HD sound quality"],
+        "price": "Rs. 1,099.00",
+        "oldprice": "Rs. 2,990.00"
+      },
+      {
+          "name": "BOAT BassHeads 105",
+        "img": "https://utioutll.sirv.com/Wired%20Earphones/b_7.png",
+        "dis": ["Immersive, HD sound quality","Immersive, HD sound quality","Immersive, HD sound quality"],
+        "price": "Rs. 299.00",
+        "oldprice": "Rs. 999.00"
+      },
+      {
+          "name": "BOAT BassHeads 105",
+        "img": "https://utioutll.sirv.com/Mobile%20Accessories/d_5.png",
+        "dis": ["Immersive, HD sound quality","Immersive, HD sound quality","Immersive, HD sound quality"],
+        "price": "Rs. 299.00",
+        "oldprice": "Rs. 999.00"
+      },
+      {
+          "name": "BOAT BassHeads 105",
+        "img": "https://utioutll.sirv.com/Home%20Theater%20Systems%20%26%20Soundbars/e_6.png",
+        "dis": ["Immersive, HD sound quality","Immersive, HD sound quality","Immersive, HD sound quality"],
+        "price": "Rs. 299.00",
+        "oldprice": "Rs. 999.00"
+      }
+    ]
+  } 

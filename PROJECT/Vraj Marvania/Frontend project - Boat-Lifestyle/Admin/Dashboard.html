@@ -1,0 +1,202 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="Assets/js/crud.js"></script>
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css"
+        integrity="sha384-UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQ8lWUE00s/" crossorigin="anonymous">
+    <script>
+// count users ------------------->
+        var user = (JSON.parse(localStorage.getItem("user")))
+        $("#Users_Count").text(user.data.length)
+
+// count Category ------------------->
+        var catname = ['Wireless_Earbuds', 'Wireless_Headphones', 'Smart_Watches', 'Wired_Earphones', 'Wireless_Speakers', 'Home_Audio', 'Mobile_Accessories', 'TRebel', 'Limited_Edition', 'Misfit', 'Immortal_Gaming']
+        $("#Total_Category").text(catname.length)
+
+// count Product ------------------->
+        var pcount = 0;
+        var productinfo = [];
+        for (i = 0; i < catname.length; i++) {
+            var temp = (JSON.parse(localStorage.getItem(catname[i]))).data.length
+            pcount += temp;
+            productinfo.push(temp)
+        }
+        $("#Total_Products").text(pcount)
+
+
+    </script>
+
+    <link rel="shortcut icon" href="https://utioutll.sirv.com/Smart%20Watches/nav/tablogo.jfif">
+    <link rel="shortcut icon" href="https://utioutll.sirv.com/Smart%20Watches/nav/tablogo.jfif">
+    <title>boat-admin</title>
+
+</head>
+
+<body style="background-color: black;">
+    <div class="container">
+        <div class="row justify-content-center">
+            <div class="col-3">
+                <div class="card text-white bg-danger">
+
+                    <div class="card-body">
+                        <h4 class="card-title text-dark " style="font-weight: 700;">Total Products</h4>
+                        <h1 id="Total_Products">2000</h1>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-3">
+                <div class="card text-white bg-warning">
+
+                    <div class="card-body">
+                        <h4 class="card-title text-dark " style="font-weight: 700;">Total Category</h4>
+                        <h1 id="Total_Category">11</h1>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-3">
+                <div class="card text-white bg-primary">
+
+                    <div class="card-body">
+                        <h4 class="card-title text-dark " style="font-weight: 700;">Order Count</h4>
+                        <h1 id="Order_Count">00</h1>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-3">
+                <div class="card text-white bg-secondary">
+
+                    <div class="card-body">
+                        <h4 class="card-title text-dark " style="font-weight: 700;">Users Count</h4>
+                        <h1 id="Users_Count">2000</h1>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+    <div class="container">
+        <div class="row justify-content-center mt-3">
+            <div class="col-6">
+                <div class="card border-dark bg-dark mb-3">
+                    <div class="card-header" style="color: white;">
+                        <h5>Category Info</h5>
+                    </div>
+                    <div class="card-body text-dark">
+
+                        <canvas id="Product_info" width="400" height="400"></canvas>
+
+                    </div>
+                </div>
+
+            </div>
+            <div class="col-6">
+                <div class="card border-dark bg-dark mb-3">
+                    <div class="card-header" style="color: white;">
+                        <h5>Order Info</h5>
+                    </div>
+                    <div class="card-body text-dark">
+
+                        <canvas id="Order_info" width="400" height="400"></canvas>
+
+                    </div>
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+    </div>
+
+    </div>
+
+    <script>
+
+        // 1st chart-------------------------------------->
+        var ctx = document.getElementById('Product_info').getContext('2d');
+        var myChart = new Chart(ctx, {
+            type: 'doughnut',
+            data: {
+                labels: catname,
+                datasets: [{
+                    labels: [
+                        "aqua", "salmon", "darkgray", "pink", "coral"
+                    ],
+                    data: productinfo,
+                    backgroundColor: [
+                        '#ffbe0b',
+                        '#fb5607',
+                        '#ff006e',
+                        'rgb(255, 99, 132)',
+                        'rgb(75, 192, 192)',
+                        'rgb(255, 205, 86)',
+                        'rgb(201, 203, 207)',
+                        'rgb(54, 162, 235)',
+                        '#8338ec',
+                        '#3a86ff',
+                        '#ccff33',
+                    ],
+
+                    borderWidth: 0,
+                    bordercolor: 'black'
+                }]
+            },
+        });
+        // 2nd  chart-------------------------------------->
+
+        var ctx2 = document.getElementById('Order_info').getContext('2d');
+        var myChart = new Chart(ctx2, {
+            type: 'bar',
+            data: {
+                labels: ['January', 'February', 'March', 'April', 'May', 'June'],
+                datasets: [{
+                    labels: [
+                        'Red',
+                        'Green',
+                        'Yellow',
+                        'Grey',
+                        'Blue'
+                    ],
+                    data: [12, 19, 3, 5, 2, 3],
+                    backgroundColor: [
+                        'rgb(255, 99, 132)',
+                        'rgb(75, 192, 192)',
+                        'rgb(255, 205, 86)',
+                        'rgb(201, 203, 207)',
+                        'rgb(54, 162, 235)'
+                    ],
+
+                    borderWidth: 1,
+                    bordercolor: 'black'
+                }]
+            },
+            options: {
+
+            }
+        });
+
+
+
+
+    </script>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+        crossorigin="anonymous"></script>
+
+</body>
+
+</html>

@@ -1,0 +1,153 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <!-- Required meta tags -->
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <!-- Bootstrap CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+  <title>demo</title>
+  <script>
+
+    // JavaScript Variables
+        var price = 5;
+        let price1 = 5;
+        const price2 = 5;
+
+
+    // Data types
+        let length = 16;                               // Number
+        let lastName = "Johnson";                      // String
+        let x1 = { firstName: "John", lastName: "Doe" };    // Object
+
+
+    // Functions
+
+        function mul(a, b) {
+          return a * b;
+        }
+
+        let x = mul(4, 3);
+        console.log(x);
+
+    // Assignment Operators
+
+        let x = 10;
+        let x = 10;
+        x -= 5;
+        let x = 10;
+        x /= 5;
+        let x = 10;
+        x %= 5;
+
+    // if-else
+        //  odd-even
+        var n = 23;
+
+        if (n % 2 == 0) {
+          console.log("even")
+        } else {
+          console.log("odd")
+        }
+
+    // else if
+        var n1 = 99, n2 = 90, n3 = 220;
+        if (n1 > n2 && n1 > n3) {
+          console.log(n1)
+        }
+        else if (n2 > n3 && n2 > n3) {
+          console.log(n2)
+        }
+        else {
+          console.log(n3)
+        }
+
+
+    // Array
+
+        var names = ["vraj", "vivek", "shivang"]
+        names[0] = "Opel";
+
+
+    // for loop with in
+        for (i in names) {
+          console.log(names[i])
+        }
+    // for loop with of
+        for (i of names) {
+          console.log(i)
+        }
+
+    // For
+
+        for (var i = 0; i < 5; i++) {
+          console.log(i)
+        }
+
+    // while
+        var i = 0;
+
+        while (i < 5) {
+          console.log(i);
+          i++;
+        }
+
+    // do while
+
+        var i = 5;
+
+        do {
+          console.log(i);
+          i--;
+        }
+        while (i > 0);
+
+
+    // switch case
+        switch (new Date().getDay()) {
+          case 6:
+            text = "Today is Saturday";
+            break;
+          case 0:
+            text = "Today is Sunday";
+            break;
+          default:
+            text = "Looking forward to the Weekend";
+        }
+
+    // Events
+        function even(name) {
+          document.getElementById("ans").innerHTML = name;
+        }
+
+    // set
+        document.getElementById("demo").innerHTML = "Hello JavaScript";
+
+    // get
+        var data = document.getElementById("demo");
+        console.log(data)
+
+    // change style
+        document.getElementById("demo").style.display = "none";
+
+
+  </script>
+</head>
+
+<body>
+  <!-- // Events -->
+  <button type="button" onclick="even('onclick')" class="btn btn-primary">onclick</button>
+  <button type="button" onmouseover="even('onmouseover	')" class="btn btn-secondary">onhover</button>
+  <h2 id="ans"></h2>
+  <h2 id="damo">hello</h2>
+
+
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+    crossorigin="anonymous"></script>
+</body>
+
+</html>

@@ -1,0 +1,34 @@
+ 
+{     
+    "type":"Top_Wireless",
+    "data":[
+      {
+          "name": "BOAT Airdopes 121 v2",
+        "img": "https://utioutll.sirv.com/Wireless%20Headphones/c_8.png",
+        "dis": ["Upto 75% Off On Best Sellers"," Stylish dual tone finish"," Immersive, HD sound quality"],
+        "price": "Rs. 999.00",
+        "oldprice": "Rs. 2,999.00"
+      },
+      {
+          "name": "BOAT Rockerz 245 V2",
+        "img": "https://utioutll.sirv.com/Wireless%20Headphones/c_3.png",
+        "dis": [" Enjoy a playback of 3.5H per charge"," IPX5 water and sweat resistant"," Fast Charging"],
+        "price": "Rs. 799.00",
+        "oldprice": "Rs. 2,990.00"
+      },
+      {
+          "name": "Rockerz 330",
+        "img": "https://utioutll.sirv.com/Wireless%20Headphones/c_4.png",
+        "dis": ["Immersive, HD sound quality","Immersive, HD sound quality","Immersive, HD sound quality"],
+        "price": "Rs. 1,099.00",
+        "oldprice": "Rs. 2,990.00"
+      },
+      {
+          "name": "Rockerz 330",
+        "img": "https://utioutll.sirv.com/Wireless%20Headphones/c_6.png",
+        "dis": ["Immersive, HD sound quality","Immersive, HD sound quality","Immersive, HD sound quality"],
+        "price": "Rs. 1,099.00",
+        "oldprice": "Rs. 2,990.00"
+      }
+    ]
+  }

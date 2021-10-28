@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body onload="fetchText()">
+    
+</body>
+<script>
+
+async function fetchText() {
+    
+    // Keep above JSON Data into a file, using Web Fetch API read that data.
+
+    let response = await fetch("http://127.0.0.1:5500/JavaScript/Vraj%20Marvania/Day6/Practice/Task/jsondata.json");
+    let data = await response.json();
+    console.log(data);
+
+    // Store following JSON data into localstorage,read that data and print it into console.
+    var jdata =JSON.stringify(data);
+    localStorage.setItem("jdata2",jdata);
+    var jdata2= localStorage.getItem("jdata2");
+    console.log((jdata2));
+}
+</script>
+</html>

@@ -1,0 +1,176 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <link href='https://fonts.googleapis.com/css?family=Montserrat' rel='stylesheet'>
+    <link href="Assets/css/style.css" rel='stylesheet'>
+    <link href='https://fonts.googleapis.com/css?family=Montserrat' rel='stylesheet'>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <!--load all styles -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://kenwheeler.github.io/slick/slick/slick.js"></script>
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css"
+        integrity="sha384-UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQ8lWUE00s/" crossorigin="anonymous">
+    <script src="./Assets/js/script.js"></script>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&display=swap');
+    </style>
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.css" />
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css"
+        integrity="sha384-UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQ8lWUE00s/" crossorigin="anonymous">
+
+
+    <script>
+        $(function () {
+            $("#nav").load("nav.html");
+            $("#footer").load("footer.html");
+        });
+    </script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+
+    <style>
+        * {
+            font-family: 'Montserrat', sans-serif;
+            ;
+        }
+
+        .slider1.slick-initialized.slick-slider,
+        .slider2.slick-initialized.slick-slider {
+            display: flex;
+        }
+
+        i.fa.fa-chevron-right,
+        i.fa.fa-chevron-left {
+            font-size: 40px;
+            content: "\f053";
+            color: red;
+            padding-inline: 0px;
+        }
+
+        @media(max-width767px) {
+            img.d-block {
+                height: 280px;
+                width: 280px;
+            }
+        }
+    </style>
+
+    <link rel="shortcut icon" href="https://utioutll.sirv.com/Smart%20Watches/nav/tablogo.jfif">
+    <title>boat-lifestyle</title>
+</head>
+
+<body>
+
+    <div id="nav"></div>
+    <!-- _____________________________________________________________________ --> 
+  
+    <!-- <div id="links">Links</div> -->
+    <div class="container-fluid" style="background-color: white;">
+        <div class="text-center ">
+            <h1 class="fw-bold">Your Cart</h1>
+        </div>
+        <div>
+            <table class="table px-5">
+                <thead class="table-dark">
+                    <tr>
+                        <th scope="col"></th>
+                        <th scope="col">Product Name</th>
+                        <th scope="col">img</th>
+
+                        <th scope="col">Price</th>
+                        <th scope="col">Quantity</th>
+                        <th scope="col" style="text-align: end;">Total</th>
+
+                    </tr>
+                </thead>
+                <tbody id="tdata">
+                </tbody>
+                <tfoot>
+                    <tr class="text-end">
+                        <td colspan="5">Subtotal</td>
+                        <td id="Subtotal"></td>
+                    </tr>
+                    <tr class="text-end">
+                        <td colspan="5">Tax</td>
+                        <td id="Tax"></td>
+                    </tr>
+                    <tr class="text-end ">
+                        <td colspan="5">Total</td>
+                        <td id="Total"></td>
+                    </tr>
+                </tfoot>
+            </table>
+        </div>
+    </div>
+
+    <!-- __________________________________________________________________________ -->
+    <!-- line   -->
+
+    <div id="footer"></div>
+    <script>
+        // cart logic
+        var uid = (JSON.parse(sessionStorage.getItem('user'))[0].uid)
+        var cart = (JSON.parse(localStorage.getItem('cartinfo')))
+        var keyy;
+        var cartdata = (cart.data.filter(function (e, key) { keyy = (key); return e[0].uid == uid }))
+        var cartloop = (cartdata[0][0].cartdata)
+        var Subtotal = 0; var tex; var total;
+
+        $.each(cartloop, function (e) {
+            Subtotal = Subtotal + (parseInt((cartloop[e].price.substr(3,)).replace(",", "")))
+            var card = $("<tr><td><a onclick=removeme(" + e + ") ><i class='far fa-window-close text-danger' style='font-size:20px;'></i></a></td><td>" + cartloop[e].name + "</td><td><img src='" + cartloop[e].img + "' height='50px'></td><td>" + cartloop[e].price + "</td><td>1</td><td style='text-align: end;'>" + cartloop[e].price + "</td></tr>")
+            $("#tdata").append(card);
+        })
+
+        var Tax = (Subtotal * .17)
+        total = (Tax + Subtotal)
+        $("#Subtotal").text("Rs. " + (Subtotal));
+        $("#Tax").text("+ Rs. " + (Tax));
+        $("#Total").text("Rs. " + (Tax + Subtotal));
+
+        // remove product method from cart
+        function removeme(e) {
+            cartloop.splice(e, 1);
+            localStorage.setItem('cartinfo', JSON.stringify(cart))
+            location.reload();
+
+        }
+    </script>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+        crossorigin="anonymous"></script>
+    <!-- <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha38 -->
+    <!-- -MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></> -->
+    <!-- slick -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"
+        integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+    <script type="text/javascript"
+        src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.js"></script>
+
+    <!-- <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+            integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+            crossorigin="anonymous"></script> -->
+    <script>
+        function hid() {
+            document.getElementById("shopitemout").style.display = "none";
+        }
+        function show() {
+            x = document.getElementById("shopitemout")
+            x.style.display = "block";
+
+
+        }
+    </script>
+</body>
+
+</html>
