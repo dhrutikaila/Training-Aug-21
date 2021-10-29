@@ -19,6 +19,8 @@ namespace RentalsBikes
         public DateTime Days { get => days; set => days = value; }
 
         public void Input() {
+            Console.WriteLine("enter Customer Name");
+            
             
         }// to input and store the detail of the customer.
 
