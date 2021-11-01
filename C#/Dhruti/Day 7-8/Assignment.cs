@@ -119,13 +119,20 @@ namespace ConsoleApp1
                 }
             }
             //Q5 Select department, total salary with respect to a department from employees object where total salary greater than 800000 order by TotalSalary descending(group by having)
-            //var res2 = from Employee in employees
-            //           group Employee having            
+          var res2 = from Employee in employees
+                       where Employee.Salary > 800000
+                       group Employee by Employee.Deparment into DEPT_GROUP
+                       select DEPT_GROUP;          
 
-            //foreach(var dept in res2)
-            //{
-            //    Console.WriteLine();
-            //}
+            foreach(var dept in res2)
+            {
+                Console.WriteLine( dept.Key);
+                foreach(var ans in dept)
+                {
+                    Console.WriteLine("firstname = {0}   department =  {1}      salary =  {2} ",ans.FirstName,ans.Deparment,ans.Salary);
+                }
+            }
+            Console.ReadLine();
                        
 
 
