@@ -1,98 +1,169 @@
+//Rambo Rental Bikes is looking for developing a system to calculate the rentals of the bikes.
+//System should accept the customer details, bike details and calculate the rental charges.
+// DESCRIPTION OF PROJECTS
+//System allows users to add customer details with bike rented. It computes rent for each customer.
+//Systems displays the Bike details with summation of days of hire and rental payment.
+//FUNCTIONALITY AND TASK
+//Define a class called Mobike with the following description: 
+//Instance variables/data members: 
+//BikeNumber – to store the bike’s number
+//PhoneNumber – to store the phone number of the customer
+//Name – to store the name of the customer
+//Days – to store the number of days the bike is taken on rent
+//charge – to calculate and store the rental charge
+//Member methods:
+//void Input() – to input and store the detail of the customer.
+//void Compute( ) – to compute the rental charge
+//void display( ) – to display the details in the following format:
+// Bike No.PhoneNo             No.of days         Charge
+// The rent for a mobike is charged on the following basis:
+//First five days Rs 500 per day
+//Next five days Rs 400 per day
+//Rest of the days Rs 200 per day
+//Use collection Framework to store 10 Customer Details. Implement List operation add, delete, edit and search functionality
+
 using System;
-using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace RentalsBikes
+namespace Day5
 {
     class Mobike
     {
-       public int BikeNumber; //to store the bike’s number
+        int bikeno, days;
+        long phoneno;
+        string name;
+        float charges;
 
-       public  int PhoneNumber; //to store the phone number of the customer
-
-      public  string Name; // to store the name of the customer
-                           // to store the number of days the bike is taken on rent o charge – to calculate and store the rental charge
-        private DateTime days;
-        public DateTime Days { get => days; set => days = value; }
-
-        public void Input() {
-            Console.WriteLine("enter Customer Name");
-            
-            
-        }// to input and store the detail of the customer.
-
-    public void Compute() { 
-        
-        
-        } // to compute the rental charge
-
-    public void display() {
-
-            Console.WriteLine($" BikeNo   Cust_Name   PhoneNo    DaysOfRent ");
-            Console.WriteLine($" {BikeNumber}   {Name}   {PhoneNumber}    {Days}");
-        }// to display the details in the following format:
-      
-
-        class test
+        public void Input()
         {
-            static void Main(string[] args)
-            {
-                var obj = new Mobike() { BikeNumber = 123, Name = "dhruti",PhoneNumber=123333333,};
-                var obj1 = new Mobike() { BikeNumber = 123, Name = "Kashyap",PhoneNumber = 123333333,};
-                var obj2 = new Mobike() { BikeNumber = 123, Name = "ravi", PhoneNumber = 123333333, };
+            Console.WriteLine("Enter bike number:");
+            bikeno = Convert.ToInt32(Console.ReadLine());
+            Console.WriteLine("Enter phone number:");
+            phoneno = Convert.ToInt64(Console.ReadLine());
+            Console.WriteLine("Enter customer name:");
+            name = Console.ReadLine();
+            Console.WriteLine("Enter no of days:");
+            days = Convert.ToInt32(Console.ReadLine());
+        }
 
-                var arraylist = new ArrayList();
-                arraylist.Add(obj);
-                arraylist.Add(obj1);
-                arraylist.Add(obj2);
-                display(arraylist);
-                Console.WriteLine("enter 1 for insert");
-                Console.WriteLine("enter 2 for count");
-                Console.WriteLine("enter 3 for serch available");
-                int choice = Convert.ToInt32(Console.ReadLine());
-                switch (choice)
+        public void Compute()
+        {
+            charges = 0;
+            for(int i = 1; i <= days; i++)
+            {
+                if (i <= 5)
+                {
+                    charges += 500;
+                }
+                else if(i>5 && i <= 10)
+                {
+                    charges += 400;
+                }
+                else
+                {
+                    charges += 200;
+                }
+            }
+        }
+
+        public void Display()
+        {
+            Console.WriteLine($"{bikeno}|{phoneno}|{days}|{charges}");
+        }
+    }
+    class Assignment
+    {
+        static void Displaylist(object o)
+        {
+            List<Mobike> custlist = (List<Mobike>)o;
+            Console.WriteLine("Bike No. | Phone No. | No of Days | Charges");
+            foreach (Mobike i in custlist)
+            {
+                i.Display();
+            }
+        }
+        static void Main(string[] args)
+        {
+            List<Mobike> custlist = new List<Mobike>();
+            for (int i = 0; i < 10; i++)
+            {
+                Mobike m = new Mobike();
+                m.Input();
+                m.Compute();
+                custlist.Add(m);
+            }
+            Displaylist(custlist);
+
+            int flag = 1;
+            while (flag == 1)
+            {
+                Console.WriteLine("Select Operation:\n1.Add\n2.Delete\n3.Edit\n4.Search\n5.Exit");
+                int op = Convert.ToInt32(Console.ReadLine());
+                switch (op)
                 {
                     case 1:
-                        var objdemo = new Mobike();
-                        Console.WriteLine("enter bike_no");
-                        objdemo.BikeNumber = Convert.ToInt32(Console.ReadLine());
-                        Console.WriteLine("enter Name");
-                        objdemo.Name=Console.ReadLine();
-                        Console.WriteLine("enter Phone_no");
-                        objdemo.PhoneNumber = Convert.ToInt32(Console.ReadLine());
-                        arraylist.Add(objdemo);
-                        display(arraylist);
+                        Mobike m = new Mobike();
+                        m.Input();
+                        m.Compute();
+                        custlist.Add(m);
+                        Console.WriteLine("Updated List");
+                        Displaylist(custlist);
                         break;
                     case 2:
-                        Console.WriteLine(arraylist.Count);
+                        Console.WriteLine("Enter index you want to delete:");
+                        int delindex = Convert.ToInt32(Console.ReadLine());
+                        if (delindex < custlist.Count)
+                        {
+                            custlist.RemoveAt(delindex);
+                            Console.WriteLine("Updated List");
+                            Displaylist(custlist);
+                        }
+                        else
+                        {
+                            Console.WriteLine("Invalid Index!");
+                        }
                         break;
                     case 3:
-                        Console.WriteLine("enter Index number");
-                        int idx = Convert.ToInt32(Console.ReadLine());
-                        var objval = (Mobike)arraylist[idx];
-                        objval.display();
+                        Console.WriteLine("Enter index you want to edit:");
+                        int editindex = Convert.ToInt32(Console.ReadLine());
+                        if (editindex < custlist.Count)
+                        {
+                            custlist[editindex].Input();
+                            custlist[editindex].Compute();
+                            Console.WriteLine("Updated List");
+                            Displaylist(custlist);
+                        }
+                        else
+                        {
+                            Console.WriteLine("Invalid Index!");
+                        }
                         break;
-
+                    case 4:
+                        Console.WriteLine("Enter index you want to Search:");
+                        int searchindex = Convert.ToInt32(Console.ReadLine());
+                        if (searchindex < custlist.Count)
+                        {
+                            Console.WriteLine("Bike No. | Phone No. | No of Days | Charges");
+                            custlist[searchindex].Display();
+                        }
+                        else
+                        {
+                            Console.WriteLine("Invalid Index!");
+                        }
+                        break;
+                    case 5:
+                            flag = 0;
+                            break;
+                    default:
+                        Console.WriteLine("Invalid Choice!!");
+                        break;
                 }
-                Console.ReadLine();
             }
 
-            private static void display(ArrayList arraylist)
-            {
-                foreach ( var item in arraylist)
-                {
-                    if(item.GetType().Name == "objectDemo")
-                    {
-                        Mobike mobike = (Mobike)item;
-                        mobike.display();
-                    }
-                    Console.WriteLine(item);
-                }
-            }
-        }  
-        
+            Console.ReadKey();
+        }
     }
 }
