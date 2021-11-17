@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <a href="#vacancies">create vacancies</a>
+    <a href="#applicants">applicants data</a>
+
+
+    <h1>create vacancies</h1>
+
+    <form id="formVacancies">
+        <label for="departname">departname:</label><input type="text" name="departname" id="txtDepartment"><br>
+        <label for="noofvacancies">noofvacancies</label><input type="number" name="noofvacancies" id="nmbVacancies">
+        <button id="btnVacancies">submit</button>
+    </form>
+
+    <h1>
+        Available Vacancies
+    </h1>
+    <table>
+        <thead>
+            <tr>
+                <th>Department Name</th>
+                <th>Number of Vacancies</th>
+                <th>Remove Vacancies</th>
+            </tr>
+        </thead>
+        <tbody id="tbodyVacancies"></tbody>
+    </table>
+
+    <h1>
+        Create Applicants
+    </h1>
+    <form id="formApplicants">
+        <label for="txtApplicant">Applicant Name</label>
+        <input type="text" placeholder="Enter applicant's name" id="txtApplicant" required />
+        <label for="txtQualification">
+            Applicant Qualification
+        </label>
+        <input type="text" placeholder="Enter applicant's qualification" id="txtQualification" required />
+        <label for="selDepartment">Select Department</label>
+        <select id="selDepartment" required>
+            <option value="" disabled selected>
+                Select Department
+            </option>
+        </select>
+
+        <button id="btnApplicants">
+            Submit
+        </button>
+    </form>
+
+    <h1>
+        Applicants List
+    </h1>
+    <table>
+        <thead>
+            <tr>
+                <th>Applicant Name</th>
+                <th>Applicant Qualification</th>
+                <th>Department</th>
+                <th>Remove Applicant</th>
+                <th>Hire Applicant</th>
+            </tr>
+        </thead>
+        <tbody id="tbodyApplicants"></tbody>
+    </table>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"
+        integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+    <script src="./recruitment-system.js"></script>
+
+
+</body>
+
+</html>

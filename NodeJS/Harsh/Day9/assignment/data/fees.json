@@ -1,0 +1,17 @@
+[
+    {
+        "id": 1,
+        "name": "manav",
+        "feesstatus": "paid"
+    },
+    {
+        "id": 2,
+        "name": "raj",
+        "feesstatus": "pending"
+    },
+    {
+        "id": 3,
+        "name": "rahul",
+        "feesstatus": "pending"
+    }
+]

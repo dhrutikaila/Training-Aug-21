@@ -1,0 +1,100 @@
+[
+    {
+        "AddressLine1": "ghodasar",
+        "AddressLine2": "ahmedabad",
+        "AddressLine3": "gujarat",
+        "assignments": [
+            {
+                "ActionCode": "add_assign",
+                "ActionReasonCode": null,
+                "ActualTerminationDate": "09-01-2021",
+                "AssignmentCategory": "fr",
+                "assignmentDFF": {
+                    "ddfid": 1,
+                    "sub": "node"
+                },
+                "assignmentExtraInformation": {
+                    "sub": "node",
+                    "date": "09-01-2021"
+                },
+                "AssignmentId": 1,
+                "AssignmentName": "node_assignment",
+                "AssignmentNumber": "123",
+                "AssignmentProjectedEndDate": "09-01-2022",
+                "AssignmentStatus": "active",
+                "AssignmentStatusTypeId": 2,
+                "BusinessUnitId": 4,
+                "CreationDate": "04-01-2021",
+                "DefaultExpenseAccount": "10000",
+                "DepartmentId": 10,
+                "EffectiveEndDate": "09-01-2021",
+                "EffectiveStartDate": "04-01-2021",
+                "empreps": {
+                    "days": 10,
+                    "subjects": 4
+                },
+                "EndTime": "09:00",
+                "Frequency": "d",
+                "FullPartTime": "04:00",
+                "GradeId": 10,
+                "GradeLadderId": 4,
+                "JobId": 1,
+                "LastUpdateDate": "09-01-2021",
+                "LegalEntityId": 10,
+                "links": {
+                    "link1": "....",
+                    "link2": "...."
+                },
+                "LocationId": 10,
+                "ManagerAssignmentId": 10,
+                "ManagerId": 1
+            }
+        ],
+        "CitizenshipId": 1,
+        "CitizenshipLegislationCode": "india",
+        "CitizenshipStatus": "a",
+        "CitizenshipToDate": "09-01-2021",
+        "City": "ahmedabad",
+        "CorrespondenceLanguage": null,
+        "Country": "india",
+        "CreationDate": "04-01-2021",
+        "DateOfBirth": "29-11-1999",
+        "directReports": [
+            "NA"
+        ],
+        "DisplayName": "manav",
+        "DriversLicenseExpirationDate": "09-01-2040",
+        "DriversLicenseId": 10,
+        "DriversLicenseIssuingCountry": "india",
+        "EffectiveStartDate": "09-01-2021",
+        "Ethnicity": "8",
+        "EmployeeId": 1,
+        "FirstName": "manav",
+        "Gender": "male",
+        "HireDate": "09-01-2021",
+        "HomeFaxAreaCode": "1",
+        "HomeFaxCountryCode": "1",
+        "HomeFaxExtension": null,
+        "HomeFaxLegislationCode": "india",
+        "HomeFaxNumber": "1234",
+        "HomePhoneAreaCode": "1",
+        "HomePhoneCountryCode": "1",
+        "HomePhoneExtension": null,
+        "HomePhoneLegislationCode": "india",
+        "HomePhoneNumber": "1234",
+        "Honors": null,
+        "LastName": "patel",
+        "LastUpdateDate": "09-01-2021",
+        "LegalEntityId": 1234,
+        "LicenseNumber": "1234",
+        "links": [
+            "NA"
+        ],
+        "MaritalStatus": "N/A",
+        "MiddleName": "B.",
+        "MilitaryVetStatus": "N/A",
+        "NameSuffix": "I",
+        "NationalId": "1234",
+        "NationalIdCountry": "india"
+    }
+]

@@ -1,0 +1,92 @@
+[
+    {
+        "ActionCode": "add_assign",
+        "ActionReasonCode": null,
+        "ActualTerminationDate": "09-01-2021",
+        "AssignmentCategory": "fr",
+        "assignmentDFF": {
+            "ddfid": 1,
+            "sub": "node"
+        },
+        "assignmentExtraInformation": {
+            "sub": "node",
+            "date": "09-01-2021"
+        },
+        "AssignmentId": 1,
+        "AssignmentName": "node_assignment",
+        "AssignmentNumber": "123",
+        "AssignmentProjectedEndDate": "09-01-2022",
+        "AssignmentStatus": "active",
+        "AssignmentStatusTypeId": 2,
+        "BusinessUnitId": 4,
+        "CreationDate": "04-01-2021",
+        "DefaultExpenseAccount": "10000",
+        "DepartmentId": 10,
+        "EffectiveEndDate": "09-01-2021",
+        "EffectiveStartDate": "04-01-2021",
+        "empreps": {
+            "days": 10,
+            "subjects": 4
+        },
+        "EndTime": "09:00",
+        "Frequency": "d",
+        "FullPartTime": "04:00",
+        "GradeId": 10,
+        "GradeLadderId": 4,
+        "JobId": 1,
+        "LastUpdateDate": "09-01-2021",
+        "LegalEntityId": 10,
+        "links": {
+            "link1": "....",
+            "link2": "...."
+        },
+        "LocationId": 10,
+        "ManagerAssignmentId": 10,
+        "ManagerId": 1
+    },
+    {
+        "ActionCode": "add_assign",
+        "ActionReasonCode": null,
+        "ActualTerminationDate": "09-01-2021",
+        "AssignmentCategory": "fr",
+        "assignmentDFF": {
+            "ddfid": 1,
+            "sub": "node"
+        },
+        "assignmentExtraInformation": {
+            "sub": "node",
+            "date": "09-01-2021"
+        },
+        "AssignmentId": 2,
+        "AssignmentName": "node_assignment",
+        "AssignmentNumber": "123",
+        "AssignmentProjectedEndDate": "09-01-2022",
+        "AssignmentStatus": "active",
+        "AssignmentStatusTypeId": 2,
+        "BusinessUnitId": 4,
+        "CreationDate": "04-01-2021",
+        "DefaultExpenseAccount": "10000",
+        "DepartmentId": 10,
+        "EffectiveEndDate": "09-01-2021",
+        "EffectiveStartDate": "04-01-2021",
+        "empreps": {
+            "days": 10,
+            "subjects": 4
+        },
+        "EndTime": "09:00",
+        "Frequency": "d",
+        "FullPartTime": "04:00",
+        "GradeId": 10,
+        "GradeLadderId": 4,
+        "JobId": 1,
+        "LastUpdateDate": "09-01-2021",
+        "LegalEntityId": 10,
+        "links": {
+            "link1": "....",
+            "link2": "...."
+        },
+        "LocationId": 10,
+        "ManagerAssignmentId": 10,
+        "ManagerId": 1
+    }
+]
