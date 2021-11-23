@@ -1,4 +1,3 @@
-
 //Store 5 employees’ data in one array (ID,FirstName,LastName,Address,Salary). 
 //Do the operation searching by indexnumber, EmployeeID, Insert the employee, delete the employee from the Array. 
 //Create one more array emp and join the value with above array. When display list combine firstname and lastname as fullname, From the address field flatnumber,city,state and should be splited.
@@ -29,3 +28,9 @@ let concatEmp = [{ id: 5, firstName: 'meet123', lastName: 'patel', address: 'ahe
 employee = employee.concat(concatEmp);
 console.log('Create one more array emp and join the value with above array');
 console.log(employee);
+
+// When display list combine firstname and lastname as fullname, From the address field flatnumber,city,state and should be splited
+
+
+
+//PF should be computed and total salary should be display.
