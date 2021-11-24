@@ -28,7 +28,7 @@ class RetailInventory implements Inventory {
     buy(quanity: number): void {
 
         if(quanity > this.Stock){
-            console.log('Sorry we cant execute your order this point of time');
+            console.log('Sorry we cant execute your order');
             if(quanity > 100){
                 this.reOrder(quanity);
             }
@@ -41,7 +41,7 @@ class RetailInventory implements Inventory {
 
 
         this.Stock  = this.Stock - quanity; //stock is reduced
-        console.log(`buy of ${quanity} unit has been executed`); // post process
+        console.log('buy of ${quanity} unit has been executed'); // post process
 
         //stock check for under supplement
         if(this.Stock < 5) {
@@ -50,11 +50,11 @@ class RetailInventory implements Inventory {
     }
     private reOrder(quanity: number): void {
         //procedure of ordering to supplier for restocking
-        console.log(`reorder of  ${quanity} unit has been placed to the supplier`);
+        console.log('reorder of  ${quanity} unit has been placed to the supplier');
         
         //after supplier shipment
         this.Stock += quanity; // updating stock of shop
-        console.log(`Inventory has been Restocked with avaliable unit ${this.Stock}`);
+        console.log('Inventory has been Restocked with avaliable unit ${this.Stock}');
     }
 }
 
