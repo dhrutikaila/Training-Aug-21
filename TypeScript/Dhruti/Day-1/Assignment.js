@@ -14,7 +14,7 @@ var employee = employees.filter(function (e) { return e.ID == 1; });
 console.log(employee);
 //Inserting new employee
 console.log("Inserting new employee");
-employee.push({ ID: 6, FirstName: "neha", LastName: "patel", Address: "601, Mumbai, Maharashtra", Salary: 40000 });
+employee.push({ ID: 6, FirstName: "neha", LastName: "patel", Address: "601, gujratcity, gujarat", Salary: 40000 });
 //  console output
 for (var _i = 0, employee_1 = employee; _i < employee_1.length; _i++) {
     var item = employee_1[_i];
@@ -28,8 +28,8 @@ for (var i in employee) {
     console.log(employee[i]);
 }
 // Concate another array of employee
-var emp = [{ ID: 7, FirstName: "Janice", LastName: "Singh", Address: "701, Pune, Maharashtra", Salary: 50000 },
-    { ID: 8, FirstName: "Jaqueline", LastName: "Chopra", Address: "1101, Thane, Maharashtra", Salary: 80000 }];
+var emp = [{ ID: 7, FirstName: "yasvi", LastName: "patel", Address: "701, kalpatru, gujarat", Salary: 50000 },
+    { ID: 8, FirstName: "charvi", LastName: "dave", Address: "1101, shreeji, gujarat", Salary: 80000 }];
 console.log("Inserting new employees");
 employee = employee.concat(emp);
 for (var _a = 0, employee_2 = employee; _a < employee_2.length; _a++) {

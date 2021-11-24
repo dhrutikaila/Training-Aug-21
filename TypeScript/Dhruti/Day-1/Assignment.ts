@@ -18,7 +18,7 @@ console.log(employee);
 
 //Inserting new employee
 console.log("Inserting new employee");
-employee.push({ID:6,FirstName:"neha",LastName:"patel",Address:"601, Mumbai, Maharashtra",Salary:40000});
+employee.push({ID:6,FirstName:"neha",LastName:"patel",Address:"601, gujratcity, gujarat",Salary:40000});
 //  console output
 for (var item of employee){
     console.log(item);
@@ -34,8 +34,8 @@ for (var i in  employee){
 
 
 // Concate another array of employee
-let emp : any=[{ID:7,FirstName:"Janice",LastName:"Singh",Address:"701, Pune, Maharashtra",Salary:50000},
-            {ID:8,FirstName:"Jaqueline",LastName:"Chopra",Address:"1101, Thane, Maharashtra",Salary:80000}];
+let emp : any=[{ID:7,FirstName:"yasvi",LastName:"patel",Address:"701, kalpatru, gujarat",Salary:50000},
+            {ID:8,FirstName:"charvi",LastName:"dave",Address:"1101, shreeji, gujarat",Salary:80000}];
 console.log("Inserting new employees")
 employee = employee.concat(emp);
 for (var item of employee){
