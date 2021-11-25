@@ -9,7 +9,7 @@ namespace ToyShop.Models
 {
     class ToyCompanyContext : DbContext
     {
-        public DbSet<ToyType> ToyTypes { get; set; }
+     
         public DbSet<ToyPlant> ToyPlants { get; set; }
         public DbSet<Toy> Toys { get; set; }
         public DbSet<Customer> Customers { get; set; }
@@ -24,7 +24,7 @@ namespace ToyShop.Models
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
             modelBuilder.Entity<ToyPlant>().HasKey(k => k.plantId);
-            modelBuilder.Entity<ToyType>().HasKey(k => k.typeId);
+
             modelBuilder.Entity<CustomerAddress>().HasKey(k => k.addressId);
             modelBuilder.Entity<Order>()
                 .HasOne<CustomerAddress>(s => s.CustomerAddressNavigation)
@@ -36,7 +36,7 @@ namespace ToyShop.Models
             modelBuilder.Entity<Item>().Property(p => p.isActive).HasDefaultValue(true);
             modelBuilder.Entity<Toy>().Property(p => p.isActive).HasDefaultValue(true);
             modelBuilder.Entity<ToyPlant>().Property(p => p.isActive).HasDefaultValue(true);
-            modelBuilder.Entity<ToyType>().Property(p => p.isActive).HasDefaultValue(true);
+       
         }
     }
 }
