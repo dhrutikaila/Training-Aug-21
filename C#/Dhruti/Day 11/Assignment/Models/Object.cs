@@ -1,4 +1,5 @@
-﻿using System;
+﻿
+using System;
 using System.Collections.Generic;
 
 // Code scaffolded by EF Core assumes nullable reference types (NRTs) are not used or disabled.
@@ -7,10 +8,17 @@ using System.Collections.Generic;
 
 namespace Hospital_Mange.Models
 {
-    public partial class PatientsPerDoctor
+    public partial class Object
     {
-        public int DoctorId { get; set; }
-        public string DrName { get; set; }
-        public string PatientName { get; set; }
+        public int ObjId { get; set; }
+        public int TypeId { get; set; }
+        public string ObjName { get; set; }
+
+        public virtual ObjectMaster Type { get; set; }
     }
 }
+
+
+
+
+   

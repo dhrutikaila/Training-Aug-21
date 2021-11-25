@@ -7,16 +7,17 @@ using System.Collections.Generic;
 
 namespace Hospital_Mange.Models
 {
-    public partial class Treatment
+    public partial class Prescription
     {
-        public int TrtId { get; set; }
-        public DateTime TrtDate { get; set; }
-        public int DeptId { get; set; }
+        public int PreId { get; set; }
+        public DateTime PreDate { get; set; }
         public int PatientId { get; set; }
         public int DoctorId { get; set; }
+        public int DrugsId { get; set; }
+        public byte DayPart { get; set; }
 
-        public virtual Department Dept { get; set; }
         public virtual Doctor Doctor { get; set; }
+        public virtual Drug Drugs { get; set; }
         public virtual Patient Patient { get; set; }
     }
 }

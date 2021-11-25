@@ -2,274 +2,297 @@
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Metadata;
 
-// Code scaffolded by EF Core assumes nullable reference types (NRTs) are not used or disabled.
-// If you have enabled NRTs for your project, then un-comment the following line:
-// #nullable disable
+#nullable disable
 
 namespace Hospital_Mange.Models
 {
-    public partial class HealthCareContext : DbContext
+    public partial class HOSPITALContext : DbContext
     {
-        public HealthCareContext()
+        public HOSPITALContext()
         {
         }
 
-        public HealthCareContext(DbContextOptions<HealthCareContext> options)
+        public HOSPITALContext(DbContextOptions<HOSPITALContext> options)
             : base(options)
         {
         }
 
-        public virtual DbSet<Assistants> Assistants { get; set; }
-        public virtual DbSet<City> City { get; set; }
-        public virtual DbSet<Departments> Departments { get; set; }
-        public virtual DbSet<Doctors> Doctors { get; set; }
-        public virtual DbSet<DrugTiming> DrugTiming { get; set; }
+        public virtual DbSet<Department> Departments { get; set; }
+        public virtual DbSet<Doctor> Doctors { get; set; }
         public virtual DbSet<Drug> Drugs { get; set; }
-        public virtual DbSet<PatientTakesMedicine> PatientTakesMedicine { get; set; }
+        public virtual DbSet<Assistance> HealthcareAssistants { get; set; }
+        public virtual DbSet<MedicineList> MedicineLists { get; set; }
+        public virtual DbSet<Object> Objects { get; set; }
+        public virtual DbSet<ObjectMaster> ObjectMasters { get; set; }
         public virtual DbSet<Patient> Patients { get; set; }
-        public virtual DbSet<PatientsPerDoctor> PatientsPerDoctor { get; set; }
-        public virtual DbSet<States> States { get; set; }
-        public virtual DbSet<Treatment> Treatment { get; set; }
+        public virtual DbSet<PatientDoctor> PatientsDoctors { get; set; }
+        public virtual DbSet<Prescription> Prescriptions { get; set; }
+        public virtual DbSet<Treatment> Treatments { get; set; }
 
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
             if (!optionsBuilder.IsConfigured)
             {
-#warning To protect potentially sensitive information in your connection string, you should move it out of source code. See http://go.microsoft.com/fwlink/?LinkId=723263 for guidance on storing connection strings.
-                optionsBuilder.UseSqlServer("Server=.\\SQLExpress;Database=HealthCare;Trusted_Connection=True;");
+#warning To protect potentially sensitive information in your connection string, you should move it out of source code. You can avoid scaffolding the connection string by using the Name= syntax to read it from configuration - see https://go.microsoft.com/fwlink/?linkid=2131148. For more guidance on storing connection strings, see http://go.microsoft.com/fwlink/?LinkId=723263.
+                optionsBuilder.UseSqlServer("Server=pc0474\\mssql2017; Database=HospitalManagementSystem; Trusted_connection=true;");
             }
         }
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
-            modelBuilder.Entity<Assistants>(entity =>
-            {
-                entity.HasKey(e => e.AssistantId)
-                    .HasName("Assistants_DoctorId_PkAuto");
+            modelBuilder.HasAnnotation("Relational:Collation", "Latin1_General_CI_AS");
 
-                entity.Property(e => e.FirstName)
+            modelBuilder.Entity<Department>(entity =>
+            {
+                entity.HasKey(e => e.DeptId)
+                    .HasName("PK__Departme__0148818E0E67723E");
+
+                entity.Property(e => e.DeptId).HasColumnName("DeptID");
+
+                entity.Property(e => e.DeptName)
+                    .HasMaxLength(30)
+                    .IsUnicode(false);
+            });
+
+            modelBuilder.Entity<Doctor>(entity =>
+            {
+                entity.Property(e => e.DoctorId).HasColumnName("DoctorID");
+
+                entity.Property(e => e.Address)
                     .IsRequired()
                     .HasMaxLength(30)
                     .IsUnicode(false);
 
-                entity.Property(e => e.IsActive)
-                    .IsRequired()
-                    .HasDefaultValueSql("((1))");
-
-                entity.Property(e => e.LastName)
+                entity.Property(e => e.DoctorName)
                     .IsRequired()
                     .HasMaxLength(30)
                     .IsUnicode(false);
 
-                entity.Property(e => e.YearsOfExperience).HasColumnType("decimal(3, 1)");
-
-                entity.HasOne(d => d.WorksUnderNavigation)
-                    .WithMany(p => p.Assistants)
-                    .HasForeignKey(d => d.WorksUnder)
-                    .OnDelete(DeleteBehavior.SetNull)
-                    .HasConstraintName("Assistants_WorksUnder_Fk");
-            });
-
-            modelBuilder.Entity<City>(entity =>
-            {
-                entity.Property(e => e.CityName)
+                entity.Property(e => e.PhoneNumber)
                     .IsRequired()
-                    .HasMaxLength(50)
+                    .HasMaxLength(10)
                     .IsUnicode(false);
-
-                entity.HasOne(d => d.State)
-                    .WithMany(p => p.City)
-                    .HasForeignKey(d => d.StateId)
-                    .HasConstraintName("City_StateId_Fk");
             });
 
-            modelBuilder.Entity<Departments>(entity =>
+            modelBuilder.Entity<Drug>(entity =>
             {
-                entity.HasKey(e => e.DepartmentId)
-                    .HasName("Departments_DepartmentId_PkAuto");
+                entity.HasKey(e => e.DrugsId)
+                    .HasName("PK__Drugs__96604F90B8D05331");
 
-                entity.Property(e => e.DepartmentName)
+                entity.Property(e => e.DrugsId).HasColumnName("DrugsID");
+
+                entity.Property(e => e.DrugDescription)
                     .IsRequired()
                     .HasMaxLength(100)
                     .IsUnicode(false);
 
-                entity.Property(e => e.IsActive)
-                    .IsRequired()
-                    .HasDefaultValueSql("((1))");
-            });
-
-            modelBuilder.Entity<Doctors>(entity =>
-            {
-                entity.HasKey(e => e.DoctorId)
-                    .HasName("Doctors_DoctorId_PkAuto");
-
-                entity.Property(e => e.Designation)
-                    .IsRequired()
-                    .HasMaxLength(30)
-                    .IsUnicode(false);
-
-                entity.Property(e => e.FirstName)
-                    .IsRequired()
-                    .HasMaxLength(30)
-                    .IsUnicode(false);
-
-                entity.Property(e => e.IsActive)
-                    .IsRequired()
-                    .HasDefaultValueSql("((1))");
-
-                entity.Property(e => e.LastName)
-                    .IsRequired()
-                    .HasMaxLength(30)
-                    .IsUnicode(false);
-
-                entity.Property(e => e.YearsOfExperience).HasColumnType("decimal(3, 1)");
-
-                entity.HasOne(d => d.DepartmentNavigation)
-                    .WithMany(p => p.Doctors)
-                    .HasForeignKey(d => d.Department)
-                    .OnDelete(DeleteBehavior.SetNull)
-                    .HasConstraintName("Doctors_Department_Fk");
-            });
-
-            modelBuilder.Entity<DrugTiming>(entity =>
-            {
-                entity.HasKey(e => e.TimingId)
-                    .HasName("DrugTiming_TimingId_PkAuto");
-
-                entity.Property(e => e.Part)
-                    .IsRequired()
-                    .HasMaxLength(20)
-                    .IsUnicode(false);
-            });
-
-            modelBuilder.Entity<Drugs>(entity =>
-            {
-                entity.HasKey(e => e.DrugId)
-                    .HasName("Drugs_DrugId_PkAuto");
-
                 entity.Property(e => e.DrugName)
                     .IsRequired()
-                    .HasMaxLength(120)
+                    .HasMaxLength(25)
                     .IsUnicode(false);
 
-                entity.Property(e => e.IsActive)
-                    .IsRequired()
-                    .HasDefaultValueSql("((1))");
+                entity.Property(e => e.ExpiryDate).HasColumnType("date");
+
+                entity.Property(e => e.Price).HasColumnType("decimal(8, 2)");
             });
 
-            modelBuilder.Entity<PatientTakesMedicine>(entity =>
+            modelBuilder.Entity<Assistance>(entity =>
             {
-                entity.Property(e => e.EndDate)
-                    .HasColumnType("datetime")
-                    .HasDefaultValueSql("(dateadd(day,(7),getdate()))");
+                entity.HasKey(e => e.AssistantId)
+                    .HasName("PK__Healthca__3756F7502BCFE540");
 
-                entity.Property(e => e.StartDate)
-                    .HasColumnType("datetime")
-                    .HasDefaultValueSql("(getdate())");
+                entity.Property(e => e.AssistantId).HasColumnName("AssistantID");
 
-                entity.HasOne(d => d.AssistantNavigation)
-                    .WithMany(p => p.PatientTakesMedicine)
-                    .HasForeignKey(d => d.Assistant)
-                    .HasConstraintName("PatientTakesMedicine_Assistant_Fk");
-
-                entity.HasOne(d => d.DrugNavigation)
-                    .WithMany(p => p.PatientTakesMedicine)
-                    .HasForeignKey(d => d.Drug)
-                    .HasConstraintName("PatientTakesMedicine_Drug_Fk");
-
-                entity.HasOne(d => d.PatientNavigation)
-                    .WithMany(p => p.PatientTakesMedicine)
-                    .HasForeignKey(d => d.Patient)
-                    .HasConstraintName("PatientTakesMedicine_Patient_Fk");
-
-                entity.HasOne(d => d.TimingNavigation)
-                    .WithMany(p => p.PatientTakesMedicine)
-                    .HasForeignKey(d => d.Timing)
-                    .HasConstraintName("PatientTakesMedicine_Timing_Fk");
-            });
-
-            modelBuilder.Entity<Patients>(entity =>
-            {
-                entity.HasKey(e => e.PatientId)
-                    .HasName("Patient_PatientId_PkAuto");
-
-                entity.HasIndex(e => e.ContactNo)
-                    .HasName("UQ__Patients__5C667C0564682F54")
-                    .IsUnique();
-
-                entity.Property(e => e.ContactNo).HasColumnType("numeric(10, 0)");
-
-                entity.Property(e => e.DateOfBirth).HasColumnType("date");
-
-                entity.Property(e => e.FirstName)
+                entity.Property(e => e.AssistantName)
                     .IsRequired()
                     .HasMaxLength(30)
                     .IsUnicode(false);
 
-                entity.Property(e => e.IsActive)
+                entity.Property(e => e.PhoneNumber)
                     .IsRequired()
-                    .HasDefaultValueSql("((1))");
-
-                entity.Property(e => e.LastName)
-                    .IsRequired()
-                    .HasMaxLength(30)
+                    .HasMaxLength(10)
                     .IsUnicode(false);
 
-                entity.HasOne(d => d.CityNavigation)
-                    .WithMany(p => p.Patients)
-                    .HasForeignKey(d => d.City)
-                    .OnDelete(DeleteBehavior.ClientSetNull)
-                    .HasConstraintName("FK__Patients__City__31B762FC");
+                entity.Property(e => e.Salary).HasColumnType("decimal(8, 2)");
+
+                entity.HasOne(d => d.DeptNoNavigation)
+                    .WithMany(p => p.HealthcareAssistants)
+                    .HasForeignKey(d => d.DeptNo)
+                    .HasConstraintName("FK_Dept");
             });
 
-            modelBuilder.Entity<PatientsPerDoctor>(entity =>
+            modelBuilder.Entity<MedicineList>(entity =>
             {
                 entity.HasNoKey();
 
-                entity.ToView("PatientsPerDoctor");
+                entity.ToView("Medicine_list");
 
-                entity.Property(e => e.DrName)
+                entity.Property(e => e.MedicineList1)
+                    .HasMaxLength(8000)
+                    .IsUnicode(false)
+                    .HasColumnName("Medicine_list");
+
+                entity.Property(e => e.PatientName)
                     .IsRequired()
-                    .HasMaxLength(61)
+                    .HasMaxLength(30)
+                    .IsUnicode(false);
+            });
+
+            modelBuilder.Entity<Object>(entity =>
+            {
+                entity.HasKey(e => e.ObjId)
+                    .HasName("PK__Object__2D8B34D56A0789F6");
+
+                entity.ToTable("Object");
+
+                entity.Property(e => e.ObjId).HasColumnName("Obj_Id");
+
+                entity.Property(e => e.ObjName)
+                    .IsRequired()
+                    .HasMaxLength(30)
+                    .IsUnicode(false)
+                    .HasColumnName("Obj_Name");
+
+                entity.Property(e => e.TypeId).HasColumnName("Type_Id");
+
+                entity.HasOne(d => d.Type)
+                    .WithMany(p => p.Objects)
+                    .HasForeignKey(d => d.TypeId)
+                    .OnDelete(DeleteBehavior.ClientSetNull)
+                    .HasConstraintName("FK_Type_Id");
+            });
+
+            modelBuilder.Entity<ObjectMaster>(entity =>
+            {
+                entity.HasKey(e => e.TypeId)
+                    .HasName("PK__ObjectMa__FE90DD9E8E225B19");
+
+                entity.ToTable("ObjectMaster");
+
+                entity.Property(e => e.TypeId).HasColumnName("Type_Id");
+
+                entity.Property(e => e.TypeName)
+                    .IsRequired()
+                    .HasMaxLength(20)
+                    .IsUnicode(false)
+                    .HasColumnName("Type_Name");
+            });
+
+            modelBuilder.Entity<Patient>(entity =>
+            {
+                entity.Property(e => e.PatientId).HasColumnName("PatientID");
+
+                entity.Property(e => e.Address)
+                    .IsRequired()
+                    .HasMaxLength(30)
+                    .IsUnicode(false);
+
+                entity.Property(e => e.BloodGroup)
+                    .HasMaxLength(3)
                     .IsUnicode(false);
 
                 entity.Property(e => e.PatientName)
                     .IsRequired()
-                    .HasMaxLength(61)
+                    .HasMaxLength(30)
+                    .IsUnicode(false);
+
+                entity.Property(e => e.PhoneNumber)
+                    .IsRequired()
+                    .HasMaxLength(10)
                     .IsUnicode(false);
             });
 
-            modelBuilder.Entity<States>(entity =>
+            modelBuilder.Entity<PatientDoctor>(entity =>
             {
-                entity.HasKey(e => e.StateId)
-                    .HasName("States_StateId_Pk");
+                entity.HasNoKey();
 
-                entity.Property(e => e.StateName)
+                entity.ToView("Patients_Doctor");
+
+                entity.Property(e => e.DoctorName)
                     .IsRequired()
-                    .HasMaxLength(50)
-                    .IsUnicode(false);
+                    .HasMaxLength(30)
+                    .IsUnicode(false)
+                    .HasColumnName("Doctor Name");
+
+                entity.Property(e => e.PatientName)
+                    .IsRequired()
+                    .HasMaxLength(30)
+                    .IsUnicode(false)
+                    .HasColumnName("Patient Name");
+            });
+
+            modelBuilder.Entity<Prescription>(entity =>
+            {
+                entity.HasKey(e => e.PreId)
+                    .HasName("PK__Prescrip__7024C129B4A9EF0A");
+
+                entity.ToTable("Prescription");
+
+                entity.Property(e => e.PreId).HasColumnName("PreID");
+
+                entity.Property(e => e.DoctorId).HasColumnName("DoctorID");
+
+                entity.Property(e => e.DrugsId).HasColumnName("DrugsID");
+
+                entity.Property(e => e.PatientId).HasColumnName("PatientID");
+
+                entity.Property(e => e.PreDate).HasColumnType("date");
+
+                entity.HasOne(d => d.Doctor)
+                    .WithMany(p => p.Prescriptions)
+                    .HasForeignKey(d => d.DoctorId)
+                    .OnDelete(DeleteBehavior.ClientSetNull)
+                    .HasConstraintName("FK_DrID");
+
+                entity.HasOne(d => d.Drugs)
+                    .WithMany(p => p.Prescriptions)
+                    .HasForeignKey(d => d.DrugsId)
+                    .OnDelete(DeleteBehavior.ClientSetNull)
+                    .HasConstraintName("FK_DrugId");
+
+                entity.HasOne(d => d.Patient)
+                    .WithMany(p => p.Prescriptions)
+                    .HasForeignKey(d => d.PatientId)
+                    .OnDelete(DeleteBehavior.ClientSetNull)
+                    .HasConstraintName("FK_PatID");
             });
 
             modelBuilder.Entity<Treatment>(entity =>
             {
-                entity.Property(e => e.TreatmentDate)
-                    .HasColumnType("datetime")
+                entity.HasKey(e => e.TrtId)
+                    .HasName("PK__Treatmen__B8F3CCD1C2087D41");
+
+                entity.ToTable("Treatment");
+
+                entity.Property(e => e.TrtId).HasColumnName("TrtID");
+
+                entity.Property(e => e.DeptId).HasColumnName("DeptID");
+
+                entity.Property(e => e.DoctorId).HasColumnName("DoctorID");
+
+                entity.Property(e => e.PatientId).HasColumnName("PatientID");
+
+                entity.Property(e => e.TrtDate)
+                    .HasColumnType("date")
                     .HasDefaultValueSql("(getdate())");
 
-                entity.HasOne(d => d.AssistantNavigation)
-                    .WithMany(p => p.Treatment)
-                    .HasForeignKey(d => d.Assistant)
-                    .HasConstraintName("FK__Treatment__Assis__3F115E1A");
+                entity.HasOne(d => d.Dept)
+                    .WithMany(p => p.Treatments)
+                    .HasForeignKey(d => d.DeptId)
+                    .OnDelete(DeleteBehavior.ClientSetNull)
+                    .HasConstraintName("FK_DeptID");
 
-                entity.HasOne(d => d.DoctorNavigation)
-                    .WithMany(p => p.Treatment)
-                    .HasForeignKey(d => d.Doctor)
-                    .HasConstraintName("FK__Treatment__Docto__3D2915A8");
+                entity.HasOne(d => d.Doctor)
+                    .WithMany(p => p.Treatments)
+                    .HasForeignKey(d => d.DoctorId)
+                    .OnDelete(DeleteBehavior.ClientSetNull)
+                    .HasConstraintName("FK_DoctorID");
 
-                entity.HasOne(d => d.PatientNavigation)
-                    .WithMany(p => p.Treatment)
-                    .HasForeignKey(d => d.Patient)
-                    .HasConstraintName("Treatment_Patient_Fk");
+                entity.HasOne(d => d.Patient)
+                    .WithMany(p => p.Treatments)
+                    .HasForeignKey(d => d.PatientId)
+                    .OnDelete(DeleteBehavior.ClientSetNull)
+                    .HasConstraintName("FK_PatientID");
             });
 
             OnModelCreatingPartial(modelBuilder);

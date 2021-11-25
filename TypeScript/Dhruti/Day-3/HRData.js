@@ -1,8 +1,7 @@
 "use strict";
 // import file
-// compile file $ tsc --module commonjs app.ts  
-//$ node ./app.js 
- 
+// compile file  tsc --module commonjs app.ts  
+// node ./app.js  
 exports.__esModule = true;
 exports.GetReport = exports.GetHiredApplicantsList = exports.GetInterviewResult = exports.GetApplicantsList = exports.GetInterviewDetails = exports.GetVacancyDetails = exports.HireApplicants = exports.AddInterviewResult = exports.StoreApplicant = exports.ScheduleInterview = exports.AddVacancy = exports.Designation = exports.Departments = void 0;
 var Departments;
@@ -80,7 +79,7 @@ function ScheduleInterview(interviewId, jobId, interviewer, interviewDate) {
             return;
         }
     }
-    console.log("No jobid  trying to schedule an interview!");
+    console.log("No jobid found for which you are tying to schedule an interview!");
 }
 exports.ScheduleInterview = ScheduleInterview;
 function StoreApplicant(applicantId, applicantName, Email, BirthDate, qualification, experience, jobId) {
@@ -91,7 +90,7 @@ function StoreApplicant(applicantId, applicantName, Email, BirthDate, qualificat
             return;
         }
     }
-    console.log("No jobid found for which you are trying to apply!");
+    console.log("No jobid found for which you are tying to apply!");
 }
 exports.StoreApplicant = StoreApplicant;
 function AddInterviewResult(resultId, interviewId, shortlistedApplicants) {
@@ -119,7 +118,7 @@ function AddInterviewResult(resultId, interviewId, shortlistedApplicants) {
             return;
         }
     }
-    console.log("No interviewid found for  add result!");
+    console.log("No interviewid found for which you are tying to add result!");
 }
 exports.AddInterviewResult = AddInterviewResult;
 function HireApplicants() {

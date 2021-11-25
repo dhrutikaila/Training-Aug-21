@@ -5,23 +5,16 @@ using System.Collections.Generic;
 
 namespace Hospital_Mange.Models
 {
-    public partial class Assistants
+    public partial class Assistance
     {
-        public Assistants()
-        {
-            PatientTakesMedicine = new HashSet<PatientTakesMedicine>();
-            Treatment = new HashSet<Treatment>();
-        }
-
         public int AssistantId { get; set; }
-        public string FirstName { get; set; }
-        public string LastName { get; set; }
-        public int? WorksUnder { get; set; }
-        public decimal YearsOfExperience { get; set; }
-        public bool? IsActive { get; set; }
+        public string AssistantName { get; set; }
+        public byte Age { get; set; }
+        public byte Gender { get; set; }
+        public string PhoneNumber { get; set; }
+        public decimal? Salary { get; set; }
+        public int? DeptNo { get; set; }
 
-        public virtual Doctors WorksUnderNavigation { get; set; }
-        public virtual ICollection<PatientTakesMedicine> PatientTakesMedicine { get; set; }
-        public virtual ICollection<Treatment> Treatment { get; set; }
+        public virtual Department DeptNoNavigation { get; set; }
     }
 }

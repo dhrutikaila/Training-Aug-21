@@ -3,7 +3,6 @@
 //Some features of this system will be creating vacancies, storing Applicants data, Interview process initiation, Scheduling Interviews, 
 //Storing Interview results for the applicant and finally Hiring of the applicant.
 // Reports may be required to be generated for the use of HR group.
-
 exports.__esModule = true;
 var interviewModule = require("./HRData");
 console.log("\nRecruitment Portal - Radixweb Company");
@@ -20,14 +19,14 @@ switch (choice) {
         var designation = interviewModule.Designation.Trainee;
         var lastDateToApply = new Date("2021-12-20");
         var avilableOpenings = 15;
-        var description = "30/B Adarsh Society, Near Kaashi Parekh Complex, Swastik Cross Road, C G Road, Ahmedabad, Gujarat 380009 , Contact : 027-222-333, Email : abc.recruitment@gmail.com";
+        var description = "15,V.J.Road,Near SBI Bank,Ahmedabad,Gujarat, Contact : 027-222-333, Email : abc.recruitment@gmail.com";
         interviewModule.AddVacancy(jobId, department, designation, avilableOpenings, lastDateToApply, description);
         break;
     case 2:
         var applicantId = 1;
-        var applicantName = "dhruti patel";
-        var Email = "dhruti@gmail.com";
-        var BirthDate = new Date("2000-2-11");
+        var applicantName = "Avinash Yadav";
+        var Email = "avinash@gmail.com";
+        var BirthDate = new Date("2000-2-10");
         var qualification = ["B.Tech Computer Science", "M.Tech Information Security"];
         var experience = [];
         jobId = 1;
@@ -36,8 +35,8 @@ switch (choice) {
     case 3:
         interviewId = 1;
         jobId = 1;
-        var interviewer = ["sneha sharma", "meet patel"];
-        var interviewDate = new Date("2021-11-18");
+        var interviewer = ["Sarad Maheta", "Vishal Shah"];
+        var interviewDate = new Date("2021-12-25");
         interviewModule.ScheduleInterview(interviewId, jobId, interviewer, interviewDate);
         break;
     case 4:

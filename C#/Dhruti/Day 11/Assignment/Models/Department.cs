@@ -6,18 +6,19 @@ using System.Collections.Generic;
 // #nullable disable
 
 namespace Hospital_Mange.Models
-{ 
-public partial class Departments
 {
-    public Departments()
+    public partial class Department
     {
-        Doctors = new HashSet<Doctors>();
+        public Department()
+        {
+            HealthcareAssistants = new HashSet<Assistance>();
+            Treatments = new HashSet<Treatment>();
+        }
+
+        public int DeptId { get; set; }
+        public string DeptName { get; set; }
+
+        public virtual ICollection<Assistance> HealthcareAssistants { get; set; }
+        public virtual ICollection<Treatment> Treatments { get; set; }
     }
-
-    public int DepartmentId { get; set; }
-    public string DepartmentName { get; set; }
-    public bool? IsActive { get; set; }
-
-    public virtual ICollection<Doctors> Doctors { get; set; }
-}
 }
