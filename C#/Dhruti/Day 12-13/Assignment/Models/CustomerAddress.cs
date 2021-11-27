@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -8,14 +9,27 @@ namespace ToyShop.Models
 {
     class CustomerAddress
     {
-        public int addressId { get; set; }
-        public string address { get; set; }
-        public string city { get; set; }
-        public int customerId { get; set; }
-        public Customer CustomerNavigation { get; set; }
-        public ICollection<Order> OrderNavigation { get; set; }
-        public bool isActive { get; set; }
+        public int CustomerAddressId { get; set; }
 
+        [Required]
+        [MaxLength(50)]
+        public string Address { get; set; }
+
+        [Required]
+        [MaxLength(6)]
+        public string Pincode { get; set; }
+
+        [Required]
+        [MaxLength(25)]
+        public string State { get; set; }
+
+        [Required]
+        [MaxLength(50)]
+        public string Country { get; set; }
+
+
+        public int CustomerId { get; set; }
+        public Customer Customer { get; set; }
 
     }
 }

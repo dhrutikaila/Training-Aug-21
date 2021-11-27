@@ -6,15 +6,16 @@ using System.Threading.Tasks;
 
 namespace ToyShop.Models
 {
-    class Item
+public    class Item
     {
-        public int itemId { get; set; }
-        public int quantity { get; set; }
-        public int toyId { get; set; }
-        public Toy ToyNavigation { get; set; }
-        public int orderId { get; set; }
-        public Order OrderNavigation { get; set; }
-        public bool isActive { get; set; }
+        public int OrderId { get; set; }
 
+        public Order Order { get; set; }
+
+        public int ToysId { get; set; }
+
+        public Toy Toy { get; set; }
+
+        public byte Quantity { get; set; }
     }
 }

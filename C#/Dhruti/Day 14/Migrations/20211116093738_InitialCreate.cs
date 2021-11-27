@@ -1,8 +1,8 @@
 ﻿using Microsoft.EntityFrameworkCore.Migrations;
 
-namespace Day12_13_Assignment.Migrations
+namespace ToyShop.Migrations
 {
-    public partial class initial : Migration
+    public partial class InitialCreate : Migration
     {
         protected override void Up(MigrationBuilder migrationBuilder)
         {
@@ -10,12 +10,12 @@ namespace Day12_13_Assignment.Migrations
                 name: "Customers",
                 columns: table => new
                 {
-                    customerId = table.Column<int>(nullable: false)
+                    customerId = table.Column<int>(type: "int", nullable: false)
                         .Annotation("SqlServer:Identity", "1, 1"),
-                    firstName = table.Column<string>(nullable: true),
-                    lastName = table.Column<string>(nullable: true),
-                    phoneNumber = table.Column<int>(nullable: false),
-                    isActive = table.Column<bool>(nullable: false, defaultValue: true)
+                    firstName = table.Column<string>(type: "nvarchar(max)", nullable: true),
+                    lastName = table.Column<string>(type: "nvarchar(max)", nullable: true),
+                    phoneNumber = table.Column<int>(type: "int", nullable: false),
+                    isActive = table.Column<bool>(type: "bit", nullable: false, defaultValue: true)
                 },
                 constraints: table =>
                 {
@@ -26,10 +26,10 @@ namespace Day12_13_Assignment.Migrations
                 name: "ToyTypes",
                 columns: table => new
                 {
-                    typeId = table.Column<int>(nullable: false)
+                    typeId = table.Column<int>(type: "int", nullable: false)
                         .Annotation("SqlServer:Identity", "1, 1"),
-                    typeName = table.Column<string>(nullable: true),
-                    isActive = table.Column<bool>(nullable: false, defaultValue: true)
+                    typeName = table.Column<string>(type: "nvarchar(max)", nullable: true),
+                    isActive = table.Column<bool>(type: "bit", nullable: false, defaultValue: true)
                 },
                 constraints: table =>
                 {
@@ -40,12 +40,12 @@ namespace Day12_13_Assignment.Migrations
                 name: "Addresses",
                 columns: table => new
                 {
-                    addressId = table.Column<int>(nullable: false)
+                    addressId = table.Column<int>(type: "int", nullable: false)
                         .Annotation("SqlServer:Identity", "1, 1"),
-                    address = table.Column<string>(nullable: true),
-                    city = table.Column<string>(nullable: true),
-                    customerId = table.Column<int>(nullable: false),
-                    isActive = table.Column<bool>(nullable: false, defaultValue: true)
+                    address = table.Column<string>(type: "nvarchar(max)", nullable: true),
+                    city = table.Column<string>(type: "nvarchar(max)", nullable: true),
+                    customerId = table.Column<int>(type: "int", nullable: false),
+                    isActive = table.Column<bool>(type: "bit", nullable: false, defaultValue: true)
                 },
                 constraints: table =>
                 {
@@ -62,12 +62,12 @@ namespace Day12_13_Assignment.Migrations
                 name: "ToyPlants",
                 columns: table => new
                 {
-                    plantId = table.Column<int>(nullable: false)
+                    plantId = table.Column<int>(type: "int", nullable: false)
                         .Annotation("SqlServer:Identity", "1, 1"),
-                    plantName = table.Column<string>(nullable: true),
-                    plantCity = table.Column<string>(nullable: true),
-                    toyTypeId = table.Column<int>(nullable: false),
-                    isActive = table.Column<bool>(nullable: false, defaultValue: true)
+                    plantName = table.Column<string>(type: "nvarchar(max)", nullable: true),
+                    plantCity = table.Column<string>(type: "nvarchar(max)", nullable: true),
+                    toyTypeId = table.Column<int>(type: "int", nullable: false),
+                    isActive = table.Column<bool>(type: "bit", nullable: false, defaultValue: true)
                 },
                 constraints: table =>
                 {
@@ -84,10 +84,10 @@ namespace Day12_13_Assignment.Migrations
                 name: "Orders",
                 columns: table => new
                 {
-                    orderId = table.Column<int>(nullable: false)
+                    orderId = table.Column<int>(type: "int", nullable: false)
                         .Annotation("SqlServer:Identity", "1, 1"),
-                    addressId = table.Column<int>(nullable: false),
-                    isActive = table.Column<bool>(nullable: false, defaultValue: true)
+                    addressId = table.Column<int>(type: "int", nullable: false),
+                    isActive = table.Column<bool>(type: "bit", nullable: false, defaultValue: true)
                 },
                 constraints: table =>
                 {
@@ -104,19 +104,19 @@ namespace Day12_13_Assignment.Migrations
                 name: "Toys",
                 columns: table => new
                 {
-                    toyId = table.Column<int>(nullable: false)
+                    toyId = table.Column<int>(type: "int", nullable: false)
                         .Annotation("SqlServer:Identity", "1, 1"),
-                    toyName = table.Column<string>(nullable: true),
-                    toyPrice = table.Column<double>(nullable: false),
-                    toyPlantId = table.Column<int>(nullable: false),
-                    isActive = table.Column<bool>(nullable: false, defaultValue: true)
+                    toyName = table.Column<string>(type: "nvarchar(max)", nullable: true),
+                    toyPrice = table.Column<double>(type: "float", nullable: false),
+                    ToyPlantId = table.Column<int>(type: "int", nullable: false),
+                    isActive = table.Column<bool>(type: "bit", nullable: false, defaultValue: true)
                 },
                 constraints: table =>
                 {
                     table.PrimaryKey("PK_Toys", x => x.toyId);
                     table.ForeignKey(
-                        name: "FK_Toys_ToyPlants_toyPlantId",
-                        column: x => x.toyPlantId,
+                        name: "FK_Toys_ToyPlants_ToyPlantId",
+                        column: x => x.ToyPlantId,
                         principalTable: "ToyPlants",
                         principalColumn: "plantId",
                         onDelete: ReferentialAction.Cascade);
@@ -126,12 +126,12 @@ namespace Day12_13_Assignment.Migrations
                 name: "Items",
                 columns: table => new
                 {
-                    itemId = table.Column<int>(nullable: false)
+                    itemId = table.Column<int>(type: "int", nullable: false)
                         .Annotation("SqlServer:Identity", "1, 1"),
-                    quantity = table.Column<int>(nullable: false),
-                    toyId = table.Column<int>(nullable: false),
-                    orderId = table.Column<int>(nullable: false),
-                    isActive = table.Column<bool>(nullable: false, defaultValue: true)
+                    quantity = table.Column<int>(type: "int", nullable: false),
+                    toyId = table.Column<int>(type: "int", nullable: false),
+                    orderId = table.Column<int>(type: "int", nullable: false),
+                    isActive = table.Column<bool>(type: "bit", nullable: false, defaultValue: true)
                 },
                 constraints: table =>
                 {
@@ -177,9 +177,9 @@ namespace Day12_13_Assignment.Migrations
                 unique: true);
 
             migrationBuilder.CreateIndex(
-                name: "IX_Toys_toyPlantId",
+                name: "IX_Toys_ToyPlantId",
                 table: "Toys",
-                column: "toyPlantId");
+                column: "ToyPlantId");
         }
 
         protected override void Down(MigrationBuilder migrationBuilder)
