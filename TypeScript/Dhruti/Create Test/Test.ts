@@ -7,139 +7,95 @@
 //Table reservation can be done up to one month in advance.
 //Give a token number to the customer as an acknowledgement of booking.
 
+import { Table } from "./Restrunt.js";
 
-type DiningRoom = {
-    Id: number
-    Resaurant: number
+export class Restaurants{
+    RestaurantId : number;
+    RestName : string;
+    NoOfTables : number;
+    FoodType : string;
+    Table : Table[];
+
+    constructor(resid :number,resname : string,notables : number,ftype : string,table : Array<Table>)
+    {
+        this.RestaurantId=resid;
+        this.RestName = resname;
+        this.NoOfTables = notables;
+        this.FoodType = ftype;
+        this.Table = table;
+
+    }
+    GetDetails(){
+        console.log(`${this.RestaurantId} \t\t${this.RestName} \t\t${this.NoOfTables}  \t\t${this.FoodType}`);
+    }
+
 }
 
-type DiningTable = {
-    Id: number
-    DiningRoom: number
-    TableCapacity: number
-    BookingPricePerHr: number
-    IsBooked: boolean
+//Gives Restaurants list in the country
+function GetRestaurants(restaurant :Array<Restaurants>){
+    console.log("Restaurant ID \tRestaurant Name \tTotal Tables \tFood Type\n")
+    for(var res of restaurant)
+    {
+        res.GetDetails();
+    }
 }
 
-type Restaurant = {
-    Id: number
-    Name: string
-    City: string
-    Country: string
-    Rating: number
-    
-}
-
-type Booking = {
-    Id: number
-    TotalGuests: number
-    oneGuestName: string
-    DiningTable: number
-    BookingDate: Date
-    BookingHrs: number
-}
-
-var restaurants: Restaurant[] = [
-    { Id: 1, Name: "Star Restaurant", City: "Ahmedabad", Country: "India", Rating: 3 },
-    { Id: 2, Name: "Honest Restaurant", City: "Ahmedabad", Country: "India", Rating: 5 },
-    { Id: 3, Name: "Abc Restaurant", City: "New York", Country: "India", Rating: 5 }
-]
-
-var diningRooms: DiningRoom[] = [
-    { Id: 1, Resaurant: 1 },
-    { Id: 2, Resaurant: 2 },
-    { Id: 3, Resaurant: 2 },
-    { Id: 4, Resaurant: 3 },
-    { Id: 5, Resaurant: 3 }
-]
-
-var diningTables: DiningTable[] = [
-    { Id: 1, DiningRoom: 1, TableCapacity: 6, BookingPricePerHr: 300, IsBooked: false },
-    { Id: 2, DiningRoom: 1, TableCapacity: 4, BookingPricePerHr: 200, IsBooked: false },
-    { Id: 3, DiningRoom: 2, TableCapacity: 6, BookingPricePerHr: 300, IsBooked: false },
-    { Id: 4, DiningRoom: 2, TableCapacity: 4, BookingPricePerHr: 200, IsBooked: false },
-    { Id: 5, DiningRoom: 3, TableCapacity: 10, BookingPricePerHr: 500, IsBooked: false }
-    
-]
-
-var bookings: Booking[]
-
-function BookMyTable(TotalGuests: number, oneGuestName: string, DiningTable: number, BookingDate: Date, BookingHrs: number): boolean {
-    var today: Date = new Date()
-    if (BookingDate >= today) {
-        today.setMonth(today.getMonth() + 1)
-        if (BookingDate <= today) {
-            today.setHours(today.getHours() + 6)
-            if (BookingDate >= today) {
-                var booking: Booking = { Id: 1, TotalGuests: TotalGuests, DiningTable: DiningTable, oneGuestName: oneGuestName, BookingDate: BookingDate, BookingHrs: BookingHrs }
-                bookings.push(booking)
-                return true
-            }
+//Give Individual Restaurant Details with table availability
+function GetRestaurantDetails(res : Restaurants){
+    console.log("\n");
+    console.log("Restaurant Name \tFood Type");
+    console.log(`${res.RestName} \t\t${res.FoodType}`)
+    console.log("\n");
+    console.log("Tables Details : \n");
+    console.log("Table Id \tGuest Capacity");
+    for(var items of res.Table)
+    {
+        if(items.IsBooked !=true)
+        {
+            console.log(`${items.TableId} \t\t${items.GuestCapacity}`);
         }
     }
 }
 
-function GetRestaurantsList(): void {
-    restaurants.forEach(i => {
-        console.log(`Restautant Id : ${i.Id}, Restautant Name : ${i.Name}, Ratings : ${i.Rating}, City : ${i.City}, Country : ${i.Country}, Opens for : ${i.OpenTime}`)
-    });
-}
-
-function GetAvailableTables(restaurantId: number) {
-
-    restaurants.forEach(i => {
-        if (i.Id == restaurantId) {
-            console.log(`Restautant Id : ${i.Id}, Restautant Name : ${i.Name}, Ratings : ${i.Rating}, City : ${i.City}, Country : ${i.Country}, Opens for : ${i.OpenTime}`)
-        }
-    });
-
-    for (var j = 0; j < diningRooms.length; j++) {
-        if (diningRooms[j].Resaurant == restaurantId) {
-            console.log(`Dining room : ${j + 1}`)
-            for (var k = 0; k < diningTables.length; k++) {
-                if (diningTables[k].DiningRoom == diningRooms[j].Id && diningTables[k].IsBooked == false) {
-                    console.log(`Dining Table : ${k + 1}, Table Capacity : ${diningTables[k].TableCapacity}, Charges per hour : ${diningTables[k].BookingPricePerHr}`)
-                }
-            }
-        }
+//To Book Table
+function BookTable(res:Restaurants,tabid : number,date : Date) : void{
+    let currdate = new Date();
+    let bookid : number = 1;
+    if(res.Table[tabid].IsBooked == true)
+    {
+        console.log("Table Already Booked");
+        return;
     }
+    else if((currdate.getMonth()-date.getMonth()) >= 1)
+    {
+        console.log("Too advance to book");
+        return;
+    }
+    else if(((currdate.getDay() == date.getDay()) && ((currdate.getHours() - date.getHours()) < 6)))
+    {
+        console.log("Too late to book");
+    }
+    else{
+        console.log("Table booked\n");
+        console.log("Your Booking Details : ");
+        console.log(`Booking Id : ${bookid++}`);
+        console.log(`Booking Date : ${date}`);
+        console.log(`Restaurant Name : ${res.RestName}`);
+        console.log(`Table Id : ${tabid}`);
+        return;
+    }
+
 }
 
-console.log("1.Get restaurants list\n2.Get availble dining table details\n3.Book dining table")
-var choice: number = 1
-var bookingToken: number = 0
-switch (choice) {
-    case 1:
-        GetRestaurantsList()
-        break
-    case 2:
-        var restaurantId: number = 3
-        GetAvailableTables(restaurantId)
-        break
-    case 3:
-        var totalGuests: number = 3
-        var oneGuestName: string = "Kevin John"
-        bookingToken += 1
-        var diningTable: number = 7
-        var bookingDate: Date = new Date("2021/12/25 21:00")
-        var bookingHrs: number = 2
-        var price: number
-        var bookingStatus: boolean = BookMyTable(totalGuests, oneGuestName, diningTable, bookingDate, bookingHrs)
-        if (bookingStatus == true) {
-            for (var i of diningTables) {
-                if (diningTable == i.Id) {
-                    price = i.BookingPricePerHr
-                    break
-                }
-            }
-            console.log("Congratulations!Your table booked successfully!")
-            console.log("Booking Details :- ")
-            console.log(`Token : ${bookingToken}, Table : ${diningTable}, Date : ${bookingDate}, Time : From ${bookingDate.getHours()} to ${bookingDate.getHours() + 2}, Charges per hour : ${price},, Total booking charges : ${price * bookingHrs}`)
-        }
-        else {
-            console.log("Something went wrong!Please try again!!")
-        }
-    default:
-        console.log("Invalid Choice!!")
-        break
-}
+//Created Table Object
+let tabl :Array<Table> = [new Table(1,4,false),
+    new Table(2,5,true)];
+
+//Created Restaunts and passes table to each Restaurant
+let res : Array<Restaurants> = [new Restaurants(1,"Rv Foods",3,"Indian",tabl),
+new Restaurants(2,"Oneten Foods",5,"South Indian,Punjabi",tabl)];
+
+//Calling Different Methods
+GetRestaurants(res);
+GetRestaurantDetails(res[0]);
+BookTable(res[0],1,new Date(2021,11,28,13,0,0));
