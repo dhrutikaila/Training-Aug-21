@@ -58,12 +58,8 @@ var diningTables: DiningTable[] = [
     { Id: 2, DiningRoom: 1, TableCapacity: 4, BookingPricePerHr: 200, IsBooked: false },
     { Id: 3, DiningRoom: 2, TableCapacity: 6, BookingPricePerHr: 300, IsBooked: false },
     { Id: 4, DiningRoom: 2, TableCapacity: 4, BookingPricePerHr: 200, IsBooked: false },
-    { Id: 5, DiningRoom: 3, TableCapacity: 10, BookingPricePerHr: 500, IsBooked: false },
-    { Id: 6, DiningRoom: 3, TableCapacity: 6, BookingPricePerHr: 300, IsBooked: false },
-    { Id: 7, DiningRoom: 4, TableCapacity: 4, BookingPricePerHr: 200, IsBooked: false },
-    { Id: 8, DiningRoom: 4, TableCapacity: 4, BookingPricePerHr: 200, IsBooked: false },
-    { Id: 9, DiningRoom: 5, TableCapacity: 4, BookingPricePerHr: 200, IsBooked: false },
-    { Id: 10, DiningRoom: 5, TableCapacity: 4, BookingPricePerHr: 200, IsBooked: false }
+    { Id: 5, DiningRoom: 3, TableCapacity: 10, BookingPricePerHr: 500, IsBooked: false }
+    
 ]
 
 var bookings: Booking[]
