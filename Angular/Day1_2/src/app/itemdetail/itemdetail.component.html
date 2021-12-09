@@ -1,0 +1,44 @@
+
+<!--
+    item details ngswitch 
+-->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+
+<div class="container">
+   ​<div *ngFor="let product Of productList;let idx=index,let first=first,let last=last,let even=even" [ngSwitch]="product.rating">​
+
+    <span *ngSwitchCase="'1'" [ngStyle]="{'font-size':'18px','color':'blue'}">{{product.ProductName}}</span> ​
+
+    <span *ngSwitchCase="'2'" [ngStyle]="{'font-size':'18px','color':'red'}">{{product.ProductName}}</span> ​
+
+
+</div>
+
+Enter Color <input type="text" value="{{color}}" #colorinput >​
+
+Enter Font Size <input type="text" value="{{fontsize}}" #fontinput >​
+
+​
+<button   [ngStyle]="{'color':style.color,'font-size':style.fontsize}" (click)="changeStyle(colorinput.value,fontinput.value)">Change Style</button>​
+
+<select (change)="changecss(target.value)" #target>​
+
+    <option value="green" >GreenCSS</option>​
+
+    <option value="blue" >BlueCSS</option>​
+
+</select>​
+
+​
+<p [ngClass]="appliedcss">​
+
+    Welcome to the my Family​
+
+</p>​
+
+<button>Change CSS</button>
+
+<app-itemsdata [item]="currentItem">
+
+</app-itemsdata>​
+</div>
