@@ -1,0 +1,15 @@
+<!--
+  Create a circle component which computes area of Circle  
+-->
+
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+
+<div class="container">
+ 
+<input id="tb1" type="number" name="num1" [(ngModel)]="Radius" placeholder="Enter Radius " ><br><br>
+
+ <button (click)=" AreaOfCircle()" id="btnMul" class="btn btn-danger">Circle Area :</button><br><br>
+
+ <h3>Circle Area : {{result}}</h3>
+ 
+ </div>

@@ -1,0 +1,24 @@
+<!--
+    Create Login Component which validate a user with below credential username=admin, password=admin
+-->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+
+<div class="container">
+  <h2>SIGN IN </h2>
+        <div class="mb-3 mt-3 was-validate" >
+          <label for="email" class="form-label">Username:</label>
+          <input type="email" class="form-control" [(ngModel)]="username" id="Username" placeholder="Enter username" required >
+          <div class="valid-feedback"></div>
+          <div class="invalid-feedback">Please fill out this field.</div>
+        </div>
+        <br><br>
+        <div class="mb-3">
+          <label for="pwd" class="form-label">Password:</label>
+          <input type="password" class="form-control" [(ngModel)]="password" id="pwd" placeholder="Enter password" required>
+          <div class="invalid-feedback">Please fill out this field.</div>
+        </div>
+       <br><br>
+        <button type="submit" (click)="login()" class="btn btn-primary">Submit</button>
+        <h3>{{res}}</h3>
+   
+</div>

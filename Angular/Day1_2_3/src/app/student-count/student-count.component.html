@@ -1,0 +1,37 @@
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+
+<app-student> [all]="getTotalStudentsCount()"
+    [male]="getMaleStudentsCount()"
+    [female]="getFemaleStudentsCount()"
+    (countRadioButtonSelectionChanged)="onStudentCountRadioButtonChange($event)">
+    </app-student>
+    <br/><br/>
+    <table class="table">
+        <thead>
+            <tr>
+                <th>ID</th>
+                <th>Name</th>
+                <th>Gender</th>
+                <th>DOB</th>
+                <th>Course Fee</th>
+            </tr>
+        </thead>
+        <tbody>
+            <ng-container *ngFor="let student of students;">
+                <tr *ngIf="selectedStudentCountRadioButton=='All' ||
+                           selectedStudentCountRadioButton==student.Gender">
+                <td>{{student.ID | uppercase}}</td>
+                <td>{{student.FirstName | uppercase}}</td>
+                <td>{{student.Gender}}</td>      
+                <td>{{student.DOB | date:'dd/MM/y'}}</td>
+                <td>{{student.CourseFee | currency:'USD':true:'1.2-2'}}</td>
+            </tr>
+        </ng-container>
+            <tr *ngIf="!students || students.length==0">
+                <td colspan="10">
+                    No Students to display
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    

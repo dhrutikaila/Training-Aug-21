@@ -1,0 +1,40 @@
+
+
+<!--
+    Create a student Model interface with field( ID,Name,Age,Average,grade,Active )
+    StudentList Component will create an array of student type.Display an array with NGFor in table. 
+    Grade wise color should be given using ngSwitch and ngClass or ngStyle. Only active should displayed using ngIf.
+-->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.2/dist/js/bootstrap.bundle.min.js"></script>
+<div class="container">
+    <table class="table table-dark">
+        <thead>
+        <tr>
+            <th>ID</th>
+            <th>Name</th>
+            <th>Age</th>
+            <th>Average</th>
+            <th>Grade</th>
+           
+    </tr>  
+    </thead>
+    <tbody>
+        <tr *ngFor="let item of students"[ngSwitch]="item.grade">
+            <ng-container *ngIf="item.isActive">
+            <td>{{item.id}}</td>
+            <td>{{item.name}}</td>
+            <td>{{item.age}}</td>
+            <td>{{item.avrage}}</td>
+            <td *ngSwitchCase="'A+'" [ngStyle]="{'font-size':'18px','background-color':'green'}">{{item.grade}}</td>
+            <td *ngSwitchCase="'B+'" [ngStyle]="{'font-size':'18px','background-color':'lightgreen'}">{{item.grade}}</td>
+            <td *ngSwitchCase="'C'" [ngStyle]="{'font-size':'18px','background-color':'red'}">{{item.grade}}</td>
+            <td *ngSwitchCase="'D'" [ngStyle]="{'font-size':'18px','background-color':'red'}">{{item.grade}}</td>
+        </ng-container>
+        </tr>
+
+    </tbody>
+
+    </table>
+
+</div>

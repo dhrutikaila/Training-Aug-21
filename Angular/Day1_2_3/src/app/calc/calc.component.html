@@ -1,0 +1,23 @@
+
+<!--
+    
+Q-4 Create calc component Two text boxes with label. Do the operation addition,multiple and substraction. Use two way binding and event binding.
+-->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+
+<div class="container">
+<br><br>
+
+ <input id="tb1" type="number" name="num1" [(ngModel)]="num1" placeholder="Enter First Number" ><br><br>
+
+ <input id="tb2" type="number" name="num2" [(ngModel)]="num2" placeholder="Enter Second Number"><br><br>
+ 
+ <button (click)="add()" class="btn btn-warning" id="btnAdd">+</button>
+ 
+ <button (click)="sub()" class="btn btn-warning" id="btnSub">-</button>
+ 
+ <button (click)="mul()" class="btn btn-warning" id="btnMul">*</button><br><br>
+ 
+ <h3>Result : {{num3}}</h3>
+
+</div>

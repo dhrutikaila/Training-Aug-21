@@ -1,0 +1,198 @@
+<!--
+Create a Student Admission Form with Following Field
+Name –(First/Middle/Last)
+DOB
+Place of Birth
+First Language
+Address- City State Country Pin
+Father: FullName –First/Middle/Last
+ Email
+ Education Qualification
+ Profession
+ Designation
+ Phone
+Mother: FullName –First/Middle/Last
+ Email
+ Education Qualification
+ Profession
+ Designation
+ Phone
+Emergency Contact List
+ Relation
+ Number
+Reference Details
+Reference Through
+Address with Tel No:
+Note : Create an Interface Student,
+Emergency, Reference Details Form Group and Form Array should be used
+Apply Validation
+After submitting details Forms info should be added in StudentList Array and displayed in the Table Form
+-->
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.2/dist/css/bootstrap.min.css" rel="stylesheet">
+<!-- Latest compiled JavaScript -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.2/dist/js/bootstrap.bundle.min.js"></script>
+
+<body>
+  
+
+<div class="container" [formGroup]="profileForm">
+   
+  <h2 style="border: 3px solid green;">Student Admission Form</h2>
+      <label for="first-name">First Name: </label>
+      <input id="first-name" type="text" formControlName="firstName">&nbsp;
+      <label for="middel-name">Middle Name: </label>
+      <input id="middel-name" type="text" formControlName="middelName">&nbsp;
+      <label for="last-name">Last Name: </label>
+      <input id="last-name" type="text" formControlName="lastName"><br><br>
+
+      <label for="DOB">DOB:</label>
+    <input type="date" name="date" id="date" formControlName="DOB">&nbsp;
+    <label for="Place of Birth">Place of Birth:</label>
+    <input type="text" name="PlaceofBirth" id="PlaceofBirth" formControlName="PlaceofBirth"><br><br>
+      
+   <select formControlName="FirstLanguage">
+        <option selected>First Language</option>
+        <option>Gujarati</option>
+        <option>Hindi</option>
+        <option>English</option>
+      </select><br><br>
+      <div formGroupName="address">
+      <label for="city">City: </label>
+      <input id="city" type="text" formControlName="city"><br><br>
+      <label for="state">State: </label>
+      <input id="state" type="text" formControlName="state"><br><br>
+      <label for="state">Country: </label>
+      <input id="state" type="text" formControlName="Country"><br><br>
+      <label for="zip">Zip Code: </label>
+      <input id="zip" type="tel" formControlName="zip"><br><br>
+      </div>
+      <div formGroupName="fatherName">
+        <label for="Father" style="border: 3px solid green;"><b>Father Name:</b></label><br><br>
+        <label for="first-name">First Name: </label>
+        <input id="first-name" type="text" formControlName="firstName">&nbsp;
+        <label for="middel-name">Middle Name: </label>
+        <input id="middel-name" type="text" formControlName="middelName">&nbsp;
+        <label for="last-name">Last Name: </label>
+        <input id="last-name" type="text" formControlName="lastName"><br><br>
+      <label for="email">Email:</label>&nbsp;
+      <input type="email" name="email">&nbsp;
+      <label for="last-name">Education Qualification:</label>&nbsp;
+      <input id="last-name" type="text" formControlName="EducationQualification">&nbsp;
+      <label for="last-name">Profession: </label>&nbsp;
+      <input id="last-name" type="text" formControlName="Profession"><br><br>
+      <label for="last-name">Designation: </label>&nbsp;
+      <input id="last-name" type="text" formControlName="Designation">&nbsp;
+      <label for="last-name">Phone: </label>
+      <input id="last-name" type="text" formControlName="Phone"><br><br>
+    </div>
+      <div formGroupName="MotherName">
+        <label for="Father" style="border: 3px solid green;"><b>Mother Name:</b></label><br><br>
+        <label for="first-name">First Name: </label>
+        <input id="first-name" type="text" formControlName="firstName">&nbsp;
+        <label for="middel-name">Middle Name: </label>
+        <input id="middel-name" type="text" formControlName="middelName">&nbsp;
+        <label for="last-name">Last Name: </label>
+        <input id="last-name" type="text" formControlName="lastName"><br><br>
+        <label for="email">Email:</label>
+        <input type="email" name="email">&nbsp;
+        <label for="last-name">Education Qualification:</label>
+        <input id="last-name" type="text" formControlName="EducationQualification">&nbsp;
+        <label for="last-name">Profession: </label>&nbsp;
+        <input id="last-name" type="text" formControlName="Profession"><br><br>
+        <label for="last-name">Designation: </label>
+        <input id="last-name" type="text" formControlName="Designation">&nbsp;
+        <label for="last-name">Phone: </label>
+        <input id="last-name" type="text" formControlName="Phone"><br><br>
+      </div>
+      <div formArrayName="EmergencyContactList1">
+        <button (click)="addAlias()" class="button btn btn-info" type="button">EmergencyContact</button>  <br><br> 
+          
+        <div *ngFor="let alias of EmergencyContactList1.controls; let i=index">
+          <div [formGroupName]="i">
+            <label for="relation" class="form-label">Relation</label>
+            <input type="text" name="" id="" formControlName="Relation">&nbsp;
+            <label for="num --{{i}}" class="form-label">Number</label>
+            <input type="text" name="" id="num --{{i}}" formControlName="Number">  
+          </div>
+          
+      </div>
+      <div class="container">
+       
+        <button class="button btn btn-success" (click)="onSubmit()" type="submit">Submit</button><br><br>
+      </div>
+      <div class="table-responsive">
+        <table class="table table-bordered table-dark">
+          <thead>
+            <tr>
+            
+              <th>Firstname</th>
+              <th>middelName</th>
+              <th>Lastname</th>
+              <th>DOB</th>
+              <th>Place of Birth</th>
+              <th>First Language</th>
+              <th>City</th>
+              <th>State</th>
+              <th>Country</th>
+              <th>pin</th>
+              <th>Firstname</th>
+              <th>middelName</th>
+              <th>Lastname</th>
+              <th>Email</th>
+              <th> Education Qualification</th>
+              <th>Profession</th>
+              <th>Designation</th>
+              <th>Phone</th>
+              <th>Firstname</th>
+              <th>middelName</th>
+              <th>Lastname</th>
+              <th>Email</th>
+              <th> Education Qualification</th>
+              <th>Profession</th>
+              <th>Designation</th>
+              <th>Phone</th>
+           
+              <th>Relation</th>
+              <th>Number</th>
+              
+              
+            </tr>
+          </thead>
+          <tbody>
+            <tr *ngFor="let data of students">
+              <td>{{data.firstName}}</td>
+              <td>{{data.middelName}}</td>
+              <td>{{data.lastName}}</td>
+              <td>{{data.DOB}}</td>
+              <td>{{data.PlaceofBirth}}</td>
+              <td>{{data.FirstLanguage}}</td>
+              <td>{{data.address.Country}}</td>
+              <td>{{data.address.city}}</td>
+              <td>{{data.address.state}}</td>
+              <td>{{data.address.zip}}</td>
+              <td>{{data.fatherName.firstName}}</td>
+              <td>{{data.fatherName.middelName}}</td>
+              <td>{{data.fatherName.lastName}}</td>
+              <td>{{data.fatherName.email}}</td>
+              <td>{{data.fatherName.EducationQualification}}</td>
+              <td>{{data.fatherName.Profession}}</td>
+              <td>{{data.fatherName.Designation}}</td>
+              <td>{{data.fatherName.Phone}}</td>
+              <td>{{data.MotherName.firstName}}</td>
+              <td>{{data.MotherName.middelName}}</td>
+              <td>{{data.MotherName.lastName}}</td>
+              <td>{{data.MotherName.email}}</td>
+              <td>{{data.MotherName.EducationQualification}}</td>
+              <td>{{data.MotherName.Profession}}</td>
+              <td>{{data.MotherName.Designation}}</td>
+              <td>{{data.MotherName.Phone}}</td>
+              <td>{{data.EmergencyContactList1.Relation}}</td>
+              <td>{{data.EmergencyContactList1.Number}}</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+    
+</div>
+</body>

@@ -1,0 +1,17 @@
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+<!--Create Hello World Component and call the helloWorld Component in the App Component.
+
+Q-2  HelloworldComponent-> Declare a name variable and store your name in that variable and use header 
+tag to interpolate the variable Greeting of the day with name stored in the variable
+
+Q-3 Create one textbox in Helloworld component. Bind its value to name variable.
+
+-->
+<div class="container">
+
+<h1>Greeting of the day  {{name}}</h1>
+<button type="button" class="btn btn-success" (click)="updateName()">Update Name</button><br><br>
+<label for="">Binds value</label><br>
+<input type="text" name="welcome" id="" value={{name}}>
+
+</div>
