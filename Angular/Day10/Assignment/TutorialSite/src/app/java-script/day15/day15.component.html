@@ -1,0 +1,76 @@
+<div class="container ">
+    <label for="no1" class="col-6 ">Please enter first number:</label>
+    <input type="number" id="no1" name="no1" class="col-6"><br><br>
+    <label for="no2" class="col-6 ">Please enter second number:</label>
+    <input type="number" id="no2" name="no2" class="col-6"><br><br>
+    <label for="no2" class="col-6 ">Please select operation you want to perform :</label>
+    <br><br>
+
+    <div class="col-12 ">
+        <div class="form-check form-check-inline">
+            <input class="form-check-input" type="radio" name="Addition" id="Addition" value="Addition">
+            <label class="form-check-label" for="Addition">Addition</label>
+        </div><br><br>
+        <div class="form-check form-check-inline">
+            <input class="form-check-input" type="radio" name="Subtraction" id="Subtraction" value="Subtraction">
+            <label class="form-check-label" for="Subtraction">Subtraction</label>
+        </div><br><br>
+        <div class="form-check form-check-inline">
+            <input class="form-check-input" type="radio" name="Multiplication" id="Multiplication"
+                value="Multiplication">
+            <label class="form-check-label" for="Multiplication">Multiplication</label>
+        </div><br><br>
+        <div class="form-check form-check-inline">
+            <input class="form-check-input" type="radio" name="Division" id="Division" value="Division">
+            <label class="form-check-label" for="Division">Division</label>
+        </div>
+    </div><br><br>
+    <input class="btn btn-success col-3" type="submit" value="Submit" onclick="Calculate()">
+    <input class="btn btn-outline-secondary col-3" type="reset" value="Reset" onclick="Reset()">
+</div>
+
+<label id="ans" class="fw-bold pt-5 text-success col-12 text-center"></label>
+
+<script>
+    function Calculate() {
+        var no1 = parseInt(document.getElementById("no1").value);
+        var no2 = parseInt(document.getElementById("no2").value);
+        var no3 = 0;
+
+        if (document.getElementById('Addition').checked == true) {
+            no3 = no1 + no2;
+            document.getElementById("ans").innerHTML += "Sum :" + no3 + "<br>";
+        }
+        if (document.getElementById('Subtraction').checked == true) {
+            no3 = no1 - no2;
+            document.getElementById("ans").innerHTML += "Subtraction:" + no3 + "<br>";
+        }
+        if (document.getElementById('Multiplication').checked == true) {
+            no3 = no1 * no2;
+            document.getElementById("ans").innerHTML += "Multiplication :" + no3 + "<br>";
+        }
+        if (document.getElementById('Division').checked == true) {
+            if (no2 == 0) {
+                document.getElementById("ans").innerHTML += "Division is not possible due to divide by zero" + "<br>";
+            }
+            else {
+                no3 = no1 / no2;
+                document.getElementById("ans").innerHTML += "Division :" + no3 + "<br>";
+            }
+        }
+    }
+
+    function Reset() {
+        document.getElementById("no1").value = "";
+        document.getElementById("no2").value = "";
+        document.getElementById("Addition").checked = false;
+        document.getElementById("Subtraction").checked = false;
+        document.getElementById("Multiplication").checked = false;
+        document.getElementById("Division").checked = false;
+        document.getElementById("ans").innerHTML = "";
+    }
+</script>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-/bQdsTh/da6pkI1MST/rWKFNjaCP5gBSY4sEBT38Q/9RBh9AH40zEOg7Hlq2THRZ" crossorigin="anonymous">
+    </script>
