@@ -1,0 +1,80 @@
+<!--Create a menu list of the website. It should be responsive.-->
+<!DOCTYPE html>
+<html>
+
+<head>
+    <style>
+        body {
+            margin: 0;
+        }
+
+        .demo {
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+            overflow: hidden;
+            background-color: #333;
+            position: fixed;
+
+            width: 60%;
+        }
+
+        .liv {
+            float: left;
+        }
+
+        .liv a {
+            display: block;
+            color: white;
+            text-align: center;
+            padding: 14px 16px;
+            text-decoration: none;
+        }
+
+        .liv a:hover:not(.active1) {
+            background-color: #111;
+        }
+
+        .active1 {
+            background-color: #c568c5;
+        }
+    </style>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+
+</head>
+
+<body>
+
+    <div>
+
+        <div class="maincontain">
+
+
+
+            <ul class="demo">
+                <li class="liv"><a class="active1" href="#home">Home</a></li>
+                <li class="liv"><a href="#news">News</a></li>
+                <li class="liv"><a href="#contact">Contact</a></li>
+                <li class="liv"><a href="#about">About</a></li>
+            </ul>
+
+            <div style="padding:20px;margin-top:30px;background-color:#f0a44e; height:700px;">
+                <h1>Fixed Top Navigation Bar</h1>
+                <h2>Scroll this page to see the effect</h2>
+                <h2>The navigation bar will stay at the top of the page while scrolling</h2>
+
+                <p>Some text some text some text some text..</p>
+                <p>Some text some text some text some text..</p>
+                <p>Some text some text some text some text..</p>
+                <p>Some text some text some text some text..</p>
+
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>
