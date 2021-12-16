@@ -1,3 +1,9 @@
+<!-- Latest compiled and minified CSS -->
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.2/dist/css/bootstrap.min.css" rel="stylesheet">
+
+<!-- Latest compiled JavaScript -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.2/dist/js/bootstrap.bundle.min.js"></script>
+
 <div class="container my-3 p-4 shadow">
     <div class="row">
         <h3 class="text-center">Student Data</h3>
@@ -5,120 +11,32 @@
     <hr>
     <div class="row">
         <div class="col">
-            <div class="table-responsive">
-                <table class="table text-center text-nowrap table-bordered">
-                    <thead>
-                        <th>Student Name</th>
-                        <th>Date of Birth</th>
-                        <th>Place of Birth</th>
-                        <th>First Language</th>
-                        <th>Address</th>
-                        <th>Father Details</th>
-                        <th>Mother Details</th>
-                        <th>Emergency Contacts</th>
-                        <th>Reference Details</th>
-                        <th>Reference Through</th>
-                        <th>Edit</th>
-                        <th>Remove</th>
-                    </thead>
-                    <tbody *ngFor="let student of studentList;let i = index">
-                        <tr>
-                            <td>{{student.firstName}} {{student.middleName}} {{student.lastName}}</td>
-                            <td>{{student.birthDate}}</td>
-                            <td>{{student.birthPlace}}</td>
-                            <td>{{student.firstLanguage}}</td>
-                            <td>
-                                <table class="table text-nowrap table-bordered">
-                                    <thead>
-                                        <th>Phone No.</th>
-                                        <th>House No.</th>
-                                        <th>Address 1</th>
-                                        <th>Address 2</th>
-                                        <th>Pin Code</th>
-                                        <th>City</th>
-                                        <th>State</th>
-                                        <th>Country</th>
-                                    </thead>
-                                    <tbody>
-                                        <td>{{student.addressWithTel.phone}}</td>
-                                        <td>{{student.addressWithTel.houseno}}</td>
-                                        <td>{{student.addressWithTel.addressline1}}</td>
-                                        <td>{{student.addressWithTel.addressline2}}</td>
-                                        <td>{{student.address.pin}}</td>
-                                        <td>{{student.address.city}}</td>
-                                        <td>{{student.address.state}}</td>
-                                        <td>{{student.address.country}}</td>
-                                    </tbody>
-                                </table>
-                            </td>
-                            <td>
-                                <table class="table text-nowrap table-bordered">
-                                    <thead>
-                                        <th>Name</th>
-                                        <th>Phone</th>
-                                        <th>Email</th>
-                                        <th>Edu.Qual.</th>
-                                        <th>Profession</th>
-                                        <th>Designation</th>
-                                    </thead>
-                                    <tbody>
-                                        <td>{{student.father.firstName}} {{student.father.middleName}}
-                                            {{student.father.lastName}}</td>
-                                        <td>{{student.father.phone}}</td>
-                                        <td>{{student.father.email}}</td>
-                                        <td>{{student.father.educationQualification}}</td>
-                                        <td>{{student.father.profession}}</td>
-                                        <td>{{student.father.designation}}</td>
-                                    </tbody>
-                                </table>
-                            </td>
-                            <td>
-                                <table class="table text-nowrap table-bordered">
-                                    <thead>
-                                        <th>Name</th>
-                                        <th>Phone</th>
-                                        <th>Email</th>
-                                        <th>Edu.Qual.</th>
-                                        <th>Profession</th>
-                                        <th>Designation</th>
-                                    </thead>
-                                    <tbody>
-                                        <td>{{student.mother.firstName}} {{student.mother.middleName}}
-                                            {{student.mother.lastName}}</td>
-                                        <td>{{student.mother.phone}}</td>
-                                        <td>{{student.mother.email}}</td>
-                                        <td>{{student.mother.educationQualification}}</td>
-                                        <td>{{student.mother.profession}}</td>
-                                        <td>{{student.mother.designation}}</td>
-                                    </tbody>
-                                </table>
-                            </td>
-                            <td>
-                                <table class="table text-nowrap table-bordered">
-                                    <thead>
-                                        <th>Name</th>
-                                        <th>Phone</th>
-                                    </thead>
-                                    <tbody *ngFor="let i of student.emergencyContacts">
-                                        <td>{{i.relation}}</td>
-                                        <td>{{i.phone}}</td>
-                                    </tbody>
-                                </table>
-                            </td>
-                            <td>
-                    <tbody *ngFor="let i of student.referenceDetails">
-                        <td>{{i}}</td>
-                    </tbody>
-                    </td>
-                    <td>
-                        {{student.referenceThrough}}
-                    </td>
-                    <td><button class="btn btn-primary btn-sm" (click)="editStudent(i)">edit</button></td>
-                    <td><button class="btn btn-primary btn-sm" (click)="deleteStudent(i)">remove</button></td>
+
+            <table class="table text-center text-nowrap table-bordered">
+                <thead>
+                    <th>Student Name</th>
+                    <th>Date of Birth</th>
+
+                    <th>First Language</th>
+
+                    <th>Edit</th>
+                    <th>Remove</th>
+                </thead>
+                <tbody *ngFor="let student of studentList;let i = index">
+                    <tr>
+                        <td>{{student.firstName}} {{student.middleName}} {{student.lastName}}</td>
+                        <td>{{student.birthDate}}</td>
+
+                        <td>{{student.firstLanguage}}</td>
+
+
+
+                        <td><button class="btn btn-primary btn-sm" (click)="editStudent(i)">edit</button></td>
+                        <td><button class="btn btn-primary btn-sm" (click)="deleteStudent(i)">remove</button></td>
                     </tr>
-                    </tbody>
-                </table>
-            </div>
+                </tbody>
+            </table>
+
         </div>
     </div>
 
