@@ -1,0 +1,523 @@
+<div class="container w-75 my-3 p-4 shadow">
+  <div class="row">
+    <h3 class="text-center">Admission Form</h3>
+  </div>
+  <hr>
+  <form [formGroup]="applicationForm" (ngSubmit)="onSubmit()">
+    <div class="row">
+      <h5>Student Details:</h5>
+    </div>
+    <div class="row g-3 mb-3">
+      <div class="col-4">
+        <label for="fname" class="form-label">Firstname</label><span class="text-danger">*</span>
+        <input type="text" name="" id="fname" class="form-control" formControlName="firstName" required>
+        <div *ngIf="firstName!==null">
+          <div *ngIf="firstName.invalid && (firstName.dirty || firstName.touched)"
+            class="text-danger m-0 p-0 ms-1 mt-1">
+            <div *ngIf="firstName.errors?.['required']">
+              Firstname is required.
+            </div>
+            <div *ngIf="firstName.errors?.['minlength']">
+              Firstname must be at least 3 characters long.
+            </div>
+            <div *ngIf="firstName.errors?.['pattern']">
+              Name can't contain digit or space.
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="col-4">
+        <label for="mname" class="form-label">Middlename</label><span class="text-danger">*</span>
+        <input type="text" name="" id="mname" class="form-control" formControlName="middleName" required>
+        <div *ngIf="middleName!==null">
+          <div *ngIf="middleName.invalid && (middleName.dirty || middleName.touched)"
+            class="text-danger m-0 p-0 ms-1 mt-1">
+            <div *ngIf="middleName.errors?.['required']">
+              Middlename is required.
+            </div>
+            <div *ngIf="middleName.errors?.['minlength']">
+              Middlename must be at least 3 characters long.
+            </div>
+            <div *ngIf="middleName.errors?.['pattern']">
+              Name can't contain digit or space.
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="col-4">
+        <label for="lname" class="form-label">Lastname</label><span class="text-danger">*</span>
+        <input type="text" name="" id="lname" class="form-control" formControlName="lastName" required>
+        <div *ngIf="lastName!==null">
+          <div *ngIf="lastName.invalid && (lastName.dirty || lastName.touched)" class="text-danger m-0 p-0 ms-1 mt-1">
+            <div *ngIf="lastName.errors?.['required']">
+              Lastname is required.
+            </div>
+            <div *ngIf="lastName.errors?.['minlength']">
+              Lastname must be at least 3 characters long.
+            </div>
+            <div *ngIf="lastName.errors?.['pattern']">
+              Name can't contain digit or space.
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="row g-3 mb-3">
+      <div class="col-4">
+        <label for="dob" class="form-label">Date of Birth</label><span class="text-danger">*</span>
+        <input type="date" name="" id="dob" class="form-control" formControlName="birthDate" required>
+        <div *ngIf="birthDate!==null">
+          <div *ngIf="birthDate.invalid && (birthDate.dirty || birthDate.touched)"
+            class="text-danger m-0 p-0 ms-1 mt-1">
+            <div *ngIf="birthDate.errors?.['required']">
+              Date of birth is required.
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="col-4">
+        <label for="pob" class="form-label">Place of Birth</label><span class="text-danger">*</span>
+        <input type="text" name="" id="pob" class="form-control" formControlName="birthPlace" required>
+        <div *ngIf="birthPlace!==null">
+          <div *ngIf="birthPlace.invalid && (birthPlace.dirty || birthPlace.touched)"
+            class="text-danger m-0 p-0 ms-1 mt-1">
+            <div *ngIf="birthPlace.errors?.['required']">
+              Place of birth is required.
+            </div>
+            <div *ngIf="birthPlace.errors?.['minlength']">
+              Place of birth must be at least 3 characters long.
+            </div>
+            <div *ngIf="birthPlace.errors?.['pattern']">
+              Place of birth can't contain digit.
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="col-4">
+        <label for="flanguage" class="form-label">First Language</label><span class="text-danger">*</span>
+        <input type="text" name="" id="flanguage" class="form-control" formControlName="firstLanguage" required>
+        <div *ngIf="firstLanguage!==null">
+          <div *ngIf="firstLanguage.invalid && (firstLanguage.dirty || firstLanguage.touched)"
+            class="text-danger m-0 p-0 ms-1 mt-1">
+            <div *ngIf="firstLanguage.errors?.['required']">
+              First language is required.
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="row g-3 mb-3">
+      <div class="col-4">
+        <label for="country" class="form-label">Country</label><span class="text-danger">*</span>
+        <select name="" id="country" class="form-select" (change)="setStates($event)" required
+          [ngClass]="{'invalidInp': isCountryInvalid && applicationForm.touched,'validInp': !isCountryInvalid}">
+          <option value="" selected>Please select country</option>
+          <option value="{{i.countryId}}" *ngFor="let i of countryList">{{i.countryName}}</option>
+        </select>
+      </div>
+
+      <div class="col-4">
+        <label for="state" class="form-label">State</label><span class="text-danger">*</span>
+        <select name="" id="state" class="form-select" (change)="setCity($event)" required
+          [ngClass]="{'invalidInp': isStateInvalid && applicationForm.touched,'validInp': !isStateInvalid}">
+          <option value="" selected>Please select state</option>
+          <option value="{{i.stateId}}" *ngFor="let i of stateList">{{i.stateName}}</option>
+        </select>
+      </div>
+
+      <div class="col-4">
+        <label for="city" class="form-label">City</label><span class="text-danger">*</span>
+        <select name="" id="city" class="form-select" (change)="selectCity($event)" required
+          [ngClass]="{'invalidInp': city!.invalid && applicationForm.touched,'validInp': !city!.invalid}">
+          <option value="" selected>Please select city</option>
+          <option value="{{i.cityId}}" *ngFor="let i of cityList">{{i.cityName}}</option>
+        </select>
+        <div *ngIf="city!==null">
+          <div *ngIf="city.invalid && (city.dirty || city.touched)" class="text-danger m-0 p-0 ms-1 mt-1">
+            <div *ngIf="city.errors?.['required']">
+              City is required.
+            </div>
+            <div *ngIf="city.errors?.['pattern']">
+              City is not valid.
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="row g-3 mb-3">
+      <div class="col-8">
+        <label for="phoneno" class="form-label">Phone Number</label><span class="text-danger">*</span>
+        <input type="number" name="" id="phoneno" class="form-control" formControlName="phone" required>
+        <div *ngIf="studentPhone!==null">
+          <div *ngIf="studentPhone.invalid && (studentPhone.dirty || studentPhone.touched)"
+            class="text-danger m-0 p-0 ms-1 mt-1">
+            <div *ngIf="studentPhone.errors?.['required']">
+              Phonenumber is required.
+            </div>
+            <div *ngIf="studentPhone.errors?.['pattern']">
+              Phonenumber is not valid.
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="col-4">
+        <label for="flanguage" class="form-label">Zip Code</label><span class="text-danger">*</span>
+        <input type="number" name="" id="flanguage" class="form-control" formControlName="pinCode" required>
+        <div *ngIf="pin!==null">
+          <div *ngIf="pin.invalid && (pin.dirty || pin.touched)" class="text-danger m-0 p-0 ms-1 mt-1">
+            <div *ngIf="pin.errors?.['required']">
+              Zip code is required.
+            </div>
+            <div *ngIf="pin.errors?.['pattern']">
+              Zip code is invalid.
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="col-12">
+        <label for="addrline1" class="form-label">AddressLine 1</label>
+        <input type="text" name="" id="addrline1" class="form-control" formControlName="addressline1">
+      </div>
+      <div class="col-12">
+        <label for="addrline1" class="form-label">AddressLine 2</label>
+        <input type="text" name="" id="addrline1" class="form-control" formControlName="addressline2">
+      </div>
+
+
+
+    </div>
+
+    <hr>
+    <div class="row">
+      <h5>Father Details:</h5>
+    </div>
+    <div class="row g-3 mb-3">
+      <div class="col-4">
+        <label for="ffname" class="form-label">Firstname</label><span class="text-danger">*</span>
+        <input type="text" name="" id="ffname" class="form-control" formControlName="fatherFirstName" required>
+        <div *ngIf="fatherFirstName!==null">
+          <div *ngIf="fatherFirstName.invalid && (fatherFirstName.dirty || fatherFirstName.touched)"
+            class="text-danger m-0 p-0 ms-1 mt-1">
+            <div *ngIf="fatherFirstName.errors?.['required']">
+              Firstname is required.
+            </div>
+            <div *ngIf="fatherFirstName.errors?.['minlength']">
+              Firstname must be at least 3 characters long.
+            </div>
+            <div *ngIf="fatherFirstName.errors?.['pattern']">
+              Name can't contain digit or space.
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="col-4">
+        <label for="fmname" class="form-label">Middlename</label><span class="text-danger">*</span>
+        <input type="text" name="" id="fmname" class="form-control" formControlName="fatherMiddleName" required>
+        <div *ngIf="fatherMiddleName!==null">
+          <div *ngIf="fatherMiddleName.invalid && (fatherMiddleName.dirty || fatherMiddleName.touched)"
+            class="text-danger m-0 p-0 ms-1 mt-1">
+            <div *ngIf="fatherMiddleName.errors?.['required']">
+              Middlename is required.
+            </div>
+            <div *ngIf="fatherMiddleName.errors?.['minlength']">
+              Middlename must be at least 3 characters long.
+            </div>
+            <div *ngIf="fatherMiddleName.errors?.['pattern']">
+              Name can't contain digit or space.
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="col-4">
+        <label for="flname" class="form-label">Lastname</label><span class="text-danger">*</span>
+        <input type="text" name="" id="flname" class="form-control" formControlName="fatherLastName" required>
+        <div *ngIf="fatherLastName!==null">
+          <div *ngIf="fatherLastName.invalid && (fatherLastName.dirty || fatherLastName.touched)"
+            class="text-danger m-0 p-0 ms-1 mt-1">
+            <div *ngIf="fatherLastName.errors?.['required']">
+              Lastname is required.
+            </div>
+            <div *ngIf="fatherLastName.errors?.['minlength']">
+              Lastname must be at least 3 characters long.
+            </div>
+            <div *ngIf="fatherLastName.errors?.['pattern']">
+              Name can't contain digit or space.
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="row g-3 mb-3">
+      <div class="col-4">
+        <label for="fphone" class="form-label">Phone Number</label><span class="text-danger">*</span>
+        <input type="number" name="" id="fphone" class="form-control" formControlName="fatherPhone" required>
+        <div *ngIf="fatherPhone!==null">
+          <div *ngIf="fatherPhone.invalid && (fatherPhone.dirty || fatherPhone.touched)"
+            class="text-danger m-0 p-0 ms-1 mt-1">
+            <div *ngIf="fatherPhone.errors?.['required']">
+              Phone number is required.
+            </div>
+            <div *ngIf="fatherPhone.errors?.['pattern']">
+              Phonenumber is invalid.
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="col-8">
+        <label for="femail" class="form-label">Email</label><span class="text-danger">*</span>
+        <input type="email" name="" id="femail" class="form-control" formControlName="fatherEmail" required>
+        <div *ngIf="fatherEmail!==null">
+          <div *ngIf="fatherEmail.invalid && (fatherEmail.dirty || fatherEmail.touched)"
+            class="text-danger m-0 p-0 ms-1 mt-1">
+            <div *ngIf="fatherEmail.errors?.['required']">
+              Email is required.
+            </div>
+            <div *ngIf="fatherEmail.errors?.['email']">
+              Email is not valid.
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="row g-3 mb-3">
+      <div class="col-4">
+        <label for="fequa" class="form-label">Education Qualification</label><span class="text-danger">*</span>
+        <input type="text" name="" id="fequa" class="form-control" formControlName="fatherEducationQualification"
+          required>
+        <div *ngIf="fatherEduQua!==null">
+          <div *ngIf="fatherEduQua.invalid && (fatherEduQua.dirty || fatherEduQua.touched)"
+            class="text-danger m-0 p-0 ms-1 mt-1">
+            <div *ngIf="fatherEduQua.errors?.['required']">
+              Education qualification is required.
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="col-4">
+        <label for="fprofession" class="form-label">Profession</label><span class="text-danger">*</span>
+        <input type="text" name="" id="fprofession" class="form-control" formControlName="fatherProfession" required>
+        <div *ngIf="fatherProfession!==null">
+          <div *ngIf="fatherProfession.invalid && (fatherProfession.dirty || fatherProfession.touched)"
+            class="text-danger m-0 p-0 ms-1 mt-1">
+            <div *ngIf="fatherProfession.errors?.['required']">
+              Profession is required.
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="col-4">
+        <label for="fdesignation" class="form-label">Designation</label>
+        <input type="text" name="" id="fdesignation" class="form-control" formControlName="fatherDesignation">
+      </div>
+    </div>
+    <hr>
+    <div class="row">
+      <h5>Mother Details:</h5>
+    </div>
+    <div class="row g-3 mb-3">
+      <div class="col-4">
+        <label for="mfname" class="form-label">Firstname</label><span class="text-danger">*</span>
+        <input type="text" name="" id="mfname" class="form-control" formControlName="motherFirstName" required>
+        <div *ngIf="motherFirstName!==null">
+          <div *ngIf="motherFirstName.invalid && (motherFirstName.dirty || motherFirstName.touched)"
+            class="text-danger m-0 p-0 ms-1 mt-1">
+            <div *ngIf="motherFirstName.errors?.['required']">
+              Firstname is required.
+            </div>
+            <div *ngIf="motherFirstName.errors?.['minlength']">
+              Firstname must be at least 3 characters long.
+            </div>
+            <div *ngIf="motherFirstName.errors?.['pattern']">
+              Name can't contain digit or space.
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="col-4">
+        <label for="mmname" class="form-label">Middlename</label><span class="text-danger">*</span>
+        <input type="text" name="" id="mmname" class="form-control" formControlName="motherMiddleName" required>
+        <div *ngIf="motherMiddleName!==null">
+          <div *ngIf="motherMiddleName.invalid && (motherMiddleName.dirty || motherMiddleName.touched)"
+            class="text-danger m-0 p-0 ms-1 mt-1">
+            <div *ngIf="motherMiddleName.errors?.['required']">
+              Middlename is required.
+            </div>
+            <div *ngIf="motherMiddleName.errors?.['minlength']">
+              Middlename must be at least 3 characters long.
+            </div>
+            <div *ngIf="motherMiddleName.errors?.['pattern']">
+              Name can't contain digit or space.
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="col-4">
+        <label for="mlname" class="form-label">Lastname</label><span class="text-danger">*</span>
+        <input type="text" name="" id="mlname" class="form-control" formControlName="motherLastName" required>
+        <div *ngIf="motherLastName!==null">
+          <div *ngIf="motherLastName.invalid && (motherLastName.dirty || motherLastName.touched)"
+            class="text-danger m-0 p-0 ms-1 mt-1">
+            <div *ngIf="motherLastName.errors?.['required']">
+              Lastname is required.
+            </div>
+            <div *ngIf="motherLastName.errors?.['minlength']">
+              Lastname must be at least 3 characters long.
+            </div>
+            <div *ngIf="motherLastName.errors?.['pattern']">
+              Name can't contain digit or space.
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="row g-3 mb-3">
+      <div class="col-4">
+        <label for="mphone" class="form-label">Phone Number</label><span class="text-danger">*</span>
+        <input type="number" name="" id="mphone" class="form-control" formControlName="motherPhone" required>
+        <div *ngIf="motherPhone!==null">
+          <div *ngIf="motherPhone.invalid && (motherPhone.dirty || motherPhone.touched)"
+            class="text-danger m-0 p-0 ms-1 mt-1">
+            <div *ngIf="motherPhone.errors?.['required']">
+              Phonenumber is required.
+            </div>
+            <div *ngIf="motherPhone.errors?.['pattern']">
+              Phonenumber is not valid.
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="col-8">
+        <label for="memail" class="form-label">Email</label><span class="text-danger">*</span>
+        <input type="email" name="" id="memail" class="form-control" formControlName="motherEmail" required>
+        <div *ngIf="motherEmail!==null">
+          <div *ngIf="motherEmail.invalid && (motherEmail.dirty || motherEmail.touched)"
+            class="text-danger m-0 p-0 ms-1 mt-1">
+            <div *ngIf="motherEmail.errors?.['required']">
+              Email is required.
+            </div>
+            <div *ngIf="motherEmail.errors?.['email']">
+              Email is not valid.
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="row g-3 mb-3">
+      <div class="col-4">
+        <label for="mequa" class="form-label">Education Qualification</label><span class="text-danger">*</span>
+        <input type="text" name="" id="mequa" class="form-control" formControlName="motherEducationQualification"
+          required>
+        <div *ngIf="motherEduQua!==null">
+          <div *ngIf="motherEduQua.invalid && (motherEduQua.dirty || motherEduQua.touched)"
+            class="text-danger m-0 p-0 ms-1 mt-1">
+            <div *ngIf="motherEduQua.errors?.['required']">
+              Education qualification is required.
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="col-4">
+        <label for="mprofession" class="form-label">Profession</label><span class="text-danger">*</span>
+        <input type="text" name="" id="mprofession" class="form-control" formControlName="motherProfession" required>
+        <div *ngIf="motherProfession!==null">
+          <div *ngIf="motherProfession.invalid && (motherProfession.dirty || motherProfession.touched)"
+            class="text-danger m-0 p-0 ms-1 mt-1">
+            <div *ngIf="motherProfession.errors?.['required']">
+              Profession is required.
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="col-4">
+        <label for="mdesignation" class="form-label">Designation</label>
+        <input type="text" name="" id="mdesignation" class="form-control" formControlName="motherDesignation">
+      </div>
+    </div>
+    <hr>
+    <div class="d-flex flex-row align-items-center mb-1">
+      <h5>Emergency Contacts :</h5>
+      <button class="btn btn-outline-secondary btn-sm float-start ms-2" (click)="addEmergencyContact()"
+        type="button">+</button>
+      <button class="btn btn-outline-secondary btn-sm float-start ms-2" (click)="removeEmergencyContact()"
+        type="button">-</button>
+    </div>
+
+    <div formArrayName="emergencyContact" *ngFor="let contact of emergencyContact.controls;let i= index">
+      <p class="fw-bold p-0 m-0">Contact {{i+1}}</p>
+      <div class="row g-3 mb-3" [formGroupName]="i">
+        <div class="col-6">
+          <label for="ecrelation" class="form-label">Relation</label><span class="text-danger">*</span>
+          <input type="text" name="" id="ecrelation" class="form-control" formControlName="relation" required>
+          <div *ngIf="contact.get('relation')!==null">
+            <div
+              *ngIf="contact.get('relation')!.invalid && (contact.get('relation')!.dirty || contact.get('relation')!.touched)"
+              class="text-danger m-0 p-0 ms-1 mt-1">
+              <div *ngIf="contact.get('relation')!.errors?.['required']">
+                Relation is required.
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-6">
+          <label for="ecphone" class="form-label">Phone</label><span class="text-danger">*</span>
+          <input type="number" name="" id="ecphone" class="form-control" formControlName="phone" required>
+          <div *ngIf="contact.get('phone')!==null">
+            <div *ngIf="contact.get('phone')!.invalid && (contact.get('phone')!.dirty || contact.get('phone')!.touched)"
+              class="text-danger m-0 p-0 ms-1 mt-1">
+              <div *ngIf="contact.get('phone')!.errors?.['required']">
+                Phonenumber is required.
+              </div>
+              <div *ngIf="contact.get('phone')!.errors?.['pattern']">
+                Phonenumber is invalid.
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <hr>
+    <div class="d-flex flex-row align-items-center mb-1">
+      <h5>Reference Details :</h5>
+      <button class="btn btn-outline-secondary btn-sm float-start ms-2" (click)="addReference()"
+        type="button">+</button>
+      <button class="btn btn-outline-secondary btn-sm float-start ms-2" (click)="removeReference()"
+        type="button">-</button>
+    </div>
+
+    <div formArrayName="reference" *ngFor="let ref of reference.controls;let i= index">
+      <p class="fw-bold p-0 m-0">Reference {{i+1}}</p>
+      <div class="row g-3 mb-3" [formGroupName]="i">
+        <div class="col-7">
+          <label for="refdetails" class="form-label">Reference Details</label><span class="text-danger">*</span>
+          <input type="text" name="" id="refdetails" class="form-control" formControlName="referenceDetails" required>
+          <div *ngIf="ref.get('referenceDetails')!==null">
+            <div
+              *ngIf="ref.get('referenceDetails')!.invalid && (ref.get('referenceDetails')!.dirty || ref.get('referenceDetails')!.touched)"
+              class="text-danger m-0 p-0 ms-1 mt-1">
+              <div *ngIf="ref.get('referenceDetails')!.errors?.['required']">
+                This field is required.
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-5">
+          <label for="refthrough" class="form-label">Reference Through</label><span class="text-danger">*</span>
+          <input type="text" name="" id="refthrough" class="form-control" formControlName="referenceThrough" required>
+          <div *ngIf="ref.get('referenceThrough')!==null">
+            <div
+              *ngIf="ref.get('referenceThrough')!.invalid && (ref.get('referenceThrough')!.dirty || ref.get('referenceThrough')!.touched)"
+              class="text-danger m-0 p-0 ms-1 mt-1">
+              <div *ngIf="ref.get('referenceThrough')!.errors?.['required']">
+                This field is required.
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="d-flex justify-content-center">
+      <button type="submit" class="btn btn-primary" [disabled]="applicationForm.invalid">Submit</button>
+    </div>
+  </form>
+</div>

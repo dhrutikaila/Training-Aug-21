@@ -18,8 +18,11 @@ import { Day17Component } from './java-script/day17/day17.component';
 import { Day18Component } from './java-script/day18/day18.component';
 import { Day19Component } from './java-script/day19/day19.component';
 import { Day20Component } from './java-script/day20/day20.component';
+import { HomeComponent } from './home/home.component';
 
 const appRoutes: Routes = [
+
+  { path: 'Home', component: HomeComponent },
   {
     path: 'Html', component: HTMLComponent,
     children: [{
@@ -81,7 +84,8 @@ const appRoutes: Routes = [
     Day17Component,
     Day18Component,
     Day19Component,
-    Day20Component
+    Day20Component,
+    HomeComponent
   ],
   imports: [
     BrowserModule,
