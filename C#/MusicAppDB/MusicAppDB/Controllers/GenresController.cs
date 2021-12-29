@@ -11,12 +11,12 @@ using System.Threading.Tasks;
 
 namespace MusicAppDB.Controllers
 {
-    
+    [Route("api/[controller]")]
     [ApiController]
-    public class SONGController : ControllerBase
+    public class GenresController : ControllerBase
     {
-        private ISongdata _songdata;
-     public SONGController(ISongdata songdata)
+        private IGenres _songdata;
+        public GenresController(IGenres songdata)
         {
             _songdata = songdata;
         }
@@ -25,7 +25,7 @@ namespace MusicAppDB.Controllers
         [Route("api/[controller]")]
         public IActionResult GetSongs()
         {
-            return Ok(_songdata.GetSongs());
+            return Ok(_songdata.GetGenres());
 
         }
 
@@ -33,9 +33,9 @@ namespace MusicAppDB.Controllers
         [Route("api/[controller]/{id}")]
         public IActionResult GetSong(int id)
         {
-            var song = _songdata.GetSong(id);
+            var song = _songdata.GetGenres(id);
 
-            if(song != null)
+            if (song != null)
             {
                 return Ok(song);
             }
@@ -45,22 +45,22 @@ namespace MusicAppDB.Controllers
         [HttpPost]
         [Route("api/[controller]")]
 
-        public IActionResult GetSong(Song song)
+        public IActionResult GetSong(Genres Genre)
         {
-            _songdata.AddSong(song);
-            return Created(HttpContext.Request.Scheme + "://" + HttpContext.Request.Host + HttpContext.Request.Path + "/" + song.SongID,
-                song);
+            _songdata.AddGenres(Genre);
+            return Created(HttpContext.Request.Scheme + "://" + HttpContext.Request.Host + HttpContext.Request.Path + "/" + Genre.GenreId,
+                Genre);
 
         }
         [HttpDelete]
         [Route("api/[controller]")]
 
-        public IActionResult DeleteSong(int id)
+        public IActionResult DeleteGenres(int id)
         {
-            var song = _songdata.GetSong(id);
-            if(song!=null)
+            var song = _songdata.GetGenres(id);
+            if (song != null)
             {
-                _songdata.DeleteSong(song);
+                _songdata.DeleteGenres(song);
                 return Ok();
             }
             return NotFound($"songs with id :{id} was not found");
@@ -69,16 +69,17 @@ namespace MusicAppDB.Controllers
         [HttpPatch]
         [Route("api/[controller]")]
 
-        public IActionResult EditSong(int id, Song song)
+        public IActionResult EditSong(int id, Genres song)
         {
-            var existingSong = _songdata.GetSong(id);
+            var existingSong = _songdata.GetGenres(id);
             if (existingSong != null)
             {
-                song.SongID = existingSong.SongID;
-                _songdata.EditSong(song);
-                
+                song.GenreId = existingSong.GenreId;
+                _songdata.EditGenres(song);
+
             }
             return Ok(song);
         }
     }
 }
+

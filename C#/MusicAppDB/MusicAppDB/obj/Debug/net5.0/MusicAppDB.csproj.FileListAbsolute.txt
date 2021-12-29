@@ -286,3 +286,4 @@ D:\git1\Training-Aug-21\C#\MusicAppDB\MusicAppDB\obj\Debug\net5.0\scopedcss\bund
 D:\git1\Training-Aug-21\C#\MusicAppDB\MusicAppDB\obj\Debug\net5.0\MusicAppDB.RazorTargetAssemblyInfo.cache
 D:\git1\Training-Aug-21\C#\MusicAppDB\MusicAppDB\obj\Debug\net5.0\MusicAppDB.csproj.CopyComplete
 D:\git1\Training-Aug-21\C#\MusicAppDB\MusicAppDB\obj\Debug\net5.0\MusicAppDB.genruntimeconfig.cache
+D:\git1\Training-Aug-21\C#\MusicAppDB\MusicAppDB\bin\Debug\net5.0\Microsoft.AspNetCore.Authentication.JwtBearer.dll
