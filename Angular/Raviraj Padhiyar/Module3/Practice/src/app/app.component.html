@@ -1,0 +1,12 @@
+<div class="container">
+    <h2 [ngClass]="isHeader? 'display-4' : '' ">this is header</h2>
+    <div [ngStyle]="currentStyles">
+        This div is initially extra large (64px).
+    </div>
+
+    <button class="btn btn-primary" (click)="setIsHeader()">change header</button>
+
+    <app-cute-kitty></app-cute-kitty>
+
+</div>
+

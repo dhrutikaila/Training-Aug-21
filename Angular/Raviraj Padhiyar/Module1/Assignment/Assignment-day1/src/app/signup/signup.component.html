@@ -1,0 +1,30 @@
+<h4 class="display-3">Signup</h4>
+
+<div class="mb-3">
+    <label class="form-label" for="name">Enter Name: </label>
+    <input class="form-control" type="text" name="name" id="name" [(ngModel)] = "name">
+    <label for="phone-number">Enter Phone Number</label>
+    <input class="form-control" type="text" name="phone-number" id="phone-number" [(ngModel)] = "phoneNumber">
+    <label for="address">Enter Address:</label>
+    <input type="text" name="address" id="address" class="form-control" [(ngModel)] = "address">
+    <button type="button" class="my-2 btn btn-success" (click)="processData()">Submit</button>
+</div>
+
+<table class="table">
+    <thead>
+        <tr>
+            <th>Name</th>
+            <th>phoneNumber</th>
+            <th>Address</th>
+        </tr>
+    </thead>
+    <tbody *ngFor="let user of users">
+        <tr>
+            <td>{{user.name}}</td>
+            <td>{{user.phoneNumber}}</td>
+            <td>{{user.address}}</td>
+        </tr>
+    </tbody>
+</table>
+
+

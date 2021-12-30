@@ -1,0 +1,287 @@
+<form [formGroup]="studentAdmissionForm" (ngSubmit)="onsubmit()">
+  <div class="my-3" formGroupName = "name">
+    <label class="form-label mb-2">Enter Name : </label>
+    <input
+      class="form-control mb-2"
+      type="text"
+      name="firstName"
+      id="firstName"
+      placeholder="firstName"
+      formControlName="firstName"
+    />
+    <input
+      class="form-control mb-2"
+      type="text"
+      name="middleName"
+      id="middleName"
+      placeholder="middleName"
+      formControlName="middleName"
+    />
+    <input
+      class="form-control mb-2"
+      type="text"
+      name="lastName"
+      id="lastName"
+      placeholder="lastName"
+      formControlName="lastName"
+    />
+  </div>
+  <div class="mb-3" formGroupName="Birth">
+    <label class="form-lable mb-2">Enter birth details : </label>
+    <input
+      class="form-control mb-2"
+      type="date"
+      name="dob"
+      id="dob"
+      formControlName="DOB"
+    />
+    <input
+      class="form-control mb-2"
+      type="text"
+      name="placeOfBirth"
+      id="placeOfBirth"
+      placeholder="placeOfBirth"
+      formControlName="placeOfBirth"
+    />
+  </div>
+  <div class="mb-3">
+    <label class="form-lable mb-2" for="firstLanguage">First Language : </label>
+    <input
+      class="form-control mb-2"
+      type="text"
+      name="firstLanguage"
+      id="firstLanguage"
+      placeholder="firstLanguage"
+      formControlName="firstLanguage"
+    />
+  </div>
+  <div class="mb-3" formGroupName="address">
+    <label class="form-lable mb-2">Enter Address : </label>
+    <input
+      class="form-control mb-2"
+      type="text"
+      name="city"
+      id="city"
+      placeholder="city"
+      formControlName = "city"
+    />
+    <input
+      class="form-control mb-2"
+      type="text"
+      name="state"
+      id="state"
+      placeholder="state"
+      formControlName="state"
+    />
+    <input
+      class="form-control mb-2"
+      type="text"
+      name="country"
+      id="country"
+      placeholder="country"
+      formControlName="country"
+    />
+    <input
+      class="form-control mb-2"
+      type="number"
+      name="pin"
+      id="pin"
+      placeholder="pin"
+      formControlName="PIN"
+    />
+  </div>
+  <div class="mb-3" formGroupName="Father">
+    <label class="form-label mb-2">Father Detials : </label>
+    <div class="mb-3" formGroupName="name">
+      <label class="form-label mb-2">Father's Name : </label>
+      <input
+        class="form-control mb-2"
+        type="text"
+        name="firstName"
+        id="firstName"
+        placeholder="firstName"
+        formControlName="firstName"
+      />
+      <input
+        class="form-control mb-2"
+        type="text"
+        name="middleName"
+        id="middleName"
+        placeholder="middleName"
+        formControlName="middleName"
+      />
+      <input
+        class="form-control mb-2"
+        type="text"
+        name="lastName"
+        id="lastName"
+        placeholder="lastName"
+        formControlName="lastName"
+      />
+    </div>
+    <input
+      class="form-control mb-2"
+      type="email"
+      name="email"
+      id="email"
+      placeholder="E-mail"
+      formControlName="email"
+    />
+    <label class="form-lable mb-2" for="edq">Education Qualification : </label>
+    <select
+      class="form-select mb-2"
+      name="edq"
+      id="edq"
+      formControlName="EducationQualification"
+    >
+      <option value="priamry">Primary</option>
+      <option value="highSchool">High School</option>
+      <option value="underGrad">Under Grad</option>
+      <option value="postGrad">Post Grad</option>
+      <option value="Higher">Higher</option>
+    </select>
+    <input
+      class="form-control mb-2"
+      type="text"
+      name="profession"
+      id="profession"
+      placeholder="profession"
+      formControlName="Profession"
+    />
+    <input
+      class="form-control mb-2"
+      type="text"
+      name="designation"
+      id="designation"
+      placeholder="designation"
+      formControlName="Designation"
+    />
+    <input
+      class="form-control mb-2"
+      type="number"
+      name="fPhoneNumber"
+      id="fPhoneNumber"
+      placeholder="Contact No."
+      formControlName="Phone"
+    />
+  </div>
+  <div class="mb-3" formGroupName="Mother">
+    <label class="form-label mb-2">Mother Detials : </label>
+    <div class="mb-3" formGroupName = "name">
+      <label class="form-label mb-2">Mother's Name : </label>
+      <input
+        class="form-control mb-2"
+        type="text"
+        name="firstName"
+        id="firstName"
+        placeholder="firstName"
+        formControlName="firstName"
+      />
+      <input
+        class="form-control mb-2"
+        type="text"
+        name="middleName"
+        id="middleName"
+        placeholder="middleName"
+        formControlName="middleName"
+      />
+      <input
+        class="form-control mb-2"
+        type="text"
+        name="lastName"
+        id="lastName"
+        placeholder="lastName"
+        formControlName="lastName"
+      />
+    </div>
+    <input
+      class="form-control mb-2"
+      type="email"
+      name="email"
+      id="email"
+      placeholder="E-mail"
+      formControlName="email"
+    />
+    <label class="form-lable mb-2" for="edq">Education Qualification : </label>
+    <select
+      class="form-select mb-2"
+      name="edq"
+      id="edq"
+      formControlName="EducationQualification"
+    >
+      <option value="priamry">Primary</option>
+      <option value="highSchool">High School</option>
+      <option value="underGrad">Under Grad</option>
+      <option value="postGrad">Post Grad</option>
+      <option value="Higher">Higher</option>
+    </select>
+    <input
+      class="form-control mb-2"
+      type="text"
+      name="profession"
+      id="profession"
+      placeholder="profession"
+      formControlName="Profession"
+    />
+    <input
+      class="form-control mb-2"
+      type="text"
+      name="designation"
+      id="designation"
+      placeholder="designation"
+      formControlName="Designation"
+    />
+    <input
+      class="form-control mb-2"
+      type="number"
+      name="fPhoneNumber"
+      id="fPhoneNumber"
+      placeholder="Contact No."
+      formControlName="Phone"
+    />
+  </div>
+  <div class="mb-3" formArrayName="EmergencyContactList">
+      <label class="form-label">EmergencyContact</label>
+    <input
+      class="form-control mb-3"
+      type="text"
+      name="relation"
+      id="relation"
+      placeholder="relation"
+      formControlName="relation"
+    />
+    <input
+      class="form-control mb-3"
+      type="text"
+      name="number"
+      id="number"
+      placeholder="phone number"
+      formControlName="number"
+    />
+    <input
+      class="form-control mb-3"
+      type="text"
+      name="refDetail"
+      id="refDetail"
+      placeholder="refrence detail"
+      formControlName="refernceDetail"
+    />
+    <input
+      class="form-control mb-3"
+      type="text"
+      name="refThrough"
+      id="refThrough"
+      placeholder="refrence through"
+      formControlName="refernceThrough"
+    />
+    <input
+      class="form-control mb-3"
+      type="text"
+      name="address"
+      id="address"
+      placeholder="contact address"
+      formControlName="address"
+    />
+  </div>
+  <button class="btn btn-success" type="submit" >Submit</button>
+</form>

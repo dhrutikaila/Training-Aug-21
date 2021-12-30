@@ -1,0 +1,13 @@
+<h1 class="h2 mb-3">company heirchy</h1>
+<hr />
+<ul *ngFor="let manager of managers" class="list-group">
+  <li class="list-group-item">
+    <div>
+      <h4>{{ manager.name }}</h4>
+      <ul *ngFor="let employee of manager.employees" class="list-group">
+        <!-- <li>{{employee.name}}</li> -->
+        <li class="list-group-item"><app-child [employee]="employee" (removeEmployeeEvent)="rmEmp($event)"></app-child></li>
+      </ul>
+    </div>
+  </li>
+</ul>
