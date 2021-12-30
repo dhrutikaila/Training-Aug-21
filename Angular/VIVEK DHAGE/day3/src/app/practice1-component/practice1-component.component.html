@@ -1,0 +1,31 @@
+<div id="practice_one">
+  <div [ngClass]="{ root: flag === 'on' }">
+    <h4>practice1-component works!</h4>
+
+    <button (click)="createServer()">On</button>
+    <button (click)="closeServer()">Off</button>
+
+    <h3>ngIf example</h3>
+    <p *ngIf="test; else Stop">switch on students are: {{ data }}</p>
+    <br />
+    <ng-template #Stop
+      ><br />
+
+      switch off</ng-template
+    >
+
+    <h3>ngclass and ng style</h3>
+    <p
+      [ngStyle]="{ backgroundColor: colorFun() }"
+      [ngClass]="{ online: flag === 'on' }"
+    >
+      this paragraph should be coloured
+    </p>
+    <button (mouseenter)="mouseenter()" (mouseleave)="mouseleave()">
+      hover here..
+    </button>
+    <p>{{ MouseHover }}</p>
+  </div>
+  <!-- <app-practice1-component></app-practice1-component> -->
+  <!-- <app-practice2-component *ngFor="let st of students"></app-practice2-component> -->
+</div>

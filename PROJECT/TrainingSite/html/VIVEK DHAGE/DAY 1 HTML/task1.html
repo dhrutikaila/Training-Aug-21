@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+<body>
+	<div class="container" style="margin:90px; padding:20px;">
+	<form method="POST" action="task1.html">
+
+	<table border="0" cellspacing="5" cellpadding="5"> 
+		<tr>
+		<td>
+		<label>Employee Name:</label>
+		<input type="text" name="name" required="required"><br><br>
+		</td>
+
+		<td>	
+		<label>Age:</label>
+		<input type="number" name="age" required pattern="[0-9]"><br><br>
+		</td>
+		</tr>
+
+
+		<tr>
+		<td>
+		<label>Gender:</label>
+		<input type="radio" name="gender">
+		<label>Male</label>
+		<input type="radio" name="gender">
+		<label>Female</label>
+		<input type="radio" name="gender">
+		<label>other</label>
+		<br><br>
+		</td>
+		<td>
+		<label>Designation:</label>
+		<input type="text" name="desgnation" required="required"><br><br>
+		</td>
+		</tr>
+
+
+		<tr>
+		<td>
+		<label>Salary:</label>
+		<input type="number" name="salary" required="required"><br><br>
+		</td>
+		<td>
+		<label>Email Id:</label>
+		<input type="email" name="email" pattern="[a-z0-9._%+-] +@ [a-z0-9.-]+\.[a-z]{2, 4}$" required><br><br>
+		</td>
+		
+		</tr>
+
+		<tr>
+		<td>
+		<label>Location:</label>
+		<select name="location">
+			<option>select--</option>
+			<option>Ahmedabad</option>
+			<option>Delhi</option>
+			<option>Mumbai</option>
+			<option>culcutta</option>
+			<option>Jaipur</option>
+			<option>Shimla</option>
+			<option>Jalgaon</option>
+			<option>Chennai</option>
+			<option>Bhopal</option>
+			<option>Banglore</option>
+			<option>Hyderabad</option>
+
+
+		</select><br><br>
+		</td>
+		<td>
+		<label>Date of Joining:</label>
+		<input type="date" name="doj" required="required"><br><br>
+		</td>
+		<td>
+		<label>Contact Number:</label>
+		<input type="number" name="con_num" required="required"><br><br>
+		</td>
+		</tr>
+
+		<tr>
+		<td>
+		<input type="submit" name="submit" value="submit">
+		</td> 
+		</tr>
+	</table>
+</form>
+
+</div>
+</body>
+</html>

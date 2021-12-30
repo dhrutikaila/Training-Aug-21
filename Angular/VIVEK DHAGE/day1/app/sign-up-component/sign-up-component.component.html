@@ -1,0 +1,40 @@
+<h4>sign-up-component works!</h4>
+
+<!-- 
+ <form name="f1" action="#" onsubmit="return validate()">  
+    <table>  
+    <tr><td> Name:</td><td><input type="text" name="name" [(ngModel)]="name"/>  
+    </td></tr>  
+    <tr><td>Address:</td><td><input type="text" name="address"[(ngModel)]="address"/>  
+   </td></tr> 
+   <tr><td>Pannumber:</td><td><input type="text" name="address"[(ngModel)]="pan"/>  
+   </td></tr>
+     
+    </table>  
+    </form>
+
+<p>details are:<br> name is :{{name}} <br>address:{{address}} <br>pan:{{pan}}</p> -->
+
+<div class="row g-3 align-items-center">
+  <h1>SignUp</h1>
+  <div class="col-auto">
+    <label for="exampleInputEmail1" class="form-label">Name</label>
+    <input type="text" class="form-control" id="Name1" [(ngModel)]="name" />
+  </div>
+  <div class="col-auto">
+    <label for="exampleInputPassword1" class="form-label">Address</label>
+    <input type="password" class="form-control" id="Pass1" [(ngModel)]="address"/>
+  </div>
+  <div class="col-auto">
+    <label for="exampleInputEmail1" class="form-label">Pan</label>
+    <input type="text" class="form-control" id="Name1" [(ngModel)]="pan" />
+  </div>
+  <div class="col-1">
+    <span id="passwordHelpInline" class="form-text">
+      <p>
+        details are:<br />
+        name is :{{ name }} <br />address:{{ address }} <br />pan:{{ pan }}
+      </p>
+    </span>
+  </div>
+</div>

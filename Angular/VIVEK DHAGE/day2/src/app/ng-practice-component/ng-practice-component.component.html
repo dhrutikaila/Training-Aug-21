@@ -1,0 +1,20 @@
+<h4>ng-practice-component works!</h4>
+
+<p>enter y to run</p>
+
+<div class="col-4">
+<input  class=" form-control mb-3"type="text" [(ngModel)]="input">
+</div>
+<button class="btn btn-primary mb-3" (click)="start()">click to check</button>
+
+<p *ngIf="status; else NoStatus">stauts is true right now</p>
+
+
+
+
+<ng-template #NoStatus><p>  status is false right now</p></ng-template>
+
+<p [ngStyle]="{backgroundColor: WorkingStatus()}">Test</p>
+
+<button (mouseenter)="mouseenter()">mouse enter event</button>
+<p>{{flag}}</p>

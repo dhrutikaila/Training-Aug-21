@@ -1,0 +1,25 @@
+<h4>assignment1-component works!</h4>
+
+
+<!-- Assignment
+Create a student Model interface with field( ID,Name,Age,Average,grade,Active )
+StudentList Component will create an array of student type.Display an array with
+ NGFor in table. Grade wise color should be given using ngSwitch and ngClass or ngStyle.
+  Only active should displayed using ngIf. -->
+
+
+  <div class="container">
+      <p *ngFor="let s of StudentList">{{s.ID}} {{s.Name}} {{s.Age}} {{s.grade}} {{s.Active}}</p>
+  </div>
+<!-- 
+  <div [ngIf]="!s.Active" *ngFor="let s of StudentList;"  [ngStyle]="{backgroundColor: s.grade == 'a' ?'green':'red'}"
+    [ngSwitch]="s.grade">
+  {{s.ID}} {{s.Name}} {{s.Age}} {{s.grade}} {{s.Active}}
+</div> -->
+
+
+<button (click)="Passdata()">Sent data to parent</button>
+
+
+
+  <p> {{course}} </p>

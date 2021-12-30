@@ -1,0 +1,14 @@
+.container{
+    padding-top: 50px; 
+    margin-left: 200px;
+    background-color: rgb(143, 191, 229);
+    margin-left: 200px;
+    justify-items: center;
+}
+
+.container>div{
+    margin-left: 90px;
+}
+
+
+

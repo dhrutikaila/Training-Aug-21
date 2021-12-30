@@ -1,0 +1,51 @@
+<p>userform-component works!</p>
+
+<!-- <div class="row justify-content-center">
+<div class="col-md-6 text-left bg-white  rounded shadow py-3">
+<form (ngSubmit)="onsubmit(myform)" #myform="ngForm">
+    <div class="mb-3">
+      <label for="username" class="form-label">Username</label>
+      <input type="text" class="form-control" id="username" name="username" ngModel>
+    </div>
+    <div class="mb-3">
+      <label for="email" class="form-label"  >email</label>
+      <input type="email" class="form-control" name="email" id="email" ngModel>
+    </div>
+    <button type="submit" class="btn btn-primary">Submit</button>
+  </form>
+
+</div></div> -->
+
+<div class="row justify-content-center">
+    <div class="col-md-6 text-left bg-white  rounded shadow py-3">
+    <form [formGroup]="mForm" (ngSubmit)="onsubmit()" >
+        <div class="mb-3">
+          <label for="username" class="form-label">Username</label>
+          <input type="text" class="form-control" id="username" formControllName="fullname" >
+        </div>
+        <div class="mb-3">
+          <label for="email" class="form-label"  >email</label>
+          <input type="email" class="form-control" formControllName="email" id="email" >
+        </div>
+     
+        <button type="submit" class="btn btn-primary">Submit</button>
+      </form>
+    
+    </div></div>
+<hr>
+
+    <div class="row justify-content-center">
+        <div class="col-md-6 text-left bg-warning  rounded shadow py-3">
+
+        <form [formGroup]="profileForm" (ngSubmit)="onSubmit()">
+
+            <label for="first-name">First Name: </label>
+            <input id="first-name" type="text" formControlName="firstName">
+          
+            <label for="last-name">Last Name: </label>
+            <input id="last-name" type="text" formControlName="lastName">
+            <p>Complete the form to enable button.</p>
+            <button type="submit" [disabled]="!profileForm.valid">Submit</button>
+          </form>
+   
+    </div></div>

@@ -1,0 +1,10 @@
+.container1{
+    padding-top: 50px; 
+    margin: 10px;
+    background-color: rgb(143, 109, 236);
+    justify-items: center;
+}
+/* 
+.container>div{
+    margin-left: 90px;
+} */

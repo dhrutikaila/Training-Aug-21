@@ -45,8 +45,6 @@ namespace weekday
 					Console.WriteLine("saturday is"+myNum7);
 
 
+		}
 
-		
-}
-	}
 }
