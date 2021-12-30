@@ -10,35 +10,35 @@ namespace MusicAppDB.Controllers
 {
     [Route("api/[controller]")]
     [ApiController]
-    public class paymentController : ControllerBase
+    public class SubscriptionController : ControllerBase
     {
-        // GET: api/<paymentController>
+        // GET: api/<SubscriptionController>
         [HttpGet]
         public IEnumerable<string> Get()
         {
             return new string[] { "value1", "value2" };
         }
 
-        // GET api/<paymentController>/5
+        // GET api/<SubscriptionController>/5
         [HttpGet("{id}")]
         public string Get(int id)
         {
             return "value";
         }
 
-        // POST api/<paymentController>
+        // POST api/<SubscriptionController>
         [HttpPost]
         public void Post([FromBody] string value)
         {
         }
 
-        // PUT api/<paymentController>/5
+        // PUT api/<SubscriptionController>/5
         [HttpPut("{id}")]
         public void Put(int id, [FromBody] string value)
         {
         }
 
-        // DELETE api/<paymentController>/5
+        // DELETE api/<SubscriptionController>/5
         [HttpDelete("{id}")]
         public void Delete(int id)
         {
