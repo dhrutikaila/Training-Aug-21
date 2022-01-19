@@ -1,0 +1,65 @@
+<!--
+    First, we check isLoggedIn status using TokenStorageService, if it is true, we get user’s roles and set value for showAdminBoard & showModeratorBoard flag. They will control how template navbar displays its items.
+
+The App Component template also has a Logout button link that call logout() method and reload the window.
+-->
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+    integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous" />
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
+
+
+<body>
+    <div id="app" class="bg-dark">
+        <nav class="navbar navbar-expand navbar-dark bg-dark">
+            <a href="#" class="navbar-brand"><i class="fa fa-spotify fa-2x"></i><b>Spotify</b></a>
+            <ul class="navbar-nav mr-auto" routerLinkActive="active">
+
+                <li class="nav-item">
+
+                    <a href="/home" class="nav-link text-white" routerLink="home"><b>Home</b></a>
+                </li>
+                <li class="nav-item" *ngIf="showAdminBoard">
+                    <a href="/admin" class="nav-link" routerLink="admin">Admin Board</a>
+                </li>
+
+                <li class="nav-item">
+                    <a href="/user" class="nav-link" *ngIf="isLoggedIn" routerLink="user">User</a>
+                </li>
+                <li class="nav-item">
+                    <a href="/user" class="nav-link" routerLink="user"><b>Search</b></a>
+                </li>
+                <li class="nav-item">
+                    <a href="/user" class="nav-link" routerLink="user"><b>Your Library</b></a>
+                </li>
+                <li class="nav-item">
+                    <a href="/user" class="nav-link" routerLink="user"><b>Create Playlist</b></a>
+                </li>
+                <li class="nav-item">
+                    <a href="/user" class="nav-link" routerLink="user"><b>Liked Songs</b></a>
+                </li>
+            </ul>
+
+            <ul class="navbar-nav ml-auto" *ngIf="!isLoggedIn">
+                <li class="nav-item">
+                    <a href="/register" class="nav-link" routerLink="register">Sign Up</a>
+                </li>
+                <li class="nav-item">
+                    <a href="/login" class="nav-link" routerLink="login">Login</a>
+                </li>
+            </ul>
+
+            <ul class="navbar-nav ml-auto" *ngIf="isLoggedIn">
+                <li class="nav-item">
+                    <a href="/profile" class="nav-link" routerLink="profile">{{ username }}</a>
+                </li>
+                <li class="nav-item">
+                    <a href class="nav-link" (click)="logout()">LogOut</a>
+                </li>
+            </ul>
+        </nav>
+
+        <router-outlet></router-outlet>
+
+
+    </div>
+</body>
