@@ -1,0 +1,41 @@
+<h1>Welcome {{title}}</h1>
+<div class="container">
+    <div class="card">
+        <div class="card-header">
+            <h4>Parent Component</h4>
+        </div>
+        <div class="card-body">
+            pass data : <input type="text" class="form-control" [(ngModel)]='name'>
+            <br>
+            <input type="button" value="send" (click)="TransferData()" class="btn btn-primary">
+            <!-- <app-child [parentData]="parentData"></app-child> -->
+        </div>
+    </div>
+</div>
+
+<app-child (userdata)="addata($event)"></app-child>
+<app-list [listvalue]="list"></app-list>
+
+<hr>
+
+<div class="container">
+    <br />
+    <h1 class="text-center">{{title}}</h1>
+    <table class="table">
+        <thead>
+        <th>Id</th>
+        <th>Title</th>
+        <th>Price</th>
+        <th>Stock</th>
+        </thead>
+        <tbody>
+            <tr *ngFor="let p of products">
+                <td>{{p.id}}</td>
+                <td>{{p.title}}</td>
+                <td>{{p.price}}</td>
+                <td>{{p.stock}}</td>
+                <td><app-stock-status [productId]='p.id' [stock]='p.stock' (stockValueChange)='changeStockValue($event)'></app-stock-status></td>
+            </tr>
+        </tbody>
+    </table>
+</div>
