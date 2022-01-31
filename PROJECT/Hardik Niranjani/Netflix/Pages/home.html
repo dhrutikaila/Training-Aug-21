@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="icon" type="image/png" href="../Assets/ICO.png" />
+  <link rel="stylesheet" href="../Style/home.css">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-F3w7mX95PdgyTmZZMECAngseQB83DfGTowi0iMjiWaeVhAn4FJkqJByhZMI3AhiU" crossorigin="anonymous">
+  <script>
+    window.addEventListener("scroll", function () {
+
+      var nav = document.querySelector(".nav");
+      nav.classList.toggle("active", window.scrollY > 0);
+
+      var logout_btn = document.querySelector(".logout_btn");
+      logout_btn.classList.toggle("active4", window.scrollY <= 0);
+
+      var nav_1 = document.querySelector(".nav_1");
+      nav_1.classList.toggle("active1", window.scrollY <= 0);
+      var nav_2 = document.querySelector(".nav_2");
+      nav_2.classList.toggle("active2", window.scrollY <= 0);
+      var nav_3 = document.querySelector(".nav_3");
+      nav_3.classList.toggle("active3", window.scrollY <= 0);
+
+      var dropdown_profile = document.querySelector(".dropdown_profile");
+      dropdown_profile.classList.toggle("active5", window.scrollY <= 0);
+
+      var add_movie_button = document.querySelector(".add_movie_button");
+      add_movie_button.classList.toggle("active6", window.scrollY <= 0);
+
+    })
+  </script>
+  <script>
+    var status_name = localStorage.getItem('status');
+    document.title = "Netflix - Home" + " " + status_name;
+  </script>
+  <title></title>
+</head>
+
+<body style="font-family: 'Netflix Sans', sans-serif;background-color: #111;">
+  <!-- navbar -->
+  <div class="nav">
+    <div class="nav__left">
+      <img class="nav_logo" src="../Assets/logo.svg" alt="netflix_logo" onclick="window.location.href='home.html';">
+      <nav class="navbar navbar-expand-lg navbar-light p-0">
+        <div class="collapse navbar-collapse" id="navbarNav">
+          <ul class="navbar-nav">
+            <li class="nav-item">
+              <a class="nav_1 nav-link active" style="color: rgba(221, 221, 221, 0.87);" aria-current="page"
+                href="#">Home</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav_2 nav-link" style="color: rgba(221, 221, 221, 0.87);" href="#movies.html">Movies</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav_3 nav-link" style="color: rgba(221, 221, 221, 0.87);" href="#series.html">Series</a>
+            </li>
+          </ul>
+        </div>
+      </nav>
+    </div>
+    <div class="nav__right">
+      <!-- Add movie button -->
+      <button type="button" id="add_movie" class="add_movie_button btn btn-danger me-3"
+        style="background-color:#F40612;" onclick="window.location.href='Add_Movie.html';">Add Movies/Series</button>
+      <!-- Logout button -->
+      <button type="button" class="logout_btn btn btn-danger" style=" background-color:#F40612;" onclick="logout();">
+        Logout
+      </button>
+      <!-- Profile -->
+      <img src="../Assets/User_Profile.jpg" class="nav_avatar ms-3" alt="profile"
+        onclick="window.location.href='profile.html';">
+      <!-- dropdown menu -->
+      <div class="dropdown">
+        <button class="dropdown_profile btn w-100 dropdown-toggle" type="button"
+          style="color: rgba(221, 221, 221, 0.87);" data-bs-toggle="dropdown"></button>
+        <div class="dropdown-menu" style="background-color:#00000054">
+          <p class="text-white ms-2">Welcome:
+            <script>
+              document.write(localStorage.getItem('loged_user_name'))
+            </script>
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- banner -->
+  <header id="banner">
+    <div id="banner__contents">
+      <h1 id="banner__title"></h1>
+      <div id="banner__buttons">
+        <button id="banner__button">Play</button>
+        <button id="banner__button">My List</button>
+      </div>
+      <p id="banner__description"></p>
+    </div>
+    <div id="banner__fadeBottom"></div>
+  </header>
+
+  <!-- row -->
+  <div id="headrow">
+    <div class="row">
+      <h2 class="row__title"></h2>
+      <div class="row__posters"></div>
+    </div>
+  </div>
+  <div class="index__footer">
+    <p class="w-100 h-100 p-4 mb-0 text-white" style="background-color: #000000; z-index: 2; text-align: center;">@Hardik P. Niranjani</p>
+</div>
+  <script src="../Js/home.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-/bQdsTh/da6pkI1MST/rWKFNjaCP5gBSY4sEBT38Q/9RBh9AH40zEOg7Hlq2THRZ" crossorigin="anonymous">
+    </script>
+</body>
+
+</html>

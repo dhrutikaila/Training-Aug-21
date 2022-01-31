@@ -1,0 +1,17 @@
+<h3>Enter Value 1:</h3>
+<input class="form-control" [(ngModel)]="value1" type="number" placeholder="0">
+<h3>Enter Value 2:</h3>
+<input class="form-control" [(ngModel)]="value2" type="number" placeholder="0">
+<br><br>
+
+<div>
+    <button class="btn btn-primary mx-3" (click)="addition()">Add</button>
+    <button class="btn btn-secondary mx-3" (click)="subtraction()">Subtract</button>
+    <button class="btn btn-warning mx-3" (click)="multiplication()">Multiply</button>
+    <button class="btn btn-danger mx-3" (click)="division()">Divide</button>
+</div>
+
+<p class="mt-4 fw-bolder">Final answer is: <span class="ans">{{answer}}</span></p>
+
+
+

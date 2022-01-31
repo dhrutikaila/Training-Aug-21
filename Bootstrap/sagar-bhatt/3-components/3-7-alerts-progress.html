@@ -1,0 +1,353 @@
+<!-- TODO: https://getbootstrap.com/docs/5.0/utilities/spacing/   -->
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Bootstrap Sandbox</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-F3w7mX95PdgyTmZZMECAngseQB83DfGTowi0iMjiWaeVhAn4FJkqJByhZMI3AhiU"
+      crossorigin="anonymous"
+    />
+
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.9.0/css/all.min.css"
+      integrity="sha512-q3eWabyZPc1XTCmF+8/LuE1ozpg5xxn7iO89yfSOd5/oKvyqLngoNGsx8jq92Y8eXJ/IRxQbEC+FGSYxtk2oiw=="
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="../Project/assets/css/style.css" />
+  </head>
+  <body>
+    <!-- * header -->
+    <header>
+      <div class="logo">
+        <span>
+          <a href="../../../Project/sagar-bhatt/web-tutorials/index.html">
+            RadixWeb
+          </a>
+        </span>
+      </div>
+      <nav>
+        <input type="checkbox" id="click" />
+        <label for="click" class="menu-btn">
+          <i class="fas fa-bars"></i>
+        </label>
+        <ul>
+          <li>
+            <a href="../../../Project/sagar-bhatt/web-tutorials/index.html">
+              Home
+            </a>
+          </li>
+          <li>
+            <a href="../../../HTML/sagar-bhatt/Project/index.html">HTML/CSS</a>
+          </li>
+          <li><a href="../Project/index.html" class="active">Bootstrap</a></li>
+          <!-- <li><a href="#">SCSS</a></li> -->
+          <li>
+            <a href="../../../JavaScript/sagar-bhatt/Project/index.html">
+              Javascript
+            </a>
+          </li>
+          <li>
+            <a href="../../../jQuery/sagar-bhatt/Project/index.html">
+              jQuery
+            </a>
+          </li>
+        </ul>
+      </nav>
+    </header>
+    <!-- * main section -->
+    <article>
+      <section>
+        <div class="container bg-light">
+          <div class="display-4 text-center text-muted text-capitalize pb-2">
+            Alerts and Progress Bars
+          </div>
+        </div>
+        <div class="container bg-light font-monospace">
+          <!-- * Bootstrap Content -->
+          <ul class="nav nav-pills nav-fill text-capitalize nav-justified">
+            <li class="nav-item mx-2 dropdown bg-dark bg-opacity-50 my-1">
+              <button
+                class="btn nav-link dropdown-toggle text-white"
+                data-bs-toggle="dropdown"
+              >
+                2-Utilities
+              </button>
+              <div class="dropdown-menu w-100 overflow-auto">
+                <a
+                  class="dropdown-item"
+                  href="../2-utilities/2-2-basic-typography.html"
+                >
+                  2.2 Basic Typography
+                </a>
+                <a
+                  class="dropdown-item"
+                  href="../2-utilities/2-3-text-alignment-display.html"
+                >
+                  2.3 Text Alignment & Display
+                </a>
+                <a
+                  class="dropdown-item"
+                  href="../2-utilities/2-4-floats-position.html"
+                >
+                  2.4 Floats & Positions
+                </a>
+                <a
+                  class="dropdown-item"
+                  href="../2-utilities/2-5-colors-background.html"
+                >
+                  2.5 Colors & Background
+                </a>
+                <a class="dropdown-item" href="../2-utilities/2-6-spacing.html">
+                  2.6 Spacing
+                </a>
+                <a class="dropdown-item" href="../2-utilities/2-7-sizing.html">
+                  2.7 Sizing
+                </a>
+                <a
+                  class="dropdown-item"
+                  href="../2-utilities/2-8-breakpoints.html"
+                >
+                  2.8 Breakpoints
+                </a>
+              </div>
+            </li>
+            <li
+              class="nav-item mx-2 dropdown mx-2 bg-danger bg-opacity-50 my-1"
+            >
+              <button
+                class="btn nav-link dropdown-toggle text-white"
+                data-bs-toggle="dropdown"
+              >
+                3-CSS Component
+              </button>
+              <div class="dropdown-menu w-100 overflow-auto">
+                <a class="dropdown-item" href="./3-2-buttons.html">
+                  3.2 Buttons
+                </a>
+                <a class="dropdown-item" href="./3-3-navbar.html">
+                  3.3 Navbar
+                </a>
+                <a class="dropdown-item" href="./3-4-list-groups-badges.html">
+                  3.4 List Groups & Badges
+                </a>
+                <a class="dropdown-item" href="./3-5-forms.html"> 3.5 Forms </a>
+                <a class="dropdown-item" href="./3-6-input-groups.html">
+                  3.6 Input Groups
+                </a>
+                <a class="dropdown-item" href="./3-7-alerts-progress.html">
+                  3.7 Alerts & Progress
+                </a>
+                <a class="dropdown-item" href="./3-8-tables-pagination.html">
+                  3.8 Tables & Pagination
+                </a>
+                <a class="dropdown-item" href="./3-9-cards.html"> 3.9 Cards </a>
+                <!-- <a class="dropdown-item" href="./3-10-media-objects.html">
+                  3.10 Media Objects
+                </a> -->
+              </div>
+            </li>
+            <li class="nav-item mx-2 dropdown bg-warning my-1">
+              <button
+                class="btn nav-link dropdown-toggle text-white"
+                data-bs-toggle="dropdown"
+              >
+                4-Grid & Flexbox
+              </button>
+              <div class="dropdown-menu w-100 overflow-auto">
+                <a
+                  class="dropdown-item"
+                  href="../4-grid-flexbox/4-2-grid-system.html"
+                >
+                  4.2 Grid System
+                </a>
+                <a
+                  class="dropdown-item"
+                  href="../4-grid-flexbox/4-3-grid-alignment.html"
+                >
+                  4.3 Grid Alignment
+                </a>
+                <a
+                  class="dropdown-item"
+                  href="../4-grid-flexbox/4-4-flexbox.html"
+                >
+                  4.4 Flexbox
+                </a>
+                <a
+                  class="dropdown-item"
+                  href="../4-grid-flexbox/4-5-auto-margins-wrap.html"
+                >
+                  4.5 Auto Margins & wrap
+                </a>
+              </div>
+            </li>
+            <li class="nav-item mx-2 dropdown bg-success bg-opacity-50 my-1">
+              <button
+                class="btn nav-link dropdown-toggle text-white"
+                data-bs-toggle="dropdown"
+              >
+                5-JavaScript Widgets
+              </button>
+              <div class="dropdown-menu w-100 overflow-auto">
+                <a
+                  class="dropdown-item"
+                  href="../5-javascript-widgets/5-2-carousel.html"
+                >
+                  5.2 Carousel
+                </a>
+                <a
+                  class="dropdown-item"
+                  href="../5-javascript-widgets/5-3-collapse.html"
+                >
+                  5.3 Collapse
+                </a>
+                <a
+                  class="dropdown-item"
+                  href="../5-javascript-widgets/5-4-tooltips.html"
+                >
+                  5.4 Tooltips
+                </a>
+                <a
+                  class="dropdown-item"
+                  href="../5-javascript-widgets/5-5-popovers.html"
+                >
+                  5.5 Popovers
+                </a>
+                <a
+                  class="dropdown-item"
+                  href="../5-javascript-widgets/5-6-modals.html"
+                >
+                  5.6 Modals
+                </a>
+              </div>
+            </li>
+          </ul>
+          <hr />
+
+          <!--
+              ? Alerts and Progress Bars
+              TODO: .alert, .alert-link
+              TODO: .progress, .progress-bar, .progress-bar-striped, .progress-bar-animated
+          -->
+          <div class="col-12 col-md-10 col-lg-8">
+            <!-- Alerts -->
+            <div class="alert alert-primary">
+              <strong>Primary</strong> Blog post added.
+            </div>
+            <div class="alert alert-secondary">
+              <strong>Secondary</strong> Blog post added.
+            </div>
+            <div class="alert alert-success">
+              <strong>Success</strong> Blog post added.
+            </div>
+            <div class="alert alert-danger">
+              <strong>Danger</strong> Blog post added.
+            </div>
+            <div class="alert alert-info">
+              <strong>Info</strong> Blog post added.
+            </div>
+            <div class="alert alert-warning">
+              <strong>Warning</strong> Blog post added.
+            </div>
+            <div class="alert alert-light">
+              <strong>Light</strong> Blog post added.
+            </div>
+            <div class="alert alert-dark">
+              <strong>Dark</strong> Blog post added.
+            </div>
+            <div class="alert bg-black bg-opacity-50 text-white">
+              <strong><a class="alert-link">Custom</a></strong> Blog post added.
+            </div>
+            <div class="alert alert-warning alert-dismissible fade show">
+              <strong>Dismissible</strong> Blog post added.
+              <button
+                type="button"
+                class="btn-close"
+                data-bs-dismiss="alert"
+              ></button>
+            </div>
+            <br /><br />
+
+            <!-- ? progress bars -->
+            <div class="progress">
+              <div class="progress-bar" style="width: 35%"></div>
+            </div>
+            <br />
+            <div class="progress">
+              <div
+                class="progress-bar bg-warning"
+                style="width: 35%"
+                aria-valuenow="50"
+                aria-valuemin="0"
+                aria-valuemax="100"
+              ></div>
+            </div>
+            <br />
+            <div class="progress">
+              <div class="progress-bar" style="width: 55%">35%</div>
+            </div>
+            <br />
+            <div class="progress" style="height: 4px">
+              <div
+                class="progress-bar bg-dark bg-opacity-25"
+                style="width: 75%"
+              ></div>
+            </div>
+            <br />
+            <div class="progress">
+              <div
+                class="progress-bar bg-secondary progress-bar-striped"
+                style="width: 75%"
+              ></div>
+            </div>
+            <br />
+            <div class="progress">
+              <div
+                class="
+                  progress-bar
+                  bg-secondary
+                  progress-bar-striped progress-bar-animated
+                "
+                style="width: 75%"
+              ></div>
+            </div>
+            <br />
+            <div class="progress">
+              <div
+                class="
+                  progress-bar
+                  bg-primary
+                  progress-bar-striped progress-bar-animated
+                "
+                style="width: 25%"
+              ></div>
+              <div
+                class="
+                  progress-bar
+                  bg-secondary
+                  progress-bar-striped progress-bar-animated
+                "
+                style="width: 35%"
+              ></div>
+            </div>
+          </div>
+
+          <br /><br />
+        </div>
+      </section>
+    </article>
+    <!-- lottieFiles Js -->
+    <script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script>
+
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-/bQdsTh/da6pkI1MST/rWKFNjaCP5gBSY4sEBT38Q/9RBh9AH40zEOg7Hlq2THRZ"
+      crossorigin="anonymous"
+    ></script>
+  </body>
+</html>

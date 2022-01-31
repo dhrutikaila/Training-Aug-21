@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Numbers</title>
+</head>
+
+<body>
+    <script>
+        let x = 10;
+        let y = 20;
+        let z = "20";
+        console.log(x + y); //30
+
+        console.log(x + z); //1020
+
+        console.log(z + x); //2010
+        x = "100";
+        y = "10";
+        z = x / y; //z will be 10 
+        let p = "20";
+        let q = "600";
+        console.log(p / q);
+        console.log(q / p);
+        console.log(p + q); // 620
+        console.log(q - p); //580
+        console.log(p * q); //12000
+
+        x = 100 / "Apple"; //NAN
+        console.log(x);
+        x = 100 / "20";
+        console.log(x);
+
+        //let myNumber = 2;
+        //while (myNumber != Infinity) { // Execute until Infinity
+        //myNumber = myNumber * myNumber;
+        //}
+
+        let myNumber = 32;
+        myNumber.toString(10);  // returns 32
+        myNumber.toString(32);  // returns 10
+        myNumber.toString(16);  // returns 20
+        myNumber.toString(8);   // returns 40
+        myNumber.toString(2);   // returns 100000
+
+        x = 123;// typeof x returns number
+        
+        y = new Number(123);// typeof y returns object
+
+        x = 500;             
+        y = new Number(500);
+        console.log(x==y);      // (x === y) is false because x and y have different types
+
+        console.log(x===y);     // (x == y) is true because x and y have equal values
+        
+        x = new Number(500);             
+        y = new Number(500);
+            
+    
+        console.log(x==y);     // (x == y) is true because x and y have equal values
+        console.log(x===y); // (x === y) is true because x and y have same types and same value
+
+
+        //Numbers Methods
+        //toString() method
+        //The toString() method returns a number as a string.
+        x=123;
+        x.toString();
+        console.log(typeof(x)); //it return String
+
+        /* The toExponential() Method
+        toExponential() returns a string, with a number rounded and written using exponential notation.
+        A parameter defines the number of characters behind the decimal point:*/
+
+        x = 9.656;
+        x.toExponential(2);     // returns 9.66e+0
+        x.toExponential(4);     // returns 9.6560e+0
+        x.toExponential(6);     // returns 9.656000e+0
+
+        //toFixed method
+        // returns a string, with the number written with a specified number of decimals:
+        // it fix the decimal point number
+        x=9.656;
+        x.toFixed(0); //10
+        x.toFixed(2); //9.66
+        x.toFixed(4); //9.6560
+        x.toFixed(6); //9.656000
+
+        //toPrecision() returns a string, with a number written with a specified length:
+        x = 9.656;
+        x.toPrecision();        // returns 9.656
+        x.toPrecision(2);       // returns 9.7
+        x.toPrecision(4);       // returns 9.656
+        x.toPrecision(6);       // returns 9.65600
+    
+        //valueOf() returns a number as a number.
+        x=123;
+        (123+30).valueOf();  //153
+
+        //The number of milliseconds between 1970-01-02 and 1970-01-01 is 86400000:
+
+        // This returns 86400000
+        console.log(Number(new Date("1970-01-02")));
+    </script>
+
+</body>
+
+</html>

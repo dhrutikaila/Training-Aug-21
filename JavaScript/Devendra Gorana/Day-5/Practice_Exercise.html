@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Function Practice Exercise</title>
+        <!-- Bootstrap CSS -->
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-F3w7mX95PdgyTmZZMECAngseQB83DfGTowi0iMjiWaeVhAn4FJkqJByhZMI3AhiU" crossorigin="anonymous">
+    </head>
+    <body>
+        <!-- Optional JavaScript; choose one of the two! -->
+
+        <!-- Option 1: Bootstrap Bundle with Popper -->
+
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-/bQdsTh/da6pkI1MST/rWKFNjaCP5gBSY4sEBT38Q/9RBh9AH40zEOg7Hlq2THRZ" crossorigin="anonymous"></script>
+
+        <!-- Option 2: Separate Popper and Bootstrap JS -->
+        <!--
+        <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.3/dist/umd/popper.min.js" integrity="sha384-W8fXfP3gkOKtndU4JGtKDvXbO53Wy8SZCQHczT5FMiiqmQfUpWbYdTil/SxwZgAN" crossorigin="anonymous"></script>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/js/bootstrap.min.js" integrity="sha384-skAcpIdS7UcVUC05LJ9Dxay8AXcDYfBJqt1CJ85S/CFujBsIzCIv+l9liuYLaMQ/" crossorigin="anonymous"></script>
+        -->
+        <div class="container border my-2">
+            <div class="d-grid">
+                <label for="areaCircle">Using Function Expression :</label>
+                <button class="btn btn-success my-1" type="button" onclick="area_circle()" id="areaCircle">Find Area of Circle</button>
+            </div>
+            <div class="d-grid">
+                <label for="areaRectangle">Using Function Constructor :</label>
+                <button class="btn btn-success my-1" type="button" onclick="area_rectangle()" id="areaRectangle">Find Area of Rectangle</button>
+            </div>
+            <div class="d-grid">
+                <label for="funhoisting">Function Hoisting example :</label>
+                <button class="btn btn-success my-1" type="button" onclick="funHoisting()" id="funhoisting">Function Hoisting</button>
+            </div>
+            <div class="d-grid">
+                <label for="funinvoking">Function Invoking example :</label>
+                <button class="btn btn-success my-1" type="button" onclick="fun_invoking()" id="funinvoking">Function Invoking</button>
+            </div>
+            <div class="d-grid">
+                <label for="arglen">Function Arguments Length example :</label>
+                <button class="btn btn-success my-1" type="button" onclick="fun_arguments_len()" id="arglen">Function Arguments Length</button>
+            </div>
+            <div class="d-grid">
+                <label for="funasstring">Return Function As String :</label>
+                <button class="btn btn-success my-1" type="button" onclick="fun_as_string()" id="funasstring">Function As String</button>
+            </div>
+            <div class="d-grid">
+                <label for="arrowfun">Arrow Function Example :</label>
+                <button class="btn btn-success my-1" type="button" onclick="arrow_fun()" id="arrowfun">Arrow Function</button>
+            </div>
+            <div class="d-grid">
+                <label for="callMethod">Function Call Method Example :</label>
+                <button class="btn btn-success my-1" type="button" onclick="call_method()" id="callMethod">Function Call Method</button>
+            </div>
+            <div class="d-grid">
+                <label for="applyMethod">Function Apply Method Example :</label>
+                <button class="btn btn-success my-1" type="button" onclick="apply_method()" id="applyMethod">Function Apply Method</button>
+            </div>
+            <div class="d-grid">
+                <label for="maxNum">Math.Max.apply() Method for Find Max Number in Array :</label>
+                <button class="btn btn-success my-1" type="button" onclick="max_num()" id="maxNum">Max Num</button>
+            </div>
+            <div class="d-grid">
+                <label for="countNum">Function closure Example :</label>
+                <button class="btn btn-success my-1" type="button" onclick="count_fun()" id="countNum">Count Num</button>
+                <p style="font-size: 25px;" class="mt-2"><mark id="demo2"></mark></p>
+            </div>
+            <br><br>
+            <div class="d-grid">
+                <p id="demo1"></p>
+            </div>
+
+        </div>
+
+        <script>
+            //1.Using Function Expression, find the area of circle
+            function area_circle()
+            {
+                let radius = parseInt(prompt("Enter Radius of Circle : "));
+                let result = function (r) {return 2 * 3.14 * r};
+                alert("Area of Circle is " + result(radius));
+            }
+
+            //2.Using Function Constructor, find the area of rectangle
+            function area_rectangle()
+            {
+                let width = parseInt(prompt("Enter Width of Rectangle : "));
+                let hight = parseInt(prompt("Enter Hight of Rectangle : "));                
+                const result = new Function("w", "h", "return w * h");
+                alert("Area of Rectangle is " + result(width,hight));
+            }
+
+            //3.Function hoisting example
+            function funHoisting()
+            {
+                myfunction(5);//call function
+
+                function myfunction(y) //declare function
+                {
+                    alert(y * y);
+                }
+            }
+
+            //Function Invoking Example
+            function fun_invoking()
+            {
+                (function () {
+                    alert("Hello! I called Myself.");
+                })();
+            }
+
+            //Return function arguments length
+            function fun_arguments_len()
+            {
+                function myfunction(a, b, c, d)
+                {
+                    alert(arguments.length);
+                }
+                myfunction(1, 2, 3, 4);
+            }
+
+            //return function as string
+            function fun_as_string()
+            {
+                function myfunction(a,b)
+                {
+                    return a * b;
+                }
+                let text = myfunction.toString();
+                alert(text);
+            }
+
+            //Arrow Function Example
+            function arrow_fun()
+            {
+                const x = (x, y) => { return x * y };
+                alert(x(2, 4));
+            }
+
+            //invoking a function as a Method Example
+            const myObject = {
+                firstName:"John",
+                lastName: "Doe",
+                fullName: function () {
+                let x =  this.firstName + " " + this.lastName;
+                document.getElementById("demo1").innerHTML = x;
+                }
+            }
+            myObject.fullName();
+
+            //4.Using Function call create employee object with field Name, Address and Designation and pass it to function.
+            function call_method()
+            {
+                const employee = {
+                    information: function() {
+                        return "Employee Name : " + this.name + "\nAddress : " + this.address + "\nDesignation : " + this.designation;
+                    }
+                }
+
+                const employee1 = {
+                    name: "Dev",
+                    address: "43/1 Mahashaktinagar Ahmedabad",
+                    designation: "Software Developer"
+                }
+                let x = employee.information.call(employee1);
+                alert("Employee Information: \n" + x);
+            }    
+            
+            //5.Using Function Apply pass employee object to a function defined in the function.
+            function apply_method()
+            {
+                const employee = {
+                    information: function() {
+                        return "Employee Name : " + this.name + "\nAddress : " + this.address + "\nDesignation : " + this.designation;
+                    }
+                }
+
+                const employee1 = {
+                    name: "Dev",
+                    address: "43/1 Mahashaktinagar Ahmedabad",
+                    designation: "Software Developer"
+                }
+                let x = employee.information.apply(employee1);
+                alert("Employee Information: \n" + x);
+            }
+
+            //find max number in array using math.max() method
+            function max_num()
+            {
+                let x = Math.max.apply(null, [1,2,3]);
+                alert("Max Number In [1,2,3] is " + x);
+            }
+
+
+            //6. Function closure Example
+            const add = (function () {
+                let counter = 0;
+                return function () {counter += 1; return counter;}
+            })();
+            function count_fun()
+            {
+                document.getElementById("demo2").innerHTML = "Counter is " + add();
+            }
+        </script>
+    </body>
+</html>

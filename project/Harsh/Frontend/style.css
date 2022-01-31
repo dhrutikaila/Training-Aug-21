@@ -1,0 +1,29 @@
+#header{
+background-color: #E42529;
+}
+#btn{
+    background-color: #44ADFB;
+    width: 110px;
+}
+.content ::after{
+    content:"|";
+    padding-left: 10px;
+}
+#header div{
+    flex-wrap: wrap;
+}
+#carouselExampleIndicators .carousel-indicators li{
+    background-color: black; height: 5px;width: 5px;border-radius: 100%;
+}
+.nav2 a{
+    text-decoration: none;
+}
+.nav-link{
+    border: none !important;
+}
+@media only screen and (max-width:760px)
+{
+    footer{
+        display: none;
+    }
+}

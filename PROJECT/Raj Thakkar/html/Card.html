@@ -1,0 +1,626 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x" crossorigin="anonymous" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.3.0/font/bootstrap-icons.css" />
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
+        crossorigin="anonymous"></script>
+    <script src="https://kit.fontawesome.com/e153b670c8.js" crossorigin="anonymous"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="../JavaScript/login.js"></script>
+    <script src="../JavaScript/signup.js"></script>
+    <link rel="stylesheet" href="../CSS/Card.css">
+    
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <title>Zomato - Delivery Restaurants</title>
+</head>
+
+<body>
+    <div class="container">
+        <div class="nav p-5 m-5">
+            <!-- Navbar -->
+            <nav class="navbar navbar-expand-lg bg-dark navbar-dark py-3 fixed-top">
+                <div class="container">
+                    <a href="Zomato.html" class="navbar-brand" style="font-weight: bolder;">Zomato</a>
+
+                    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navmenu">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+
+                    <div class="collapse navbar-collapse" id="navmenu">
+                        <ul class="navbar-nav ms-auto">
+                            <li class="nav-item">
+                                <a class="nav-link btn btn-lg mr-3 ml-0" id="LogIn" data-bs-toggle="modal"
+                                    data-bs-target="#loginModal">Log
+                                    In</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link btn btn-lg mr-3 ml-0" id="SignUp" data-bs-toggle="modal"
+                                    data-bs-target="#SignupModal">Sign Up</a>
+                            </li>
+                            <div class="btn-group" style="z-index:10">
+                           
+                                <img src="../Assets/avatar.webp" class="rounded-circle dropdown-toggle ms-3 mt-2" id="LoggedIn" data-bs-toggle="dropdown" width="40px" height="40px"  style="cursor: pointer;" alt="Avatar">
+                                <ul class="dropdown-menu">
+                                  <li><a class="dropdown-item" style="cursor:default;"  href="#">Welcome: 
+                                                                                <script>
+                                                                                    document.write(localStorage.getItem("PersonName"))
+                                                                                </script></a></li>
+                                                                                <li>
+                                                                                    <a class="dropdown-item" style="cursor: pointer;" data-bs-toggle="modal"
+                                                                                        data-bs-target="#addRestaurant">Add Restaurant</a>
+                                                                                </li>
+                                                                                <li><hr class="dropdown-divider"></li>
+                                  <li><a class="dropdown-item" type="button" onclick="LogOut()" >LogOut</a></li>
+                                </ul>
+                              </div>
+                              
+                           
+                        </ul>
+                    </div>
+                </div>
+            </nav>
+
+        </div>
+       
+
+        <hr>
+        <h3 class="mb-3 mt-5">Delivery Restaurants</h3>
+        <div class=" container ">
+            <div class="row row-cols-1 row-cols-md-2 row-cols-lg-3   mb-3 g-4" id="Restaurant_Card">
+
+            </div>
+            
+           
+
+        </div>
+        <div style="margin-top: 500px;"></div>
+    </div>
+    <div class="modal fade" id="addRestaurant" data-bs-backdrop="static">
+        <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable">
+        <div class="modal-content">
+        <div class="modal-header">
+        <h5 class="modal-title">ADD Restaurant</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+        </div>
+        <div class="modal-body">
+        <div class="container">
+        <form>
+        <div class="mb-3">
+        <label for="Restaurant Name" class="form-label fs-5">Restaurant Name</label>
+        <input type="text" class="form-control" id="Restaurant_Name" placeholder="Restaurant Name">
+        </div>
+        <div class="mb-3">
+        <label for="Description" class="form-label fs-5">Description</label>
+        <input type="text" class="form-control" id="Description" placeholder="Description">
+        </div>
+        <div class="mb-3">
+        <label for="imgSrc" class="form-label fs-5">Img Src</label>
+        <input type="text" class="form-control" id="src" placeholder="url">
+        </div>
+        <div class="mb-3">
+        <label for="Rating" class="form-label fs-5">Rating</label>
+        <input type="text" class="form-control" id="Rating" placeholder="Rating">
+        </div>
+        <div class="mb-3 d-flex">
+        <label for="Price" class="form-label fs-5">Price : </label>
+        <input type="number" class="form-control w-50" id="price" placeholder="Price">
+        </div>
+        </form>
+        </div>
+        </div>
+        <div class="modal-footer">
+        <button type="button" data-bs-dismiss="modal" onclick="addRestaurant(Restaurant_Name.value,Description.value,src.value,Rating.value,price.value)" class="btn btn-success w-100">ADD</button>
+        </div>
+        </div>
+        </div>
+        </div>
+    <!-- Footer Modals -->
+    <footer>
+        <div class="bg-dark">
+            <div class="text-light d-flex justify-content-center"  >
+                <!-- Company -->
+                <ul class="card m-5 bg-dark border-0" id="Res">
+
+                    <h5>COMPANY</h5>
+
+                    <li class="nav-item">
+                        <button class="card-subtitle btn btn-lg mr-3 ml-0" style="color: darkgray; "
+                            data-bs-toggle="modal" data-bs-target="#Who">Who
+                            We Are</button>
+                    </li>
+                    <li class="nav-item">
+                        <button class="card-subtitle btn btn-lg mr-3 ml-0" style="color: darkgray; "
+                            data-bs-toggle="modal" data-bs-target="#Blog">Blog</button>
+                    </li>
+                    <li class="nav-item">
+                        <button class="card-subtitle btn btn-lg mr-3 ml-0" style="color: darkgray; "
+                            data-bs-toggle="modal" data-bs-target="#Career">Career</button>
+                    </li>
+                    <li class="nav-item">
+                        <button class="card-subtitle btn btn-lg mr-3 ml-0" style="color: darkgray; "
+                            data-bs-toggle="modal" data-bs-target="#Contact">Contact</button>
+                    </li>
+                </ul>
+                <!-- For Foodies -->
+                <ul class="card m-5 bg-dark border-0" id="Res3">
+
+                    <h5 >FOR FOODIES</h5>
+
+                    <li class="nav-item" >
+                        <button class="card-subtitle btn btn-lg mr-3 ml-0" style="color: darkgray; "
+                            data-bs-toggle="modal" data-bs-target="#COC">Code
+                            of Conduct</button>
+                    </li>
+                    <li class="nav-item" >
+                        <button class="card-subtitle btn btn-lg mr-3 ml-0" style="color: darkgray; "
+                            data-bs-toggle="modal" data-bs-target="#Comm">Community</button>
+                    </li>
+                    <li class="nav-item">
+                        <button class="card-subtitle btn btn-lg mr-3 ml-0" style="color: darkgray; "
+                            data-bs-toggle="modal" data-bs-target="#BHelp">Blogger Help</button>
+                    </li>
+                </ul>
+                <!-- For You -->
+                <ul class="card m-5 bg-dark border-0" id="Res">
+
+                    <h5>FOR YOU</h5>
+
+                    <li class="nav-item">
+                        <button class="card-subtitle btn btn-lg mr-3 ml-0" style="color: darkgray; "
+                            data-bs-toggle="modal" data-bs-target="#Privacy">Privacy</button>
+                    </li>
+                    <li class="nav-item">
+                        <button class="card-subtitle btn btn-lg mr-3 ml-0" style="color: darkgray; "
+                            data-bs-toggle="modal" data-bs-target="#Terms">Terms</button>
+                    </li>
+                    <li class="nav-item">
+                        <button class="card-subtitle btn btn-lg mr-3 ml-0" style="color: darkgray; "
+                            data-bs-toggle="modal" data-bs-target="#Security">Security</button>
+                    </li>
+                    <li class="nav-item">
+                        <button class="card-subtitle btn btn-lg mr-3 ml-0" style="color: darkgray; "
+                            data-bs-toggle="modal" data-bs-target="#Sitemap">Sitemap</button>
+                    </li>
+                </ul>
+                <!-- Social Links -->
+                <ul class="card m-5 bg-dark border-0 " id="Res2">
+
+                    <h5 id="Response">SOCIAL LINKS</h5>
+
+                    <div class="nav-item ">
+                        <a href="https://www.facebook.com/zomato/"><i
+                                class="fab fa-facebook fa-2x mx-2 nav-link p-0 m-0" style="color: darkgray; "></i></a>
+                        <a href="https://twitter.com/zomato?ref_src=twsrc%5Egoogle%7Ctwcamp%5Eserp%7Ctwgr%5Eauthor"><i
+                                class="fab fa-twitter fa-2x mx-2 nav-link p-0 m-0" style="color: darkgray; "></i></a>
+                        <a href="https://www.instagram.com/zomato/?hl=en"><i
+                                class="fab fa-instagram fa-2x mx-2 nav-link p-0 m-0" style="color: darkgray; "></i></a>
+                    </div>
+                    <div class="mt-5 mb-3">
+                        <a href="https://apps.apple.com/in/app/zomato-food-delivery-dining/id434613896"><img
+                                src="../Assets/AppStore.webp" width="200px" height="50px"></a>
+                    </div>
+                    <div class="mt-1" >
+                        <a href="https://play.google.com/store/apps/details?id=com.application.zomato"> <img
+                                src="../Assets/GooglePlay.webp" width="200px" height="50px"></a>
+                    </div>
+                </ul>
+            </div>
+            <div class="text-light text-center">
+                <hr>
+                <p>By continuing past this page, you agree to our Terms of Service, Cookie Policy, Privacy Policy and
+                    Content Policies. All trademarks are properties of their respective owners. 2008-2021 © Zomato™
+                    Clone. By Raj Thakkar.</p>
+            </div>
+        </div>
+    </footer>
+   <!-- Modals-->
+    <!-- Login Modal -->
+    <div class="modal fade" id="loginModal" tabindex="2" aria-labelledby="loginModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h2 class="modal-title" id="loginModalLabel">Login</h2>
+                    <button type="button" class="close" data-bs-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body text-center">
+                    <form class="mb-4">
+                        <div class="form-group mb-3">
+                            <input type="number" name="" id="loginNo" class="form-control"
+                                placeholder="Enter Contact Number" max="10" required>
+                        </div>
+                        <div class="form-group mb-3">
+                            <input type="password" name="" id="loginPass" class="form-control"
+                                placeholder="Enter Password" required>
+                        </div>
+                        <input type="button" value="Login" class="btn btn-danger btn-block" id="btnLogin" onclick="Login()">
+                    </form>
+
+                    <button class="btn btn-lg btn-block mr-3 ml-0" data-bs-toggle="modal"
+                        data-bs-target="#SignupModal">Don't have an account? Register here</button>
+                </div>
+
+            </div>
+        </div>
+    </div>
+    <!-- Sign Up Modal -->
+    <div class="modal fade" id="SignupModal" tabindex="-1" aria-labelledby="SignupModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h2 class="modal-title" id="SignupModalLabel">Sign up</h2>
+                    <button type="button" class="close" data-bs-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body text-center">
+                    <form class="mb-4">
+                        <div class="form-group mb-3">
+                            <input type="text" name="" id="signup_name" class="form-control" placeholder="Enter Name" required>
+                        </div>
+                        <div class="form-group mb-3">
+                            <input type="number" name="" id="signup_number" class="form-control" placeholder="Enter Contact Number"
+                                maxlength="10" required>
+                        </div>
+                        <div class="form-group mb-3">
+                            <input type="password" name="" id="signup_pass" class="form-control" placeholder="Enter Password"
+                                required>
+                        </div>
+                        <div class="form-group mb-3">
+                            <input type="password" name="" id="signup_pass1" class="form-control" placeholder="Confirm Password"
+                                required>
+                        </div>
+                        <button class="btn btn-danger btn-block" type="button" onclick="signup()">Register</button>
+                    </form>
+
+                    <button class="btn btn-lg btn-block mr-3 ml-0" data-bs-toggle="modal"
+                        data-bs-target="#loginModal">Already have an account? Login here</button>
+                </div>
+
+            </div>
+        </div>
+    </div>
+    <!-- Who We Are -->
+    <div class="modal" id="Who">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title">Who We Are</h5>
+                    <button class="close" data-bs-dismiss="modal">&times;</button>
+                </div>
+                <div class="modal-body">
+                    Launched in 2010, Our technology platform connects customers, restaurant partners and delivery
+                    partners, serving their multiple needs. Customers use our platform to search and discover
+                    restaurants, read and write customer generated reviews and view and upload photos, order food
+                    delivery, book a table and make payments while dining-out at restaurants. On the other hand, we
+                    provide restaurant partners with industry-specific marketing tools which enable them to engage and
+                    acquire customers to grow their business while also providing a reliable and efficient last mile
+                    delivery service. We also operate a one-stop procurement solution, Hyperpure, which supplies high
+                    quality ingredients and kitchen products to restaurant partners. We also provide our delivery
+                    partners with transparent and flexible earning opportunities.
+                </div>
+                <div class="modal-footer">
+                    <button class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Blog Modal -->
+    <div class="modal" id="Blog">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title">Blog</h5>
+                    <button class="close" data-bs-dismiss="modal">&times;</button>
+                </div>
+                <div class="modal-body">
+                    Earlier today, GG (Co-founder, and Head of Supply) sent the following email to everyone at Zomato –
+
+                    All,
+
+                    I am in love with Zomato and will always be. Came in 6 years back not knowing what this would turn
+                    out to be. And what a mind blowing and amazing journey this has been. Feel proud of where we are
+                    today, what we have overcome to get here and feel even more proud of what we will achieve in the
+                    future.
+
+                    I have always been asked this question – where does all this energy come from and what keeps you
+                    going? Answer is simple and very unique to us – from all you amazing people and how this bunch comes
+                    together to create magic.
+
+                    I am taking a new turn in my life and will be starting a new chapter, taking a lot from this
+                    defining chapter of my life – the last 6 years at Zomato. We have a great team now to take Zomato
+                    forward and it’s time for me to take an alternate path in my journey. I am very emotional as I write
+                    this and don’t think any words can do justice to how I am feeling right now.
+
+                    I couldn’t have asked for more – I am so grateful for all the experiences I have had and thankful to
+                    all the folks around me for helping me become a much better person. I won’t be able to stay away
+                    from all of you and you will see me around and in action every once in a while. How can I not be
+                    there for the town halls – aisa to ho hi nahin sakta 😉
+
+                    Thank you Deepi for making me a part of this journey. I will always cherish the amazing times we
+                    have had together. I have learnt a lot from you all along and I know in my heart that you will take
+                    Zomato to heights that most cannot even imagine.
+
+                    A big hug to MG (Mohit Gupta), Akshant, Akriti and RG (Rahul Ganjoo) for being such amazing pals on
+                    this journey.
+
+                    Love you all. Do what you do best – create magic. Super proud of all of you.
+
+                    GG
+
+                    ########
+
+                    While it’s heartbreaking to part ways with someone who’s been synonymous with Zomato for the past
+                    six years, we wish GG the very best for what the future holds.
+
+                    Here’s what Deepinder replied to his email with –
+
+                    Thank you GG for everything you have helped Zomato achieve over the last few years. We have seen
+                    Zomato through great as well as terrible times together, and brought it here today. There’s so much
+                    of our journey still ahead of us, and I am thankful that you are hanging your boots at a point where
+                    we have a great team and leadership to carry us forward.
+
+                    Thank you for being a better friend to me than anyone else I’ve ever had. I can’t yet imagine
+                    everyday life at Zomato without you. You will be sorely missed. All the best!
+
+
+                </div>
+                <div class="modal-footer">
+                    <button class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Career -->
+    <div class="modal" id="Career">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title">Career</h5>
+                    <button class="close" data-bs-dismiss="modal">&times;</button>
+                </div>
+                <div class="modal-body">
+                    We only take applications through employee referrals. If you know someone at Zomato, reach out to
+                    them and share an eye-catching application (with a brief video, maybe?). Otherwise, if you have what
+                    it takes, we will find you.
+                </div>
+                <div class="modal-footer">
+                    <button class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Contact -->
+    <div class="modal" id="Contact">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title">Modal Title</h5>
+                    <button class="close" data-bs-dismiss="modal">&times;</button>
+                </div>
+                <div class="modal-body">
+                    <ul>
+                        <li>
+                            Call: 001-122-3324
+                        </li>
+                        <li>
+                            Email: zomato.helpdesk@gmail.com
+                        </li>
+                        <li>Address: 63rd, Dollar Street, LA</li>
+                    </ul>
+                </div>
+                <div class="modal-footer">
+                    <button class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- CodeOfConduct -->
+    <div class="modal" id="COC">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title">Code Of Conduct</h5>
+                    <button class="close" data-bs-dismiss="modal">&times;</button>
+                </div>
+                <div class="modal-body">
+                    If there's one thing we truly love, it's sharing in all the great foodie moments you have. Bouquets
+                    when the food exceeds your expectations, brickbats when the service is shocking, chronicles of your
+                    food excursions – they all count.
+
+                    While we welcome your opinions and descriptions of your dining experiences, there are a few things
+                    we expect from every user on Zomato. Your reviews and photos, as well as your profile and the
+                    comments you share, are all subject to Content Guidelines, our Foodie Code of Conduct.
+
+                    If your activity on Zomato doesn't match up to these content guidelines, we reserve the right to
+                    take action as we deem necessary. This could include altering or deleting your reviews or comments,
+                    restricting your review activity or deleting your Zomato account altogether, with or without notice.
+                    Zomato also utilizes an algorithm to aid in removing suspicious reviews. If you feel your review was
+                    deleted in error, email us at help@zomato.com.
+
+                    If you see content that does not align with these guidelines or our Terms of Service, please let us
+                    know. We will consider all reports. However, due to the diversity of our community, it is possible
+                    that content disagreeable to you might not meet the criteria to be removed.
+                </div>
+                <div class="modal-footer">
+                    <button class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Community -->
+    <div class="modal" id="Comm">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title">Community</h5>
+                    <button class="close" data-bs-dismiss="modal">&times;</button>
+                </div>
+                <div class="modal-body">
+                    The times are such that most of us now have to work from home. While some of us find comfort in not
+                    having to go to work, others find it difficult to make it through the day. But you gotta do what you
+                    gotta do. If you too are working from home and miss having someone around, we’ve got your favourite
+                    company: food!
+
+                    Read on to see which work-from-home personality matches your style and which dish goes best with
+                    your vibe!
+                </div>
+                <div class="modal-footer">
+                    <button class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Blogger Help -->
+    <div class="modal" id="BHelp">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title">Blogger Help</h5>
+                    <button class="close" data-bs-dismiss="modal">&times;</button>
+                </div>
+                <div class="modal-body">
+                    I am new to all this. How do I get myself added as a blogger on Zomato?
+                    It's really simple – please make sure you are logged in and fill out the form below. You will
+                    immediately be granted access to SpoonBack and you can start right away. We look forward to reading
+                    all about your foodie adventures!
+
+                    Note - Blogsites created on Wixsite are not compatible with the spoonback feature.
+                </div>
+                <div class="modal-footer">
+                    <button class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Privacy -->
+    <div class="modal" id="Privacy">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title">Privacy</h5>
+                    <button class="close" data-bs-dismiss="modal">&times;</button>
+                </div>
+                <div class="modal-body">
+                    This policy applies only to the information Zomato collects through its Services, in email, text and
+                    other electronic communications sent through or in connection with its Services.
+
+                    This policy DOES NOT apply to information that you provide to, or that is collected by, any
+                    third-party, such as restaurants at which you make reservations and/or pay through Zomato's Services
+                    and social networks that you use in connection with its Services. Zomato encourages you to consult
+                    directly with such third-parties about their privacy practices.
+
+                    Please read this policy carefully to understand Zomato's policies and practices regarding your
+                    information and how Zomato will treat it. By accessing or using its Services and/or registering for
+                    an account with Zomato, you agree to this privacy policy and you are consenting to Zomato's
+                    collection, use, disclosure, retention, and protection of your personal information as described
+                    here. If you do not provide the information Zomato requires, Zomato may not be able to provide all
+                    of its Services to you.
+                </div>
+                <div class="modal-footer">
+                    <button class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Terms -->
+    <div class="modal" id="Terms">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title">Terms</h5>
+                    <button class="close" data-bs-dismiss="modal">&times;</button>
+                </div>
+                <div class="modal-body">
+                    Thank you for using Zomato. These Terms of Service (the "Terms") are intended to make you aware of
+                    your legal rights and responsibilities with respect to your access to and use of the Zomato website
+                    at www.zomato.com (the "Site") and any related mobile or software applications ("Zomato Platform")
+                    including but not limited to delivery of information via the website whether existing now or in the
+                    future that link to the Terms (collectively, the "Services").
+                </div>
+                <div class="modal-footer">
+                    <button class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Security -->
+    <div class="modal" id="Security">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title">Security</h5>
+                    <button class="close" data-bs-dismiss="modal">&times;</button>
+                </div>
+                <div class="modal-body">
+                    We take security seriously at Zomato. If you are a security researcher or expert, and believe you’ve
+                    identified security-related issues with Zomato’s website or apps, we would appreciate you disclosing
+                    it to us responsibly.
+
+                    Our team is committed to addressing all security issues in a responsible and timely manner, and ask
+                    the security community to give us the opportunity to do so before disclosing them publicly. Please
+                    submit a bug to us on our HackerOne page, along with a detailed description of the issue and steps
+                    to reproduce it, if any. We trust the security community to make every effort to protect our users
+                    data and privacy.
+
+                    For a list of researchers who have helped us address security issues, please visit our HackerOne
+                    page.
+
+                    Submit the bugs to us on our HackerOne page, along with a detailed description of the issue and
+                    steps to reproduce it.
+                </div>
+                <div class="modal-footer">
+                    <button class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- SiteMap -->
+    <div class="modal" id="Sitemap">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title">SiteMap</h5>
+                    <button class="close" data-bs-dismiss="modal">&times;</button>
+                </div>
+                <div class="modal-body">
+                    <pre>
+                    Abohar Barnala
+
+                    Barshi Barwala
+                    
+                    Barwani Basavakalyan
+                    
+                    Basirhat Achalpur
+                    
+                    Adilabad Adoni
+                    
+                    Agartala Agra
+                    
+                    Ahmedabad  Ahmednagar
+                    
+                    Aizawl Surat
+                   </pre>
+                </div>
+                <div class="modal-footer">
+                    <button class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-/bQdsTh/da6pkI1MST/rWKFNjaCP5gBSY4sEBT38Q/9RBh9AH40zEOg7Hlq2THRZ" crossorigin="anonymous">
+        </script> -->
+        <script src="../JavaScript/index.js"></script>
+        <script src="../JavaScript/Logout.js"></script>
+</body>
+
+</html>

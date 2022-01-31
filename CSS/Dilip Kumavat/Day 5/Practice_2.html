@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      div {
+        border: 2px dashed black;
+        height: 200px;
+        width: 30%;
+        margin: 50px;
+        text-align: center;
+        font-size: 50px;
+        vertical-align: text-top;
+      }
+      .one {
+        position: fixed;
+      }
+      .two {
+        position: relative;
+        left: 35%;
+        top: 200px;
+      }
+      .three {
+        position: absolute;
+        background: red;
+        right: 100px;
+        top: 10px;
+      }
+      .four{
+          position: static;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="one">Fixed</div>
+    <hr />
+    <div class="two">Relative</div>
+    <hr />
+    <div class="three">Absolute</div>
+    <hr />
+    <div class="four">static</div>
+  </body>
+</html>

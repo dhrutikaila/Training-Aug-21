@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script>
+        $(document).ready(function () {
+            $("#hide").click(function () {
+                $("p").hide(500)
+            });
+            $("#show").click(function () {
+                $("p").show(1000)
+            });
+            $("#toggle").click(function () {
+                $("p").toggle(1000)
+            });
+            $("#fadein").click(function () {
+                $("#div1").fadeIn();
+                $("#div2").fadeIn("slow");
+                $("#div3").fadeIn(1000)
+            });
+            $("#fedout").click(function () {
+                $("#div1").fadeOut();
+                $("#div2").fadeOut("slow");
+                $("#div3").fadeOut(1000)
+
+            });
+
+            $("#fadetoggle").click(function () {
+                $("#div1").fadeToggle();
+                $("#div2").fadeToggle("slow");
+                $("#div3").fadeToggle(1000)
+
+            });
+
+            $("#fadeto").click(function () {
+                $("#div4").fadeTo("slow",.25);
+                $("#div5").fadeTo("slow",.5);
+                $("#div6").fadeTo("slow",.75)
+
+            });
+
+        })
+    </script>
+</head>
+
+<body>
+    <h1>Effects</h1>
+    <p>This is the example of show and hide</p>
+    <button id="hide">To Hide</button>
+    <button id="show">To show</button>
+    <button id="toggle">Toggle button</button>
+    <hr>
+    <button id="fadein">FadeIn</button>
+    <button id="fedout">FadeOut</button>
+    <button id="fadetoggle">Fadetoggle</button>
+    <div id="div1" style="width:80px;height:80px;display:none; background-color: blueviolet;"></div>
+    <div id="div2" style="width:80px;height:80px;display:none; background-color: blueviolet;"></div>
+    <div id="div3" style="width:80px;height:80px;display:none; background-color: blueviolet;"></div>
+
+    <button id="fadeto">FadeTo</button>
+    <div id="div4" style="width:80px;height:80px;background-color:red;"></div><br>
+    <div id="div5" style="width:80px;height:80px;background-color:green;"></div><br>
+    <div id="div6" style="width:80px;height:80px;background-color:blue;"></div>
+
+</body>
+
+</html>

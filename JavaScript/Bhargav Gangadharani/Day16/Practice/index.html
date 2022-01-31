@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-F3w7mX95PdgyTmZZMECAngseQB83DfGTowi0iMjiWaeVhAn4FJkqJByhZMI3AhiU" crossorigin="anonymous">
+    <title>Practice Day16</title>
+</head>
+<body>
+    <div class="container mt-5">
+        <h3 class="h4">Check whether the string is blank or not</h3>
+        <form class="d-flex ">
+            <input type="text" class="form-control me-3" placeholder="Enter the String" id="input1">
+            <button class="btn btn-outline-success" onclick="return isBlank(document.getElementById('input1').value)">Check</button>
+        </form>
+        <br>
+        <h3 class="h4">Split a string and convert it into a array of word (Check Console)</h3>
+        <form class="d-flex ">
+            <input type="text" class="form-control me-3" placeholder="Enter the String" id="input2">
+            <button class="btn btn-outline-success" onclick="return split_string(document.getElementById('input2').value)">Check</button>
+        </form>
+        <br>
+        <h3 class="h4">Extracting specified number of letter from string (Check Console)</h3>
+        <form class="d-flex ">
+            <input type="text" class="form-control me-3" placeholder="Enter the String" id="input3">
+            <input type="number" class="form-control me-3" placeholder="No. of characters" id="no3">
+            <button class="btn btn-outline-success" onclick="return Extract(document.getElementById('input3').value, document.getElementById('no3').value)">Check</button>
+        </form>
+        <br>
+        <h3 class="h4">Get the current date : </h3> <span class="small" id="date"></span>
+        <form class="d-flex ">
+            <button class="btn btn-outline-success" onclick="return getDt()">Get</button>
+        </form>
+        <br>
+
+        <div class="mt-5">
+            <span class="fs-5 fw-bold mt-5"> Array Operation like push, pop, shifting, deleting
+                element</span>
+            <form action="" class="my-5 ms-5">
+                <div class="fs-3 fw-bold">Enter the array: <input type="text" id="array" class="w-50 ms-5"></div>
+            </form>
+        </div>
+
+        <div class="fs-5 fw-bold ms-5">
+            <div class="form-check">
+                <input class="form-check-input" type="radio" name="flexRadioDefault" id="push">
+                <label class="form-check-label" for="push">
+                    Push
+                </label>
+            </div>
+
+            <div class="form-check">
+                <input class="form-check-input" type="radio" name="flexRadioDefault" id="pop">
+                <label class="form-check-label" for="pop">
+                    Pop
+                </label>
+            </div>
+            <div class="form-check">
+                <input class="form-check-input" type="radio" name="flexRadioDefault" id="shift">
+                <label class="form-check-label" for="shift">
+                 Shift
+                </label>
+            </div>
+
+            <div class="form-check">
+                <input class="form-check-input" type="radio" name="flexRadioDefault" id="unshift">
+                <label class="form-check-label" for="unshift">
+                    Unshift
+                </label>
+            </div>
+            <div class="form-check">
+                <input class="form-check-input" type="radio" name="flexRadioDefault" id="delete">
+                <label class="form-check-label" for="delete">
+                    Delete
+                </label>
+            </div>
+
+            <button class=" btn btn-success mt-5 ms-5" onclick="ArrayOps()">Go:</button>
+
+            <div class="mt-5 ms-5">Result:
+                <div id="message"></div>
+                <div id="ans"></div>
+
+            </div>
+        </div>
+    </div>
+
+
+    
+    <script>
+       function isBlank(str) {
+            if (str.trim() == "") {
+                alert("String is empty.");
+            } else {
+                alert("String is not empty.");
+            }
+        }
+
+        function split_string(str) {
+            if (str.trim() == "") {
+                alert("String is empty.");
+            } else {
+                var arr = str.split(' ');
+                console.log(arr);
+            }
+            return false;
+        }
+
+        function Extract(str,no) {
+            no = parseInt(no);
+            if (str.trim() == "") {
+                alert("String is empty.")
+            }else {
+                console.log(str.substr(0,no));
+            }
+            return false;
+        }
+
+        function getDt() {
+            document.getElementById("date").innerHTML = new Date();
+            return false;
+        }
+
+        function ArrayOps() {
+            switch (true) {
+                case document.getElementById("push").checked == true:
+                    var string = document.getElementById("array").value
+                    var array = string.split(",")
+                    var element = prompt("Enter the element");
+                    array.push(element)
+                    console.log(array)
+                    document.getElementById("message").innerHTML = "The pushed element is : " + element
+                    break
+
+                case document.getElementById("pop").checked == true:
+                    var string = document.getElementById("array").value
+                    var array = string.split(",")
+                    var result = array.pop()
+                    document.getElementById("message").innerHTML = "The poped element is :" + result
+                    break
+
+                case document.getElementById("shift").checked == true:
+                    var string = document.getElementById("array").value
+                    var array = string.split(",")
+                    var result = array.shift()
+                    document.getElementById("message").innerHTML = "The Shift element is :" + result
+                    break
+
+                case document.getElementById("unshift").checked == true:
+                    var string = document.getElementById("array").value
+                    var array = string.split(",")
+                    var element = prompt("Enter the element");
+                    var result = array.unshift(element)
+                    document.getElementById("message").innerHTML = "The Unshift element is :" + element
+                    break
+
+                case document.getElementById("delete").checked == true:
+                    var string = document.getElementById("array").value
+                    var array = string.split(",")
+                    var element = prompt("Enter the position of element to be deleted");
+                    var result = delete array[element]
+                    break
+            }
+
+            document.getElementById("ans").innerHTML = "The new array is : [" + array + "]"
+        }
+    </script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-/bQdsTh/da6pkI1MST/rWKFNjaCP5gBSY4sEBT38Q/9RBh9AH40zEOg7Hlq2THRZ" crossorigin="anonymous"></script>
+</body>
+
+</html>

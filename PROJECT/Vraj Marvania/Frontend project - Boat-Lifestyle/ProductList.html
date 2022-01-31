@@ -1,0 +1,426 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <link href='https://fonts.googleapis.com/css?family=Montserrat' rel='stylesheet'>
+    <link href="Assets/css/style.css" rel='stylesheet'>
+    <link href='https://fonts.googleapis.com/css?family=Montserrat' rel='stylesheet'>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <!--load all styles -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://kenwheeler.github.io/slick/slick/slick.js"></script>
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css"
+        integrity="sha384-UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQ8lWUE00s/" crossorigin="anonymous">
+    <script src="Assets/js/script.js"></script>
+
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&display=swap');
+    </style>
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.css" />
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css"
+        integrity="sha384-UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQ8lWUE00s/" crossorigin="anonymous">
+
+    <style>
+        * {
+            font-family: 'Montserrat', sans-serif;
+            ;
+        }
+
+        .slider1.slick-initialized.slick-slider,
+        .slider2.slick-initialized.slick-slider {
+            display: flex;
+        }
+
+        i.fa.fa-chevron-right,
+        i.fa.fa-chevron-left {
+            font-size: 40px;
+            content: "\f053";
+            color: red;
+            padding-inline: 0px;
+        }
+
+        .card.rounded-5.a.m-2 {
+            background-color: #f1f1f1;
+        }
+        /* a {
+    color: #000000;
+    text-decoration: none;
+}
+a:hover {
+    color: #000000;
+   
+} */
+    </style>
+    
+    <script>
+        // set data    --------------------------------------------->
+        const urlParams = new URLSearchParams(location.search);
+        var key = (urlParams.get("id"));
+        var jdata2 = localStorage.getItem(key);
+        var pageinfo = (JSON.parse(jdata2));
+        $(document).ready(function () {
+            console.log(pageinfo)
+            $("#fimg").attr("src", pageinfo.fimg);
+            $("#pagename").text(pageinfo.type);
+            for (i = 0; i < pageinfo.data.length; i++) {
+                 console.log(pageinfo.type)
+                var jd = $("<div class=''><a href='http://127.0.0.1:5500/product.html?type="+JSON.stringify(key)+"&id="+JSON.stringify(i)+"' class='text-decoration-none text-dark'> <div class='card rounded-5 a m-2' style='border: 0px;width: 390px;height:352px;font-size:16px;border-radius:10px;'> <div class='text-center ' style='background-color: silver;border-top-left-radius: 10px;border-top-right-radius: 10px;'> <img src='" + pageinfo.data[i].img + "' height='255px' width='255px' class='' alt='...'> <p class='px-2 py-1' style='left:6px; background-color: white; text-align: left;top: 5%;position: absolute; width: 95px;top: 5%;transform: skew( -27deg);height: 24px;'> </p> <p class='px-2 py-1' style='background-color: rgb(255, 255, 255); font-size:12px; text-align: left;top: 5%; color: #ff0000;font-weight: bold;position: absolute;'> You Save 71%</p> </div> <div class='card-body' style=' height: auto; '> <div class='text-danger' style='font-size: 12px;'> <i class='fas fa-star active'></i> <i class='fas fa-star active'></i> <i class='fas fa-star active'></i> <i class='fas fa-star active'></i> <i class='fas fa-star d-inline'></i> <h6 class='d-inline text-secondary'>14 reviews</h6> </div> <h5 class='card-title fw-bolder' style='margin-bottom: 5px;font-size: 14px;'>" + pageinfo.data[i].name + "</h5> <h5 class='card-title text-danger fw-bolder d-inline' style='font-size:14px'>" + pageinfo.data[i].price + "</h5> <h5 class='card-text text-secondary text-decoration-line-through d-inline' style='font-size: 12px;'>" + pageinfo.data[i].oldprice + "</h5> </div> </div></a> </div>")
+                $("#cardin").append(jd);
+            }
+        });
+
+//  var jd = $("<div class=''><div class='card rounded-5 a m-2' style='border: 0px;width: 390px;height:352px;font-size:16px;border-radius:10px;'> <div class='text-center ' style='background-color: silver;border-top-left-radius: 10px;border-top-right-radius: 10px;'> <img src='" + pageinfo.data[i].img + "' height='255px' width='255px' class='' alt='...'> <p class='px-2 py-1' style='left:6px; background-color: white; text-align: left;top: 5%;position: absolute; width: 95px;top: 5%;transform: skew( -27deg);height: 24px;'></p> <p class='px-2 py-1' style='background-color: rgb(255, 255, 255); font-size:12px; text-align: left;top: 5%; color: #ff0000;font-weight: bold;position: absolute;'>You Save 71%</p> </div> <div class='card-body' style=' height: auto; '> <div class='tes fa-star active'></i> <i class='faxt-danger' style='font-size: 12px;'> <i class='fas fa-star active'></i> <i class='fas fa-star active'></i> <i class='fas fa-star active'></i> <i class='fas fa-star d-inline'></i> <h6 class='d-inline text-secondary'>14 reviews</h6> </div> <h5 class='card-title fw-bolder' style='margin-bottom: 5px;font-size: 14px;'>" + pageinfo.data[i].name + "</h5> <h5 class='card-title text-danger fw-bolder d-inline' style='font-size:14px'>Rs." + pageinfo.data[i].price + "</h5> <h5 class='card-text text-secondary text-decoration-line-through d-inline' style='font-size: 12px;'>Rs.1,469.00 </h5> </div> </div></div>")
+
+
+        // get id --------------------------------------------------->
+
+
+
+    </script>
+  <script>
+    $(function () {
+        $("#nav").load("nav.html");
+          $("#footer").load("footer.html");  
+    });
+</script>
+<link rel="shortcut icon" href="https://utioutll.sirv.com/Smart%20Watches/nav/tablogo.jfif">
+<title>boat-lifestyle</title>
+</head>
+
+<body>
+   <div id="nav"></div>
+    <!-- __________________________________________________________________________ -->
+    <!-- page -->
+
+    <!-- fullpage img -->
+    <div class="container-fluid p-0">
+        <img src="" id="fimg" class="col-12 ">
+    </div>
+
+    <!-- breadcrumb path -->
+    <div class="container mt-5" aria-label="breadcrumb">
+        <ol class="breadcrumb">
+            <li class="breadcrumb-item active"><a class="text-decoration-none text-light" href=""
+                    onclick="window.history.back();">Home</a></li>
+            <li class="breadcrumb-item active text-light" aria-current="page" id="pagename"></li>
+        </ol>
+    </div>
+
+    <div class="container-fluid">
+        <div class="container" id="title">
+            <h2 class="fw-bolder" style="color: white;">Wireless Earbuds</h2>
+        </div>
+        <div class="container-fluid">
+            <div class="d-flex justify-content-center flex-wrap" id="cardin">
+                <!-- <div class="">
+                    <div class="card rounded-5 a m-2"
+                        style="border: 0px;width: 390px;height:352px;font-size:16px;border-radius:10px;">
+                        <div class="text-center "
+                            style="background-color: silver;border-top-left-radius: 10px;border-top-right-radius: 10px;">
+                            <img src="Assets/img/35_4.png" height="255px" width="255px" class="" alt="...">
+                            <p class="px-2 py-1"
+                                style="left:6px; background-color: white; text-align: left;top: 5%;position: absolute;    width: 95px;top: 5%;transform: skew( -27deg);height: 24px;">
+                            </p>
+                            <p class="px-2 py-1"
+                                style="background-color: rgb(255, 255, 255); font-size:12px; text-align: left;top: 5%; color: #ff0000;font-weight: bold;position: absolute;">
+                                You Save 71%</p>
+                        </div>
+                        <div class="card-body" style="  height: auto; ">
+                            <div class="text-danger" style="font-size: 12px;">
+                                <i class="fas fa-star active"></i>
+                                <i class="fas fa-star active"></i>
+                                <i class="fas fa-star active"></i>
+                                <i class="fas fa-star active"></i>
+                                <i class="fas fa-star d-inline"></i>
+                                <h6 class="d-inline text-secondary">14 reviews</h6>
+                            </div>
+                            <h5 class="card-title fw-bolder" style="margin-bottom: 5px;font-size: 14px;">BOAT Airdopes
+                                131 - Wireless Earbuds</h5>
+                            <h5 class="card-title text-danger fw-bolder d-inline" style="font-size:14px">Rs.1,469.00
+                            </h5>
+                            <h5 class="card-text text-secondary text-decoration-line-through d-inline"
+                                style="font-size: 12px;">Rs.1,469.00
+                            </h5>
+                        </div>
+                    </div>
+                </div> -->
+                <!-- <div class=""><div class="card rounded-5 a m-2" style="border: 0px;width: 390px;height:352px;font-size:16px;border-radius:10px;">
+              <div class="text-center " style="background-color: silver;border-top-left-radius: 10px;border-top-right-radius: 10px;">
+                <img src="Assets/img/35_4.png" height="255px" width="255px" class="" alt="...">
+                <p class="px-2 py-1"  style="left:6px; background-color: white; text-align: left;top: 5%;position: absolute;    width: 95px;top: 5%;transform: skew( -27deg);height: 24px;"></p>
+                <p class="px-2 py-1"  style="background-color: rgb(255, 255, 255); font-size:12px; text-align: left;top: 5%; color: #ff0000;font-weight: bold;position: absolute;">You Save 71%</p>
+             </div>
+              <div class="card-body" style="  height: auto;">
+                <div class="text-danger" style="font-size: 12px;">
+                  <i class="fas fa-star active"></i>
+                  <i class="fas fa-star active"></i>
+                  <i class="fas fa-star active"></i>
+                  <i class="fas fa-star active"></i>
+                  <i class="fas fa-star d-inline"></i>
+                  <h6 class="d-inline text-secondary">14 reviews</h6>
+                </div>
+                <h5 class="card-title fw-bolder" style="margin-bottom: 5px;font-size: 14px;">BOAT Airdopes 131 - Wireless Earbuds</h5>
+                <h5 class="card-title text-danger fw-bolder d-inline" style="font-size:14px">Rs.1,469.00</h5>
+                <h5 class="card-text text-secondary text-decoration-line-through d-inline" style="font-size: 12px;">Rs.1,469.00
+                </h5>    
+              </div>
+            </div></div>
+            <div class=""><div class="card rounded-5 a m-2" style="border: 0px;width: 390px;height:352px;font-size:16px;border-radius:10px;">
+              <div class="text-center " style="background-color: silver;border-top-left-radius: 10px;border-top-right-radius: 10px;">
+                <img src="Assets/img/35_4.png" height="255px" width="255px" class="" alt="...">
+                <p class="px-2 py-1"  style="left:6px; background-color: white; text-align: left;top: 5%;position: absolute;    width: 95px;top: 5%;transform: skew( -27deg);height: 24px;"></p>
+                <p class="px-2 py-1"  style="background-color: rgb(255, 255, 255); font-size:12px; text-align: left;top: 5%; color: #ff0000;font-weight: bold;position: absolute;">You Save 71%</p>
+             </div>
+              <div class="card-body" style="  height: auto;">
+                <div class="text-danger" style="font-size: 12px;">
+                  <i class="fas fa-star active"></i>
+                  <i class="fas fa-star active"></i>
+                  <i class="fas fa-star active"></i>
+                  <i class="fas fa-star active"></i>
+                  <i class="fas fa-star d-inline"></i>
+                  <h6 class="d-inline text-secondary">14 reviews</h6>
+                </div>
+                <h5 class="card-title fw-bolder" style="margin-bottom: 5px;font-size: 14px;">BOAT Airdopes 131 - Wireless Earbuds</h5>
+                <h5 class="card-title text-danger fw-bolder d-inline" style="font-size:14px">Rs.1,469.00</h5>
+                <h5 class="card-text text-secondary text-decoration-line-through d-inline" style="font-size: 12px;">Rs.1,469.00
+                </h5>    
+              </div>
+            </div></div>
+            <div class=""><div class="card rounded-5 a m-2" style="border: 0px;width: 390px;height:352px;font-size:16px;border-radius:10px;">
+              <div class="text-center " style="background-color: silver;border-top-left-radius: 10px;border-top-right-radius: 10px;">
+                <img src="Assets/img/35_4.png" height="255px" width="255px" class="" alt="...">
+                    <p class="px-2 py-1"  style="left:6px; background-color: white; text-align: left;top: 5%;position: absolute;    width: 95px;top: 5%;transform: skew( -27deg);height: 24px;"></p>
+                    <p class="px-2 py-1"  style="background-color: rgb(255, 255, 255); font-size:12px; text-align: left;top: 5%; color: #ff0000;font-weight: bold;position: absolute;">You Save 71%</p>
+                  </div>
+              <div class="card-body" style="  height: auto;">
+                <div class="text-danger" style="font-size: 12px;">
+                  <i class="fas fa-star active"></i>
+                  <i class="fas fa-star active"></i>
+                  <i class="fas fa-star active"></i>
+                  <i class="fas fa-star active"></i>
+                  <i class="fas fa-star d-inline"></i>
+                  <h6 class="d-inline text-secondary">14 reviews</h6>
+                </div>
+                <h5 class="card-title fw-bolder" style="margin-bottom: 5px;font-size: 14px;">BOAT Airdopes 131 - Wireless Earbuds</h5>
+                <h5 class="card-title text-danger fw-bolder d-inline" style="font-size:14px">Rs.1,469.00</h5>
+                <h5 class="card-text text-secondary text-decoration-line-through d-inline" style="font-size: 12px;">Rs.1,469.00
+                </h5>    
+              </div>
+            </div></div>
+            <div class=""><div class="card rounded-5 a m-2" style="border: 0px;width: 390px;height:352px;font-size:16px;border-radius:10px;">
+              <div class="text-center " style="background-color: silver;border-top-left-radius: 10px;border-top-right-radius: 10px;">
+                <img src="Assets/img/35_4.png" height="255px" width="255px" class="" alt="...">
+                <p class="px-2 py-1"  style="left:6px; background-color: white; text-align: left;top: 5%;position: absolute;    width: 95px;top: 5%;transform: skew( -27deg);height: 24px;"></p>
+                <p class="px-2 py-1"  style="background-color: rgb(255, 255, 255); font-size:12px; text-align: left;top: 5%; color: #ff0000;font-weight: bold;position: absolute;">You Save 71%</p>
+             </div>
+              <div class="card-body" style="  height: auto;">
+                <div class="text-danger" style="font-size: 12px;">
+                  <i class="fas fa-star active"></i>
+                  <i class="fas fa-star active"></i>
+                  <i class="fas fa-star active"></i>
+                  <i class="fas fa-star active"></i>
+                  <i class="fas fa-star d-inline"></i>
+                  <h6 class="d-inline text-secondary">14 reviews</h6>
+                </div>
+                <h5 class="card-title fw-bolder" style="margin-bottom: 5px;font-size: 14px;">BOAT Airdopes 131 - Wireless Earbuds</h5>
+                <h5 class="card-title text-danger fw-bolder d-inline" style="font-size:14px">Rs.1,469.00</h5>
+                <h5 class="card-text text-secondary text-decoration-line-through d-inline" style="font-size: 12px;">Rs.1,469.00
+                </h5>    
+              </div>
+            </div></div>
+            <div class=""><div class="card rounded-5 a m-2" style="border: 0px;width: 390px;height:352px;font-size:16px;border-radius:10px;">
+              <div class="text-center " style="background-color: silver;border-top-left-radius: 10px;border-top-right-radius: 10px;">
+                <img src="Assets/img/35_4.png" height="255px" width="255px" class="" alt="...">
+                <p class="px-2 py-1"  style="left:6px; background-color: white; text-align: left;top: 5%;position: absolute;    width: 95px;top: 5%;transform: skew( -27deg);height: 24px;"></p>
+                <p class="px-2 py-1"  style="background-color: rgb(255, 255, 255); font-size:12px; text-align: left;top: 5%; color: #ff0000;font-weight: bold;position: absolute;">You Save 71%</p>
+             </div>
+              <div class="card-body" style="  height: auto;">
+                <div class="text-danger" style="font-size: 12px;">
+                  <i class="fas fa-star active"></i>
+                  <i class="fas fa-star active"></i>
+                  <i class="fas fa-star active"></i>
+                  <i class="fas fa-star active"></i>
+                  <i class="fas fa-star d-inline"></i>
+                  <h6 class="d-inline text-secondary">14 reviews</h6>
+                </div>
+                <h5 class="card-title fw-bolder" style="margin-bottom: 5px;font-size: 14px;">BOAT Airdopes 131 - Wireless Earbuds</h5>
+                <h5 class="card-title text-danger fw-bolder d-inline" style="font-size:14px">Rs.1,469.00</h5>
+                <h5 class="card-text text-secondary text-decoration-line-through d-inline" style="font-size: 12px;">Rs.1,469.00
+                </h5>    
+              </div>
+            </div></div>
+              <div class=""><div class="card rounded-5 a m-2" style="border: 0px;width: 390px;height:352px;font-size:16px;border-radius:10px;">
+              <div class="text-center " style="background-color: silver;border-top-left-radius: 10px;border-top-right-radius: 10px;">
+                <img src="Assets/img/35_4.png" height="255px" width="255px" class="" alt="...">
+                    <p class="px-2 py-1"  style="left:6px; background-color: white; text-align: left;top: 5%;position: absolute;    width: 95px;top: 5%;transform: skew( -27deg);height: 24px;"></p>
+                    <p class="px-2 py-1"  style="background-color: rgb(255, 255, 255); font-size:12px; text-align: left;top: 5%; color: #ff0000;font-weight: bold;position: absolute;">You Save 71%</p>
+                  </div>
+              <div class="card-body" style="  height: auto;">
+                <div class="text-danger" style="font-size: 12px;">
+                  <i class="fas fa-star active"></i>
+                  <i class="fas fa-star active"></i>
+                  <i class="fas fa-star active"></i>
+                  <i class="fas fa-star active"></i>
+                  <i class="fas fa-star d-inline"></i>
+                  <h6 class="d-inline text-secondary">14 reviews</h6>
+                </div>
+                <h5 class="card-title fw-bolder" style="margin-bottom: 5px;font-size: 14px;">BOAT Airdopes 131 - Wireless Earbuds</h5>
+                <h5 class="card-title text-danger fw-bolder d-inline" style="font-size:14px">Rs.1,469.00</h5>
+                <h5 class="card-text text-secondary text-decoration-line-through d-inline" style="font-size: 12px;">Rs.1,469.00
+                </h5>    
+              </div>
+            </div></div>
+            <div class=""><div class="card rounded-5 a m-2" style="border: 0px;width: 390px;height:352px;font-size:16px;border-radius:10px;">
+              <div class="text-center " style="background-color: silver;border-top-left-radius: 10px;border-top-right-radius: 10px;">
+                <img src="Assets/img/35_4.png" height="255px" width="255px" class="" alt="...">
+                <p class="px-2 py-1"  style="left:6px; background-color: white; text-align: left;top: 5%;position: absolute;    width: 95px;top: 5%;transform: skew( -27deg);height: 24px;"></p>
+                <p class="px-2 py-1"  style="background-color: rgb(255, 255, 255); font-size:12px; text-align: left;top: 5%; color: #ff0000;font-weight: bold;position: absolute;">You Save 71%</p>
+             </div>
+              <div class="card-body" style="  height: auto;">
+                <div class="text-danger" style="font-size: 12px;">
+                  <i class="fas fa-star active"></i>
+                  <i class="fas fa-star active"></i>
+                  <i class="fas fa-star active"></i>
+                  <i class="fas fa-star active"></i>
+                  <i class="fas fa-star d-inline"></i>
+                  <h6 class="d-inline text-secondary">14 reviews</h6>
+                </div>
+                <h5 class="card-title fw-bolder" style="margin-bottom: 5px;font-size: 14px;">BOAT Airdopes 131 - Wireless Earbuds</h5>
+                <h5 class="card-title text-danger fw-bolder d-inline" style="font-size:14px">Rs.1,469.00</h5>
+                <h5 class="card-text text-secondary text-decoration-line-through d-inline" style="font-size: 12px;">Rs.1,469.00
+                </h5>    
+              </div>
+            </div></div>
+            <div class=""><div class="card rounded-5 a m-2" style="border: 0px;width: 390px;height:352px;font-size:16px;border-radius:10px;">
+              <div class="text-center " style="background-color: silver;border-top-left-radius: 10px;border-top-right-radius: 10px;">
+                <img src="Assets/img/35_4.png" height="255px" width="255px" class="" alt="...">
+                <p class="px-2 py-1"  style="left:6px; background-color: white; text-align: left;top: 5%;position: absolute;    width: 95px;top: 5%;transform: skew( -27deg);height: 24px;"></p>
+                <p class="px-2 py-1"  style="background-color: rgb(255, 255, 255); font-size:12px; text-align: left;top: 5%; color: #ff0000;font-weight: bold;position: absolute;">You Save 71%</p>
+             </div>
+              <div class="card-body" style="  height: auto;">
+                <div class="text-danger" style="font-size: 12px;">
+                  <i class="fas fa-star active"></i>
+                  <i class="fas fa-star active"></i>
+                  <i class="fas fa-star active"></i>
+                  <i class="fas fa-star active"></i>
+                  <i class="fas fa-star d-inline"></i>
+                  <h6 class="d-inline text-secondary">14 reviews</h6>
+                </div>
+                <h5 class="card-title fw-bolder" style="margin-bottom: 5px;font-size: 14px;">BOAT Airdopes 131 - Wireless Earbuds</h5>
+                <h5 class="card-title text-danger fw-bolder d-inline" style="font-size:14px">Rs.1,469.00</h5>
+                <h5 class="card-text text-secondary text-decoration-line-through d-inline" style="font-size: 12px;">Rs.1,469.00
+                </h5>    
+              </div>
+            </div></div> -->
+            </div>
+
+
+        </div>
+    </div>
+
+    <div class="text-center pt-5 " style="color: white;">
+        <h1 class="fw-bolder"> Airdopes - The Top Rated Bluetooth Earbuds in the Market</h1>
+    </div>
+    <div class="container p-5" style="color: white;font-size: 12px;">
+        Airdopes offer the most incredible listening experience with revolutionary design. Truly wireless with no
+        cables, no connectors, and no hassles. Designed for comfort and unstoppable music, always remain on your toes as
+        Airdopes brings to you the dopest tech there is out there!
+
+        Powered by the latest and greatest IWP™ technology & ASAP™ Fast Charge technology, these in-ear earbuds power on
+        and pair in an instant right out of the charging case. No more going into settings to find and pair the device,
+        welcome to the new era of seamless, instant connection. Engineered to perfection, Airdopes are perfected for
+        superior calls and music. These true wireless earbuds come with drivers that deliver unique sound exclusive to
+        boAt, sound that is unmatched and inimitable.
+        <br><br>
+        Made from fine and premium materials, these bluetooth earbuds are made to be comfortable and secure. Head out
+        and about with full IPX protection for sweat and water resistance. Love adventure? Airdopes are here for you. No
+        longer does one have to worry about the fragility of a device as Airdopes are rugged and sturdy, able to take on
+        anything that is thrown. Experience portable charging along with Type-C charge to never run out of playback
+        time.
+        <br><br>
+        Perfect for work from home with the advanced built-in mic that accurately captures sounds while also allowing
+        noise cancellation to cancel out ambient noise so you’re heard clearly. Sound with unmatched style. Airdopes are
+        available in a variety of colours that brings the latest fashion trends to the forefront. The variety of colours
+        available make Airdopes the wireless earbuds to die for.
+        <br><br>
+        Style with up with our newest additions to the tribe, the new way to flaunt your vibe! From the Queen of Prints,
+        Masaba's funky take on our Airdopes 441 wireless earbuds, to our TRebel range of earbuds, only for women - boAt
+        is bringing to you crazy new feats every passing day. Magic and Music are synonymous when you plug in the
+        Airdopes wireless earbuds!
+    </div>
+
+
+    <!-- blog -->
+
+    <div class="container blog d-flex-column justify-content-center px-0 py-3" style="overflow-x: auto;">
+
+        <div class="d-flex flex-row row-cols-1 row-cols-md-3 g-4 px-5">
+            <div class="m-2">
+                <div class="card h-100 ">
+                    <img src="Assets/IMG/41_1.png" class="inimg" alt="...">
+                    <div class="card-body" style="    background: #25272c; ">
+                        <h5 class="card-title fw-bolder">The Ultimate Smartwatch Guide - Get The World On Your Wrist
+                        </h5>
+                    </div>
+                    <div class="card-footer" style="    background: #25272c;">
+                        <button type="button text-light" class="btn btn-outline-danger">Read more</button>
+                    </div>
+                </div>
+            </div>
+            <div class="m-2">
+                <div class="card h-100">
+                    <img src="Assets/IMG/41_2.png" class="inimg" alt="...">
+                    <div class="card-body" style="    background: #25272c; ">
+                        <h5 class="card-title fw-bolder">Top Shaving Mistakes You Should Stop Making</h5>
+                    </div>
+                    <div class="card-footer" style="    background: #25272c;">
+                        <button type="button text-light" class="btn btn-outline-danger">Read more</button>
+                    </div>
+                </div>
+            </div>
+            <div class="m-2">
+                <div class="card h-100">
+                    <img src="Assets/IMG/41_3.png" class="inimg" alt="...">
+                    <div class="card-body" style="    background: #25272c; ">
+                        <h5 class="card-title fw-bolder">The Ultimate Sail of the Year is here…Powered by 4 Crazy boAt
+                            Launches!</h5>
+                    </div>
+                    <div class="card-footer" style="    background: #25272c;">
+                        <button type="button text-light" class="btn btn-outline-danger">Read more</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- __________________________________________________________________________ -->
+    <!-- line   -->
+
+<div id="footer"></div>
+
+        <!-- <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+            integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+            crossorigin="anonymous"></script>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha38 -->
+        <!-- -MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script> -->
+        <!-- slick -->
+        <!-- <script src="https://code.jquery.com/jquery-3.6.0.min.js"
+            integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+        <script type="text/javascript" -->
+            <!-- src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.js"></script> -->
+
+        <!-- <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+            integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+            crossorigin="anonymous"></script> -->
+      
+</body>
+
+</html>

@@ -1,0 +1,26 @@
+[
+  {
+    "name": "dhruvit",
+    "job": "volunteer1",
+    "picture": "./Assets/ct-health-care-rally-met-20170323.jpg",
+    "details": "doing volunteer work"
+  },
+  {
+    "name": "dd",
+    "job": "trustee",
+    "picture": "./Assets/Medicare_i.jpg",
+    "details": "this is out trustee"
+  },
+  {
+    "name": "hello user",
+    "job": "volunteer2",
+    "picture": "./Assets/Medicare_i.jpg",
+    "details": "doing volunteer work"
+  },
+  {
+    "name": "db user",
+    "job": "user",
+    "picture": "./Assets/4.jpg",
+    "details": "doing user data work"
+  }
+]

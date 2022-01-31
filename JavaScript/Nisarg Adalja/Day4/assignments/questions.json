@@ -1,0 +1,70 @@
+{
+"questions":
+
+[
+
+ {
+ "question": ["Trinculo admits 'I have been in such a pickle...' in this comedy:"],
+ "answerChoices": ["'The Tempest'", "'Henry 4, Part 1'", "'Henry 5'", "'The Merry Wives of Windsor'"],
+ "correctAnswerIndex": 0,
+ "explanation": "'Henry 4, Part 1,' and 'Henry 5, are both histories. To be in 'a pickle' usually means to be in a quandary. A broader view of this passage reveals Trinculo to be drunk: \n\nAlonso: \nAnd Trinculo is reeling ripe: where should they \nFind this grand liquor that hath gilded 'em? \nHow camest thou in this pickle? \n\nTrinculo: \nI have been in such a pickle since I \nsaw you last that, I fear me, will never out of \nmy bones: I shall not fear fly-blowing.' \n\n'The Tempest' 5.1."
+ },
+ {
+ "question": ["In 'Hamlet,' this character remarks: 'Neither a borrower nor a lender be; \nFor loan oft loses both itself and friend, \nAnd borrowing dulls the edge of husbandry. \nThis above all: to thine own self be true,\nAnd it must follow, as the night the day,\nThou canst not then be false to any man:'"],
+ "answerChoices": ["Fortinbras", "Gertrude", "Polonius", "The Ghost of Hamlet's Father"],
+ "correctAnswerIndex": 2,
+ "explanation": "The verbose Polonius is speaking to his son Laertes. 'Hamlet' 1.3."
+ },
+ {
+ "question": ["Roger Daltrey, well into his career with The Who, played the roles for both Dromios, the twin servants, in a 1983 BBC production of:"],
+ "answerChoices": ["'King John'", "'King Lear'", "'Coriolanus'", "'The Comedy of Errors'"],
+ "correctAnswerIndex": 3,
+ "explanation": "'The Comedy of Errors.'"
+ },
+{
+ "question": ["Trinculo admits 'I have been in such a pickle...' in this comedy:"],
+ "answerChoices": ["'The Tempest'", "'Henry 4, Part 1'", "'Henry 5'", "'The Merry Wives of Windsor'"],
+ "correctAnswerIndex": 0,
+ "explanation": "'Henry 4, Part 1,' and 'Henry 5, are both histories. To be in 'a pickle' usually means to be in a quandary. A broader view of this passage reveals Trinculo to be drunk: \n\nAlonso: \nAnd Trinculo is reeling ripe: where should they \nFind this grand liquor that hath gilded 'em? \nHow camest thou in this pickle? \n\nTrinculo: \nI have been in such a pickle since I \nsaw you last that, I fear me, will never out of \nmy bones: I shall not fear fly-blowing.' \n\n'The Tempest' 5.1."
+ },
+ {
+ "question": ["In 'Hamlet,' this character remarks: 'Neither a borrower nor a lender be; \nFor loan oft loses both itself and friend, \nAnd borrowing dulls the edge of husbandry. \nThis above all: to thine own self be true,\nAnd it must follow, as the night the day,\nThou canst not then be false to any man:'"],
+ "answerChoices": ["Fortinbras", "Gertrude", "Polonius", "The Ghost of Hamlet's Father"],
+ "correctAnswerIndex": 2,
+ "explanation": "The verbose Polonius is speaking to his son Laertes. 'Hamlet' 1.3."
+ },
+ {
+ "question": ["Roger Daltrey, well into his career with The Who, played the roles for both Dromios, the twin servants, in a 1983 BBC production of:"],
+ "answerChoices": ["'King John'", "'King Lear'", "'Coriolanus'", "'The Comedy of Errors'"],
+ "correctAnswerIndex": 3,
+ "explanation": "'The Comedy of Errors.'"
+ },
+ {
+ "question": ["Trinculo admits 'I have been in such a pickle...' in this comedy:"],
+ "answerChoices": ["'The Tempest'", "'Henry 4, Part 1'", "'Henry 5'", "'The Merry Wives of Windsor'"],
+ "correctAnswerIndex": 0,
+ "explanation": "'Henry 4, Part 1,' and 'Henry 5, are both histories. To be in 'a pickle' usually means to be in a quandary. A broader view of this passage reveals Trinculo to be drunk: \n\nAlonso: \nAnd Trinculo is reeling ripe: where should they \nFind this grand liquor that hath gilded 'em? \nHow camest thou in this pickle? \n\nTrinculo: \nI have been in such a pickle since I \nsaw you last that, I fear me, will never out of \nmy bones: I shall not fear fly-blowing.' \n\n'The Tempest' 5.1."
+ },
+ {
+ "question": ["In 'Hamlet,' this character remarks: 'Neither a borrower nor a lender be; \nFor loan oft loses both itself and friend, \nAnd borrowing dulls the edge of husbandry. \nThis above all: to thine own self be true,\nAnd it must follow, as the night the day,\nThou canst not then be false to any man:'"],
+ "answerChoices": ["Fortinbras", "Gertrude", "Polonius", "The Ghost of Hamlet's Father"],
+ "correctAnswerIndex": 2,
+ "explanation": "The verbose Polonius is speaking to his son Laertes. 'Hamlet' 1.3."
+ },
+ {
+ "question": ["Roger Daltrey, well into his career with The Who, played the roles for both Dromios, the twin servants, in a 1983 BBC production of:"],
+ "answerChoices": ["'King John'", "'King Lear'", "'Coriolanus'", "'The Comedy of Errors'"],
+ "correctAnswerIndex": 3,
+ "explanation": "'The Comedy of Errors.'"
+ },{
+ "question": ["Roger Daltrey, well into his career with The Who, played the roles for both Dromios, the twin servants, in a 1983 BBC production of:"],
+ "answerChoices": ["'King John'", "'King Lear'", "'Coriolanus'", "'The Comedy of Errors'"],
+ "correctAnswerIndex": 3,
+ "explanation": "'The Comedy of Errors.'"
+ }
+
+
+
+
+ ]
+}

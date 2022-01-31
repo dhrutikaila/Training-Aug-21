@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"
+        integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+</head>
+
+<body>
+    <div id="data"></div>
+    <script>
+        $(document).ready(function () {
+            var url = "https://gorest.co.in/public-api/users";
+            $.getJSON(url, function (data, status) {
+                console.table(data.data);
+                $("#data").append($("<table>").attr({ id: "table" }).append($("<tr>").attr({ id: "heading" }))
+                );
+
+                for (key in data.data[0]) {
+                    $("#heading").append($("<th>").text(key));
+                }
+
+                $.each(data.data, function (index, value) {
+                    $("#table").append($("<tr>").append(
+                        $("<td>").text(value["id"]),
+                        $("<td>").text(value["name"]),
+                        $("<td>").text(value["email"]),
+                        $("<td>").text(value["gender"]),
+                        $("<td>").text(value["status"]),
+                    )
+                    )
+                });
+            });
+        });
+    </script>
+</body>
+
+</html>

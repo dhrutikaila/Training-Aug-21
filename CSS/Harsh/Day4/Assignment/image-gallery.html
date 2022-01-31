@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Image Gallery</title>
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        .container {
+            display: flex;
+            flex-wrap: wrap;
+        }
+
+        .column {
+            width: 25%;
+            padding: 0px 5px;
+        }
+
+        img {
+            width: 100%;
+            filter: grayscale(100%)
+        }
+
+
+
+        @media only screen and (max-width:700px) {
+            .column {
+                width: 50%;
+            }
+        }
+
+        @media only screen and (max-width:500px) {
+            .column {
+                width: 100%;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <h1 style="text-align: center;">Image Gallery</h1>
+    <div class="container">
+        <div class="column">
+            <img src="https://picsum.photos/id/1025/600/400" alt="">
+            <img src="https://picsum.photos/id/237/300/400" alt="">
+            <img src="https://picsum.photos/id/684/600/400?blur=5" alt="">
+            <img src="https://picsum.photos/id/598/300/400" alt="">
+            <img src="https://picsum.photos/id/642/600/400" alt="">
+        </div>
+        <div class="column">
+            <img src="https://picsum.photos/id/211/300/400" alt="">
+            <img src="https://picsum.photos/id/1076/600/400" alt="">
+            <img src="https://picsum.photos/id/1081/600/400" alt="">
+            <img src="https://picsum.photos/id/743/300/400" alt="">
+            <img src="https://picsum.photos/id/870/600/400" alt="">
+        </div>
+        <div class="column">
+            <img src="https://picsum.photos/id/945/600/400" alt="">
+            <img src="https://picsum.photos/id/949/600/400" alt="">
+            <img src="https://picsum.photos/id/972/300/400" alt="">
+            <img src="https://picsum.photos/id/1060/600/400" alt="">
+            <img src="https://picsum.photos/id/30/300/400" alt="">
+        </div>
+        <div class="column">
+            <img src="https://picsum.photos/id/42/300/400" alt="">
+            <img src="https://picsum.photos/id/431/600/400" alt="">
+            <img src="https://picsum.photos/id/250/600/400" alt="">
+            <img src="https://picsum.photos/id/1040/600/400" alt="">
+            <img src="https://picsum.photos/id/1067/300/400" alt="">
+        </div>
+    </div>
+</body>
+
+</html>

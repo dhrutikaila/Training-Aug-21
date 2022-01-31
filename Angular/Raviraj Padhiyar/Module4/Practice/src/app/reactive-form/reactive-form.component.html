@@ -1,0 +1,50 @@
+<div class="container">
+  <div class="row">
+    <div class="col-md-8">
+      <form [formGroup]="signupForm" (ngSubmit)="onSubmit()">
+        <div class="mb-3">
+          <label for="username" class="form-label">Username</label>
+          <input
+            type="text"
+            name="username"
+            id="username"
+            class="form-control"
+            formControlName="username"
+          />
+        </div>
+        <div class="mb-3">
+          <label for="email" class="form-label">Mail</label>
+          <input
+            type="email"
+            name="email"
+            id="emial"
+            class="form-control"
+            formControlName="email"
+          />
+        </div>
+        <div class="form-check mb-3" *ngFor="let gender of genders">
+          <label>
+            <input type="radio" [value]="gender" formControlName="gender" />
+            {{ gender }}
+          </label>
+        </div>
+        <div class="mb-3" formArrayName="hobbies">
+          <button class="btn btn-primary" type="button" (click)="onAddHobby()">
+            Add Hobby
+          </button>
+          <div class="my-2" *ngFor="let hobbyControl of getControls(); let i = index">
+            <input type="text" class="form-control" [formControlName] = "i" placeholder="Add Hobby">
+          </div>
+        </div>
+        <span
+          *ngIf="!signupForm.valid && signupForm.touched"
+          class="text-muted"
+        >
+          Please enter valid data!
+        </span>
+        <br />
+        <button type="submit" class="btn btn-success">Submit</button>
+      </form>
+    </div>
+  </div>
+</div>

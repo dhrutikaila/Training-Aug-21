@@ -1,0 +1,30 @@
+/* Practice 2 */
+.example{
+    padding: 30px;
+    color: black;
+    background-color: yellow;
+}
+@media only screen and (max-width:600px){
+    .h2{
+        background-color: teal;
+        color:tomato
+    }
+}
+@media only screen and (min-width:600px){
+    .example{
+        background-color: orange;
+        color:blue;
+    }
+}
+@media only screen and (min-width:768px){
+    h2{
+        background-color: palegreen;
+        color: black;
+    }
+}
+@media only screen and (min-width:992px){
+    .example{
+        background-color: sienna;
+        color: skyblue;
+    }
+}

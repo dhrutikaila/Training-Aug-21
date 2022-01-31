@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Modal Practice</title>
+  <link rel="stylesheet" href="js/bootstrap.min.css">
+</head>
+<body>
+    <script src="js/bootstrap.bundle.min.js"></script>
+    <h1 class="display-4 text-center">Basic Typography</h1>
+    <div class="container ">
+        <div class="row">
+            <div class="col">
+                <div class="btn-group">
+                    <button class="btn btn-primary dropdown-toggle" data-bs-toggle="dropdown" type="button">
+                        Utilities
+                    </button>
+                    <ul class="dropdown-menu">
+                        <li><a href="BasicTypography.html" class="dropdown-item">Basic Typography</a></li>
+                        <li><a href="TextAndDisplay_alignment.html" class="dropdown-item">Text Alignment & Display</a>
+                        </li>
+                        <li><a href="Float_PositionPractice.html" class="dropdown-item">Float & Position</a></li>
+                        <li><a href="TextColor.html" class="dropdown-item">Colors & Background</a></li>
+                        <li><a href="Sizing_BorderPractice.html" class="dropdown-item">Sizing</a></li>
+                        <li><a href="BreakPointExample.html" class="dropdown-item">Breakpoints</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="col">
+                <div class="btn-group">
+                    <button class="btn btn-success dropdown-toggle" data-bs-toggle="dropdown" type="button">
+                        CSS components
+                    </button>
+                    <ul class="dropdown-menu">
+                        <li><a href="Button_ButtonGroup.html" class="dropdown-item">Buttons & Buttons Groups</a></li>
+                        <li><a href="NavbarPractice.html" class="dropdown-item">Navbars & Nav</a></li>
+                        <li><a href="ListGroup_BadgesPractice.html" class="dropdown-item">ListGroups & Badges</a></li>
+                        <li><a href="InputGroupPractice.html" class="dropdown-item">Input Groups</a></li>
+                        <li><a href="Alerts_Progressbar.html" class="dropdown-item">Alerts and Progress Bars</a></li>
+                        <li><a href="Table_Pagination.html" class="dropdown-item">Tables & Pagination</a></li>
+                        <li><a href="Card_CardGroup.html" class="dropdown-item">Working with Cards</a></li>
+                        <li><a href="Media_Object.html" class="dropdown-item">Media Objects</a></li>
+                        <li><a href="Breadcrum.html" class="dropdown-item">Breadcrumbs</a></li>
+                        <li><a href="CarouselPractice.html" class="dropdown-item">Carousel</a></li>
+                        <li><a href="Badge.html" class="dropdown-item">Badge</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="col">
+                <div class="btn-group">
+                    <button id="btnGroupDrop3" class="btn btn-warning dropdown-toggle" data-bs-toggle="dropdown"
+                        type="button">
+                        Grid & flexbox
+                    </button>
+                    <ul class="dropdown-menu" id="btnGroupDrop3">
+                        <li><a href="GridPractice.html" class="dropdown-item"> Grid Alignment</a></li>
+                        <li><a href="FlexClass.html" class="dropdown-item">Flexbox Classes</a></li>
+                        <li><a href="AutoMargin_Ordering.html" class="dropdown-item"> Auto Margin wrap & Ordering</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div class="col">
+                <div class="btn-group ">
+                    <button id="btnGroupDrop3" class="btn btn-danger dropdown-toggle" data-bs-toggle="dropdown"
+                        type="button">
+                        Javascript Widgets
+                    </button>
+                    <ul class="dropdown-menu" id="btnGroupDrop3">
+                        <li><a href="Collapse_Accordion.html" class="dropdown-item">Collapse & Accordion</a></li>
+                        <li><a href="Tooltip.html" class="dropdown-item">Tooltips</a></li>
+                        <li><a href="Popover.html" class="dropdown-item">Popovers</a></li>
+                        <li><a href="ModalPractice.html" class="dropdown-item">Modals</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+    <hr>
+    <div class="container">
+        <button class="btn btn-primary mt-5" type="button" data-bs-toggle="modal" data-bs-target="#modalExample">Modal
+            example</button>
+        <div class="modal" id="modalExample">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title">Title</h5>
+                        <button class="btn-close" type="button" data-bs-dismiss="modal"></button>
+                    </div>
+                    <div class="modal-body">
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Obcaecati rerum fugit cum, quia vitae
+                        voluptatem.
+                        Veniam exercitationem, possimus suscipit ex, adipisci inventore illum, voluptate fuga ipsum
+                        incidunt amet repellendus dolorum.
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <hr>
+        <h4>Verically centered</h4>
+        <button class="btn btn-primary mt-3" type="button" data-bs-toggle="modal" data-bs-target="#VerticalExampla">
+            Vertical Modal example
+        </button>
+        <div class="modal" id="VerticalExampla">
+            <div class="modal-dialog modal-dialog-centered">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title">Title</h5>
+                        <button class="btn-close" type="button" data-bs-dismiss="modal"></button>
+                    </div>
+                    <div class="modal-body">
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Obcaecati rerum fugit cum, quia vitae
+                        voluptatem.
+                        Veniam exercitationem, possimus suscipit ex, adipisci inventore illum, voluptate fuga ipsum
+                        incidunt amet repellendus dolorum.
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <hr>
+        <h4>Toggle modal example</h4>
+        <button class="btn btn-primary mt-3" type="button" data-bs-toggle="modal" data-bs-target="#toggleExample">
+            toggle modal example
+        </button>
+        <div class="modal" id="toggleExample">
+            <div class="modal-dialog modal-dialog-centered">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="toggleExample">Toggle example(first modal)</h5>
+                        <button class="btn-close" type="button" data-bs-dismiss="modal"></button>
+                    </div>
+                    <div class="modal-body">
+                        Lorem ipsum dolor sit, amet consectetur adipisicing elit. Assumenda quae aut fuga excepturi ea
+                        alias ducimus atque architecto, veniam dolorem, temporibus cumque tenetur iusto. Sint sequi et
+                        vero debitis error?
+                    </div>
+                    <div class="modal-footer">
+                        <button class="btn btn-primary" data-bs-target="#toggleExample2" data-bs-toggle="modal"
+                            data-bs-dismiss="modal">Open second modal</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="modal" id="toggleExample2">
+            <div class="modal-dialog modal-dialog-centered">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="toggleExample">Second modal</h5>
+                        <button class="btn-close" type="button" data-bs-dismiss="modal"></button>
+                    </div>
+                    <div class="modal-body">
+                        Lorem, ipsum dolor sit amet consectetur adipisicing elit. Dolor laudantium nisi sequi. Eius
+                        autem ratione
+                        eos blanditiis repudiandae officiis corrupti, suscipit laborum! Quas quidem esse provident
+                        assumenda inventore. Labore, commodi!
+                    </div>
+                    <div class="modal-footer">
+                        <button class="btn btn-primary" data-bs-target="#toggleExample" data-bs-toggle="modal"
+                            data-bs-dismiss="modal">Back to first</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <hr>
+        <button class="btn btn-primary mt-5" type="button" data-bs-toggle="modal"
+            data-bs-target="#formexample">Login</button>
+        <div class="modal" id="formexample">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title">login</h5>
+                        <button class="btn-close" type="button" data-bs-dismiss="modal"></button>
+                    </div>
+                    <div class="modal-body">
+                        <form action="">
+                            <div class="m-3">
+                                <label for="name">Name</label>
+                                <input type="text" id="name" placeholder="Enter name" class="form-control">
+                            </div>
+                            <div class=" m-3">
+                                <label for="email">Email</label>
+                                <input type="email" id="email" placeholder="Enter email"
+                                    class="form-control form-control-lg">
+                            </div>
+                        </form>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>

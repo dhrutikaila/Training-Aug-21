@@ -1,0 +1,67 @@
+body{
+    background-color: #FFFFFF;
+}
+
+.container_body{
+    display:flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.card{
+    width:fit-content;
+    padding:8px;
+    border:none;
+    cursor: pointer;
+    margin-bottom:20px;
+}
+.card:hover{
+    border-radius: 20px;
+    box-shadow: 0px 4px 8px 5px rgb(228, 228, 228);
+}
+
+.card__image{
+    width:300px;
+    height: 280px;
+    border-radius: 20px;
+}
+.card__title{
+    font-weight:bold;
+    font-size: 18px;
+}
+.card__rating{
+    height: max-content;
+    font-weight: bold;
+    padding: 5px;
+    background-color: rgb(66, 197, 66);
+    color: rgb(238, 238, 238);
+    border-radius:10px;
+}
+
+.card__disc{
+    text-align: center;
+    color:rgb(182, 182, 182);
+}
+.card__price{
+    text-align: center;
+    color:rgb(182, 182, 182);
+}
+
+@media screen and (max-width:780px){
+    /* #Response{
+        display: none;
+    } */
+    #Res{
+        display: table;
+    }
+    #Res2{
+        display: none;
+    }
+}
+
+@media screen and (max-width:430px){
+    #Res3{
+        display: none;
+    }
+
+}

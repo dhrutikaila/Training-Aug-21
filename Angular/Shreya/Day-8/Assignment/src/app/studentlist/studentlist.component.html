@@ -1,0 +1,20 @@
+<div class="w-50 pt-1 pb-1 mx-auto">
+    <table class="table table-striped">
+        <thead>
+            <tr>
+                <th>Enrollment Number</th>
+                <th>Name</th>
+                <th>Email</th>
+                <th>Date of birth</th>
+            </tr>
+        </thead>
+        <tbody *ngFor="let data of listvalue">
+            <tr>
+                <td>{{data.enrollnumber}}</td>
+                <td>{{data.name}}</td>
+                <td>{{data.email}}</td>
+                <td>{{data.dob}}</td>
+            </tr>
+        </tbody>
+    </table>
+</div>

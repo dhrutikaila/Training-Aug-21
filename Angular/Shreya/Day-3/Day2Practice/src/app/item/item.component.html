@@ -1,0 +1,23 @@
+<div *ngFor="let item of Employee; let i=index">
+<ol>
+    <li>{{i+1}} -- {{item.EmployeeId}} , {{item.EmployeeName}} ,{{item.City}}</li>
+</ol>
+</div>
+
+
+<input type="text" [(ngModel)]="show">
+<button (click)="showorHide()"> ShowOrhide</button>
+<div *ngIf="show">
+    <p>
+        Hello world !!!!
+    </p>
+</div>
+
+<div *ngFor="let i of ProductList ">
+    <li>{{i.Productname}}, {{i.Price}}</li>
+</div>
+
+<div *ngFor="let j of ProductList" [ngSwitch]="j.status">
+   <span *ngSwitchCase="'Active'" [ngStyle]="{'font-size' : '20px', 'color': 'red'}">{{j.Productname}},{{j.Price}},{{j.status}}</span>
+   <span *ngSwitchCase="'Inactive'" [ngStyle]="{'font-size' : '20px', 'color': 'green'}">{{j.Productname}},{{j.Price}},{{j.status}}</span>
+</div>

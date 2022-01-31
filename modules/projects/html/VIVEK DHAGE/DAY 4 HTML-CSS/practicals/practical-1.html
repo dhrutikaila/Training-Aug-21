@@ -1,0 +1,262 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>HOME</title>
+
+<style type="text/css">
+
+*{
+	font-family: sans-serif;
+}
+
+.body{
+	height: 100vh;
+}
+
+
+	
+.container1{
+	display: grid;
+	grid-template-columns: 0.3fr 1fr;
+	grid-template-rows: 0.1fr 0.1fr 1fr 0.1fr;
+	grid-gap: 0.4rem;
+
+	grid-template-areas: 
+	"head head "
+	"nav nav "
+	"side content"
+	"foot foot";
+}
+
+.header1{
+	grid-area: head;
+	background: red;
+	color: whitesmoke;
+	text-align: center;
+	font-weight: 700;
+	font-size: 20px;	
+
+}
+
+.navigation{
+	color: white;
+	background: red;
+	grid-area: nav;
+}
+
+.nav1 > ul{
+	display: flex;
+	justify-content: center;
+	text-decoration: none;
+}    
+.list{
+	margin: 0 12px;
+	text-decoration: none;
+	color: white;
+}
+
+.footer{
+	grid-area: foot;
+	background: red;
+	color: whitesmoke;
+	text-align: center;
+	font-weight: 700;
+	font-size: 20px;	
+
+}
+
+.list{
+	
+}
+
+.side1{
+	grid-area: side;
+
+
+}
+
+.content{
+	grid-area: content;
+	display: block;
+}
+
+.content{
+	
+}
+
+
+
+
+
+
+
+</style>
+</head>
+<body class="body">
+
+<div class="container1">
+
+<div class="header1">
+	<header class="head">
+		<h1 style="font-size: 20px; padding-top: 3px;">TASK SITE</h1>
+	</header>
+</div>
+
+<div class="navigation">
+	<nav class="nav1">
+		<ul type="none">
+			<li class="list"><a href="C:\Users\om\Desktop\temporary practices\projects\task_site.html">HOME</a></li>
+			<li class="list"><a href="">SQL</a></li>
+			<li class="list" id="active"><a href="">HTML-CSS</a></li>
+			<li class="list"><a href="">JAVASCRIPT</a></li>
+			<li class="list"><a href="">JQUERY</a></li>
+		</ul>
+	</nav>
+</div>
+
+<div class="side1">
+	<aside class="sidebar">
+    <ol>
+		<li>DAY-1
+			<ul>
+				<li>
+					practices
+					<ol>
+						<li><a href="html\VIVEK DHAGE\DAY 1 HTML\practice\student_marks.html">practical</a></li>
+					</ol>
+				</li>
+				<li>assignments
+					<ol>
+						<li><a href="html\VIVEK DHAGE\DAY 1 HTML\assignment\task1.html">assignment</a></li>
+					</ol>
+				</li>
+			</ul>
+		</li>
+	</ol>
+	<ol>
+		<li>DAY-2
+			<ul>
+				<li>
+					practices
+					<ol>
+						<li><a href="html\VIVEK DHAGE\DAY 2 HTML\practice\html_day2.html">practical</a></li>
+					</ol>
+				</li>
+				<li>assignments
+					<ol>
+						<li><a href="html\VIVEK DHAGE\DAY 2 HTML\assignment\personalized_resume(day2-assignment).html">assignment</a></li>
+					</ol>
+				</li>
+			</ul>
+		</li>
+ 	</ol>
+    <ol>
+		<li>DAY-3
+			<ul>
+				<li>
+					practices
+					<ol>
+						<li><a href="html\VIVEK DHAGE\DAY 3 HTML\practices\day-3_html.html">practical</a></li>
+					</ol>
+				</li>
+				<li>assignments
+					<ol>
+						<li><a href="html\VIVEK DHAGE\DAY 3 HTML\assignments\day-html_assignment.html">assignment</a></li>
+					</ol>
+				</li>
+			</ul>
+		</li>
+	</ol>
+	<ol>
+		<li>DAY-4
+			<ul>
+				<li>
+					practices
+					<ol>
+						<li><a href="html\VIVEK DHAGE\DAY 4 HTML-CSS\practicals\practical-1.html">practical-1</a></li>
+						<li><a href="html\VIVEK DHAGE\DAY 4 HTML-CSS\practicals\practical-2.html">practical-2</a></li>
+						<li><a href="html/VIVEK DHAGE/DAY 4 HTML-CSS/practicals/practical-3.html">practical-3</a></li>
+					</ol>
+				</li>
+				<li>assignments
+					<ol>
+						<li><a href="html/VIVEK DHAGE/DAY 4 HTML-CSS/assignment/assignment-day-4.html">assignment</a></li>
+					</ol>
+				</li>
+			</ul>
+		</li>
+	</ol>
+	</aside>
+</div>
+
+
+<div class="display" style="border: 1px solid black;">
+	<div class="content">
+	<article>
+
+
+
+
+
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>practical-1</title>
+
+<style type="text/css">
+	
+	.container2{
+		display: flex;
+		flex-direction: row;
+		background: grey;
+		flex-wrap: nowrap;
+		/*justify-content: flex-end;*/
+		justify-content: space-evenly;
+		width: 60%;
+
+
+	}
+	.flex-items{
+		height: 100px;
+		width: 100px;
+		margin: 10px;
+		background: cyan;
+		text-align: center;
+		line-height: 87px;
+		padding-top: ;
+	}
+
+
+
+</style>
+
+</head>
+<body class="body2">
+	<div class="container2">
+		<div class="flex-items">1</div>
+		<div class="flex-items">2</div>
+		<div class="flex-items">3</div>
+		<div class="flex-items">4</div>
+	</div>
+
+</body>
+</html>
+
+	</article>
+</div>	
+</div>
+
+
+<footer>
+	<p>&copy; copyright </p>
+</footer>
+
+
+</div>
+</body>
+</html>
+
+
+

@@ -1,0 +1,118 @@
+<!-- Create an application for performing basic math operations like 
+    Addition, Subtraction,   Multiplication and Division. -->
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <title>Assignment</title>
+</head>
+
+<body>
+    <div class="container">
+        <h1 class="display-4 text-danger mb-5">Basic Math Operations</h1>
+        <form class="row">
+            <div class="mb-3 col-12 col-md-4">
+                <label for="firstNum" class="form-label">First Number: </label>
+                <input type="number" name="Nums" id="firstNum" class="form-control" value="" />
+            </div>
+
+            <div class="mb-3 col-12 col-md-4">
+                <label for="secondNum" class="form-label">Second Number: </label>
+                <input type="number" name="Nums" id="secondNum" class="form-control" value="" />
+            </div>
+
+            <label for="radios">Operation to perform:</label>
+
+            <div id="radios">
+
+                <div class="form-check"><input type="radio" class="form-check-input" name="operation" id="o1"
+                        value="Addition"> <label for="o1" class="form-check-label"> Addition</label></div>
+                <div class="form-check"><input type="radio" class="form-check-input" name="operation" id="o2"
+                        value="Substraction"> <label for="o2" class="form-check-label"> Substraction</label> <br></div>
+                <div class="form-check"><input type="radio" class="form-check-input" name="operation" id="o3"
+                        value="Multiply"> <label for="o3" class="form-check-label"> Multiply</label> <br></div>
+                <div class="form-check"><input type="radio" class="form-check-input" name="operation" id="o4"
+                        value="Division"> <label for="o4" class="form-check-label"> Division</label> <br></div>
+            </div>
+
+                <button type="button" class="btn btn-success col-12 col-md-2 mt-3" onclick="calculate()">Calculate</button>
+                <button class="btn btn-warning col-12 col-md-2 offset-md-1 mt-3" onclick="reset()">Reset</button>
+
+        </form>
+        <br><br>
+
+        <p class="display-5 text-primary">Result is: <span id="results"></span> </p>
+
+
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+        crossorigin="anonymous"></script>
+    <script>
+
+        var result = document.getElementById('results');
+
+        function reset() {
+            result.innerHTML = "";
+        }
+
+
+        function calculate() {
+
+
+
+            var op = document.getElementsByName('operation');
+            var operation;
+            for (var i = 0; i < op.length; i++) {
+                if (op[i].checked) {
+                    operation = op[i].value;
+                }
+            }
+
+            // var values = document.getElementsByName('Nums');
+            // var num1 = values[0].value;
+            // var num2 = values[1].value;
+
+            function add(n1, n2) {
+                return parseInt(n1) + parseInt(n2);
+            }
+            function sub(n1, n2) {
+                return parseInt(n1) - parseInt(n2);
+            }
+            function mul(n1, n2) {
+                return parseInt(n1) * parseInt(n2);
+
+            }
+            function div(n1, n2) {
+                var res = parseInt(n1) / parseInt(n2);
+                return res.toFixed(3);
+            }
+
+            var nn1 = document.getElementById('firstNum').value;
+            var nn2 = document.getElementById('secondNum').value;
+
+
+            if (operation == 'Addition') {
+                result.innerHTML = add(nn1, nn2);
+            } else if (operation == 'Substraction') {
+                result.innerHTML = sub(nn1, nn2)
+            } else if (operation == 'Multiply') {
+                result.innerHTML = mul(nn1, nn2)
+            } else if (operation == 'Division') {
+                result.innerHTML = div(nn1, nn2)
+            }
+        }
+
+
+    </script>
+
+
+</body>
+
+</html>

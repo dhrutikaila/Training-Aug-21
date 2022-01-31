@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <p id="demo"></p><br>
+    <p id="abc"></p><br>
+    <p id="jkl"></p><br>
+    <p id=xyz></p>
+    <script>
+        var str = "helloguys howareyou";
+        var str1 = "  jhdghoi higj   "
+        var str2 = "hiufgh"
+        var arr = ["Ahemedabad","Surat","Rajkot","Gandhinagar"];
+        var arr1 = ["red","green","Pink","brown","blue"];
+
+        document.getElementById("demo").innerHTML = str.length+" "+str.slice(8)+
+        " "+str.substring(5,9)+" "+str.charAt(10)+" "+str.split(" ");
+
+        document.getElementById("xyz").innerHTML = str1.trim()+" "+ str1.concat
+        (" ",str2)+" "+str1.toUpperCase();
+
+        document.getElementById("abc").innerHTML = arr.slice(1,3);
+
+        arr1.splice(2,0,"gray","orange");
+        document.getElementById("jkl").innerHTML = arr1;
+
+    </script>
+</body>
+</html>

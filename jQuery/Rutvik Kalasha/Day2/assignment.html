@@ -1,0 +1,67 @@
+<!--(1). Use getJSON method access this web api  https://gorest.co.in/public-api/users and display the result in one table.-->
+<!doctype html>
+<html lang="en">
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+
+    <!-- jQuery Cdn -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <title>Document</title>
+</head>
+
+<body>
+    <div class="container mt-3">
+        <div class="table-responsive">
+            <table class="table table-bordered table-striped " id="users_data_table">
+                <tr>
+                    <th>ID</th>
+                    <th>Name</th>
+                    <th>Email</th>
+                    <th>Gender</th>
+                    <th>Status</th>
+                </tr>
+            </table>
+        </div>    
+    </div>
+
+
+    <!-- jquery -->
+    <script>
+        $(document).ready(function () 
+        {
+
+            $.getJSON("https://gorest.co.in/public-api/users",function(info)
+            {
+                var userdata = '';
+                $(info.data).each(function(key,value)
+                {
+                    userdata +='<tr>';
+                    userdata +='<td>'+this.id+'</td>';
+                    userdata +='<td>'+this.name+'</td>';
+                    userdata +='<td>'+this.email+'</td>';
+                    userdata +='<td>'+this.gender+'</td>';
+                    userdata +='<td>'+this.status+'</td>';
+                    userdata +='</tr>'; 
+                });
+                $("#users_data_table").append(userdata);
+
+            })
+
+        });
+    </script>
+
+    <!--  Bootstrap Bundle with Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+        crossorigin="anonymous"></script>
+
+</body>
+
+</html>  

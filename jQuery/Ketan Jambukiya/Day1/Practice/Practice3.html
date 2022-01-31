@@ -1,0 +1,58 @@
+<!-- – Label : “Please select your technology :”
+
+    – Consider following set of radio buttons :-
+
+    “PHP”, “ASP.NET”, “ASP”, “JSP”, “PERL”, “Cold Fusion”, “Other”. Layout these buttons in a Horizontal manner.
+
+    – Clicking on a particular radio button should display the related technology name besides label : “You have  selected : “.
+
+    – Use multiple “span” HTML element for displaying the related message.
+
+    – Note that radio button should be selectable by clicking on the corresponding label -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script>
+        $(document).ready(function()
+           {
+          $( "input[name='language']" ).click(function() {
+           var data = $( "input[name='language']:checked").val();
+          $("#result").html("you have selected  : "+data)
+          });
+   })
+   </script>
+</head>
+
+
+<body>
+    
+
+<p style="margin-left: 15px;">Please select your technology :</p>
+<div>
+  <input type="radio" id="php" name="language" value="PHP">
+  <label for="php">PHP</label>
+  <input type="radio" id="asp.net" name="language" value="ASP.NET">
+  <label for="asp.net">ASP.NET</label>
+  <input type="radio" id="asp" name="language" value="ASP">
+  <label for="asp">ASP</label>
+  <input type="radio" id="jsp" name="language" value="JSP">
+  <label for="jsp">JSP</label>
+  <input type="radio" id="perl" name="language" value="PERL">
+  <label for="perl">PERL</label>
+  <input type="radio" id="coldfusion" name="language" value="Cold Fusion">
+  <label for="coldfusion">Cold Fusion</label>
+  <input type="radio" id="other" name="language" value="Other">
+  <label for="other">Other</label>
+</div><br>
+<span id="result" style="margin-left: 10px;"></span>
+
+ 
+
+
+</body>
+</html>

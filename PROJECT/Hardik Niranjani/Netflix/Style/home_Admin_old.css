@@ -1,0 +1,117 @@
+*{
+    margin:0;
+    padding: 0;
+}
+.index__body{
+    width: 100vw;
+    height: 100vh;
+    z-index: 100;
+    margin-top: 0px;
+    overflow-x: hidden;
+    background-color: #333333;
+    /* background: url("../Assets/Index\ page\ img.jpg") no-repeat center center/cover; */
+}
+/* .index__body::after{
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+    background: rgba(0, 0, 0, 0.6);
+    box-shadow: inset 10px 120px 250px #000000;
+} */
+.index__header{
+    margin-top:0px;
+    z-index: 2;
+    background-color: rgba(48, 46, 46, 0);
+    justify-content: space-between;
+    width:fit-content;
+    height:50px;
+    position: sticky;
+}
+
+.add_movie_button{
+    font-family: 'Netflix Sans','Helvetica Neue',Helvetica,Arial,sans-serif;
+    /* background-color: #F40612; */
+    width:fit-content;
+    padding: 5px;
+    height:40px;
+    font-size:16px;
+    margin-top: -20px;
+    float: right; 
+    z-index: 2;
+}
+.logout_btn {
+    font-family: 'Netflix Sans','Helvetica Neue',Helvetica,Arial,sans-serif;
+    /* background-color: #F40612; */
+    width:90px;
+    padding: 5px;
+    height:40px;
+    font-size:16px;
+    margin-top: -20px;
+    float: right; 
+    z-index: 2;
+    
+}
+
+.dropdown_profile{
+    width:90px;
+    padding: 5px;
+    height:40px;
+    font-size:16px;
+    margin-top: -20px;
+    float: right; 
+    z-index: 2;
+    outline:none;
+    border: none;
+}
+.dropdown_profile:focus{
+    outline:none;
+    border: none;
+}
+.index__header > img{
+    cursor: pointer;
+    margin-top:-30px;
+    margin-left: -50px;
+    z-index: 2;
+    width: 90px;
+    height: 60px;
+}
+
+.profile_img{
+    margin-top:-20px;
+    /* box-shadow: -1px 0px 8px rgba(143, 143, 143, 0.315); */
+    box-shadow: 0px 0px 5px 1px #cccccce3;
+    z-index: 2;
+    border-radius: 10px;
+    width: 40px;
+    height: 40px;
+}
+
+/* Home page banner */
+.body_banner{
+    margin-top:0px;
+    z-index: 
+    1;
+    background-color: rgba(48, 46, 46, 0.178);
+    justify-content: space-between;
+    position: sticky;
+}
+
+.body_banner::after{
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+    /* background: rgba(0, 0, 0, 0.6); */
+    box-shadow: inset 10px 220px 250px #000000;
+}
+.body_banner > div >div >div >img{
+    width: 100vw;
+    height: 650px;
+}

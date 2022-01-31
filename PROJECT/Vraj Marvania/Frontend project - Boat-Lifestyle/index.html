@@ -1,0 +1,1553 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <link href='https://fonts.googleapis.com/css?family=Montserrat' rel='stylesheet'>
+    <link href="Assets/css/style.css" rel='stylesheet'>
+    <link href='https://fonts.googleapis.com/css?family=Montserrat' rel='stylesheet'>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+
+    <!--load all styles -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://kenwheeler.github.io/slick/slick/slick.js"></script>
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css"
+        integrity="sha384-UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQ8lWUE00s/" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.css" />
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css"
+        integrity="sha384-UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQ8lWUE00s/" crossorigin="anonymous">
+
+    <!-- script -->
+    <script src="Assets/js/auth.js"></script>
+    <script src="Assets/js/data.js"></script>
+    <script src="Assets/js/script.js"></script>
+
+    <script>
+        // localStorage.setItem('cartinfo',`{"type":"cartinfo","data":[]}`)
+
+        $(document).ready(function () {
+            if (sessionStorage.getItem("user") == null) {
+                $("#login").removeClass("d-none");
+
+            }
+            else {
+                $("#logout").removeClass("d-none");
+                var name = (JSON.parse(sessionStorage.getItem("user"))[0].First_Name)
+                $("#username").text("Hi " + name + "!")
+
+
+            }
+        })
+
+    </script>
+    <!-- fonts -->
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&display=swap');
+    </style>
+
+    <style>
+        * {
+            font-family: 'Montserrat', sans-serif;
+            ;
+        }
+
+        .slider1.slick-initialized.slick-slider,
+        .slider2.slick-initialized.slick-slider {
+            display: flex;
+        }
+
+        i.fa.fa-chevron-right,
+        i.fa.fa-chevron-left {
+            font-size: 40px;
+            content: "\f053";
+            color: red;
+            padding-inline: 0px;
+        }
+    </style>
+    <!-- icon -->
+    <link rel="shortcut icon" href="https://utioutll.sirv.com/Smart%20Watches/nav/tablogo.jfif">
+    <title>boat-lifestyle</title>
+</head>
+
+<body>
+
+    <!-- new offer -->
+    <div class="text-center " id="ban" style="background-color: #ff0000; ">
+        <a href="https://www.boat-lifestyle.com/collections" style="text-decoration:none">
+            <div class="announcement__inner" style="color: white;    padding: 6px;        ">
+                <b class="fw-bolder" style="font-size: 12.23px;">
+                    UPTO 75% OFF SITEWIDE* | GET UPTO Rs150 OFF USING LAZYPAY* | GET FLAT Rs75 CASHBACK USING
+                    MOBIKWIK*</b>
+            </div>
+        </a>
+    </div>
+
+
+    <!-- nav -->
+    <nav class="navbar navbar-expand-lg " style="background-color: rgb(0, 0, 0);">
+        <div class="container-fluid d-flex">
+            <div class="order-md-1   d-lg-none d-lg-block p-2 bd-highlight">
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" onclick="openNav()"
+                    data-bs-target="" aria-controls="navbarToggleExternalContent" aria-expanded="false"
+                    aria-label="Toggle navigation">
+                    <span class="fa fa-bars " style=" color: rgb(255, 255, 255);"></span>
+                </button>
+            </div>
+            <div class="order-md-1  order-1 py-2 bd-highlight">
+                <div class="container">
+                    <a class="navbar-brand" href="#"> <img src="./Assets/img/logo.png" height="44px" id="logo"></a>
+                </div>
+            </div>
+
+            <div class="order-md-2 d-none d-lg-block p-2 bd-highlight">
+                <div class="p-2 bd-highlight ml-5 justify-item-start">
+                    <ul class="navbar-nav d-flex justify-content-center">
+                        <li class="nav-item dropdown bore" onmouseover="show()" onmouseout="hid()">
+                            <a class="nav-link " href="#" id="shopout" role="button" data-bs-toggle=""
+                                aria-expanded="false">
+                                <b>Shop</b>
+                                <i class="fas fa-angle-down"></i>
+                            </a>
+                            <ul>
+
+                                <div class="container-fluid  position-fixed pt-2 px-0" id="shopitemout"
+                                    onmouseover="show()"
+                                    style="top:72px;left:0px ;    transition-timing-function: linear;z-index:999;     transition: width 4s;">
+                                    <br>
+                                    <div class="d-flex-col  bg-dark p-4">
+                                        <div class="row pt-0">
+                                            <div class="col-3">
+                                                <a href="./ProductList.html?id=Wireless_Earbuds">
+                                                    <img src="Assets/img/20_11.png" width="290px" height="145px"></a>
+                                            </div>
+                                            <div class="col-3">
+                                                <a href="./ProductList.html?id=Wireless_Headphones">
+                                                    <img src="Assets/img/20_1.png" width="290px" height="145px"></a>
+                                            </div>
+                                            <div class="col-3">
+                                                <a href="./ProductList.html?id=Smart_Watches">
+                                                    <img src="Assets/img/20_2.png" width="290px" height="145px"></a>
+                                            </div>
+                                            <div class="col-3">
+                                                <a href="./ProductList.html?id=Wired_Earphones">
+                                                    <img src="Assets/img/20_3.png" width="290px" height="145px"></a>
+                                            </div>
+                                        </div>
+                                        <div class="row pt-4">
+                                            <div class="col-3">
+                                                <a href="./ProductList.html?id=Wireless_Speakers">
+                                                    <img src="Assets/img/20_4.png" width="290px" height="145px"></a>
+                                            </div>
+                                            <div class="col-3">
+                                                <a href="./ProductList.html?id=Home_Audio">
+                                                    <img src="Assets/img/20_5.png" width="290px" height="145px"></a>
+
+                                            </div>
+                                            <div class="col-3">
+                                                <a href="./ProductList.html?id=Mobile_Accessories">
+                                                    <img src="Assets/img/20_6.png" width="290px" height="145px"></a>
+
+                                            </div>
+                                            <div class="col-3">
+                                                <a href="./ProductList.html?id=TRebel">
+                                                    <img src="Assets/img/20_7.png" width="290px" height="145px"></a>
+
+                                            </div>
+                                        </div>
+                                        <div class="row text-center pt-4">
+                                            <div class="col-4">
+                                                <a href="./ProductList.html?id=Limited_Edition">
+                                                    <img src="Assets/img/20_8.png" width="290px" height="145px"></a>
+                                            </div>
+                                            <div class="col-4">
+                                                <a href="./ProductList.html?id=Misfit">
+                                                    <img src="Assets/img/20_9.png" width="290px" height="145px"></a>
+
+                                            </div>
+                                            <div class="col-4">
+                                                <a href="./ProductList.html?id=Immortal_Gaming">
+                                                    <img src="Assets/img/20_10.png" width="290px" height="145px"></a>
+
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </ul>
+                        </li>
+                        <li class="nav-item bore">
+                            <a class="nav-link" href="#">The Ultimate Sail <span class="tmenu_item_text"></span></a>
+                        </li>
+
+                        <li class="nav-item dropdown">
+                            <a class="nav-link " href="#" id="morea" role="button" data-bs-toggle="dropdown"
+                                aria-expanded="false">
+                                More
+                                <i class="fas fa-angle-down"></i>
+                            </a>
+                            <ul class="dropdown-menu px-3 dropdown-toggle" id="moredrop"
+                                aria-labelledby="navbarDropdownMenuLink"
+                                style=" dispaly:none;    BACKGROUND-COLOR: BLACK;" onmouseleave="funclose()">
+                                <br>
+                                <li class="mb-2"><a class="dropdown-item" href="#">Plug-In Sale</a></li>
+                                <li class="mb-2"><a class="dropdown-item" href="#">Float Your boAt</a></li>
+                                <li class="mb-2"><a class="dropdown-item" href="#">Meet the boAtheads</a></li>
+                                <li class="mb-2"><a class="dropdown-item" href="#">Earn Rs.100</a></li>
+                            </ul>
+                        </li>
+                </div>
+            </div>
+            <div class="order-md-4   order-1         p-2 bd-highlight">
+                <div class="d-flex justify-content-start">
+
+
+                    <a href="" class="m-1"><img src="./Assets/IMG/icon1.png" height="21px">
+                        <a data-bs-toggle="collapse" href="#collapseExample" class="m-1" id="user"><img
+                                src="./Assets/IMG/icon3.png" height="21px"></a>
+
+
+                        <a href="./Cart.html" class="m-1 position-relative"><img src="./Assets/IMG/icon2.png"
+                                height="21px">
+                            <span
+                                class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger">
+                                +
+                                <span class="visually-hidden">unread messages</span>
+                            </span>
+                        </a>
+                </div>
+            </div>
+            <div class="order-md-3 order-3 d-lg-block  d-none   p-2 bd-highlight">
+                <div class="bd-highlight">
+                    <form class="d-flex serach">
+                        <span class="fa fa-search form-control-feedback" style="top: 29px;"></span></span>
+                        <input class="form-control me-2 rounded-pill  px-5" id="serch" style="height: 40.67px;"
+                            type="search" placeholder="Search..." aria-label="Search">
+                    </form>
+                </div>
+            </div>
+
+        </div>
+        </div>
+        <div class="row d-lg-none d-block" style="width: 101%;margin-inline: 5px;">
+            <div class="order-md-3 order-3 d-block    p-2 bd-highlight">
+                <div class="bd-highlight">
+                    <form class="d-flex serach">
+                        <span class="fa fa-search form-control-feedback" style="top: 71px;"></span>
+                        <input class="form-control me-2 rounded-pill  px-5" id="serch" style="height: 40.67px;"
+                            type="search" placeholder="Search..." aria-label="Search">
+                    </form>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <div class="collapse" id="navbarToggleExternalContent">
+        <div class="bg-dark p-4">
+            <h5 class="text-white h4">Collapsed content</h5>
+            <span class="text-muted">Toggleable via the navbar brand.</span>
+        </div>
+    </div>
+    <div id="myCanvasNav" class="overlay3" onclick="closeNav()" style="width: 0%; opacity: 0;"></div>
+
+    <!--user toggle login -->
+    <div class="collapse position-absolute " id="collapseExample" style="z-index: 1000;top: 80px;
+    right: 10px;">
+        <div class="card card-body">
+            <div class="d-none" id="login">
+                <h6 class="fw-bolder text-danger">Hi boAthead!<a>
+                        <div class="form-group ">
+                            <button type="submit" target="_self"
+                                onclick='location.href="http://127.0.0.1:5500/login.html"'
+                                class="btn text-light col-12 mt-4 fw-bolder py-2"
+                                style="width: 197px; background-color: #ff0000;">Log in</button>
+                        </div>
+            </div>
+
+            <div class="d-none" id="logout">
+                <h6 class="fw-bolder text-danger" id="username">Hi !</h6>
+                <div class="form-group ">
+                    <button type="button" onclick="logout()" class="btn text-light col-12 mt-4 fw-bolder py-2"
+                        style="width: 197px; background-color: #ff0000;">Log out</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- side nav -->
+    <div id="closenav">
+        <div class="vnav" id="vnav" style="background-color: rgb(0, 0, 0);">
+            <ul>
+                <a>
+                    <div>
+                        <li id="shopin"> <a href="javascript:"><b>Shop <i class="fas fa-angle-down px-4"
+                                        style="font-size: 15px;"></i></b></a>
+
+                            <div class="row imgshow" id="#imgshow">
+                                <div class="">
+                                    <img src="Assets/img/20_11.png" width="200px" height="100px">
+                                </div>
+                                <div class="">
+                                    <img src="Assets/img/20_1.png" width="200px" height="100px">
+                                </div>
+                                <div class="">
+                                    <img src="Assets/img/20_2.png" width="200px" height="100px">
+                                </div>
+                                <div class="">
+                                    <img src="Assets/img/20_3.png" width="200px" height="100px">
+                                </div>
+
+                                <div class="">
+                                    <img src="Assets/img/20_4.png" width="200px" height="100px">
+                                </div>
+                                <div class="">
+                                    <img src="Assets/img/20_5.png" width="200px" height="100px">
+
+                                </div>
+                                <div class="">
+                                    <img src="Assets/img/20_6.png" width="200px" height="100px">
+
+                                </div>
+                                <div class="">
+                                    <img src="Assets/img/20_7.png" width="200px" height="100px">
+
+                                </div>
+
+                                <div class="">
+                                    <img src="Assets/img/20_8.png" width="200px" height="100px">
+                                </div>
+                                <div class="">
+                                    <img src="Assets/img/20_9.png" width="200px" height="100px">
+
+                                </div>
+                                <div class="">
+                                    <img src="Assets/img/20_10.png" width="200px" height="100px">
+
+                                </div>
+
+
+                            </div>
+                        </li>
+
+
+
+                        <a href="">
+                            <li>Pro It Up</li>
+                        </a>
+
+                        <a href="">
+                            <li>Sound Of Champions</li>
+                        </a>
+
+                        </li>
+                        <li>
+
+                            <a href="javascript:" class="moredatab" id="moredatab"><b>More <i
+                                        class="fas fa-angle-down px-4" style="font-size: 15px;"></i></b></a>
+                            <ul class="moredata" id="moredata" style="display: none;">
+                                <li><a class="dropdown-item" href="#">Plug-In Sale</a></li>
+                                <li><a class="dropdown-item" href="#">Float Your boAt</a></li>
+                                <li><a class="dropdown-item" href="#">Meet the boAtheads</a></li>
+                                <li><a class="dropdown-item" href="#">Earn Rs.100</a></li>
+                            </ul>
+                        </li>
+                        </li>
+                        <a href="">
+                            <li>Track Your Order</li>
+                        </a>
+
+
+                        <a href="">
+                            <li>Log in</li>
+                        </a>
+
+            </ul>
+
+            <a href="">
+                <div class="container d-flex ">
+                    <div class="p-2"><i class="fab fa-twitter"></i></div>
+                    <div class="p-2"><i class="fab fa-facebook-square"></i></div>
+                    <div class="p-2"><i class="fab fa-youtube"></i></div>
+                    <div class="p-2"><i class="fab fa-instagram"></i></div>
+                    <div class="p-2"><i class="fab fa-linkedin"></i></div>
+                </div>
+            </a>
+        </div>
+        </a>
+    </div>
+    </div>
+
+
+    <!--mobslider-->
+    <div class="container mbslider  d-lg-none  mb-3">
+        <div class=" d-flex flex-row  uns" style="overflow-x: auto;">
+            <div class=" m-1">
+                <div class="card" style="height: 89px;  background-color: #e2e0df;">
+                    <img src="Assets/img/36_1.png" height="87px" width="65px" class="card-img-top " alt="...">
+
+                    <span class="collection-title text-center" style="font-size: 11px;
+              font-weight: 700;">Airdopes</span>
+                </div>
+            </div>
+            <div class=" m-1">
+                <div class="card" style="height: 89px;     background-color: #e2e0df;
+                ">
+                    <img src="Assets/img/36_2.png" class="card-img-top " alt="...">
+                    <span class="collection-title text-center" style="font-size: 11px;
+                    font-weight: 700;">Rockerz</span>
+                </div>
+            </div>
+            <div class=" m-1">
+                <div class="card" style="height: 89px;     background-color: #e2e0df;
+                ">
+                    <img src="Assets/img/36_3.png" class="card-img-top " alt="...">
+                    <span class="collection-title text-center" style="font-size: 11px;
+                    font-weight: 700;">Bassheads</span>
+                </div>
+            </div>
+            <div class=" m-1 text-center">
+                <div class="card" style="height: 89px;     background-color: #e2e0df;
+                ">
+                    <img src="Assets/img/36_4.png" class="card-img-top " alt="...">
+                    <span class="collection-title text-center" style="font-size: 11px;
+                    font-weight: 700;">Smart Watch</span>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- full img slider -->
+
+    <div id="carouselExampleControls" class="carousel slide fullpage " data-bs-ride="carousel">
+        <div class="carousel-inner">
+            <div class="carousel-item active">
+                <img src="./Assets/IMG/13_1.png" class="d-block w-100" alt="...">
+            </div>
+            <div class="carousel-item">
+                <img src="./Assets/IMG/13_2.png" class="d-block w-100" alt="...">
+            </div>
+            <div class="carousel-item">
+                <img src="./Assets/IMG/13_3_png.jpg" class="d-block w-100" alt="...">
+            </div>
+            <div class="carousel-item">
+                <img src="./Assets/IMG/13_4.png" class="d-block w-100" alt="...">
+            </div>
+            <div class="carousel-item">
+                <img src="./Assets/IMG/13_5.png" class="d-block w-100" alt="...">
+            </div>
+        </div>
+        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleControls"
+            data-bs-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Previous</span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleControls"
+            data-bs-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Next</span>
+        </button>
+    </div>
+
+    <!-- ad line -->
+
+
+    <div class="pt-4">
+        <p class="text-center" style="font-size: 29px;">
+            <marquee scrollamount="10">
+
+                <span class="text-stroke"></span>
+                <span class="text-white text-bold">SOUND OF CHAMPIONS</span>
+                <span class="text-stroke cng">PLAY LIKE A KING</span>
+                <span class="text-stroke"></span>
+                <span class="text-white"></span>
+                <span class="text-stroke"></span>
+                <span class="text-stroke"></span>
+                <span class="text-stroke"></span>
+
+                <span class="text-stroke"></span>
+                <span class="text-white">SOUND OF CHAMPIONS</span>
+                <span class="text-stroke cng">PLAY LIKE A KING</span>
+                <span class="text-stroke"></span>
+                <span class="text-white"></span>
+                <span class="text-stroke"></span>
+                <span class="text-stroke"></span>
+                <span class="text-stroke"></span>
+
+                <span class="text-stroke"></span>
+                <span class="text-white">SOUND OF CHAMPIONS</span>
+                <span class="text-stroke cng">PLAY LIKE A KING</span>
+                <span class="text-stroke"></span>
+                <span class="text-white"></span>
+                <span class="text-stroke"></span>
+                <span class="text-stroke"></span>
+                <span class="text-stroke"></span>
+            </marquee>
+        </p>
+    </div>
+
+    <!-- iframe -->
+
+    <div class="container-fluid " id="ifram">
+        <video width="100%" height="100%" controls autoplay muted loop preload="none">
+            <source src="https://cdn.shopify.com/s/files/1/0057/8938/4802/files/70_OFF_H.264.mp4?v=1633166498"
+                type="video/mp4">
+            <source src="movie.ogg" type="video/ogg">
+            Your browser does not support the video tag.
+        </video>
+    </div>
+
+
+    <!--  Best Sellers-slider -->
+
+    <!-- <div class="container-fluid mt-2">
+        <div class="container">
+            <h2 class="text-white text-center hed" style="line-height: 1.2em;font-weight: 600;margin-bottom: 20px;">Upto
+                75% Off On Best Sellers</h2>
+        </div>
+        <div class="slider1" id="Best_Seller">
+
+        </div>
+    </div> -->
+
+
+    <!-- Prices Like Never Before-slider -->
+
+    <!-- <div class="container-fluid  mt-5" style="margin-top: 60px;">
+        <div class="container">
+            <h2 class="text-white text-center hed" style="line-height: 1.2em;font-weight: bolder; margin-bottom: 20px;">
+                Prices Like Never Before</h2>
+        </div>
+        <div class="slider1" id="Never_Before">
+        </div>
+    </div> -->
+
+
+
+
+
+    <!-- img-slider -->
+
+    <div class="container-fluid mt-5" id="imgslider">
+        <div class="container">
+            <h2 class="text-white text-center hed" style="line-height: 1.2em;
+        font-weight: bolder;
+        margin-bottom: 20px;">Upto 75% Off On Earbuds</h2>
+        </div>
+        <div class="slider1">
+
+            <div class="mx-1 d-flex  justify-content-center">
+                <img src="./Assets/img/01_2.png" height="344.55px" width="368px" class="" alt="...">
+
+            </div>
+            <div class="mx-1 d-flex justify-content-center">
+                <img src="./Assets/IMG/01_3.png" height="344.55px" width="368px" class="" alt="...">
+
+            </div>
+            <div class="mx-1 d-flex justify-content-center">
+                <img src="./Assets/IMG/01_4.png" height="344.55px" width="368px" class="" alt="...">
+
+            </div>
+            <div class="mx-1 d-flex justify-content-center">
+                <img src="./Assets/IMG/01_5.png" height="344.55px" width="368px" class="" alt="...">
+
+            </div>
+            <div class="mx-1 d-flex justify-content-center">
+                <img src="./Assets/IMG/01_6.png" height="344.55px" width="368px" class="" alt="...">
+
+            </div>
+        </div>
+    </div>
+
+
+    <!-- Top Smart Watches-slider -->
+
+
+    <!-- 
+    <div class="container-fluid  mt-5">
+        <div class="container">
+            <h2 class="text-white text-center hed"
+                style="line-height: 1.2em; font-weight: bolder;  margin-bottom: 20px;">Top Smart Watches</h2>
+        </div>
+        <div class="slider1" id="Top_Smart_Watches">
+
+
+        </div>
+    </div> -->
+
+
+
+    <!-- full slider -->
+
+    <div class="container-fluid mt-5 row" style="background-color:#494949;      " id="New_Launches">
+        <div class="col-12">
+            <p class="p-1  text-center hed" style="font-weight: 700; padding-bottom:0px ;color:#FFFFFF">New
+                Launches</p>
+        </div>
+        <div id="carouselExampleFade" class="carousel slide carousel-fade m-4 d-flex" data-bs-ride="carousel" style="    position: relative;
+        text-align: -webkit-center;">
+            <div class="carousel-inner ">
+                <div class="carousel-item active">
+
+                    <div class="card mb-3 text-center " style="  background-color: #cccccc;">
+                        <div class="row g-0">
+                            <div class="col-md-5 col-12">
+                                <img src="Assets/IMG/33_1.png" class="img-fluid rounded-circle" width="300px"
+                                    style="padding: 20px;" alt="...">
+                            </div>
+                            <div class="col-md-7  col-12">
+                                <div class="card-body p-5">
+                                    <h5 class="card-title fw-bolder" style="font-size: 17px;">Misfit T30</h5>
+                                    <p class="card-text text-start" style="font-size: 17px;">The seamlessly sleek,
+                                        inside
+                                        out - Misfit T30&nbsp;mens trimmer is so much more than what meets the eye!
+                                        Its
+                                        ergonomic design, stainless steel blades, 60 minutes of cordless usage and 4
+                                        guiding
+                                        combs make this trimmer a steal deal for sure! Oh, and did we mention that
+                                        it is
+                                        an
+                                        absolute looker!</p>
+                                    <p class="card-text"><a href="#"
+                                            class="badge rounded-pill px-5  py-2 text-light text-decoration-none"
+                                            style=" background-color:red; font-size: 13px;">SHOP NOW</a></p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="carousel-item">
+                    <div class="card mb-3 text-center " style="  background-color: #cccccc;">
+                        <div class="row g-0">
+                            <div class="col-md-5">
+                                <img src="Assets/IMG/33_2.png" class="img-fluid rounded-circle" width="300px"
+                                    style="padding: 20px;" alt="...">
+                            </div>
+                            <div class="col-md-7">
+                                <div class="card-body p-5">
+                                    <h5 class="card-title fw-bolder" style="font-size: 17px;">Misfit T50 Lite</h5>
+                                    <p class="card-text text-start" style="font-size: 17px;">Making grooming
+                                        delightful,
+                                        one
+                                        feature at a time - the Misfit T50 Lite is the best trimmer for men comes
+                                        with
+                                        40
+                                        length settings, stainless steel blades, and up to 120 minutes of battery
+                                        runtime.
+                                        Wait, we’re not done here! The built-in safety lock makes it your best
+                                        travel
+                                        buddy
+                                        and the ergonomic design surely adds more to the sleek look. We know you’re
+                                        excited
+                                        already!</p>
+                                    <p class="card-text"><a href="#"
+                                            class="badge rounded-pill px-5  py-2 text-light text-decoration-none"
+                                            style=" background-color:red; font-size: 13px;">SHOP NOW</a></p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="carousel-item">
+                    <div class="card mb-3 text-center " style="  background-color: #cccccc;">
+                        <div class="row g-0">
+                            <div class="col-md-5">
+                                <img src="Assets/IMG/33_3.png" class="img-fluid rounded-circle" width="300px"
+                                    style="padding: 20px ;" alt="...">
+                            </div>
+                            <div class="col-md-7">
+                                <div class="card-body p-5">
+                                    <h5 class="card-title fw-bolder" style="font-size: 17px;">Misfit t150</h5>
+                                    <p class="card-text text-start" style="font-size: 17px;">Want swift grooming
+                                        sessions on
+                                        a budget? The IPX7 water resistance, titanium blade and digital display of
+                                        the
+                                        Misfit T150 trimmer are here to make effortless grooming an everyday thing
+                                        for
+                                        you.
+                                        The 45 length settings of the trimmer make sure to quirk up your grooming
+                                        style,
+                                        and
+                                        90 minutes of cordless trimming let you groom on, and on, and on to your
+                                        heart’s
+                                        content. Find a better grooming partner than this, we’ll wait!</p>
+                                    <p class="card-text"><a href="#"
+                                            class="badge rounded-pill px-5  py-2 text-light text-decoration-none"
+                                            style=" background-color:red; font-size: 13px;">SHOP NOW</a></p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="carousel-item">
+                    <div class="card mb-3 text-center " style="  background-color: #cccccc;">
+                        <div class="row g-0">
+                            <div class="col-md-5">
+                                <img src="Assets/IMG/33_4.png" class="img-fluid rounded-circle" width="300px"
+                                    style="padding: 20px;" alt="...">
+                            </div>
+                            <div class="col-md-7">
+                                <div class="card-body p-5">
+                                    <h5 class="card-title fw-bolder" style="font-size: 17px;">Airdopes 452</h5>
+                                    <p class="card-text text-start" style="font-size: 17px;">It’s time to up the
+                                        game
+                                        when
+                                        you have Airdopes 452 by your side. Equipped with our BEAST™️ mode for low
+                                        latency;
+                                        ENx™️ tech for crystal clear voice delivery and IWP™️ tech for seamless
+                                        pairing,
+                                        this packs a punch! Apart from these, it also offers ASAP™️ Charge, Touch
+                                        Controls
+                                        as well as IPX4 Water Resistance for an all-round true wireless experience.
+                                    </p>
+                                    <p class="card-text"><a href="#"
+                                            class="badge rounded-pill px-5  py-2 text-light text-decoration-none"
+                                            style=" background-color:red; font-size: 13px;">SHOP NOW</a></p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleFade"
+                data-bs-slide="prev">
+                <span class="carousel-control-prev-icon text-danger" aria-hidden="true"></span>
+                <span class="visually-hidden">Previous</span>
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleFade"
+                data-bs-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Next</span>
+            </button>
+        </div>
+
+    </div>
+
+    <!-- Top_Wireless-slider -->
+
+
+    <!-- <div class="container-fluid mt-5" style="margin-top: 40px;">
+        <div class="container">
+            <h2 class="text-white text-center hed" style="line-height: 1.2em;
+        font-weight: bolder;
+        margin-bottom: 20px;">Upto 75% Off On Top Wireless</h2>
+        </div>
+        <div class="slider1" id="Top_Wireless">
+        </div>
+    </div> -->
+
+
+
+
+
+    <!-- 5 img -->
+
+
+    <div class="container-fluid  mt-5">
+        <div class="row">
+            <div class="col-sm-6 col-12">
+                <div class="row  p-0 imgcon" style="height: fit-content;">
+                    <img class="gridheadphones" src="Assets/IMG/4_1.jpg "
+                        style='height: 100%; width: 100%; object-fit: contain ;object-fit: contain'>
+                    <div class="center ">
+                        <p class="fw-bold fs-1 text-white">Sports</p>
+                        <p class="fw-500 text-white  infod "> Water and sweat resistant, light
+                            and secure fit makes them ideal for outdoor sports or workouts.</p>
+
+                    </div>
+                </div>
+                <div class="row  p-0 imgcon" style="height: fit-content;">
+                    <img class="gridheadphones" src="Assets/IMG/4_3.jpg "
+                        style='height: 100%; width: 100%; object-fit: contain'>
+                    <div class="center ">
+                        <p class="fw-bold fs-1 text-white">Fashion</p>
+                        <p class=" fw-500 text-white infod">Comfortable for long flights and
+                            drives with ergonomic, snug fit <br>and long lasting battery life</p>
+
+                    </div>
+
+                </div>
+            </div>
+            <div class="col-sm-6 col-12">
+                <div class="row  p-0 imgcon" style="height: fit-content;">
+                    <img class="gridheadphones" src="Assets/IMG/4_2.jpg "
+                        style='height: 100%; width: 100%; object-fit: contain'>
+                    <div class="center ">
+                        <p class="fw-bold fs-1 text-white">Travel</p>
+                        <p class="fw-500 text-white infod">Designs that keep up with the latest trends
+                            with vibrant &amp; unique colours.</p>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-6  p-0 imgcon" style="height: fit-content;">
+                        <img class="gridheadphones" src="Assets/IMG/4_5.jpg "
+                            style='height: 100%; width: 100%; object-fit: contain'>
+                        <div class="center ">
+                            <p class="fw-bold fs-1 text-white">All Time <br>Favourites</p>
+                            <p class="fw-500 text-white infod">Your most favourites at the <br>most
+                                incredible prices.</p>
+                        </div>
+                    </div>
+                    <div class="col-6  p-0 imgcon" style="height: fit-content;">
+                        <img class="gridheadphones" src="Assets/IMG/4_6.jpg"
+                            style='height: 100%; width: 100%; object-fit: contain'>
+                        <div class="center ">
+                            <p class=" fs-1 text-white">WFH</p>
+                            <p class="fw-500 text-white infod">Comfortable ear wear suitable<br> for
+                                working from home, with <br>battery life that easily lasts an <br>entire day full of
+                                calls.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+
+
+
+    <!-- fullslider -->
+    <div class="container-flude fullcardslider d-flex justify-content-center mt-5">
+        <div id="carouselExampleInterval" class="carousel slide" data-bs-ride="carousel">
+            <div class="carousel-inner">
+                <div class="carousel-item active" data-bs-interval="10000">
+
+                    <div class="card " style="max-width: 1264px;">
+                        <div class="row g-0">
+                            <div class="col-md-7">
+                                <div class="card-body">
+                                    <h5 class="card-title  fw-bold display-4">Meet the boAtheads</h5>
+                                    <hr class=" fw-bold" style="width: 150px; height: 3px; color: red;">
+                                    <div class="boathead-name h4">
+                                        <span class="text-uppercase ">Kiara </span><span
+                                            class="text-uppercase">&nbsp;<span><strong>Advani
+                                                </strong></span></span>
+                                    </div>
+                                    <div class="boathead-name h3 fw-bold" style="color: white;">
+                                        <p class="card-text">Groovy.Gorgeous.Glamorous.</p>
+                                    </div>
+                                    <p class="card-text" style="color: silver;    font-size: 16px;">Ever since
+                                        making
+                                        her
+                                        first
+                                        appearance as a boAthead for the #GlamourOfTheStars campaign since June
+                                        2019,
+                                        Kiara's journey
+                                        with boAthead has been impecable, inspirational and influentional.</p>
+
+                                </div>
+                            </div>
+                            <div class="col-md-5">
+                                <img src="Assets/IMG/6_6.jpg" class="img-fluid rounded-start" alt="...">
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+                <div class="carousel-item" data-bs-interval="2000">
+                    <div class="card " style="max-width: 1264px;">
+                        <div class="row g-0">
+                            <div class="col-md-7">
+                                <div class="card-body">
+                                    <h5 class="card-title  fw-bold display-4">Meet the boAtheads</h5>
+                                    <hr class=" fw-bold" style="width: 150px; height: 3px; color: red;">
+                                    <div class="boathead-name h4">
+                                        <span class="text-uppercase ">Shreyas</span><span
+                                            class="text-uppercase">&nbsp;<span><strong>
+                                                    Iyer</strong></span></span>
+                                    </div>
+                                    <div class="boathead-name h3 fw-bold" style="color: white;">
+                                        <p class="card-text">Determined.Dauntless.Defiant</p>
+                                    </div>
+                                    <p class="card-text" style="color: silver;    font-size: 16px;">It’s a treat to
+                                        watch
+                                        boAthead
+                                        Shreyas Iyer’s determined stance on the field and the way he produces a
+                                        sweet
+                                        sound
+                                        with his
+                                        bat, just like #SoundOfTheChampions</p>
+
+                                </div>
+                            </div>
+                            <div class="col-md-5">
+                                <img src="Assets/IMG/6_5.jpg" class="img-fluid rounded-start" alt="...">
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+                <div class="carousel-item">
+                    <div class="card " style="max-width: 1264px;">
+                        <div class="row g-0">
+                            <div class="col-md-7">
+                                <div class="card-body">
+                                    <h5 class="card-title  fw-bold display-4">Meet the boAtheads</h5>
+                                    <hr class=" fw-bold" style="width: 150px; height: 3px; color: red;">
+                                    <div class="boathead-name h4">
+                                        <span class="text-uppercase ">KL</span><span
+                                            class="text-uppercase">&nbsp;<span><strong>Rahul</strong></span></span>
+                                    </div>
+                                    <div class="boathead-name h3 fw-bold" style="color: white;">
+                                        <p class="card-text">Classy.Charismatic.Charm.</p>
+                                    </div>
+                                    <p class="card-text" style="color: silver;    font-size: 16px;">Expect a
+                                        powerful
+                                        and
+                                        smooth flowing
+                                        drive through the covers when the classy boAthead KL Rahul decides to up the
+                                        ante
+                                        and take
+                                        #SoundOfTheChampions to another new level</p>
+
+                                </div>
+                            </div>
+                            <div class="col-md-5">
+                                <img src="Assets/IMG/6_4.jpg" class="img-fluid rounded-start" alt="...">
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+                <div class="carousel-item " data-bs-interval="10000">
+
+                    <div class="card " style="max-width: 1264px;">
+                        <div class="row g-0">
+                            <div class="col-md-7">
+                                <div class="card-body">
+                                    <h5 class="card-title  fw-bold display-4">Meet the boAtheads</h5>
+                                    <hr class=" fw-bold" style="width: 150px; height: 3px; color: red;">
+                                    <div class="boathead-name h4">
+                                        <span class="text-uppercase ">Neha</span><span
+                                            class="text-uppercase">&nbsp;<span><strong>Kakkar</strong></span></span>
+                                    </div>
+                                    <div class="boathead-name h3 fw-bold" style="color: white;">
+                                        <p class="card-text">Stylish.Superb.Showstopper.</p>
+                                    </div>
+                                    <p class="card-text" style="color: silver;    font-size: 16px;">boAthead Neha
+                                        Kakkar’s
+                                        stylish
+                                        presence makes the deck stay lit as her captivating voice adds that superb
+                                        boAthead
+                                        spirit to
+                                        #SoulOfTheMusicians and makes everything go groovin’</p>
+
+                                </div>
+                            </div>
+                            <div class="col-md-5">
+                                <img src="Assets/IMG/6_1.jpg" class="img-fluid rounded-start" alt="...">
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+                <div class="carousel-item" data-bs-interval="2000">
+                    <div class="card " style="max-width: 1264px;">
+                        <div class="row g-0">
+                            <div class="col-md-7">
+                                <div class="card-body">
+                                    <h5 class="card-title  fw-bold display-4">Meet the boAtheads</h5>
+                                    <hr class=" fw-bold" style="width: 150px; height: 3px; color: red;">
+                                    <div class="boathead-name h4">
+                                        <span class="text-uppercase ">Kartik</span><span
+                                            class="text-uppercase">&nbsp;<span><strong>Aaryan</strong></span></span>
+                                    </div>
+                                    <div class="boathead-name h3 fw-bold" style="color: white;">
+                                        <p class="card-text">Cool.Calm.Collected.</p>
+                                    </div>
+                                    <p class="card-text" style="color: silver;    font-size: 16px;">Keeping the flag
+                                        of
+                                        #GlamourOfTheStars high and in full flow Kartik Aaryan has added an immense
+                                        deal
+                                        of
+                                        coolness
+                                        here during his journey as a boAthead</p>
+
+                                </div>
+                            </div>
+                            <div class="col-md-5">
+                                <img src="Assets/IMG/6_2.png" class="img-fluid rounded-start" alt="...">
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+                <div class="carousel-item">
+                    <div class="card " style="max-width: 1264px;">
+                        <div class="row g-0">
+                            <div class="col-md-7">
+                                <div class="card-body">
+                                    <h5 class="card-title  fw-bold display-4">Meet the boAtheads</h5>
+                                    <hr class=" fw-bold" style="width: 150px; height: 3px; color: red;">
+                                    <div class="boathead-name h4">
+                                        <span class="text-uppercase ">Shikhar</span><span
+                                            class="text-uppercase">&nbsp;<span><strong>Dhawan</strong></span></span>
+                                    </div>
+                                    <div class="boathead-name h3 fw-bold" style="color: white;">
+                                        <p class="card-text">Daring.Daredevil.Dapper.</p>
+                                    </div>
+                                    <p class="card-text" style="color: silver;    font-size: 16px;">When the Gabbar
+                                        of
+                                        International
+                                        Cricket carries the baton of #SoundOfTheChampions, expect great things in
+                                        the
+                                        offering. Our hard
+                                        hitting boAthead Shikhar Dhawan creates memorable times with his presence.
+                                    </p>
+
+                                </div>
+                            </div>
+                            <div class="col-md-5">
+                                <img src="Assets/IMG/6_3.png" class="img-fluid rounded-start" alt="...">
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+    <br>
+
+    <!-- blog -->
+    <div class="container">
+        <h1 class="p-3 fw-bolder display-5 text-center " style="color:#FFFFFF">boAt Blog</h1>
+    </div>
+
+    <div class="container blog d-flex-column justify-content-center px-0 " style="overflow-x: auto;">
+
+        <div class="d-flex flex-row row-cols-1 row-cols-md-3 g-4 px-5">
+            <div class="m-2">
+                <div class="card h-100 ">
+                    <img src="Assets/IMG/7_1.png" class="inimg" alt="...">
+                    <div class="card-body">
+                        <h5 class="card-title fw-bolder">The Ultimate Smartwatch Guide - Get The World On Your Wrist
+                        </h5>
+                    </div>
+                    <div class="card-footer">
+                        <button type="button text-light" class="btn btn-outline-danger">Read more</button>
+                    </div>
+                </div>
+            </div>
+            <div class="m-2">
+                <div class="card h-100">
+                    <img src="Assets/IMG/7_2.png" class="inimg" alt="...">
+                    <div class="card-body">
+                        <h5 class="card-title fw-bolder">Top Shaving Mistakes You Should Stop Making</h5>
+                    </div>
+                    <div class="card-footer">
+                        <button type="button text-light" class="btn btn-outline-danger">Read more</button>
+                    </div>
+                </div>
+            </div>
+            <div class="m-2">
+                <div class="card h-100">
+                    <img src="Assets/IMG/7_3.png" class="inimg" alt="...">
+                    <div class="card-body">
+                        <h5 class="card-title fw-bolder">The Ultimate Sail of the Year is here…Powered by 4 Crazy
+                            boAt
+                            Launches!</h5>
+                    </div>
+                    <div class="card-footer">
+                        <button type="button text-light" class="btn btn-outline-danger">Read more</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- line -->
+    <div class="redline m-3 ">
+        <img src="Assets/IMG/8.png" width="60%">
+    </div>
+
+
+    <!-- new What They Say About Us:-->
+    <div class="container-fluid slide2 d-flex-column justify-content-center ">
+        <div>
+            <h4 class="mb-2  text-center" style=" font-weight: 700; font-size: 50px; color:#FFFFFF">What They Say
+                About
+                Us:</h4>
+        </div>
+
+        <div class="container">
+            <div class="d-flex flex-row " style="overflow-x: auto;">
+                <div class=" gx-0 m-1">
+                    <div class="card" style="width: 383px;     border: 0px; ">
+                        <div class="card-body text-center" style="padding:0px; ">
+                            <img src="Assets/IMG/8_1.png" style="width: 300px;" class="" alt="...">
+                            <div class="in" style="    padding: 17px;            ">
+                                <h5 class="card-title fw-bold text-light">It is value for money, best sound
+                                    especially
+                                    bass"</h5>
+                                <p class="card-text py-4 fw-bold text-light">SAREN MOHIL</p>
+                                <a href="#" class="badge rounded-pill px-4  py-2 bg-light text-dark">SHOP NOW</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="  gx-0 m-1">
+                    <div class="card" style="width: 383px;     border: 0px; ">
+                        <div class="card-body text-center" style="padding:0px; ">
+                            <img src="Assets/IMG/8_2.png" style="width: 300px;" class="" alt="...">
+                            <div class="in" style="    padding: 17px;            ">
+                                <h5 class="card-title fw-bold text-light">"The battery backup is something
+                                    unbelievable"
+                                </h5>
+                                <p class="card-text py-4 fw-bold text-light">Namshad K N</p>
+                                <a href="#" class="badge rounded-pill px-4  py-2 bg-light text-dark">SHOP NOW</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class=" gx-0 m-1">
+                    <div class="card" style="width: 383px;     border: 0px; ">
+                        <div class="card-body text-center" style="padding:0px; ">
+                            <img src="Assets/IMG/8_3.png" style="width: 300px;" class=" " alt="...">
+                            <div class="in" style="    padding: 14.4px;            ">
+                                <h5 class="card-title fw-bold text-light">"Amazing product, great sound quality and
+                                    the
+                                    mic performance is also awesome."</h5>
+                                <p class="card-text py-3 fw-bold text-light">Ashith</p>
+                                <a href="#" class="badge rounded-pill px-4  py-2 bg-light text-dark">SHOP NOW</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div>
+            <div>
+                <h1 class="p-3 fw-bolder display-5 text-center " style="color:#FFFFFF">The boAthead Vibe</h1>
+            </div>
+
+        </div>
+
+        <div class="d-flex-column justify-content-center text-center">
+            <a href="" class="text-decoration-none">
+                <h6 class="text-light border border-danger p-2 d-inline">Show more</h6>
+            </a>
+
+            <div>
+                <p class="p-5 fw-bolder display-4 text-center " style="color:#FFFFFF">In the Press</p>
+            </div>
+
+            <DIV id="que">
+                <div id="carouselExampleSlidesOnly" class="carousel slide" data-bs-ride="carousel">
+                    <div class="carousel-inner">
+                        <div class="carousel-item  text-center active">
+                            <div class="taglist ">
+                                <div class="quote">
+                                    <img class=" lazyloaded"
+                                        data-src="https://cdn.shopify.com/s/files/1/0057/8938/4802/files/quote.png?v=1610085078"
+                                        src="https://cdn.shopify.com/s/files/1/0057/8938/4802/files/quote.png?v=1610085078"
+                                        max-width: 30px;>
+                                </div>
+                                <p class="text-light mt-1">Warburg invests $100 mn in boAt</p>
+                            </div>
+                        </div>
+                        <div class="carousel-item  text-center">
+                            <div class="taglist ">
+                                <div class="quote">
+                                    <img class=" lazyloaded"
+                                        data-src="https://cdn.shopify.com/s/files/1/0057/8938/4802/files/quote.png?v=1610085078"
+                                        src="https://cdn.shopify.com/s/files/1/0057/8938/4802/files/quote.png?v=1610085078"
+                                        max-width: 30px;>
+                                </div>
+                                <p class="text-light mt-1">How India's boAt became the fifth largest wearable brand
+                                    in
+                                    the world</p> -->
+
+                            </div>
+                        </div>
+                        <div class="carousel-item  text-center">
+                            <div class="taglist ">
+                                <div class="quote">
+                                    <img class=" lazyloaded"
+                                        data-src="https://cdn.shopify.com/s/files/1/0057/8938/4802/files/quote.png?v=1610085078"
+                                        src="https://cdn.shopify.com/s/files/1/0057/8938/4802/files/quote.png?v=1610085078"
+                                        max-width: 30px;>
+                                </div>
+                                <p class="text-light mt-1">How India's boAt became the fifth largest wearable brand
+                                    in
+                                    the world</p>
+                                </p>
+                            </div>
+                        </div>
+                        <div class="carousel-item  text-center">
+                            <div class="taglist ">
+                                <div class="quote">
+                                    <img class=" lazyloaded"
+                                        data-src="https://cdn.shopify.com/s/files/1/0057/8938/4802/files/quote.png?v=1610085078"
+                                        src="https://cdn.shopify.com/s/files/1/0057/8938/4802/files/quote.png?v=1610085078"
+                                        max-width: 30px;>
+                                </div>
+                                <p class="text-light mt-1">IPL 2020: boAt becomes the official audio partner for six
+                                    teams</p> -->
+
+                            </div>
+                        </div>
+                        <div class="carousel-item  text-center">
+                            <div class="taglist ">
+                                <div class="quote">
+                                    <img class=" lazyloaded"
+                                        data-src="https://cdn.shopify.com/s/files/1/0057/8938/4802/files/quote.png?v=1610085078"
+                                        src="https://cdn.shopify.com/s/files/1/0057/8938/4802/files/quote.png?v=1610085078"
+                                        max-width: 30px;>
+                                </div>
+                                <p class="text-light mt-1">TWS Earbuds Shipments in India Up 723 Percent YoY in Q3,
+                                    Boat
+                                    Emerged as Leading Player:
+                                    Counterpoint</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </DIV>
+
+
+            <div class="container comicon py-5">
+                <div class="d-flex flex-row " style="overflow-x: auto;">
+                    <div class="">
+                        <img src="Assets/IMG/9_9.png" style="height: 77px;
+                margin: -6px;
+                padding: 8px;
+                padding-right: 44px;">
+                    </div>
+                    <div class="">
+                        <img src="Assets/IMG/9_2.png">
+                    </div>
+                    <div class="">
+                        <img src="Assets/IMG/9_3.png">
+                    </div>
+                    <div class="">
+                        <img src="Assets/IMG/9_4.png">
+                    </div>
+                    <div class="">
+                        <img src="Assets/IMG/9_5.png">
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+        <div class="d-flex-column justify-content-center text-center flogo">
+            <img src="Assets/IMG/9.png" height="284px">
+        </div>
+
+
+        <!-- line   -->
+
+
+        <div class="pt-4">
+            <p class="text-center" style="font-size: 29px;">
+                <marquee scrollamount="10">
+
+                    <span class="text-stroke">India’s No.1 Earwear Audio Brand.</span>
+                    <span class="text-white">India’s No.1 Earwear Audio Brand.</span>
+                    <span class="text-stroke">India’s No.1 Earwear Audio Brand.</span>
+                    <span class="text-stroke">India’s No.1 Earwear Audio Brand.</span>
+                    <span class="text-white">India’s No.1 Earwear Audio Brand.</span>
+                    <span class="text-stroke">India’s No.1 Earwear Audio Brand.</span>
+                    <span class="text-stroke">India’s No.1 Earwear Audio Brand.</span>
+                    <span class="text-stroke">India’s No.1 Earwear Audio Brand.</span>
+
+                    <span class="text-stroke">India’s No.1 Earwear Audio Brand.</span>
+                    <span class="text-white">India’s No.1 Earwear Audio Brand.</span>
+                    <span class="text-stroke">India’s No.1 Earwear Audio Brand.</span>
+                    <span class="text-stroke">India’s No.1 Earwear Audio Brand.</span>
+                    <span class="text-white">India’s No.1 Earwear Audio Brand.</span>
+                    <span class="text-stroke">India’s No.1 Earwear Audio Brand.</span>
+                    <span class="text-stroke">India’s No.1 Earwear Audio Brand.</span>
+                    <span class="text-stroke">India’s No.1 Earwear Audio Brand.</span>
+
+                    <span class="text-stroke">India’s No.1 Earwear Audio Brand.</span>
+                    <span class="text-white">India’s No.1 Earwear Audio Brand.</span>
+                    <span class="text-stroke">India’s No.1 Earwear Audio Brand.</span>
+                    <span class="text-stroke">India’s No.1 Earwear Audio Brand.</span>
+                    <span class="text-white">India’s No.1 Earwear Audio Brand.</span>
+                    <span class="text-stroke">India’s No.1 Earwear Audio Brand.</span>
+                    <span class="text-stroke">India’s No.1 Earwear Audio Brand.</span>
+                    <span class="text-stroke">India’s No.1 Earwear Audio Brand.</span>
+                </marquee>
+            </p>
+        </div>
+    </div>
+
+    <!-- icon div -->
+    <div class="container-fluid iconnav  py-4 " style="background: #1c1c1c;padding: 0px;  color: white;">
+        <div class="row d-flex m-0">
+            <div class="col-4">
+                <div class="row">
+                    <div class="col-4">
+                        <img src="Assets/IMG/10_1.png" height="30px">
+
+                    </div>
+                    <div class="col-8">
+                        <p class="fw-700" style="font-size: 16px;    font-weight: 700;
+                    ">Free Shipping</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-4">
+                <div class="row">
+                    <div class="col-4">
+                        <img src="Assets/IMG/10_2.png" height="30px">
+                    </div>
+                    <div class="col-8">
+                        <p class="fw-700 " style="font-size: 16px;    font-weight: 700;
+                    ">Exclusive Deals</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-4">
+                <div class="row">
+                    <div class="col-4">
+                        <img src="Assets/IMG/10_3.png" height="30px">
+                    </div>
+                    <div class="col-8">
+                        <p class="fw-700" style="font-size: 16px;    font-weight: 700;
+                    ">Secure Checkout</p>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+    <div class=" text-center" style="background: #2c2c2c;padding:20px 20px;">
+        <p style="line-height: normal;font-size: 12px;max-width: 931px;margin: 0 auto;color: #8f8f8f">India's
+            fastest
+            growing audio & wearables brand. The most incredible range of wireless earphones, earbuds, headphones,
+            smart
+            watches, and home audio. From workouts to adventures, boAt will get you sailing!</p>
+    </div>
+
+
+
+    <!-- footer -->
+    <footer class="footer-section">
+        <div class="container">
+
+            <div class="row  pt-5">
+                <div class="col-sm-4 col-12">
+                    <div>
+                        <img src="Assets/IMG/logo.png" height="44px">
+                    </div>
+                    <div class="py-5 text-light">
+                        <p>Subscribe to email alerts. We promise not to spam your inbox.</p>
+                    </div>
+                    <div class="row">
+                        <div class="col">
+                            <input type="email" class="" placeholder="Email Address*" style="     HEIGHT: 34PX;
+                        BACKGROUND-COLOR: BLACK;
+                        BORDER-COLOR: #a0a0a0;">
+                        </div>
+                        <div class="col"> <button type="button" class="btn btn-outline-danger">SUBSCRIBE</button>
+                        </div>
+
+                    </div>
+                </div>
+
+                <div class=" col-sm-8 col-12">
+                    <div class="row  p-4">
+                        <div class="col-sm-4 col-12 border-bottom border-light p-2">
+                            <a data-bs-toggle="collapse" href="#shoptoggdata" role="button" aria-expanded="false"
+                                aria-controls="shoptoggdata">
+                                <H5 class="fw-bolder text-light">SHOP</H5>
+                            </a>
+
+                            <ul class="collapse" id="shoptoggdata">
+                                <li><a href="">True Wireless Earbuds</a></li>
+                                <li><a href="">Wireless Headphones</a></li>
+                                <li><a href=""> Wired Headphones</a></li>
+                                <li><a href="">Wireless Speakers</a></li>
+                                <li><a href="">Home AudioSmart</a></li>
+                                <li><a href="">Mobile Accessories </a></li>
+                                <li><a href=""> Watches</a></li>
+                                <li><a href="">TRebel</a></li>
+                                <li><a href="">Misfit</a></li>
+                                <li><a href=""> Gift Card</a></li>
+                                <li><a href="">Rock In India</a></li>
+                                <li><a href="">Earn Rs.100</a></li>
+                        </div>
+                        <div class="col-sm-4 col-12  border-bottom border-light p-2">
+                            <a data-bs-toggle="collapse" href="#helptoggdata" role="button" aria-expanded="false"
+                                aria-controls="helptoggdata">
+                                <H5 class="fw-bolder text-light">HELP</H5>
+                            </a>
+
+                            <UL class="collapse" id="helptoggdata">
+                                <li><a href=""> Track Your Order</a></li>
+                                <li><a href="">Warranty & Support</a></li>
+                                <li><a href="">Return Policy</a></li>
+                                <li><a href="">Service Centers</a></li>
+                                <li><a href="">Bulk Order</a></li>
+                                <li><a href="">FAQs</a></li>
+                            </UL>
+                        </div>
+                        <div class="col-sm-4 col-12  border-bottom border-light p-2">
+                            <a data-bs-toggle="collapse" href="#COMPANYtoggdata" role="button" aria-expanded="false"
+                                aria-controls="COMPANYtoggdata">
+                                <H5 class="fw-bolder text-light">COMPANY</H5>
+                            </a>
+
+                            <ul class="collapse" id="COMPANYtoggdata">
+                                <li><a href="">About boAt</a></li>
+                                <li><a href="">News</a></li>
+                                <li><a href="">Read Our Blog</a></li>
+                                <li><a href="">Social Responsibility</a></li>
+                                <li><a href="">High5boAtheads</a></li>
+                                <li><a href="">Mobile Accessories </a></li>
+                                <li><a href="">Our Partners</a></li>
+                                <li><a href="">Terms of Service</a></li>
+                                <li><a href="">Privacy Policy</a></li>
+                            </ul>
+                        </div>
+                    </div>
+
+                </div>
+                <div class="row">
+                    <div class="container d-flex ">
+                        <div class="p-2"><i class="fab fa-twitter"></i></div>
+                        <div class="p-2"><i class="fab fa-facebook-square"></i></div>
+                        <div class="p-2"><i class="fab fa-youtube"></i></div>
+                        <div class="p-2"><i class="fab fa-instagram"></i></div>
+                        <div class="p-2"><i class="fab fa-linkedin"></i></div>
+                    </div>
+
+                </div>
+                <div class="row">
+                    <div class="col-sm-5 col-12 "><img src="Assets/IMG/11.png" style="width: 100px;"> </div>
+                    <div class="col-sm-7 col-12">
+                        <div class="row">
+                            <div class="col-sm-4 col-12">
+                                <h5 class="text-light fw-bolder">DOWNLOAD THE APP</h5>
+                            </div>
+                            <div class="col-4"><img src="Assets/IMG/11_1.png"></div>
+                            <div class="col-4"><img src="Assets/IMG/11_2.png"></div>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+
+
+
+    <div class="text-center mt-3">
+
+        <p class="text-light">© 2021 Imagine Marketing Private Limited. All Rights Reserved.</p>
+
+
+    </div>
+    <div class="container-fluid pt-2 d-lg-none d-inline position-fixed bottom-0 end-0"
+        style="background-color: #343434;">
+        <div class="">
+            <div class="d-flex justify-content-around">
+                <div class="col text-center">
+
+
+                    <svg width="17" height="21" viewBox="0 0 17 21" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M17 15.3551H0L2.74194 20.1078L14.6237 19.925L17 15.3551Z" fill="#c4c4c4"></path>
+                        <path d="M8.40863 0L3.47314 14.6237L12.7957 11.3333L8.40863 0Z" fill="#c4c4c4"></path>
+                    </svg>
+
+                    <span class="icon_name" style="color: gray;"> Home </span>
+                </div>
+                <div class="col text-center">
+                    <svg width="17" height="18" viewBox="0 0 17 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path
+                            d="M8.5 8.19857C7.9815 8.19857 7.565 8.61973 7.565 9.14404C7.565 9.66835 7.9815 10.0895 8.5 10.0895C9.0185 10.0895 9.435 9.66835 9.435 9.14404C9.435 8.61973 9.0185 8.19857 8.5 8.19857ZM8.5 0.548828C3.808 0.548828 0 4.39948 0 9.14404C0 13.8886 3.808 17.7393 8.5 17.7393C13.192 17.7393 17 13.8886 17 9.14404C17 4.39948 13.192 0.548828 8.5 0.548828ZM10.3615 11.0264L3.4 14.3012L6.6385 7.26169L13.6 3.98691L10.3615 11.0264Z"
+                            fill="#c4c4c4"></path>
+                    </svg>
+                    <span class="icon_name" style="color: gray;"> Shop </span>
+                </div>
+                <div class="col text-center">
+                    <span class="beside-svg"></span>
+                    <svg width="17" height="18" viewBox="0 0 17 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path
+                            d="M7.5 1.92836C8.2104 1.92836 8.89171 2.21057 9.39404 2.7129C9.89637 3.21523 10.1786 3.89653 10.1786 4.60693V5.14265H4.82143V4.60693C4.82143 3.89653 5.10363 3.21523 5.60596 2.7129C6.10829 2.21057 6.7896 1.92836 7.5 1.92836ZM11.25 5.14265V4.60693C11.25 3.61237 10.8549 2.65854 10.1516 1.95528C9.44839 1.25202 8.49456 0.856934 7.5 0.856934C6.50544 0.856934 5.55161 1.25202 4.84835 1.95528C4.14509 2.65854 3.75 3.61237 3.75 4.60693V5.14265H0V15.8569C0 16.4253 0.225765 16.9703 0.627628 17.3722C1.02949 17.774 1.57454 17.9998 2.14286 17.9998H12.8571C13.4255 17.9998 13.9705 17.774 14.3724 17.3722C14.7742 16.9703 15 16.4253 15 15.8569V5.14265H11.25Z"
+                            fill="#C4C4C4"></path>
+                    </svg>
+                    <span class="icon_name" style="color: gray;">Bag </span>
+                </div>
+                <div class="col text-center">
+                    <svg width="16" height="19" viewBox="0 0 16 19" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <circle cx="7.58329" cy="3.79167" r="3.79167" fill="#C4C4C4"></circle>
+                        <path
+                            d="M0 15.1001C0 11.7864 2.68629 9.1001 6 9.1001H9.16666C12.4804 9.1001 15.1667 11.7864 15.1667 15.1001V17.2001C15.1667 17.7524 14.719 18.2001 14.1667 18.2001H1C0.447716 18.2001 0 17.7524 0 17.2001V15.1001Z"
+                            fill="#C4C4C4"></path>
+                    </svg>
+                    <span class="icon_name" style="color: gray;"> Profile </span>
+                </div>
+            </div>
+        </div>
+
+
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+            integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+            crossorigin="anonymous"></script>
+        <!-- <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha38
+    -MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+ -->
+
+        <!-- slick -->
+        <script src="https://code.jquery.com/jquery-3.6.0.min.js"
+            integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+        <script type="text/javascript"
+            src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.js"></script>
+
+        <!-- <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+        crossorigin="anonymous"></script> -->
+
+
+
+        <!-- first slider-->
+        <script>
+
+            let items = document.querySelectorAll('.carousel1 .carousel-item')
+            console.log(items)
+            items.forEach((el) => {
+                const minPerSlide = 3
+                let next = el.nextElementSibling
+                for (var i = 1; i < minPerSlide; i++) {
+                    console.log(!next)
+                    if (!next) {
+                        // wrap carousel by using first child
+                        next = items[0]
+                    }
+                    let cloneChild = next.cloneNode(true)
+                    el.appendChild(cloneChild.children[0])
+                    next = next.nextElementSibling
+                }
+            })
+
+        </script>
+
+        <!-- side nav -->
+        <script>
+            function hid() {
+                document.getElementById("shopitemout").style.display = "none";
+            }
+            function show() {
+                x = document.getElementById("shopitemout")
+                x.style.display = "block";
+
+
+            }
+
+        </script>
+</body>
+
+</html>

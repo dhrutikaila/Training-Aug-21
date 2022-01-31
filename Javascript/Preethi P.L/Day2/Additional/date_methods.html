@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Date Methods</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-F3w7mX95PdgyTmZZMECAngseQB83DfGTowi0iMjiWaeVhAn4FJkqJByhZMI3AhiU" crossorigin="anonymous">
+</head>
+<body>
+    <!--Header-->
+    <div class="container text-center mt-2">
+        <h1 class="display1">DATE METHODS</h1>
+        <hr>
+    </div>
+
+    <!--Main-->
+    <div class="container mt-3 bg-light">
+        <h3>Date()</h3>
+        <h3>Date.now()</h3>
+        <h3>getFullYear()</h3>
+        <h3>getMonth()</h3>
+        <h3>getDate()</h3>
+        <h3>getHours()</h3>
+        <h3>getMinutes()</h3>
+        <h3>getSeconds()</h3>
+        <h3>getMilliseconds()</h3>
+        <h3>getTime()</h3>
+        <h3>getUTCDate()</h3>
+        <h3>getUTCDay()</h3>
+        <h3>getUTCFullYear()</h3>
+        <h3>getUTCMonth</h3>
+        <h3>getUTCHours()</h3>
+        <h3>getUTCMinutes()</h3>
+        <h3>getUTCSeconds()</h3>
+        <h3>getUTCMilliseconds()</h3>
+        <h3>setDate()</h3>
+        <h3>setTime()</h3>
+        <h3>setFullYear()</h3>
+        <h3>setMonth()</h3>
+        <h3>setHours()</h3>
+        <h3>setMinutes()</h3>
+        <h3>setSeconds()</h3>
+        <h3>setMilliseconds()</h3>
+        
+    </div>
+
+    <!--JS-->
+    <script>
+        var d = new Date();
+        console.log("Date() : "+d);
+        console.log("Date.now() : "+Date.now());
+        console.log("getFullYear() : "+d.getFullYear());
+        console.log("getMonth() : "+d.getMonth());
+        console.log("getDate() : "+d.getDate());
+        console.log("getHours() : "+d.getHours());
+        console.log("getMinutes() : "+d.getMinutes());
+        console.log("getSeconds() : "+d.getSeconds());
+        console.log("getMilliseconds() : "+d.getMilliseconds());
+        console.log("getTime() : "+d.getTime());
+        console.log("getUTCDate() : "+d.getUTCDate());
+        console.log("getUTCDay() : "+d.getUTCDay());
+        console.log("getUTCFullYear() : "+d.getUTCFullYear());
+        console.log("getUTCMonth() : "+d.getUTCMonth());
+        console.log("getUTCHours() : "+d.getUTCHours());
+        console.log("getUTCMinutes() : "+d.getUTCMinutes());
+        console.log("getUTCSeconds() : "+d.getUTCSeconds());
+        console.log("getUTCMilliseconds() : "+d.getUTCMilliseconds());
+
+        console.log("setTime() : "+d.setTime());
+        console.log("setDate(13) : "+d.setDate(13));
+        console.log("setFullYear(2020) : "+d.setFullYear(2020,11,11));
+        console.log("setMonth(12) : "+d.setMonth(12));
+        console.log("setHours(22) : "+d.setHours(22));
+        console.log("setMinutes(15) : "+d.setMinutes(25));
+        console.log("setSeconds(30) : "+d.setSeconds(30));
+        console.log("setMilliseconds() : "+d.setMilliseconds());
+    </script>
+</body>
+</html>

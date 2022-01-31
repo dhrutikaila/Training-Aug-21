@@ -1,0 +1,80 @@
+<!--Suppose we have a div with specific height and width and we need to arrange more text into it. 
+    Use overflow properties.-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Practice Exercise 3</title>
+    <style>
+        div{
+            float:left;
+            margin: 10px;
+        }
+        .div1{
+            background-color: #eee;
+            width: 300px;
+            height: 100px;
+            border: 3px solid black;
+            overflow: visible;
+        }
+        .div2{
+            background-color: #eee;
+            width: 300px;
+            height: 100px;
+            border: 3px solid black;
+            overflow: scroll;
+        }
+        .div3{
+            background-color: #eee;
+            width: 300px;
+            height: 100px;
+            border: 3px solid black;
+            overflow: hidden;
+        }
+        .div4{
+            background-color: #eee;
+            width: 300px;
+            height: 100px;
+            border: 3px solid black;
+            overflow: auto;
+        }
+        .div5{
+            background-color: #eee;
+            width: 300px;
+            height: 100px;
+            border: 3px solid black;
+            overflow-x: scroll;
+            overflow-y: hidden;
+        }
+    </style>
+</head>
+<body>
+    <div class="div1">
+        Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor.
+         Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. 
+         Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim. 
+         Donec pede justo, fringilla vel, aliquet nec, vulputate eget, arcu
+    </div>
+
+    <div class="div2">
+        Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor.
+         Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. 
+         Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim. 
+         Donec pede justo, fringilla vel, aliquet nec, vulputate eget, arcu
+    </div>
+    <div class="div3">
+        Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor.
+         Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. 
+         Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim. 
+         Donec pede justo, fringilla vel, aliquet nec, vulputate eget, arcu
+    </div>
+    <div class="div5">
+        Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor.
+         Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. 
+         Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim. 
+         Donec pede justo, fringilla vel, aliquet nec, vulputate eget, arcu
+    </div>
+</body>
+</html>    

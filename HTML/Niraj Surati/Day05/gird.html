@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Grid</title>
+    <style>
+        .h-container{
+            display: grid;
+            grid-template-columns: auto auto auto auto;
+            grid-gap:4px;
+            padding: 10px;
+            background-color: cyan;
+            margin-bottom: 20px;
+        }
+        .h-container > div{
+            background-color: cornsilk;
+            padding: 20px 0;
+            font-size: 25px;
+            text-align: center;
+        }
+        .hc-container > div{
+            background-color: cornsilk;
+            padding: 20px 0;
+            font-size: 25px;
+            text-align: center;
+        }
+        .hc-container{
+            display: grid;
+            grid-template-columns: auto auto auto auto;
+            grid-template-rows: 100px 200px;
+            grid-gap:4px;
+            padding: 10px;
+            background-color: cyan;
+            margin-bottom: 20px;
+        }
+        .grid-container{
+            display: grid;
+            grid-gap:5px;
+            background-color: lavender;
+            padding: 10px;
+        }
+        .grid-item{
+            background-color: lightgray;
+            padding: 20px 0;
+            font-size: 25px;
+            text-align: center;
+        }
+        .item-1{
+            grid-column: 1 / span 2;
+            grid-row:1;
+        }
+        .item-2{
+            grid-column: 3;
+            grid-row: 1/ span 2;
+        }
+        .item-3{
+            grid-column: 1;
+            grid-row: 2;
+        }
+        .item-4{
+            grid-column: 2;
+            grid-row: 2;
+        }
+        .item-5{
+            grid-column: 1/ span 3;
+            grid-row: 3;
+        }
+
+    </style>
+</head>
+<body>
+    <div class="h-container">
+        <div>1</div>
+        <div>2</div>
+        <div>3</div>
+        <div>4</div>
+        <div>5</div>
+        <div>6</div>
+        <div>7</div>
+        <div>8</div>
+    </div>
+    <div class="hc-container">
+        <div>1</div>
+        <div>2</div>
+        <div>3</div>
+        <div>4</div>
+        <div>5</div>
+        <div>6</div>
+        <div>7</div>
+        <div>8</div>
+    </div>
+    <div class="grid-container">
+        <div class="grid-item item-1">1</div>
+        <div class="grid-item item-2">2</div>
+        <div class="grid-item item-3">3</div>
+        <div class="grid-item item-4">4</div>
+        <div class="grid-item item-5">5</div>
+    </div>
+</body>
+</html>

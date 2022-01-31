@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <p id="res"></p><hr>
+    <p id="res2"></p>
+    <p id="res3"></p>
+    <script>
+
+        var string = '{ "products" : [   { "Name": "Cheese", "Price" : 2.50, "Location": "Refrigerated foods"},  { "Name": "Crisps", "Price" : 3, "Location": "the Snack isle"},   { "Name": "Pizza", "Price" : 4, "Location": "Refrigerated foods"},   { "Name": "Chocolate", "Price" : 1.50, "Location": "the Snack isle"},   { "Name": "Self-raising flour", "Price" : 1.50, "Location": "Home baking"},   { "Name": "Ground almonds", "Price" : 3, "Location": "Home baking"} ]}'
+        localStorage.setItem('added-items', string)
+        document.getElementById("res").innerHTML = localStorage.getItem('added-items')
+
+        const obj = JSON.parse(string);
+
+        document.getElementById("res2").innerHTML = obj.product.name + " " + obj.product.price + " " + obj.product.location
+
+        const text = '{"name":"John", "birth":"1986-12-14", "city":"New York"}';
+        const obj2 = JSON.parse(text);
+        obj2.birth = new Date(obj2.birth);
+
+        document.getElementById("res").innerHTML = obj2.name + ", " + obj2.birth;
+
+
+
+    // var retrivedobject=localStorage.getItem('added-items')
+
+    // console.log(retrivedobject)
+    // localStorage.getItem('item',JSON.stringify(string));
+
+    // var parsedobject=JOSN.parse(retrivedobject)
+
+    // console.log(parseobject.items[0])
+    // document.getElementById("res3").innerHTML=localStorage.getItem("item")
+
+
+
+    // console.log(parseobject)
+
+    </script>
+</body>
+
+</html>

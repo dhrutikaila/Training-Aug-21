@@ -1,0 +1,955 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cars 24</title>
+    <!-- bootstrap -->
+    <link rel="shortcut icon" href="Assets/favicon.ico" type="image/x-icon">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous" />
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+        crossorigin="anonymous"></script>
+    <!-- jQuery -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <!-- font awesome -->
+    <script src="https://kit.fontawesome.com/e153b670c8.js" crossorigin="anonymous"></script>
+    <!-- slick -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.css">
+    <!-- external css -->
+    <link rel="stylesheet" href="CSS/index.css">
+</head>
+
+<body onload="loading()">
+    <!-- TOP NAVBAR -->
+    <nav class="navbar navbar-expand navbar-light bg-light p-0">
+        <div class="container-fluid">
+            <a class="navbar-brand bg-danger"></a>
+            <ul class="navbar-nav fw-bolder ">
+                <li class="nav-item">
+                    <a class="nav-link px-3" href="#">RC Transfer Status</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link px-3" href="register.html">Become Our Partner</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link px-3" href="#">FAQs</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link text-danger px-3">1800 258 5656 <small class="text-muted">8am - 10pm</small></a>
+                </li>
+            </ul>
+
+        </div>
+    </nav>
+    <!-- NAVBAR -->
+    <nav class="navbar navbar-expand navbar-light  bg-none">
+        <div class="container-fluid">
+            <div class="row w-100 navbar2">
+                <div class="col-xl-3 col-md-12 col-sm-12">
+                    <a class="navbar-brand" href="index.html"><img class="cars24-logo" src="Assets/cars24-logo.png"></a>
+                    <!-- Modal Button -->
+                    <button class="btn text-danger fw-bolder modal-btn" data-bs-toggle="modal"
+                        data-bs-target="#selectCity"><span class="pe-2" id="selectedCity">Select a City </span><i
+                            class="fas fa-caret-down"></i></button>
+                    <!-- Select City Modal -->
+                    <div class="modal " id="selectCity">
+                        <div class="modal-dialog modal-fullscreen">
+                            <div class="modal-content">
+                                <div class="modal-header container-fluid">
+                                    <h2 class="modal-title mt-5 text-secondary">Please setup location</h2>
+                                    <button class="btn-close" data-bs-dismiss="modal"></button>
+                                </div>
+                                <p class="container-fluid mt-2 text-secondary">Help us with your location so we can
+                                    serve you better.</p><br><br>
+                                <div class="container-fluid">
+                                    <div class="row">
+                                        <div class="col-xl-1 col-md-12 col-sm-12">
+                                            <p class="text-warning fw-bolder" data-bs-dismiss="modal"><i
+                                                    class="fas fa-chevron-left"></i>&nbsp;&nbsp;Back</p>
+                                        </div>
+                                        <div class="col-xl-11 col-md-12 col-sm-12">
+                                            <input type="text" placeholder="Search City"
+                                                class=" form-control w-75 py-2 outlineInput">
+                                        </div>
+                                    </div>
+                                </div><br><br>
+
+                                <div class="modal-body container-fluid">
+                                    <div>
+                                        <label class="text-secondary mb-3 ms-5 fs-6">Popular Cities</label>
+                                        <ul class="d-flex text-center">
+                                            <li class="p-3 mx-2 border border-secondary rounded city" data-bs-dismiss="modal"
+                                                value="New Delhi"><span><img class="modal-img"
+                                                        src="Assets/new-delhi.png" alt="newDelhi-img"></span>
+                                                <h6 class="text-center">New Delhi</h6>
+                                            </li>
+                                            <li class="p-3 mx-2 border border-secondary rounded city" data-bs-dismiss="modal"
+                                                value="Noida">
+                                                <span><img class="modal-img" src="Assets/noida.png"
+                                                        alt="noida-img"></span>
+                                                <h6 class="text-center">Noida</h6>
+                                            </li>
+                                            <li class="p-3 mx-2 border border-secondary rounded city" data-bs-dismiss="modal"
+                                                value="Gurgaon">
+                                                <span><img class="modal-img" src="Assets/gurgaon.png"
+                                                        alt="gurgaon-img"></span>
+                                                <h6 class="text-center">Gurgaon</h6>
+                                            </li>
+                                            <li class="p-3 mx-2 border border-secondary rounded city" data-bs-dismiss="modal"
+                                                value="Mumbai">
+                                                <span><img class="modal-img" src="Assets/mumbai.png"
+                                                        alt="mumbai-img"></span>
+                                                <h6 class="text-center">Mumbai</h6>
+                                            </li>
+                                            <li class="p-3 mx-2 border border-secondary rounded city" data-bs-dismiss="modal"
+                                                value="Pune">
+                                                <span><img class="modal-img" src="Assets/pune.png"
+                                                        alt="pune-img"></span>
+                                                <h6 class="text-center">Pune</h6>
+                                            </li>
+                                            <li class="p-3 mx-2 border border-secondary rounded city" data-bs-dismiss="modal"
+                                                value="Bengaluru">
+                                                <span><img class="modal-img" src="Assets/bengaluru.png"
+                                                        alt="bengaluru-img"></span>
+                                                <h6 class="text-center">Bengaluru</h6>
+                                            </li>
+                                            <li class="p-3 mx-2 border border-secondary rounded city" data-bs-dismiss="modal"
+                                                value="Hyderabad">
+                                                <span><img class="modal-img" src="Assets/hyderabad.png"
+                                                        alt="hyderabad-img"></span>
+                                                <h6 class="text-center">Hyderabad</h6>
+                                            </li>
+                                            <li class="p-3 mx-2 border border-secondary rounded city" data-bs-dismiss="modal"
+                                                value="Chennai">
+                                                <span><img class="modal-img" src="Assets/chennai.png"
+                                                        alt="chennai-img"></span>
+                                                <h6 class="text-center">Chennai</h6>
+                                            </li>
+                                            <li class="p-3 mx-2 border border-secondary rounded city" data-bs-dismiss="modal"
+                                                value="Kolkata">
+                                                <span><img class="modal-img" src="Assets/kolkata.png"
+                                                        alt="kolkata-img"></span>
+                                                <h6 class="text-center">Kolkata</h6>
+                                            </li>
+                                            <li class="p-3 mx-2 border border-secondary rounded city" data-bs-dismiss="modal"
+                                                value="Ahmedabad">
+                                                <span><img class="modal-img" src="Assets/ahmedabad.png"
+                                                        alt="ahmedabad-img"></span>
+                                                <h6 class="text-center">Ahmedabad</h6>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                    <div>
+                                        <label class="text-secondary mb-3 ms-5 fs-6">Other Cities</label>
+                                        <ul class="d-flex text-center overflow-scroll fw-bolder otherCities flex-wrap">
+                                            <!-- <li class="p-2 m-2 border border-secondary rounded city" data-bs-dismiss="modal"
+                                                value="Agra">Agra
+                                            </li>
+                                            <li class="p-2 m-2 border border-secondary rounded city" data-bs-dismiss="modal"
+                                                value="Ahmednagar">
+                                                Ahmednagar</li>
+                                            <li class="p-2 m-2 border border-secondary rounded city" data-bs-dismiss="modal"
+                                                value="Ajmer">Ajmer
+                                            </li>
+                                            <li class="list-group-item m-2 border border-secondary rounded"
+                                                data-bs-dismiss="modal" value="Akola">Akola</li>
+                                            <li class="p-2 m-2 border border-secondary rounded city" data-bs-dismiss="modal"
+                                                value="Alappuzha">
+                                                Alappuzha</li>
+                                            <li class="p-2 m-2 border border-secondary rounded city" data-bs-dismiss="modal"
+                                                value="Aligarh">
+                                                Aligarh</li>
+                                            <li class="p-2 m-2 border border-secondary rounded city" data-bs-dismiss="modal"
+                                                value="Allahabad">
+                                                Allahabad</li>
+                                            <li class="p-2 m-2 border border-secondary rounded city" data-bs-dismiss="modal"
+                                                value="Alwar">Alwar
+                                            </li>
+                                            <li class="p-2 m-2 border border-secondary rounded city" data-bs-dismiss="modal"
+                                                value="Ambedkar Nagar">Ambedkar Nagar</li>
+                                            <li class="p-2 m-2 border border-secondary rounded city" data-bs-dismiss="modal"
+                                                value="Amravati">
+                                                Amravati</li>
+                                            <li class="p-2 m-2 border border-secondary rounded city" data-bs-dismiss="modal"
+                                                value="Amreli">
+                                                Amreli</li>
+                                            <li class="p-2 m-2 border border-secondary rounded city" data-bs-dismiss="modal"
+                                                value="Amritsar">
+                                                Amritsar</li>
+                                            <li class="p-2 m-2 border border-secondary rounded city" data-bs-dismiss="modal"
+                                                value="Anand">Anand
+                                            </li>
+                                            <li class="p-2 m-2 border border-secondary rounded city" data-bs-dismiss="modal"
+                                                value="Ananthapur">
+                                                Ananthapur</li>
+                                            <li class="p-2 m-2 border border-secondary rounded city" data-bs-dismiss="modal"
+                                                value="Asansol">
+                                                Asansol</li>
+                                            <li class="p-2 m-2 border border-secondary rounded city" data-bs-dismiss="modal"
+                                                value="Assandh">
+                                                Assandh</li>
+                                            <li class="p-2 m-2 border border-secondary rounded city" data-bs-dismiss="modal"
+                                                value="Aurangabad">
+                                                Aurangabad</li>
+                                            <li class="p-2 m-2 border border-secondary rounded city" data-bs-dismiss="modal"
+                                                value="Balasore">
+                                                Balasore</li>
+                                            <li class="p-2 m-2 border border-secondary rounded city" data-bs-dismiss="modal"
+                                                value="Banda">Banda
+                                            </li>
+                                            <li class="p-2 m-2 border border-secondary rounded city" data-bs-dismiss="modal"
+                                                value="Barabanki">
+                                                Barabanki</li>
+                                            <li class="p-2 m-2 border border-secondary rounded city" data-bs-dismiss="modal"
+                                                value="Baramati">
+                                                Baramati</li>
+                                            <li class="p-2 m-2 border border-secondary rounded city" data-bs-dismiss="modal"
+                                                value="Bareilly">
+                                                Bareilly</li>
+                                            <li class="p-2 m-2 border border-secondary rounded city" data-bs-dismiss="modal"
+                                                value="Basti">Basti
+                                            </li>
+                                            <li class="p-2 m-2 border border-secondary rounded city" data-bs-dismiss="modal"
+                                                value="Bathinda">
+                                                Bathinda</li>
+                                            <li class="p-2 m-2 border border-secondary rounded city" data-bs-dismiss="modal"
+                                                value="Belgaum">
+                                                Belgaum</li>
+                                            <li class="p-2 m-2 border border-secondary rounded city" data-bs-dismiss="modal"
+                                                value="Bhavnagar">
+                                                Bhavnagar</li>
+                                            <li class="p-2 m-2 border border-secondary rounded city" data-bs-dismiss="modal"
+                                                value="Bhilai">
+                                                Bhilai</li>
+                                            <li class="p-2 m-2 border border-secondary rounded city" data-bs-dismiss="modal"
+                                                value="Bhopal">
+                                                Bhopal</li>
+                                            <li class="p-2 m-2 border border-secondary rounded city" data-bs-dismiss="modal"
+                                                value="Bhubaneswar">Bhubaneswar</li>
+                                            <li class="p-2 m-2 border border-secondary rounded city" data-bs-dismiss="modal"
+                                                value="Bikaner">
+                                                Bikaner</li>
+                                            <li class="p-2 m-2 border border-secondary rounded city" data-bs-dismiss="modal"
+                                                value="Chandigarh">
+                                                Chandigarh</li>
+                                            <li class="p-2 m-2 border border-secondary rounded city" data-bs-dismiss="modal"
+                                                value="Coimbatore">
+                                                Coimbatore</li>
+                                            <li class="p-2 m-2 border border-secondary rounded city" data-bs-dismiss="modal"
+                                                value="Cuttack">
+                                                Cuttack</li>
+                                            <li class="p-2 m-2 border border-secondary rounded city" data-bs-dismiss="modal"
+                                                value="Darbhanga">
+                                                Darbhanga</li>
+                                            <li class="p-2 m-2 border border-secondary rounded city" data-bs-dismiss="modal"
+                                                value="Dehradun">
+                                                Dehradun</li>
+                                            <li class="p-2 m-2 border border-secondary rounded city" data-bs-dismiss="modal"
+                                                value="Dharwad">
+                                                Dharwad</li>
+                                            <li class="p-2 m-2 border border-secondary rounded city" data-bs-dismiss="modal"
+                                                value="Etawah">
+                                                Etawah</li>
+                                            <li class="p-2 m-2 border border-secondary rounded city" data-bs-dismiss="modal"
+                                                value="Faridabad">
+                                                Faridabad</li>
+                                            <li class="p-2 m-2 border border-secondary rounded city" data-bs-dismiss="modal"
+                                                value="Firozabad">
+                                                Firozabad</li>
+                                            <li class="p-2 m-2 border border-secondary rounded city" data-bs-dismiss="modal"
+                                                value="Gandhidham">
+                                                Gandhidham</li>
+                                            <li class="p-2 m-2 border border-secondary rounded city" data-bs-dismiss="modal"
+                                                value="Gandhinagar">Gandhinagar</li>
+                                            <li class="p-2 m-2 border border-secondary rounded city" data-bs-dismiss="modal"
+                                                value="Ghaziabad">
+                                                Ghaziabad</li>
+                                            <li class="p-2 m-2 border border-secondary rounded city" data-bs-dismiss="modal"
+                                                value="Goa">Goa
+                                            </li>
+                                            <li class="p-2 m-2 border border-secondary rounded city" data-bs-dismiss="modal"
+                                                value="Haridwar">
+                                                Haridwar</li>
+                                            <li class="p-2 m-2 border border-secondary rounded city" data-bs-dismiss="modal"
+                                                value="Hathras">
+                                                Hathras</li>
+                                            <li class="p-2 m-2 border border-secondary rounded city" data-bs-dismiss="modal"
+                                                value="Himatnagar">
+                                                Himatnagar</li>
+                                            <li class="p-2 m-2 border border-secondary rounded city" data-bs-dismiss="modal"
+                                                value="Howrah">
+                                                Howrah</li>
+                                            <li class="p-2 m-2 border border-secondary rounded city" data-bs-dismiss="modal"
+                                                value="Indore">
+                                                Indore</li>
+                                            <li class="p-2 m-2 border border-secondary rounded city" data-bs-dismiss="modal"
+                                                value="Jabalpur">
+                                                Jabalpur</li>
+                                            <li class="p-2 m-2 border border-secondary rounded city" data-bs-dismiss="modal"
+                                                value="Jaipur">
+                                                Jaipur</li>
+                                            <li class="p-2 m-2 border border-secondary rounded city" data-bs-dismiss="modal"
+                                                value="Jalandhar">
+                                                Jalandhar</li>
+                                            <li class="p-2 m-2 border border-secondary rounded city" data-bs-dismiss="modal"
+                                                value="Jhansi">
+                                                Jhansi</li> -->
+                                        </ul>
+                                    </div>
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+                <div class="col-xl-9 col-sm-12 col-sm-12">
+                    <!-- <a href="#" class="toggle-button text-decoration-none"><i class="fas fa-bars"></i></a> -->
+                    <div class="navbar-links">
+                        <ul class=" navbar-nav fw-bolder float-end">
+                            <li class="nav-item ">
+                                <a class="nav-link bg-danger text-light rounded-pill px-3" href="#">New</a>
+                            </li>
+                            <li class="nav-item text-nowrap ">
+                                <a class="nav-link px-3" href="#">Buy Used Car</a>
+                            </li>
+                            <li class="nav-item ">
+                                <a class="nav-link px-3" href="#">Branches</a>
+                            </li>
+                            <li class="nav-item text-nowrap ">
+                                <a class="nav-link px-3" href="login.html" id="loginButton"><i class="far fa-user"></i> Login/Sign Up</a>
+                            </li>
+                        </ul>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </nav>
+    <hr>
+
+    <!-- Home Page Div1 (Sell your car at the best price)-->
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-sm-12 col-lg-6 col-xl-6 ">
+                <h1 class="mt-3 ms-5" style="color: #465166;">Sell Your Car At The Best Price</h1>
+                <div class="pt-4 pb-3 ">
+                    <p class="fs-5 pb-3 ms-5 fw-bolder text-secondary">Enter your car details to book an appointment.
+                    </p>
+                    <p class="fs-6 ms-5">Select Your Car Brand</p>
+
+                    <div class="d-flex flex-wrap carBrandList mx-3 text-center ">
+                        <a href="" class="border border-secondary rounded p-2 m-2"><img class="carBrandLogo"
+                                src="Assets/maruti-suzuki.png"></a>
+                        <a href="" class="border border-secondary rounded p-2 m-2"><img class="carBrandLogo"
+                                src="Assets/hyundai.png"></a>
+                        <a href="" class="border border-secondary rounded p-2 m-2"><img class="carBrandLogo"
+                                src="Assets/honda.png"></a>
+                        <a href="" class="border border-secondary rounded p-2 m-2"><img class="carBrandLogo"
+                                src="Assets/tata.png"></a>
+                        <a href="" class="border border-secondary rounded p-2 m-2"><img class="carBrandLogo"
+                                src="Assets/toyota.png"></a>
+                        <a href="" class="border border-secondary rounded p-2 m-2"><img class="carBrandLogo"
+                                src="Assets/chevrolet.png"></a>
+                        <a href="" class="border border-secondary rounded p-2 m-2"><img class="carBrandLogo"
+                                src="Assets/ford.png"></a>
+                        <a href="" class="border border-secondary rounded p-2 m-2"><img class="carBrandLogo"
+                                src="Assets/mahindra.png"></a>
+                        <a href="" class="border border-secondary rounded p-2 m-2"><img class="carBrandLogo"
+                                src="Assets/skoda.png"></a>
+                        <a href="" class="border border-secondary rounded p-2 m-2"><img class="carBrandLogo"
+                                src="Assets/volkswagen.png"></a>
+                        <a href="" class="border border-secondary rounded p-2 m-2"><img class="carBrandLogo"
+                                src="Assets/nissan.png"></a>
+                        <a href="" class="border border-secondary rounded p-2 m-2"><img class="carBrandLogo"
+                                src="Assets/renault.png"></a>
+                        <a href="" class="border border-secondary rounded p-2 m-2"><img class="carBrandLogo"
+                                src="Assets/fiat.png"></a>
+                        <a href="" class="border border-secondary rounded p-2 m-2"><img class="carBrandLogo"
+                                src="Assets/mercedes-benz.png"></a>
+                        <a href=""
+                            class="border border-secondary rounded py-3 px-4 m-2 text-center text-decoration-none text-danger fw-bolder ">MORE
+                        </a>
+                    </div>
+                    <p class="fs-6 ms-5 mt-3 text-muted">Looking to buy a pre-owned car? <a
+                            class="fs-6 text-danger text-decoration-none fw-bolder mt-3" href="CarsData.html"> VIEW ALL CARS</a></p>
+
+                </div>
+            </div>
+            <div class="col-sm-12 col-lg-6 col-xl-6 ">
+                <img class="homePage-img" src="Assets/homePage-img.png">
+            </div>
+        </div>
+    </div>
+
+    <!-- Home Page Div2 (Sell Your Car In 3 Easy Steps)-->
+    <div class="container-fluid">
+        <div>
+            <h4 class="my-2 ms-5" style="color: #465166;">Sell Your Car In 3 Easy Steps</h4>
+            <p class="my-3 ms-5 text-secondary">Enter your car details to get an instant estimated selling price.</p>
+            <ul class="row d-flex text-center ">
+                <li class="col-xl-4 col-lg-12 col-sm-12 "><img src="Assets/sellCar-img1.svg"><br>
+                    <strong class="fs-4">Online Evaluation</strong>
+                    <p class="fs-6">Enter your car details to get an instant estimated selling price.</p>
+                </li>
+                <li class="col-xl-4 col-lg-12 col-sm-12"><img src="Assets/sellCar-img2.svg"><br>
+                    <strong class="fs-4">Car Inspection</strong>
+                    <p class="fs-6">Book an appointment for vehicle inspection at home or your nearest CARS24 Branch.
+                    </p>
+                </li>
+                <li class="col-xl-4 col-lg-12 col-sm-12"><img src="Assets/sellCar-img3.svg"><br>
+                    <strong class="fs-4">Sell at Best Price</strong>
+                    <p class="fs-6">Get the best price through our online auction and get paid instantly. We also take
+                        care of the RC Transfer for free.</p>
+                </li>
+            </ul>
+        </div>
+    </div>
+
+    <!-- Home Page Day3 (Why Choose Us?)-->
+    <div class="container-fluid">
+        <div>
+            <h4 class="my-3 ms-5 " style="color:#465166;">Why Choose Us?</h4>
+            <ul class="row d-flex text-center ">
+                <li class="col-xl-3 col-md-6 col-sm-12"><img src="Assets/chooseUs-img1.svg"><br>
+                    <strong class="fs-5 text-secondary">Sell in 1 Hour</strong>
+                    <p class="fs-5 text-secondary">at your place or ours.</p>
+                </li>
+                <li class="col-xl-3 col-md-6 col-sm-12"><img src="Assets/chooseUs-img2.svg"><br>
+                    <strong class="fs-5 text-secondary">Best Price</strong>
+                    <p class="fs-5 text-secondary">through our online auction.</p>
+                </li>
+                <li class="col-xl-3 col-md-6 col-sm-12"><img src="Assets/chooseUs-img3.svg"><br>
+                    <strong class="fs-5 text-secondary">Instant Payment</strong>
+                    <p class="fs-5 text-secondary">in your bank account.</p>
+                </li>
+                <li class="col-xl-3 col-md-6 col-sm-12"><img src="Assets/chooseUs-img4.svg"><br>
+                    <strong class="fs-5 text-secondary">Free RC Transfer</strong>
+                    <p class="fs-5 text-secondary">we take care of it.</p>
+                </li>
+            </ul>
+        </div>
+    </div>
+
+    <!-- Home Page Div4 (See what experts say)-->
+    <div class="container-fluid">
+        <div class="bg-primary p-3">
+            <h4 class="my-3 ms-5 text-light">See What Experts Say</h4>
+            <div class="pt-3 carousel slide" id="slider" data-bs-ride="carousel">
+                <div class="carousel-inner" role="listbox">
+                    <div class="carousel-item active">
+                        <div class="row d-flex bg-light p-4 text-center">
+                            <div class="col-xl-3 col-lg-6 col-sm-6">
+                                <img class="experts-img" src="Assets/Ashish_Masih.jpg" alt="">
+                            </div>
+                            <div class="col-xl-3 col-lg-6 col-sm-6">
+                                <h4>Ashish Masih</h4>
+                                <p>Editor-in-chief, Autoportal</p>
+                                <h6 class="text-secondary pt-4">If i could offer one advice, never compromise with RC
+                                    transfer when selling your car. I only trust CARS24.</h6>
+                            </div>
+                            <div class="col-xl-3 col-lg-6 col-sm-6 expert-2">
+                                <img class="experts-img" src="Assets/Siddharth_Sharma.jpg" alt="">
+                            </div>
+                            <div class="col-xl-3 col-lg-6 col-sm-6 expert-2">
+                                <h4>Siddharth Sharma</h4>
+                                <p>TV Host,CNN News18 Tech& Auto Show</p>
+                                <h6 class="text-secondary pt-4">Dealing with cash is an old way of selling a car. CARS24
+                                    tranfers payment in your bank account within seconds.</h6>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="carousel-item">
+                        <div class=" row d-flex bg-light p-4 text-center">
+                            <div class="col-xl-3 col-lg-6 col-sm-6">
+                                <img class="experts-img" src="Assets/Kranti_Sambhav.jpg" alt="">
+                            </div>
+                            <div class="col-xl-3 col-lg-6 col-sm-6">
+                                <h4>Kranti Shambhav</h4>
+                                <p>Creative Lead, Auto - Times Network</p>
+                                <h6 class="text-secondary pt-4">CARS24 knows the current market demand of your car and
+                                    hence the price that you get on their website is the most genuine price.</h6>
+                            </div>
+                            <div class="col-xl-3 col-lg-6 col-sm-6 expert-4">
+                                <img class="experts-img" src="Assets/Karun_Chandok.jpg" alt="">
+                            </div>
+                            <div class="col-xl-3 col-lg-6 col-sm-6 expert-4">
+                                <h4>Karun Chandok</h4>
+                                <p>Formula 1 Racing Driver</p>
+                                <h6 class="text-secondary pt-4">I discovered CARS24 on my last trip to India. Within two
+                                    hours I went in there, sorted out the paperwork and got the payment into the bank
+                                    account – it was really that simple.</h6>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <a href="#slider" class="carousel-control-prev" data-bs-slide="prev">
+                    <span class="carousel-control-prev-icon"></span>
+                </a>
+                <a href="#slider" class="carousel-control-next" data-bs-slide="next">
+                    <span class="carousel-control-next-icon"></span>
+                </a>
+            </div>
+        </div>
+    </div><br>
+
+    <!-- Home  page div5 (Find Nearest Branch) -->
+    <div class="container-fluid mt-4">
+        <div>
+            <h4 class="my-3 ms-5" style="color:#465166;">Find Nearest Branch</h4>
+            <div class="input-group w-25 h-25 ms-5 my-4">
+                <input class="form-control" type="text" placeholder="Search for your location">
+                <a href="" class="input-group-text text-danger fw-bolder text-decoration-none"><i
+                        class="fas fa-globe"></i>&nbsp;&nbsp;LOCATE ME</a>
+            </div>
+            <!-- <img class="nearestBranch-img" src="Assets/homePage-img2.png"> -->
+            <div class="slick-slider d-flex ms-5">
+                <div class="card location-card mx-2">
+                    <div class="card-body">
+                        <h5>Rani Bagh</h5>
+                        <p class="text-secondary pt-2 "><span>1st Floor, WZ3428 B, OLD NO WZ-1Rani Bagh, Mahindra Park,
+                                Shakoor Basti </span><span>Near Punjabi Zaika Restaurant</span></p>
+                    </div>
+                </div>
+                <div class="card location-card mx-2">
+                    <div class="card-body">
+                        <h5>Multan Nagar</h5>
+                        <p class="text-secondary pt-2 "><span>First Floor,10, Inder Enclave, Paschim Vihar, Main Rohtak
+                                road
+                            </span><span>Indian Bank</span></p>
+                    </div>
+                </div>
+                <div class="card location-card mx-2">
+                    <div class="card-body">
+                        <h5>East-Of-Kailash</h5>
+                        <p class="text-secondary pt-2 "><span>16 A, Ground Floor Sant Nagar GK1
+                            </span><span>Near Jio Store</span></p>
+                    </div>
+                </div>
+                <div class="card location-card mx-2">
+                    <div class="card-body">
+                        <h5>Laxmi Nagar</h5>
+                        <p class="text-secondary pt-2 "><span>A-12, Ground Floor, Priyadarshini Vihar
+                            </span><span>Near Lifeline Hospital</span></p>
+                    </div>
+                </div>
+                <div class="card location-card mx-2">
+                    <div class="card-body">
+                        <h5>Vikaspuri</h5>
+                        <p class="text-secondary pt-2 "><span>Shop No.1, Ground Floor, 114, F-Block, Vikaspuri
+                            </span><span>ICICI Bank</span></p>
+                    </div>
+                </div>
+                <div class="card location-card mx-2">
+                    <div class="card-body">
+                        <h5>Karol Bagh</h5>
+                        <p class="text-secondary pt-2 "><span>Ground Floor, 886/1, East Park Road
+                            </span><span>Near Maruti Suzuki Arena Showroom</span></p>
+                    </div>
+                </div>
+                <div class="card location-card mx-2">
+                    <div class="card-body">
+                        <h5>Rohini - Sector 11</h5>
+                        <p class="text-secondary pt-2 "><span>C1-210, 211,Ground floor, Sector-11, Rohini
+                            </span><span>Indraprastha Gas Limited IGL CNG</span></p>
+                    </div>
+                </div>
+                <div class="card location-card mx-2">
+                    <div class="card-body">
+                        <h5>Rajouri Garden</h5>
+                        <p class="text-secondary pt-2 "><span>166A LIG Flat Rajouri Garden
+                            </span><span>Opposite J Block Market, Rajouri Garden Extension</span></p>
+                    </div>
+                </div>
+            </div>
+            <button type="button" class="btn btn-warning w-25 fw-bolder ms-5 my-4 sellCar-btn">SELL MY CAR</button>
+        </div>
+    </div>
+
+    <!-- Home  page div6 (4 Lakh+ Happy Sellers and Counting) -->
+    <div class="container-fluid mt-5">
+        <div>
+            <h4 class="my-3 ms-5" style="color:#465166;">4 Lakh+ Happy Sellers and Counting</h4>
+            <div class="slick-slider2 d-flex ms-5">
+                <div class="shadow card seller-card mx-2">
+                    <div class="card-body ">
+                        <div class="d-flex">
+                            <div>
+                                <p class="rounded-circle bg-primary p-3 text-light fw-bolder seller-symbol">
+                                    &nbsp;S&nbsp;</p>
+                            </div>
+                            <div class="ms-3">
+                                <h6 class="fw-bolder">Sunanda</h6>
+                                <p class="text-secondary ">Sold Toyota Corolla Altis</p>
+                            </div>
+                            <div class="ms-5 align-items-end">
+                                <div class="text-warning">
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                </div>
+                                <p class="bg-light text-center mt-2">Green Park</p>
+                            </div>
+                        </div>
+                        <div>
+                            <p class="text-secondary">No fuss sale and payment. Courteous staff. Knowledgable evaluator.
+                                Great price highly recommended to sell car. I am yet to purchase however from them. </p>
+                        </div>
+                    </div>
+                </div>
+                <div class="shadow card seller-card mx-2">
+                    <div class="card-body">
+                        <div class="d-flex">
+                            <div>
+                                <p class="rounded-circle bg-primary p-3 text-light fw-bolder seller-symbol">AB</p>
+                            </div>
+                            <div class="ms-3">
+                                <h6 class="fw-bolder">Aakash Brahmbhatt</h6>
+                                <p class="text-secondary ">Sold Hyundai Elite i20</p>
+                            </div>
+                            <div class="ms-5 align-items-end">
+                                <div class="text-warning">
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                </div>
+                                <p class="bg-light text-center mt-2">HI-OP-Road</p>
+                            </div>
+                        </div>
+                        <div>
+                            <p class="text-secondary">Amazing service. House inspection, pick up facilities, spot
+                                document and instant money transfer.
+                                Amazing staff. (Waghodia Road)
+                                Ankur and Team. Much appreciated for the brilliant deal and services!!!!</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="shadow card seller-card mx-2">
+                    <div class="card-body">
+                        <div class="d-flex">
+                            <div>
+                                <p class="rounded-circle bg-primary p-3 text-light fw-bolder seller-symbol">NS</p>
+                            </div>
+                            <div class="ms-3">
+                                <h6 class="fw-bolder">Nilesh Sikotara</h6>
+                                <p class="text-secondary ">Sold Honda WR-v</p>
+                            </div>
+                            <div class="ms-5 align-items-end">
+                                <div class="text-warning">
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                </div>
+                                <p class="bg-light text-center mt-2">HI-West-AMD</p>
+                            </div>
+                        </div>
+                        <div>
+                            <p class="text-secondary">Highly professional & customer oriented approach. Staff are very
+                                co-operative & having a all technical knowledge & customer friendly. Like the process
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <div class="shadow card seller-card mx-2">
+                    <div class="card-body">
+                        <div class="d-flex">
+                            <div>
+                                <p class="rounded-circle bg-primary p-3 text-light fw-bolder seller-symbol">RPK</p>
+                            </div>
+                            <div class="ms-3">
+                                <h6 class="fw-bolder">Roshni Prabhakar Kadam</h6>
+                                <p class="text-secondary ">Sold Hyundai i10</p>
+                            </div>
+                            <div class="ms-5 align-items-end">
+                                <div class="text-warning">
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                </div>
+                                <p class="bg-light text-center mt-2">HI-Mira Road</p>
+                            </div>
+                        </div>
+                        <div>
+                            <p class="text-secondary">I must say that CARS24 is one of the best site for those who want
+                                to sell / buy the used cars.My overall experience is very good and i am totally
+                                satisfied with there service .
+                                Thankyou Cars24 team for giving me the best price for my car.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <div class="shadow card seller-card mx-2">
+                    <div class="card-body">
+                        <div class="d-flex">
+                            <div>
+                                <p class="rounded-circle bg-primary p-3 text-light fw-bolder seller-symbol">
+                                    &nbsp;S&nbsp;</p>
+                            </div>
+                            <div class="ms-3">
+                                <h6 class="fw-bolder">Sandeep</h6>
+                                <p class="text-secondary ">Sold Hyundai i10</p>
+                            </div>
+                            <div class="ms-5 align-items-end">
+                                <div class="text-warning">
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                </div>
+                                <p class="bg-light text-center mt-2">Faridabad Sec 7</p>
+                            </div>
+                        </div>
+                        <div>
+                            <p class="text-secondary">They are one best retailer in 2nd hand cars, their process is so
+                                smooth and clear.They have the best teams for inspection & explained all the aspects and
+                                impact of my vehicle. Overall the service is great!
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Home  page div7 (In the News) -->
+    <div class="container-fluid mt-5 ">
+        <div>
+            <h4 class="my-3 ms-5" style="color:#465166;">In the News</h4>
+            <div class="row">
+                <div class="col-xl-4 col-lg-6 col-sm-12">
+                    <div class="card news-card ms-4">
+                        <div class="card-body">
+                            <img src="Assets/the-hindu.png">
+                            <p class="pt-5">Disrupting the used car market, one vehicle at a time!</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-xl-4 col-lg-6 col-sm-12">
+                    <div class="card news-card ms-4">
+                        <div class="card-body">
+                            <img src="Assets/business-standard.png">
+                            <p class="pt-5">Selling a used car made easy!</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-xl-4 col-lg-6 col-sm-12">
+                    <div class="card news-card ms-4">
+                        <div class="card-body">
+                            <img src="Assets/business-line.png">
+                            <p class="pt-5">Cars24.com is trying to drive the supply-side with its staff at the wheel
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="row mt-5 news-cards">
+                <div class="col-xl-4 col-lg-6 col-sm-12">
+                    <div class="card news-card ms-4">
+                        <div class="card-body">
+                            <img src="Assets/money-control.png">
+                            <p class="pt-5">How CARS24 is shaking up the used car industry in India through technology
+                                innovation</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-xl-4 col-lg-6 col-sm-12">
+                    <div class="card news-card ms-4">
+                        <div class="card-body">
+                            <img src="Assets/toi.png">
+                            <p class="pt-5">With 100,000 cars sold at its branches annually, this company is set to
+                                transform India’s used car sector.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-xl-4 col-lg-6 col-sm-12">
+                    <div class="card news-card ms-4">
+                        <div class="card-body">
+                            <img src="Assets/exchange-media.png">
+                            <p class="pt-5">We don’t buy used cars. We buy your car, says CARS24
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Home  page div8 (Ready to Sell Your Car?) -->
+    <div class="contaiber-fluid mt-5">
+        <div class="row" style="background-color: #eaeff3;">
+            <div class="col-xl-6 col-sm-12">
+                <div class="sell-car-col">
+                    <h2>Ready to Sell Your Car?</h2>
+                    <p class="text-secondary mt-3 w-75">Sell your car at your nearest CARS24 branch or from the comfort
+                        of
+                        your home in minutes! Get paid instantly with free RC transfer.</p>
+                    <button type="button" class="btn btn-warning w-50 fw-bolder text-light mt-4 div8-btn">SELL MY
+                        CAR</button>
+                </div>
+            </div>
+            <div class="col-xl-6 col-sm-12">
+                <img class="home-img3" src="Assets/homePage-img3.png">
+            </div>
+        </div>
+    </div>
+
+    <!-- Need Help -->
+    <div>
+        <button class="btn btn-warning text-light p-2 fw-bolder position-fixed"><i
+                class="fas fa-comments"></i>&nbsp;Need Help?</button>
+    </div>
+
+    <!-- footer -->
+    <footer class="container-fluid ps-5" style="background-color: #465166;">
+        <div class="row pt-5">
+            <div class="col-xl-3 col-sm-6" style="color: #d6d9dd;">
+                <h5>KEEP IN TOUCH</h5>
+                <div class="d-flex">
+                    <a href="" class="fs-2 text-light mx-2"><i class="fab fa-facebook-square"></i></a>
+                    <a href="" class="fs-2 text-light mx-2"><i class="fab fa-twitter"></i></a>
+                    <a href="" class="fs-2 text-light mx-2"><i class="fab fa-youtube"></i></a>
+                    <a href="" class="fs-2 text-light mx-2"><i class="fab fa-linkedin"></i></i></a>
+                    <a href="" class="fs-2 text-light mx-2"><i class="fab fa-instagram"></i></a>
+                </div>
+                <p>EXPERIENCE CARS24 APP ON MOBILE</p>
+                <p>POWERED BY CARS24</p>
+                <div class="d-flex">
+                    <img class="w-50 h-50" src="Assets/play-store.png" alt="">
+                    <img class="w-50 h-50 ms-3" src="Assets/app-store.png" alt="">
+                </div>
+                <p class="mt-2" style="font-size: small;">®2021 www.cars24.com &nbsp;All rights reserved</p>
+            </div>
+            <div class="col-xl-3 col-sm-6 ftr-usefulLinks">
+                <h5 style="color: #d6d9dd;">USEFUL LINKS</h5>
+                <div class="d-flex flex-wrap">
+                    <a href="" class="text-decoration-none text-light">Contact Us |&nbsp;</a>
+                    <a href="" class="text-decoration-none text-light">About Us |&nbsp;</a>
+                    <a href="" class="text-decoration-none text-light mb-2">Privacy Policy |&nbsp;</a>
+                    <a href="" class="text-decoration-none text-light">Terms abd Conditions |&nbsp;</a>
+                    <a href="" class="text-decoration-none text-light">FAQ |&nbsp;</a>
+                    <a href="" class="text-decoration-none text-light mb-2">Sitemap |&nbsp;</a>
+                    <a href="" class="text-decoration-none text-light">Testimonials |&nbsp;</a>
+                    <a href="" class="text-decoration-none text-light">Blog |&nbsp;</a>
+                    <a href="" class="text-decoration-none text-light mb-2">Branches |&nbsp;</a>
+                    <a href="" class="text-decoration-none text-light">We're Hiring! |&nbsp;</a>
+                    <a href="" class="text-decoration-none text-light mb-2">Become Our Partner |&nbsp;</a>
+                    <a href="" class="text-decoration-none text-light">Need a Loan |&nbsp;</a>
+                    <a href="" class="text-decoration-none text-light mb-2">Own a Franchise |&nbsp;</a>
+                    <a href="" class="text-decoration-none text-light">RC Transfer Status |&nbsp;</a>
+                    <a href="" class="text-decoration-none text-light mb-2">CARS24 Finance |&nbsp;</a>
+                    <a href="" class="text-decoration-none text-light">CARS24 Franchise Partners |&nbsp;</a>
+                    <a href="" class="text-decoration-none text-light">Investors |&nbsp;</a>
+                </div>
+            </div>
+            <div class="col-xl-3 col-sm-6 ftr-topBrands">
+                <h5 style="color: #d6d9dd;">TOP BRANDS</h5>
+                <div class="d-flex flex-wrap">
+                    <a href="" class="text-decoration-none text-light">Maruti Suzuki |&nbsp;</a>
+                    <a href="" class="text-decoration-none text-light">Hyundai |&nbsp;</a>
+                    <a href="" class="text-decoration-none text-light mb-2">Honda |&nbsp;</a>
+                    <a href="" class="text-decoration-none text-light">Terms abd Conditions |&nbsp;</a>
+                    <a href="" class="text-decoration-none text-light">Tata |&nbsp;</a>
+                    <a href="" class="text-decoration-none text-light mb-2">Toyota |&nbsp;</a>
+                    <a href="" class="text-decoration-none text-light">Chevrolet |&nbsp;</a>
+                    <a href="" class="text-decoration-none text-light">Ford |&nbsp;</a>
+                    <a href="" class="text-decoration-none text-light">Mahindra |&nbsp;</a>
+                    <a href="" class="text-decoration-none text-light mb-2">Skoda |&nbsp;</a>
+                    <a href="" class="text-decoration-none text-light">Volkswagen |&nbsp;</a>
+                    <a href="" class="text-decoration-none text-light">Nissan |&nbsp;</a>
+                    <a href="" class="text-decoration-none text-light">Renault |&nbsp;</a>
+                    <a href="" class="text-decoration-none text-light mb-2">Fiat |&nbsp;</a>
+                    <a href="" class="text-decoration-none text-light">Mercedes Benz |&nbsp;</a>
+                    <a href="" class="text-decoration-none text-light">Audi |&nbsp;</a>
+                </div>
+            </div>
+            <div class="col-xl-3 col-sm-6 ftr-topCities">
+                <h5 style="color: #d6d9dd;">TOP CITIES</h5>
+                <div class="d-flex flex-wrap">
+                    <a href="" class="text-decoration-none text-light">New Delhi |&nbsp;</a>
+                    <a href="" class="text-decoration-none text-light">Noida |&nbsp;</a>
+                    <a href="" class="text-decoration-none text-light">Gurgaon |&nbsp;</a>
+                    <a href="" class="text-decoration-none text-light mb-2">Mumbai |&nbsp;</a>
+                    <a href="" class="text-decoration-none text-light">Pune |&nbsp;</a>
+                    <a href="" class="text-decoration-none text-light">Bengaluru |&nbsp;</a>
+                    <a href="" class="text-decoration-none text-light">Hyderabad |&nbsp;</a>
+                    <a href="" class="text-decoration-none text-light mb-2">Chennai |&nbsp;</a>
+                    <a href="" class="text-decoration-none text-light">Kolkata |&nbsp;</a>
+                    <a href="" class="text-decoration-none text-light">Ahmedabad |&nbsp;</a>
+                </div>
+            </div>
+        </div>
+        <div class="ms-2 mt-5">
+            <h5 style="color: #d6d9dd;">POPLAR SEARCHES</h5>
+            <div class="d-flex flex-wrap">
+                <a href="" class="text-decoration-none text-light">CARS24 Pricing |&nbsp;</a>
+                <a href="" class="text-decoration-none text-light">Sell Used Car |&nbsp;</a>
+                <a href="" class="text-decoration-none text-light">Value Car |&nbsp;</a>
+                <a href="" class="text-decoration-none text-light mb-2">Used Car |&nbsp;</a>
+                <a href="" class="text-decoration-none text-light">Sell Car |&nbsp;</a>
+                <a href="" class="text-decoration-none text-light">Vehicle Owenership Transfer |&nbsp;</a>
+                <a href="" class="text-decoration-none text-light">Used Car Valuation |&nbsp;</a>
+                <a href="" class="text-decoration-none text-light mb-2">Sell Used Bike |&nbsp;</a>
+                <a href="" class="text-decoration-none text-light mb-2">Buy Used Bikes |&nbsp;</a>
+            </div>
+        </div>
+        <div class="ms-2 mt-3 lh-1" style="color: #d6d9dd;">
+            <h5>MORE ABOUT CARS24.COM</h5>
+            <p>CARS24 is a next generation ecommerce platform for pre owned autos (cars and bikes). We provide the best
+                in class experience for car buyers by offering a wide assortment of certified cars that are home
+                delivered in a click of a button while sellers get the best price of their vehicles in less than 1 hour.
+            </p>
+            <p>Buying a second car sometimes is not an easy task, it requires hours of browsing, multiple test drives
+                and weeks before finding the right one. But with us, it is as simple as browsing through thousands of
+                certified cars and reserving your favorite one by paying a refundable deposit. We’ll deliver the car to
+                your home else you can collect it from a CARS24 hub near you. And if you don’t like your car, return it
+                and get a complete refund within seven days. </p>
+            <p>Over the years we’ve simplified car selling! One can sell their car from their home or our branch in less
+                than 1 hour and get the best price instantly. We also take care of ownership (RC) transfer for free.</p>
+        </div>
+        <div class="ms-2 mt-3 lh-1" style="color: #d6d9dd;">
+            <h5>Buying with CARS24</h5>
+            <p><strong>Wide Assortment -&nbsp;</strong>Economy to luxury, hatchback to SUV, thousand of cars for sale at
+                your fingertips. </p>
+            <p><strong>Quality Promise -&nbsp;</strong>All our cars with a 6 Month Warranty, passed a 140 point quality
+                check and refurbished to as good as new. </p>
+            <p><strong>Convenience Delivered -&nbsp;</strong>From delivering your car to your doorstep to handling all
+                the paperwork, we’ve simplified car buying for you. </p>
+            <p><strong>Quick & Easy Finance -&nbsp;</strong>Finance option to all our customers. Get customized loan
+                offers with minimum documentation and same-day disbursal.</p>
+            <p><strong>7 Day Easy Return -&nbsp;</strong>In case you’re not satisfied with the car, return it and get a
+                100% refund.</p>
+        </div>
+        <div class="ms-2 mt-3 lh-1 pb-3" style="color: #d6d9dd;">
+            <h5>Selling with CARS24</h5>
+            <p><strong>Sell from anywhere:&nbsp;</strong>Book an appointment for an inspection at your home or at any of
+                our 200+ branches.</p>
+            <p><strong>Sell car at the best price:&nbsp;</strong>With our live auction, get the best offers from
+                thousands of buyers from across the country. </p>
+            <p><strong>Sell car in 1 hour:&nbsp;</strong>Our entire car selling process takes less than 1 hour.</p>
+            <p><strong>Get instant payment:&nbsp;</strong>The moment we buy your car, the payment is transferred to your
+                bank account. </p>
+            <p><strong>Free RC transfer:&nbsp;</strong>CARS24 takes care of the ownership transfer / RC Transfer on
+                behalf of you.</p>
+            <p>Founded by Vikram Chopra, Mehul Agrawal, Gajendra Jangid and Ruchit Agarwal, we are now a global auto
+                tech company with our presence in India, Australia, the UAE and expanding. </p>
+        </div>
+    </footer>
+    <script src="JS/index.js"></script>
+    <!-- slick -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.js"></script>
+</body>
+
+</html>

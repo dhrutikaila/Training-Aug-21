@@ -1,0 +1,16 @@
+.row{
+    /* background-color: aquamarine; */
+    width: 1377px;
+}
+.sidebar{
+    background-color: aquamarine;
+    overflow: auto;
+    min-height: 525px;
+    margin-right: 0%;
+    padding-right: 0%;
+}
+
+.col-xl-9{
+    height: 525px;
+    overflow: auto;
+}

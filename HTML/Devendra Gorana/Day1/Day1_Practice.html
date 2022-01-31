@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Day1 Practice</title>
+        <style>
+            table, th, td {
+            border: 1px solid black;
+            border-collapse: collapse;
+            }
+            <!--Create style for practice assingment 5-->
+            #practice5 {
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+            overflow: hidden;
+            position: fixed;
+            top: 0;
+            width: 100%;
+            }
+            
+            /*
+            li{
+            display: inline;
+            }
+            li {
+            float: left;
+            }
+
+            li a {
+            display: block;
+            padding: 8px;
+            color: #ec1c1c;
+            }
+            li a:hover:not(.active) {
+            background-color: #111;
+            }*/
+            .inoneline {
+            display: inline;
+            }
+            .fontcol {
+                color: white;
+                padding: 25px 16px;
+                text-decoration: none;
+            }
+        </style>
+    </head>
+    <body>
+        <h4>
+            1.Display Student Report Card, Which contains field like Name, RollNo, Year Of Passing. Different subject marks should be displayed with its grade
+            Note:  use table tag
+        </h4>
+        <table style="border: 1px solid black;">
+            <tr>
+                <th colspan="2">Student Report Card</th>
+            </tr>
+            <tr>
+                <th>RollNo</th>
+                <td>101</td>
+            </tr>
+            <tr>
+                <th>Name</th>
+                <td>Deven Khurana</td>
+            </tr>
+            <tr>
+                <th>Year Of Passing</th>
+                <td>2018</td>
+            </tr>
+            <tr>
+                <th>Subject</th>
+                <th>Grade</th>
+            </tr>
+            <tr>
+                <td>English</td>
+                <td>B+</td>
+            </tr>
+            <tr>
+                <td>Mathe</td>
+                <td>A+</td>
+            </tr>
+            <tr>
+                <td>Scince</td>
+                <td>A</td>
+            </tr>
+            <tr>
+                <td>History</td>
+                <td>C</td>
+            </tr>
+        </table>
+        <hr>
+        <h4>
+            2.You are working in some company as HR. you have been assigned a task to arrange department hierarchy example: employee working under some manager.
+            Note: Use Ordered and unordered list with its list-style-type attribute, practice nested list as  well
+        </h4>
+        <ul type="square">
+            <li>Mr.Dineshkumar
+                <ol>
+                    <li>Devendra Mehta</li>
+                    <li>Lalit Patel</li>
+                </ol>
+            </li>
+            <li>Mrs.Megha
+                <ol>
+                    <li>Ramkumar Pal</li>
+                    <li>Sanjay Khan</li>
+                </ol>
+            </li>
+
+        </ul>
+        <hr>
+        <h4>
+            3.Create Login Form with field UserName and Password field.
+        </h4>
+        <form>
+            <fieldset>
+            <h5>Login Form</h5>
+            <label for="UserName">UserName:</label><br>
+            <input type="text" id="UserName" name="UserName" ><br>
+            <label for="Password">Password:</label><br>
+            <input type="password" id="Password" name="Password" ><br><br>
+            <input type="submit" value="Submit">
+            </fieldset>
+        </form> 
+        <hr>
+        <h4>
+            4.Use Article tag display one latest news.    
+        </h4>
+        <article>
+            <h3>latest News From Gujarat</h3>
+            <p>
+                Bhupendra Patel is New CM of Gujarat.
+                Bhupendra Patel,A Member of Bharatiya Janta Party(BJP),previously served as the MLA of Gatlodiya Area. 
+            </p>
+        </article>
+        <hr>
+        <h4>
+            5.Create Horizontal menu. Menu item will Home, AboutUs, ContactUS.
+            Use Nav tag and anchor tag
+        </h4>
+        <ul id="practice5" style="background-color: #333;">
+            <li class="inoneline"><a class="fontcol" href="#home">Home</a></li>
+            <li class="inoneline"><a class="fontcol" href="#contact">Contact</a></li>
+            <li class="inoneline" style="float:right;"><a class="fontcol" style="background-color: #04AA6D;" href="#about">About</a></li>
+          </ul>
+    </body>
+</html>

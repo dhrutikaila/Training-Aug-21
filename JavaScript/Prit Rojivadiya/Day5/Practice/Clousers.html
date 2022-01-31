@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        var a = 10;
+        function f1(){
+            return a*a; // accessing global variable
+        }
+
+        function f2(){
+            var b = 10;
+            return b*b;
+        }
+        // console.log(b); // cannot access outside the function
+
+
+        // counter
+
+        let counter = 0;
+        
+        function add(){
+            counter += 1;
+        }
+
+        add();
+        add();
+        add();
+
+        console.log(counter) 
+
+
+        // using clouser
+
+        const countInc = (function count(){
+            let count = 0;
+            return function(){
+                count += 1;
+                return count;
+            }
+        })();
+
+        console.log(countInc)
+
+        console.log(countInc());
+        console.log(countInc());
+        console.log(countInc());
+
+
+    </script>
+</body>
+</html>

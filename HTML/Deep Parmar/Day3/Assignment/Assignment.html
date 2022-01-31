@@ -1,0 +1,76 @@
+<!--Design a form for storing employee details. (Employee name, age, Gender, designation, salary, location, Email ID, Date of Joining and contact number)-->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Employee Details</title>
+</head>
+
+<body>
+    <h2>Assignment:</h2>
+    <h3>Design a form for storing employee details. (Employee name, age, Gender, designation, salary, location, Email
+        ID, Date of Joining and contact number)</h3>
+    <hr><br>
+    <form>
+        <fieldset>
+            <legend>Employee Details:</legend>
+            <table>
+                <tr>
+                    <td><label for="Employee Name">Employee Name: </label></td>
+                    <td> <input type="text" name="EmpName" placeholder="Employee Name" required></td>
+                </tr>
+                <tr>
+                    <td><label for="Age">Age: </label> </td>
+                    <td> <input type="number" name="Age" min="1" max="200" placeholder="Employee age" required></td>
+                </tr>
+                <tr>
+                    <td><label for="Gender">Gender: </label> </td>
+                    <td> <input type="radio" name="Gender" value="Male" required>Male
+                        <input type="radio" name="Gender" value="Female" required>Female
+                        <input type="radio" name="Gender" value="Other" required>Other
+                    </td>
+                </tr>
+                <tr>
+                    <td><label for="Designation">Designation:</td>
+                    <td> <input type="text" name="Designation" placeholder="Designation" required></label></td>
+                </tr>
+                <tr>
+                    <td><label for="Salary">Salary: </label> </td>
+                    <td>
+                        <input type="number" name="salry" max="10000000" placeholder="Salary" required></td>
+                </tr>
+                <tr>
+                    <td><label for="Location">Choose Location:</label></td>
+                    <td><select name="Location">
+                            <option value="">--Location---</option>
+                            <option value="Ahmedabad">Ahmedabad</option>
+                            <option value="Surat">Surat</option>
+                            <option value="Rajkot">Rajkot</option>
+                            <option value="Bhavnagar">Bhavnagar</option>
+                            <option value="Gandhinagar">Gandhinagar</option>
+                        </select></td>
+                </tr>
+                <tr>
+                    <td><label for="Email">Email Id: </label> </td>
+                    <td> <input type="email" name="email" placeholder="email@gmail.com" required></td>
+                </tr>
+                <tr>
+                    <td><label for="Date Of Joining">Date Of Joining: </label> </td>
+                    <td> <input type="date" name="JoiningDate" required></td>
+                </tr>
+                <tr>
+                    <td><label for="Contact Number">Contact Number: </label> </td>
+                    <td> <input type="number" min="1111111111" max="9999999999" name="ContNumber" placeholder="Contact Number" required></td>
+                </tr>
+                <tr>
+                    <td><input type="submit" value="Submit"><input type="reset" value="Reset"></td>
+                </tr>
+            </table>
+        </fieldset>
+    </form>
+
+</body>
+
+</html>

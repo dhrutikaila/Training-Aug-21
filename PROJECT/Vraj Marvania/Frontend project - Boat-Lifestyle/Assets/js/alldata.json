@@ -1,0 +1,2184 @@
+[{
+  "Wireless_Earbuds":{
+    "type": "Wireless Earbuds",
+    "fimg": "https://utioutll.sirv.com/Wireless_Earbuds/a_1.png",
+    "data": [
+      {
+        "name": "BOAT Airdopes 131 - Wireless Earbuds",
+        "price": "Rs. 1,299.00",
+        "img": "https://utioutll.sirv.com/Wireless_Earbuds/a_2.png",
+        "dis": [
+          "Immersive, HD sound quality",
+          "Immersive, HD sound quality",
+          "Immersive, HD sound quality"
+        ],
+        "oldprice": "Rs. 999.00"
+      },
+      {
+        "name": "BOAT Airdopes 441 - Wireless Earbuds",
+        "price": "Rs. 1,799.00",
+        "img": "https://utioutll.sirv.com/Wireless_Earbuds/a_3.png",
+        "dis": [
+          "Immersive, HD sound quality",
+          "Immersive, HD sound quality",
+          "Immersive, HD sound quality"
+        ],
+        "oldprice": "Rs. 999.00"
+      },
+      {
+        "name": "BOAT Airdopes 441 Pro - Bluetooth Wireless Earbuds",
+        "price": "Rs. 2,499.00",
+        "img": "https://utioutll.sirv.com/Wireless_Earbuds/a_4.png",
+        "dis": [
+          "Immersive, HD sound quality",
+          "Immersive, HD sound quality",
+          "Immersive, HD sound quality"
+        ],
+        "oldprice": "Rs. 999.00"
+      },
+      {
+        "name": "TRebel Airdopes 441 Pro",
+        "price": "Rs. 2,999.00",
+        "img": "https://utioutll.sirv.com/Wireless_Earbuds/a_5.png",
+        "dis": [
+          "Immersive, HD sound quality",
+          "Immersive, HD sound quality",
+          "Immersive, HD sound quality"
+        ],
+        "oldprice": "Rs. 999.00"
+      },
+      {
+        "name": "TRebel Airdopes 131",
+        "price": "Rs. 1,299.00",
+        "img": "https://utioutll.sirv.com/Wireless_Earbuds/a_6.png",
+        "dis": [
+          "Immersive, HD sound quality",
+          "Immersive, HD sound quality",
+          "Immersive, HD sound quality"
+        ],
+        "oldprice": "Rs. 999.00"
+      },
+      {
+        "name": "BOAT Airdopes 621",
+        "price": "Rs. 2,199.00",
+        "img": "https://utioutll.sirv.com/Wireless_Earbuds/a_7.png",
+        "dis": [
+          "Immersive, HD sound quality",
+          "Immersive, HD sound quality",
+          "Immersive, HD sound quality"
+        ],
+        "oldprice": "Rs. 999.00"
+      },
+      {
+        "name": "BOAT Airdopes 431 - Truly Wireless Earbuds",
+        "price": "Rs. 1,999.00",
+        "img": "https://utioutll.sirv.com/Wireless_Earbuds/a_8.png",
+        "dis": [
+          "Immersive, HD sound quality",
+          "Immersive, HD sound quality",
+          "Immersive, HD sound quality"
+        ],
+        "oldprice": "Rs. 999.00"
+      },
+      {
+        "name": "BOAT Airdopes 381 - In Ear Wireless Earbuds",
+        "price": "Rs. 1,999.00",
+        "img": "https://utioutll.sirv.com/Wireless_Earbuds/a_9.png",
+        "dis": [
+          "Immersive, HD sound quality",
+          "Immersive, HD sound quality",
+          "Immersive, HD sound quality"
+        ],
+        "oldprice": "Rs. 999.00"
+      },
+      {
+        "name": "TRebel Airdopes 431",
+        "price": "Rs. 1,999.00",
+        "img": "https://utioutll.sirv.com/Wireless_Earbuds/a_10.png",
+        "dis": [
+          "Immersive, HD sound quality",
+          "Immersive, HD sound quality",
+          "Immersive, HD sound quality"
+        ],
+        "oldprice": "Rs. 999.00"
+      },
+      {
+        "name": "BOAT Airdopes 121 v2",
+        "price": "Rs. 999.00",
+        "img": "https://utioutll.sirv.com/Wireless_Earbuds/a_11.png",
+        "dis": [
+          "Immersive, HD sound quality",
+          "Immersive, HD sound quality",
+          "Immersive, HD sound quality"
+        ],
+        "oldprice": "Rs. 999.00"
+      },
+      {
+        "name": "BOAT Airdopes 141",
+        "price": "Rs. 1,299.00",
+        "img": "https://utioutll.sirv.com/Wireless_Earbuds/a_12.png",
+        "dis": [
+          "Immersive, HD sound quality",
+          "Immersive, HD sound quality",
+          "Immersive, HD sound quality"
+        ],
+        "oldprice": "Rs. 999.00"
+      },
+      {
+        "name": "BOAT Airdopes 171 - Earbuds",
+        "price": "Rs. 1,799.00",
+        "img": "https://utioutll.sirv.com/Wireless_Earbuds/a_13.png",
+        "dis": [
+          "Immersive, HD sound quality",
+          "Immersive, HD sound quality",
+          "Immersive, HD sound quality"
+        ],
+        "oldprice": "Rs. 999.00"
+      },
+      {
+        "name": "BOAT Airdopes 201 - True Wireless Earbuds",
+        "price": "Rs. 1,499.00",
+        "img": "https://utioutll.sirv.com/Wireless_Earbuds/a_14.png",
+        "dis": [
+          "Immersive, HD sound quality",
+          "Immersive, HD sound quality",
+          "Immersive, HD sound quality"
+        ],
+        "oldprice": "Rs. 999.00"
+      },
+      {
+        "name": "TRebel Airdopes 171",
+        "price": "Rs. 1,799.00",
+        "img": "https://utioutll.sirv.com/Wireless_Earbuds/a_15.png",
+        "dis": [
+          "Immersive, HD sound quality",
+          "Immersive, HD sound quality",
+          "Immersive, HD sound quality"
+        ],
+        "oldprice": "Rs. 999.00"
+      },
+      {
+        "name": "BOAT Airdopes 491 - Wireless Earbuds",
+        "price": "Rs. 2,999.00",
+        "img": "https://utioutll.sirv.com/Wireless_Earbuds/a_16.png",
+        "dis": [
+          "Immersive, HD sound quality",
+          "Immersive, HD sound quality",
+          "Immersive, HD sound quality"
+        ],
+        "oldprice": "Rs. 999.00"
+      },
+      {
+        "name": "BOAT Airdopes 173 - Earbuds",
+        "price": "Rs. 2,099.00",
+        "img": "https://utioutll.sirv.com/Wireless_Earbuds/a_17.png",
+        "dis": [
+          "Immersive, HD sound quality",
+          "Immersive, HD sound quality",
+          "Immersive, HD sound quality"
+        ],
+        "oldprice": "Rs. 999.00"
+      },
+      {
+        "name": "Airdopes 101 Made In India",
+        "price": "Rs. 1,499.00",
+        "img": "https://utioutll.sirv.com/Wireless_Earbuds/a_18.png",
+        "dis": [
+          "Immersive, HD sound quality",
+          "Immersive, HD sound quality",
+          "Immersive, HD sound quality"
+        ],
+        "oldprice": "Rs. 999.00"
+      },
+      {
+        "name": "Airdopes 441 Made In India",
+        "price": "Rs. 1,999.00",
+        "img": "https://utioutll.sirv.com/Wireless_Earbuds/a_19.png",
+        "dis": [
+          "Immersive, HD sound quality",
+          "Immersive, HD sound quality",
+          "Immersive, HD sound quality"
+        ],
+        "oldprice": "Rs. 999.00"
+      },
+      {
+        "name": "Airdopes 443",
+        "price": "Rs. 2,699.00",
+        "img": "https://utioutll.sirv.com/Wireless_Earbuds/a_20.png",
+        "dis": [
+          "Immersive, HD sound quality",
+          "Immersive, HD sound quality",
+          "Immersive, HD sound quality"
+        ],
+        "oldprice": "Rs. 999.00"
+      },
+      {
+        "name": "BOAT Airdopes 131 - Make in India",
+        "price": "Rs. 1,299.00",
+        "img": "https://utioutll.sirv.com/Wireless_Earbuds/a_21.png",
+        "dis": [
+          "Immersive, HD sound quality",
+          "Immersive, HD sound quality",
+          "Immersive, HD sound quality"
+        ],
+        "oldprice": "Rs. 999.00"
+      },
+      {
+        "name": "BOAT Airdopes 138 - Wireless Earbuds",
+        "price": "Rs. 1,399.00",
+        "img": "https://utioutll.sirv.com/Wireless_Earbuds/a_22.png",
+        "dis": [
+          "Immersive, HD sound quality",
+          "Immersive, HD sound quality",
+          "Immersive, HD sound quality"
+        ],
+        "oldprice": "Rs. 999.00"
+      },
+      {
+        "name": "BOAT Airdopes 203 - Noise Cancelling Earbuds",
+        "price": "Rs. 2,099.00",
+        "img": "https://utioutll.sirv.com/Wireless_Earbuds/a_23.png",
+        "dis": [
+          "Immersive, HD sound quality",
+          "Immersive, HD sound quality",
+          "Immersive, HD sound quality"
+        ],
+        "oldprice": "Rs. 999.00"
+      },
+      {
+        "name": "BOAT Airdopes 281 Pro",
+        "price": "Rs. 2,499.00",
+        "img": "https://utioutll.sirv.com/Wireless_Earbuds/a_24.png",
+        "dis": [
+          "Immersive, HD sound quality",
+          "Immersive, HD sound quality",
+          "Immersive, HD sound quality"
+        ],
+        "oldprice": "Rs. 999.00"
+      },
+      {
+        "name": "BOAT Airdopes 291 - Wireless Earbuds",
+        "price": "Rs. 2,499.00",
+        "img": "https://utioutll.sirv.com/Wireless_Earbuds/a_25.png",
+        "dis": [
+          "Immersive, HD sound quality",
+          "Immersive, HD sound quality",
+          "Immersive, HD sound quality"
+        ],
+        "oldprice": "Rs. 999.00"
+      },
+      {
+        "name": "BOAT Airdopes 382 - Bluetooth Earbuds",
+        "price": "Rs. 2,499.00",
+        "img": "https://utioutll.sirv.com/Wireless_Earbuds/a_26.png",
+        "dis": [
+          "Immersive, HD sound quality",
+          "Immersive, HD sound quality",
+          "Immersive, HD sound quality"
+        ],
+        "oldprice": "Rs. 999.00"
+      },
+      {
+        "name": "BOAT Airdopes 383 - Wireless Earbuds",
+        "price": "Rs. 2,999.00",
+        "img": "https://utioutll.sirv.com/Wireless_Earbuds/a_27.png",
+        "dis": [
+          "Immersive, HD sound quality",
+          "Immersive, HD sound quality",
+          "Immersive, HD sound quality"
+        ],
+        "oldprice": "Rs. 999.00"
+      },
+      {
+        "name": "BOAT Airdopes 391",
+        "price": "Rs. 2,499.00",
+        "img": "https://utioutll.sirv.com/Wireless_Earbuds/a_28.png",
+        "dis": [
+          "Immersive, HD sound quality",
+          "Immersive, HD sound quality",
+          "Immersive, HD sound quality"
+        ],
+        "oldprice": "Rs. 999.00"
+      },
+      {
+        "name": "BOAT Airdopes 408 - Wireless Earbuds",
+        "price": "Rs. 1,899.00",
+        "img": "https://utioutll.sirv.com/Wireless_Earbuds/a_29.png",
+        "dis": [
+          "Immersive, HD sound quality",
+          "Immersive, HD sound quality",
+          "Immersive, HD sound quality"
+        ],
+        "oldprice": "Rs. 999.00"
+      },
+      {
+        "name": "BOAT Airdopes 421v2",
+        "price": "Rs. 1,999.00",
+        "img": "https://utioutll.sirv.com/Wireless_Earbuds/a_30.png",
+        "dis": [
+          "Immersive, HD sound quality",
+          "Immersive, HD sound quality",
+          "Immersive, HD sound quality"
+        ],
+        "oldprice": "Rs. 999.00"
+      },
+      {
+        "name": "BOAT Airdopes 433 - Truly Wireless Earbuds",
+        "price": "Rs. 1,999.00",
+        "img": "https://utioutll.sirv.com/Wireless_Earbuds/a_31.png",
+        "dis": [
+          "Immersive, HD sound quality",
+          "Immersive, HD sound quality",
+          "Immersive, HD sound quality"
+        ],
+        "oldprice": "Rs. 999.00"
+      },
+      {
+        "name": "BOAT Airdopes 452",
+        "price": "Rs. 1,299.00",
+        "img": "https://utioutll.sirv.com/Wireless_Earbuds/a_32.png",
+        "dis": [
+          "Immersive, HD sound quality",
+          "Immersive, HD sound quality",
+          "Immersive, HD sound quality"
+        ],
+        "oldprice": "Rs. 999.00"
+      },
+      {
+        "name": "BOAT Airdopes 501 - Earbuds",
+        "price": "Rs. 2,999.00",
+        "img": "https://utioutll.sirv.com/Wireless_Earbuds/a_33.png",
+        "dis": [
+          "Immersive, HD sound quality",
+          "Immersive, HD sound quality",
+          "Immersive, HD sound quality"
+        ],
+        "oldprice": "Rs. 999.00"
+      },
+      {
+        "name": "BOAT Airdopes 501 ANC",
+        "price": "Rs. 3,990.00",
+        "img": "https://utioutll.sirv.com/Wireless_Earbuds/a_34.png",
+        "dis": [
+          "Immersive, HD sound quality",
+          "Immersive, HD sound quality",
+          "Immersive, HD sound quality"
+        ],
+        "oldprice": "Rs. 999.00"
+      },
+      {
+        "name": "BOAT Airdopes 701 ANC",
+        "price": "Rs. 3,990.00",
+        "img": "https://utioutll.sirv.com/Wireless_Earbuds/a_35.png",
+        "dis": [
+          "Immersive, HD sound quality",
+          "Immersive, HD sound quality",
+          "Immersive, HD sound quality"
+        ],
+        "oldprice": "Rs. 999.00"
+      },
+      {
+        "name": "TRebel Airdopes 381",
+        "price": "Rs. 1,999.00"
+      }
+    ]
+  },
+  "Wireless_Headphones":{
+    "type": "Wireless Headphones",
+    "fimg": "https://utioutll.sirv.com/Wireless%20Headphones/c_1.jpeg",
+    "data": [
+      {
+        "name": "BOAT BassHeads 100",
+        "price": "Rs. 299.00",
+        "img": "https://utioutll.sirv.com/Wired%20Earphones/b_1.png",
+        "oldprice": "Rs. 999.00",
+        "dis": [
+          "Immersive, HD sound quality",
+          "Immersive, HD sound quality",
+          "Immersive, HD sound quality"
+        ]
+      },
+      {
+        "name": "TRebel BassHeads 100",
+        "price": "Rs. 399.00",
+        "img": "https://utioutll.sirv.com/Wired%20Earphones/b_2.png",
+        "oldprice": "Rs. 999.00",
+        "dis": [
+          "Immersive, HD sound quality",
+          "Immersive, HD sound quality",
+          "Immersive, HD sound quality"
+        ]
+      },
+      {
+        "name": "BOAT BassHeads 103",
+        "price": "Rs. 399.00",
+        "img": "https://utioutll.sirv.com/Wired%20Earphones/b_3.png",
+        "oldprice": "Rs. 999.00",
+        "dis": [
+          "Immersive, HD sound quality",
+          "Immersive, HD sound quality",
+          "Immersive, HD sound quality"
+        ]
+      },
+      {
+        "name": "BOAT BassHeads 105",
+        "price": "Rs. 299.00",
+        "img": "https://utioutll.sirv.com/Wired%20Earphones/b_4.png",
+        "oldprice": "Rs. 999.00",
+        "dis": [
+          "Immersive, HD sound quality",
+          "Immersive, HD sound quality",
+          "Immersive, HD sound quality"
+        ]
+      },
+      {
+        "name": "BOAT BassHeads 104",
+        "price": "Rs. 399.00",
+        "img": "https://utioutll.sirv.com/Wired%20Earphones/b_5.png",
+        "oldprice": "Rs. 999.00",
+        "dis": [
+          "Immersive, HD sound quality",
+          "Immersive, HD sound quality",
+          "Immersive, HD sound quality"
+        ]
+      },
+      {
+        "name": "TRebel BassHeads 102",
+        "price": "Rs. 299.00",
+        "img": "https://utioutll.sirv.com/Wired%20Earphones/b_6.png",
+        "oldprice": "Rs. 999.00",
+        "dis": [
+          "Immersive, HD sound quality",
+          "Immersive, HD sound quality",
+          "Immersive, HD sound quality"
+        ]
+      },
+      {
+        "name": "BassHeads 122",
+        "price": "Rs. 499.00",
+        "img": "https://utioutll.sirv.com/Wired%20Earphones/b_7.png",
+        "oldprice": "Rs. 999.00",
+        "dis": [
+          "Immersive, HD sound quality",
+          "Immersive, HD sound quality",
+          "Immersive, HD sound quality"
+        ]
+      },
+      {
+        "name": "BassHeads 102",
+        "price": "Rs. 349.00",
+        "img": "https://utioutll.sirv.com/Wired%20Earphones/b_8.png",
+        "oldprice": "Rs. 999.00",
+        "dis": [
+          "Immersive, HD sound quality",
+          "Immersive, HD sound quality",
+          "Immersive, HD sound quality"
+        ]
+      },
+      {
+        "name": "BOAT BassHeads 242",
+        "price": "Rs. 399.00",
+        "img": "https://utioutll.sirv.com/Wired%20Earphones/b_9.png",
+        "oldprice": "Rs. 999.00",
+        "dis": [
+          "Immersive, HD sound quality",
+          "Immersive, HD sound quality",
+          "Immersive, HD sound quality"
+        ]
+      },
+      {
+        "name": "TRebel BassHeads 242",
+        "price": "Rs. 549.00",
+        "img": "https://utioutll.sirv.com/Wired%20Earphones/b_10.png",
+        "oldprice": "Rs. 999.00",
+        "dis": [
+          "Immersive, HD sound quality",
+          "Immersive, HD sound quality",
+          "Immersive, HD sound quality"
+        ]
+      },
+      {
+        "name": "BOAT BassHeads 152",
+        "price": "Rs. 399.00",
+        "img": "https://utioutll.sirv.com/Wired%20Earphones/b_11.png",
+        "oldprice": "Rs. 999.00",
+        "dis": [
+          "Immersive, HD sound quality",
+          "Immersive, HD sound quality",
+          "Immersive, HD sound quality"
+        ]
+      },
+      {
+        "name": "TRebel BassHeads 152",
+        "price": "Rs. 499.00",
+        "img": "https://utioutll.sirv.com/Wired%20Earphones/b_12.png",
+        "oldprice": "Rs. 999.00",
+        "dis": [
+          "Immersive, HD sound quality",
+          "Immersive, HD sound quality",
+          "Immersive, HD sound quality"
+        ]
+      },
+      {
+        "name": "BOAT BassHeads 900",
+        "price": "Rs. 599.00",
+        "img": "https://utioutll.sirv.com/Wired%20Earphones/b_13.png",
+        "oldprice": "Rs. 999.00",
+        "dis": [
+          "Immersive, HD sound quality",
+          "Immersive, HD sound quality",
+          "Immersive, HD sound quality"
+        ]
+      },
+      {
+        "name": "BOAT BassHeads 225",
+        "price": "Rs. 549.00",
+        "img": "https://utioutll.sirv.com/Wired%20Earphones/b_14.png",
+        "oldprice": "Rs. 999.00",
+        "dis": [
+          "Immersive, HD sound quality",
+          "Immersive, HD sound quality",
+          "Immersive, HD sound quality"
+        ]
+      },
+      {
+        "name": "BOAT BassHeads 182",
+        "price": "Rs. 499.00",
+        "img": "https://utioutll.sirv.com/Wired%20Earphones/b_15.png",
+        "oldprice": "Rs. 999.00",
+        "dis": [
+          "Immersive, HD sound quality",
+          "Immersive, HD sound quality",
+          "Immersive, HD sound quality"
+        ]
+      },
+      {
+        "name": "BOAT BassHeads 162",
+        "price": "Rs. 349.00",
+        "img": "https://utioutll.sirv.com/Wired%20Earphones/b_16.png",
+        "oldprice": "Rs. 999.00",
+        "dis": [
+          "Immersive, HD sound quality",
+          "Immersive, HD sound quality",
+          "Immersive, HD sound quality"
+        ]
+      },
+      {
+        "name": "BOAT BassHeads 172",
+        "price": "Rs. 499.00",
+        "img": "https://utioutll.sirv.com/Wired%20Earphones/b_17.png",
+        "oldprice": "Rs. 999.00",
+        "dis": [
+          "Immersive, HD sound quality",
+          "Immersive, HD sound quality",
+          "Immersive, HD sound quality"
+        ]
+      },
+      {
+        "name": "BassHeads 225 Carrying Case",
+        "price": "Rs. 599.00",
+        "img": "https://utioutll.sirv.com/Wired%20Earphones/b_18.png",
+        "oldprice": "Rs. 999.00",
+        "dis": [
+          "Immersive, HD sound quality",
+          "Immersive, HD sound quality",
+          "Immersive, HD sound quality"
+        ]
+      },
+      {
+        "name": "BassHeads 100 - Made in India",
+        "price": "Rs. 399.00",
+        "img": "https://utioutll.sirv.com/Wired%20Earphones/b_19.png",
+        "oldprice": "Rs. 999.00",
+        "dis": [
+          "Immersive, HD sound quality",
+          "Immersive, HD sound quality",
+          "Immersive, HD sound quality"
+        ]
+      },
+      {
+        "name": "BassHeads 110",
+        "price": "Rs. 449.00",
+        "img": "https://utioutll.sirv.com/Wired%20Earphones/b_20.png",
+        "oldprice": "Rs. 999.00",
+        "dis": [
+          "Immersive, HD sound quality",
+          "Immersive, HD sound quality",
+          "Immersive, HD sound quality"
+        ]
+      },
+      {
+        "name": "BassHeads 132",
+        "price": "Rs. 499.00",
+        "img": "https://utioutll.sirv.com/Wired%20Earphones/b_21.png",
+        "oldprice": "Rs. 999.00",
+        "dis": [
+          "Immersive, HD sound quality",
+          "Immersive, HD sound quality",
+          "Immersive, HD sound quality"
+        ]
+      },
+      {
+        "name": "BassHeads 152 - Made in India",
+        "price": "Rs. 499.00",
+        "img": "https://utioutll.sirv.com/Wired%20Earphones/b_22.png",
+        "oldprice": "Rs. 999.00",
+        "dis": [
+          "Immersive, HD sound quality",
+          "Immersive, HD sound quality",
+          "Immersive, HD sound quality"
+        ]
+      },
+      {
+        "name": "BassHeads 228",
+        "price": "Rs. 649.00",
+        "img": "https://utioutll.sirv.com/Wired%20Earphones/b_23.png",
+        "oldprice": "Rs. 999.00",
+        "dis": [
+          "Immersive, HD sound quality",
+          "Immersive, HD sound quality",
+          "Immersive, HD sound quality"
+        ]
+      },
+      {
+        "name": "BassHeads 910",
+        "price": "Rs. 899.00",
+        "img": "https://utioutll.sirv.com/Wired%20Earphones/b_24.png",
+        "oldprice": "Rs. 999.00",
+        "dis": [
+          "Immersive, HD sound quality",
+          "Immersive, HD sound quality",
+          "Immersive, HD sound quality"
+        ]
+      },
+      {
+        "name": "boAt Bassheads 172 Masaba Edition",
+        "price": "Rs. 499.00",
+        "img": "https://utioutll.sirv.com/Wired%20Earphones/b_25.png",
+        "oldprice": "Rs. 999.00",
+        "dis": [
+          "Immersive, HD sound quality",
+          "Immersive, HD sound quality",
+          "Immersive, HD sound quality"
+        ]
+      },
+      {
+        "name": "BOAT BassHeads 220",
+        "price": "Rs. 549.00",
+        "img": "https://utioutll.sirv.com/Wired%20Earphones/b_26.png",
+        "oldprice": "Rs. 999.00",
+        "dis": [
+          "Immersive, HD sound quality",
+          "Immersive, HD sound quality",
+          "Immersive, HD sound quality"
+        ]
+      }
+    ]
+  },
+  "Smart_Watches":{
+    "type": "Smart Watches",
+    "fimg": "https://utioutll.sirv.com/Smart%20Watches/1_1_11.png",
+    "data": [
+      {
+        "name": "BOAT Storm",
+        "price": "Rs. 2,999.00",
+        "oldprice": "Rs. 999.00",
+        "img": "https://utioutll.sirv.com/Smart%20Watches/1_1_12.png",
+        "dis": [
+          "Immersive, HD sound quality",
+          "Immersive, HD sound quality",
+          "Immersive, HD sound quality"
+        ]
+      },
+      {
+        "name": "‌BOAT‌ Watch Xtend‌",
+        "price": "Rs. 2,499.00",
+        "oldprice": "Rs. 999.00",
+        "img": "https://utioutll.sirv.com/Smart%20Watches/1_1_13.png",
+        "dis": [
+          "Immersive, HD sound quality",
+          "Immersive, HD sound quality",
+          "Immersive, HD sound quality"
+        ]
+      },
+      {
+        "name": "BOAT Watch Flash",
+        "price": "Rs. 2,999.00",
+        "oldprice": "Rs. 999.00",
+        "img": "https://utioutll.sirv.com/Smart%20Watches/1_1_14.png",
+        "dis": [
+          "Immersive, HD sound quality",
+          "Immersive, HD sound quality",
+          "Immersive, HD sound quality"
+        ]
+      },
+      {
+        "name": "BOAT‌ Watch‌ Delta",
+        "price": "Rs. 2,999.00",
+        "oldprice": "Rs. 999.00",
+        "img": "https://utioutll.sirv.com/Smart%20Watches/1_1_15.png",
+        "dis": [
+          "Immersive, HD sound quality",
+          "Immersive, HD sound quality",
+          "Immersive, HD sound quality"
+        ]
+      },
+      {
+        "name": "BOAT Enigma",
+        "price": "Rs. 2,999.00",
+        "oldprice": "Rs. 999.00",
+        "img": "https://utioutll.sirv.com/Smart%20Watches/1_1_16.png",
+        "dis": [
+          "Immersive, HD sound quality",
+          "Immersive, HD sound quality",
+          "Immersive, HD sound quality"
+        ]
+      },
+      {
+        "name": "BOAT ProGear B20",
+        "price": "Rs. 1,799.00",
+        "oldprice": "Rs. 999.00",
+        "img": "https://utioutll.sirv.com/Smart%20Watches/1_1_17.png",
+        "dis": [
+          "Immersive, HD sound quality",
+          "Immersive, HD sound quality",
+          "Immersive, HD sound quality"
+        ]
+      },
+      {
+        "name": "BOAT Storm RTL Smart Watch",
+        "price": "Rs. 2,999.00",
+        "oldprice": "Rs. 999.00",
+        "img": "https://utioutll.sirv.com/Smart%20Watches/1_1_18.png",
+        "dis": [
+          "Immersive, HD sound quality",
+          "Immersive, HD sound quality",
+          "Immersive, HD sound quality"
+        ]
+      },
+      {
+        "name": "Storm Strap",
+        "price": "Rs. 499.00",
+        "oldprice": "Rs. 999.00",
+        "img": "https://utioutll.sirv.com/Smart%20Watches/1_1_19.png",
+        "dis": [
+          "Immersive, HD sound quality",
+          "Immersive, HD sound quality",
+          "Immersive, HD sound quality"
+        ]
+      },
+      {
+        "name": "‌BOAT‌ Xplorer‌‌",
+        "price": "Rs. 3,999.00",
+        "oldprice": "Rs. 999.00",
+        "img": "https://utioutll.sirv.com/Smart%20Watches/1_1_20.png",
+        "dis": [
+          "Immersive, HD sound quality",
+          "Immersive, HD sound quality",
+          "Immersive, HD sound quality"
+        ]
+      }
+    ]
+  },
+  "Wired_Earphones":{
+    "type": "Wired Earphones",
+    "fimg": "https://utioutll.sirv.com/Wireless%20Headphones/c_1.jpeg",
+    "data": [
+      {
+        "name": "BOAT BassHeads 100",
+        "price": "Rs. 299.00",
+        "img": "https://utioutll.sirv.com/Wired%20Earphones/b_1.png",
+        "oldprice": "Rs. 999.00",
+        "dis": [
+          "Immersive, HD sound quality",
+          "Immersive, HD sound quality",
+          "Immersive, HD sound quality"
+        ]
+      },
+      {
+        "name": "TRebel BassHeads 100",
+        "price": "Rs. 399.00",
+        "img": "https://utioutll.sirv.com/Wired%20Earphones/b_2.png",
+        "oldprice": "Rs. 999.00",
+        "dis": [
+          "Immersive, HD sound quality",
+          "Immersive, HD sound quality",
+          "Immersive, HD sound quality"
+        ]
+      },
+      {
+        "name": "BOAT BassHeads 103",
+        "price": "Rs. 399.00",
+        "img": "https://utioutll.sirv.com/Wired%20Earphones/b_3.png",
+        "oldprice": "Rs. 999.00",
+        "dis": [
+          "Immersive, HD sound quality",
+          "Immersive, HD sound quality",
+          "Immersive, HD sound quality"
+        ]
+      },
+      {
+        "name": "BOAT BassHeads 105",
+        "price": "Rs. 299.00",
+        "img": "https://utioutll.sirv.com/Wired%20Earphones/b_4.png",
+        "oldprice": "Rs. 999.00",
+        "dis": [
+          "Immersive, HD sound quality",
+          "Immersive, HD sound quality",
+          "Immersive, HD sound quality"
+        ]
+      },
+      {
+        "name": "BOAT BassHeads 104",
+        "price": "Rs. 399.00",
+        "img": "https://utioutll.sirv.com/Wired%20Earphones/b_5.png",
+        "oldprice": "Rs. 999.00",
+        "dis": [
+          "Immersive, HD sound quality",
+          "Immersive, HD sound quality",
+          "Immersive, HD sound quality"
+        ]
+      },
+      {
+        "name": "TRebel BassHeads 102",
+        "price": "Rs. 299.00",
+        "img": "https://utioutll.sirv.com/Wired%20Earphones/b_6.png",
+        "oldprice": "Rs. 999.00",
+        "dis": [
+          "Immersive, HD sound quality",
+          "Immersive, HD sound quality",
+          "Immersive, HD sound quality"
+        ]
+      },
+      {
+        "name": "BassHeads 122",
+        "price": "Rs. 499.00",
+        "img": "https://utioutll.sirv.com/Wired%20Earphones/b_7.png",
+        "oldprice": "Rs. 999.00",
+        "dis": [
+          "Immersive, HD sound quality",
+          "Immersive, HD sound quality",
+          "Immersive, HD sound quality"
+        ]
+      },
+      {
+        "name": "BassHeads 102",
+        "price": "Rs. 349.00",
+        "img": "https://utioutll.sirv.com/Wired%20Earphones/b_8.png",
+        "oldprice": "Rs. 999.00",
+        "dis": [
+          "Immersive, HD sound quality",
+          "Immersive, HD sound quality",
+          "Immersive, HD sound quality"
+        ]
+      },
+      {
+        "name": "BOAT BassHeads 242",
+        "price": "Rs. 399.00",
+        "img": "https://utioutll.sirv.com/Wired%20Earphones/b_9.png",
+        "oldprice": "Rs. 999.00",
+        "dis": [
+          "Immersive, HD sound quality",
+          "Immersive, HD sound quality",
+          "Immersive, HD sound quality"
+        ]
+      },
+      {
+        "name": "TRebel BassHeads 242",
+        "price": "Rs. 549.00",
+        "img": "https://utioutll.sirv.com/Wired%20Earphones/b_10.png",
+        "oldprice": "Rs. 999.00",
+        "dis": [
+          "Immersive, HD sound quality",
+          "Immersive, HD sound quality",
+          "Immersive, HD sound quality"
+        ]
+      },
+      {
+        "name": "BOAT BassHeads 152",
+        "price": "Rs. 399.00",
+        "img": "https://utioutll.sirv.com/Wired%20Earphones/b_11.png",
+        "oldprice": "Rs. 999.00",
+        "dis": [
+          "Immersive, HD sound quality",
+          "Immersive, HD sound quality",
+          "Immersive, HD sound quality"
+        ]
+      },
+      {
+        "name": "TRebel BassHeads 152",
+        "price": "Rs. 499.00",
+        "img": "https://utioutll.sirv.com/Wired%20Earphones/b_12.png",
+        "oldprice": "Rs. 999.00",
+        "dis": [
+          "Immersive, HD sound quality",
+          "Immersive, HD sound quality",
+          "Immersive, HD sound quality"
+        ]
+      },
+      {
+        "name": "BOAT BassHeads 900",
+        "price": "Rs. 599.00",
+        "img": "https://utioutll.sirv.com/Wired%20Earphones/b_13.png",
+        "oldprice": "Rs. 999.00",
+        "dis": [
+          "Immersive, HD sound quality",
+          "Immersive, HD sound quality",
+          "Immersive, HD sound quality"
+        ]
+      },
+      {
+        "name": "BOAT BassHeads 225",
+        "price": "Rs. 549.00",
+        "img": "https://utioutll.sirv.com/Wired%20Earphones/b_14.png",
+        "oldprice": "Rs. 999.00",
+        "dis": [
+          "Immersive, HD sound quality",
+          "Immersive, HD sound quality",
+          "Immersive, HD sound quality"
+        ]
+      },
+      {
+        "name": "BOAT BassHeads 182",
+        "price": "Rs. 499.00",
+        "img": "https://utioutll.sirv.com/Wired%20Earphones/b_15.png",
+        "oldprice": "Rs. 999.00",
+        "dis": [
+          "Immersive, HD sound quality",
+          "Immersive, HD sound quality",
+          "Immersive, HD sound quality"
+        ]
+      },
+      {
+        "name": "BOAT BassHeads 162",
+        "price": "Rs. 349.00",
+        "img": "https://utioutll.sirv.com/Wired%20Earphones/b_16.png",
+        "oldprice": "Rs. 999.00",
+        "dis": [
+          "Immersive, HD sound quality",
+          "Immersive, HD sound quality",
+          "Immersive, HD sound quality"
+        ]
+      },
+      {
+        "name": "BOAT BassHeads 172",
+        "price": "Rs. 499.00",
+        "img": "https://utioutll.sirv.com/Wired%20Earphones/b_17.png",
+        "oldprice": "Rs. 999.00",
+        "dis": [
+          "Immersive, HD sound quality",
+          "Immersive, HD sound quality",
+          "Immersive, HD sound quality"
+        ]
+      },
+      {
+        "name": "BassHeads 225 Carrying Case",
+        "price": "Rs. 599.00",
+        "img": "https://utioutll.sirv.com/Wired%20Earphones/b_18.png",
+        "oldprice": "Rs. 999.00",
+        "dis": [
+          "Immersive, HD sound quality",
+          "Immersive, HD sound quality",
+          "Immersive, HD sound quality"
+        ]
+      },
+      {
+        "name": "BassHeads 100 - Made in India",
+        "price": "Rs. 399.00",
+        "img": "https://utioutll.sirv.com/Wired%20Earphones/b_19.png",
+        "oldprice": "Rs. 999.00",
+        "dis": [
+          "Immersive, HD sound quality",
+          "Immersive, HD sound quality",
+          "Immersive, HD sound quality"
+        ]
+      },
+      {
+        "name": "BassHeads 110",
+        "price": "Rs. 449.00",
+        "img": "https://utioutll.sirv.com/Wired%20Earphones/b_20.png",
+        "oldprice": "Rs. 999.00",
+        "dis": [
+          "Immersive, HD sound quality",
+          "Immersive, HD sound quality",
+          "Immersive, HD sound quality"
+        ]
+      },
+      {
+        "name": "BassHeads 132",
+        "price": "Rs. 499.00",
+        "img": "https://utioutll.sirv.com/Wired%20Earphones/b_21.png",
+        "oldprice": "Rs. 999.00",
+        "dis": [
+          "Immersive, HD sound quality",
+          "Immersive, HD sound quality",
+          "Immersive, HD sound quality"
+        ]
+      },
+      {
+        "name": "BassHeads 152 - Made in India",
+        "price": "Rs. 499.00",
+        "img": "https://utioutll.sirv.com/Wired%20Earphones/b_22.png",
+        "oldprice": "Rs. 999.00",
+        "dis": [
+          "Immersive, HD sound quality",
+          "Immersive, HD sound quality",
+          "Immersive, HD sound quality"
+        ]
+      },
+      {
+        "name": "BassHeads 228",
+        "price": "Rs. 649.00",
+        "img": "https://utioutll.sirv.com/Wired%20Earphones/b_23.png",
+        "oldprice": "Rs. 999.00",
+        "dis": [
+          "Immersive, HD sound quality",
+          "Immersive, HD sound quality",
+          "Immersive, HD sound quality"
+        ]
+      },
+      {
+        "name": "BassHeads 910",
+        "price": "Rs. 899.00",
+        "img": "https://utioutll.sirv.com/Wired%20Earphones/b_24.png",
+        "oldprice": "Rs. 999.00",
+        "dis": [
+          "Immersive, HD sound quality",
+          "Immersive, HD sound quality",
+          "Immersive, HD sound quality"
+        ]
+      },
+      {
+        "name": "boAt Bassheads 172 Masaba Edition",
+        "price": "Rs. 499.00",
+        "img": "https://utioutll.sirv.com/Wired%20Earphones/b_25.png",
+        "oldprice": "Rs. 999.00",
+        "dis": [
+          "Immersive, HD sound quality",
+          "Immersive, HD sound quality",
+          "Immersive, HD sound quality"
+        ]
+      },
+      {
+        "name": "BOAT BassHeads 220",
+        "price": "Rs. 549.00",
+        "img": "https://utioutll.sirv.com/Wired%20Earphones/b_26.png",
+        "oldprice": "Rs. 999.00",
+        "dis": [
+          "Immersive, HD sound quality",
+          "Immersive, HD sound quality",
+          "Immersive, HD sound quality"
+        ]
+      }
+    ]
+  },
+  "Wireless_Speakers":{
+    "type": "Wireless Speakers",
+    "fimg": "https://utioutll.sirv.com/Wireless%20Speakers/d_1.jpeg",
+    "data": [
+      {
+        "name": "BOAT BassHeads 100",
+        "price": "Rs. 299.00",
+        "img": "https://utioutll.sirv.com/Wired%20Earphones/b_1.png",
+        "oldprice": "Rs. 999.00",
+        "dis": [
+          "Immersive, HD sound quality",
+          "Immersive, HD sound quality",
+          "Immersive, HD sound quality"
+        ]
+      },
+      {
+        "name": "TRebel BassHeads 100",
+        "price": "Rs. 399.00",
+        "img": "https://utioutll.sirv.com/Wired%20Earphones/b_2.png",
+        "oldprice": "Rs. 999.00",
+        "dis": [
+          "Immersive, HD sound quality",
+          "Immersive, HD sound quality",
+          "Immersive, HD sound quality"
+        ]
+      },
+      {
+        "name": "BOAT BassHeads 103",
+        "price": "Rs. 399.00",
+        "img": "https://utioutll.sirv.com/Wired%20Earphones/b_3.png",
+        "oldprice": "Rs. 999.00",
+        "dis": [
+          "Immersive, HD sound quality",
+          "Immersive, HD sound quality",
+          "Immersive, HD sound quality"
+        ]
+      },
+      {
+        "name": "BOAT BassHeads 105",
+        "price": "Rs. 299.00",
+        "img": "https://utioutll.sirv.com/Wired%20Earphones/b_4.png",
+        "oldprice": "Rs. 999.00",
+        "dis": [
+          "Immersive, HD sound quality",
+          "Immersive, HD sound quality",
+          "Immersive, HD sound quality"
+        ]
+      },
+      {
+        "name": "BOAT BassHeads 104",
+        "price": "Rs. 399.00",
+        "img": "https://utioutll.sirv.com/Wired%20Earphones/b_5.png",
+        "oldprice": "Rs. 999.00",
+        "dis": [
+          "Immersive, HD sound quality",
+          "Immersive, HD sound quality",
+          "Immersive, HD sound quality"
+        ]
+      },
+      {
+        "name": "TRebel BassHeads 102",
+        "price": "Rs. 299.00",
+        "img": "https://utioutll.sirv.com/Wired%20Earphones/b_6.png",
+        "oldprice": "Rs. 999.00",
+        "dis": [
+          "Immersive, HD sound quality",
+          "Immersive, HD sound quality",
+          "Immersive, HD sound quality"
+        ]
+      },
+      {
+        "name": "BassHeads 122",
+        "price": "Rs. 499.00",
+        "img": "https://utioutll.sirv.com/Wired%20Earphones/b_7.png",
+        "oldprice": "Rs. 999.00",
+        "dis": [
+          "Immersive, HD sound quality",
+          "Immersive, HD sound quality",
+          "Immersive, HD sound quality"
+        ]
+      },
+      {
+        "name": "BassHeads 102",
+        "price": "Rs. 349.00",
+        "img": "https://utioutll.sirv.com/Wired%20Earphones/b_8.png",
+        "oldprice": "Rs. 999.00",
+        "dis": [
+          "Immersive, HD sound quality",
+          "Immersive, HD sound quality",
+          "Immersive, HD sound quality"
+        ]
+      },
+      {
+        "name": "BOAT BassHeads 242",
+        "price": "Rs. 399.00",
+        "img": "https://utioutll.sirv.com/Wired%20Earphones/b_9.png",
+        "oldprice": "Rs. 999.00",
+        "dis": [
+          "Immersive, HD sound quality",
+          "Immersive, HD sound quality",
+          "Immersive, HD sound quality"
+        ]
+      },
+      {
+        "name": "TRebel BassHeads 242",
+        "price": "Rs. 549.00",
+        "img": "https://utioutll.sirv.com/Wired%20Earphones/b_10.png",
+        "oldprice": "Rs. 999.00",
+        "dis": [
+          "Immersive, HD sound quality",
+          "Immersive, HD sound quality",
+          "Immersive, HD sound quality"
+        ]
+      },
+      {
+        "name": "BOAT BassHeads 152",
+        "price": "Rs. 399.00",
+        "img": "https://utioutll.sirv.com/Wired%20Earphones/b_11.png",
+        "oldprice": "Rs. 999.00",
+        "dis": [
+          "Immersive, HD sound quality",
+          "Immersive, HD sound quality",
+          "Immersive, HD sound quality"
+        ]
+      },
+      {
+        "name": "TRebel BassHeads 152",
+        "price": "Rs. 499.00",
+        "img": "https://utioutll.sirv.com/Wired%20Earphones/b_12.png",
+        "oldprice": "Rs. 999.00",
+        "dis": [
+          "Immersive, HD sound quality",
+          "Immersive, HD sound quality",
+          "Immersive, HD sound quality"
+        ]
+      },
+      {
+        "name": "BOAT BassHeads 900",
+        "price": "Rs. 599.00",
+        "img": "https://utioutll.sirv.com/Wired%20Earphones/b_13.png",
+        "oldprice": "Rs. 999.00",
+        "dis": [
+          "Immersive, HD sound quality",
+          "Immersive, HD sound quality",
+          "Immersive, HD sound quality"
+        ]
+      },
+      {
+        "name": "BOAT BassHeads 225",
+        "price": "Rs. 549.00",
+        "img": "https://utioutll.sirv.com/Wired%20Earphones/b_14.png",
+        "oldprice": "Rs. 999.00",
+        "dis": [
+          "Immersive, HD sound quality",
+          "Immersive, HD sound quality",
+          "Immersive, HD sound quality"
+        ]
+      },
+      {
+        "name": "BOAT BassHeads 182",
+        "price": "Rs. 499.00",
+        "img": "https://utioutll.sirv.com/Wired%20Earphones/b_15.png",
+        "oldprice": "Rs. 999.00",
+        "dis": [
+          "Immersive, HD sound quality",
+          "Immersive, HD sound quality",
+          "Immersive, HD sound quality"
+        ]
+      },
+      {
+        "name": "BOAT BassHeads 162",
+        "price": "Rs. 349.00",
+        "img": "https://utioutll.sirv.com/Wired%20Earphones/b_16.png",
+        "oldprice": "Rs. 999.00",
+        "dis": [
+          "Immersive, HD sound quality",
+          "Immersive, HD sound quality",
+          "Immersive, HD sound quality"
+        ]
+      },
+      {
+        "name": "BOAT BassHeads 172",
+        "price": "Rs. 499.00",
+        "img": "https://utioutll.sirv.com/Wired%20Earphones/b_17.png",
+        "oldprice": "Rs. 999.00",
+        "dis": [
+          "Immersive, HD sound quality",
+          "Immersive, HD sound quality",
+          "Immersive, HD sound quality"
+        ]
+      },
+      {
+        "name": "BassHeads 225 Carrying Case",
+        "price": "Rs. 599.00",
+        "img": "https://utioutll.sirv.com/Wired%20Earphones/b_18.png",
+        "oldprice": "Rs. 999.00",
+        "dis": [
+          "Immersive, HD sound quality",
+          "Immersive, HD sound quality",
+          "Immersive, HD sound quality"
+        ]
+      },
+      {
+        "name": "BassHeads 100 - Made in India",
+        "price": "Rs. 399.00",
+        "img": "https://utioutll.sirv.com/Wired%20Earphones/b_19.png",
+        "oldprice": "Rs. 999.00",
+        "dis": [
+          "Immersive, HD sound quality",
+          "Immersive, HD sound quality",
+          "Immersive, HD sound quality"
+        ]
+      },
+      {
+        "name": "BassHeads 110",
+        "price": "Rs. 449.00",
+        "img": "https://utioutll.sirv.com/Wired%20Earphones/b_20.png",
+        "oldprice": "Rs. 999.00",
+        "dis": [
+          "Immersive, HD sound quality",
+          "Immersive, HD sound quality",
+          "Immersive, HD sound quality"
+        ]
+      },
+      {
+        "name": "BassHeads 132",
+        "price": "Rs. 499.00",
+        "img": "https://utioutll.sirv.com/Wired%20Earphones/b_21.png",
+        "oldprice": "Rs. 999.00",
+        "dis": [
+          "Immersive, HD sound quality",
+          "Immersive, HD sound quality",
+          "Immersive, HD sound quality"
+        ]
+      },
+      {
+        "name": "BassHeads 152 - Made in India",
+        "price": "Rs. 499.00",
+        "img": "https://utioutll.sirv.com/Wired%20Earphones/b_22.png",
+        "oldprice": "Rs. 999.00",
+        "dis": [
+          "Immersive, HD sound quality",
+          "Immersive, HD sound quality",
+          "Immersive, HD sound quality"
+        ]
+      },
+      {
+        "name": "BassHeads 228",
+        "price": "Rs. 649.00",
+        "img": "https://utioutll.sirv.com/Wired%20Earphones/b_23.png",
+        "oldprice": "Rs. 999.00",
+        "dis": [
+          "Immersive, HD sound quality",
+          "Immersive, HD sound quality",
+          "Immersive, HD sound quality"
+        ]
+      },
+      {
+        "name": "BassHeads 910",
+        "price": "Rs. 899.00",
+        "img": "https://utioutll.sirv.com/Wired%20Earphones/b_24.png",
+        "oldprice": "Rs. 999.00",
+        "dis": [
+          "Immersive, HD sound quality",
+          "Immersive, HD sound quality",
+          "Immersive, HD sound quality"
+        ]
+      },
+      {
+        "name": "boAt Bassheads 172 Masaba Edition",
+        "price": "Rs. 499.00",
+        "img": "https://utioutll.sirv.com/Wired%20Earphones/b_25.png",
+        "oldprice": "Rs. 999.00",
+        "dis": [
+          "Immersive, HD sound quality",
+          "Immersive, HD sound quality",
+          "Immersive, HD sound quality"
+        ]
+      },
+      {
+        "name": "BOAT BassHeads 220",
+        "price": "Rs. 549.00",
+        "img": "https://utioutll.sirv.com/Wired%20Earphones/b_26.png",
+        "oldprice": "Rs. 999.00",
+        "dis": [
+          "Immersive, HD sound quality",
+          "Immersive, HD sound quality",
+          "Immersive, HD sound quality"
+        ]
+      }
+    ]
+  },
+  "Home_Audio":{
+    "type": "Home Audio",
+    "fimg": "https://utioutll.sirv.com/Home%20Theater%20Systems%20%26%20Soundbars/Immortal%20Gaming/f_1.png",
+    "data": [
+      {
+        "name": "Aavante Bar 1160",
+        "price": "Rs. 4,499.00",
+        "img": "https://utioutll.sirv.com/Home%20Theater%20Systems%20%26%20Soundbars/e_1.png",
+        "dis": [
+          "Immersive, HD sound quality",
+          "Immersive, HD sound quality",
+          "Immersive, HD sound quality"
+        ],
+        "oldprice": "Rs. 999.00"
+      },
+      {
+        "name": "Aavante Bar 1800",
+        "price": "Rs. 8,999.00",
+        "img": "https://utioutll.sirv.com/Home%20Theater%20Systems%20%26%20Soundbars/e_2.png",
+        "dis": [
+          "Immersive, HD sound quality",
+          "Immersive, HD sound quality",
+          "Immersive, HD sound quality"
+        ],
+        "oldprice": "Rs. 999.00"
+      },
+      {
+        "name": "Aavante Bar 1150",
+        "price": "Rs. 4,999.00",
+        "img": "https://utioutll.sirv.com/Home%20Theater%20Systems%20%26%20Soundbars/e_3.png",
+        "dis": [
+          "Immersive, HD sound quality",
+          "Immersive, HD sound quality",
+          "Immersive, HD sound quality"
+        ],
+        "oldprice": "Rs. 999.00"
+      },
+      {
+        "name": "Aavante Bar 1700D",
+        "price": "Rs. 10,999.00",
+        "img": "https://utioutll.sirv.com/Home%20Theater%20Systems%20%26%20Soundbars/e_4.png",
+        "dis": [
+          "Immersive, HD sound quality",
+          "Immersive, HD sound quality",
+          "Immersive, HD sound quality"
+        ],
+        "oldprice": "Rs. 999.00"
+      },
+      {
+        "name": "Aavante Bar 1500",
+        "price": "Rs. 8,499.00",
+        "img": "https://utioutll.sirv.com/Home%20Theater%20Systems%20%26%20Soundbars/e_5.png",
+        "dis": [
+          "Immersive, HD sound quality",
+          "Immersive, HD sound quality",
+          "Immersive, HD sound quality"
+        ],
+        "oldprice": "Rs. 999.00"
+      },
+      {
+        "name": "Aavante Bar 2000",
+        "price": "Rs. 9,999.00",
+        "img": "https://utioutll.sirv.com/Home%20Theater%20Systems%20%26%20Soundbars/e_6.png",
+        "dis": [
+          "Immersive, HD sound quality",
+          "Immersive, HD sound quality",
+          "Immersive, HD sound quality"
+        ],
+        "oldprice": "Rs. 999.00"
+      },
+      {
+        "name": "Aavante Bar 1190",
+        "price": "Rs. 5,999.00",
+        "img": "https://utioutll.sirv.com/Home%20Theater%20Systems%20%26%20Soundbars/e_7.png",
+        "dis": [
+          "Immersive, HD sound quality",
+          "Immersive, HD sound quality",
+          "Immersive, HD sound quality"
+        ],
+        "oldprice": "Rs. 999.00"
+      },
+      {
+        "name": "Aavante Bar 1250",
+        "price": "Rs. 6,499.00",
+        "img": "https://utioutll.sirv.com/Home%20Theater%20Systems%20%26%20Soundbars/e_8.png",
+        "dis": [
+          "Immersive, HD sound quality",
+          "Immersive, HD sound quality",
+          "Immersive, HD sound quality"
+        ],
+        "oldprice": "Rs. 999.00"
+      },
+      {
+        "name": "BOAT Aavante Bar 4000DA",
+        "price": "Rs. 17,999.00",
+        "img": "https://utioutll.sirv.com/Home%20Theater%20Systems%20%26%20Soundbars/e_9.png",
+        "dis": [
+          "Immersive, HD sound quality",
+          "Immersive, HD sound quality",
+          "Immersive, HD sound quality"
+        ],
+        "oldprice": "Rs. 999.00"
+      },
+      {
+        "name": "Aavante Bar 1550",
+        "price": "Rs. 8,401.00",
+        "img": "https://utioutll.sirv.com/Home%20Theater%20Systems%20%26%20Soundbars/e_10.png",
+        "dis": [
+          "Immersive, HD sound quality",
+          "Immersive, HD sound quality",
+          "Immersive, HD sound quality"
+        ],
+        "oldprice": "Rs. 999.00"
+      },
+      {
+        "name": "Aavante Bar 2050",
+        "price": "Rs. 9,999.00",
+        "img": "https://utioutll.sirv.com/Home%20Theater%20Systems%20%26%20Soundbars/e_11.png",
+        "dis": [
+          "Immersive, HD sound quality",
+          "Immersive, HD sound quality",
+          "Immersive, HD sound quality"
+        ],
+        "oldprice": "Rs. 999.00"
+      },
+      {
+        "name": "Aavante 1200",
+        "price": "Rs. 6,499.00",
+        "img": "https://utioutll.sirv.com/Home%20Theater%20Systems%20%26%20Soundbars/e_12.png",
+        "dis": [
+          "Immersive, HD sound quality",
+          "Immersive, HD sound quality",
+          "Immersive, HD sound quality"
+        ],
+        "oldprice": "Rs. 999.00"
+      },
+      {
+        "name": "Aavante Bar 3100D",
+        "price": "Rs. 13,999.00",
+        "img": "https://utioutll.sirv.com/Home%20Theater%20Systems%20%26%20Soundbars/e_13.png",
+        "dis": [
+          "Immersive, HD sound quality",
+          "Immersive, HD sound quality",
+          "Immersive, HD sound quality"
+        ],
+        "oldprice": "Rs. 999.00"
+      },
+      {
+        "name": "Aavante Bar 1198",
+        "price": "Rs. 6,199.00",
+        "img": "https://utioutll.sirv.com/Home%20Theater%20Systems%20%26%20Soundbars/e_14.png",
+        "dis": [
+          "Immersive, HD sound quality",
+          "Immersive, HD sound quality",
+          "Immersive, HD sound quality"
+        ],
+        "oldprice": "Rs. 999.00"
+      },
+      {
+        "name": "Aavante Bar 1280",
+        "price": "Rs. 6,590.00",
+        "img": "https://utioutll.sirv.com/Home%20Theater%20Systems%20%26%20Soundbars/e_15.png",
+        "dis": [
+          "Immersive, HD sound quality",
+          "Immersive, HD sound quality",
+          "Immersive, HD sound quality"
+        ],
+        "oldprice": "Rs. 999.00"
+      },
+      {
+        "name": "Aavante Bar 1580",
+        "price": "Rs. 8,999.00",
+        "img": "https://utioutll.sirv.com/Home%20Theater%20Systems%20%26%20Soundbars/e_16.png",
+        "dis": [
+          "Immersive, HD sound quality",
+          "Immersive, HD sound quality",
+          "Immersive, HD sound quality"
+        ],
+        "oldprice": "Rs. 999.00"
+      },
+      {
+        "name": "Aavante Bar 1803",
+        "price": "Rs. 9,099.00",
+        "img": "https://utioutll.sirv.com/Home%20Theater%20Systems%20%26%20Soundbars/e_17.png",
+        "dis": [
+          "Immersive, HD sound quality",
+          "Immersive, HD sound quality",
+          "Immersive, HD sound quality"
+        ],
+        "oldprice": "Rs. 999.00"
+      }
+    ]
+  },
+  "Mobile_Accessories":{
+    "type": "Mobile Accessories",
+    "fimg": "https://utioutll.sirv.com/Mobile%20Accessories/d_1.jpeg",
+    "data": [
+      {
+        "name": "Rugged V3 Micro USB 1.5 Meter",
+        "price": "<span class=\"theme-money text-red on-sale\">Rs. 99.00</span>",
+        "img": "https://utioutll.sirv.com/Mobile%20Accessories/d_2.png",
+        "oldprice": "Rs. 999.00",
+        "dis": [
+          "Immersive, HD sound quality",
+          "Immersive, HD sound quality",
+          "Immersive, HD sound quality"
+        ]
+      },
+      {
+        "name": "LTG 500 Indestructible Apple Certified Lightning Cable 2 Meter",
+        "price": "<span class=\"theme-money text-red on-sale\">Rs. 599.00</span>",
+        "img": "https://utioutll.sirv.com/Mobile%20Accessories/d_3.png",
+        "oldprice": "Rs. 999.00",
+        "dis": [
+          "Immersive, HD sound quality",
+          "Immersive, HD sound quality",
+          "Immersive, HD sound quality"
+        ]
+      },
+      {
+        "name": "BOAT Mask",
+        "price": "<span class=\"theme-money text-red on-sale\">Rs. 499.00</span>",
+        "img": "https://utioutll.sirv.com/Mobile%20Accessories/d_4.png",
+        "oldprice": "Rs. 999.00",
+        "dis": [
+          "Immersive, HD sound quality",
+          "Immersive, HD sound quality",
+          "Immersive, HD sound quality"
+        ]
+      },
+      {
+        "name": "A 350 Type C Cable 1.5 Meter",
+        "price": "<span class=\"theme-money text-red on-sale\">Rs. 299.00</span>",
+        "img": "https://utioutll.sirv.com/Mobile%20Accessories/d_5.png",
+        "oldprice": "Rs. 999.00",
+        "dis": [
+          "Immersive, HD sound quality",
+          "Immersive, HD sound quality",
+          "Immersive, HD sound quality"
+        ]
+      },
+      {
+        "name": "BOAT Micro USB 550",
+        "price": "<span class=\"theme-money text-red on-sale\">Rs. 149.00</span>",
+        "img": "https://utioutll.sirv.com/Mobile%20Accessories/d_6.png",
+        "oldprice": "Rs. 999.00",
+        "dis": [
+          "Immersive, HD sound quality",
+          "Immersive, HD sound quality",
+          "Immersive, HD sound quality"
+        ]
+      },
+      {
+        "name": "Deuce 330",
+        "price": "<span class=\"theme-money text-red on-sale\">Rs. 299.00</span>",
+        "img": "https://utioutll.sirv.com/Mobile%20Accessories/d_7.png",
+        "oldprice": "Rs. 999.00",
+        "dis": [
+          "Immersive, HD sound quality",
+          "Immersive, HD sound quality",
+          "Immersive, HD sound quality"
+        ]
+      },
+      {
+        "name": "boAt 50 Micro USB",
+        "price": "<span class=\"theme-money text-red on-sale\">Rs. 249.00</span>",
+        "img": "https://utioutll.sirv.com/Mobile%20Accessories/d_8.png",
+        "oldprice": "Rs. 999.00",
+        "dis": [
+          "Immersive, HD sound quality",
+          "Immersive, HD sound quality",
+          "Immersive, HD sound quality"
+        ]
+      },
+      {
+        "name": "Micro USB 600",
+        "price": "<span class=\"theme-money text-red on-sale\">Rs. 529.00</span>",
+        "img": "https://utioutll.sirv.com/Mobile%20Accessories/d_9.png",
+        "oldprice": "Rs. 999.00",
+        "dis": [
+          "Immersive, HD sound quality",
+          "Immersive, HD sound quality",
+          "Immersive, HD sound quality"
+        ]
+      },
+      {
+        "name": "Micro USB 150 1.5 Meter",
+        "price": "<span class=\"theme-money text-red on-sale\">Rs. 499.00</span>",
+        "img": "https://utioutll.sirv.com/Mobile%20Accessories/d_10.png",
+        "oldprice": "Rs. 999.00",
+        "dis": [
+          "Immersive, HD sound quality",
+          "Immersive, HD sound quality",
+          "Immersive, HD sound quality"
+        ]
+      },
+      {
+        "name": "BOAT Dual QC-PD Port Rapid Car Charger with Micro USB cable",
+        "price": "<span class=\"theme-money text-red on-sale\">Rs. 599.00</span>",
+        "img": "https://utioutll.sirv.com/Mobile%20Accessories/d_11.png",
+        "oldprice": "Rs. 999.00",
+        "dis": [
+          "Immersive, HD sound quality",
+          "Immersive, HD sound quality",
+          "Immersive, HD sound quality"
+        ]
+      },
+      {
+        "name": "AUX 500",
+        "price": "<span class=\"theme-money text-red on-sale\">Rs. 349.00</span>",
+        "img": "https://utioutll.sirv.com/Mobile%20Accessories/d_12.png",
+        "oldprice": "Rs. 999.00",
+        "dis": [
+          "Immersive, HD sound quality",
+          "Immersive, HD sound quality",
+          "Immersive, HD sound quality"
+        ]
+      },
+      {
+        "name": "BOAT Dual QC-PD Port Rapid Car Charger With Power Delivery Cable",
+        "price": "<span class=\"theme-money text-red on-sale\">Rs. 549.00</span>",
+        "img": "https://utioutll.sirv.com/Mobile%20Accessories/d_13.png",
+        "oldprice": "Rs. 999.00",
+        "dis": [
+          "Immersive, HD sound quality",
+          "Immersive, HD sound quality",
+          "Immersive, HD sound quality"
+        ]
+      },
+      {
+        "name": "BOAT Dual QC-PD Port Rapid Car Charger With Type C Cable",
+        "price": "<span class=\"theme-money text-red on-sale\">Rs. 599.00</span>",
+        "img": "https://utioutll.sirv.com/Mobile%20Accessories/d_14.png",
+        "oldprice": "Rs. 999.00",
+        "dis": [
+          "Immersive, HD sound quality",
+          "Immersive, HD sound quality",
+          "Immersive, HD sound quality"
+        ]
+      },
+      {
+        "name": "Dual Port Rapid Car Charger (Qualcomm Certified) with Micro-USB Cable",
+        "price": "<span class=\"theme-money text-red on-sale\">Rs. 499.00</span>",
+        "img": "https://utioutll.sirv.com/Mobile%20Accessories/d_15.png",
+        "oldprice": "Rs. 999.00",
+        "dis": [
+          "Immersive, HD sound quality",
+          "Immersive, HD sound quality",
+          "Immersive, HD sound quality"
+        ]
+      },
+      {
+        "name": "boAt A320 Type C Cable",
+        "price": "<span class=\"theme-money text-red on-sale\">Rs. 299.00</span>",
+        "img": "https://utioutll.sirv.com/Mobile%20Accessories/d_16.png",
+        "oldprice": "Rs. 999.00",
+        "dis": [
+          "Immersive, HD sound quality",
+          "Immersive, HD sound quality",
+          "Immersive, HD sound quality"
+        ]
+      },
+      {
+        "name": "boAt WCD 2.0A",
+        "price": "<span class=\"theme-money text-red on-sale\">Rs. 349.00</span>",
+        "img": "https://utioutll.sirv.com/Mobile%20Accessories/d_17.png",
+        "oldprice": "Rs. 999.00",
+        "dis": [
+          "Immersive, HD sound quality",
+          "Immersive, HD sound quality",
+          "Immersive, HD sound quality"
+        ]
+      },
+      {
+        "name": "LTG 600 Apple Certified Lightning Cable 1.2 Meter",
+        "price": "<span class=\"theme-money text-red on-sale\">Rs. 999.00</span>",
+        "img": "https://utioutll.sirv.com/Mobile%20Accessories/d_18.png",
+        "oldprice": "Rs. 999.00",
+        "dis": [
+          "Immersive, HD sound quality",
+          "Immersive, HD sound quality",
+          "Immersive, HD sound quality"
+        ]
+      },
+      {
+        "name": "BOAT Dual QC-PD Port Rapid Car Charger",
+        "price": "<span class=\"theme-money text-red on-sale\">Rs. 499.00</span>",
+        "img": "https://utioutll.sirv.com/Mobile%20Accessories/d_19.png",
+        "oldprice": "Rs. 999.00",
+        "dis": [
+          "Immersive, HD sound quality",
+          "Immersive, HD sound quality",
+          "Immersive, HD sound quality"
+        ]
+      }
+    ]
+  },
+  "TRebel":{
+    "type": "TRebel",
+    "fimg": "https://utioutll.sirv.com/TRebel/e_1.jpeg",
+    "data": [
+      {
+        "name": "TRebel BassHeads 100",
+        "price": "Rs. 399.00",
+        "img": "https://utioutll.sirv.com/TRebel/e_2.png",
+        "dis": [
+          "Immersive, HD sound quality",
+          "Immersive, HD sound quality",
+          "Immersive, HD sound quality"
+        ],
+        "oldprice": "Rs. 999.00"
+      },
+      {
+        "name": "TRebel Rockerz 255 Pro",
+        "price": "Rs. 1,499.00",
+        "img": "https://utioutll.sirv.com/TRebel/e_3.png",
+        "dis": [
+          "Immersive, HD sound quality",
+          "Immersive, HD sound quality",
+          "Immersive, HD sound quality"
+        ],
+        "oldprice": "Rs. 999.00"
+      },
+      {
+        "name": "TRebel Airdopes 441 Pro",
+        "price": "Rs. 2,999.00",
+        "img": "https://utioutll.sirv.com/TRebel/e_4.png",
+        "dis": [
+          "Immersive, HD sound quality",
+          "Immersive, HD sound quality",
+          "Immersive, HD sound quality"
+        ],
+        "oldprice": "Rs. 999.00"
+      },
+      {
+        "name": "TRebel Rockerz 235 V2",
+        "price": "Rs. 1,199.00",
+        "img": "https://utioutll.sirv.com/TRebel/e_5.png",
+        "dis": [
+          "Immersive, HD sound quality",
+          "Immersive, HD sound quality",
+          "Immersive, HD sound quality"
+        ],
+        "oldprice": "Rs. 999.00"
+      },
+      {
+        "name": "TRebel Rockerz 450",
+        "price": "Rs. 1,499.00",
+        "img": "https://utioutll.sirv.com/TRebel/e_6.png",
+        "dis": [
+          "Immersive, HD sound quality",
+          "Immersive, HD sound quality",
+          "Immersive, HD sound quality"
+        ],
+        "oldprice": "Rs. 999.00"
+      },
+      {
+        "name": "TRebel BassHeads 102",
+        "price": "Rs. 299.00",
+        "img": "https://utioutll.sirv.com/TRebel/e_7.png",
+        "dis": [
+          "Immersive, HD sound quality",
+          "Immersive, HD sound quality",
+          "Immersive, HD sound quality"
+        ],
+        "oldprice": "Rs. 999.00"
+      },
+      {
+        "name": "TRebel Airdopes 131",
+        "price": "Rs. 1,299.00",
+        "img": "https://utioutll.sirv.com/TRebel/e_8.png",
+        "dis": [
+          "Immersive, HD sound quality",
+          "Immersive, HD sound quality",
+          "Immersive, HD sound quality"
+        ],
+        "oldprice": "Rs. 999.00"
+      },
+      {
+        "name": "TRebel BassHeads 242",
+        "price": "Rs. 549.00",
+        "img": "https://utioutll.sirv.com/TRebel/e_9.png",
+        "dis": [
+          "Immersive, HD sound quality",
+          "Immersive, HD sound quality",
+          "Immersive, HD sound quality"
+        ],
+        "oldprice": "Rs. 999.00"
+      }
+    ]
+  },
+  "Limited_Edition":{
+    "type": "Limited Edition",
+    "fimg": "https://utioutll.sirv.com/Wireless%20Speakers/d_1.jpeg",
+    "data": [
+      {
+        "name": "Stone 170 LFW Edition",
+        "price": "Rs. 899.00",
+        "img": "https://utioutll.sirv.com/limited_edition/h_2.png",
+        "oldprice": "Rs. 999.00",
+        "dis": [
+          "Immersive, HD sound quality",
+          "Immersive, HD sound quality",
+          "Immersive, HD sound quality"
+        ]
+      },
+      {
+        "name": "BOAT Rockerz 255 DC Edition",
+        "price": "Rs. 799.00",
+        "img": "https://utioutll.sirv.com/limited_edition/h_3.png",
+        "oldprice": "Rs. 999.00",
+        "dis": [
+          "Immersive, HD sound quality",
+          "Immersive, HD sound quality",
+          "Immersive, HD sound quality"
+        ]
+      },
+      {
+        "name": "BassHeads 100 MI Edition",
+        "price": "Rs. 349.00",
+        "img": "https://utioutll.sirv.com/limited_edition/h_4.png",
+        "oldprice": "Rs. 999.00",
+        "dis": [
+          "Immersive, HD sound quality",
+          "Immersive, HD sound quality",
+          "Immersive, HD sound quality"
+        ]
+      },
+      {
+        "name": "BOAT Rockerz 255 CSK Edition",
+        "price": "Rs. 799.00",
+        "img": "https://utioutll.sirv.com/limited_edition/h_5.png",
+        "oldprice": "Rs. 999.00",
+        "dis": [
+          "Immersive, HD sound quality",
+          "Immersive, HD sound quality",
+          "Immersive, HD sound quality"
+        ]
+      },
+      {
+        "name": "BOAT Rockerz 255 KKR Edition",
+        "price": "Rs. 1,299.00",
+        "img": "https://utioutll.sirv.com/limited_edition/h_6.png",
+        "oldprice": "Rs. 999.00",
+        "dis": [
+          "Immersive, HD sound quality",
+          "Immersive, HD sound quality",
+          "Immersive, HD sound quality"
+        ]
+      },
+      {
+        "name": "BOAT Rockerz 255 MI Edition",
+        "price": "Rs. 799.00",
+        "img": "https://utioutll.sirv.com/limited_edition/h_7.png",
+        "oldprice": "Rs. 999.00",
+        "dis": [
+          "Immersive, HD sound quality",
+          "Immersive, HD sound quality",
+          "Immersive, HD sound quality"
+        ]
+      },
+      {
+        "name": "BOAT Rockerz 400 KXIP Edition",
+        "price": "Rs. 1,990.00",
+        "img": "https://utioutll.sirv.com/limited_edition/h_8.png",
+        "oldprice": "Rs. 999.00",
+        "dis": [
+          "Immersive, HD sound quality",
+          "Immersive, HD sound quality",
+          "Immersive, HD sound quality"
+        ]
+      },
+      {
+        "name": "BOAT Bassheads 172 KKR Edition",
+        "price": "Rs. 499.00",
+        "img": "https://utioutll.sirv.com/limited_edition/h_9.png",
+        "oldprice": "Rs. 999.00",
+        "dis": [
+          "Immersive, HD sound quality",
+          "Immersive, HD sound quality",
+          "Immersive, HD sound quality"
+        ]
+      },
+      {
+        "name": "BOAT Airdopes 441 DC Edition",
+        "price": "Rs. 1,999.00",
+        "img": "https://utioutll.sirv.com/limited_edition/h_10.png",
+        "oldprice": "Rs. 999.00",
+        "dis": [
+          "Immersive, HD sound quality",
+          "Immersive, HD sound quality",
+          "Immersive, HD sound quality"
+        ]
+      },
+      {
+        "name": "BOAT BassHeads 152 KKR Edition",
+        "price": "Rs. 399.00",
+        "img": "https://utioutll.sirv.com/limited_edition/h_11.png",
+        "oldprice": "Rs. 999.00",
+        "dis": [
+          "Immersive, HD sound quality",
+          "Immersive, HD sound quality",
+          "Immersive, HD sound quality"
+        ]
+      },
+      {
+        "name": "BOAT Airdopes 441 MI Edition",
+        "price": "Rs. 1,999.00",
+        "img": "https://utioutll.sirv.com/limited_edition/h_12.png",
+        "oldprice": "Rs. 999.00",
+        "dis": [
+          "Immersive, HD sound quality",
+          "Immersive, HD sound quality",
+          "Immersive, HD sound quality"
+        ]
+      },
+      {
+        "name": "BOAT‌ ‌Airdopes 131‌ DC Edition‌",
+        "price": "Rs. 1,299.00",
+        "img": "https://utioutll.sirv.com/limited_edition/h_13.png",
+        "oldprice": "Rs. 999.00",
+        "dis": [
+          "Immersive, HD sound quality",
+          "Immersive, HD sound quality",
+          "Immersive, HD sound quality"
+        ]
+      },
+      {
+        "name": "BOAT  Airdopes 131 MI Edition",
+        "price": "Rs. 1,299.00",
+        "img": "https://utioutll.sirv.com/limited_edition/h_14.png",
+        "oldprice": "Rs. 999.00",
+        "dis": [
+          "Immersive, HD sound quality",
+          "Immersive, HD sound quality",
+          "Immersive, HD sound quality"
+        ]
+      },
+      {
+        "name": "BOAT Airdopes 441 CSK Edition",
+        "price": "Rs. 1,999.00",
+        "img": "https://utioutll.sirv.com/limited_edition/h_15.png",
+        "oldprice": "Rs. 999.00",
+        "dis": [
+          "Immersive, HD sound quality",
+          "Immersive, HD sound quality",
+          "Immersive, HD sound quality"
+        ]
+      },
+      {
+        "name": "BOAT Airdopes 131 KKR Edition",
+        "price": "Rs. 1,299.00",
+        "img": "https://utioutll.sirv.com/limited_edition/h_16.png",
+        "oldprice": "Rs. 999.00",
+        "dis": [
+          "Immersive, HD sound quality",
+          "Immersive, HD sound quality",
+          "Immersive, HD sound quality"
+        ]
+      },
+      {
+        "name": "BOAT Airdopes 381 Masaba Edition",
+        "price": "Rs. 1,999.00",
+        "img": "https://utioutll.sirv.com/limited_edition/h_17.png",
+        "oldprice": "Rs. 999.00",
+        "dis": [
+          "Immersive, HD sound quality",
+          "Immersive, HD sound quality",
+          "Immersive, HD sound quality"
+        ]
+      },
+      {
+        "name": "BOAT Airdopes 131 CSK Edition",
+        "price": "Rs. 1,299.00",
+        "img": "https://utioutll.sirv.com/limited_edition/h_18.png",
+        "oldprice": "Rs. 999.00",
+        "dis": [
+          "Immersive, HD sound quality",
+          "Immersive, HD sound quality",
+          "Immersive, HD sound quality"
+        ]
+      },
+      {
+        "name": "BOAT Airdopes 441 KKR Edition",
+        "price": "Rs. 1,999.00",
+        "img": "https://utioutll.sirv.com/limited_edition/h_19.png",
+        "oldprice": "Rs. 999.00",
+        "dis": [
+          "Immersive, HD sound quality",
+          "Immersive, HD sound quality",
+          "Immersive, HD sound quality"
+        ]
+      },
+      {
+        "name": "Rockerz 600 Mumbai Indians Edition",
+        "price": "Rs. 2,990.00",
+        "img": "https://utioutll.sirv.com/limited_edition/h_20.png",
+        "oldprice": "Rs. 999.00",
+        "dis": [
+          "Immersive, HD sound quality",
+          "Immersive, HD sound quality",
+          "Immersive, HD sound quality"
+        ]
+      },
+      {
+        "name": "BOAT Rockerz 400 MI Edition",
+        "price": "Rs. 1,990.00",
+        "img": "https://utioutll.sirv.com/limited_edition/h_21.png",
+        "oldprice": "Rs. 999.00",
+        "dis": [
+          "Immersive, HD sound quality",
+          "Immersive, HD sound quality",
+          "Immersive, HD sound quality"
+        ]
+      }
+    ]
+  },
+  "Misfit":{
+    "type": "Misfit",
+    "fimg": "https://utioutll.sirv.com/Wireless%20Speakers/d_1.jpeg",
+    "data": [
+      {
+        "name": "Misfit T200",
+        "price": "Rs. 1,499.00",
+        "img": "https://utioutll.sirv.com/Misfit%20-%20Best%20Trimmer%20for%20Men/g_3.png",
+        "oldprice": "Rs. 999.00",
+        "dis": [
+          "Immersive, HD sound quality",
+          "Immersive, HD sound quality",
+          "Immersive, HD sound quality"
+        ]
+      },
+      {
+        "name": "Misfit T150 Trimmer",
+        "price": "Rs. 1,399.00",
+        "img": "https://utioutll.sirv.com/Misfit%20-%20Best%20Trimmer%20for%20Men/g_4.png",
+        "oldprice": "Rs. 999.00",
+        "dis": [
+          "Immersive, HD sound quality",
+          "Immersive, HD sound quality",
+          "Immersive, HD sound quality"
+        ]
+      },
+      {
+        "name": "Misfit T30 Trimmer",
+        "price": "Rs. 699.00",
+        "img": "https://utioutll.sirv.com/Misfit%20-%20Best%20Trimmer%20for%20Men/g_4.png",
+        "oldprice": "Rs. 999.00",
+        "dis": [
+          "Immersive, HD sound quality",
+          "Immersive, HD sound quality",
+          "Immersive, HD sound quality"
+        ]
+      },
+      {
+        "name": "Misfit T50 Trimmer",
+        "price": "Rs. 999.00",
+        "img": "https://utioutll.sirv.com/Misfit%20-%20Best%20Trimmer%20for%20Men/g_4.png",
+        "oldprice": "Rs. 999.00",
+        "dis": [
+          "Immersive, HD sound quality",
+          "Immersive, HD sound quality",
+          "Immersive, HD sound quality"
+        ]
+      },
+      {
+        "name": "Misfit T50 Lite",
+        "price": "Rs. 899.00",
+        "img": "https://utioutll.sirv.com/Misfit%20-%20Best%20Trimmer%20for%20Men/g_4.png",
+        "oldprice": "Rs. 999.00",
+        "dis": [
+          "Immersive, HD sound quality",
+          "Immersive, HD sound quality",
+          "Immersive, HD sound quality"
+        ]
+      }
+    ]
+  },
+  "Immortal_Gaming":{
+    "type": "Immortal Gaming",
+    "fimg": "https://utioutll.sirv.com/Immortal%20Gaming/f_1.png",
+    "data": [
+      {
+        "name": "boAt Immortal 1300",
+        "price": "Rs. 2,290.00",
+        "oldprice": "Rs. 999.00",
+        "dis": [
+          "Immersive, HD sound quality",
+          "Immersive, HD sound quality",
+          "Immersive, HD sound quality"
+        ],
+        "img": "https://utioutll.sirv.com/Immortal%20Gaming/f_2.png"
+      },
+      {
+        "name": "boAt Immortal 1000D",
+        "price": "Rs. 2,999.00",
+        "oldprice": "Rs. 999.00",
+        "dis": [
+          "Immersive, HD sound quality",
+          "Immersive, HD sound quality",
+          "Immersive, HD sound quality"
+        ],
+        "img": "https://utioutll.sirv.com/Immortal%20Gaming/f_3.png"
+      },
+      {
+        "name": "boAt Immortal 200",
+        "price": "Rs. 1,399.00",
+        "oldprice": "Rs. 999.00",
+        "dis": [
+          "Immersive, HD sound quality",
+          "Immersive, HD sound quality",
+          "Immersive, HD sound quality"
+        ],
+        "img": "https://utioutll.sirv.com/Immortal%20Gaming/f_4.png"
+      }
+    ]
+  }
+}]

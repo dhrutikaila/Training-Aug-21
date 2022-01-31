@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Practical</title>
+    <link rel="stylesheet" href="assets/css/bootstrap.min.css">
+</head>
+<body>
+    <div class="container">
+        <div class="h2 text-center my-4">Practice Exercise</div>
+        <hr>
+        <div class="row justify-content-sm-center">
+            <hr>
+            <div class="form col-6">
+                <div class="h4 my-3">Empty string</div>
+                <input type="text" class="form-control my-3" id="s1" placeholder="Enter Some Text">
+                <div id="chk1.1" class="text-danger my-3">String is Empty</div> 
+                <div id="chk1.2" class="text-success my-3">String is not Empty</div> 
+                <button type="button" onclick="chkString(s1.value)" class="btn btn-success my-2">Check</button> 
+            </div>
+            <hr>
+            <div class="form col-6">
+                <div class="h4 my-3">String to array <small>use space for array</small></div>
+                <input type="text" class="form-control my-3" id="s2" placeholder="Enter Some Text">
+                <div id="arr1" class="text-danger my-3">String is Empty or wrong</div> 
+                <div class="h5 my-3">Result: <span id="result"></span></div>
+                <button type="button" onclick="arrString(s2.value)" class="btn btn-success my-2">Check</button> 
+            </div>
+            <hr>
+            <div class="form col-6">
+                <div class="h4 my-3">Substring</small></div>
+                <input type="text" class="form-control my-3" id="sub" placeholder="Enter Some Text">
+                <input type="number" class="form-control my-3" id="subS" placeholder="Enter start">
+                <input type="number" class="form-control my-3" id="subE" placeholder="Enter end">
+                <div id="str1" class="text-danger my-3">String is Empty or wrong</div> 
+                <div class="h5 my-3">Result: <span id="result1"></span></div>
+                <button type="button" onclick="substrString(sub.value,subS.value,subE.value)" class="btn btn-success my-2">Check</button> 
+            </div>
+        </div>
+    </div>
+    <script src="assets/js/bootstrap.min.js"></script>
+    <script>
+        //1
+        document.getElementById('chk1.1').style.display="none";
+        document.getElementById('chk1.2').style.display="none";
+        function chkString(s1){
+                document.getElementById('chk1.1').style.display="none";
+                document.getElementById('chk1.2').style.display="none";
+            if(s1){
+                document.getElementById('chk1.2').style.display="block";
+            }
+            else{
+                document.getElementById('chk1.1').style.display="block";
+            }
+        }
+
+        //2
+        document.getElementById('arr1').style.display="none";
+        function arrString(s2){
+            document.getElementById('arr1').style.display="none";
+            if(s2){
+                document.getElementById('result').innerHTML = s2.split(' ');
+            }
+            else{
+                document.getElementById('arr1').style.display="block";
+            }
+        }
+
+        //3
+        document.getElementById('str1').style.display="none";
+        function substrString(str,s,e){
+            document.getElementById('str1').style.display="none";
+            if(str)
+            {
+                document.getElementById('result1').innerHTML = str.substr(s,e);
+            }
+            else{
+                document.getElementById('str1').style.display="block";
+            }
+        }
+    </script>
+</body>
+</html>

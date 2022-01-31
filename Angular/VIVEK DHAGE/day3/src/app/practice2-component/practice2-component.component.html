@@ -1,0 +1,21 @@
+<div id="practice_two">
+  <h4>practice2-component works!</h4>
+  <!-- 
+<app-practice1-component  *ngFor="let st of students"></app-practice1-component> -->
+
+  <button (click)="OnClick()">click</button>
+
+
+  
+
+  <p *ngFor="let n of nominees">nominees  names {{n.name}} and age  {{n.age}}</p>
+</div>
+
+
+<h4>switch case</h4>
+<ul [ngSwitch]="person">
+    <li *ngSwitchCase="'Mohan'">Hello Mohan</li>
+    <li *ngSwitchCase="'Sohan'">Hello Sohan</li>
+    <li *ngSwitchCase="'Vijay'">Hello Vijay</li>
+    <li *ngSwitchDefault>Bye Bye</li>
+  </ul>  

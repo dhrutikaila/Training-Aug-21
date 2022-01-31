@@ -1,0 +1,98 @@
+<!-- Date entered by the user should be checked for whether it is a Valid Date or not. -->
+<!-- Format of date MM-DD-YYYY -->
+
+<!doctype html>
+<html lang="en">
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+
+    <title>Hello, world!</title>
+</head>
+
+<body>
+    <div class="container">
+        <h1 class="text-danger display-4">Date Validation</h1>
+        <form class="row mt-5">
+            <div class="col-md-4 col-12">
+                <label class="form-label" for="dt">Enter Date</label>
+                <input type="text" class="form-control col-md-4" id="dt" placeholder="MM-DD-YYYY">
+                <div id="error" style="display: none;">Invalid Date</div>
+            </div>
+            <div class="row">
+                <div class="col-md-4">
+                    <button type="button" class="btn btn-success mt-3" onclick="chkDateNow()">Check Date</button>
+                </div>
+            </div>
+        </form>
+
+        <p id="result" class="mt-4 text-primary display-6"></p>
+
+    </div>
+
+    <script>
+        function chkDate() {
+            var inputDate = document.getElementById('dt').value;
+            if (inputDate.length == 0) {
+                return false;
+            }
+            else if (inputDate.match(/\d{2}-\d{2}-\d{4}/)) {
+                var arr = inputDate.split("-");
+                var m = parseInt(arr[0]);
+                var d = parseInt(arr[1]);
+                var y = parseInt(arr[2]);
+                var monthDays = [31, 28, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31]
+
+                if (m == 2) {
+                    var leapyear = false;
+                    if ((!(y % 4) && y % 100) || !(y % 400)) {
+                        leapyear = true;
+                    }
+                    if ((leapyear == false) && d >= 29) {
+                        return false;
+                    } else if (leapyear == true && d > 29) {
+                        return false;
+                    }
+                    return true;
+                } else if (m == 1 || (m > 2 && m<=12)) {
+                    if (d > monthDays[m - 1]) {
+                        console.log(d,m);
+                        return false;
+                    }
+                    return true;
+                }
+            } else {
+                return false;
+            }
+        }
+
+        function chkDateNow() {
+            if (chkDate()) {
+                console.log('valid')
+                document.getElementById('result').innerHTML = "It is valid date"
+                document.getElementById('error').style.display = "none";
+                document.getElementById('dt').classList.remove('is-invalid')
+            } else {
+                document.getElementById('dt').classList.add('is-invalid')
+                document.getElementById('error').style.display = "block";
+                document.getElementById('error').classList.add('invalid-feedback')
+                document.getElementById('result').innerHTML = ""
+            }
+        }
+
+    </script>
+
+    <!-- Option 1: Bootstrap Bundle with Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+        crossorigin="anonymous"></script>
+
+</body>
+
+</html>

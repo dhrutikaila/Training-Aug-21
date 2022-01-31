@@ -1,0 +1,452 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Free Health For all</title>
+    <link rel="stylesheet" href="./Styles/bootstrap.css" />
+    <link rel="stylesheet" href="./Styles/index.css" />
+    <link
+      rel="canonical"
+      href="https://getbootstrap.com/docs/5.0/examples/carousel/"
+    />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3"
+      crossorigin="anonymous"
+    />
+    <link
+      rel="stylesheet"
+      href="https://use.fontawesome.com/releases/v5.2.0/css/all.css"
+      integrity="sha384-hWVjflwFxL6sNzntih27bfxkr27PmbbK/iSvJ+a4+0owXq79v+lsFkW54bOGbiDQ"
+      crossorigin="anonymous"
+    />
+  </head>
+  <body>
+    <nav class="navbar navbar-expand-lg navbar-dark fixed-top bg-dark">
+      <a class="navbar-brand ms-5" href="index.html">FREE HEALTH</a>
+      <button
+        class="navbar-toggler"
+        type="button"
+        data-bs-toggle="collapse"
+        data-bs-target="#navbarCollapse"
+        aria-controls="navbarCollapse"
+        aria-expanded="false"
+        aria-label="Toggle navigation"
+      >
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarCollapse">
+        <ul class="navbar-nav me-auto mb-2 mb-md-0 ms-auto">
+          <li class="nav-item">
+            <a class="nav-link  px-3" href="index.html">Home</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link px-3" href="../team.html">Team</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link px-3" href="#">Services</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link px-3" href="#">Blogs</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link px-3" href="./faq.html">FAQ</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link active px-3" href="#">Contact</a>
+          </li>
+        </ul>
+        <ul class="navbar-nav text-center me-5 mb-md-0">
+          <li class="nav-item me-3 px-3">
+            <button
+              class="nav-link btn btn-primary text-white mt-2"
+              style="height: 80%"
+              id="loginbtn"
+              data-toggle="modal"
+              data-target="#loginModal"
+            >
+              Login
+            </button>
+          </li>
+          <li class="nav-item px-3">
+            <button
+              class="nav-link btn btn-primary text-white mt-2"
+              style="height: 80%"
+              id="signbtn"
+              data-toggle="modal"
+              data-target="#signupModal"
+            >
+              Signup
+            </button>
+          </li>
+        </ul>
+      </div>
+    </nav>
+    <div class="modal fade" id="loginModal" tabindex="-1" role="dialog" aria-labelledby="loginModalLabel" aria-hidden="true">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="loginModalLabel">Login</h5>
+        <button type="button"  class="close closelogin" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <form>
+      <div class="modal-body">
+        <div class="form-group">
+          <label for="exampleInputEmail1">Email address</label>
+          <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter email" required pattern="^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$">
+          <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>
+        </div>
+        <div class="form-group">
+          <label for="exampleInputPassword1">Password</label>
+          <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Password">
+        </div>
+      </div>
+      <div class="modal-footer">
+        
+        <button type="button"class="btn btn-secondary closelogin" data-dismiss="modal">Close</button>
+        <button type="submit" id="logincheck" class="btn btn-primary">Submit</button>
+      </div>
+        </form>
+    </div>
+  </div>
+</div>
+<div class="modal fade" id="signupModal" tabindex="-1" role="dialog" aria-labelledby="signupModalLabel" aria-hidden="true">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="signupModalLabel">Signup</h5>
+        <button type="button"  class="close closesignup" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <form>
+      <div class="modal-body">
+        <div class="form-group">
+          <label for="exampleInputEmail1">Email address</label>
+          <input type="email" class="form-control" id="signupInputEmail1" aria-describedby="emailHelp" placeholder="Enter email" required pattern="^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$">
+          <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>
+        </div>
+        <div class="form-group">
+          <label for="exampleInputPassword1">Password</label>
+          <input type="password" class="form-control" id="signupInputPassword1" placeholder="Password">
+        </div>
+      </div>
+      <div class="modal-footer">
+        
+        <button type="button"class="btn btn-secondary closesignup" data-dismiss="modal">Close</button>
+        <button type="submit" id="signupUser" class="btn btn-primary">Submit</button>
+      </div>
+        </form>
+    </div>
+  </div>
+</div>
+    <main>
+      <!-- scroll button -->
+      <button
+        type="button"
+        class="btn btn-danger btn-floating btn-lg"
+        id="scroll"
+      >
+        <i class="fas fa-arrow-up"></i>
+      </button>
+      <!-- Modal -->
+
+      <hr class="featurette-divider" />
+    <section class="container mt-5">
+      <!--Contact heading-->
+      <div class="row">
+        <div class="col-sm-12 text-center mb-4">
+          <a class="btn btn-primary" target="_blank" href="./donate.html">
+            Donate Now <i class="fa fa-dollar"></i
+          ></a>
+        </div>
+        <!--Grid column-->
+        <div class="col-sm-12 mb-4 col-md-5">
+          <!--Form with header-->
+          <div class="card border-primary rounded-0">
+            <div class="card-header p-0">
+              <div class="bg-primary text-white text-center py-2">
+                <h3><i class="fa fa-envelope"></i> Write to us:</h3>
+                <p class="m-0">
+                  We’ll write rarely, but only the best content.
+                </p>
+              </div>
+            </div>
+            <div class="card-body p-3">
+              <div class="form-group">
+                <label> Your name </label>
+                <div class="input-group">
+                  <input
+                    value=""
+                    type="text"
+                    name="data[name]"
+                    class="form-control"
+                    id="inlineFormInputGroupUsername"
+                    placeholder="Your name"
+                  />
+                </div>
+              </div>
+              <div class="form-group">
+                <label>Your email</label>
+                <div class="input-group mb-2 mb-sm-0">
+                  <input
+                    type="email"
+                    value=""
+                    name="data[email]"
+                    class="form-control"
+                    id="inlineFormInputGroupUsername"
+                    placeholder="Email"
+                  />
+                </div>
+              </div>
+              <div class="form-group">
+                <label>Subject</label>
+                <div class="input-group mb-2 mb-sm-0">
+                  <input
+                    type="text"
+                    name="data[subject]"
+                    class="form-control"
+                    id="inlineFormInputGroupUsername"
+                    placeholder="Subject"
+                  />
+                </div>
+              </div>
+              <div class="form-group">
+                <label>Message</label>
+                <div class="input-group mb-2 mb-sm-0">
+                  <input type="text" class="form-control" name="mesg" />
+                </div>
+              </div>
+              <div class="text-center">
+                <input
+                  type="submit"
+                  name="submit"
+                  value="submit"
+                  class="btn btn-primary btn-block rounded-0 py-2"
+                />
+              </div>
+            </div>
+          </div>
+        </div>
+        <!--Grid column-->
+
+        <!--Grid column-->
+        <div class="col-sm-12 col-md-7">
+          <!--Google map-->
+          <div class="mb-4">
+            <iframe
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3669.360803564484!2d72.54477531489255!3d23.120483584903546!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x395e84f35399bd6f%3A0x230d6fd643aaa5e3!2sRadixWeb-%20Radix%20Software%20Services%20Pvt%20Ltd!5e0!3m2!1sen!2sin!4v1634210348024!5m2!1sen!2sin"
+              width="600"
+              height="450"
+              style="border: 0"
+              allowfullscreen=""
+              loading="lazy"
+            ></iframe>
+          </div>
+          <!--Buttons-->
+          <div class="row text-center">
+            <div class="col-md-4">
+              <a
+                class="
+                  bg-primary
+                  px-3
+                  py-2
+                  rounded
+                  text-white
+                  mb-2
+                  d-inline-block
+                "
+                ><i class="fa fa-map-marker"></i
+              ></a>
+              <p>
+                B/H Nirma University, Ekyarth, Near Vandemataram Fabula, Malabar
+                County Rd, Chharodi, Gujarat 382481
+              </p>
+            </div>
+            <div class="col-md-4">
+              <a
+                class="
+                  bg-primary
+                  px-3
+                  py-2
+                  rounded
+                  text-white
+                  mb-2
+                  d-inline-block
+                "
+                ><i class="fa fa-phone"></i
+              ></a>
+              <p>+91-9157049688</p>
+            </div>
+            <div class="col-md-4">
+              <a
+                class="
+                  bg-primary
+                  px-3
+                  py-2
+                  rounded
+                  text-white
+                  mb-2
+                  d-inline-block
+                "
+                ><i class="fa fa-envelope"></i
+              ></a>
+              <p>dhruvit.d9688@gmail.com</p>
+            </div>
+          </div>
+        </div>
+        <!--Grid column-->
+      </div>
+    </section>
+    <footer class="footer">
+      <div class="container bottom_border">
+        <div class="row">
+          <div class="col-sm-4 col-md col-sm-4 col-12 col">
+            <h5 class="headin5_amrc text-white pt2">Find us</h5>
+            <!--headin5_amrc-->
+            <p class="mb10">
+              Lorem Ipsum is simply dummy text of the printing and typesetting
+              industry. Lorem Ipsum has been the industry's standard dummy text
+              ever since the 1500s
+            </p>
+            <p>
+              <i class="fa fa-location-arrow"></i> B/H Nirma University,
+              Ekyarth, Near Vandemataram Fabula, Malabar County Rd, Chharodi,
+              Gujarat 382481
+            </p>
+            <p><i class="fa fa-phone"></i> +91-9157049688</p>
+            <p><i class="fa fa fa-envelope"></i> dhruvit.d9688@gmail.com</p>
+          </div>
+
+          <div class="col-sm-4 col-md col-6 col">
+            <h5 class="headin5_amrc text-white pt2">Quick links</h5>
+            <!--headin5_amrc-->
+            <ul class="footer_ul_amrc">
+              <li><a href="#">Privacy Policy</a></li>
+              <li><a href="#">Performance </a></li>
+              <li><a href="#">Our Petrons</a></li>
+              <li><a href="#">Our Services</a></li>
+              <li><a href="#">Statastics</a></li>
+            </ul>
+            <!--footer_ul_amrc ends here-->
+          </div>
+
+          <div class="col-sm-4 col-md col-6 col">
+            <h5 class="headin5_amrc text-white pt2">Quick links</h5>
+            <!--headin5_amrc-->
+            <ul class="footer_ul_amrc">
+              <li><a href="#">News & Events</a></li>
+
+              <li><a href="#">Support Us</a></li>
+              <li><a href="#">Event Photos</a></li>
+              <li><a href="#">Our Team</a></li>
+              <li><a href="#">Event Photos</a></li>
+            </ul>
+            <!--footer_ul_amrc ends here-->
+          </div>
+
+          <div class="col-sm-4 col-md col-12 col">
+            <h5 class="headin5_amrc text-white pt2">Newsletter</h5>
+            <!--headin5_amrc ends here-->
+
+            <ul class="footerU12">
+              <li>
+                <p class="my-3">Want to check our daily updates...</p>
+              </li>
+              <li>
+                <p>Join Out Newsletter</p>
+              </li>
+
+              <li>
+                <form action="#">
+                  <div class="input-group mb-3 mt-4">
+                    <input
+                      class="form-control"
+                      type="text"
+                      placeholder="Your Email Address"
+                      aria-label="Your Email Address"
+                      aria-describedby="button-addon2"
+                    />
+                    <button
+                      class="btn btn-primary"
+                      id="button-addon2"
+                      type="button"
+                    >
+                      Submit
+                    </button>
+                  </div>
+                </form>
+              </li>
+            </ul>
+            <!--footerU12 ends here-->
+          </div>
+        </div>
+      </div>
+
+      <div class="container">
+        <ul class="foote_bottom_ul_amrc">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="team.html">Team</a></li>
+          <li><a href="#">Services</a></li>
+          <li><a href="#">Blogs</a></li>
+          <li><a href="faq.html">FAQ</a></li>
+          <li><a href="#">Contact</a></li>
+        </ul>
+        <!--foote_bottom_ul_amrc ends here-->
+        <p class="text-center">
+          Copyright @2021 | Managed by <a href="#">Dhruvit</a>
+        </p>
+
+        <ul class="socials">
+          <li>
+            <a href="https://hi-in.facebook.com/dhruvit.d9688"
+              ><i class="fab fa-facebook-f"></i
+            ></a>
+          </li>
+          <li>
+            <a href="https://twitter.com/dhruvitdiyora"
+              ><i class="fab fa-twitter"></i
+            ></a>
+          </li>
+          <li>
+            <a href="https://in.linkedin.com/in/dhruvitdiyora"
+              ><i class="fab fa-linkedin"></i
+            ></a>
+          </li>
+          <li>
+            <a href="https://www.instagram.com/dhruvit_diyora/"
+              ><i class="fab fa-instagram"></i
+            ></a>
+          </li>
+          <li>
+            <a href="mailto:dhruvit.d9688@gmail.com"
+              ><i class="fab fa-google-plus-g"></i
+            ></a>
+          </li>
+        </ul>
+        <!--social_footer_ul ends here-->
+      </div>
+    </footer>
+    <script
+      src="https://code.jquery.com/jquery-3.6.0.js"
+      integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk="
+      crossorigin="anonymous"
+    ></script>
+    <script src="./js/main.js"></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.10.2/dist/umd/popper.min.js"
+      integrity="sha384-7+zCNj/IqJ95wo16oMtfsKbZ9ccEh31eOz1HGyDuCQ6wgnyJNSYdrPa03rtR1zdB"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.min.js"
+      integrity="sha384-QJHtvGhmr9XOIpI6YVutG+2QOK9T+ZnN4kzFN1RtK3zEFEIsxhlmWl5/YESvpZ13"
+      crossorigin="anonymous"
+    ></script>
+  </body>
+</html>

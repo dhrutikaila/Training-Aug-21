@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <button onclick="openWin()">Open Window</button>
+    <button onclick="closeWin()">Close Window</button>
+    <button onclick="moveWin()">Move Window</button>
+    <button onclick="resizeWin()">Resize Window</button>
+    <button onclick="start()">Start</button>
+    <button onclick="stop()">Stop</button>
+    <button onclick="startWatch()">Start StopWatch</button>
+    <button onclick="stopWatch()">Stop StopWatch</button>
+   
+    <p id="p1">0 second</p>
+    <p id="p2">time</p>
+    <script>
+
+        // alert
+        alert('This is alert')
+
+        // prompt
+        var name = prompt('Enter your name','Prit')
+
+        // confirm
+        var ans = confirm('Are you sure?')
+
+        // open window
+        var myWin = open("http://www.google.com")   
+
+        var myWin1 = window.open("","","toolbar=yes,scrollbars=yes,resizable=yes,top=500,left=500,width=400,height=400");
+
+        myWin1.document.write('<p>This is new window</p>')
+
+
+        // open, close, move, resize window
+        var mywin;
+        function openWin() {
+            mywin = window.open("", "mywin", "width=200,height=100");
+        }
+
+        function closeWin() {
+            mywin.close();
+        }
+
+        function moveWin() {
+            mywin.moveTo(500, 500)
+        }
+
+        function resizeWin() {
+            mywin.resizeTo(400, 400);
+        }
+
+
+        // settimeout and cleartimeout
+        var setClearTime;
+
+        function start() {
+            var t = document.getElementById('p1');
+            setClearTime = setTimeout(() => { t.innerHTML = "2 seconds" }, 2000);
+            setClearTime = setTimeout(() => { t.innerHTML = "4 seconds" }, 4000);
+            setClearTime = setTimeout(() => { t.innerHTML = "6 seconds" }, 6000);
+        }
+
+        function stop(){
+            clearTimeout(setClearTime);
+        }
+
+        // setinterval and clear interval
+        var interval;
+
+        function startWatch(){
+            var t1 = document.getElementById('p2')
+            var n = 0;
+            interval = setInterval(()=>{
+                t1.innerHTML = n;
+                n = n+1;
+            },1000);
+        }
+
+        function stopWatch(){
+            clearInterval(interval);
+        }
+
+       
+
+
+
+    </script>
+</body>
+
+</html>

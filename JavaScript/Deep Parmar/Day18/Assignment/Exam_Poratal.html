@@ -1,0 +1,81 @@
+<!-- University of Mumbai needs to set an online exam for their students. For that they need to set a timer for three hours. After 3 hours exams should be finished.
+Note: Use promises and callbacks -->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exam Poratal</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+
+</head>
+
+<body onload="examStart()">
+
+    <h2 style="height: 5vh; color:cadetblue; text-align:center" class="mt-5"> University of Mumbai online exam for their
+        students.</h2>
+    <div class="container border mt-5 w-50">
+        <div class="row">
+            <div class="fs-4 mt-3 text-info text-center col-8">
+                University of Mumbai online exam
+            </div>
+            <div class="col-4 text-end fs-5 mt-3" id="clock"></div>
+        </div>
+        <hr>
+        <div class="my-3">
+            <span>Q-1 : </span>
+            <label for="question" class="form-label">Select UpperCase Latter?</label> <br>
+            <input type="radio" class="form-check-input me-2 ms-5" name="answer_q1" id="q1_op_1"><label for="q_1"
+                class="form-check-label me-5">a</label>
+            <input type="radio" class="form-check-input me-2" name="answer_q1" id="q1_op_2"><label for="q_1"
+                class="form-check-label me-5">b</label>
+            <input type="radio" class="form-check-input me-2" name="answer_q1" id="q1_op_3"><label for="q_1"
+                class="form-check-label me-5">c</label>
+            <input type="radio" class="form-check-input me-2" name="answer_q1" id="q1_op_4"><label for="q_1"
+                class="form-check-label me-5">D</label>
+        </div>
+        <div class="my-3">
+            <span>Q-2 : </span>
+            <label for="question" class="form-label">Select Invalid Fruit Name?</label> <br>
+            <input type="radio" class="form-check-input me-2 ms-5" name="answer_q2" id="q2_op_1"><label for="q_2"
+                class="form-check-label me-5">Banana</label>
+            <input type="radio" class="form-check-input me-2" name="answer_q2" id="q2_op_2"><label for="q_2"
+                class="form-check-label me-5">Apple</label>
+            <input type="radio" class="form-check-input me-2" name="answer_q2" id="q2_op_3"><label for="q_2"
+                class="form-check-label me-5">Kiwi</label>
+            <input type="radio" class="form-check-input me-2" name="answer_q2" id="q2_op_4"><label for="q_2"
+                class="form-check-label me-5">Kaju</label>
+        </div>
+        <div class="my-3">
+            <span>Q-3 : </span>
+            <label for="question" class="form-label">Select Invalid City of Gujrat?</label> <br>
+            <input type="radio" class="form-check-input me-2 ms-5" name="answer_q3" id="q3_op_1"><label for="q_3"
+                class="form-check-label me-5">Ahmedabad</label>
+            <input type="radio" class="form-check-input me-2" name="answer_q3" id="q3_op_2"><label for="q_3"
+                class="form-check-label me-5">Bhavnagar</label>
+            <input type="radio" class="form-check-input me-2" name="answer_q3" id="q3_op_3"><label for="q_3"
+                class="form-check-label me-5">Jamnagar</label>
+            <input type="radio" class="form-check-input me-2" name="answer_q3" id="q3_op_4"><label for="q_3"
+                class="form-check-label me-5">Goa</label>
+        </div>
+
+        <div class="fs-4 text-success" id="finish"></div>
+        <div class="fs-4 text-danger" id="error"></div>
+
+        <div class="text-center">
+            <a class="btn btn-primary my-3" href="Exam_Poratal.html" role="button"> Submit </a>
+        </div>
+
+
+        <script src="Script/Assignment.js"></script>
+
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+        crossorigin="anonymous"></script>
+</body>
+
+</html>

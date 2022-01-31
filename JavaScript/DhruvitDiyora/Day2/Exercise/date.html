@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Javascript Date Practice</title>
+</head>
+
+<body>
+    <script>
+        //create date object
+        const d = new Date();
+
+
+        //full year
+        console.log(d.getFullYear());
+
+        //getting current month
+        console.log(d.getMonth());
+        const months = ["January", "February", "March", "April", "May", "June", "July", "August", "September",
+            "October", "November", "December"
+        ];
+        console.log(months[d.getMonth()]);
+
+        //getting date
+        console.log(d.getDate());
+
+        //getting hours
+        console.log(d.getHours());
+
+        //getting minutes
+        console.log(d.getMinutes());
+
+        //getting seconds
+        console.log(d.getSeconds());
+
+        //getting milliseconds
+        console.log(d.getMilliseconds());
+
+        //get day
+        console.log(d.getDay());
+
+        //getting utc format date
+        console.log(d.getUTCDate());
+
+        //getting utc format day
+        console.log(d.getUTCDay());
+
+        //getting utc format full year
+        console.log(d.getUTCFullYear());
+
+        //getting utc format hour
+        console.log(d.getUTCHours());
+
+        //getting utc format milliseconds
+        console.log(d.getUTCMilliseconds());
+
+        //getting utc format minutes
+        console.log(d.getUTCMinutes());
+
+        //getting utc format seconds
+        console.log(d.getUTCSeconds());
+
+        //getting utc format months
+        console.log(d.getUTCMonth());
+
+        //setting full year
+        d.setFullYear(2020);
+        console.log(d);
+
+        //setting full year by passing whole date
+        d.setFullYear(2020, 11, 3);
+        console.log(d);
+
+        //setting month in date
+        d.setMonth(5);
+        console.log(d);
+
+        //setting date
+        d.setDate(15);
+        console.log(d);
+
+        //adding 50 days in date
+        d.setDate(d.getDate() + 50);
+        console.log(d);
+
+        //setting hours
+        d.setHours(22);
+        console.log(d);
+
+        //setting minutes
+        d.setMinutes(30);
+        console.log(d);
+
+        //setting seconds
+        d.setSeconds(30);
+        console.log(d);
+        console.log(d);
+    </script>
+
+</body>
+
+</html>

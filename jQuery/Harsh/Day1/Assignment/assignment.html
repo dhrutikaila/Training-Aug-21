@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"
+        integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+</head>
+
+<body>
+    <p id="paragraph"></p>
+    <script>
+
+        var selectValues = ["india", "usa", "uk", "canada", "australia"];
+        var key;
+        $("body").append("<form>");
+        $("form").append("<select id='default'>");
+        $("select").append("<option value='default' >please select</option>");
+
+        for (key of selectValues) {
+            $("select").append('<option value="' + key + '">' + key + '</option>');
+        }
+        $("#paragraph").html("<ul><li>india</li><li>usa</li><li>uk</li><li>canada</li><li>australia</li></ul>");
+        $("#default").change(function () {
+
+            if ($("#default").val() == "default") {
+                $("#paragraph").html("<ul><li>india</li><li>usa</li><li>uk</li><li>canada</li><li>australia</li></ul>");
+            }
+
+            else {
+                $("li").hide();
+                var val = $(this).val();
+                $("#paragraph").html("your selected country:" + val);
+            }
+        });
+
+    </script>
+</body>
+
+</html>

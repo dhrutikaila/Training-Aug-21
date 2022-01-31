@@ -1,0 +1,892 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>mamaearth</title>
+    <link rel="stylesheet" href="../assets/js/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link href='https://fonts.googleapis.com/css?family=Satisfy' rel='stylesheet'>
+    <link href='http://fonts.googleapis.com/css?family=Lato:400,700' rel='stylesheet' type='text/css'>
+    <script
+    src="https://code.jquery.com/jquery-3.6.0.js"
+    integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk="
+    crossorigin="anonymous"></script>
+</head>
+
+<body>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+        crossorigin="anonymous"></script>
+    <script src="../assets/js/bootstrap.bundle.js"></script>
+    <script src="../assets/js/bootstrap.bundle.min.js"></script>
+    <script src="../assets/js/product.js"></script>
+    <div id="nav1" style="background-color:#D4424C;">
+        <ul class="nav d-flex flex-wrap" style="background-color:#D4424C; margin-left: 50px;">
+            <li class="item1 pt-1 pb-1" style="font-size:10px; color:white; ">
+                Asia's 1st Brand with
+                MADE SAFE
+                Certified Products
+            </li>
+            <li class="item2 pt-1 pb-1" style="font-size:10px; color: white;margin-left: 120px; ">
+                Free Shipping Above 399| COD Available | Extra 5% OFF on Prepaid Orders |Shop Now
+            </li>
+        </ul>
+    </div>
+    <!--navbar2-->
+    <div id="nav2">
+        <ul class="nav d-flex flex-wrap  mb-1">
+            <li class="nav-item " style="margin-left: 100px;">
+                <a href="" class="navbar-brand">
+                    <img src="../assets/img/mamaearth-logo.png" alt="" class="img-fluid mt-2" style="width: 110px;">
+                </a>
+            </li>
+            <li class="nav-item">
+                <div class="input-group ms-5 mt-2" style="width: 500px;" id="inputgroup">
+                    <input type="text" class="form-control border border-top" style="height:30px ;"
+                        placeholder="Search for Products..">
+                    <button class="btn border border-none " type="button"
+                        style="background-color: #00AFEF;height:30px; padding-top: 1px; padding-bottom: 1px;">
+                        <i class="fa fa-search" aria-hidden="true" style="color: white; width: 10px;"></i>
+                        <span class="ms-2" style="color: white; font-size: small;">Search</span>
+                    </button>
+                </div>
+            </li>
+            <li class="nav-item mt-2 loginnav" style="margin-left: 220px;">
+                <button style="background-color: transparent; border: none;color: gray;">
+                    <i class="fa fa-shopping-cart fw-normal fs-4" style="color: #00AFEF ;"></i>
+                    Cart
+                </button>
+
+                <button class="ms-3 dropdown dropdown me-3"
+                    style="background-color: transparent; border: none;color: gray;" data-bs-toggle="dropdown">
+                    <i class="fa fa-user-o" aria-hidden="true" style="color: #00AFEF;"></i>
+                    <span style="font-family: lato;font-size: small;">Login</span>
+                </button>
+                <ul class="dropdown-menu login">
+                    <li><a class="fw-light dropdown-item" style="font-size: 12px;" data-bs-toggle="modal"
+                            data-bs-target="#loginModal">
+                            <i class="fa fa-user-o" aria-hidden="true" style="color:gray;"></i></i>
+                            Your Profile</a></li>
+                    <li>
+                        <hr class="dropdown-divider border-light">
+                    </li>
+                    <li><a href="#" class="fw-light dropdown-item" style="font-size: 12px;">Your Orders</a></li>
+                    <li>
+                        <hr class="dropdown-divider border-light">
+                    </li>
+                    <li><a href="#" class="fw-light dropdown-item" style="font-size: 12px;">Manage Address</a></li>
+                    <li>
+                        <hr class="dropdown-divider border-light">
+                    </li>
+                    <li><a href="#" class="fw-light dropdown-item" style="font-size: 12px;">Contact Us</a></li>
+                </ul>
+            </li>
+            <div class="modal fade " id="loginModal" tabindex="-1">
+                <div class="modal-dialog modal-dialog-centered" style="border-radius:50px;width: 400px;">
+                    <div class="modal-content" style="height: 450px;">
+                        <div class="modal-header border-0">
+                            <h5 class="modal-title" id="exampleModalLabel" style="color:#02AFEF;font-family: lato;margin-left: 80px;">
+                                Log in to get started
+                        </h5>
+                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                        </div>
+                        <div class="modal-body">
+                            <div class="d-flex mb-3">
+                                <img src="../assets/img/login.svg" alt="" style="height: 70px;"class="mt-0">
+                                <span style="font-family: lato;font-size: 13px;" class="ms-3">Get access to your orders, track
+                                <br>
+                                previous order &amp; Redeem Mama 
+                                <br>
+                                cash</span>
+                            </div>
+                            <form>
+                                <div class="mb-3">
+                                    <label for="recipient-name" class="col-form-label" style="font-size: 12px;font-family: lato;">Phone Number</label>
+                                    <input type="text" class="form-control" id="recipient-name">
+                                </div>
+                               
+                                    <span class="ms-1" style="font-family: lato; font-size: 12px;">By Continuing, you agree to Mamaearth's 
+                                        <a href="#" class="fw-bold" style="text-decoration: none;color:#02AFEF;font-family: lato; font-size: 12px">Terms and Conditions</a>
+                                        And
+                                    </span>
+                                    <span>
+                                        <a href="#"class="fw-bold"style="text-decoration: none;color:#02AFEF;font-family: lato; font-size: 12px">Privacy Policy</a>
+                                    </span>
+                            </form>
+                        </div>
+                        <div class="modal-footer border-0" style="margin-top:0px">
+                            <button class="btn w-100 mb-1" style="color:white;background-color: #02AFEF;height: 35px;" data-bs-target="#loginModal2" data-bs-toggle="modal">
+                                <p style="font-size: 10px;font-family: lato;"class="pb-3">LOGIN WITH OTP</p>
+                            </button>
+                            <button class="btn w-100" style="background-color:white;color: #02AFEF;height: 35px;">
+                                <p style="font-size: 10px;font-family: lato;"class="pb-3">CONTINUE AS A GUEST</p>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="modal fade " id="loginModal2" tabindex="-1">
+                <div class="modal-dialog modal-dialog-centered" style="border-radius:50px;width: 400px;">
+                    <div class="modal-content" style="height: 450px;">
+                        <div class="modal-header border-0">
+                            <a href="" data-bs-target="#toggleExample" data-bs-toggle="modal" data-bs-dismiss="modal">
+                                <i class="fa fa-arrow-left" aria-hidden="true" style="color:#B1B1B1"></i>
+                            </a>
+                            <h5 class="modal-title" id="exampleModalLabel" style="color:#02AFEF;font-family: lato;margin-left:10px;">
+                              Signup for the Goodness inside
+                        </h5>
+                        </div>
+                        <div class="modal-body">
+                            <form>
+                                <div>
+                                    <label for="recipient-name" class="col-form-label" style="font-size: 12px;font-family: lato;">Phone Number</label>
+                                    <input type="text" class="form-control" id="recipient-name">
+                                </div>
+                                <div>
+                                    <label for="recipient-name" class="col-form-label" style="font-size: 12px;font-family: lato;">First Name</label>
+                                    <input type="text" class="form-control" id="recipient-name">
+                                </div>
+                                <div>
+                                    <label for="recipient-name" class="col-form-label" style="font-size: 12px;font-family: lato;">Last Name</label>
+                                    <input type="text" class="form-control" id="recipient-name">
+                                </div>
+                                <div>
+                                    <label for="recipient-name" class="col-form-label" style="font-size: 12px;font-family: lato;">Email</label>
+                                    <input type="text" class="form-control" id="recipient-name">
+                                </div>
+                            </form>
+                            
+                        </div>
+                        <div class="modal-footer border-0" style="margin-top:0px">
+                            <button class="btn w-100 mb-1" style="color:white;background-color: #02AFEF;height: 35px;">
+                                <p style="font-size: 10px;font-family: lato;"class="pb-3">SIGN UP</p>
+                            </button>
+                           
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </ul>
+    </div>
+    <hr style="margin-top: 5px; color: grey;border: transparent;">
+    <div id="nav3" style="height: 10px;margin-left: 40px;margin-top: -20px;">
+        <ul class="nav d-flex flex-wrap">
+            <li class="nav-item" style="font-size: 11px;">
+                <a href="#" class="nav-link text-muted">HOME</a>
+            </li>
+            <li class="nav-item dropdown" style="font-size: 11px;">
+                <a href="#" class="nav-link dropdown text-muted mb-0" data-bs-toggle="dropdown" role="button">BABY</a>
+                <ul class="dropdown-menu">
+                    <div class="d-flex" style="width: 230px; height:150px">
+                        <div class="mb-3"><a href="#" class="dropdown-item"
+                                style="color:#5C5C5C;font-size:small;">Explore</a>
+                            <div><a href="#" class="dropdown-item fw-light text-dark" style="font-size:10px;">New
+                                    Launches</a></div>
+                            <div><a href="#" class="dropdown-item fw-light text-dark" style="font-size:10px;">Best
+                                    Sellers</a></div>
+                            <div><a href="#" class="dropdown-item fw-light text-dark" style="font-size:10px;">Combos</a>
+                            </div>
+                            <div><a href="#" class="dropdown-item fw-light text-dark" style="font-size:10px;">Gift
+                                    Packs</a></div>
+                        </div>
+                        <div class="vl ms-3" style="border-left: 1px solid gray;height: 140px;"></div>
+                        <div class="mb-3 ms-3"><a href="#" class="dropdown-item"
+                                style="color:#5C5C5C; font-size: small;">Baby</a>
+                            <div><a href="#" class="dropdown-item fw-light text-dark" style="font-size:10px;">Baby
+                                    Shampoo</a> </div>
+                            <div><a href="#" class="dropdown-item fw-light text-dark" style="font-size:10px;">Baby
+                                    Oralcare</a></div>
+                            <div><a href="#" class="dropdown-item fw-light text-dark" style="font-size:10px;">Baby
+                                    oil</a></div>
+                            <div><a href="#" class="dropdown-item fw-light text-dark" style="font-size:10px;">Baby
+                                    skin</a></div>
+                            <div><a href="#" class="dropdown-item fw-light text-dark" style="font-size:10px;">Baby
+                                    Path</a></div>
+                        </div>
+                    </div>
+                </ul>
+            </li>
+            <li class="nav-item dropdown" style="font-size: 11px;">
+                <a class="nav-link dropdown text-muted" data-bs-toggle="dropdown" href="#">BEAUTY</a>
+                <ul class="dropdown-menu ">
+                    <div class="d-flex " style="width:250px;height:120px">
+                        <div class="mb-3"><a href="#" class="dropdown-item"
+                                style="color:#5C5C5C; font-size: small;">Explore</a>
+                            <div><a href="#" class="dropdown-item fw-light text-dark" style="font-size:10px;">New
+                                    Launches</a></div>
+                            <div><a href="#" class="dropdown-item fw-light text-dark" style="font-size:10px;">Best
+                                    Sellers</a></div>
+                            <div><a href="#" class="dropdown-item fw-light text-dark" style="font-size:10px;">Combos</a>
+                            </div>
+                            <div><a href="#" class="dropdown-item fw-light text-dark" style="font-size:10px;">Gift
+                                    Packs</a> </div>
+                        </div>
+                        <div class="vl ms-3" style="border-left: 1px solid gray;height:110px;"></div>
+                        <div class="mb-3 ms-3"><a href="#" class="dropdown-item"
+                                style="color:#5C5C5C; font-size: small;">Beauty</a>
+                            <div><a href="#" class="dropdown-item fw-light text-dark" style="font-size:10px;">Face</a>
+                            </div>
+                            <div><a href="#" class="dropdown-item fw-light text-dark" style="font-size:10px;">Hair</a>
+                            </div>
+                            <div><a href="#" class="dropdown-item fw-light text-dark" style="font-size:10px;">Body</a>
+                            </div>
+                        </div>
+                    </div>
+                </ul>
+            </li>
+            <li class="nav-item dropdown" style="font-size: 11px;">
+                <a class="nav-link dropdown text-muted" data-bs-toggle="dropdown" href="#">HAIR</a>
+                <ul class="dropdown-menu ">
+                    <div class="d-flex " style="width:300px;height:150px">
+                        <div class="mb-3"><a href="#" class="nav-link"
+                                style="color:#5C5C5C; font-size: small;">Explore</a>
+                            <div><a href="#" class="dropdown-item fw-light text-dark" style="font-size:10px;">New
+                                    Launches</a></div>
+                            <div><a href="#" class="dropdown-item fw-light text-dark" style="font-size:10px;">Best
+                                    Sellers</a> </div>
+                            <div><a href="#" class="dropdown-item fw-light text-dark" style="font-size:10px;">Combos</a>
+                            </div>
+                            <div><a href="#" class="dropdown-item fw-light text-dark" style="font-size:10px;">Gift
+                                    Packs</a></div>
+                        </div>
+                        <div class="vl ms-3" style="border-left: 1px solid gray;height:140px;"></div>
+                        <div class="mb-3 ms-3"><a href="#" class="nav-link"
+                                style="color:#5C5C5C; font-size: small;">Hair</a>
+                            <div><a href="#" class="dropdown-item fw-light text-dark"
+                                    style="font-size:10px;">Shampoo</a></div>
+                            <div><a href="#" class="dropdown-item fw-light text-dark"
+                                    style="font-size:10px;">Conditioner</a></div>
+                            <div><a href="#" class="dropdown-item fw-light text-dark" style="font-size:10px;">Hair
+                                    Oil</a></div>
+                            <div><a href="#" class="dropdown-item fw-light text-dark" style="font-size:10px;">Hair
+                                    Mask</a></div>
+                            <div><a href="#" class="dropdown-item fw-light text-dark" style="font-size:10px;">Hair
+                                    Serum</a></div>
+                        </div>
+                    </div>
+                </ul>
+            </li>
+            <li class="nav-item dropdown" style="font-size: 11px;">
+                <a class="nav-link dropdown text-muted" data-bs-toggle="dropdown" href="#">FACE</a>
+                <ul class="dropdown-menu ">
+                    <div class="d-flex " style="width:250px;height:230px">
+                        <div class="mb-3"><a href="#" class="nav-link"
+                                style="color:#5C5C5C; font-size: small;">Explore</a>
+                            <div><a href="#" class="dropdown-item fw-light text-dark" style="font-size:10px;">New
+                                    Launches</a></div>
+                            <div><a href="#" class="dropdown-item fw-light text-dark" style="font-size:10px;">Best
+                                    Sellers</a></div>
+                            <div><a href="#" class="dropdown-item fw-light text-dark" style="font-size:10px;">Combos</a>
+                            </div>
+                            <div><a href="#" class="dropdown-item fw-light text-dark" style="font-size:10px;">Gift
+                                    Packs</a></div>
+                        </div>
+                        <div class="vl ms-3" style="border-left: 1px solid gray;height:220px;"></div>
+                        <div class="mb-3 ms-3"><a href="#" class="nav-link"
+                                style="color:#5C5C5C; font-size: small;">Hair</a>
+                            <div><a href="#" class="dropdown-item fw-light text-dark" style="font-size:10px;">Face
+                                    Wash</a></div>
+                            <div><a href="#" class="dropdown-item fw-light text-dark" style="font-size:10px;">Face
+                                    Mask</a></div>
+                            <div><a href="#" class="dropdown-item fw-light text-dark" style="font-size:10px;">Face
+                                    Cream</a></div>
+                            <div><a href="#" class="dropdown-item fw-light text-dark" style="font-size:10px;">Face
+                                    Serum</a></div>
+                            <div><a href="#" class="dropdown-item fw-light text-dark" style="font-size:10px;">Face
+                                    Scrub</a></div>
+                            <div><a href="#" class="dropdown-item fw-light text-dark" style="font-size:10px;">Face
+                                    Toner</a></div>
+                            <div><a href="#" class="dropdown-item fw-light text-dark" style="font-size:10px;">Face
+                                    Gel</a></div>
+                            <div><a href="#" class="dropdown-item fw-light text-dark" style="font-size:10px;">Face Sheet
+                                    Mask</a></div>
+                        </div>
+                    </div>
+                </ul>
+            </li>
+            <li class="nav-item dropdown" style="font-size: 11px;">
+                <a class="nav-link dropdown text-muted" data-bs-toggle="dropdown" href="#">BODY</a>
+                <ul class="dropdown-menu ">
+                    <div class="d-flex " style="width:250px;height:180px">
+                        <div class=""><a href="#" class="nav-link" style="color:#5C5C5C; font-size: small;">Explore</a>
+                            <div><a href="#" class="dropdown-item fw-light text-dark" style="font-size:10px;">New
+                                    Launches</a></div>
+                            <div><a href="#" class="dropdown-item fw-light text-dark" style="font-size:10px;">Best
+                                    Sellers</a></div>
+                            <div><a href="#" class="dropdown-item fw-light text-dark" style="font-size:10px;">Combos</a>
+                            </div>
+                            <div><a href="#" class="dropdown-item fw-light text-dark" style="font-size:10px;">Gift
+                                    Packs</a></div>
+                        </div>
+                        <div class="vl ms-3" style="border-left: 1px solid gray;height:170px;"></div>
+                        <div class="ms-3"><a href="#" class="nav-link" style="color:#5C5C5C; font-size: small;">Hair</a>
+                            <div><a href="#" class="dropdown-item fw-light text-dark" style="font-size:10px;">Body
+                                    Butter</a></div>
+                            <div><a href="#" class="dropdown-item fw-light text-dark" style="font-size:10px;">Body
+                                    Wash</a></div>
+                            <div><a href="#" class="dropdown-item fw-light text-dark" style="font-size:10px;">Body
+                                    Lotion</a></div>
+                            <div><a href="#" class="dropdown-item fw-light text-dark" style="font-size:10px;">Body
+                                    Scrub</a></div>
+                            <div><a href="#" class="dropdown-item fw-light text-dark" style="font-size:10px;">Hand
+                                    Cream</a></div>
+                        </div>
+                    </div>
+                </ul>
+            </li>
+            <li class="nav-item" style="font-size: 12px;">
+                <a class="nav-link text-muted" href="#">GIFT PACKS</a>
+            </li>
+            <li class="nav-item" style="font-size: 11px;">
+                <a class="nav-link text-muted" href="#">ALL PRODUCTS</a>
+            </li>
+            <li class="nav-item" style="font-size: 11px;">
+                <a class="nav-link text-muted" href="#">PLANT GOODNESS</a>
+            </li>
+
+        </ul>
+    </div>
+
+
+    <div id="responsive" class="mt-1 ms-2 d-flex flex-wrap justify-content-between">
+        <div>
+            <img src="../assets/img/baby-min.png" class="rounded resnavbar" width="70px" alt="baby" id="responsive1"><br>
+            <p class="text-dark resnav" style="margin-left: 40px;font-size: 10px;">Baby</p>
+        </div>
+        <div>
+            <img src="../assets/img/face-min.png" class="rounded resnavbar" width="70px" alt="Face"><br>
+            <p class="text-dark resnav" style="margin-left: 40px;font-size: 10px;">Face</p>
+        </div>
+        <div>
+            <img src="../assets/img/hair-min.png" class="rounded resnavbar" width="70px" alt="Hair"><br>
+            <p class="text-dark resnav" style="margin-left: 40px;font-size: 10px;">Hair</p>
+        </div>
+        <div>
+            <img src="../assets/img/body-min.png" class="rounded resnavbar" width="70px" alt="Body"><br>
+            <p class="text-dark resnav" style="margin-left: 40px;font-size: 10px;">Body</p>
+        </div>
+    </div>
+    <!-- <div style="margin-top: 40px;">
+        <div id="carouselExampleControls" class="carousel slide" data-bs-ride="carousel">
+            <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleControls"
+                data-bs-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="false"></span>
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleControls"
+                data-bs-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            </button>
+            <div class="carousel-inner">
+                <div class="carousel-item active">
+                    <img src="../assets/img/image 1.jpeg" alt="" class="img-fluid" style="margin-top: 10px;">
+                </div>
+                <div class="carousel-item">
+                    <img src="../assets/img/image 2.jpeg" alt="" class="img-fluid">
+                </div>
+            </div>
+        </div>
+    </div> -->
+    <div id="imgcard">
+
+    </div>
+
+    <div class="d-flex carddata">
+        <div class="col-4 carddetail">
+             <p class="fs-5 fw-bold text-center mt-5" style="margin-bottom: -10px;">Best Sellers</p>
+               <p class="fw-normal" style="font-size: 14px; margin-left: 100px;">
+                Explore best-selling safe, natural, and 100%
+                toxin-free baby and beauty products from Mamaearth.Get amazing deals and start your
+                toxin-free skin, hair, and
+                baby
+                care journey.
+            </p>
+            <button class="btn" style="background-color: #00AFEF;color: white;font-size: 12px;margin-left: 200px;">
+                VIEW ALL
+            </button>
+        </div>
+       <!--carousel1-->
+       <div id="carouselExample1" class="carousel slide" data-bs-ride="carousel" data-bs-interval="false">
+        <a class="carousel-control-prev" role="button" data-bs-target="#carouselExample1" data-bs-slide="prev">
+            <i class="fa fa-angle-left" aria-hidden="true" style="color: black;position: relative;right:60px"></i>
+        </a>
+        <a class="carousel-control-next" role="button" data-bs-target="#carouselExample1" data-bs-slide="next">
+            <i class="fa fa-angle-right" aria-hidden="true" style="color: black;position: relative;left:70px"></i>
+        </a>
+        <div class="carousel-inner">
+            <div class="carousel-item active">
+                <div class="d-flex flex-wrap justify-content-around"  id="card" >        
+                </div>
+             </div>
+        </div>
+    </div>
+</div>
+    <!--carousel2-->
+    <div class="d-flex carddata">
+        <div class="col-4 carddetail">
+             <p class="fs-5 fw-bold text-center mt-5" style="margin-bottom: -10px;">Best Deals</p>
+               <p class="fw-normal" style="font-size: 14px; margin-left: 100px;">
+                Explore best-selling safe, natural, and 100% toxin-free baby
+                and beauty products from Mamaearth. Get amazing deals and start your toxin-free skin, hair, and baby
+                care journey.
+            </p>
+            <button class="btn" style="background-color: #00AFEF;color: white;font-size: 12px;margin-left: 200px;">
+                VIEW ALL
+            </button>
+        </div>
+        <div id="carouselExample2" class="carousel slide" data-bs-ride="carousel" data-bs-interval="false">
+            <a class="carousel-control-prev" role="button" data-bs-target="#carouselExample2" data-bs-slide="prev">
+                <i class="fa fa-angle-left" aria-hidden="true" style="color: black;position: relative;right:60px"></i>
+            </a>
+            <a class="carousel-control-next" role="button" data-bs-target="#carouselExample2" data-bs-slide="next">
+                <i class="fa fa-angle-right" aria-hidden="true" style="color: black;position: relative;left:70px"></i>
+            </a>
+            <div class="carousel-inner">
+                <div class="carousel-item active">
+                    <div class="d-flex flex-wrap justify-content-around"  id="bestdeals" >        
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!--carousel3-->
+    <div class="d-flex carddata">
+        <div class="col-4 carddetail">
+             <p class="fs-5 fw-bold text-center mt-5" style="margin-bottom: -10px;">Onion Range</p>
+               <p class="fw-normal" style="font-size: 14px; margin-left: 100px;">
+                Explore 100% toxin-free and safe Onion Range for Hair Fall, 
+                formulated with the goodness of natural ingredients and no harmful chemicals.
+            </p>
+            <button class="btn" style="background-color: #00AFEF;color: white;font-size: 12px;margin-left: 200px;">
+                VIEW ALL
+            </button>
+        </div>
+        <div id="carouselExample3" class="carousel slide" data-bs-ride="carouse3" data-bs-interval="false">
+            <a class="carousel-control-prev" role="button" data-bs-target="#carouselExample3" data-bs-slide="prev">
+                <i class="fa fa-angle-left" aria-hidden="true" style="color: black;position: relative;right:60px"></i>
+            </a>
+            <a class="carousel-control-next" role="button" data-bs-target="#carouselExample3" data-bs-slide="next">
+                <i class="fa fa-angle-right" aria-hidden="true" style="color: black;position: relative;left:70px"></i>
+            </a>
+            <div class="carousel-inner">
+                <div class="carousel-item active">
+                    <div class="d-flex flex-wrap justify-content-around"  id="onionrange" >        
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+<!--carousel4-->
+<div class="d-flex carddata">
+    <div class="col-4 carddetail">
+         <p class="fs-5 fw-bold text-center mt-5" style="margin-bottom: -10px;">Vitamin C range</p>
+           <p class="fw-normal" style="font-size: 14px; margin-left: 100px;">
+            Explore 100% toxin-free and safe Vitamin C Range for Glowing and Radiant Skin, 
+            formulated with the goodness of natural ingredients and no harmful chemicals
+        </p>
+        <button class="btn" style="background-color: #00AFEF;color: white;font-size: 12px;margin-left: 200px;">
+            VIEW ALL
+        </button>
+    </div>
+    <div id="carouselExample4" class="carousel slide" data-bs-ride="carouse3" data-bs-interval="false">
+        <a class="carousel-control-prev" role="button" data-bs-target="#carouselExample4" data-bs-slide="prev">
+            <i class="fa fa-angle-left" aria-hidden="true" style="color: black;position: relative;right:60px"></i>
+        </a>
+        <a class="carousel-control-next" role="button" data-bs-target="#carouselExample4" data-bs-slide="next">
+            <i class="fa fa-angle-right" aria-hidden="true" style="color: black;position: relative;left:70px"></i>
+        </a>
+        <div class="carousel-inner">
+            <div class="carousel-item active">
+                <div class="d-flex flex-wrap justify-content-around"  id="vitaminc" >        
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!--carousel5-->
+<div class="d-flex carddata">
+    <div class="col-4 carddetail">
+         <p class="fs-5 fw-bold text-center mt-5" style="margin-bottom: -10px;">Ubtan Range</p>
+           <p class="fw-normal" style="font-size: 14px; margin-left: 100px;">
+            Explore 100% toxin-free and safe Ubtan Range for Tan Removal and Radiant Skin, 
+            formulated with the goodness of natural ingredients and no harmful chemicals.
+        </p>
+        <button class="btn" style="background-color: #00AFEF;color: white;font-size: 12px;margin-left: 200px;">
+            VIEW ALL
+        </button>
+    </div>
+    <div id="carouselExample5" class="carousel slide" data-bs-ride="carouse3" data-bs-interval="false">
+        <a class="carousel-control-prev" role="button" data-bs-target="#carouselExample5" data-bs-slide="prev">
+            <i class="fa fa-angle-left" aria-hidden="true" style="color: black;position: relative;right:60px"></i>
+        </a>
+        <a class="carousel-control-next" role="button" data-bs-target="#carouselExample5" data-bs-slide="next">
+            <i class="fa fa-angle-right" aria-hidden="true" style="color: black;position: relative;left:70px"></i>
+        </a>
+        <div class="carousel-inner">
+            <div class="carousel-item active">
+                <div class="d-flex flex-wrap justify-content-around"  id="ubtanrange" >        
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+    <div class="d-flex mt-5">
+        <div class="embed-responsive embed-responsive-16by9 mt-3" style="margin-left: 120px;">
+            <iframe width="500" height="300" src="https://www.youtube.com/embed/YROZybuYGUE"
+                title="YouTube video player" frameborder="0"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                allowfullscreen class="rounded"></iframe>
+        </div>
+        <div class="" style="margin-top: 80px;margin-right: 90px;">
+            <h2 style="font-family:cursive;margin-left: 160px;color: #3CA7E4;font-size: 20px;font-family: Satisfy;">
+                Our goodness promise</h2>
+            <p class="ms-5 me-5 mt-3" style="font-size: 10px;font-family: lato;">
+                At Mamaearth, we live to spread a little love and goodness every day.
+                We believe that goodness isn’t a superpower, nor a special gift, it’s inside all of us and it shows in
+                the little
+                choices we make. Our mission is to bring you the best of nature through our purest and most nurturing
+                products that
+                are made without any toxins or harmful chemicals. For us goodness also means being good to the earth.
+                Which is why
+                we recycle more plastic than we use and we're PETA Certified - which means we never test on animals.
+                This is our #GoodnessInside.
+            </p>
+            <button class="btn"
+                style="background-color: #3CA7E4;color: white;margin-left: 170px;font-size: 11px;width: 100px;">
+                SHOP NOW
+            </button>
+            <button class="btn" style="color: #3CA7E4;font-size:11px;border-color: #3CA7E4;">
+                OUR PLEDGES
+            </button>
+        </div>
+    </div>
+
+    <div class="for-desktop" style="margin-top:30px">
+        <img src="../assets/img/desktop_home_img.jpeg" alt="" class="img-fluid">
+        <h4 style="position: absolute;top:2650px;left:650px;font-family: lato;">WE PLANT GOODNESS</h4> <br>
+        <h4 class="fw-bold" style="position: absolute;font-family: lato;top:2680px;left:750px;color: #82C341;">161769
+        </h4>
+        <p style="font-family: lato;position: absolute;top:2710px;left:700px;width: 450px;">
+            Trees have got life already...</p>
+        <p style="font-family: lato;position: absolute;top:2740px;left:640px;width: 450px;">
+            Everytime you buy from us, we plant more trees!</p>
+        <button style="position: absolute;top:2790px;left:750px;width: 10px;background-color: transparent;border:none">
+            <img src="../assets/img/desktop_cta2x.png" alt="" height="30px">
+        </button>
+    </div>
+    <h3 style="font-family: Roboto, serif;text-align: center;" class="mt-5">Super Safe Standards</h3>
+    <div style="margin-left: 150px;margin-right: 100px;">
+        <div class="d-flex">
+            <img src="../assets/img/dermatology-tested-100x100.png" alt="" height="90px" width="90px">
+            <div style="width: 220px;">
+                <h6 class="mt-3 ms-3">Dermatologically Tested</h6>
+                <p style="font-family: lato;font-size: 12px;" class="mt-2 ms-3">
+                    We ensure each product is tested clinically on the sensitive human skin to ensure that it is not
+                    allergic.
+                </p>
+            </div>
+
+            <img src="../assets/img/fda-100x100.jpeg" alt="" height="90px" width="90px" style="margin-left: 20px">
+            <div style="width: 220px;">
+                <h6 class="mt-3 ms-3">FDA Approved</h6>
+                <p style="font-family: lato;font-size: 12px;" class="mt-2 ms-3">
+                    MamaEarth is FDA approved, which means we are 100% safe to be used for babies as well as mamas
+                </p>
+            </div>
+
+            <img src="../assets/img/msafe-100x100.jpeg" alt="" height="90px" width="90px" style="margin-left: 20px">
+            <div style="width: 220px;">
+                <h6 class="mt-3 ms-3">Made Safe Certified</h6>
+                <p style="font-family: lato;font-size: 12px;" class="mt-2 ms-3">
+                    The MADE SAFE seal means that a product is literally made with safe ingredients.
+                </p>
+            </div>
+        </div>
+    </div>
+
+    <h5 style="font-family: Roboto, serif;text-align: center;border-bottom: black;" class="mt-3">What Our Customer Say
+    </h5>
+    <img src="../assets/img/strip2x.png" alt="" class="img-fluid" style="margin-left: 200px;" width="650px">
+    <div id="carouselExample3" class="carousel slide mt-3" data-bs-ride="carousel">
+        <a class="carousel-control-prev" role="button" data-bs-target="#carouselExample3" data-bs-slide="prev">
+            <i class="fa fa-angle-left" aria-hidden="true" style="color: black;position: relative; right: 50px;"></i>
+        </a>
+        <a class="carousel-control-next" role="button" data-bs-target="#carouselExample3" data-bs-slide="next">
+            <i class="fa fa-angle-right" aria-hidden="true" style="color: black;position: relative; left: 50px;"></i>
+        </a>
+        <div class="carousel-inner">
+            <div class="carousel-item active">
+                <div class="d-flex justify-content-evenly">
+                    <div class="card rounded feedback" style="width: 320px; height: 210px;">
+                        <div class="card-body">
+                            <p class="card-text" style="font-family: Roboto, serif; font-size:12px;">
+                                I use a number of Mamaearth products - Onion hair fall kit, body lotion and hair oil.
+                                I've had one of the best shopping experiences. The delivery was early and easy to track.
+                                The website is stable and smooth and easy to navigate. The payment gateway is also
+                                smooth and secure.
+                            </p>
+                            <img src="../assets/img/Tanmaya_Shrivastav_JbDYODv.jpeg" alt="" class="rounded-circle w-25 mb-0">
+                            <span style="font-size: small;">Tanmaya </span><br>
+                            <span class="badge"
+                                style="background-color: #6DA523;height: 20px;position: relative;bottom: 30px;left:80px">
+                                <p class="text-center fw-normal">5.0
+                                    <i class="fa fa-star" aria-hidden="true"></i>
+                                </p>
+                            </span>
+                        </div>
+                    </div>
+                    <div class="card rounded feedback" style="width: 320px; height: 210px;">
+                        <div class="card-body">
+                            <p class="card-text" style="font-family: Roboto, serif; font-size:12px;">
+                                I wanted to use natural products for my baby and came across Mamaearth two years ago.
+                                And I am loving it. I use the Baby Shampoo, Toothpaste, Face Cream and I just love all
+                                of them.
+                                The website works perfectly.
+                                I would suggest you make an app also. Payment is secure and delivery was on time. This
+                                is the best brand in this category.
+                            </p>
+                            <img src="../assets/img/Priyanshi_Singh_gHqZqXk.jpeg" alt="" class="rounded-circle w-25 mb-0">
+                            <span style="font-size: small;">Priyanshi Singh </span><br>
+                            <span class="badge"
+                                style="background-color: #6DA523;height: 20px;position: relative;bottom: 30px;left:80px">
+                                <p class="text-center fw-normal">5.0
+                                    <i class="fa fa-star" aria-hidden="true"></i>
+                                </p>
+                            </span>
+                        </div>
+                    </div>
+                    <div class="card rounded feedback" style="width: 320px; height: 210px;">
+                        <div class="card-body">
+                            <p class="card-text" style="font-family: Roboto, serif; font-size:12px;">
+                                I use Mamaearth Ubtan Face Wash. It gives me an instant natural glow.
+                                I love that the products are natural and don't contain any harmful preservatives. Plus
+                                the products are
+                                quite affordable. </p>
+                            <img src="../assets/img/Sajal_Goyal_GKFmIuZ.jpeg" alt="" class="rounded-circle w-25 mb-0">
+                            <span style="font-size: small;">Sajal Goyal </span><br>
+                            <span class="badge"
+                                style="background-color: #6DA523;height: 20px;position: relative;bottom: 30px;left:80px">
+                                <p class="text-center fw-normal">5.0
+                                    <i class="fa fa-star" aria-hidden="true"></i>
+                                </p>
+                            </span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="carousel-item">
+                <div class="d-flex justify-content-evenly">
+                    <div class="card rounded feedback" style="width: 320px; height: 210px;">
+                        <div class="card-body">
+                            <p class="card-text" style="font-family: Roboto, serif; font-size:12px;">
+                                I use a number of Mamaearth products - Onion hair fall kit, body lotion and hair oil.
+                                I've had one of the best shopping experiences. The delivery was early and easy to track.
+                                The website is stable and smooth and easy to navigate. The payment gateway is also
+                                smooth and secure.
+                            </p>
+                            <img src="../assets/img/Tanmaya_Shrivastav_JbDYODv.jpeg" alt="" class="rounded-circle w-25 mb-0">
+                            <span style="font-size: small;">Tanmaya </span><br>
+                            <span class="badge"
+                                style="background-color: #6DA523;height: 20px;position: relative;bottom: 30px;left:80px">
+                                <p class="text-center fw-normal">5.0
+                                    <i class="fa fa-star" aria-hidden="true"></i>
+                                </p>
+                            </span>
+                        </div>
+                    </div>
+                    <div class="card rounded feedback" style="width: 320px; height: 210px;">
+                        <div class="card-body">
+                            <p class="card-text" style="font-family: Roboto, serif; font-size:12px;">
+                                I wanted to use natural products for my baby and came across Mamaearth two years ago.
+                                And I am loving it. I use the Baby Shampoo, Toothpaste, Face Cream and I just love all
+                                of them.
+                                The website works perfectly.
+                                I would suggest you make an app also. Payment is secure and delivery was on time. This
+                                is the best brand in this category.
+                            </p>
+                            <img src="../assets/img/Priyanshi_Singh_gHqZqXk.jpeg" alt="" class="rounded-circle w-25 mb-0">
+                            <span style="font-size: small;">Priyanshi Singh </span><br>
+                            <span class="badge"
+                                style="background-color: #6DA523;height: 20px;position: relative;bottom: 30px;left:80px">
+                                <p class="text-center fw-normal">5.0
+                                    <i class="fa fa-star" aria-hidden="true"></i>
+                                </p>
+                            </span>
+                        </div>
+                    </div>
+                    <div class="card rounded feedback" style="width: 320px; height: 210px;">
+                        <div class="card-body">
+                            <p class="card-text" style="font-family: Roboto, serif; font-size:12px;">
+                                I use Mamaearth Ubtan Face Wash. It gives me an instant natural glow.
+                                I love that the products are natural and don't contain any harmful preservatives. Plus
+                                the products are
+                                quite affordable. </p>
+                            <img src="../assets/img/Sajal_Goyal_GKFmIuZ.jpeg" alt="" class="rounded-circle w-25 mb-0">
+                            <span style="font-size: small;">Sajal Goyal </span><br>
+                            <span class="badge"
+                                style="background-color: #6DA523;height: 20px;position: relative;bottom: 30px;left:80px">
+                                <p class="text-center fw-normal">5.0
+                                    <i class="fa fa-star" aria-hidden="true"></i>
+                                </p>
+                            </span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <br>
+    <br>
+    <hr style="margin-bottom: 10px;">
+<!--footer-->
+
+<div class="d-flex mt-5" style="margin-left: 150px;">
+    <div>
+        <p style="font-family: serif;">USEFUL LINKS</p>
+        <p>
+            <a href="" class="text-muted"
+            style="text-decoration: none;color: black;font-family: lato;font-size: small;">
+            Privacy Policy
+        </a>
+        </p>
+        <p>
+            <a href="" class="text-muted"
+                style="text-decoration: none;color: black;font-family: lato;font-size: small;">
+                Returns
+        </a>
+        </p>
+        <p>
+            <a href="" class="text-muted"
+                style="text-decoration: none;color: black;font-family: lato;font-size: small;">
+                Terms & Conditions
+            </a>
+        </p>
+        <p>
+            <a href="" class="text-muted"
+                style="text-decoration: none;color: black;font-family: lato;font-size: small;">
+                Terms & Conditions-Cashback
+            </a>
+        </p>
+        <p>
+            <a href="" class="text-muted"
+                style="text-decoration: none;color: black;font-family: lato;font-size: small;">
+                Faqs
+            </a>
+        </p>
+        <p>
+            <a href="" class="text-muted"
+                style="text-decoration: none;color: black;font-family: lato;font-size: small;">
+                We're Safe
+            </a>
+        </p>
+        <p>
+            <a href="" class="text-muted"
+                style="text-decoration: none;color: black;font-family: lato;font-size: small;">
+                Track Order
+            </a>
+        </p>
+        <p>
+            <a href="" class="text-muted"
+                style="text-decoration: none;color: black;font-family: lato;font-size: small;">
+                Contact Us
+            </a>
+        </p>
+        <p>
+            <a href="" class="text-muted"
+                style="text-decoration: none;color: black;font-family: lato;font-size: small;">
+                About Us
+            </a>
+        </p>
+    </div>
+    <div style="margin-left: 200px;">
+        <p style="font-family: serif;">CATEGORIES</p>
+        <p>
+            <a href="" class="text-muted"
+            style="text-decoration: none;color: black;font-family: lato;font-size: small;">
+            Privacy Policy
+        </a>
+        </p>
+        <p>
+            <a href="" class="text-muted"
+                style="text-decoration: none;color: black;font-family: lato;font-size: small;">
+                Baby
+        </a>
+        </p>
+        <p>
+            <a href="" class="text-muted"
+                style="text-decoration: none;color: black;font-family: lato;font-size: small;">
+                Beauty
+            </a>
+        </p>
+        <p>
+            <a href="" class="text-muted"
+                style="text-decoration: none;color: black;font-family: lato;font-size: small;">
+                Hair
+            </a>
+        </p>
+        <p>
+            <a href="" class="text-muted"
+                style="text-decoration: none;color: black;font-family: lato;font-size: small;">
+                Face
+            </a>
+        </p>
+        <p>
+            <a href="" class="text-muted"
+                style="text-decoration: none;color: black;font-family: lato;font-size: small;">
+               Body
+            </a>
+        </p>
+        <p>
+            <a href="" class="text-muted"
+                style="text-decoration: none;color: black;font-family: lato;font-size: small;">
+                Gift Pack
+            </a>
+        </p>
+        
+    </div>
+    <div style="margin-left: 180px;">
+        <p style="font-family: serif;">MY ACCOUNT</p>
+        <p>
+            <a href="" class="text-muted"
+            style="text-decoration: none;color: black;font-family: lato;font-size: small;">
+            Account
+        </a>
+        </p>
+        <p>
+            <a href="" class="text-muted"
+                style="text-decoration: none;color: black;font-family: lato;font-size: small;">
+               Orders
+        </a>
+        </p>
+        <p>
+            <a href="" class="text-muted"
+                style="text-decoration: none;color: black;font-family: lato;font-size: small;">
+                Address
+            </a>
+        </p>
+    </div>
+    <div style="margin-left: 50px;">
+        <img src="../assets/img/Best-Brand500x5002x.jpeg" alt="" height="250px" width="120px">
+    </div>
+</div>
+<hr>
+<div style="margin-left: 430px;">
+    <p style="font-family: serif;">SHOW US SOME 
+      <span><i class="fa fa-heart text-danger" aria-hidden="true"></i></span>  ON SOCIAL MEDIA</p>
+      <p class="ms-5" style="margin-top: -13px;">
+        <span class="ms-2"><i class="fa fa-facebook" aria-hidden="true" style="color: gray;"></i></span>
+        <span class="ms-2"><i class="fa fa-twitter" aria-hidden="true" style="color: gray;"></i></span>
+        <span class="ms-2"><i class="fa fa-instagram" aria-hidden="true" style="color: gray;"></i></span>
+        <span class="ms-2"><i class="fa fa-youtube" aria-hidden="true" style="color: gray;"></i></span>
+        <span class="ms-2"><i class="fa fa-pinterest" aria-hidden="true" style="color: gray;"></i></span>
+        <span class="ms-2"><i class="fa fa-envelope" aria-hidden="true" style="color: gray;"></i></span>
+    </p>
+</div>
+</body>
+
+</html>

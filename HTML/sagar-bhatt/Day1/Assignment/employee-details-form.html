@@ -1,0 +1,292 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Employee Details Form</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.9.0/css/all.min.css"
+      integrity="sha512-q3eWabyZPc1XTCmF+8/LuE1ozpg5xxn7iO89yfSOd5/oKvyqLngoNGsx8jq92Y8eXJ/IRxQbEC+FGSYxtk2oiw=="
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="../../Project/assets/css/style.css" />
+    <style>
+      /* body {
+        background-color: azure;
+        font: large "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
+          "Lucida Sans", Arial, sans-serif;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+      } */
+      h1 {
+        text-align: center;
+        margin-bottom: 5px;
+      }
+      form.login-form {
+        border: 1px solid;
+        border-radius: 10px;
+        padding: 20px;
+        display: flex;
+        flex-direction: column;
+        width: 350px;
+        margin: auto;
+      }
+      form.login-form label,
+      form.login-form select,
+      form.login-form input[type="text"],
+      form.login-form input[type="email"],
+      form.login-form input[type="number"] {
+        font-size: large;
+        margin-bottom: 10px;
+        height: 20px;
+        padding: 10px auto;
+      }
+      form.login-form select {
+        height: 30px;
+      }
+      form.login-form > input::placeholder {
+        color: #999;
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+      <div class="logo">
+        <!-- <img
+          src="https://tutorials.rxtrainees.radixweb.net/wp-content/uploads/2020/12/logo_2500X1875-2048x1536.jpg"
+          alt="logo"
+        /> -->
+        <span
+          ><a href="../../../../Project/sagar-bhatt/web-tutorials/index.html"
+            >RadixWeb</a
+          ></span
+        >
+      </div>
+      <nav>
+        <input type="checkbox" id="click" />
+        <label for="click" class="menu-btn">
+          <i class="fas fa-bars"></i>
+        </label>
+        <ul>
+          <li>
+            <a href="../../../../Project/sagar-bhatt/web-tutorials/index.html">
+              Home
+            </a>
+          </li>
+          <li>
+            <a href="../../Project/index.html" class="active">HTML/CSS</a>
+          </li>
+          <li>
+            <a href="../../../../Bootstrap/sagar-bhatt/Project/index.html">
+              Bootstrap
+            </a>
+          </li>
+          <!-- <li><a href="#">SCSS</a></li> -->
+          <li>
+            <a href="../../../../JavaScript/sagar-bhatt/Project/index.html">
+              Javascript
+            </a>
+          </li>
+          <li>
+            <a href="../../../../jQuery/sagar-bhatt/Project/index.html">
+              jQuery
+            </a>
+          </li>
+        </ul>
+      </nav>
+    </header>
+    <article>
+      <aside>
+        <!-- * Day-1 -->
+        <div class="folder-container">
+          <div class="folder">Day1</div>
+          <div class="sub-folder">Practice</div>
+          <div class="file">
+            <a href="../Practice/company-department-list.html">
+              Company department list
+            </a>
+          </div>
+          <div class="file">
+            <a href="../Practice/horizontal-navbar.html"> Horizontal navbar </a>
+          </div>
+          <div class="file">
+            <a href="../Practice/login-form.html">Login form</a>
+          </div>
+          <div class="file">
+            <a href="../Practice/news-article.html" target="_blank">
+              News Article
+            </a>
+          </div>
+          <div class="file">
+            <a href="../Practice/student-report-card.html">
+              Student report card
+            </a>
+          </div>
+          <div class="sub-folder">Assignment</div>
+          <div class="file">
+            <a href="./employee-details-form.html"> Employee details form </a>
+          </div>
+        </div>
+        <!-- * Day-2 -->
+        <div class="folder-container">
+          <div class="folder">Day2</div>
+          <div class="sub-folder">Practice</div>
+          <div class="file">
+            <a href="../../Day2/Practice/index.html">CSS Selector</a>
+          </div>
+          <div class="sub-folder">Assignment</div>
+          <div class="file">
+            <a href="../../Day2/Assignment/resume.html" target="_blank">
+              My Resume
+            </a>
+          </div>
+        </div>
+        <!-- * Day-3 -->
+        <div class="folder-container">
+          <div class="folder">Day3</div>
+          <div class="sub-folder">Practice</div>
+          <div class="file">
+            <a href="../../Day3/Practice/display.html">CSS Display</a>
+          </div>
+          <div class="file">
+            <a href="../../Day3/Practice/overflow.html">CSS Overflow</a>
+          </div>
+          <div class="file">
+            <a href="../../Day3/Practice/positions.html">CSS Positions</a>
+          </div>
+          <div class="sub-folder">Assignment</div>
+          <div class="file">
+            <a href="../../Day3/Assignment/basic-layout.html" target="_blank">
+              Basic Web Layout
+            </a>
+          </div>
+        </div>
+        <!-- * Day-4 -->
+        <div class="folder-container">
+          <div class="folder">Day4</div>
+          <div class="sub-folder">Practice</div>
+          <div class="file">
+            <a href="../../Day4/Practice/flexbox.html">CSS Flexbox</a>
+          </div>
+          <div class="file">
+            <a
+              href="../../Day4/Practice/image-gallery-flexbox.html"
+              target="_blank"
+            >
+              Image Gallery(Flex)
+            </a>
+          </div>
+          <div class="sub-folder">Assignment</div>
+          <div class="file">
+            <a href="../../Day4/Assignment/menu-list.html" target="_blank">
+              Menu List
+            </a>
+          </div>
+        </div>
+        <!-- * Day-5 -->
+        <div class="folder-container">
+          <div class="folder">Day5</div>
+          <div class="sub-folder">Practice</div>
+          <div class="file">
+            <a href="../../Day5/Practice/media-queries.html"
+              >CSS Media Queries</a
+            >
+          </div>
+          <div class="sub-folder">Assignment</div>
+          <div class="file">
+            <a href="../../Day5/Assignment/photo-gallery.html" target="_blank"
+              >Photo Gallery(Grid)</a
+            >
+          </div>
+        </div>
+      </aside>
+      <section>
+        <h1>Employee Details Form</h1>
+        <form action="" method="get" class="login-form">
+          <label for="name-data">Name:</label>
+          <input
+            type="text"
+            name="name"
+            id="name-data"
+            placeholder="Enter your name"
+            required
+          />
+          <label for="age-data">Age:</label>
+          <input
+            type="number"
+            name="age"
+            id="age-data"
+            placeholder="Enter your age"
+            required
+          />
+          <fieldset>
+            <legend>Gender:</legend>
+            <label for="male-data">Male</label>
+            <input type="radio" name="gender" id="male-data" required />
+            <label for="female-data">Female</label>
+            <input type="radio" name="gender" id="female-data" required />
+          </fieldset>
+          <label for="designation-data">Designation:</label>
+          <input
+            type="text"
+            name="designation"
+            id="designation-data"
+            placeholder="Enter your designation"
+            list="designation-data-list"
+            required
+          />
+          <datalist id="designation-data-list">
+            <option label="Manager" value="Manager"></option>
+            <option label="Trainee" value="Trainee"></option>
+            <option label="Junior Developer" value="Junior Developer"></option>
+            <option label="Senior Developer" value="Senior Developer"></option>
+          </datalist>
+          <label for="salary-data">Salary:</label>
+          <input
+            type="number"
+            name="salary"
+            id="salary-data"
+            placeholder="Enter your salary"
+            required
+          />
+          <label for="location-data">Location:</label>
+          <select
+            name="location"
+            id="locatgion-data"
+            required
+            autocomplete="off"
+          >
+            <option value="" disabled selected>--Select your location--</option>
+            <option value="Ahmedabad">Ahmedabad</option>
+            <option value="Baroda">Baroda</option>
+            <option value="Surat">Surat</option>
+            <option value="Rajkot">Rajkot</option>
+          </select>
+          <label for="email-data">Email Id:</label>
+          <input
+            type="email"
+            name="email"
+            id="email-data"
+            placeholder="Enter your email"
+            required
+          />
+          <label for="date-data">Date of Joining:</label>
+          <input type="date" name="Date" id="date-data" required />
+          <label for="contact-data">Contact Number</label>
+          <input
+            type="number"
+            name="contact"
+            id="contact-data"
+            placeholder="Enter Contact Number"
+            required
+          />
+          <br />
+          <input type="submit" value="Submit" />
+        </form>
+      </section>
+    </article>
+  </body>
+</html>

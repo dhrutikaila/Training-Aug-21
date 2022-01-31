@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-F3w7mX95PdgyTmZZMECAngseQB83DfGTowi0iMjiWaeVhAn4FJkqJByhZMI3AhiU" crossorigin="anonymous">
+    <title>Assignment Day15</title>
+</head>
+
+<body>
+    <div class="container my-5">
+        <div class="row">
+            <div class="col-md-6">
+                <form>
+                    <div class="my-3">
+                        <label for="first number">Please Enter the First Number</label>
+                        <input type="number" class="form-control" id="number1" required>
+                    </div>
+                    <div class="my-3">
+                        <label for="second number">Please enter the Second Number</label>
+                        <input type="number" class="form-control" id="number2" required>
+                    </div>
+                    <div class="my-3">
+                        <label for="operation">Plaese select the Operation you want to perform</label>
+                        <div class="form-check">
+                            <input type="radio" class="form-check-input" type="radio" value="Sum" name="operation" id="sum">
+                            Summation
+                        </div>
+                        <div class="form-check">
+                            <input type="radio" class="form-check-input" value="sub" name="operation" id="sub">
+                            Substraction
+                        </div>
+                        <div class="form-check">
+                            <input type="radio" class="form-check-input" value="mul" name="operation" id="mul">
+                            Multiplication
+                        </div>
+                        <div class="form-check">
+                            <input type="radio" class="form-check-input" value="div" name="operation" id="div">
+                            Division
+                        </div>
+                    </div>
+                </form>
+                <div class="row">
+                    <div class="col-md-6">
+                        <button class="btn btn-success d-block" onclick="calculate()">Calculate</button>
+                    </div>
+                    <div class="col-md-6">
+                        <button class="btn btn-warning d-block" onclick="reset()">Reset</button>
+                    </div>
+                    <!-- Show output here -->
+                </div>
+                <h1 class="display-4 my-3">Result: <span id="result"></span></h1>
+            </div>
+        </div>
+    </div>
+    <script>
+        function calculate() {
+            var num1 = document.getElementById('number1').value;
+            var num2 = document.getElementById('number2').value;
+
+            if (num1 == "" || num2 == "") {
+                alert("Please Insert Both Number");
+                return;
+            }
+            num1 = parseInt(num1);
+            num2 = parseInt(num2);
+
+            switch (true) {
+                case document.getElementById('sum').checked == true:
+                    var ans = num1 + num2;
+                    break;
+                
+                case document.getElementById('sub').checked == true:
+                    var ans = num1 - num2;
+                    break;
+
+                case document.getElementById('mul').checked == true:
+                    var ans = num1 * num2;
+                    break;
+
+                case document.getElementById('div').checked == true:
+                    var ans = (num1 / num2);
+                    break;
+            
+                default:
+                    break;
+            }
+            document.getElementById('result').innerHTML = ans;
+        }
+
+        function reset(){
+            document.getElementById('number1').value=null;
+            document.getElementById('number2').value=null;
+            document.getElementById('sum').checked=false;
+            document.getElementById('sub').checked=false;
+            document.getElementById('mul').checked=false;
+            document.getElementById('div').checked=false;
+            document.getElementById('result').innerHTML="";
+
+        }
+    </script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-/bQdsTh/da6pkI1MST/rWKFNjaCP5gBSY4sEBT38Q/9RBh9AH40zEOg7Hlq2THRZ" crossorigin="anonymous"></script>
+</body>
+
+</html>

@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-F3w7mX95PdgyTmZZMECAngseQB83DfGTowi0iMjiWaeVhAn4FJkqJByhZMI3AhiU" crossorigin="anonymous">
+    <title>Practice Day16</title>
+</head>
+<body>
+<h1> Check Console</h1>   
+    
+<script>
+// Number Methods 
+    let ans1 = 0.3 + 0.2;
+    console.log(ans1); //0.5
+
+    let ans2 = "30" + 20;
+    console.log(ans2); //3020
+
+    let ans3 = 30 + "20";
+    console.log(ans3); //3020
+
+    let ans4 = 30 + 20 + "10";
+    console.log(ans4); // 5010
+
+    let ans5 = "10" - "5";
+    console.log(ans5); //5
+
+    let ans6 = "10" * "5";
+    console.log(ans6); //50
+
+    let ans7 = 100 / "Hi";
+    console.log(ans7); //NaN - Not a number
+
+    let x = 100;
+    let ans8 = x.toString();
+    console.log(x); //100
+
+    let x1 = 9.54654656;
+
+    let ans9 = x1.toExponential(5);
+    console.log(ans9); //9.54655e+0
+
+    let ans10 = x1.toFixed(0)
+    let ans11 = x1.toFixed(2)
+    console.log(ans10); //10
+    console.log(ans11); //9.55
+
+    let ans12 = x1.toPrecision();
+    let ans13 = x1.toPrecision(3);
+    console.log(ans12); //as it is number
+    console.log(ans13); //total 3 digit  - 9.55
+
+// String Methods
+    let str = "Hi There!";
+    console.log(str);
+    
+    let ans14 = str.lastIndexOf("hi"); 
+    console.log(ans14);    //37
+    
+    let ans15 = str.lastIndexOf("e" , 6); 
+    console.log(ans15);    //6
+    
+    let ans16 = str.slice(0 , 3);
+    console.log(ans16); //hello
+    
+    let ans17 = str.substring(3 , 8); 
+    console.log(ans17); 
+    
+    let ans18 = str.substr(0 , 4); 
+    console.log(ans18); 
+    
+    let ans19 = str.replace("Hi" , "hola");
+    console.log(ans19); 
+    
+    let ans20 = str.toLowerCase();
+    console.log(ans20); 
+    
+    let ans21 = str.concat("" , "hola");
+    console.log(ans21);
+    
+    let ans22 = str.trim();
+    console.log(ans22);
+    
+    let ans23 = str.split(" ");
+    console.log(ans23);
+    
+    
+    
+    </script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-/bQdsTh/da6pkI1MST/rWKFNjaCP5gBSY4sEBT38Q/9RBh9AH40zEOg7Hlq2THRZ" crossorigin="anonymous"></script>
+</body>
+
+</html>

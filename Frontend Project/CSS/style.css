@@ -1,0 +1,97 @@
+.carousel-control-prev-icon {
+    /* background-image: url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='%23fff' viewBox='0 0 8 8'%3E%3Cpath d='M5.25 0l-4 4 4 4 1.5-1.5-2.5-2.5 2.5-2.5-1.5-1.5z'/%3E%3C/svg%3E") !important; */
+    filter: invert(100%);
+}
+
+.carousel-control-next-icon {
+    /* background-image: url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='%23fff' viewBox='0 0 8 8'%3E%3Cpath d='M2.75 0l-1.5 1.5 2.5 2.5-2.5 2.5 1.5 1.5 4-4-4-4z'/%3E%3C/svg%3E") !important; */
+    filter: invert(100%);
+}
+
+.navbar-nav .nav-item .nav-link:hover {
+    color: gold !important;
+}
+
+.post-slider .post-wrapper {
+    width: 84%;
+    height: 600px;
+    margin: 0 auto;
+    /* overflow: hidden; */
+    /* border: 1px dashed red; */
+}
+
+.post-slider .post-wrapper .post {
+    background-color: white;
+    display: inline-block;
+    width: 300px;
+    height: 550px;
+    margin: 0 10px;
+}
+
+.post-slider .prevar {
+    position: absolute;
+    top: 125%;
+    left: 10px;
+    font-size: 2em;
+    cursor: pointer;
+}
+
+.post-slider .nextar {
+    position: absolute;
+    top: 125%;
+    right: 10px;
+    font-size: 2em;
+    cursor: pointer;
+}
+
+.onlyhere-slider .onlyhere-wrapper {
+    width: 84%;
+    height: 600px;
+    margin: 0 auto;
+    /* overflow: hidden; */
+    /* border: 1px dashed red; */
+}
+
+.onlyhere-slider .onlyhere-wrapper .onlypost {
+    background-color: white;
+    display: inline-block;
+    width: 300px;
+    height: 550px;
+    margin: 0 10px;
+}
+
+.onlyhere-slider .prevarr {
+    position: absolute;
+    top: 200%;
+    left: 10px;
+    font-size: 2em;
+    cursor: pointer;
+}
+
+.onlyhere-slider .nextarr {
+    position: absolute;
+    top: 200%;
+    right: 10px;
+    font-size: 2em;
+    cursor: pointer;
+}
+
+a {
+    text-decoration: none;
+    color: black;
+}
+
+.activex {
+    color: red;
+    cursor: pointer;
+    text-decoration: underline;
+}
+
+.gradient-custom {
+    /* fallback for old browsers */
+    background: #6a11cb;
+    /* Chrome 10-25, Safari 5.1-6 */
+    background: -webkit-linear-gradient(to right, rgba(106, 17, 203, 1), rgba(37, 117, 252, 1));
+    /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    background: linear-gradient(to right, rgba(106, 17, 203, 1), rgba(37, 117, 252, 1))
+}

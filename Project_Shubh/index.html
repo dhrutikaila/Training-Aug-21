@@ -1,0 +1,335 @@
+<!--Create Basic layout of the application which contain header, footer, leftbar and sidebar.
+Header keep brand logo and navigation bar for home, aboutus and contact us. Navigation should work properly.-->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="description" content="FrontEnd Project: Social Charity Website's Home Page.">
+  <meta name="author" content="Shubh Patel">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>FrontEnd Project-Home Page</title>
+
+  <link href="bootstrap-5.0.2-dist/css/bootstrap.min.css" rel="stylesheet">
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-JEW9xMcG8R+pH31jmWH6WWP0WintQrMb4s7ZOdauHnUtxwoG2vI5DkLtS3qm9Ekf"
+    crossorigin="anonymous"></script>
+  <script src="//code.jquery.com/jquery-1.11.1.min.js"></script>
+  <script src="login.js"></script>
+  <link rel="stylesheet" href="./CSS/index.css">
+</head>
+
+<body>
+
+  <header>
+    <nav class="navbar navbar-expand-md navbar-dark bg-primary">
+      <div class="container-fluid">
+        <a class="navbar-brand" href="index.html">Rx-Web Foundation</a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse"
+          aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarCollapse">
+          <ul class="navbar-nav me-auto mb-2 mb-md-0">
+            <li class="nav-item">
+              <a class="nav-link active" aria-current="page" href="#">Home</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="Food.html">Food</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">Education</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">Health</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">Blogs</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="About_us.html">About Us</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="Contact_us.html">Contact Us</a>
+            </li>
+
+          </ul>
+          <button onclick="document.getElementById('id01').style.display='block'" style="width:auto;">Login</button>
+        </div>
+      </div>
+    </nav>
+    <div id="id01" class="modal">
+      <form class="modal-content animate" action="index.html">
+        <span onclick="document.getElementById('id01').style.display='none'" class="close"
+          title="Back to main content">&times;</span><br>
+        <div class="container">
+
+          <label for="userName"><b>Email</b></label>
+          <input type="email" id="userName" placeholder="Enter Username" name="uname" required>
+
+          <label for="userPw"><b>Password</b></label>
+          <input type="password" id="userPw" placeholder="Password" required>
+
+          <button id="log" type="submit" class="bg-primary justify-content-between" onclick="check()">Login</button><br>
+          <div id="remember">
+            <input type="checkbox" checked="checked" value="lsRememberMe" id="rememberMe"
+              style="display: inline-block;">
+            <label><b>Remember me</b></label>
+          </div>
+          <a href="#">Forgot password</a><br>
+          <a>New User? <a href="#">Sign-up here.</a></a><br>
+          <button id="can" type="button" onclick="document.getElementById('id01').style.display='none'"
+            class="cancelbtn bg-danger">Cancel</button>
+        </div>
+      </form>
+    </div>
+
+    <script src="./js/login.js"></script>
+  </header>
+
+  <main class="main">
+
+    <div id="myCarousel" class="carousel slide" data-bs-ride="carousel">
+      <div class="carousel-indicators">
+        <button type="button" data-bs-target="#myCarousel" data-bs-slide-to="0" class="active" aria-current="true"
+          aria-label="Slide 1"></button>
+        <button type="button" data-bs-target="#myCarousel" data-bs-slide-to="1" aria-label="Slide 2"></button>
+        <button type="button" data-bs-target="#myCarousel" data-bs-slide-to="2" aria-label="Slide 3"></button>
+      </div>
+      <div class="carousel-inner">
+        <div class="carousel-item active center">
+          <img class="caro" src="Asset/carousel1.png" width="100%" height="800px">
+
+
+          <div class="container">
+            <div class="carousel-caption text-start">
+              <h1>Hunger</h1>
+              <h3>It is more than filling up an empty stomach, it's a war that more than 1 billion people are fighting.
+              </h3>
+              <p>Let's join our hands in this <strong>fight against hunger.</strong></p>
+            </div>
+          </div>
+        </div>
+        <div class="carousel-item border border-info">
+          <img class="caro" src="Asset/carousel2.png" width="100%" height="800px">
+
+          <div class="container ">
+            <div class="carousel-caption">
+              <h1>Illiteracy</h1>
+              <h3>While meals help in fighting hunger, providing education to bright minds will make them truly
+                independent.</h3>
+              <p>Let's be the bridge that <strong>connects streets to the schools.</strong></p>
+            </div>
+          </div>
+        </div>
+        <div class="carousel-item">
+          <img class="caro" src="Asset/carousel3.png" width="100%" height="800px">
+
+          <div class="container">
+            <div class="carousel-caption text-end">
+              <h1>Health</h1>
+              <h3>The basic necessity is a healthy body! Healthy citizens lead to a healthy & wealthy nation.</h3>
+              <p>Let's make sure that <strong>no one is left behind</strong> and everyone stays healthy.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <button class="carousel-control-prev" type="button" data-bs-target="#myCarousel" data-bs-slide="prev">
+        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Previous</span>
+      </button>
+      <button class="carousel-control-next" type="button" data-bs-target="#myCarousel" data-bs-slide="next">
+        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Next</span>
+      </button>
+    </div>
+    <br>
+
+
+    <!-- Marketing messaging and featurettes
+      ================================================== -->
+    <!-- Wrap the rest of the page in another container to center all the content. -->
+
+    <div class="container marketing">
+
+      <p class="h1">The 3 major problems.</p>
+      <!-- Three columns of text below the carousel -->
+      <div class="row row-cols-sm-3">
+        
+        <div class="col-lg-4">
+          <img src="Asset/food.png" class="rounded-circle border border-info" alt="food symbol" width="150"
+            height="150">
+        </div><!-- /.col-lg-4 -->
+        <div class="col-lg-4">
+          <img src="Asset/education.PNG" class="rounded-circle border border-info" alt="education symbol" width="150"
+            height="150">
+        </div><!-- /.col-lg-4 -->
+        <div class="col-lg-4">
+          <img src="Asset/health.png" class="rounded-circle border border-info" alt="health symbol" width="170"
+            height="150">
+        </div><!-- /.col-lg-4 -->
+      </div>
+      <br>
+      <hr>
+      
+      <p class="h1">Our idea : To conquer the problems</p>
+      <div class="row row-cols-sm-3">
+        
+        <div class="col-lg-4">
+          <img src="Asset/foood1.png" class="rounded-circle border border-info" alt="food symbol" width="150"
+            height="150">
+          <hr>
+          <p>Distributing excess/fresh food received from tie-ups of hotels & restaurants or private functions to
+            underprevileged area.</p>
+          <p><a class="btn btn-primary" href="Food.html">Food</a></p>
+        </div><!-- /.col-lg-4 -->
+        <div class="col-lg-4">
+          <img src="Asset/eduu1.png" class="rounded-circle border border-info" alt="education symbol" width="150"
+            height="150">
+          <hr>
+          <p>Educating bright minds of streets with help of locals & NGOs, so that they can become truly independent &
+            bring society upwards.
+          </p>
+          <p><a class="btn btn-primary" href="#">Education</a></p>
+        </div><!-- /.col-lg-4 -->
+        <div class="col-lg-4">
+          <img src="Asset/healthh1.png" class="rounded-circle border border-info" alt="health symbol" width="150"
+            height="150">
+          <hr>
+          <p>Because health is the real wealth. Arranging health check-up camp for those who can not afford the routine
+            check-up, so that a healthy society can develop a healthy nation.</p>
+          <p><a class="btn btn-primary" href="#">Health</a></p>
+        </div><!-- /.col-lg-4 -->
+
+      </div><!-- /.row -->
+
+      <!-- START THE FEATURETTES -->
+
+      <hr class="featurette-divider">
+
+      <div class="row featurette">
+        <p class="h1">What makes us unique?</p>
+        <div class="col-md-7 order-md-2">
+          <h2 class="featurette-heading">We accept no cash as donation.</h2>
+          <p class="lead">We accept zero cash from users as sometimes money creates doubts in the donation. If you want
+            donate you can directly contribute to the needy people or provide them the things they need. As a foundation
+            <strong>money is a No-No for us.</strong> However if you can't contribute directly or things and as the
+            least option you want to donate cash, we'll provide you the details of our fellow tie-up NGOs through them
+            you can contribute.
+          </p>
+        </div>
+        <div class="col-md-5 order-md-1">
+          <img src="Asset/cash.jpg" width="200" height="200">
+        </div>
+      </div>
+
+      <hr class="featurette-divider">
+
+      <div class="row featurette">
+        <div class="col-md-7 order-md-2">
+          <h2 class="featurette-heading">100% Transperancy!</h2>
+          <p class="lead">We are fully <strong>honest to the community, to our partners & to the people whom we are
+              serving.</strong><br>We Rx-Web Foundation are fully open to your questions regarding our working, ethics &
+            environment.</p>
+        </div>
+        <div class="col-md-5 order-md-1">
+          <img src="Asset/trans.png" width="200" height="200">
+        </div>
+      </div>
+
+      <hr class="featurette-divider">
+
+      <div class="row featurette">
+        <div class="col-md-7 order-md-2">
+          <h2 class="featurette-heading">All are equal for us.</h2>
+          <p class="lead">We serve all religions without doing any partiality.<br>Because evil of hunger, illiteracy &
+            illness sees no religion; then why we <strong>who are fighting these evil should watch any.</strong><br>We
+            believe in <strong>'वसुधैव कुटुम्बकम |'</strong></p>
+        </div>
+        <div class="col-md-5 order-md-1">
+          <img src="Asset/relig.jpg" width="200" height="200">
+        </div>
+      </div>
+
+      <hr class="featurette-divider">
+
+      <p class="h1">Where have been we reached?</p><br>
+      <div class="progress">
+        <div class="progress-bar progress-bar-striped progress-bar-animated bg-success" style="width:60%"></div>
+      </div><br>
+      <div class="row row-cols-sm-3">
+        <div class="col-lg-4">
+          <img src="Asset/abd.png" class="border border-info" alt="Ahmedabad" width="150" height="150"><br>
+          <h3>Ahmedabad</h3>
+        </div>
+        <div class="col-lg-4">
+          <img src="Asset/brd.png" class="border border-info" alt="Vadodara" width="150" height="150"><br>
+          <h3>Vadodara</h3>
+        </div>
+        <div class="col-lg-4">
+          <img src="Asset/srt.png" class="border border-info" alt="Surat" width="150" height="150"><br>
+          <h3>Surat</h3>
+        </div>        
+      </div>
+      <p class="h2">But yet it's just the starting, we have done only 1%.</p>
+      <hr>
+      <div class="row">
+        <p class="h1">Want to help? See how you can help.</p>
+        <p>
+          <a class="btn btn-primary" data-bs-toggle="collapse" href="#multiCollapseExample1" role="button"
+            aria-expanded="false" aria-controls="multiCollapseExample1">Volunteer time</a>
+          <button class="btn btn-primary" type="button" data-bs-toggle="collapse"
+            data-bs-target="#multiCollapseExample2" aria-expanded="false"
+            aria-controls="multiCollapseExample2">NGO/Business?</button>
+          <button class="btn btn-primary" type="button" data-bs-toggle="collapse"
+            data-bs-target="#multiCollapseExample3" aria-expanded="false" aria-controls="multiCollapseExample3">Spread
+            the word</button>
+        </p>
+        <div class="row">
+          <div class="col">
+            <div class="collapse multi-collapse" id="multiCollapseExample1">
+              <div class="card card-body">
+                <strong>All we need is 3 hours/week at least twice a month to make a real impact.</strong><br>
+                1. You can contribute or join the food drives where we distribute food to underprevileged people.<br>
+                2. You can volunteer your free time in educating slum kids on weekends.<br>
+                3. You can give your volunteer service in health check-up camps happening weekly.
+              </div>
+            </div>
+          </div>
+          <div class="col">
+            <div class="collapse multi-collapse" id="multiCollapseExample2">
+              <div class="card card-body">
+                <a href="Contact_us.html">Contact us!</a>
+                We are looking for more brother in arms!
+              </div>
+            </div>
+          </div>
+          <div class="col">
+            <div class="collapse multi-collapse" id="multiCollapseExample3">
+              <div class="card card-body">
+                You can share about Rx-web foundation in your social community, because <strong>Making a change is
+                  imortant!</strong>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+
+      <!-- /END THE MAIN CONTENT -->
+
+    </div><!-- /.container -->
+
+
+    <!-- FOOTER -->
+    <footer class="ftr bg-primary">
+      <p class="float-end"><a class="href" href="#">Back to top</a></p>
+      <a>Have any thoughts or suggestions: <a class="href" href="Contact_us.html">Contact us</a></a>
+      <p class="navbar-brand">Rx-Web Foundation ©</p>
+    </footer>
+  </main>
+  <script src="../assets/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+
+</html>

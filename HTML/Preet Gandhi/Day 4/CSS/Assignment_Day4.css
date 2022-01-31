@@ -1,0 +1,57 @@
+* {
+    background-color: wheat;
+    line-height: 20px;
+}
+
+.header {
+    text-align: center;
+    color: darkblue;
+}
+
+img {
+    float: right;
+    width: 130px;
+    height: 130px;
+    margin-right: 70px;
+    border: 2px solid black;
+}
+
+#title {
+    color: blue;
+    margin-left: 10px;
+}
+
+th {
+    background-color: yellow;
+}
+
+td {
+    background-color: turquoise;
+}
+
+table,tr,td,th {
+    margin-left: auto;
+    margin-right: auto;
+    border: 1px solid black;
+    padding: 15px;   
+}
+
+.heading {
+    margin-left: 39px;
+}
+
+.declaration {
+    text-align: right;
+    margin-right: 60px;
+    line-height: 0px;
+    
+}
+.declaration_Right {
+    text-align: right;
+    margin-right: 70px;
+    float: right;
+}
+.declaration_Left {
+    margin-left: 60px;
+    float: left;
+}

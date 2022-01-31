@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+
+        // Define a function called callback which receives an argument and prints the square of that number.
+
+        function callback(a, square) {
+            square(a);
+        }
+
+        function square(n) {
+            console.log(n*n);
+        }
+
+        callback(5,square);
+
+
+
+        // Explain difference between var and let keyword using example. 
+
+        /*let has block scope and var has global scope
+        let cannot be redeclared but it can be updated - var can be redeclared and updated */
+
+        var l = 10;
+        var l = 20
+        console.log(l);
+
+        let p = 22;
+        // let p = 11; // throws syntax error: cannot be redeclared
+        p = 33;
+        console.log(p); 
+
+        var a = 10;
+
+        if(true){
+            let a = 20;
+            console.log(a);
+        }
+        console.log(a);
+
+
+
+        /* Make a function that takes in a single parameter and returns a new promise. 
+        using setTimeout, after 500 milliseconds, the promise will either resolove or reject. 
+        if the input is a string, the promise resolves with that reverse string . 
+        if the input is anything but a string it rejects with that same input call the function wrong Input */
+
+        function strCheck(str){
+            return new Promise((resolove,reject)=>{
+                setTimeout(()=>{
+                    if(typeof(str) == 'string'){
+                        resolove(str);
+                    }else{
+                        reject(str);
+                    }
+                },500)
+            })
+        }
+
+        strCheck(123)
+        .then((data)=>{
+            let s = "";
+            for(let i = data.length - 1;i>=0;i--){
+                s += data[i];
+            }
+            console.log(s);
+        })
+        .catch((data)=>{wrongInput(data)})
+
+        function wrongInput(s1){
+            console.log(s1 + " is not a string")
+        }
+
+
+    </script>
+</body>
+
+</html>

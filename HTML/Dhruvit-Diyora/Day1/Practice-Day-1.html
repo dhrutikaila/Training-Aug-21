@@ -1,0 +1,452 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <script>
+        function demo(){
+            alert("Hello World!!")
+
+        }
+        function f1(){
+            var canvas = document.getElementById("smlRectangle");
+            context=canvas.getContext("2d");
+            context.fillStyle="rgb(0,0,255)";
+            context.fillRect(10,20,200,100);
+        }
+    </script>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HTML Day 1 Practice</title>
+    <link rel="stylesheet" href="../Day7/Bootstrap/bootstrap.min.css">
+    <style>
+        .just-padding {
+            padding: 15px;
+        }
+    
+        .list-group.list-group-root {
+            padding: 0;
+            overflow: hidden;
+        }
+    
+        .list-group.list-group-root .list-group {
+            margin-bottom: 0;
+        }
+    
+        .list-group.list-group-root .list-group-item {
+            border-radius: 0;
+            border-width: 1px 0 0 0;
+        }
+    
+        .list-group.list-group-root>.list-group-item:first-child {
+            border-top-width: 0;
+        }
+    
+        .list-group.list-group-root>.list-group>.list-group-item {
+            padding-left: 30px;
+        }
+    
+        .list-group.list-group-root>.list-group>.list-group>.list-group-item {
+            padding-left: 45px;
+        }
+    </style>
+</head>
+<body onload="f1();">
+    <nav class="navbar navbar-expand-sm navbar-light bg-light mb-3">
+        <div class="container">
+
+            <a class="navbar-brand img-fluid" href="../index.html"><img src="../Day3/Assets/logo.png" alt="logo" height="80px"
+                    width="80px"></a>
+            <button class="navbar-toggler" data-toggle="collapse" data-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ml-auto">
+                    <li class="nav-item px-3">
+                        <a class="nav-link " href="../index.html">Home</a>
+                    </li>
+                    <li class="nav-item  px-3">
+                        <a class="nav-link active" href="../html.html">HTML</a>
+                    </li>
+                    <li class="nav-item px-3">
+                        <a class="nav-link" href="../css.html">CSS</a>
+                    </li>
+                    <li class="nav-item px-3">
+                        <a class="nav-link" href="../bootstrap.html">Bootstrap</a>
+                    </li>
+                    <li class="nav-item px-3">
+                        <a class="nav-link" href="../javascript.html">Javascript</a>
+                    </li>
+                    <li class="nav-item px-3">
+                        <a class="nav-link" href="../jquery.html">JQuery</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <div class="container">
+        <div class="row">
+            <div class="col-4">
+                <div class="just-padding">
+    
+                    <div class="list-group list-group-root well">
+    
+                        <a href="#" class="list-group-item bg-primary text-white">Day 3</a>
+                        <div class="list-group">
+    
+                            <a href="./Practice-Day-1.html" class="list-group-item bg-warning">Practice</a>
+                            <a href="./Assignment.html" class="list-group-item bg-warning">Assignment</a>
+                        </div>
+                        
+                    </div>
+    
+                </div>
+            </div>
+            <div class="col-8" style="border: 1px;">
+                <h1>Learning header tag h1</h1>
+                <h2>Learning header tag h1</h2>
+                <br />
+                <hr/>
+                <a href="www.amazon.com" target="_blank">
+                    Amazon
+                    <a href="https://www.google.co.in/" target="_parent">
+                        Google
+                    </a>
+                    <ul type="square">
+                        <li>Mumbai
+                            <ul>
+                                <li><a href="boriwali.html">boriwali</a></li>
+                                <li><a href="thane.html">thane</li>
+                                    <li>Bandra</li>
+                                    <li>Goregaon</li>
+                                    
+                            </ul>
+                        </li>
+                        <li>Calcutta
+                            <ul>
+                                <li>park street</li>
+                                <li>victoria musium</li>
+                                <li>howrah bridge</li>
+                            </ul>
+
+                        </li>
+
+
+                    </ul>
+                </a>
+                <table border="2">
+                    <caption>Product Details</caption>
+                    <tr>
+                        <th colspan="2" >hello</td>
+                    </tr>
+                    <tr>
+                        <th>item</th>
+                        <th>price</th>
+                    </tr>
+                    <tr>
+                        <td>keyboard</td>
+                        <td>200</td>
+                    </tr>
+                    <tr>
+                        <td>mouse</td>
+                        <td>150</td>
+                    </tr>
+
+                </table>
+                <table>
+                    <caption>Sales for Employee ID 2387</caption>
+                    <colgroup span="2" style="background-color:#EEE8AA;"></colgroup>
+                    <colgroup style="background-color: #00FA9A;"></colgroup>
+
+                    <thead>
+                        <tr>
+                            <th scope="col">Quarter</th>
+                            <th scope="col">Total Sales</th>
+                            <th scope="col">Goal met?</th>
+                        </tr>
+                    </thead>
+                    <tfoot>
+                        <tr>
+                            <th scope="col">Total</th>
+                            <th scope="col">$1,118</th>
+                        </tr>
+                    </tfoot>
+                    <tbody>
+                        <tr>
+                            <td>Q1</td>
+                            <td>$4,349</td>
+                            <td>Yes</td>
+                        </tr>
+                        <tr>
+                            <td>Q2</td>
+                            <td>$2,984</td>
+                            <td>No</td>
+                        </tr>
+                        <tr>
+                            <td>Q3</td>
+                            <td>$2,349</td>
+                            <td>Yes</td>
+                        </tr>
+                        <tr>
+                            <td>Q4</td>
+                            <td>$7,349</td>
+                            <td>Yes</td>
+                        </tr>
+                    </tbody>
+                </table>
+                <form id="myform">
+                    <label for="date-input">Please choose a date</label>
+                    <input type="date" id="date-input">
+                    <label for="time-input">Please choose a time</label>
+                    <input type="time" id="time-input">
+                    <label for="month-input">Please choose a month</label>
+                    <input type="month" id="month-input"> <br/>
+                    <label for="week-input">Please choose a a week:</label>
+                    <input type="week" id="week-input"><br/>
+                    <label for="range-data">Range:</label>
+                    <input type="range" id="range-data"  min="1" max="10"><br/>
+                    <label for="search-data" >Search:</label>
+                    <input type="search" id="search-data" placeholder="Enter search term" /><br/>
+                    <label for="tel-data">Telephone:</label>
+                    <input type="tel" id="tel-data" required /><br/>
+                    <input type="submit" value="submit" /><br/>
+                    <label for="email-data">Email:</label>
+                    <input type="email" id="email-data" required multiple /><br/>
+                    <label for="color-data">Color:</label>
+                    <input type="color" id="color-data"><br/>
+                    <label  for="list-data">Data List:</label>
+                    <input type="text" list="myDataList">
+                    <datalist id="myDataList">
+                        <option label="Mr." value="Mr."></option>
+                        <option label="Mrs." value="Mrs."></option>
+                        <option label="Ms." value="Ms."></option>
+                    </datalist>
+                    <label for="progress-data">Progress Bar:</label>
+                    <progress id="progress-data" value="5" max="15"></progress>
+                    <br />
+                    <label for="meter-data">Meter:</label>
+                    <meter id="meter-data" min="10" max="100" value="80" low="20" high="70" optimum="50"></meter>
+
+                </form>
+                <article>
+                    <header>
+                        <h1>Learning HTML</h1>
+                        <h2>The New Elements</h2>
+                    </header>
+                    <p>New HTML tags make Web page and application development easier than ever.</p>
+                    <footer>
+                        <p>
+                            Published: <time datetime="2012-09-03">September 3, 2012</time>
+                        </p>
+                    </footer>
+                </article>
+                <section>
+                    <hgroup>
+                        <h1>
+                            Hip-pop Dance Routines
+                        </h1>
+                        <h3>
+                            The Eight-Count Method
+                        </h3>
+                    </hgroup>
+                    <article>
+                        <p>
+                            Hip-hop dance instructiors often teach moves that have eight counts per set
+                        </p>
+                    </article>
+                </section>
+                <article> 
+                    <header>
+                        <h1>Learning HTML5</h1>
+                        <h2>The New Elements</h2>
+                    </header>
+                    <p>New HTML5 tags make Web page and application development easier than ever. One of the very handy new features of HTML5 is the use of semantic markup.</p>
+                    <aside>
+                        <h4>
+                            <b>semantic markup</b>
+                        </h4> <p> gives better meaning, or definition, to tags so they make more sense to humans, programs, and Web browsers</p>
+                    </aside>
+                            <p>Not all HTML tags have been replaced or updated for HTML5, but some new tags introduced in HTML5 make the work of creating Web pages a lot easier.</p>
+                            <footer>
+                                <p>Published: <time datetime="2012-09 03">September 3, 2012</time></p>
+                                </footer>
+                </article>
+                <figure>
+                    <img src="" alt="Happy dog" width="100" height="125" />
+                    <img src="" alt="Dog paws" width="100" height="125" />
+                    <figcaption> Happy dogs are good dogs</figcaption>
+                </figure>
+                <canvas id="smlRectangle" height="100" width="200"></canvas>
+
+
+                <br />
+                <br />
+                <br />
+                <br />
+                <hr />
+                <h1>Practice assignments</h1>
+                <span>Display Student Report Card, Which contains field like Name, RollNo, Year Of Passing. Different subject marks should be displayed with its grade
+                </span>
+                <table border="1">
+                    <caption>
+                        Result
+                    </caption>
+                    <thead>
+                        <tr>
+                        <th>Roll No.</th>
+                        <th>Name</th>
+                        <th>Year of Passing</th>
+                        <th>English</th>
+                        <th>Maths</th>
+                        <th>Science</th>
+                        <th>Computer Science</th>
+                        <th>Social Studies</th>
+                        <tr>  
+                    </thead>
+                    <tbody>
+                        <tr>
+                        <td>01</td>
+                        <td>Dhruvit Diyora</td>
+                        <td>2021</td>
+                        <td>86</td>
+                        <td>77</td>
+                        <td>87</td>
+                        <td>92</td>
+                        <td>95</td>
+                        </tr>
+                        <tr>
+                        <td>02</td>
+                        <td>Shubh</td>
+                        <td>2020</td>
+                        <td>86</td>
+                        <td>77</td>
+                        <td>87</td>
+                        <td>92</td>
+                        <td>95</td>
+                        </tr>
+                        <tr>
+                        <td>03</td>
+                        <td>Shan</td>
+                        <td>2020</td>
+                        <td>86</td>
+                        <td>77</td>
+                        <td>87</td>
+                        <td>92</td>
+                        <td>95</td>
+                        </tr>
+                        <tr>
+                        <td>04</td>
+                        <td>Jackie</td>
+                        <td>2019</td>
+                        <td>86</td>
+                        <td>77</td>
+                        <td>87</td>
+                        <td>92</td>
+                        <td>95</td>
+                        </tr>
+                        <tr>
+                        <td>05</td>
+                        <td>Zeeshan</td>
+                        <td>2021</td>
+                        <td>86</td>
+                        <td>77</td>
+                        <td>87</td>
+                        <td>92</td>
+                        <td>95</td>
+                        </tr>
+                    </tbody>
+                    
+                </table>
+
+                <hr />
+                <span>
+                    You are working in some company as HR. you have been assigned a task to arrange department hierarchy example: employee working under some manager.
+
+                </span>
+                <h1>HR</h1>   
+                <ul>
+                    <li>Dhruvit</li>
+                    <ol>
+                        <li>dhruvit1</li>
+                            <ul>
+                                <li>dhruvit2</li>
+                                <ul>
+                                    <li>
+                                        dhruvit3
+                                    </li>
+                                </ul>
+                            </ul>
+                        <li>dhruvit4</li>
+                            <ul>
+                                <li>dhruvit5</li>
+                            </ul>   
+                        <li>dhruvit6</li>
+                    </ol>
+                    
+                </ul>
+                <hr />
+                <span>
+                    Create Login Form with field UserName and Password field.
+
+                </span>
+
+                
+                <center> <h1> Student Login Form </h1> </center>   
+                <form>  
+                    <div class="container">   
+                        <label>Username : </label>   
+                        <input type="text" placeholder="Enter Username" name="username" required>  
+                        <br />
+                        <label>Password : </label>   
+                        <input type="password" placeholder="Enter Password" name="password" required>  
+                        <br />
+                        <input type="checkbox" checked="checked"> Remember me   <br />
+                        <button type="submit">Login</button>
+                        <button type="button" class="cancelbtn"> Cancel</button>   <br />
+                        Forgot <a href="#"> password? </a>   
+                    </div>   
+                </form>     
+                <hr />
+                <span>Use Article tag display one latest news.
+                </span>
+                <article class="forecast">
+                    <h1>Weather forecast for Seattle</h1>
+                    <article class="day-forecast">
+                        <h2>03 March 2018</h2>
+                        <p>Rain.</p>
+                    </article>
+                    <article class="day-forecast">
+                        <h2>04 March 2018</h2>
+                        <p>Periods of rain.</p>
+                    </article>
+                    <article class="day-forecast">
+                        <h2>05 March 2018</h2>
+                        <p>Heavy rain.</p>
+                    </article>
+                </article>
+                <hr />
+                <span>Create Horizontal menu. Menu item will Home, AboutUs, ContactUS.
+                    Use Nav tag and anchor tag
+                    </span>
+                <nav><a href="#">Navigation  </a>  |   <a href="#">   Menu   </a>|<a href="#">  Links</a> </nav>
+            </div>
+        </div>
+    </div>
+    
+    
+
+
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+        integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+        crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"
+        integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49"
+        crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js"
+        integrity="sha384-smHYKdLADwkXOn1EmN1qk/HfnUcbVRZyYmZ4qpPea6sjB/pTJ0euyQp0Mk8ck+5T"
+        crossorigin="anonymous"></script>
+
+
+
+
+</body>
+</html>

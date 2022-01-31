@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="../../assests/css/bootstrap.min.css">
+    <script src="../../assests/js/jquery-3.6.0.js"></script>
+    <script src="../../assests/js/bootstrap.bundle.js"></script>
+
+</head>
+
+<body>
+    <div class="container">
+        <h3>Please select your technology :</h3>
+        <input type="radio" id="tech" name="tech" value="PHP" class="form-check-control">
+        <label class="form-check-label me-2" id="label" for="tech">PHP</label>
+        <input type="radio" id="tech1" name="tech" value="ASPnet" class="form-check-control">
+        <label class="form-check-label me-2" id="label1" for="tech1">ASP.net</label>
+
+        <input type="radio" id="tech2" name="tech" value="ASP" class="form-check-control">
+        <label class="form-check-label me-2" id="label2" for="tech2">ASP</label>
+
+        <input type="radio" id="tech3" name="tech" value="JSP" class="form-check-control">
+        <label class="form-check-label me-2" id="label3" for="tech3">JSP</label>
+
+        <input type="radio" id="tech4" name="tech" value="PERL" class="form-check-control">
+        <label class="form-check-label me-2" id="label4" for="tech4">PERL</label>
+
+        <input type="radio" id="tech5" name="tech" value="ColdFusion" class="form-check-control">
+        <label class="form-check-label me-2" id="label5" for="tech5">Cold Fusion</label>
+
+        <input type="radio" id="tech6" name="tech" value="Other" class="form-check-control">
+        <label class="form-check-label me-2" id="label6" for="tech6">Other</label>
+
+        <br>
+        <label for="nothing">You have selected:<span id="PHP" class="ms-2">PHP</span><span id="ASPnet"
+                class="ms-2">ASP.net</span>
+            <span id="ASP" class="ms-2">ASP</span><span id="JSP" class="ms-2">JSP</span><span id="PERL"
+                class="ms-2">PERL</span>
+            <span id="ColdFusion" class="ms-2">Cold Fusion</span><span id="Other" class="ms-2">Other</span></label>
+        <label id="log"></label>
+    </div>
+    <script>
+        /*3. – Label : “Please select your technology :”
+        – Consider following set of radio buttons :-
+        “PHP”, “ASP.NET”, “ASP”, “JSP”, “PERL”, “Cold Fusion”, “Other”. Layout these buttons in a Horizontal manner.
+        – Clicking on a particular radio button should display the related technology name besides label : “You have  selected : “.
+        – Use multiple “span” HTML element for displaying the related message.
+        – Note that radio button should be selectable by clicking on the corresponding label.*/
+
+        $('span').css("display", "none");
+        $("input").click(function () {
+            $('span').css("display", "none");
+            $('#'+$(this).val()).css('display','');
+            //$("#log").text($("input:checked").val() + " is selected");
+        });
+
+      
+   
+    </script>
+
+</body>
+
+</html>

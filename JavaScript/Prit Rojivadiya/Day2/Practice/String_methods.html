@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <p id="p1"></p>
+    <p id="p2"></p>
+    <p id="p3"></p>
+    <p id="p4"></p>
+    <p id="p5"></p>
+    <p id="p6"></p>
+    <p id="p7"></p>
+    <p id="p8"></p>
+    <p id="p9"></p>
+    <p id="p10"></p>
+    <p id="p11"></p>
+    <p id="p12"></p>
+    <p id="p13"></p>
+    <p id="p14"></p>
+    <p id="p15"></p>
+    <p id="p16"></p>
+    <p id="p17"></p>
+    <p id="p18"></p>
+    <p id="p19"></p>
+    <p id="p20"></p>
+    <p id="p21"></p>
+    <p id="p22"></p>
+    <p id="p23"></p>
+    <p id="p24"></p>
+    <p id="p25"></p>
+    <p id="p26"></p>
+    <p id="p27"></p>
+    <p id="p28"></p>
+
+    <script>
+
+        // length 
+        var s = 'Prit';
+        document.getElementById('p1').innerHTML = s.length;
+        
+        // slice method // accepts negative value also
+        var s1 = 'Prit Rojivadiya';
+        
+        var s2 = s1.slice(0,4);
+        document.getElementById('p2').innerHTML = s2;
+        
+        var s3 = s1.slice(5);
+        document.getElementById('p3').innerHTML = s3;
+        
+        var s4 = s1.slice(-4,-1);
+        document.getElementById('p4').innerHTML = s4;
+        
+        var s5 = s1.slice(-11);
+        document.getElementById('p5').innerHTML = s5;
+        
+        // substring method // does not accept negative
+        var s1 = 'Prit Rojivadiya';
+        var s6 = s1.substring(3,6);
+        document.getElementById('p6').innerHTML = s6;
+
+        // substr methid // second parameter is length
+        var s1 = 'Prit Rojivadiya';
+        var s7 = s1.substr(0,6);
+        document.getElementById('p7').innerHTML = s7;
+        var s8 = s1.substr(5);
+        document.getElementById('p8').innerHTML = s8;
+        var s9 = s1.substr(-4);
+        document.getElementById('p9').innerHTML = s9;
+        
+        // replace method // it is case sensitive
+        var str1 = 'hello world';
+        str1.replace('world','Radix');
+        document.getElementById('p10').innerHTML = str1; // does not change original string
+        var str2 = str1.replace('world','radix');
+        document.getElementById('p11').innerHTML = str2;
+        
+        // uppercase lowercase
+        var s1 = 'abcd';
+        document.getElementById('p12').innerHTML = s1.toUpperCase();
+        var s2 = 'ABCD';
+        document.getElementById('p13').innerHTML = s1.toLowerCase();
+        
+        // concat method
+        var s1 = 'abc',s2 = 'def';
+        document.getElementById('p13').innerHTML = s1.concat(s2);
+        document.getElementById('p14').innerHTML = s1.concat(" * ",s2);
+        document.getElementById('p15').innerHTML = s1 + s2;
+        
+        // trim method
+        var s = '     abc     ';
+        document.getElementById('p16').innerHTML = s.trim();
+        
+        // padstart and padend
+        var s = '5';
+        document.getElementById('p16').innerHTML = s.padStart(4,0);
+        var s = '5';
+        document.getElementById('p17').innerHTML = s.padEnd(4,0);
+
+        // charAt, charCodeAt method
+        var s = 'Prit';
+        document.getElementById('p18').innerHTML = s.charAt(2);
+        document.getElementById('p19').innerHTML = s.charCodeAt(2);
+        
+        // indexOf,lastIndexOf method
+        var s = 'ababababab';
+        document.getElementById('p20').innerHTML = s.indexOf('b');
+        document.getElementById('p21').innerHTML = s.indexOf('b',4);
+        document.getElementById('p22').innerHTML = s.lastIndexOf('b');
+        
+        // access character
+        var s = "Hello";
+        document.getElementById('p23').innerHTML = s[0];
+        
+        // split method
+        var s = "hello how are you"
+        var arr = s.split(" ");
+        document.getElementById('p24').innerHTML = arr;
+
+    </script>
+</body>
+</html>

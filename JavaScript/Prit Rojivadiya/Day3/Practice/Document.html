@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Use Of Document</title>
+</head>
+<body>
+    <p id="p1">paragraph 1</p>
+    <p id="p2">paragraph 2</p>
+    <p id="p3">paragraph 3</p>
+    <p id="p4">Append Child here</p>
+    <input type="text" name="fname" id="txt1">
+    <br>
+    <script>
+
+        // content of element
+        console.log(document.getElementById('p1').innerHTML)
+
+        // changing content
+        document.getElementById('p2').innerHTML = "updated paragraph 2"
+
+        // adding style
+        document.getElementById('p3').style.color = 'red';
+
+        // set attribute
+        var inputtxt = document.getElementById('txt1');
+        inputtxt.setAttribute('type','number');
+
+        // Adding, replacing deleting elements
+        var txt = document.createElement('p');
+        var str = document.createTextNode('Child appended')
+        txt.appendChild(str);
+
+        document.getElementById('p4').appendChild(txt);
+
+        var newChild = document.createElement('p');
+        var newChildtxt = document.createTextNode('Replaced child')
+        newChild.appendChild(newChildtxt);
+
+        document.getElementById('p4').replaceChild(newChild,txt);
+
+        // getting url
+        document.write(document.URL + "<br>");
+        document.write(document.baseURI + "<br>");
+
+        // getting dom elements
+        console.log(document.body)
+        console.log(document.body.childElementCount)
+        console.log(document.body.childNodes)
+        document.write(document.title + "<br>")
+        document.write(document.lastModified + "<br>")
+        console.log(document.scripts)
+        console.log(document.head)
+        console.log(document.head.firstChild)
+
+        
+    </script>
+</body>
+</html>

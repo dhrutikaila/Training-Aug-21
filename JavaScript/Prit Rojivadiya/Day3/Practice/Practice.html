@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <p id="p1">This is paragraph 1</p>
+    <p id="p2">This is paragraph 2</p>
+    <p id="demo">Demo</p>
+    <p id="p4">Hidden para</p>
+    <img src="./Assets/Prit1.png" alt="logo" id="img" height="100">
+    <br>
+    <input type="text" id="myText" value="Hello">
+    <br>
+    <button onclick="changePage()">New Page</button>
+    <br>
+    <button onclick="back()">Previous Page</button>
+    <br>
+    <button onclick="openWin()">Open Window</button>
+    <br>
+    <button onclick="resizeWin()">Resize Window</button>
+    <br>
+    <script>
+        
+        // change text of paragraph 1
+        document.getElementById('p1').innerHTML = 'Updated para 1 text'
+
+
+        // Use the getElementsByTagName method to find the second <p> element, and change its text to "Hello".
+        document.getElementsByTagName('p')[1].innerHTML = "Hello"
+
+
+        // Use HTML DOM to change the value of the image's src attribute.
+        document.getElementById('img').src = "./Assets/Prit12.png"
+
+
+        // Use HTML DOM to change the value of the input field.
+        document.getElementById("myText").value = "Have a nice day!";
+
+
+        // Change the text color of the <p> element to "red".
+         document.getElementById("demo").style.color = "red";
+
+
+         // Use the CSS display property to hide the p element.
+         document.getElementById('p4').style.display = 'none';
+
+
+        //  Use Window.location object to navigate on another page
+        function changePage(){
+            location.href = 'http://www.google.com'
+        }
+
+
+        // Use Window.history object to move to previous url in the history list
+        function back(){
+            history.back();
+        }
+
+
+        // Try to change windows height and width using Windows object
+        var myWin;
+
+        function openWin(){
+            myWin = window.open("","myWin","width=200,height=200");
+        }
+
+        function resizeWin(){
+            myWin.resizeTo(400,400);
+        }
+
+
+    </script>
+</body>
+</html>

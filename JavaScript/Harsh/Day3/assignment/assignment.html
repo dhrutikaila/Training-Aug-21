@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <form name="myForm">
+        <label for="employeeID">EmployeeID</label>
+        <input type="text" name="emoloyeeId" id="employeeID"> <br><br>
+
+        <label for="employeeName">EmployeeName</label>
+        <input type="text" name="emoloyeeName" id="employeeName"><br><br>
+
+        <label for="age">Age</label>
+        <input type="text" name="age" id="age"><br><br>
+
+        <input type="radio" name="gender" id="Male">
+        <label for="Male">Male</label><br><br>
+
+        <input type="radio" name="gender" id="Female">
+        <label for="Female">Female</label><br><br>
+
+        <label for="designation">Designation</label>
+        <input type="text" name="designation" id="designation"> <br><br>
+
+        <label for="salary">Salary</label>
+        <input type="number" name="salary" id="salary"><br><br>
+
+        <label for="location">location</label> <select name="location" id="location">
+            <option value="Ahmedabad">Ahmedabad</option>
+            <option value="Pune">Pune</option>
+            <option value="Bengaluru">Bengaluru</option>
+            <option value="Delhi">Delhi</option>
+            <option value="Chennai">Chennai</option>
+        </select>
+
+        <label for="emailId">EmailId</label>
+        <input type="text" name="emailId" id="emailId"> <br><br>
+
+        <label for="dateOfJoining">DateOfJoining</label>
+        <input type="text" name="dateOfJoining" id="dateOfJoining">
+        <br><br>
+
+        <label for="contactNumber">ContactNumber</label><input type="text" name="contactNumber" id="contactNumber"><br>
+        <br>
+
+        <button type="button" value="submit" onclick="validateForm()">submit</button>
+    </form>
+    <div id="display">
+
+    </div>
+
+
+    <script>
+        function validateForm() {
+            var empId = document.forms["myForm"]["employeeID"].value;
+            var eName = document.forms["myForm"]["employeeName"].value;
+            var eAge = document.forms["myForm"]["age"].value;
+            var gen = document.forms["myForm"]["gender"].value;
+            var eDesignation = document.forms["myForm"]["designation"].value;
+            var eSalary = document.forms["myForm"]["salary"].value;
+            var eLocation = document.forms["myForm"]["location"].value;
+            var eEmailId = document.forms["myForm"]["emailId"].value;
+            var eDateOfJoining = document.forms["myForm"]["dateOfJoining"].value;
+            var eContactNumber = document.forms["myForm"]["contactNumber"].value;
+            var idpat = /(\w{5})/g;
+            var emailpattern = '[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$';
+            var datepat = '/^([0][0-9]|11|12)\-([0-2][0-9]|30|31)\-(19|20)\d{2}$/g';
+            var agepat = '^[0-9]+$';
+            if (empId == "") {
+                alert("Id must be filled out");
+                return false;
+            }
+            if (empId.match(idpat) == null) {
+                alert("enter valid id")
+                return false;
+            }
+            if (eName == "") {
+                alert("Name must be filled out");
+                return false;
+            }
+            if (eAge == "") {
+                alert("Age must be filled out");
+                return false;
+            }
+            if (eAge.match(agepat) == null) {
+                alert("enter valid Age")
+                return false;
+            }
+            if (gen == "") {
+                alert("Gender must be filled out");
+                return false;
+            }
+            if (eDesignation == "") {
+                alert("Designation must be filled out");
+                return false;
+            }
+            if (eSalary == "") {
+                alert("salary must be filled out");
+                return false;
+            }
+            if (eLocation == "") {
+                alert("Location must be filled out");
+                return false;
+            }
+            if (eEmailId == "") {
+                alert("EmailId must be filled out");
+                return false;
+            }
+            if (eEmailId.match(emailpattern) == null) {
+                return false;
+            }
+
+            if (eDateOfJoining == "") {
+                alert("DateOfJoining must be filled out");
+                return false;
+            }
+            if (eDateOfJoining.match(datepat)) {
+                alert("enter valid DateOfJoining")
+                return false;
+            }
+            if (eContactNumber == "") {
+                alert("ContactNumber must be filled out");
+                return false;
+            }
+            var display = document.getElementById("display").innerHTML = `
+                <strong>Employee Id: </strong>${empId}<br>
+                <strong>Employee: </strong>${eName}<br>
+                <strong>Employee: </strong>${eAge}<br>
+                <strong>Employee: </strong>${gen}<br>
+                <strong>Employee: </strong>${eDesignation}<br>
+                <strong>Employee: </strong>${eSalary}<br>
+                <strong>Employee: </strong>${eLocation}<br>
+                <strong>Employee: </strong>${eEmailId}<br>
+                <strong>Employee: </strong>${eDateOfJoining}<br>
+                <strong>Employee: </strong>${eContactNumber}<br>                  
+                `;
+            var win = window.open();
+            win.document.write(display);
+        }
+    </script>
+</body>
+
+</html>

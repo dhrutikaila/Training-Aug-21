@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC"
+      crossorigin="anonymous"
+    />
+    <script
+      src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"
+      integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js"
+      integrity="sha384-cVKIPhGWiC2Al4u+LWgxfKTRIcfu0JTxR+EQDz/bgldoEyl4H0zUF0QKbrJ0EcQF"
+      crossorigin="anonymous"
+    ></script>
+  </head>
+  <body>
+    <div class="container">
+      <div class="row">
+        <div class="col">
+          <h3 class="display-1 text-primary text-center">
+            Welcome to the RadixWeb
+          </h3>
+          <h5 class="display-4 text-warning text-center">
+            Day 19 Practice - 3
+          </h5>
+        </div>
+      </div>
+      <div class="row border border-primary border-2">
+        <div class="col-6  bg-light">
+          <h1>Hoisting</h1>
+          <p>
+            JavaScript Hoisting refers to the process whereby the interpreter
+            allocates memory for variable and function declarations prior to
+            execution of the code. Declarations that are made using var are
+            initialized with a default value of undefined. Declarations made
+            using let and const are not initialized as part of hoisting.
+          </p>
+          <p>
+            Conceptually hoisting is often presented as the interpreter
+            "splitting variable declaration and initialization, and moving
+            (just) the declarations to the top of the code". This allows
+            variables to appear in code before they are defined. Note however,
+            that any variable initialization in the original code will not
+            happen until the line of code is executed.
+          </p>
+          <p>
+            <h5>Only Declarations are hoisted</h5>
+             JavaScript only hoists declarations,
+            not initializations. If a variable is used in code and then declared
+            and initialized, the value when it is used will be its default
+            initialization (undefined for a variable declared using var,
+            otherwise uninitialized).
+          </p>
+          <p>
+              <h5>Let and const hoisting</h5>
+              Variables declared with let and const are also hoisted, but unlike for var the variables are not initialized with a default value of undefined. Until the line in which they are initialized is executed, any code that accesses these variables will throw an exception.
+          </p>
+        </div>
+
+        <div class="col-6  bg-secondary">
+          <h3>code</h3>
+          <p>
+            catName("Chloe");
+            <br />
+            function catName(name) {
+            <br />
+            <span class="ms-3">console.log("My cat's name is " + name);</span>
+            <br />} <br />
+            /* The result of the code above is: "My cat's name is Chloe" */
+          </p>
+          <p>Even though we call the function in our code first, before the function is written, the code still works, because this is how context execution works in JavaScript.</p>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-auto"></div>
+      </div>
+    </div>
+  </body>
+</html>

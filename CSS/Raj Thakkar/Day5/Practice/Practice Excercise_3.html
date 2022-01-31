@@ -1,0 +1,101 @@
+<!-- 3 Hide elements with Media queries-->
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>CSS - Practice_Exercise_3</title>
+    <style>
+        .example {
+            padding: 20px;
+            color: white;
+        }
+        /* Extra small devices (phones, 600px and down) */
+        @media only screen and (max-width: 600px) {
+            .example {
+                background: red;
+            }
+
+            #media_min_600 {
+                display: none;
+            }
+        }
+
+        /* Small devices (portrait tablets and large phones, 600px and up) */
+        @media only screen and (min-width: 600px) {
+            .example {
+                background: green;
+            }
+
+            #media_max_600 {
+                display: none;
+            }
+        }
+
+        /* Medium devices (landscape tablets, 768px and up) */
+        @media only screen and (min-width: 768px) {
+            .example {
+                background: blue;
+            }
+
+            #media_max_600 {
+                display: none;
+            }
+
+            #media_min_600 {
+                display: none;
+            }
+        }
+
+        /* Large devices (laptops/desktops, 992px and up) */
+        @media only screen and (min-width: 992px) {
+            .example {
+                background: orange;
+            }
+
+            #media_max_600 {
+                display: none;
+            }
+
+            #media_min_600 {
+                display: none;
+            }
+        }
+
+        /* Extra large devices (large laptops and desktops, 1200px and up) */
+        @media only screen and (min-width: 1200px) {
+            .example {
+                background: pink;
+            }
+
+            #media_max_600 {
+                display: none;
+            }
+
+            #media_min_600 {
+                display: none;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <h3>Practice 3</h3>
+    <h5>
+        Hide elements with Media queries
+    </h5>
+    <br>
+    <hr><br>
+    
+    <p class="example">Resize the browser window to see how the background color of this paragraph changes on different
+        screen sizes.
+    </p>
+    <img id="media_min_600" src="https://www.w3schools.com/w3images/rocks.jpg" style="width:100%">
+    <img id="media_min_600" src="https://www.w3schools.com/w3images/falls2.jpg" style="width:100%">
+    <img id="media_max_600" src="https://www.w3schools.com/w3images/paris.jpg" style="width:100%">
+    <img id="media_max_600" src="https://www.w3schools.com/w3images/nature.jpg" style="width:100%">
+
+</body>
+
+</html>

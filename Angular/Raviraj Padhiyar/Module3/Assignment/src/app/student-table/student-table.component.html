@@ -1,0 +1,20 @@
+<table class="table">
+    <thead>
+        <tr>
+            <th>Id</th>
+            <th>Name</th>
+            <th>age</th>
+            <th>average</th>
+            <th>grade</th>
+        </tr>
+    </thead>
+    <tbody *ngFor="let student of students">
+        <tr *ngIf="student.active">
+            <td>{{student.Id}}</td>
+            <td>{{student.name}}</td>
+            <td>{{student.age}}</td>
+            <td>{{student.average}}</td>
+            <td>{{student.grade}}</td>
+        </tr>
+    </tbody>
+</table>

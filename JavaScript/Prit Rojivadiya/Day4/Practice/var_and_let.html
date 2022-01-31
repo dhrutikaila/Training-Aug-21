@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        var a = 10;
+        var a = 20;
+        console.log(a);
+
+        let b = 20;
+        // let b = 30; //  throws syntax error
+        b = 30;
+        console.log(b);
+
+        const c = 3.14;
+        // const c = 2 // throws syntax error
+        // c = 3.1; // throws type error
+        console.log(c);
+
+        function add(a,b){
+            let result = a+b;
+            console.log(result);
+        }
+        add(30,20)
+        // console.log(result) // reference error
+
+        var p = 22;
+        if(true){
+            let p = 2;
+            console.log(p);
+        }
+        console.log(p);
+
+
+    </script>
+</body>
+
+</html>

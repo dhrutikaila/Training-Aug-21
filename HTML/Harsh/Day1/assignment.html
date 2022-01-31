@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form</title>
+</head>
+
+<body>
+    <form method="POST">
+        <label for="fname">FirstName:</label>
+        <input type="text" name="fname" id="fname" required><br><br>
+        <label for="lname">LastName:</label>
+        <input type="text" name="lname" id="lname" required><br><br>
+        <label for="age">Age:</label>
+        <input type="number" name="age" id="age" required><br><br>
+        <p>Gender:
+            <input type="radio" name="gender" id="gender" required>
+            <lable for="gender">Male</lable>
+            <input type="radio" name="gender" id="gender" required>
+            <lable for="gender">Female</lable>
+        </p><br>
+        <label for="designatio">desigation:<input type="text" name="designation" id="designation" required><br><br>
+            <label for="salary">salary:</labl>
+                <input type="number" name="salary" id="salary" required><br><br>
+                <label for="location">location:</label><select name="location" id="location" required>
+                <option value="" disabled selected>Choose Location</option>
+                <option value="Ahmedabad">Ahmedabad</option>
+                <option value="Pune">Pune</option>
+                <option value="Bengaluru">Bengaluru</option>
+                <option value="Delhi">Delhi</option>
+            </select><br><br>
+            <label for="email">email:</label><input type="email" name="email" id="email" required><br><br>
+            <label for="joiningdate">joiningdate:</label><input type="date" name="joiningdate" id="joiningdate" required>
+    </form>
+</body>
+
+</html>

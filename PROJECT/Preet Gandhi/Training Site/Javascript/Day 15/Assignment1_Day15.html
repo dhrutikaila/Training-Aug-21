@@ -1,0 +1,201 @@
+<!-- Create an application for performing basic math operations like Addition, Subtraction,   Multiplication and Division.
+
+Consider following elements: 
+
+ Label : “Please enter first number : ” with Text Box
+ Label : “Please enter second number : ” with Text Box
+ Label : “Please select operation you want to perform : ” with set of Radio Buttons like “Addition”, “Subtraction”, “Multiplication” and “Division” presented in vertical manner.
+Two buttons,  “Calculate” and “Reset”
+ Label: “Result is: ” with final result – Place all the checks to make sure that user enters only numeric values for text boxes. Clicking on “Calculate” button will perform the requested operation and   the result will be displayed below “Calculate” and “Reset” buttons in the form of text,   e.g. : “Result is : 10”. – Clicking on “Reset” button will reset all the form information including radio button   selection and result text. -->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Assignment1 (Day-15)</title>
+    <link rel="stylesheet" href="../../style.css">
+    <script src="https://kit.fontawesome.com/e153b670c8.js" crossorigin="anonymous"></script>
+</head>
+<style>
+    main {
+        background-color: lightgreen;
+        text-align: center;
+    }
+</style>
+
+<body>
+    <div class="container-div">
+        <nav class="navbar">
+            <ul>
+                <li class="navbar-logo"><a href="../../index.html"><img src="../../Assets/Radix.jpg"></a></li>
+                <li class="navbar-links"><a href="../../index.html">Home</a></li>
+                <li class="navbar-links"><a href="../../HTML/html.html">Html</a></li>
+                <li class="navbar-links"><a href="../../CSS/css.html">Css</a></li>
+                <li class="navbar-links"><a href="../../Bootstrap/bootstrap.html">Bootstrap</a></li>
+                <li class="navbar-links"><a href="../javascript.html">Javascript</a></li>
+                <li class="navbar-links"><a href="../../JQuery/jquery.html">JQuery</a></li>
+                <li class="navbar-links"><a href="../../Project/project.html">Project</a></li>
+            </ul>
+        </nav>
+        <div class="sidebar">
+            <ol>
+                <li><i class="fas fa-folder-open">&nbsp;&nbsp;&nbsp;Day 15</i>
+                    <ul class="folder">
+                        <li><i class="fas fa-folder-open">&nbsp;&nbsp;Practice Exercise</i>
+                            <ol class="subfolder" type="a">
+                                <li><a href="Practice_Exercise1.html">Practice Exercise1</a></li>
+                                <li><a href="Practice_Exercise2.html">Practice Exercse2</a></li>
+                            </ol>
+                        </li>
+                        <li><i class="fas fa-folder-open">&nbsp;&nbsp;Assignment</i>
+                            <ol class="subfolder" type="a">
+                                <li><a href="Assignment1_Day15.html">Assignment1</a></li>
+                            </ol>
+                        </li>
+                    </ul>
+                </li><br>
+                <li><i class="fas fa-folder-open">&nbsp;&nbsp;&nbsp;Day 16</i>
+                    <ul class="folder">
+                        <li><i class="fas fa-folder-open">&nbsp;&nbsp;Practice Exercise</i>
+                            <ol class="subfolder" type="a">
+                                <li><a href="../Day 16/Practice_Exercise1.html">Practice Exercise1</a></li>
+                                <li><a href="../Day 16/Practice_Exercise2.html">Practice Exercse2</a></li>
+                                <li><a href="../Day 16/Practice_Exercise3.html">Practice Exercise3</a></li>
+                                <li><a href="../Day 16/Practice_Exercise4.html">Practice Exercse4</a></li>
+                                <li><a href="../Day 16/Practice_Exercise5.html">Practice Exercise5</a></li>
+                            </ol>
+                        </li>   
+                        <li><i class="fas fa-folder-open">&nbsp;&nbsp;Assignment</i>
+                            <ol class="subfolder" type="a">
+                                <li><a href="../Day 16/Assignment1_Day16.html">Assignment1</a></li>
+                            </ol>
+                        </li>
+                    </ul>
+                </li><br>
+                <li><i class="fas fa-folder-open">&nbsp;&nbsp;&nbsp;Day 17</i>
+                    <ul class="folder">
+                        <li><i class="fas fa-folder-open">&nbsp;&nbsp;Practice Exercise</i>
+                            <ol class="subfolder" type="a">
+                                <li><a href="../Day 17/Practice_Exercise1.html">Practice Exercise1</a></li>
+                                <li><a href="../Day 17/Practice_Exercise2.html">Practice Exercse2</a></li>
+                                <li><a href="../Day 17/Practice_Exercise3.html">Practice Exercise3</a></li>
+                                <li><a href="../Day 17/Practice_Exercise4.html">Practice Exercse4</a></li>
+                                <li><a href="../Day 17/Practice_Exercise5.html">Practice Exercise5</a></li>
+                                <li><a href="../Day 17/Practice_Exercise6.html">Practice Exercse6</a></li>
+                                <li><a href="../Day 17/Practice_Exercise7.html">Practice Exercise7</a></li>
+                                <li><a href="../Day 17/Practice_Exercise8.html">Practice Exercse8</a></li>
+                                <li><a href="../Day 17/Practice_Exercise9.html">Practice Exercise9</a></li>
+                            </ol>
+                        </li>   
+                        <li><i class="fas fa-folder-open">&nbsp;&nbsp;Assignment</i>
+                            <ol class="subfolder" type="a">
+                                <li><a href="../Day 17/Assignment_Day17.html">Assignment1</a></li>
+                            </ol>
+                        </li>
+                    </ul>
+                </li><br>
+                <li><i class="fas fa-folder-open">&nbsp;&nbsp;&nbsp;Day 18</i>
+                    <ul class="folder">
+                        <li><i class="fas fa-folder-open">&nbsp;&nbsp;Practice Exercise</i>
+                            <ol class="subfolder" type="a">
+                                <li><a href="../Day 18/Practice_Exercise1.html">Practice Exercise1</a></li>
+                                <li><a href="../Day 18/Practice_Exercise2.html">Practice Exercse2</a></li>
+                                <li><a href="../Day 18/Practice_Exercise3.html">Practice Exercise3</a></li> 
+                            </ol>
+                        </li>   
+                        <li><i class="fas fa-folder-open">&nbsp;&nbsp;Assignment</i>
+                            <ol class="subfolder" type="a">
+                                <li><a href="../Day 18/Assignment1_Day18.html">Assignment1</a></li>
+                            </ol>
+                        </li>
+                    </ul>
+                </li><br>
+                <li><i class="fas fa-folder-open">&nbsp;&nbsp;&nbsp;Day 19</i>
+                    <ul class="folder">
+                        <li><i class="fas fa-folder-open">&nbsp;&nbsp;Practice Exercise</i>
+                            <ol class="subfolder" type="a">
+                                <li><a href="../Day 19/Practice_Exercise1.html">Practice Exercise1</a></li>
+                                <li><a href="../Day 19/Practice_Exercise2.html">Practice Exercse2</a></li>
+                                <li><a href="../Day 19/Practice_Exercise3.html">Practice Exercise3</a></li>
+                                <li><a href="../Day 19/Practice_Exercise4.html">Practice Exercse4</a></li>
+                                <li><a href="../Day 19/Practice_Exercise5.html">Practice Exercise5</a></li>
+                                <li><a href="../Day 19/Practice_Exercise6.html">Practice Exercse6</a></li>
+                            </ol>
+                        </li>   
+                    </ul>
+                </li><br>
+                <li><i class="fas fa-folder-open">&nbsp;&nbsp;&nbsp;Day 20</i>
+                    <ul class="folder">
+                        <li><i class="fas fa-folder-open">&nbsp;&nbsp;Practice Exercise</i>
+                            <ol class="subfolder" type="a">
+                                <li><a href="../Day 20/Practice_Exercise1.html">Practice Exercise1</a></li>
+                            </ol>
+                        </li>   
+                        <li><i class="fas fa-folder-open">&nbsp;&nbsp;Assignment</i>
+                            <ol class="subfolder" type="a">
+                                <li><a href="../Day 20/Assignment1_Day20.html">Assignment1</a></li>
+                            </ol>
+                        </li>
+                    </ul>
+                </li><br>
+            </ol>
+        </div>
+        <main>
+            <form>
+                <h2>Assignment (Day-15)</h2><br><br>
+                <label><b>Enter First Number: </b></label><input type="number" name="value1" id="value1">
+                <br><br>
+                <label><b>Enter Second Number: </b></label><input type="number" name="value2" id="value2">
+                <br><br>
+                <label><b>Operations:</b></label><br>
+                <input type="radio" name="operator" value="+"> + <br>
+                <input type="radio" name="operator" value="-"> - <br>
+                <input type="radio" name="operator" value="*"> * <br>
+                <input type="radio" name="operator" value="/"> / <br><br>
+                <button type="button" onclick="calculate()">Calculate</button>
+                <button type="button" onclick="reset()">Reset</button><br><br>
+                <label><b>Result is: </b></label><input type="number" id="result">
+        </main>
+    </div>
+
+
+    <script>
+        var result = document.getElementById("result");
+        var val1 = document.getElementById("value1");
+        var val2 = document.getElementById("value2");
+        var operator = document.getElementsByName("operator");
+
+        function calculate() {
+            for (var i = 0; i < operator.length; i++) {
+                if (operator[i].checked) {
+                    if (operator[i].value == "+") {
+                        result.value = (parseInt(val1.value) + parseInt(val2.value));
+                    }
+                    if (operator[i].value == "-") {
+                        result.value = (parseInt(val1.value) - parseInt(val2.value));
+                    }
+                    if (operator[i].value == "*") {
+                        result.value = (parseInt(val1.value) * parseInt(val2.value));
+                    }
+                    if (operator[i].value == "/") {
+                        result.value = (parseInt(val1.value) / parseInt(val2.value));
+                    }
+                }
+            }
+        }
+
+        function reset() {
+            val1.value = "";
+            val2.value = "";
+
+            for (var i = 0; i < operator.length; i++) {
+                operator[i].checked = false;
+            }
+            result.value = ""
+        }
+    </script>
+</body>
+
+</html>

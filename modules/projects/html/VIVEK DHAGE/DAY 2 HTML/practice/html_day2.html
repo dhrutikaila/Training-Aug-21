@@ -1,0 +1,361 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>HOME</title>
+
+<style type="text/css">
+
+*{
+	font-family: sans-serif;
+}
+
+body{
+	height: 100vh;
+}
+
+
+	
+.container1{
+	display: grid;
+	grid-template-columns: 0.3fr 1fr;
+	grid-template-rows: 0.1fr 0.1fr 1fr 0.1fr;
+	grid-gap: 0.4rem;
+
+	grid-template-areas: 
+	"head head "
+	"nav nav "
+	"side content"
+	"foot foot";
+}
+
+.header1{
+	grid-area: head;
+	background: red;
+	color: whitesmoke;
+	text-align: center;
+	font-weight: 700;
+	font-size: 20px;	
+
+}
+
+.navigation{
+	color: white;
+	background: red;
+	grid-area: nav;
+}
+
+.nav1 > ul{
+	display: flex;
+	justify-content: center;
+	text-decoration: none;
+}    
+.list{
+	margin: 0 12px;
+	text-decoration: none;
+	color: white;
+}
+
+footer{
+	grid-area: foot;
+	background: red;
+	color: whitesmoke;
+	text-align: center;
+	font-weight: 700;
+	font-size: 20px;	
+
+}
+
+.list{
+	
+}
+
+.side1{
+	grid-area: side;
+
+
+}
+
+.content{
+	grid-area: content;
+	display: block;
+}
+
+.content{
+	
+}
+
+
+
+
+
+
+
+</style>
+</head>
+<body>
+
+<div class="container1">
+
+<div class="header1">
+	<header class="head">
+		<h1 style="font-size: 20px; padding-top: 3px;">TASK SITE</h1>
+	</header>
+</div>
+
+<div class="navigation">
+	<nav class="nav1">
+		<ul type="none">
+			<li class="list"><a href="C:\Users\om\Desktop\temporary practices\projects\task_site.html">HOME</a></li>
+			<li class="list"><a href="">SQL</a></li>
+			<li class="list" id="active"><a href="">HTML-CSS</a></li>
+			<li class="list"><a href="">JAVASCRIPT</a></li>
+			<li class="list"><a href="">JQUERY</a></li>
+		</ul>
+	</nav>
+</div>
+
+<div class="side1">
+	<aside class="sidebar">
+    <ol>
+		<li>DAY-1
+			<ul>
+				<li>
+					practices
+					<ol>
+						<li><a href="html\VIVEK DHAGE\DAY 1 HTML\practice\student_marks.html">practical</a></li>
+					</ol>
+				</li>
+				<li>assignments
+					<ol>
+						<li><a href="html\VIVEK DHAGE\DAY 1 HTML\assignment\task1.html">assignment</a></li>
+					</ol>
+				</li>
+			</ul>
+		</li>
+	</ol>
+	<ol>
+		<li>DAY-2
+			<ul>
+				<li>
+					practices
+					<ol>
+						<li><a href="html\VIVEK DHAGE\DAY 2 HTML\practice\html_day2.html">practical</a></li>
+					</ol>
+				</li>
+				<li>assignments
+					<ol>
+						<li><a href="html\VIVEK DHAGE\DAY 2 HTML\assignment\personalized_resume(day2-assignment).html">assignment</a></li>
+					</ol>
+				</li>
+			</ul>
+		</li>
+ 	</ol>
+    <ol>
+		<li>DAY-3
+			<ul>
+				<li>
+					practices
+					<ol>
+						<li><a href="html\VIVEK DHAGE\DAY 3 HTML\practices\day-3_html.html">practical</a></li>
+					</ol>
+				</li>
+				<li>assignments
+					<ol>
+						<li><a href="html\VIVEK DHAGE\DAY 3 HTML\assignments\day-html_assignment.html">assignment</a></li>
+					</ol>
+				</li>
+			</ul>
+		</li>
+	</ol>
+	<ol>
+		<li>DAY-4
+			<ul>
+				<li>
+					practices
+					<ol>
+						<li><a href="html\VIVEK DHAGE\DAY 4 HTML-CSS\practicals\practical-1.html">practical-1</a></li>
+						<li><a href="html\VIVEK DHAGE\DAY 4 HTML-CSS\practicals\practical-2.html">practical-2</a></li>
+						<li><a href="html/VIVEK DHAGE/DAY 4 HTML-CSS/practicals/practical-3.html">practical-3</a></li>
+					</ol>
+				</li>
+				<li>assignments
+					<ol>
+						<li><a href="html/VIVEK DHAGE/DAY 4 HTML-CSS/assignment/assignment-day-4.html">assignment</a></li>
+					</ol>
+				</li>
+			</ul>
+		</li>
+	</ol>
+	</aside>
+</div>
+
+
+<div class="display" style="border: 1px solid black;">
+	<div class="content">
+	<article>
+
+
+
+<head>
+	<meta charset="utf-8">
+	<title>day two practice</title>
+
+<style type="text/css">
+
+
+#report{
+	text-align: center;
+}
+
+.para1{
+	margin: 10px;
+	padding: 5px;
+	overflow: scroll;
+}
+	
+table {
+  font-family: arial, sans-serif;
+  border-collapse: collapse;
+}
+
+
+p{
+	border: 3px solid red;
+	padding: 5px;
+}
+
+#city_li{
+	display: inline;
+}
+#city_li > a:hover{
+	color: blue;
+	background: white;
+	text-decoration: none;
+}
+
+
+div > h1,h2{
+color: blue;
+
+}
+
+</style>
+</head>
+<body>
+
+	<div id="city_li">
+	<a href="">Mumbai |</a>
+	<a href="">Shimaa |</a>
+	<a href="">Spiti | </a>
+	<a href="">Panji |</a>
+	<a href=""> Agra</a>
+
+			
+</div>
+
+
+	<div id="report">
+	<table border="2" width="500px;" height="500px;" style="margin-left:440px; margin-top: 35px;" cellpadding="22"
+	cellspacing="3">
+		<caption>	student details</caption>
+		<tr>
+			<th colspan="4">STUDENT REPORT CARD</th>
+		</tr>
+		<tr>
+			<th>Name</th>
+			<td>vivek dhage</td>
+			<th rowspan="2">year</th>
+			<td rowspan="2">2020</td>
+		</tr>
+		<tr>
+			<th>roll</th>
+			<th>20</th>
+		</tr>
+		<hr/>
+		<tr>
+			<th>subjects</th>
+			<th>marks</th>
+			<th colspan="2">grades</th>
+		</tr>
+		<tr>
+			<td>maths</td>
+			<td>77</td>
+			<td colspan="2">b1</td>
+		</tr>
+		<tr>
+			<td>maths</td>
+			<td>77</td>
+			<td colspan="2">b1</td>
+		</tr>
+		<tr>
+			<td>maths</td>
+			<td>77</td>
+			<td colspan="2">b1</td>
+		</tr>
+		<tr>
+			<td>maths</td>
+			<td>77</td>
+			<td colspan="2">b1</td>
+		</tr>
+		<tr>
+			<td>maths</td>
+			<td>77</td>
+			<td colspan="2">b1</td>
+		</tr>
+		<tr>
+			<th>Total</th>
+			<td>385</td>
+			<td colspan="2">B1</td>	
+		</tr>
+
+
+	</table>
+	</div>
+<div>
+
+    <h1>Heading1</h1>
+
+    <h2>Sub Heading</h2>
+
+    <h1>Heading2</h1>
+
+    <h2>Sub heading</h2>
+
+</div>
+ 
+
+
+
+<di class="para1">
+	<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+	tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+	quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+	consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+	cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+	proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+	
+</div>
+
+</body>
+
+
+
+
+
+
+	</article>
+</div>	
+</div>
+
+
+<footer>
+	<p>&copy; copyright </p>
+</footer>
+
+
+</div>
+</body>
+</html>
+
+

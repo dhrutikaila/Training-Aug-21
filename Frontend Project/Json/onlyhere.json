@@ -1,0 +1,30 @@
+[
+    {
+        "ID":1,
+        "image": "../Assets/OnlyHere/161405922993.png",
+        "name": "Realmeow cap",
+        "price": "&#8377;599",
+        "dprice":"&#8377;799"
+    },
+    {
+        "ID":2,
+        "image": "../Assets/OnlyHere/1614057007991.png",
+        "name": "Realme game controller",
+        "price": "&#8377;799",
+        "dprice":"&#8377;999"
+    },
+    {
+        "ID":3,
+        "image": "../Assets/OnlyHere/1591696182997.jpg",
+        "name": "Realem buds iconic",
+        "price": "&#8377;399",
+        "dprice":"&#8377;599"
+    },
+    {
+        "ID":4,
+        "image": "../Assets/OnlyHere/1591953520995.jpg",
+        "name": "Realem adventure backpack",
+        "price": "&#8377;1699",
+        "dprice":"&#8377;1999"
+    }
+]

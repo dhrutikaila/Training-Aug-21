@@ -1,0 +1,26 @@
+command
+
+dir for entering file directory
+
+npm run server for creating run time environment
+
+
+node for starting node and doing all java script operations in command line 
+
+npm for staring npm(node package manager)
+
+node -v for version of node
+
+npm -v for version of npm(node package manager)
+
+(To exit, press Ctrl+C again or Ctrl+D or type .exit)
+
+.help for information
+
+cls for clear
+
+type nul > file name for creating new file 
+
+double click on tab for information off all methods
+
+fs for information of all file methods

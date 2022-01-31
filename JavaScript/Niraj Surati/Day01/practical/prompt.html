@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Prompt</title>
+</head>
+<body>
+    <h3>Prompt Example</h3>
+    <script>
+        let n1 = prompt('Enter No1: ');
+        let n2 = prompt('Enter No2: ');
+        let n3 = prompt('Enter No3: ');
+        function greater(a,b,c){
+            if(a>b && a>c){
+                return a;
+            }else if(b>a && b>c){
+                return b;
+            }else{
+                return c;
+            }
+        }
+        function add(a,b,c){
+            let sum = 0;
+            if(a>40){
+                sum += a;
+            }
+            if(b>40){
+                sum += b;
+            }
+            if(c>40){
+                sum += c;
+            }
+            return sum;
+        }
+        let great = greater(parseInt(n1),parseInt(n2),parseInt(n3));
+        let sum = add(parseInt(n1),parseInt(n2),parseInt(n3));
+        alert(great+' is greater'+'\ntotal sum is '+sum);
+    </script>
+</body>
+</html>

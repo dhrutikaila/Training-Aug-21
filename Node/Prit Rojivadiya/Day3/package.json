@@ -1,0 +1,14 @@
+{
+  "name": "day3",
+  "version": "1.0.0",
+  "description": "day3",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "prit",
+  "license": "ISC",
+  "dependencies": {
+    "nodemon": "^2.0.14"
+  }
+}

@@ -1,0 +1,23 @@
+<!-- Using Function Expression, find the area of circle -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Task 1</title>
+</head>
+<body>
+    <p id="demo"></p>
+    <script>
+        var areaofcircle = function (radius) 
+        {
+            return  Math.PI * radius * radius 
+        };
+        var red = 4;
+        var x = areaofcircle(red);
+        document.getElementById('demo').innerHTML = "the area of circle  of radius "+red+" is :"+x;
+    </script>
+</body>
+</html>

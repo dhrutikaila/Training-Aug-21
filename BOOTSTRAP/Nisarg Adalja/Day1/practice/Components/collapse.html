@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-F3w7mX95PdgyTmZZMECAngseQB83DfGTowi0iMjiWaeVhAn4FJkqJByhZMI3AhiU" crossorigin="anonymous">
+ <style>
+        :root{
+            --item:1;
+        }
+        .dropdown-item{
+            display:inline;
+        }
+         nav{
+            display:inline;
+            justify-content:center;
+            width:100vw;
+        }
+        .navbar{
+            width:100vw !important;
+        }
+        .dropdown{
+            margin-left:5vw;
+        }
+        li a{
+            display:inline;
+        }
+
+        ol {
+    counter-reset: item;
+    padding-left: 10px;
+}
+li {
+    display: block
+}
+li:before {
+    content: counters(item, ".") " ";
+    counter-increment: item
+}
+        .btn{
+            display:inline-block;
+           /* width:18vw !important;*/
+        }
+          @media only screen and (min-width:300px) and (max-width:600px){
+              .btn{
+            display:inline-block;
+            width:85vw !important;
+            margin-left:1vw !important;
+        }
+        }
+        @media only screen and (min-width:600px) and (max-width:992px){
+              .btn{
+            display:inline-block;
+            width:50vw !important;
+        }
+        }
+        @media  only screen and (min-width:992px) and (min-width:1200px){
+    
+          .dropdown{
+              width:21vw !important;
+            margin-left:3vw !important;
+        }
+        #navbarSupportedContent{
+            width:100vw !important;
+        }
+        
+        .btn{
+            display:inline-block;
+            width:21vw !important;
+        }
+        
+      }
+       
+    </style>
+</head>
+<body>
+    <!-- Collapse
+Toggle the visibility of content across your project with a few classes and our JavaScript plugins. -->
+<h1>Collapse
+Toggle the visibility of content across your project with a few classes and our JavaScript plugins.</h1>
+<p>
+  <a class="btn btn-primary" data-bs-toggle="collapse" href="#collapseExample" role="button" aria-expanded="false" aria-controls="collapseExample">
+    Link with href
+  </a>
+  <button class="btn btn-primary" type="button" data-bs-toggle="collapse" data-bs-target="#collapseExample" aria-expanded="false" aria-controls="collapseExample">
+    Button with data-bs-target
+  </button>
+</p>
+<div class="collapse" id="collapseExample">
+  <div class="card card-body">
+    Some placeholder content for the collapse component. This panel is hidden by default but revealed when the user activates the relevant trigger.
+  </div>
+</div>
+  <br><br>
+  <h1>collapse with Horizontal effect</h1>
+  <p>
+  <button class="btn btn-primary" type="button" data-bs-toggle="collapse" data-bs-target="#collapseWidthExample" aria-expanded="false" aria-controls="collapseWidthExample">
+    Toggle width collapse
+  </button>
+</p>
+<div style="min-height: 120px;">
+  <div class="collapse collapse-horizontal" id="collapseWidthExample">
+    <div class="card card-body" style="width: 300px;">
+      This is some placeholder content for a horizontal collapse. It's hidden by default and shown when triggered.
+    </div>
+  </div>
+</div>
+</div>
+<br><br>
+<!-- Multiple targets
+A <button> or <a> can show and hide multiple elements by referencing them with a selector in its href or data-bs-target attribute. Multiple <button> or <a> can show and hide an element if they each reference it with their href or data-bs-target attribute -->
+    <p>
+  <a class="btn btn-primary" data-bs-toggle="collapse" href="#multiCollapseExample1" role="button" aria-expanded="false" aria-controls="multiCollapseExample1">Toggle first element</a>
+  <button class="btn btn-primary" type="button" data-bs-toggle="collapse" data-bs-target="#multiCollapseExample2" aria-expanded="false" aria-controls="multiCollapseExample2">Toggle second element</button>
+  <button class="btn btn-primary" type="button" data-bs-toggle="collapse" data-bs-target=".multi-collapse" aria-expanded="false" aria-controls="multiCollapseExample1 multiCollapseExample2">Toggle both elements</button>
+</p>
+<div class="row">
+  <div class="col">
+    <div class="collapse multi-collapse" id="multiCollapseExample1">
+      <div class="card card-body">
+        Some placeholder content for the first collapse component of this multi-collapse example. This panel is hidden by default but revealed when the user activates the relevant trigger.
+      </div>
+    </div>
+  </div>
+  <div class="col">
+    <div class="collapse multi-collapse" id="multiCollapseExample2">
+      <div class="card card-body">
+        Some placeholder content for the second collapse component of this multi-collapse example. This panel is hidden by default but revealed when the user activates the relevant trigger.
+      </div>
+    </div>
+  </div>
+</div>
+ <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-/bQdsTh/da6pkI1MST/rWKFNjaCP5gBSY4sEBT38Q/9RBh9AH40zEOg7Hlq2THRZ" crossorigin="anonymous">
+    </script>
+</body>
+</html>

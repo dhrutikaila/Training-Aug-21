@@ -1,0 +1,48 @@
+<html>
+<!-- Design a form for storing employee details. (Employee name, age, Gender, designation, salary, location, Email ID, Date of Joining and contact number)
+Validation required
+Age should be a number
+Each field should contain value
+Email ID should be in proper format
+Date of joining should be in date format
+Location should be in the drop down list
+Use radio buttons for Gender -->
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Html - Assignment</title>
+    <script src="https://kit.fontawesome.com/e153b670c8.js" crossorigin="anonymous"></script>
+   
+</head>
+
+<body>
+
+    <div>
+        <h1>Employee Form</h1>
+        <form method="POST">
+            <lable>Name: </lable><input type="text" name="name" required> <br><br>
+            <lable>Age: </lable><input type="number" name="age" required min="0" max="150"><br><br>
+            <lable>Gender: </lable>
+            <input type="radio" name="gender" value="male" required><span>Male</span>
+            <input type="radio" name="gender" value="female" required><span>Female</span>
+            <input type="radio" name="gender" value="other" required><span>Other</span> <br><br>
+            <lable>Designation: </lable><input type="text" name="designation" required><br><br>
+            <lable>Salary: </lable><input type="number" name="salry" required><br><br>
+            <lable>Location: </lable><select name="location" required>
+                <option value="Gujarat">Gujarat</option>
+                <option value="Delhi">Delhi</option>
+                <option value="Punjab">Punjab</option>
+                <option value="Meghalaya">Meghalaya</option>
+            </select><br><br>
+            <lable>Email: </lable><input type="email" name="email" required><br><br>
+            <lable>Date of Joining: </lable><input type="date" name="joiningdate" required><br><br>
+            <lable>Contact No: </lable><input type="tel" name="contactno" required><br><br>
+            <input type="submit" value="Submit">
+            <input type="reset" value="Reset">
+        </form>
+    </div>
+
+</body>
+
+</html>

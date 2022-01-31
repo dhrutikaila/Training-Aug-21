@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+  </head>
+  <body>
+
+
+
+    <script type="text/javascript">
+var emp={
+  full_det: function(){
+    console.log(this.name+" "+this.designation+" "+this.status);
+    document.write(this.name+" "+this.designation+" "+this.status);
+  }
+}
+
+
+var employee_1 = {
+  name:"naman",
+  designation: "senior dev" ,
+   status: "working"
+  }
+
+emp.full_det.call(employee_1);
+
+
+    </script>
+
+
+  </body>
+</html>

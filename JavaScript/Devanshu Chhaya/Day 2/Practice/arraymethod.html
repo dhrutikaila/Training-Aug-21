@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        const com=["Apple","Google","Tesla","Microsoft","Dell"]
+        console.log(com.toString());
+
+        console.log(com.join("*"));
+        
+        console.log(com.pop());
+        
+        console.log(com.push("hp"));
+        console.log(com);
+        
+        console.log(com.shift());
+        console.log(com)
+
+        console.log(com.unshift("Apple"));
+        console.log(com)
+
+        console.log(com.length)
+        console.log(com)
+
+        console.log(com.splice(2,0,"Facebook"));
+        console.log(com);
+        console.log(com.splice(3,1,"amazon"));
+        console.log(com);
+        console.log(com.splice(5,1));
+        console.log(com);
+
+        const app=["phonepay","paytm"];
+        const company=com.concat(app);
+        console.log(company);
+
+        const apps=company.slice(2);
+        console.log(apps);
+        const paymentapp=company.slice(5,7);
+        console.log(paymentapp);
+
+        console.log(company.sort());
+
+
+
+    </script>
+</body>
+</html>

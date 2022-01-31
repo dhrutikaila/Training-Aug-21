@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+  <meta charset="utf-8">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-F3w7mX95PdgyTmZZMECAngseQB83DfGTowi0iMjiWaeVhAn4FJkqJByhZMI3AhiU" crossorigin="anonymous">
+  <title>Home</title>
+  <style type="text/css">
+  th,tr,table{
+    border: 1px solid balck;
+    padding: 10px;
+    border-collapse:collapse;
+  }
+  </style>
+</head>
+<body>
+
+  <div class="container text-center w-80">
+    <h1 class="text-center">DATA OF JSON</h1>
+
+    <table class = "table table-bordered table-striped">
+      <thead>
+        <tr>
+          <th>ProductID</th>
+          <th>ProductName</th>
+          <th>Price</th>
+          <th>Quantity</th>
+          <th>opts</th>
+        </tr>
+      </thead>
+      <tbody id="body">
+
+      </tbody>
+
+
+    </table>
+
+    <hr>
+    <hr>
+    <div id="myData" class="container"></div>
+    <h1>CART SUMMARY:</h1>
+    <p id="send" class="fs-3 fw-bold text-success">
+
+    </p>
+
+  </div>
+
+
+  <script src="http://code.jquery.com/jquery-1.11.0.min.js"></script>
+  <script type="text/javascript">
+
+  var tabledata =
+  [
+    {
+      "ProductID":'1',
+      "ProductName":'Cheese',
+      "Price":'100',
+      "Quantity":'1',
+      "opts":'Add to Cart'},
+
+      {
+        "ProductID":'2',
+        "ProductName":'Pen',
+        "Price":'150',
+        "Quantity":'2',
+        "opts":'Add to Cart'},
+
+        {
+          "ProductID":'3',
+          "ProductName":'Butter',
+          "Price":'100',
+          "Quantity":'1',
+          "opts":'Add to Cart'
+        },
+
+        {
+          "ProductID":'4',
+          "ProductName":'Pencil',
+          "Price":'10',
+          "Quantity":'1',
+          "opts":'Add to Cart'
+        },  ]
+
+
+
+
+
+
+        for (var i in tabledata){
+          var row = `<tr>
+          <td>${tabledata[i].ProductID}</td>
+          <td>${tabledata[i].ProductName}</td>
+          <td>${tabledata[i].Price}</td>
+          <td>${tabledata[i].Quantity}</td>
+          <td><button class="btn btn-success" onclick="summary${tabledata[i].ProductID}()">${tabledata[i].opts}</button></td>
+          </tr>`
+
+
+
+
+          var table = $("#body")
+          table.append(row)
+        }
+
+
+
+
+
+        function summary1(){
+          var ran = tabledata[0];
+          console.log("CART SUMMARY: "+ran.ProductID+" "+"  "+ran.ProductName+"  "+ran.Price+"  "+ran.Quantity);
+          document.getElementById("send").innerHTML=ran.ProductID+" "+"  "+ran.ProductName+"  "+ran.Price+"  "+ran.Quantity;
+        }
+        function summary2(){
+          var ran = tabledata[1];
+          console.log("CART SUMMARY: "+ran.ProductID+" "+"  "+ran.ProductName+"  "+ran.Price+"  "+ran.Quantity);
+          document.getElementById("send").innerHTML=ran.ProductID+" "+"  "+ran.ProductName+"  "+ran.Price+"  "+ran.Quantity;
+
+        }
+
+        function summary3(){
+          var ran = tabledata[2];
+          console.log("CART SUMMARY: "+ran.ProductID+" "+"  "+ran.ProductName+"  "+ran.Price+"  "+ran.Quantity);
+          document.getElementById("send").innerHTML=ran.ProductID+" "+"  "+ran.ProductName+"  "+ran.Price+"  "+ran.Quantity;
+
+        }
+
+        function summary4(){
+          var ran = tabledata[3];
+          console.log("CART SUMMARY: "+ran.ProductID+" "+"  "+ran.ProductName+"  "+ran.Price+"  "+ran.Quantity);
+          document.getElementById("send").innerHTML=ran.ProductID+" "+"  "+ran.ProductName+"  "+ran.Price+"  "+ran.Quantity;
+        }
+
+
+
+
+      </script>
+
+
+
+
+
+
+
+      <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-/bQdsTh/da6pkI1MST/rWKFNjaCP5gBSY4sEBT38Q/9RBh9AH40zEOg7Hlq2THRZ" crossorigin="anonymous"></script>
+      <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.3/dist/umd/popper.min.js" integrity="sha384-W8fXfP3gkOKtndU4JGtKDvXbO53Wy8SZCQHczT5FMiiqmQfUpWbYdTil/SxwZgAN" crossorigin="anonymous"></script>
+      <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/js/bootstrap.min.js" integrity="sha384-skAcpIdS7UcVUC05LJ9Dxay8AXcDYfBJqt1CJ85S/CFujBsIzCIv+l9liuYLaMQ/" crossorigin="anonymous"></script>
+
+    </body>
+    </html>
+
+
+
+
+    <!--
+
+  -->

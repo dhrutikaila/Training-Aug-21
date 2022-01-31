@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Practice Day-1</title>
+    <style>
+        ul.a {list-style-type: square;}
+        ul.b {list-style-type: none;}              
+        ol.b {list-style-type: upper-roman;}
+        form.solid {border-style: solid;}
+        form {width : 320px; 
+                height: 110 px;
+                padding-top: 5px;
+                padding-left: 5px;
+                padding-bottom: 5px;}
+        article.double{border-style: double;}
+        article {width : 500px; 
+                height: 110 px;
+                padding-top: 5px;
+                padding-left: 5px;
+                padding-bottom: 5px;
+                }
+        li.b{
+            float: left;
+            display: block;
+                padding: 8px;
+            }
+    </style>
+    </head>
+<body>
+<!--1. Display Student Report Card, Which contains field like Name, RollNo, Year Of Passing. Different subject marks should be displayed with its grade.-->
+    <h2>Student Report Card</h2>
+    <table border="2" >
+        <thead>
+        <tr>
+            <td rowspan="2">Roll No.</td>
+            <td rowspan="2">Name</td>
+            <td colspan="5">Subjects</td>
+            <td rowspan="2">Grade</td>
+            <td rowspan="2">Year Of Passing</td>
+        </tr>
+        <tr>
+            <td>Sanskrit</td>
+            <td>Gujarati</td>
+            <td>Computer</td>
+            <td>Physics</td>
+            <td>Maths</td>
+        </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>01</td>
+                <td>Steve Rogers</td>
+                <td>98</td>
+                <td>99</td>
+                <td>95</td>
+                <td>100</td>
+                <td>100</td>
+                <td>AA</td>
+                <td>1947</td>
+            </tr>
+            <tr>
+                <td>02</td>
+                <td>Thor</td>
+                <td>80</td>
+                <td>65</td>
+                <td>100</td>
+                <td>100</td>
+                <td>45</td>
+                <td>BB</td>
+                <td>1850</td>
+            </tr>
+            <tr>
+                <td>03</td>
+                <td>Shaktimaan</td>
+                <td>100</td>
+                <td>100</td>
+                <td>100</td>
+                <td>100</td>
+                <td>100</td>
+                <td>AA</td>
+                <td>1997</td>
+            </tr>
+            <tr>
+                <td>04</td>
+                <td>Vikram</td>
+                <td>99</td>
+                <td>99</td>
+                <td>99</td>
+                <td>100</td>
+                <td>100</td>
+                <td>AA</td>
+                <td>1990</td>
+            </tr>
+            <tr>
+                <td>05</td>
+                <td>Shubh Patel</td>
+                <td>98</td>
+                <td>99</td>
+                <td>95</td>
+                <td>100</td>
+                <td>100</td>
+                <td>AA</td>
+                <td>2015</td>
+            </tr>
+            
+        </tbody>
+    </table>
+    <hr>
+<!--2. You are working in some company as HR. you have been assigned a task to arrange department hierarchy example: employee working under some manager.-->
+    <h2>Department Hierarchy</h2>
+    <h3>Department</h3>
+    <ul class="a"> 
+        <li>Back-end team
+            <ol>
+                <li>Araujo</li>
+                <li>Pique</li>
+                <li>Ter Stegen</li>
+            </ol>
+        </li>
+     </ul>
+    <ol>
+        <li>Front-end Team
+            <ul class="a">
+                <li>Suarez</li>
+                <li>Griezman</li>
+                <li>Leo Messi</li>
+            </ul>
+        </li>
+ </ol>
+    <ol>
+        <li>Manager: Ronald Koeman
+            <ol class="b">
+                <li>Players:</li>
+                <li>Busquets</li>
+                <li>Alba</li>
+                <li>De Jong</li>
+                <li>Pedri</li>
+                <li>Garcia</li>
+            </ol>
+        </li>
+        
+    </ol>
+    <hr>
+<!--3. Create Login Form with field UserName and Password field.-->
+    <h2>Login Form</h2>
+    <form action="www.the-aiff.com" class="solid">
+        <label for="uname">User name:</label><br>
+        <input type="text" id="uname" name="uname"><br>
+        <label for="pwd">Password:</label><br>
+        <input type="password" id="pwd" name="pwd"><br><br>
+        <input type="submit" value="Login">
+      </form> 
+      <hr>
+<!--4. Use Article tag display one latest news.-->
+      <h2>Article</h2>
+      <article class="double">
+        <h1>Will Barcelonna Survive the "Group of Death" in UCL group stage?</h1>
+        <article">
+          <p>Are Barcelona capable of taking the revenge of humiliating 8-2 defeat of lisbon,2020 without Lionel Messi? The young guns of FCB have to prove themselves against the German Power-house led by new head coach Julian Nagelsmann. Let's see what Ronald Koeman can get from this new young team of Barca led by veteran Busquets.</p>
+          <h6>By Shubh Patel</h6>
+        </article>
+        <hr>
+<!--5. Create Horizontal menu. Menu item will Home, AboutUs, ContactUS.-->
+        <h2>Menu</h2>
+        <ul class="b">
+            <nav>
+            <li class="b"><a href="https://www.the-aiff.com/" target="_blank">Home</a></li>
+            <li class="b"><a href="https://www.the-aiff.com/history" target="_blank">About US</a></li>
+            <li class="b"><a href="https://www.the-aiff.com/contact-us" target="_blank">Contact</a></li>
+            </nav>
+        </ul>
+</body>
+</html>

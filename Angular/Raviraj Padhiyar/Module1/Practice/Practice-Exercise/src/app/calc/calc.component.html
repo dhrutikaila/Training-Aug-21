@@ -1,0 +1,16 @@
+<div class="calculator">
+
+  <input type="number" [(ngModel)] = "number1">
+  <input type="number" [(ngModel)] = "number2">
+
+  <button type="button" (click) = "addition()">Add</button>
+  <button type="button" (click) = "subtraction()">Subtract</button>
+  <button type="button" (click) = "multiplication()">Muliply</button>
+  <button type="button" (click) = "division()">divide</button>
+
+  <br>
+  <button type="button" (click) = "clear()" >clear</button>
+
+  <h1>Answer : {{ans}} </h1>
+
+</div>

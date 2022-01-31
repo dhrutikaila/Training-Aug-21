@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <script>
+
+    // Write a JavaScript function to check whether a string is blank or not
+    function stringBlank(str){
+        if(str.length == 0){
+            document.write('String is blank <br>')
+        }else{
+            document.write('String is not emply <br>')
+        }
+    }
+
+    stringBlank("")
+    stringBlank("hi")
+
+
+    // Write a JavaScript function to split a string and convert it into an array of words
+    function strToArray(str){
+        document.write(str.split(" ") + "<br>");
+    }
+
+    strToArray('abc de fg')
+
+
+    // Write a JavaScript function to extract a specified number of characters from a string.
+    function nCharacters(str,startIndex,noOfChar){
+        var ans = str.substr(startIndex,noOfChar);
+        document.write(ans + "<br>");
+    }
+
+    nCharacters("Prit Rojivadiya",0,6);
+
+
+    // Write a JavaScript function to get the current date
+    function getdt(){
+        var d = new Date();
+        var dt = d.getDate();
+        var m = d.getMonth() + 1;
+        var y = d.getFullYear();
+        document.write(dt+'/'+m+'/'+y+"<br>")
+    }
+    getdt();    
+
+    </script>
+    
+</body>
+</html>

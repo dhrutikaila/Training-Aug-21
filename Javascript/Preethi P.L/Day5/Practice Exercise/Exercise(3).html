@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Practice Exercise 3</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-F3w7mX95PdgyTmZZMECAngseQB83DfGTowi0iMjiWaeVhAn4FJkqJByhZMI3AhiU" crossorigin="anonymous">
+</head>
+<body>
+    <!--Header-->
+    <div class="container text-center mt-2">
+        <h1 class="display1">Practice Exercise 3</h1>
+        <hr>
+    </div>
+
+    <!--Main-->
+    <div class="container bg-light mt-3 p-2">
+        <h6>Q. Explain usage of Function Hoisting using example.</h6><br>
+        
+        <div class="form-group w-25">
+            <label for="radius" class="form-label">Enter radius : </label>
+            <input type="number" class="form-control mb-2" id="radius" placeholder="Enter radius">
+        </div>
+
+        <!--Function call-->
+        <button class="btn btn-primary" onclick="diameter(radius.value)">Print diameter</button>
+        <p class="h4 mt-2">Diameter of circle : <span id="result"></span></p>
+    </div>
+
+    <script>
+        //Diameter of circle - Function declaration
+        function diameter(r)
+        {
+            document.getElementById("result").innerHTML = 2*r;
+        }
+    </script>
+    <!-- Bootstrap JS Bundle with Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-/bQdsTh/da6pkI1MST/rWKFNjaCP5gBSY4sEBT38Q/9RBh9AH40zEOg7Hlq2THRZ" crossorigin="anonymous"></script>
+</body>
+</html>

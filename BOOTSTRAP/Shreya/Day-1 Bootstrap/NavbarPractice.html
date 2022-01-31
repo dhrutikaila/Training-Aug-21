@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Navbar Practice</title>
+    <link rel="stylesheet" href="js/bootstrap.min.css">
+</head>
+
+<body>
+    <script src="js/bootstrap.bundle.min.js"></script>
+    <h1 class="display-4 text-center">Basic Typography</h1>
+    <div class="container ">
+        <div class="row">
+            <div class="col">
+                <div class="btn-group">
+                    <button class="btn btn-primary dropdown-toggle" data-bs-toggle="dropdown" type="button">
+                        Utilities
+                    </button>
+                    <ul class="dropdown-menu">
+                        <li><a href="BasicTypography.html" class="dropdown-item">Basic Typography</a></li>
+                        <li><a href="TextAndDisplay_alignment.html" class="dropdown-item">Text Alignment & Display</a>
+                        </li>
+                        <li><a href="Float_PositionPractice.html" class="dropdown-item">Float & Position</a></li>
+                        <li><a href="TextColor.html" class="dropdown-item">Colors & Background</a></li>
+                        <li><a href="Sizing_BorderPractice.html" class="dropdown-item">Sizing</a></li>
+                        <li><a href="BreakPointExample.html" class="dropdown-item">Breakpoints</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="col">
+                <div class="btn-group">
+                    <button class="btn btn-success dropdown-toggle" data-bs-toggle="dropdown" type="button">
+                        CSS components
+                    </button>
+                    <ul class="dropdown-menu">
+                        <li><a href="Button_ButtonGroup.html" class="dropdown-item">Buttons & Buttons Groups</a></li>
+                        <li><a href="NavbarPractice.html" class="dropdown-item">Navbars & Nav</a></li>
+                        <li><a href="ListGroup_BadgesPractice.html" class="dropdown-item">ListGroups & Badges</a></li>
+                        <li><a href="InputGroupPractice.html" class="dropdown-item">Input Groups</a></li>
+                        <li><a href="Alerts_Progressbar.html" class="dropdown-item">Alerts and Progress Bars</a></li>
+                        <li><a href="Table_Pagination.html" class="dropdown-item">Tables & Pagination</a></li>
+                        <li><a href="Card_CardGroup.html" class="dropdown-item">Working with Cards</a></li>
+                        <li><a href="Media_Object.html" class="dropdown-item">Media Objects</a></li>
+                        <li><a href="Breadcrum.html" class="dropdown-item">Breadcrumbs</a></li>
+                        <li><a href="CarouselPractice.html" class="dropdown-item">Carousel</a></li>
+                        <li><a href="Badge.html" class="dropdown-item">Badge</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="col">
+                <div class="btn-group">
+                    <button id="btnGroupDrop3" class="btn btn-warning dropdown-toggle" data-bs-toggle="dropdown"
+                        type="button">
+                        Grid & flexbox
+                    </button>
+                    <ul class="dropdown-menu" id="btnGroupDrop3">
+                        <li><a href="GridPractice.html" class="dropdown-item"> Grid Alignment</a></li>
+                        <li><a href="FlexClass.html" class="dropdown-item">Flexbox Classes</a></li>
+                        <li><a href="AutoMargin_Ordering.html" class="dropdown-item"> Auto Margin wrap & Ordering</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div class="col">
+                <div class="btn-group ">
+                    <button id="btnGroupDrop3" class="btn btn-danger dropdown-toggle" data-bs-toggle="dropdown"
+                        type="button">
+                        Javascript Widgets
+                    </button>
+                    <ul class="dropdown-menu" id="btnGroupDrop3">
+                        <li><a href="Collapse_Accordion.html" class="dropdown-item">Collapse & Accordion</a></li>
+                        <li><a href="Tooltip.html" class="dropdown-item">Tooltips</a></li>
+                        <li><a href="Popover.html" class="dropdown-item">Popovers</a></li>
+                        <li><a href="ModalPractice.html" class="dropdown-item">Modals</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+    <hr>
+    <div class="content mt-3">
+        <nav class="navbar navbar-expand-sm navbar-light bg-light">
+            <a class="navbar-brand">Navbar</a>
+            <ul class="navbar-nav">
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Home</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">About</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Contact Us</a>
+                </li>
+            </ul>
+        </nav>
+    </div>
+
+    <!--navbar with image-->
+    <nav class="navbar navbar-expand-sm navbar-light bg-light mt-3">
+        <div class="container">
+            <a class="navbar-brand">
+                <img src="logo.png" height="50" width="100">
+            </a>
+            <ul class="navbar-nav">
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Home</a>
+                </li>
+                <li class="nav-item"><a class="nav-link" href="#">About</a>
+                </li>
+                <li class="nav-item"><a class="nav-link" href="#">Contact Us</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+    <!-- Responsive Navbar for mobile with toggle button-->
+    <nav class="navbar navbar-expand-sm navbar-light bg-light mt-3">
+        <div class="container">
+            <a class="navbar-brand">NavBar</a>
+            <button class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <!--Here id is data-target which we give in buttton-->
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav">
+                    <li class="nav-item"><a class="nav-link" href="#">Home</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#">About</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#">Service</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <!--navbar with forms-->
+    <nav class="navbar navbar-expand-sm navbar-light bg-light mt-3">
+        <div class="container">
+            <a class="navbar-brand">NavBar</a>
+            <button class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <!--Here id is data-target which we give in buttton-->
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav mr-auto">
+                    <li class="nav-item"><a class="nav-link" href="#">Home</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#">About</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#">Service</a></li>
+                </ul>
+                <form class="d-flex">
+                    <input type="text" class="form-control mr-sm-2" placeholder="search">
+                    <button class="btn btn-outline-success" type="submit">Search</button>
+                </form>
+            </div>
+        </div>
+    </nav>
+    <!--navbar with drop down-->
+    <nav class="navbar navbar-expand-sm navbar-light bg-light mt-3">
+        <div class="container">
+            <a class="navbar-brand">NavBar </a>
+            <ul class="navbar-nav">
+                <li class="nav-item"><a class="nav-link" href="#">Home</a></li>
+                <li class="nav-item"><a class="nav-link" href="#">About</a></li>
+                <li class="nav-item dropdown">
+                    <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown">Dropdown</a>
+                    <div class="dropdown-menu">
+                        <a href="#" class="dropdown-item">link 1</a>
+                        <a href="#" class="dropdown-item">link 2</a>
+                        <a href="#" class="dropdown-item">link 3</a>
+                    </div>
+                </li>
+            </ul>
+        </div>
+    </nav>
+    <!--collapse plugin without nav-->
+    <div class="collapse " id="navbarToggleExternalContent">
+        <div class="bg-dark p-4">
+            <h5 class="text-white h4">Collapsed content</h5>
+            <span class="text-muted">Toggleable via the navbar brand.</span>
+        </div>
+    </div>
+    <nav class="navbar navbar-dark bg-dark ">
+        <div class="container-fluid">
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                data-bs-target="#navbarToggleExternalContent">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+        </div>
+    </nav>
+    <!--navbar with colors-->
+    <nav class="navbar navbar-expand-sm navbar-dark bg-dark mt-5">
+        <div class="container">
+            <a class="navbar-brand">NavBar </a>
+            <ul class="navbar-nav">
+                <li class="nav-item"><a class="nav-link" href="#">Home</a></li>
+                <li class="nav-item"><a class="nav-link" href="#">About</a></li>
+                <li class="nav-item"><a class="nav-link" href="#">Service</a></li>
+            </ul>
+        </div>
+    </nav>
+    <!--navbar with colors and search box both-->
+    <nav class="navbar navbar-expand-sm navbar-dark bg-primary mt-3">
+        <div class="container">
+            <a class="navbar-brand">NavBar</a>
+            <button class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <!--Here id is data-target which we give in buttton-->
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav mr-auto">
+                    <li class="nav-item"><a class="nav-link" href="#">Home</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#">About</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#">Service</a></li>
+                </ul>
+                <form class="form-inline my-2 my-lg-0">
+                    <input type="text" class="form-control mr-sm-2 " placeholder="search">
+                    <button class="btn my-2 my-sm-0 btn-outline-light">Search</button>
+                </form>
+            </div>
+        </div>
+    </nav>
+    <!--nav-->
+    <ul class="nav nav-pills mt-5">
+        <li class="nav-item"><a class="nav-link active" href="#">Home</a></li>
+        <li class="nav-item"><a class="nav-link" href="#">About</a></li>
+        <li class="nav-item"><a class="nav-link" href="#">Service</a></li>
+    </ul>
+    <!--for horizontal-->
+    <ul class="nav nav-pills mt-5 justify-content-center">
+        <li class="nav-item"><a class="nav-link active" href="#">Home</a></li>
+        <li class="nav-item"><a class="nav-link" href="#">About</a></li>
+        <li class="nav-item"><a class="nav-link" href="#">Service</a></li>
+    </ul>
+    <!--for right-->
+    <ul class="nav nav-pills mt-5 justify-content-end">
+        <li class="nav-item"><a class="nav-link active" href="#">Home</a></li>
+        <li class="nav-item"><a class="nav-link" href="#">About</a></li>
+        <li class="nav-item"><a class="nav-link" href="#">Service</a></li>
+    </ul>
+    <!--for verticaly-->
+    <ul class="nav nav-pills mt-5 flex-sm-column">
+        <li class="nav-item"><a class="nav-link active" href="#">Home</a></li>
+        <li class="nav-item"><a class="nav-link" href="#">About</a></li>
+        <li class="nav-item"><a class="nav-link" href="#">Service</a></li>
+    </ul>
+</body>
+
+</html>

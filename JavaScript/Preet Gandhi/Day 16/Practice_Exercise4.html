@@ -1,0 +1,41 @@
+<!-- Write a JavaScript function to get the current date -->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Practice_Exercise4 (Day-16)</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+        crossorigin="anonymous"></script>
+</head>
+
+<body>
+    <div class="container mt-5 ">
+        <h2 class="text-decoration-underline text-center text-info">Practice_Exercise4 (Day-16)</h2><br><br>
+        <div class="border border-warning border-2 p-3 w-50 mx-auto">
+            <p id="result1" class="fs-4">Current Date is: </p>
+            <p id="result2" class="fs-4">Current Time is: </p>
+            <button type="button" class="btn btn-primary" onclick="dateToday()">GetDate</button><br><br>
+
+        </div>
+    </div>
+
+    <script>
+        function dateToday() {
+            var today = new Date();
+            console.log(today);
+            var date = "Current Date is: " + today.getDate() + "/" + (today.getMonth() + 1) + "/" + today.getFullYear();
+            var time = "Current Time is: " + today.getHours() + ":" + today.getMinutes() + ":" + today.getSeconds();
+            document.getElementById("result1").innerHTML = date;
+            document.getElementById("result2").innerHTML = time;
+        }
+    </script>
+
+</body>
+
+</html>

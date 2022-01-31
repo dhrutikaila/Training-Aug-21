@@ -1,0 +1,272 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Function</title>
+</head>
+
+<body>
+  <script>
+    function multiply(a, b) {
+      return a * b;
+    }
+    var x = function (a, b) {
+      return a * b;
+    }
+
+    //Self-Invoking Functions
+    var fun = (function () {
+      let x = "Hello!!"; // I will invoke myself
+      console.log(x);
+    })();
+    var z = x(4, 3);
+    console.log(z);
+
+    function demo(x, y = 2) {
+      console.log("this is function with default parameter");
+    }
+    // function code
+
+
+    let x = myFunction(); // x will be the window object
+    /* The Global Object
+    When a function is called without an owner object, the value of this becomes the global object.
+
+    In a web browser the global object is the browser window.
+
+    This example returns the window object as the value of this:*/
+    function myFunction() {
+      return this;
+    }
+
+    const myObject = {
+      firstName: "John",
+      lastName: "Doe",
+      fullName: function () {
+        return this.firstName + " " + this.lastName;
+      }
+    }
+    myObject.fullName();
+
+    // This is a function constructor:
+    function myFunction(arg1, arg2) {
+      this.firstName = arg1;
+      this.lastName = arg2;
+    }
+
+    // This creates a new object
+    const myObj = new myFunction("John", "Doe");
+
+    // This will return "John"
+    myObj.firstName;
+
+    /*Function Hoisting
+    Earlier in this tutorial, you learned about "hoisting" (JavaScript Hoisting).
+
+    Hoisting is JavaScript's default behavior of moving declarations to the top of the current scope.
+
+    Hoisting applies to variable declarations and to function declarations.
+
+    Because of this, JavaScript functions can be called before they are declared:
+    */
+
+    //variable hoisting means assign the value to the variable before declaration of that variable.
+    x = 5; // Assign 5 to x
+    console.log(x);
+    elem = document.getElementById("demo"); // Find an element
+    elem.innerHTML = x; // Display x in the element
+
+    var x; // Declare x
+    console.log(x);
+
+
+    // Function hoisting means  calling the function before defination of that function.
+
+    console.log(myFunction(5));
+
+    function myFunction(y) {
+      return y * y;
+    }
+
+    //Arrow function
+    const x = (x, y) => {
+      return x * y
+    };
+    console.log(x);
+
+    /* The JavaScript call() Method
+    The call() method is a predefined JavaScript method.
+
+    It can be used to invoke (call) a method with an owner object as an argument (parameter).
+
+    With call(), an object can use a method belonging to another object.
+
+    This example calls the fullName method of person, using it on person1:*/
+
+    const person = {
+      fullName: function () {
+        return this.firstName + " " + this.lastName;
+      }
+    }
+    const person1 = {
+      firstName: "John",
+      lastName: "Doe"
+    }
+    const person2 = {
+      firstName: "Mary",
+      lastName: "Doe"
+    }
+
+    // This will return "John Doe":
+    person.fullName.call(person1);
+
+
+    //function apply()
+
+    const person = {
+      fullName: function () {
+        return this.firstName + " " + this.lastName;
+      }
+    }
+
+    const person1 = {
+      firstName: "Mary",
+      lastName: "Doe"
+    }
+
+    // This will return "Mary Doe":
+    person.fullName.apply(person1);
+
+    /*
+    The Difference Between call() and apply()
+    The difference is:
+
+    The call() method takes arguments separately.
+
+    The apply() method takes arguments as an array.
+
+    The apply() method is very handy if you want to use an array instead of an argument list.
+    */
+
+    //Apply method with argument
+
+    const person = {
+      fullName: function (city, country) {
+        return this.firstName + " " + this.lastName + "," + city + "," + country;
+      }
+    }
+
+    const person1 = {
+      firstName: "John",
+      lastName: "Doe"
+    }
+
+    person.fullName.apply(person1, ["Oslo", "Norway"]);
+
+
+    //Function Closure
+    //JavaScript variables can belong to the local or global scope.
+
+    //Global variables can be made local (private) with closures.
+
+
+    function myFunction() {
+      let a =
+      4; //In this example a is local variable means it can access any where in this function but it can't access outside the function
+      return a * a;
+    }
+
+    let a = 4;
+
+    function myFunction() { //In this example a is global variable means it can access any where in this file.
+
+      return a * a;
+    }
+
+    //counter delima
+    // Initiate counter
+    let counter = 0;
+
+    // Function to increment counter
+    function add() {
+      counter += 1;
+    }
+
+    // Call add() 3 times
+    add();
+    add();
+    add();
+
+    // The counter should now be 3
+
+    // Initiate counter
+    let counter = 0;
+
+    // Function to increment counter
+    function add() {
+      let counter = 0;
+      counter += 1;
+    }
+
+    // Call add() 3 times
+    add();
+    add();
+    add();
+
+    //The counter should now be 3. But it is 0
+
+    // Function to increment counter
+    function add() {
+      let counter = 0;
+      counter += 1;
+      return counter;
+    }
+
+    // Call add() 3 times
+    add();
+    add();
+    add();
+
+    //The counter should now be 3. But it is 1.
+    //
+    function add() {
+      let counter = 0;
+
+      function plus() {
+        counter += 1;
+      }
+      plus();
+      return counter;
+    }
+    console.log(add());
+
+    const add = (function () {
+      let counter = 0;
+      return function () {
+        counter += 1;
+        return counter
+      }
+    })();
+
+    add();
+    add();
+    add();
+    /*The variable add is assigned to the return value of a self-invoking function.
+
+    The self-invoking function only runs once. It sets the counter to zero (0), and returns a function expression.
+
+    This way add becomes a function. The "wonderful" part is that it can access the counter in the parent scope.
+
+    This is called a JavaScript closure. It makes it possible for a function to have "private" variables.
+
+    The counter is protected by the scope of the anonymous function, and can only be changed using the add function.
+
+    A closure is a function having access to the parent scope, even after the parent function has closed.*/
+    // the counter is now 3
+  </script>
+</body>
+
+</html>

@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Overflow</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.9.0/css/all.min.css"
+      integrity="sha512-q3eWabyZPc1XTCmF+8/LuE1ozpg5xxn7iO89yfSOd5/oKvyqLngoNGsx8jq92Y8eXJ/IRxQbEC+FGSYxtk2oiw=="
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="../../Project/assets/css/style.css" />
+    <style>
+      .overflow-auto {
+        border: 1px groove #999;
+        height: 100px;
+        width: 300px;
+        overflow: auto;
+      }
+      .overflow-x {
+        white-space: nowrap;
+        border: 1px groove #999;
+        height: 100px;
+        width: 300px;
+        overflow-x: auto;
+      }
+      .overflow-y {
+        border: 1px groove #999;
+        height: 100px;
+        width: 300px;
+        overflow-y: auto;
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+      <div class="logo">
+        <!-- <img
+          src="https://tutorials.rxtrainees.radixweb.net/wp-content/uploads/2020/12/logo_2500X1875-2048x1536.jpg"
+          alt="logo"
+        /> -->
+        <span>
+          <a href="../../../../Project/sagar-bhatt/web-tutorials/index.html">
+            RadixWeb
+          </a>
+        </span>
+      </div>
+      <nav>
+        <input type="checkbox" id="click" />
+        <label for="click" class="menu-btn">
+          <i class="fas fa-bars"></i>
+        </label>
+        <ul>
+          <li>
+            <a href="../../../../Project/sagar-bhatt/web-tutorials/index.html">
+              Home
+            </a>
+          </li>
+          <li>
+            <a href="../../Project/index.html" class="active">HTML/CSS</a>
+          </li>
+          <li>
+            <a href="../../../../Bootstrap/sagar-bhatt/Project/index.html">
+              Bootstrap
+            </a>
+          </li>
+          <!-- <li><a href="#">SCSS</a></li> -->
+          <li>
+            <a href="../../../../JavaScript/sagar-bhatt/Project/index.html">
+              Javascript
+            </a>
+          </li>
+          <li>
+            <a href="../../../../jQuery/sagar-bhatt/Project/index.html">
+              jQuery
+            </a>
+          </li>
+        </ul>
+      </nav>
+    </header>
+    <article>
+      <aside>
+        <!-- * Day-1 -->
+        <div class="folder-container">
+          <div class="folder">Day1</div>
+          <div class="sub-folder">Practice</div>
+          <div class="file">
+            <a href="../../Day1/Practice/company-department-list.html">
+              Company department list
+            </a>
+          </div>
+          <div class="file">
+            <a href="../../Day1/Practice/horizontal-navbar.html">
+              Horizontal navbar
+            </a>
+          </div>
+          <div class="file">
+            <a href="../../Day1/Practice/login-form.html">Login form</a>
+          </div>
+          <div class="file">
+            <a href="../../Day1/Practice/news-article.html" target="_blank"
+              >News Article</a
+            >
+          </div>
+          <div class="file">
+            <a href="../../Day1/Practice/student-report-card.html">
+              Student report card
+            </a>
+          </div>
+          <div class="sub-folder">Assignment</div>
+          <div class="file">
+            <a href="../../Day1/Assignment/employee-details-form.html">
+              Employee details form
+            </a>
+          </div>
+        </div>
+        <!-- * Day-2 -->
+        <div class="folder-container">
+          <div class="folder">Day2</div>
+          <div class="sub-folder">Practice</div>
+          <div class="file">
+            <a href="../../Day2/Practice/index.html">CSS Selector</a>
+          </div>
+          <div class="sub-folder">Assignment</div>
+          <div class="file">
+            <a href="../../Day2/Assignment/resume.html" target="_blank">
+              My Resume
+            </a>
+          </div>
+        </div>
+        <!-- * Day-3 -->
+        <div class="folder-container">
+          <div class="folder">Day3</div>
+          <div class="sub-folder">Practice</div>
+          <div class="file">
+            <a href="./display.html">CSS Display</a>
+          </div>
+          <div class="file">
+            <a href="./overflow.html">CSS Overflow</a>
+          </div>
+          <div class="file">
+            <a href="./positions.html">CSS Positions</a>
+          </div>
+          <div class="sub-folder">Assignment</div>
+          <div class="file">
+            <a href="../Assignment/basic-layout.html" target="_blank">
+              Basic Web Layout
+            </a>
+          </div>
+        </div>
+        <!-- * Day-4 -->
+        <div class="folder-container">
+          <div class="folder">Day4</div>
+          <div class="sub-folder">Practice</div>
+          <div class="file">
+            <a href="../../Day4/Practice/flexbox.html">CSS Flexbox</a>
+          </div>
+          <div class="file">
+            <a
+              href="../../Day4/Practice/image-gallery-flexbox.html"
+              target="_blank"
+            >
+              Image Gallery(Flex)
+            </a>
+          </div>
+          <div class="sub-folder">Assignment</div>
+          <div class="file">
+            <a href="../../Day4/Assignment/menu-list.html" target="_blank">
+              Menu List
+            </a>
+          </div>
+        </div>
+        <!-- * Day-5 -->
+        <div class="folder-container">
+          <div class="folder">Day5</div>
+          <div class="sub-folder">Practice</div>
+          <div class="file">
+            <a href="../../Day5/Practice/media-queries.html"
+              >CSS Media Queries</a
+            >
+          </div>
+          <div class="sub-folder">Assignment</div>
+          <div class="file">
+            <a href="../../Day5/Assignment/photo-gallery.html" target="_blank"
+              >Photo Gallery(Grid)</a
+            >
+          </div>
+        </div>
+      </aside>
+      <section>
+        <h3>overflow: overflow-auto</h3>
+        <div class="overflow-auto">
+          Lorem ipsum dolor, sit amet consectetur adipisicing elit. Id saepe
+          nobis maiores deleniti porro laboriosam debitis! Tenetur qui debitis
+          aliquam quae sit commodi neque non sapiente possimus, fuga aut
+          corrupti reiciendis odio vitae! Autem cupiditate perferendis
+          doloremque minus non quis error soluta dolorum doloribus voluptate
+          culpa aut aspernatur, praesentium reiciendis!
+        </div>
+        <h3>overflow: overflow-x</h3>
+        <div class="overflow-x">
+          Lorem ipsum dolor, sit amet consectetur adipisicing elit. Id saepe
+          nobis maiores deleniti porro laboriosam debitis! Tenetur qui debitis
+          aliquam quae sit commodi neque non sapiente possimus, fuga aut
+          corrupti reiciendis odio vitae! Autem cupiditate perferendis
+          doloremque minus non quis error soluta dolorum doloribus voluptate
+          culpa aut aspernatur, praesentium reiciendis!
+        </div>
+        <h3>overflow: overflow-y</h3>
+        <div class="overflow-y">
+          Lorem ipsum dolor, sit amet consectetur adipisicing elit. Id saepe
+          nobis maiores deleniti porro laboriosam debitis! Tenetur qui debitis
+          aliquam quae sit commodi neque non sapiente possimus, fuga aut
+          corrupti reiciendis odio vitae! Autem cupiditate perferendis
+          doloremque minus non quis error soluta dolorum doloribus voluptate
+          culpa aut aspernatur, praesentium reiciendis!
+        </div>
+      </section>
+    </article>
+  </body>
+</html>
+
+<!-- * CSS Overflow:
+    The overflow property specifies whether to clip the content or to add scrollbars when the content of an element is too big to fit in the specified area.
+    The overflow property has the following values:
+        visible - Default. The overflow is not clipped. The content renders outside the element's box
+        hidden - The overflow is clipped, and the rest of the content will be invisible
+        scroll - The overflow is clipped, and a scrollbar is added to see the rest of the content
+        auto - Similar to scroll, but it adds scrollbars only when necessary.
+
+    overflow-x and overflow-y:
+    The overflow-x and overflow-y properties specifies whether to change the overflow of content just horizontally or vertically (or both):
+        overflow-x specifies what to do with the left/right edges of the content.
+        overflow-y specifies what to do with the top/bottom edges of the content.
+-->

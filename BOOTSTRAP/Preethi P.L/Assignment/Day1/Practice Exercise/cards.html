@@ -1,0 +1,356 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cards</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-F3w7mX95PdgyTmZZMECAngseQB83DfGTowi0iMjiWaeVhAn4FJkqJByhZMI3AhiU" crossorigin="anonymous">
+</head>
+<body>
+    <header>
+        <nav class="navbar navbar-expand-sm p-4 bg-light justify-content-center">
+            <ul class="navbar-nav">
+                  <li class="nav-item dropdown">
+                      <button class="btn btn-primary dropdown-toggle btn-lg" data-bs-toggle="dropdown">
+                          2. Utilities
+                        </button>
+                        <ul class="dropdown-menu px-3">
+                          <li><a class="dropdown-item" href="/Assignment/Day1/Practice Exercise/typography.html">2.2 Basic Typography</a></li>
+                          <li><a class="dropdown-item" href="/Assignment/Day1/Practice Exercise/Text-Align_Display.html">2.3 Text Alignment & Display</a></li>
+                          <li><a class="dropdown-item" href="/Assignment/Day1/Practice Exercise/float_fixed_positions.html">2.4 Floats & Fixed Position</a></li>
+                          <li><a class="dropdown-item" href="/Assignment/Day1/Practice Exercise/colors_bg.html">2.5 Colors & Background</a></li>
+                          <li><a class="dropdown-item" href="/Assignment/Day1/Practice Exercise/margin_spacing.html">2.6 Margin & Spacing</a></li>
+                          <li><a class="dropdown-item" href="/Assignment/Day1/Practice Exercise/Sizing_borders.html">2.7 Sizing & Borders</a></li>
+                          <li><a class="dropdown-item" href="/Assignment/Day1/Practice Exercise/breakpoints.html">2.8 Breakpoints</a></li>
+                        </ul>    
+                  </li>
+                  <li class="nav-item dropdown px-3">
+                      <button class="btn btn-success  dropdown-toggle btn-lg" data-bs-toggle="dropdown">
+                          3. CSS Components
+                        </button>
+                        <ul class="dropdown-menu">
+                          <li><a class="dropdown-item" href="/Assignment/Day1/Practice Exercise/buttons.html">3.2 Buttons & Button Groups</a></li>
+                          <li><a class="dropdown-item" href="/Assignment/Day1/Practice Exercise/navbar.html">3.3 Navbars & Nav</a></li>
+                          <li><a class="dropdown-item" href="/Assignment/Day1/Practice Exercise/List.html">3.4 Listgroups</a></li>
+                          <li><a class="dropdown-item" href="/Assignment/Day1/Practice Exercise/badges.html">3.5 Badges</a></li>
+                          <li><a class="dropdown-item" href="/Assignment/Day1/Practice Exercise/forms.html">3.6 Forms & Input</a></li>
+                          <li><a class="dropdown-item" href="/Assignment/Day1/Practice Exercise/Input_groups_addons.html">3.7 Input Groups</a></li>
+                          <li><a class="dropdown-item" href="/Assignment/Day1/Practice Exercise/alerts.html">3.8 Alerts</a></li>
+                          <li><a class="dropdown-item" href="/Assignment/Day1/Practice Exercise/progress_bars.html">3.9 Progress bars</a></li>
+                          <li><a class="dropdown-item" href="/Assignment/Day1/Practice Exercise/tables.html">3.10 Tables</a></li>
+                          <li><a class="dropdown-item" href="/Assignment/Day1/Practice Exercise/pagination.html">3.11 Pagination</a></li>
+                          <li><a class="dropdown-item" href="/Assignment/Day1/Practice Exercise/cards.html">3.12 Cards</a></li>
+                          <li><a class="dropdown-item" href="/Assignment/Day1/Practice Exercise/breadcrumbs.html">3.13 Breadcrumbs</a></li>
+                        </ul>    
+                  </li>
+                  <li class="nav-item dropdown px-3">
+                      <button class="btn btn-warning dropdown-toggle btn-lg" data-bs-toggle="dropdown">
+                          4. Grid & Flexbox
+                        </button>
+                        <ul class="dropdown-menu">
+                          <li><a class="dropdown-item" href="/Assignment/Day2/Practice Exercise/Grid_system.html">4.1 Grid System</a></li>
+                          <li><a class="dropdown-item" href="/Assignment/Day2/Practice Exercise/Grid_Align.html">4.2 Grid Alignment</a></li>
+                          <li><a class="dropdown-item" href="/Assignment/Day2/Practice Exercise/flexbox.html">4.3 Flexbox</a></li>
+                          <li><a class="dropdown-item" href="/Assignment/Day2/Practice Exercise/AutoMargins_wrap.html">4.4 AutoMargins & wrapping</a></li>
+                         
+                        </ul>    
+                  </li>
+                  <li class="nav-item dropdown px-3">
+                      <button class="btn btn-danger dropdown-toggle btn-lg" data-bs-toggle="dropdown">
+                          5. Javascript Widgets
+                        </button>
+                        <ul class="dropdown-menu">
+                          <li><a class="dropdown-item" href="/Assignment/Day2/Practice Exercise/Carousel.html">5.1 Carousel</a></li>
+                          <li><a class="dropdown-item" href="/Assignment/Day2/Practice Exercise/Collapse_accordion.html">5.2 Collapse & accordion</a></li>
+                          <li><a class="dropdown-item" href="/Assignment/Day2/Practice Exercise/Tooltips.html">5.3 Tooltips</a></li>
+                          <li><a class="dropdown-item" href="/Assignment/Day2/Practice Exercise/Popover.html">5.4 Popovers</a></li>
+                          <li><a class="dropdown-item" href="/Assignment/Day2/Practice Exercise/Modals.html">5.5 Modal</a></li>
+                        </ul>    
+                  </li>
+              </ul>  
+          </nav>
+    </header>
+    
+    <div class="container mt-3">
+        <!-- Card block-->
+        <h1>Card Block</h1>
+        <div class="card">
+            <div class="card-body">
+                Lorem ipsum, dolor sit amet consectetur adipisicing elit. Amet molestiae 
+                nostrum, mollitia consequuntur inventore qui delectus voluptate cum nemo 
+                corporis itaque unde aperiam sit, voluptates dolorem dignissimos consectetur 
+                culpa ipsa.
+            </div>
+        </div><br/><br/>
+        
+        <!--Simple Card-->
+        <h1>Simple Card</h1>
+        <div class="card">
+            <div class="card-body">
+                <h4 class="card-title">Card Title</h4>
+                <h6 class="card-subtitle">Card Subtitle</h6>
+                <p class="card-text">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Amet molestiae 
+                nostrum, mollitia consequuntur inventore qui delectus voluptate cum nemo 
+                corporis itaque unde aperiam sit, voluptates dolorem dignissimos consectetur 
+                culpa ipsa.</p>
+                <a href="#" class="btn btn-outline-primary">Read More</a>
+            </div>
+        </div><br/><br/>
+        
+        <!--Card with image-->
+        <h1>Card with image</h1>
+        <div class="card"  style="width:20rem">
+            <img class="card-img-top" src="img7.jpg" alt="Card-image">
+            <div class="card-body">
+                <h4 class="card-title">Card Title</h4>
+                <h6 class="card-subtitle">Card Subtitle</h6>
+                <p class="card-text">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Amet molestiae 
+                nostrum, mollitia consequuntur inventore qui delectus voluptate cum nemo 
+                corporis itaque unde aperiam sit, voluptates dolorem dignissimos consectetur 
+                culpa ipsa.</p>
+                <a href="#" class="btn btn-success w-100">Read More</a>
+            </div>
+        </div><br><br>
+
+        <!--Card with header & footer-->
+        <h1>Card with header & footer</h1>
+        <div class="card">
+            <div class="card-header">
+                My Card
+            </div>
+            <div class="card-body">
+                <h4 class="card-title">Card Title</h4>
+                <p class="card-text">Lorem ipsum, dolor sit amet consectetur adipisicing elit.Amet molestiae 
+                    nostrum, mollitia consequuntur inventore qui delectus voluptate cum nemo 
+                    corporis itaque unde aperiam sit, voluptates dolorem dignissimos consectetur 
+                    culpa ipsa.</p>
+                <a href="#" class="btn btn-danger">Read More</a>
+            </div>
+            <div class="card-footer text-muted">
+                4 Days ago
+            </div>
+        </div><br/><br/>
+
+        <!--Card with text align center-->
+        <h1>Card with text center</h1>
+        <div class="card text-center">
+            <div class="card-header">
+                My Card
+            </div>
+            <div class="card-body">
+                <h4 class="card-title">Card Title</h4>
+                <p class="card-text">Lorem ipsum, dolor sit amet consectetur adipisicing elit.Amet molestiae 
+                    nostrum, mollitia consequuntur inventore qui delectus voluptate cum nemo 
+                    corporis itaque unde aperiam sit, voluptates dolorem dignissimos consectetur 
+                    culpa ipsa.</p>
+                <a href="#" class="btn btn-danger">Read More</a>
+            </div>
+            <div class="card-footer text-muted">
+                4 Days ago
+            </div>
+        </div><br/><br/>
+
+        <!--Card with nav-->
+        <h1>Card with nav</h1>
+        <div class="card">
+            <div class="card-header">
+                <ul class="nav nav-tabs card-header-tabs">
+                    <li class="nav-item">
+                        <a href="#" class="nav-link active">Active</a>
+                    </li>
+                    <li>
+                        <a href="#" class="nav-link">Link</a>
+                    </li>
+                    <li>
+                        <a href="#" class="nav-link">Disabled</a>
+                    </li>
+                </ul>
+            </div>
+            <div class="card-body">
+                <h4 class="card-title">Card Title</h4>
+                <p class="card-text">Lorem ipsum, dolor sit amet consectetur adipisicing elit.Amet molestiae 
+                    nostrum, mollitia consequuntur inventore qui delectus voluptate cum nemo 
+                    corporis itaque unde aperiam sit, voluptates dolorem dignissimos consectetur 
+                    culpa ipsa.</p>
+                <a href="#" class="btn btn-success">Read More</a>
+            </div>
+        </div><br><br>
+
+        <!--Image overlays-->
+        <h1>Image overlays</h1>
+        <div class="card bg-dark text-white " style="width:20rem">
+            <img src="../assets/images/img2.jpg" class="card-img">
+            <div class="card-img-overlay">
+                <h4 class="card-title">Card Title</h4>
+                <p class="card-text">Lorem ipsum, dolor sit amet consectetur adipisicing elit.
+                    Lorem ipsum, dolor sit amet consectetur adipisicing elit.Lorem ipsum, dolor 
+                    sit amet consectetur adipisicing elit.</p>
+                <p class="card-text"><small class="text-muted">Last updated 3mins ago</small></p>
+            </div>
+        </div><br><br>
+
+        <!--Contextual Cards-->
+        <h1>Contextual Cards</h1>
+        <div class="d-flex">
+        <div class="card bg-primary text-white me-2">
+            <div class="card-header">
+                Header   
+            </div>
+            <div class="card-body">
+                <h4 class="card-title">Primary Card Title</h4>
+                <p class="card-text">Lorem ipsum dolor sit, amet consectetur adipisicing elit. 
+                    Ullam magni, at asperiores labore placeat rerum ab necessitatibus. Ea maxime 
+                    eveniet cumque autem, repellat tempora blanditiis at quaerat voluptate, quae 
+                    corrupti.
+                </p>
+            </div>
+        </div>
+        <div class="card bg-success text-white me-2">
+            <div class="card-header">
+                Header   
+            </div>
+            <div class="card-body">
+                <h4 class="card-title">Success Card Title</h4>
+                <p class="card-text">Lorem ipsum dolor sit, amet consectetur adipisicing elit. 
+                    Ullam magni, at asperiores labore placeat rerum ab necessitatibus. Ea maxime 
+                    eveniet cumque autem, repellat tempora blanditiis at quaerat voluptate, quae 
+                    corrupti.
+                </p>
+            </div>
+        </div>
+        <div class="card bg-danger text-white me-2">
+            <div class="card-header">
+                Header   
+            </div>
+            <div class="card-body">
+                <h4 class="card-title">Danger Card Title</h4>
+                <p class="card-text">Lorem ipsum dolor sit, amet consectetur adipisicing elit. 
+                    Ullam magni, at asperiores labore placeat rerum ab necessitatibus. Ea maxime 
+                    eveniet cumque autem, repellat tempora blanditiis at quaerat voluptate, quae 
+                    corrupti.
+                </p>
+            </div>
+        </div>
+        <div class="card bg-warning text-white me-2">
+            <div class="card-header">
+                Header   
+            </div>
+            <div class="card-body">
+                <h4 class="card-title">Warning Card Title</h4>
+                <p class="card-text">Lorem ipsum dolor sit, amet consectetur adipisicing elit. 
+                    Ullam magni, at asperiores labore placeat rerum ab necessitatibus. Ea maxime 
+                    eveniet cumque autem, repellat tempora blanditiis at quaerat voluptate, quae 
+                    corrupti.
+                </p>
+            </div>
+        </div>
+        </div><br><br>
+
+        <!--Card Outline-->
+        <h1>Card outline</h1>
+        <div class="d-flex">
+            <div class="card border-primary me-2">
+                <div class="card-header">
+                    Header   
+                </div>
+                <div class="card-body">
+                    <h4 class="card-title">Primary Card Title</h4>
+                    <p class="card-text">Lorem ipsum dolor sit, amet consectetur adipisicing elit. 
+                        Ullam magni, at asperiores labore placeat rerum ab necessitatibus. Ea maxime 
+                        eveniet cumque autem, repellat tempora blanditiis at quaerat voluptate, quae 
+                        corrupti.
+                    </p>
+                </div>
+            </div>
+            <div class="card border-success me-2">
+                <div class="card-header">
+                    Header   
+                </div>
+                <div class="card-body">
+                    <h4 class="card-title">Success Card Title</h4>
+                    <p class="card-text">Lorem ipsum dolor sit, amet consectetur adipisicing elit. 
+                        Ullam magni, at asperiores labore placeat rerum ab necessitatibus. Ea maxime 
+                        eveniet cumque autem, repellat tempora blanditiis at quaerat voluptate, quae 
+                        corrupti.
+                    </p>
+                </div>
+            </div>
+            <div class="card border-danger me-2">
+                <div class="card-header">
+                    Header   
+                </div>
+                <div class="card-body">
+                    <h4 class="card-title">Danger Card Title</h4>
+                    <p class="card-text">Lorem ipsum dolor sit, amet consectetur adipisicing elit. 
+                        Ullam magni, at asperiores labore placeat rerum ab necessitatibus. Ea maxime 
+                        eveniet cumque autem, repellat tempora blanditiis at quaerat voluptate, quae 
+                        corrupti.
+                    </p>
+                </div>
+            </div>
+            <div class="card border-warning me-2">
+                <div class="card-header">
+                    Header   
+                </div>
+                <div class="card-body">
+                    <h4 class="card-title">Warning Card Title</h4>
+                    <p class="card-text">Lorem ipsum dolor sit, amet consectetur adipisicing elit. 
+                        Ullam magni, at asperiores labore placeat rerum ab necessitatibus. Ea maxime 
+                        eveniet cumque autem, repellat tempora blanditiis at quaerat voluptate, quae 
+                        corrupti.
+                    </p>
+                </div>
+            </div>
+            </div><br><br>
+
+            <!--Card Group-->
+            <h1>Card Group</h1>
+            <div class="card-group">
+                <div class="card">
+                    <div class="card-header">
+                        Card Header
+                    </div>
+                    <div class="card-body">
+                        <h4 class="card-title">Card Title</h4>
+                        <p class="card-text">Lorem ipsum dolor sit, amet 
+                            consectetur adipisicing elit. At reprehenderit 
+                            architecto soluta atque enim tempora veniam obcaecati 
+                            eos dicta repellendus totam a fuga, ipsum neque quae quis 
+                            aliquid amet facilis!</p>
+                    </div>
+                </div>
+                <div class="card">
+                    <div class="card-header">
+                        Card Header
+                    </div>
+                    <div class="card-body">
+                        <h4 class="card-title">Card Title</h4>
+                        <p class="card-text">Lorem ipsum dolor sit, amet 
+                            consectetur adipisicing elit. At reprehenderit 
+                            architecto soluta atque enim tempora veniam obcaecati 
+                            eos dicta repellendus totam a fuga, ipsum neque quae quis 
+                            aliquid amet facilis!</p>
+                    </div>
+                </div>
+                <div class="card">
+                    <div class="card-header">
+                        Card Header
+                    </div>
+                    <div class="card-body">
+                        <h4 class="card-title">Card Title</h4>
+                        <p class="card-text">Lorem ipsum dolor sit, amet 
+                            consectetur adipisicing elit. At reprehenderit 
+                            architecto soluta atque enim tempora veniam obcaecati 
+                            eos dicta repellendus totam a fuga, ipsum neque quae quis 
+                            aliquid amet facilis!</p>
+                    </div>
+                </div>
+            </div><br><br>            
+    </div>
+    <!-- Bootstrap JS Bundle with Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-/bQdsTh/da6pkI1MST/rWKFNjaCP5gBSY4sEBT38Q/9RBh9AH40zEOg7Hlq2THRZ" crossorigin="anonymous"></script>
+    
+</body>
+</html>

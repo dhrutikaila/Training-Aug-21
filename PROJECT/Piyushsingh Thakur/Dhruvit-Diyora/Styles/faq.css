@@ -1,0 +1,53 @@
+.faqsHeading {
+  font-size: 80px;
+  color: black;
+  margin-top: 52px;
+  font-family: "lato";
+  padding-left: 4px;
+  font-weight: 700;
+  margin-bottom: 16px;
+  text-align: left;
+  line-height: 1.3em;
+}
+.accordion-button::after {
+  background-image: url("data:image/svg+xml,%3csvg viewBox='0 0 16 16' fill='%23333' xmlns='http://www.w3.org/2000/svg'%3e%3cpath fill-rule='evenodd' d='M8 0a1 1 0 0 1 1 1v6h6a1 1 0 1 1 0 2H9v6a1 1 0 1 1-2 0V9H1a1 1 0 0 1 0-2h6V1a1 1 0 0 1 1-1z' clip-rule='evenodd'/%3e%3c/svg%3e");
+  transform: scale(0.7) !important;
+}
+.accordion-button:not(.collapsed)::after {
+  background-image: url("data:image/svg+xml,%3csvg viewBox='0 0 16 16' fill='%23333' xmlns='http://www.w3.org/2000/svg'%3e%3cpath fill-rule='evenodd' d='M0 8a1 1 0 0 1 1-1h14a1 1 0 1 1 0 2H1a1 1 0 0 1-1-1z' clip-rule='evenodd'/%3e%3c/svg%3e");
+}
+.topBorder {
+  border-top: 1px solid #979797;
+}
+.content {
+  font-family: "Lato", sans-serif;
+  padding: 0 15px 0px 60px;
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.2s ease-out;
+  background-color: white;
+}
+
+.collapsible {
+  background-color: white;
+  color: black;
+  cursor: pointer;
+  padding: 25px 0px 22px 20px;
+  width: 100%;
+  font-weight: 300;
+  border: none;
+  text-align: left;
+  outline: none;
+  font-size: 20px;
+  font-family: "Lato", sans-serif;
+}
+.collapsible::before {
+  content: "\271A";
+  color: black;
+  font-weight: 900;
+  float: left;
+  font-size: 22px;
+  margin-top: -3px;
+  margin-right: 40px;
+  margin-left: -19px;
+}

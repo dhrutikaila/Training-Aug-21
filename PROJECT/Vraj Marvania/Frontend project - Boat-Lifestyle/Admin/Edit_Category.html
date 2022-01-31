@@ -1,0 +1,137 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="Assets/js/crud.js"></script>
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css"
+        integrity="sha384-UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQ8lWUE00s/" crossorigin="anonymous">
+
+    <link rel="shortcut icon" href="https://utioutll.sirv.com/Smart%20Watches/nav/tablogo.jfif">
+    <link rel="shortcut icon" href="https://utioutll.sirv.com/Smart%20Watches/nav/tablogo.jfif">
+    <title>boat-admin</title>
+</head>
+
+<body style="background-color: black;">
+    <div class="container">
+        <div class="">
+            <div class="card text-white bg-dark  ">
+                <div class="card-header  ">
+                    <h4 style="font-weight: 500;">Edit home Page offers </h4>
+                </div>
+                <div class="card-body">
+
+                    <div class=" " style="justify-content: center;">
+                        <div class="" id="Set_Category">
+                            <h2 class="card-title text-center"></h2>
+                            <div class="d-flex justify-content-center">
+                                <select class="form-select " aria-label="Default select example" id="selectcat"
+                                    style="width: 50%; ">
+                                    <option value="">none</option>
+
+                                </select>
+                            </div>
+                            <div class="d-flex justify-content-center">
+
+
+                                <!-- table -->
+
+
+                                <table class="table  table-Secondary m-0 mt-5" style="width:80%; color: #FFFFFF; ">
+                                    <thead>
+                                        <tr>
+                                            <th scope="col">ID</th>
+                                            <!-- <th scope="col">setid</th> -->
+                                            <th scope="col">Title</th>
+                                            <th scope="col"></th>
+                                        </tr>
+                                    </thead>
+                                    <tbody id="Set_Category_Data">
+                                    </tbody>
+                                </table>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script>
+
+        // var j = {}
+        // -----------------------------------------------imp-------------------------------------------------------------
+        // var catname={"data":['Wireless_Earbuds','Wireless_Headphones','Smart_Watches','Wired_Earphones','Wireless_Speakers','Home_Audio','Mobile_Accessories','TRebel','Limited_Edition','Misfit','Immortal_Gaming']}
+        // var final=(JSON.parse(JSON.stringify(catname)))
+        // localStorage.setItem("CategoryList",JSON.stringify(final))
+        // -----------------------------------------------imp-------------------------------------------------------------
+
+
+        // on load code ------------------------------------------------------------->     
+        function setdata(){
+            $("#Set_Category_Data").empty();
+        var datas = (JSON.parse(localStorage.getItem("slidercat"))[0].data)
+            $.each(datas, function (i) {
+            console.log(this)
+            var card = $("<tr><td>" + this.id + "</td><td>" + this.title + "</td><td><button id='del' type='button' class='btn btn-danger del' onclick='deletecat(" + i + ")' value='" + i + "'><i class='fas fa-trash'></i></button></td>")
+            $("#Set_Category_Data").append(card);
+        });
+        }      setdata()
+        // selectcat
+
+        var cnames = (JSON.parse(localStorage.getItem("CategoryList")).data)
+        console.log("____")
+        console.log(cnames)
+
+        console.log(cnames[0])
+        for (i = 0; i < cnames.length; i++) {
+            console.log(cnames[i])
+            $("#selectcat").append($(" <option value=" + cnames[i] + ">" + cnames[i] + "</option>"))
+        }
+
+        // delete Category ---------------------------------------------------------->
+        function deletecat(i) {
+            console.log(i)
+            var tdata = JSON.parse(localStorage.getItem("slidercat"))
+            tdata[0].data.splice(i, 1);
+            console.log(tdata)
+            localStorage.setItem("slidercat", JSON.stringify(tdata));
+            setdata();
+
+        }
+
+        // drop down on change  function---------------------------------------------------------->
+
+        $("#selectcat").change(function () {
+            var vjson = { id: "", title: "", setid: "" }
+            var OfferTitle = prompt("Please enter your Offer Title", "Upto 70% Off");
+            vjson.id = this.value
+            vjson.title = OfferTitle
+            vjson.setid = "ifram"
+            var tdata1 = JSON.parse(localStorage.getItem("slidercat"))
+            tdata1[0].data.push(vjson)
+            console.log(tdata1)
+            JSON.parse(localStorage.setItem("slidercat", JSON.stringify(tdata1)))
+            setdata();
+            
+        })
+
+
+
+
+
+    </script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+        crossorigin="anonymous"></script>
+
+</body>
+
+</html>

@@ -1,0 +1,157 @@
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>
+        FileStructure
+    </title>
+    <style>
+        * {
+            box-sizing: border-box;
+            padding: 0;
+            margin: 0;
+        }
+
+        .navbar {
+            background-color: black;
+            color: cornsilk;
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            font-size: 20px;
+        }
+
+        .heder_logo {
+            width: 75px;
+        }
+
+        .nav_list {
+            list-style-type: none;
+        }
+
+        .list_item {
+            transition: 0.5s;
+        }
+
+        .nav_list .list_item {
+            display: inline-block;
+            padding: 20px 10px;
+
+        }
+
+        .list_item>a:hover {
+            color: rgb(48, 46, 46);
+        }
+
+        .list_item a {
+            text-decoration: none;
+            color: cornsilk;
+            transition: 0.1s;
+
+        }
+
+
+        .list_item:hover {
+            background-color: rgba(218, 218, 218, 0.425);
+        }
+
+        .home__img {
+            width: 100%;
+            height: 100%;
+        }
+
+        @media only screen and (max-width: 640px) {
+            .navbar {
+                background-color: black;
+                color: cornsilk;
+                align-items: center;
+                display: flex;
+                flex-direction: column;
+                font-size: 20px;
+            }
+
+            .heder_logo {
+                width: 50px;
+                padding-top: 10px;
+            }
+
+            .nav_list {
+                list-style-type: none;
+                display: flex;
+                flex-direction: column;
+                margin-left: 0px;
+
+            }
+
+            .list_item {
+                transition: 0.6s;
+                flex-direction: column;
+
+
+            }
+
+            .nav_list .list_item {
+
+                padding: 20px 10px;
+                padding-right: 320px;
+
+            }
+
+            .list_item>a:hover {
+                color: rgb(48, 46, 46);
+            }
+
+            .list_item a {
+                text-decoration: none;
+                color: cornsilk;
+                transition: 0.1s;
+
+            }
+
+            .list_item:hover {
+                background-color: rgba(218, 218, 218, 0.425);
+                border-top-right-radius: 20px;
+                border-bottom-left-radius: 20px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <nav class="navbar">
+        <div>
+            <a href="./TutorialSite.html">
+                <img class="heder_logo" src="./Assests/adwords.png">
+            </a>
+        </div>
+
+        <ul class="nav_list">
+            <li class="list_item">
+                <a href="./TutorialSite.html">Home</a>
+            </li>
+            <li class="list_item">
+                <a href="./HTML/html.html">HTML</a>
+            </li>
+            <li class="list_item">
+                <a href="./CSS/CSS.html">CSS</a>
+            </li>
+            <li class="list_item">
+                <a href="./BootStrap/BootStrap.html">Bootstrap</a>
+            </li>
+            <li class="list_item">
+                <a href="./JavaScript/JavaScripts.html">JavaScript</a>
+            </li>
+            <li class="list_item">
+                <a href="./jQuery/jQuery.html">jQuery</a>
+            </li>
+            <li class="list_item">
+                <a href="./Project/Project.html">Project</a>
+            </li>
+        </ul>
+    </nav>
+    <img class="home__img" src="Assests/Home.svg">
+</body>
+
+</html>

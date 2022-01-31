@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+</head>
+
+<style>
+    .changeBG{
+        background-color: red;
+    }
+</style>
+
+<body>
+
+    <h1>Heading 1</h1>
+    <div class="div1">This is div 1</div>
+    <div id="div1"></div>
+    <ul id="lists">
+        <li>List 1</li>
+        <li>List 2
+            <ul class="subList">
+                <li>list 2.1</li>
+                <li>list 2.2</li>
+            </ul>
+        </li>
+        <li>List 3</li>
+        <li>List 4</li>
+        <li>List 5</li>
+    </ul>
+    <p id="para1">This is para 1</p>
+    <p id="para2">This is para 2</p>
+    <p id="para3">This is para 3</p>
+    <p id="para4">This is para 4</p>
+    <p id="para5">This is para 5</p>
+    <p id="para6">This is para 6</p>
+
+    <input type="text" placeholder="Enter name" value="Prit"/>
+
+    <button id="fi" >FadeIn</button>
+    <button id="fo">FadeOut</button>
+    <button id="ft">FadeToggle</button>
+    <button id="dt">displayToggle</button>
+    <br>
+
+    <div id="div2">Append prepend before after</div>
+
+    <button class="addClass">Add Class</button>
+    <button class="removeClass">Remove Class</button>
+    <button class="toggleClass">Toggle Class</button>
+
+
+    <script>
+        $(document).ready(function () {
+
+            // selectors
+            console.log($('h1').text());
+            $('h1').text("Updatetd heading 1");
+            $('.div1').text('updated text')
+            $('#div1').text('Added text using id selector')
+            console.log($('#lists > li').text())
+            console.log($('#lists').children('li').text())
+            console.log($('#lists,.sublist').text())
+            console.log($('#lists li:first').text())
+            console.log($('#lists li:last').text())
+            console.log($('#lists > li:odd').text())
+            console.log($('#lists > li:even').text())
+            console.log($('#lists').find('li').text())
+            console.log($('li').first().text())
+            console.log($('li').first().next().text())
+            console.log($('li').first().parent())
+
+
+            // events
+            $('#para1').click(function () {
+                $(this).hide();
+            })
+
+            $('#para2').dblclick(function () {
+                $(this).hide();
+            })
+
+            $('#para3').mouseenter(function () {
+                alert('mouse entered')
+            })
+
+            $('#para3').mouseleave(function () {
+                alert('mouse left')
+            })
+
+            $('#para4').mouseup(function () {
+                alert('mouse up')
+            })
+
+            $('#para4').mousedown(function () {
+                alert('mouse down')
+            })
+
+            // hover is combination of mouseenter and mouseleave
+
+            $("input").focus(function () {
+                $(this).css("background-color", "#cccccc");
+            });
+
+            $("input").blur(function () {
+                $(this).css("background-color", "red");
+            });
+
+            $("#para5").on({
+                mouseenter: function () {
+                    $(this).css("background-color", "lightgray");
+                },
+                mouseleave: function () {
+                    $(this).css("background-color", "lightblue");
+                },
+                click: function () {
+                    $(this).css("background-color", "yellow");
+                }
+            });
+
+            $('#fo').click(function(){
+                $('#para6').fadeOut(1000);
+            })
+            $('#fi').click(function(){
+                $('#para6').fadeIn(1000);
+            })
+            $('#ft').click(function(){
+                $('#para6').fadeToggle(1000);
+            })
+
+            $('#dt').click(function(){
+                $('#para6').toggle(1000);
+            })
+
+
+            // jQuery DOM manipulation
+            console.log($('input').val())
+            console.log($('input').attr('type'))
+            console.log($('li').first().next().html())
+            console.log($('li').first().next().text())
+
+
+            // jQuery add element
+
+            $('#div2').append(" -- appended text")
+            $('#div2').prepend("prepend text --")
+            $('#div2').before("before text --")
+            $('#div2').after("after text --")
+            $('#div2').empty()  // text inside div2 will be removed
+            $('#div2').remove()  // div tag will be removed
+
+
+            // jQuery CSS
+
+            $('.addClass').click(function(){
+                $('#para5').addClass('changeBG')
+            })
+            $('.removeClass').click(function(){
+                $('#para5').removeClass('changeBG')
+            })
+            $('.toggleClass').click(function(){
+                $('#para5').toggleClass('changeBG')
+            })
+
+            $('#para3').css("background-color","yellow") // for single property
+            $('#para3').css({"background-color":"yellow","border":"1px solid red"}) // for multiple property
+
+
+            // iterating element
+            $('#lists > li').each(function(index,element){
+                console.log(element);
+            })
+
+        })
+
+    </script>
+
+</body>
+
+</html>

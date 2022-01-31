@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>image-gallary</title>
+    <style>
+        *{
+            box-sizing: border-box;
+            padding: 0;
+            margin: 0;
+        }
+        .container{
+            padding: 20px;
+        }
+        .flex-container{
+            display: flex;
+            flex-flow: row wrap;
+            padding: 5px;
+            border-radius: 2%;
+            border: 1px solid black;
+            justify-content: center;
+            background-color: lavender;
+        }
+        .flex-item{
+            flex: 1 1 25%;
+            max-width: 25%;
+            padding: 0 5px;
+        }
+        img{
+            width:100%;
+            margin: 5px 0;
+            vertical-align: middle;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="flex-container">
+            <div class="flex-item">
+                <img src="https://picsum.photos/id/111/600/400" alt="img">
+                <img src="https://picsum.photos/id/112/600/300" alt="img">
+                <img src="https://picsum.photos/id/113/600/400" alt="img">
+                <img src="https://picsum.photos/id/114/600/300" alt="img">
+                <img src="https://picsum.photos/id/115/600/400" alt="img">
+            </div>
+            <div class="flex-item">
+                <img src="https://picsum.photos/id/116/600/300" alt="img">
+                <img src="https://picsum.photos/id/117/600/400" alt="img">
+                <img src="https://picsum.photos/id/118/600/300" alt="img">
+                <img src="https://picsum.photos/id/119/600/400" alt="img">
+                <img src="https://picsum.photos/id/120/600/400" alt="img">
+            </div>
+            <div class="flex-item">
+                <img src="https://picsum.photos/id/121/600/400" alt="img">
+                <img src="https://picsum.photos/id/122/600/300" alt="img">
+                <img src="https://picsum.photos/id/123/600/400" alt="img">
+                <img src="https://picsum.photos/id/124/600/300" alt="img">
+                <img src="https://picsum.photos/id/125/600/400" alt="img">
+            </div>
+            <div class="flex-item">
+                <img src="https://picsum.photos/id/126/600/400" alt="img">
+                <img src="https://picsum.photos/id/127/600/400" alt="img">
+                <img src="https://picsum.photos/id/128/600/300" alt="img">
+                <img src="https://picsum.photos/id/129/600/400" alt="img">
+                <img src="https://picsum.photos/id/130/600/300" alt="img">
+            </div>
+        </div> 
+    </div>
+</body>
+</html>

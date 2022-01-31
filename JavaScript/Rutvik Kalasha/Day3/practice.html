@@ -1,0 +1,24 @@
+<!--Use Window.location object to navigate on another page-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Redirection</title>
+    
+    <!--1. Use Window.location object to navigate on another page-->
+    <script type>
+        function Redirect() {
+         window.location.href = "https://radixweb.com";
+        }
+
+    //2. Use Window.history object to move to previous url in the history list
+
+        function goBack() {
+            window.history.back();
+        }
+    </script>
+
+</head>
+<body>
+    <input type="button" value="Redirect" onclick="Redirect()"/>
+</body>
+</html>

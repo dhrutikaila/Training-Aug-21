@@ -1,0 +1,384 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>HOME</title>
+
+<style type="text/css">
+
+*{
+	font-family: sans-serif;
+}
+
+.body{
+	height: 100vh;
+}
+
+
+	
+.container1{
+	display: grid;
+	grid-template-columns: 0.3fr 1fr;
+	grid-template-rows: 0.1fr 0.1fr 1fr 0.1fr;
+	grid-gap: 0.4rem;
+
+	grid-template-areas: 
+	"head head "
+	"nav nav "
+	"side content"
+	"foot foot";
+}
+
+.header1{
+	grid-area: head;
+	background: red;
+	color: whitesmoke;
+	text-align: center;
+	font-weight: 700;
+	font-size: 20px;	
+
+}
+
+.navigation{
+	color: white;
+	background: red;
+	grid-area: nav;
+}
+
+.nav1 > ul{
+	display: flex;
+	justify-content: center;
+	text-decoration: none;
+}    
+.list{
+	margin: 0 12px;
+	text-decoration: none;
+	color: white;
+}
+
+.footer{
+	grid-area: foot;
+	background: red;
+	color: whitesmoke;
+	text-align: center;
+	font-weight: 700;
+	font-size: 20px;	
+
+}
+
+.list{
+	
+}
+
+.side1{
+	grid-area: side;
+
+
+}
+
+.content{
+	grid-area: content;
+	display: block;
+}
+
+.content{
+	
+}
+
+
+
+
+
+
+
+</style>
+</head>
+<body class="body">
+
+<div class="container1">
+
+<div class="header1">
+	<header class="head">
+		<h1 style="font-size: 20px; padding-top: 3px;">TASK SITE</h1>
+	</header>
+</div>
+
+<div class="navigation">
+	<nav class="nav1">
+		<ul type="none">
+			<li class="list"><a href="C:\Users\om\Desktop\temporary practices\projects\task_site.html">HOME</a></li>
+			<li class="list"><a href="">SQL</a></li>
+			<li class="list" id="active"><a href="">HTML-CSS</a></li>
+			<li class="list"><a href="">JAVASCRIPT</a></li>
+			<li class="list"><a href="">JQUERY</a></li>
+		</ul>
+	</nav>
+</div>
+
+<div class="side1">
+	<aside class="sidebar">
+    <ol>
+		<li>DAY-1
+			<ul>
+				<li>
+					practices
+					<ol>
+						<li><a href="html\VIVEK DHAGE\DAY 1 HTML\practice\student_marks.html">practical</a></li>
+					</ol>
+				</li>
+				<li>assignments
+					<ol>
+						<li><a href="html\VIVEK DHAGE\DAY 1 HTML\assignment\task1.html">assignment</a></li>
+					</ol>
+				</li>
+			</ul>
+		</li>
+	</ol>
+	<ol>
+		<li>DAY-2
+			<ul>
+				<li>
+					practices
+					<ol>
+						<li><a href="html\VIVEK DHAGE\DAY 2 HTML\practice\html_day2.html">practical</a></li>
+					</ol>
+				</li>
+				<li>assignments
+					<ol>
+						<li><a href="html\VIVEK DHAGE\DAY 2 HTML\assignment\personalized_resume(day2-assignment).html">assignment</a></li>
+					</ol>
+				</li>
+			</ul>
+		</li>
+ 	</ol>
+    <ol>
+		<li>DAY-3
+			<ul>
+				<li>
+					practices
+					<ol>
+						<li><a href="html\VIVEK DHAGE\DAY 3 HTML\practices\day-3_html.html">practical</a></li>
+					</ol>
+				</li>
+				<li>assignments
+					<ol>
+						<li><a href="html\VIVEK DHAGE\DAY 3 HTML\assignments\day-html_assignment.html">assignment</a></li>
+					</ol>
+				</li>
+			</ul>
+		</li>
+	</ol>
+	<ol>
+		<li>DAY-4
+			<ul>
+				<li>
+					practices
+					<ol>
+						<li><a href="html\VIVEK DHAGE\DAY 4 HTML-CSS\practicals\practical-1.html">practical-1</a></li>
+						<li><a href="html\VIVEK DHAGE\DAY 4 HTML-CSS\practicals\practical-2.html">practical-2</a></li>
+						<li><a href="html/VIVEK DHAGE/DAY 4 HTML-CSS/practicals/practical-3.html">practical-3</a></li>
+					</ol>
+				</li>
+				<li>assignments
+					<ol>
+						<li><a href="html/VIVEK DHAGE/DAY 4 HTML-CSS/assignment/assignment-day-4.html">assignment</a></li>
+					</ol>
+				</li>
+			</ul>
+		</li>
+	</ol>
+	</aside>
+</div>
+
+
+<div class="display" style="border: 1px solid black;">
+	<div class="content">
+	<article>
+
+
+
+
+
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>day3</title>
+
+<style>
+
+#overflowTest {
+  background: rgb(200, 190, 50);
+  color: white;
+  padding: 15px;
+  width: 50%;
+  height: 100px;
+  overflow-y: scroll;
+  overflow-x: auto;
+  border: 1px solid #ccc;
+}
+.parent1{
+	margin: 20px;
+	display: flex;
+	justify-content: space-around;
+	align-items: center;
+
+	background: blue;
+	height: 90px;
+	width: 350px;
+
+}
+
+.child{
+	height: 70px;
+	width: 70px;
+	border: 1px dotted black ;
+}
+
+.positions_exa{
+	font-family: Arial;
+	font-weight: 600;
+	color: red;
+}
+
+
+
+#first{
+	position: static;
+	padding: 30px;
+	text-align: center;
+	height: 50px;
+	width: 50px;
+	left: 20px;
+	top: 100px;
+	background: none;
+	border: 1px solid orange;
+}
+
+#second{
+	position: relative;
+	padding: 20px;
+	height: 70px;
+	width: 100px;
+	left: 20px;
+	top: 50px;
+	background: none;
+	border: 1px solid orange;
+}
+
+#third{
+	position: absolute;
+	padding: 20px;
+	text-align: center;
+	height: 70px;
+	width: 100px;
+	left: 400px;
+	top: 100px;
+	background: none;
+	border: 1px solid orange;
+}
+
+#fourth{
+	position: fixed;
+	padding: 30px;
+	text-align: center;
+	height: 50px;
+	width: 50px;
+	right: 20px;
+	top: 100px;
+	background: none;
+	border: 1px solid orange;
+}
+
+#fifth{
+	position: initial;
+	padding: 30px;
+	text-align: center;
+	height: 50px;
+	width: 50px;
+	right: 2000px;
+	top: 100px;
+	background: none;
+	border: 1px solid orange;
+}
+
+</style>
+
+</head>
+<body>
+
+
+
+<h2>CSS day 2 practice</h2>
+<p>1.The overflow property</p>
+
+<div id="overflowTest">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</div>
+
+<hr>
+
+
+<p>2.Parent div should contain 3 div inside. Div should be arranged in following manner.</p>
+<div class="parent1">
+	<div class="child"></div>
+	<div class="child"></div>
+	<div class="child"></div>
+</div>
+<hr>
+
+
+<p>3.the position properties</p>
+
+
+<div class="positions_exa">
+	
+	<div id="first">"STATIC"</div>
+
+	<div id="second">"RELATIVE"</div>
+
+	<div id="third">"ABSOLUTE"</div>
+
+	<div id="fourth">"FIXED"</div>
+
+	<div id="fifth">"INITIAL"</div>
+
+
+</div>
+
+
+</body>
+</html>
+
+
+
+
+	</article>
+</div>	
+</div>
+
+
+<footer>
+	<p>&copy; copyright </p>
+</footer>
+
+
+</div>
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+

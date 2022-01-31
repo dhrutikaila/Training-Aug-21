@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Grid-flexbox</title>
+    <link rel="stylesheet" href="../bootstrap-5.0.2-dist/css/bootstrap.min.css">
+</head> 
+<body>
+    <div class="container">
+        <!--########################START HERE#########################-->
+    
+        <!-- RESPONSIVE GRID -->
+        <div class="row mb-5">
+          <div class="col-sm-6 col-md-5 col-lg-3" style="border:1px solid #333">
+            <ul>
+              <li>Lorem ipdus rei</li>
+            </ul>
+          </div>
+          <div class="col-sm-6 col-md-7 col-lg-9" style="border:1px solid #333">
+            <ul>
+              <li>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Perferendis aperiam similique quaerat perspiciatis doloribus aut blanditiis sit libero aspernatur ex, repudiandae, est voluptatem optio quae minus quas recusandae dolorem nisi.</li>
+            </ul>
+          </div>
+        </div>
+    
+        <!-- EQUAL WIDTH -->
+        <div class="row mb-5">
+          <div class="col" style="border:1px solid #333">Equal Width</div>
+          <div class="col" style="border:1px solid #333">Equal Width</div>
+          <div class="col" style="border:1px solid #333">Equal Width</div>
+          <div class="col" style="border:1px solid #333">Equal Width</div>
+          <div class="col" style="border:1px solid #333">Equal Width</div>
+        </div>
+    
+        <!-- EQUAL WIDTH MULTI ROW -->
+        <div class="row mb-5">
+          <div class="col" style="border:1px solid #333">Equal Width Multi</div>
+          <div class="col" style="border:1px solid #333">Equal Width Multi</div>
+          <div class="w-100"></div>
+          <div class="col" style="border:1px solid #333">Equal Width Multi</div>
+          <div class="col" style="border:1px solid #333">Equal Width Multi</div>
+          <div class="col" style="border:1px solid #333">Equal Width Multi</div>
+        </div>
+    
+        <!-- AUTO LAYOUT -->
+        <div class="row mb-5">
+          <div class="col" style="border:1px solid #333">Auto Layout</div>
+          <div class="col-3" style="border:1px solid #333">Auto Layout</div>
+          <div class="col" style="border:1px solid #333">Auto Layout</div>
+        </div>
+    
+        <!-- EQUAL WIDTH STACKED -->
+        <div class="row mb-5">
+          <div class="col-sm" style="border:1px solid #333">Equal Width Stack</div>
+          <div class="col-sm" style="border:1px solid #333">Equal Width Stack</div>
+          <div class="col-sm" style="border:1px solid #333">Equal Width Stack</div>
+        </div>
+    
+        <!-- ORDERING -->
+        <div class="row mb-5">
+          <div class="col order-3" style="border:1px solid #333">
+            First
+          </div>
+          <div class="col order-2" style="border:1px solid #333">
+            Second
+          </div>
+          <div class="col order-1" style="border:1px solid #333">
+            Third
+          </div>
+        </div>
+    
+        <!-- OFFSETTING -->
+        <div class="row mb-5">
+          <div class="col-4" style="border:1px solid #333">4 col</div>
+          <div class="col-4 ml-auto" style="border:1px solid #333">4 col offset 4</div>
+        </div>
+    
+        <div class="row mb-5">
+          <div class="col-3 ml-auto" style="border:1px solid #333">3 col offset 3</div>
+          <div class="col-3 ml-auto" style="border:1px solid #333">3 col offset 3</div>
+        </div>
+    
+        <div class="mb-5">
+          <div class="col-6 m-auto" style="border:1px solid #333">6 col offset 3</div>
+        </div>
+    
+        <!-- NESTING -->
+        <div class="row">
+          <div class="col-sm-9" style="border:1px solid #333">
+            Level 1: .col-sm-9
+            <div class="row">
+              <div class="col-8 col-sm-6" style="border:1px solid red">
+                Level 2: .col-8 .col-sm-6
+              </div>
+              <div class="col-8 col-sm-6" style="border:1px solid red">
+                Level 2: .col-4 .col-sm-6
+              </div>
+            </div>
+          </div>
+        </div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,34 @@
+*{font-family:"belleza";}
+
+.LSID{
+    padding-bottom: 36%;
+    background-color: rgba(0, 0, 80, 0.849);
+    width: 25%; 
+    float: left;
+}
+.RSID{
+    width:75%; 
+    float:right;
+}
+
+a{color:white}
+.left
+{
+padding: 5%;
+ text-align: left;
+ color: white;
+}
+
+.name{
+    font-weight: bolder;
+}
+aside.right{
+    text-align: left;
+
+    background-color:rgb(255, 255, 255);
+
+}
+
+
+
+

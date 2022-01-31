@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"
+        integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+    <style>
+        .ancestors * {
+            display: block;
+            border: 2px solid lightgrey;
+            color: lightgrey;
+            padding: 5px;
+            margin: 15px;
+        }
+
+        .intro {
+            border: 2px solid lightgrey;
+            color: lightgrey;
+            padding: 5px;
+            margin: 15px;
+        }
+    </style>
+    <!-- parent() -->
+
+    <!-- <script>
+        $(document).ready(function () {
+            $("span").parent().css({ "color": "black", "border": "2px solid black" });
+        });
+    </script> -->
+
+    <!-- parents() -->
+
+    <!-- <script>
+        $(document).ready(function () {
+            $("span").parents().css({ "color": "black", "border": "2px solid black" });
+        });
+    </script> -->
+
+    <!-- <script>
+        $(document).ready(function () {
+            $("span").parents("ul").css({ "color": "black", "border": "2px solid black" });
+        });
+    </script> -->
+
+    <!-- parentsUntil -->
+
+    <!-- <script>
+        $(document).ready(function () {
+            $("span").parentsUntil("").css({ "color": "black", "border": "2px solid black" });
+        });
+    </script> -->
+
+    <!-- children() -->
+
+    <!-- <script>
+        $(document).ready(function () {
+            $("div").children().css({ "color": "black", "border": "2px solid black" });
+        });
+    </script> -->
+
+    <!-- find() -->
+
+    <!-- <script>
+        $(document).ready(function () {
+            $("div").find("span").css({ "color": "black", "border": "2px solid black" });
+        });
+    </script> -->
+
+    <!-- find("*") -->
+
+    <!-- <script>
+        $(document).ready(function () {
+            $("ul").find("*").css({ "color": "black", "border": "2px solid black" });
+        });
+    </script> -->
+
+    <!-- siblings() -->
+
+    <!-- <script>
+        $(document).ready(function () {
+            $("h2").siblings().css({ "color": "black", "border": "2px solid black" });
+        });
+    </script> -->
+
+    <!-- <script>
+        $(document).ready(function () {
+            $("h2").siblings("p").css({ "color": "black", "border": "2px solid black" });
+        });
+    </script> -->
+
+    <!-- next() -->
+
+    <!-- <script>
+        $(document).ready(function () {
+            $("h2").next().css({ "color": "black", "border": "2px solid black" });
+        });
+    </script> -->
+
+    <!-- nextAll() -->
+
+    <!-- <script>
+        $(document).ready(function () {
+            $("h2").nextAll().css({ "color": "black", "border": "2px solid black" });
+        });
+    </script> -->
+
+    <!-- nextUntil() -->
+
+    <!-- <script>
+        $(document).ready(function () {
+            $("span").nextUntil("p").css({ "color": "black", "border": "2px solid black" });
+        });
+    </script> -->
+
+    <!-- prev() -->
+
+    <!-- <script>
+        $(document).ready(function () {
+            $("h2").prev().css({ "color": "black", "border": "2px solid black" });
+        });
+    </script> -->
+
+    <!-- prevAll() -->
+
+    <!-- <script>
+        $(document).ready(function () {
+            $("p").prevAll().css({ "color": "black", "border": "2px solid black" });
+        });
+    </script> -->
+
+    <!-- prevUntil() -->
+
+    <!-- <script>
+        $(document).ready(function () {
+            $("p").prevUntil("span").css({ "color": "black", "border": "2px solid black" });
+        });
+    </script> -->
+
+    <!-- first() -->
+
+    <!-- <script>
+        $(document).ready(function () {
+            $("span").first().css({ "color": "black", "border": "2px solid black" });
+        });
+    </script> -->
+
+    <!-- last() -->
+
+    <!-- <script>
+        $(document).ready(function () {
+            $("span").last().css({ "color": "black", "border": "2px solid black" });
+        });
+    </script> -->
+
+    <!-- eq() -->
+
+    <!-- <script>
+        $(document).ready(function () {
+            $("span").eq(2).css({ "color": "black", "border": "2px solid black" });
+        });
+    </script> -->
+
+    <!-- filter() -->
+
+    <!-- <script>
+        $(document).ready(function () {
+            $("p").filter(".intro").css({ "color": "black", "border": "2px solid black" });
+        });
+    </script> -->
+
+    <!-- not() -->
+
+    <!-- <script>
+        $(document).ready(function () {
+            $("p").not(".intro").css({ "color": "black", "border": "2px solid black" });
+        });
+    </script> -->
+
+
+
+
+
+
+
+
+
+
+
+</head>
+
+<body>
+
+    <p class="intro">I live in Ahmedabad</p>
+    <div class="ancestors">
+        <div style="width:500px;">(great-grandparent)
+            <ul>(grandparent)
+                <li>(direct parent)
+                    <span>span1</span>
+                    <h2>h2</h2>
+                    <p>p</p>
+                    <span>span2</span>
+                    <span>span3</span>
+                </li>
+            </ul>
+        </div>
+    </div>
+</body>
+
+</html>

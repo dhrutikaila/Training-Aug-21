@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-F3w7mX95PdgyTmZZMECAngseQB83DfGTowi0iMjiWaeVhAn4FJkqJByhZMI3AhiU" crossorigin="anonymous">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <style>
+        .ancestors * { 
+          display: block;
+          border: 2px solid lightgrey;
+          color: lightgrey;
+          padding: 5px;
+          margin: 15px;
+        }
+    </style>
+    <title>Practice Day24</title>
+</head>
+<body>
+    <div class="container bg-light border border-secondary rounded mt-5 p-5 text-center ancestors">body (great-great-grandparent)
+        <div style="width:500px;">div (great-grandparent)
+            <ul>ul (grandparent)  
+              <li>li (direct parent)
+                <span>span</span>
+              </li>
+            </ul>   
+        </div>
+    </div>
+
+    <section class="container bg-light border border-secondary rounded mt-5 p-5 text-center ancestors">
+        <p class="first">p (child)
+            <small>span (grandchild)</small>   
+          </p>
+          <p class="second">p (child)
+            <small>span (grandchild)</small>
+          </p>
+    </section>
+    
+    <div class="container bg-light border border-secondary rounded mt-5 p-5 text-center ancestors">
+        <div>div (parent)
+            <p>p</p>
+            <h2>h2</h2>
+            <h3>h3</h3>
+            <h4>h4</h4>
+            <h5>h5</h5>
+            <h6>h6</h6>
+            <p>p</p>
+          </div>
+    </div>
+
+    <div class="container bg-light border border-secondary rounded mt-5 p-5 text-center ">
+    <h3>Filterable Table</h3>
+    <p>Type something in the input field to search the table for first names, last names or emails:</p>
+    <input id="myInput" type="text" placeholder="Search..">
+    <br><br>
+    
+    <table class ="table-bordered table-striped table-hover">
+        <thead>
+            <tr>
+                <th>Firstname</th>
+                <th>Lastname</th>
+                <th>Email</th>
+            </tr>
+        </thead>
+        <tbody id="myTable">
+            <tr>
+                <td>John</td>
+                <td>Doe</td>
+                <td>john@example.com</td>
+            </tr>
+            <tr>
+                <td>Mary</td>
+                <td>Moe</td>
+                <td>mary@mail.com</td>
+            </tr>
+            <tr>
+                <td>July</td>
+                <td>Dooley</td>
+                <td>july@greatstuff.com</td>
+            </tr>
+            <tr>
+                <td>Anja</td>
+                <td>Ravendale</td>
+                <td>a_r@test.com</td>
+            </tr>
+        </tbody>
+    </table>
+    </div>
+
+
+    <script>
+        $(document).ready(function () {
+            $("span").parent("li").css({"color": "red", "border": "2px solid red"}); // Parent Element
+            $("span").parents("ul").css({"color": "red", "border": "2px solid red"});  // Grandparent Element
+            $("span").parentsUntil("ul").css({"color": "red", "border": "2px solid red"});  // All parent element until ul.
+
+            $("section").children("p.first").css({"color": "red", "border": "2px solid red"}); // Child Element
+            $("section").find("small").css({"color": "red", "border": "2px solid red"}); // Descendant Element
+
+            
+            $("h2").nextUntil("h6").css({"color": "red", "border": "2px solid red"}); // NextUntil h6 Element
+            $("h2").siblings("p").css({"color": "red", "border": "2px solid red"}); // Sibling Element
+            // Similarlly we can use prev(), prevall(), next(), nextall() 
+
+            // Filter method
+            $("#myInput").on("keyup", function () {
+                var value = $(this).val().toLowerCase();
+                $("#myTable tr").filter(function () {
+                    $(this).toggle($(this).text().toLowerCase().indexOf(value) > 1)
+                });
+            });
+        });
+           
+                  
+    </script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-/bQdsTh/da6pkI1MST/rWKFNjaCP5gBSY4sEBT38Q/9RBh9AH40zEOg7Hlq2THRZ" crossorigin="anonymous"></script>
+</body>
+
+</html>

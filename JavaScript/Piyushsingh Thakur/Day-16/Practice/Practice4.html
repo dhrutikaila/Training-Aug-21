@@ -1,0 +1,36 @@
+<!-- Write a JavaScript function to get the current date -->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./../../bootstrap.css">
+    <title>JS Day16 Practice4</title>
+</head>
+
+<body>
+    <div class="container p-3 mt-5">
+        <form>
+            <p class="display-4">Exercise4</p>
+            <p class="lead text-muted">Write a JavaScript function to get the current date.</p>
+            <p class="lead">Click Below Button To Get Current Date : </p>
+            <button class="btn btn-primary" onclick="return getCurrentDate()">Click Here</button>
+            <div>
+                <p id="currentDate" class="lead pt-3"></p>
+            </div>
+        </form>
+    </div>
+</body>
+<script>
+    function getCurrentDate() {
+        var dt = new Date();
+
+        document.getElementById('currentDate').innerText = "Current Date is : " + dt.toDateString();
+
+        return false;
+    }
+</script>
+
+</html>

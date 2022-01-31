@@ -1,0 +1,2352 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <link href='https://fonts.googleapis.com/css?family=Montserrat' rel='stylesheet'>
+    <link href="Assets/css/style.css" rel='stylesheet'>
+    <link href='https://fonts.googleapis.com/css?family=Montserrat' rel='stylesheet'>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <!--load all styles -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://kenwheeler.github.io/slick/slick/slick.js"></script>
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css"
+        integrity="sha384-UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQ8lWUE00s/" crossorigin="anonymous">
+
+
+    <title>Hello, world!</title>
+</head>
+
+<body>
+
+    <div class="text-center " id="ban" style="background-color: #ff0000; ">
+        <a href="https://www.boat-lifestyle.com/collections" style="text-decoration:none">
+            <div class="announcement__inner" style="color: white;    padding: 6px;        ">
+                <b class="fw-bolder" style="font-size: 12.23px;">
+                    ULTIMATE SALE IS LIVE. UPTO 70% OFF ON ALL PRODUCTS | GET UPTO Rs150 OFF USING LAZYPAY* | GET FLAT
+                    Rs75 CASHBACK USING MOBIKWIK*.</b>
+            </div>
+        </a>
+    </div>
+
+
+
+    <!-- nav -->
+
+    <nav class="navbar navbar-expand-lg " style="background-color: rgb(0, 0, 0);">
+        <div class="container-fluid d-flex">
+            <div class="order-md-1   d-lg-none d-lg-block p-2 bd-highlight">
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" onclick="openNav()"
+                    data-bs-target="" aria-controls="navbarToggleExternalContent" aria-expanded="false"
+                    aria-label="Toggle navigation">
+                    <span class="fa fa-bars " style=" color: rgb(255, 255, 255);"></span>
+                </button>
+            </div>
+            <div class="order-md-1  order-1 py-2 bd-highlight">
+                <div class="container">
+                    <a class="navbar-brand" href="#"> <img src="./Assets/img/logo.png" height="44px" id="logo"></a>
+                </div>
+            </div>
+
+            <div class="order-md-2    d-none d-lg-block p-2 bd-highlight">
+                <div class="p-2 bd-highlight ml-5 justify-item-start">
+                    <ul class="navbar-nav d-flex justify-content-center">
+                        <li class="nav-item dropdown bore" onmouseover="show()" onmouseout="hid()">
+                            <a class="nav-link dropdown-toggle" href="#" id="shopout" role="button"
+                                data-bs-toggle="dropdown" aria-expanded="false">
+                                <b>Shop</b>
+                                <span class="tmenu_item_text"></span>
+                            </a>
+
+                        </li>
+                        <li class="nav-item bore">
+                            <a class="nav-link" href="#">The Ultimate Sail <span class="tmenu_item_text"></span></a>
+                        </li>
+
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button"
+                                data-bs-toggle="dropdown" aria-expanded="false">
+                                More
+                                <span class="tmenu_item_text"></span>
+                            </a>
+                            <ul class="dropdown-menu px-3" aria-labelledby="navbarDropdownMenuLink" style="    BACKGROUND-COLOR: BLACK;
+                        ">
+                                <br>
+                                <li class="mb-2"><a class="dropdown-item" href="#">Plug-In Sale</a></li>
+                                <li class="mb-2"><a class="dropdown-item" href="#">Float Your boAt</a></li>
+                                <li class="mb-2"><a class="dropdown-item" href="#">Meet the boAtheads</a></li>
+                                <li class="mb-2"><a class="dropdown-item" href="#">Earn Rs.100</a></li>
+                            </ul>
+                        </li>
+                </div>
+            </div>
+            <div class="order-md-4   order-1         p-2 bd-highlight">
+                <div class="d-flex justify-content-start">
+
+
+                    <a href="" class="m-1"><img src="./Assets/IMG/icon1.png" height="21px">
+                        <a href="" class="m-1" id="user"><img src="./Assets/IMG/icon3.png" height="21px"></a>
+
+                        <a href="" class="m-1 position-relative"><img src="./Assets/IMG/icon2.png" height="21px">
+                            <span
+                                class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger">
+                                0
+                                <span class="visually-hidden">unread messages</span>
+                            </span>
+                        </a>
+                </div>
+            </div>
+            <div class="order-md-3 order-3 d-lg-block  d-none   p-2 bd-highlight">
+                <div class="bd-highlight">
+                    <form class="d-flex serach">
+                        <span class="fa fa-search form-control-feedback" style="top: 29px;"></span>></span>
+                        <input class="form-control me-2 rounded-pill  px-5" id="serch" style="height: 40.67px;"
+                            type="search" placeholder="Search..." aria-label="Search">
+                    </form>
+                </div>
+            </div>
+
+        </div>
+        </div>
+        <div class="row d-lg-none d-block" style="width: 101%;margin-inline: 5px;">
+            <div class="order-md-3 order-3 d-block    p-2 bd-highlight">
+                <div class="bd-highlight">
+                    <form class="d-flex serach">
+                        <span class="fa fa-search form-control-feedback" style="top: 86px;"></span>
+                        <input class="form-control me-2 rounded-pill  px-5" id="serch" style="height: 40.67px;"
+                            type="search" placeholder="Search..." aria-label="Search">
+                    </form>
+                </div>
+            </div>
+        </div>
+
+    </nav>
+
+    <div class="collapse" id="navbarToggleExternalContent">
+        <div class="bg-dark p-4">
+            <h5 class="text-white h4">Collapsed content</h5>
+            <span class="text-muted">Toggleable via the navbar brand.</span>
+        </div>
+    </div>
+    <div id="myCanvasNav" class="overlay3" onclick="closeNav()" style="width: 0%; opacity: 0;"></div>
+    <!-- side nav -->
+    <div id="closenav" onclick="closeNav()">
+        <div class="vnav " id="vnav" style="background-color: rgb(0, 0, 0);">
+            <a href="closeNav()">
+                <div>
+                    <ul>
+                        <a href="" id="shopin">
+                            <li>Shop</li>
+                        </a>
+
+                        <a href="">
+                            <li>Pro It Up</li>
+                        </a>
+
+                        <a href="">
+                            <li>Sound Of Champions</li>
+                        </a>
+
+                        </li>
+                        <a href="">
+                            <li>More </li>
+                        </a>
+
+                        </li>
+                        <a href="">
+                            <li>Track Your Order</li>
+                        </a>
+
+
+                        <a href="">
+                            <li>Log in</li>
+                        </a>
+
+                    </ul>
+                    <a href="">
+                        <div class="container d-flex ">
+                            <div class="p-2"><i class="fab fa-twitter"></i></div>
+                            <div class="p-2"><i class="fab fa-facebook-square"></i></div>
+                            <div class="p-2"><i class="fab fa-youtube"></i></div>
+                            <div class="p-2"><i class="fab fa-instagram"></i></div>
+                            <div class="p-2"><i class="fab fa-linkedin"></i></div>
+                        </div>
+                    </a>
+                </div>
+            </a>
+        </div>
+    </div>
+    <div class="container-fluid d-flex-col bg-dark " id="shopitemout" onmouseover="show()"
+        style="  transition-timing-function: linear;  transition: width 4s;">
+        <br>
+        <div class="row pt-4">
+            <div class="col-3">
+                <img src="Assets/img/20_11.png" width="290px" height="145px">
+            </div>
+            <div class="col-3">
+                <img src="Assets/img/20_1.png" width="290px" height="145px">
+            </div>
+            <div class="col-3">
+                <img src="Assets/img/20_2.png" width="290px" height="145px">
+            </div>
+            <div class="col-3">
+                <img src="Assets/img/20_3.png" width="290px" height="145px">
+            </div>
+        </div>
+        <div class="row pt-4">
+            <div class="col-3">
+                <img src="Assets/img/20_4.png" width="290px" height="145px">
+            </div>
+            <div class="col-3">
+                <img src="Assets/img/20_5.png" width="290px" height="145px">
+
+            </div>
+            <div class="col-3">
+                <img src="Assets/img/20_6.png" width="290px" height="145px">
+
+            </div>
+            <div class="col-3">
+                <img src="Assets/img/20_7.png" width="290px" height="145px">
+
+            </div>
+        </div>
+        <div class="row text-center pt-4">
+            <div class="col-4">
+                <img src="Assets/img/20_8.png" width="290px" height="145px">
+            </div>
+            <div class="col-4">
+                <img src="Assets/img/20_9.png" width="290px" height="145px">
+
+            </div>
+            <div class="col-4">
+                <img src="Assets/img/20_10.png" width="290px" height="145px">
+
+            </div>
+
+        </div>
+    </div>
+
+
+    <!-- slider -->
+
+    <div id="carouselExampleControls" class="carousel slide fullpage" data-bs-ride="carousel">
+        <div class="carousel-inner">
+            <div class="carousel-item active">
+                <img src="Assets/IMG/13_1.png" class="d-block w-100" alt="...">
+            </div>
+            <div class="carousel-item">
+                <img src="Assets/IMG/13_2.png" class="d-block w-100" alt="...">
+            </div>
+            <div class="carousel-item">
+                <img src="Assets/IMG/13_3_png.jpg" class="d-block w-100" alt="...">
+            </div>
+            <div class="carousel-item">
+                <img src="Assets/IMG/13_4.png" class="d-block w-100" alt="...">
+            </div>
+            <div class="carousel-item">
+                <img src="Assets/IMG/13_5.png" class="d-block w-100" alt="...">
+            </div>
+        </div>
+        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleControls"
+            data-bs-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Previous</span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleControls"
+            data-bs-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Next</span>
+        </button>
+    </div>
+
+    <!-- line   -->
+
+
+    <div class="pt-4">
+        <p class="text-center" style="font-size: 29px;">
+            <marquee scrollamount="10">
+
+                <span class="text-stroke"></span>
+                <span class="text-white text-bold">SOUND OF CHAMPIONS</span>
+                <span class="text-stroke cng">PLAY LIKE A KING</span>
+                <span class="text-stroke"></span>
+                <span class="text-white"></span>
+                <span class="text-stroke"></span>
+                <span class="text-stroke"></span>
+                <span class="text-stroke"></span>
+
+                <span class="text-stroke"></span>
+                <span class="text-white">SOUND OF CHAMPIONS</span>
+                <span class="text-stroke cng">PLAY LIKE A KING</span>
+                <span class="text-stroke"></span>
+                <span class="text-white"></span>
+                <span class="text-stroke"></span>
+                <span class="text-stroke"></span>
+                <span class="text-stroke"></span>
+
+                <span class="text-stroke"></span>
+                <span class="text-white">SOUND OF CHAMPIONS</span>
+                <span class="text-stroke cng">PLAY LIKE A KING</span>
+                <span class="text-stroke"></span>
+                <span class="text-white"></span>
+                <span class="text-stroke"></span>
+                <span class="text-stroke"></span>
+                <span class="text-stroke"></span>
+
+            </marquee>
+        </p>
+    </div>
+
+    <!-- iframe -->
+
+    <div class="container-fluid ">
+        <video width="100%" height="100%" controls autoplay muted loop preload="none">
+            <source src="https://cdn.shopify.com/s/files/1/0057/8938/4802/files/70_OFF_H.264.mp4?v=1633166498"
+                type="video/mp4">
+            <source src="movie.ogg" type="video/ogg">
+            Your browser does not support the video tag.
+        </video>
+    </div>
+
+
+
+    <!-- card2-slider -->
+
+
+
+    <div class="container-fluid  my-3">
+
+        <div class="container">
+            <h2 class="text-white text-center" style="line-height: 1.2em;
+        font-size: 50px;
+        font-weight: bolder;
+        margin-bottom: 20px;">Upto 75% Off On Best Sellers</h2>
+        </div>
+        <div class="row mx-auto my-auto justify-content-center">
+            <div id="recipeCarousel2" class="carousel carousel2 slide" data-bs-ride="carousel2">
+                <div class="carousel-inner" role="listbox"
+                    style="position: relative;width: 97%;padding: 0px 53px;overflow: hidden;">
+                    <div class="carousel-item active">
+                        <div class="col-4 mx-2">
+                            <div class="card rounded-5 m-5 a"
+                                style="   border: 0px;   width: 365px;  font-size: 16px;border-radius: 10px; ">
+                                <div class="text-center " style="background-color: silver;    border-top-left-radius: 10px;
+                                          border-top-right-radius: 10px;">
+                                    <img src="./Assets/img/30_1.png" height="255px" width="255px" class="" alt="...">
+                                </div>
+                                <div class="card-body" style="  height: 180px;
+                                          flex: 1 1 auto; padding-inline:10px; padding-top:5px ; padding-bottom: 0px;  border-radius: 10px;font-size: 10px;     background-color: #f1f1f1;
+                                          ">
+                                    <div class="text-danger">
+                                        <i class="fas fa-star active"></i>
+                                        <i class="fas fa-star active"></i>
+                                        <i class="fas fa-star active"></i>
+                                        <i class="fas fa-star active"></i>
+                                        <i class="fas fa-star d-inline"></i>
+                                        <h6 class="d-inline text-secondary">14 reviews</h6>
+                                    </div>
+                                    <h5 class="card-title " style="    margin-bottom: 5px;
+                                            font-size: 14px;">Misfit T2000</h5>
+                                    <h5 class="card-title text-danger fw-bold d-inline" style="font-size:14px">
+                                        Rs.1,469.00</h5>
+
+                                    <h5 class="card-text text-secondary text-decoration-line-through d-inline"
+                                        style="font-size: 12px;">Rs.1,469.00
+                                    </h5>
+                                    <ul class="card-text text-decoration-square"
+                                        style="font-size: 12px;  padding-left: 13px;    list-style-type: square;">
+
+                                        <li> Immersive HD sound perfect to party </li>
+                                        <li>on the card title and make up </li>
+                                        <li>the bulk of the card's content.</li>
+                                    </ul>
+                                    <a href="#" class="btn btn-dark rounded-pill px-4" style="    background-color: #000000;
+                                            ">Shop Now</a>
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
+                    <div class="carousel-item">
+                        <div class="col-4 mx-2">
+                            <div class="card rounded-5 m-5 a"
+                                style="   border: 0px;   width: 365px;  font-size: 16px;border-radius: 10px; ">
+                                <div class="text-center " style="background-color: silver;    border-top-left-radius: 10px;
+                                          border-top-right-radius: 10px;">
+                                    <img src="./Assets/img/30_2.png" height="255px" width="255px" class="" alt="...">
+                                </div>
+                                <div class="card-body" style="  height: 180px;
+                                          flex: 1 1 auto; padding-inline:10px; padding-top:5px ; padding-bottom: 0px;  border-radius: 10px;font-size: 10px;     background-color: #f1f1f1;
+                                          ">
+                                    <div class="text-danger">
+                                        <i class="fas fa-star active"></i>
+                                        <i class="fas fa-star active"></i>
+                                        <i class="fas fa-star active"></i>
+                                        <i class="fas fa-star active"></i>
+                                        <i class="fas fa-star d-inline"></i>
+                                        <h6 class="d-inline text-secondary">14 reviews</h6>
+                                    </div>
+                                    <h5 class="card-title " style="    margin-bottom: 5px;
+                                            font-size: 14px;">Misfit T2000</h5>
+                                    <h5 class="card-title text-danger fw-bold d-inline" style="font-size:14px">
+                                        Rs.1,469.00</h5>
+
+                                    <h5 class="card-text text-secondary text-decoration-line-through d-inline"
+                                        style="font-size: 12px;">Rs.1,469.00
+                                    </h5>
+                                    <ul class="card-text text-decoration-square"
+                                        style="font-size: 12px;  padding-left: 13px;    list-style-type: square;">
+
+                                        <li> Immersive HD sound perfect to party </li>
+                                        <li>on the card title and make up </li>
+                                        <li>the bulk of the card's content.</li>
+                                    </ul>
+                                    <a href="#" class="btn btn-dark rounded-pill px-4" style="    background-color: #000000;
+                                            ">Shop Now</a>
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
+                    <div class="carousel-item">
+                        <div class="col-4 mx-2">
+                            <div class="card rounded-5 m-5 a"
+                                style="   border: 0px;   width: 365px;  font-size: 16px;border-radius: 10px; ">
+                                <div class="text-center " style="background-color: silver;    border-top-left-radius: 10px;
+                                          border-top-right-radius: 10px;">
+                                    <img src="./Assets/img/30_3.png" height="255px" width="255px" class="" alt="...">
+                                </div>
+                                <div class="card-body" style="  height: 180px;
+                                          flex: 1 1 auto; padding-inline:10px; padding-top:5px ; padding-bottom: 0px;  border-radius: 10px;font-size: 10px;     background-color: #f1f1f1;
+                                          ">
+                                    <div class="text-danger">
+                                        <i class="fas fa-star active"></i>
+                                        <i class="fas fa-star active"></i>
+                                        <i class="fas fa-star active"></i>
+                                        <i class="fas fa-star active"></i>
+                                        <i class="fas fa-star d-inline"></i>
+                                        <h6 class="d-inline text-secondary">14 reviews</h6>
+                                    </div>
+                                    <h5 class="card-title " style="    margin-bottom: 5px;
+                                            font-size: 14px;">Misfit T2000</h5>
+                                    <h5 class="card-title text-danger fw-bold d-inline" style="font-size:14px">
+                                        Rs.1,469.00</h5>
+
+                                    <h5 class="card-text text-secondary text-decoration-line-through d-inline"
+                                        style="font-size: 12px;">Rs.1,469.00
+                                    </h5>
+                                    <ul class="card-text text-decoration-square"
+                                        style="font-size: 12px;  padding-left: 13px;    list-style-type: square;">
+
+                                        <li> Immersive HD sound perfect to party </li>
+                                        <li>on the card title and make up </li>
+                                        <li>the bulk of the card's content.</li>
+                                    </ul>
+                                    <a href="#" class="btn btn-dark rounded-pill px-4" style="    background-color: #000000;
+                                            ">Shop Now</a>
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
+                    <div class="carousel-item">
+                        <div class="col-4 mx-2">
+                            <div class="card rounded-5 m-5 a"
+                                style="   border: 0px;   width: 365px;  font-size: 16px;border-radius: 10px; ">
+                                <div class="text-center " style="background-color: silver;    border-top-left-radius: 10px;
+                                          border-top-right-radius: 10px;">
+                                    <img src="./Assets/img/30_4.png" height="255px" width="255px" class="" alt="...">
+                                </div>
+                                <div class="card-body" style="  height: 180px;
+                                          flex: 1 1 auto; padding-inline:10px; padding-top:5px ; padding-bottom: 0px;  border-radius: 10px;font-size: 10px;     background-color: #f1f1f1;
+                                          ">
+                                    <div class="text-danger">
+                                        <i class="fas fa-star active"></i>
+                                        <i class="fas fa-star active"></i>
+                                        <i class="fas fa-star active"></i>
+                                        <i class="fas fa-star active"></i>
+                                        <i class="fas fa-star d-inline"></i>
+                                        <h6 class="d-inline text-secondary">14 reviews</h6>
+                                    </div>
+                                    <h5 class="card-title " style="    margin-bottom: 5px;
+                                            font-size: 14px;">Misfit T2000</h5>
+                                    <h5 class="card-title text-danger fw-bold d-inline" style="font-size:14px">
+                                        Rs.1,469.00</h5>
+
+                                    <h5 class="card-text text-secondary text-decoration-line-through d-inline"
+                                        style="font-size: 12px;">Rs.1,469.00
+                                    </h5>
+                                    <ul class="card-text text-decoration-square"
+                                        style="font-size: 12px;  padding-left: 13px;    list-style-type: square;">
+
+                                        <li> Immersive HD sound perfect to party </li>
+                                        <li>on the card title and make up </li>
+                                        <li>the bulk of the card's content.</li>
+                                    </ul>
+                                    <a href="#" class="btn btn-dark rounded-pill px-4" style="    background-color: #000000;
+                                            ">Shop Now</a>
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+                <a class="carousel-control-prev bg-transparent w-aut" href="#recipeCarousel2" role="button"
+                    data-bs-slide="prev">
+                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                </a>
+                <a class="carousel-control-next bg-transparent w-aut" href="#recipeCarousel2" role="button"
+                    data-bs-slide="next">
+                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                </a>
+            </div>
+        </div>
+    </div>
+
+    <!-- card3-slider -->
+
+
+
+    <div class="container-fluid  my-3">
+
+        <div class="container">
+            <h2 class="text-white text-center" style="line-height: 1.2em;
+    font-size: 50px;
+    font-weight: bolder;
+    margin-bottom: 20px;">Prices Like Never Before</h2>
+        </div>
+        <div class="row mx-auto my-auto justify-content-center">
+            <div id="recipeCarousel3" class="carousel carousel3 slide" data-bs-ride="carousel3">
+                <div class="carousel-inner d-flex" role="listbox"
+                    style="position: relative;width: 97%;padding: 0px 53px;overflow: hidden;">
+                    <div class="carousel-item active">
+                        <div class="col-4 mx-2">
+                            <div class="card rounded-5 m-5 a"
+                                style="   border: 0px;   width: 365px;  font-size: 16px;border-radius: 10px; ">
+                                <div class="text-center " style="background-color: silver;    border-top-left-radius: 10px;
+                                      border-top-right-radius: 10px;">
+                                    <img src="./Assets/img/31_1.png" height="255px" width="255px" class="" alt="...">
+                                </div>
+                                <div class="card-body" style="  height: 180px;
+                                      flex: 1 1 auto; padding-inline:10px; padding-top:5px ; padding-bottom: 0px;  border-radius: 10px;font-size: 10px;     background-color: #f1f1f1;
+                                      ">
+                                    <div class="text-danger">
+                                        <i class="fas fa-star active"></i>
+                                        <i class="fas fa-star active"></i>
+                                        <i class="fas fa-star active"></i>
+                                        <i class="fas fa-star active"></i>
+                                        <i class="fas fa-star d-inline"></i>
+                                        <h6 class="d-inline text-secondary">14 reviews</h6>
+                                    </div>
+                                    <h5 class="card-title " style="    margin-bottom: 5px;
+                                        font-size: 14px;">Misfit T2000</h5>
+                                    <h5 class="card-title text-danger fw-bold d-inline" style="font-size:14px">
+                                        Rs.1,469.00</h5>
+
+                                    <h5 class="card-text text-secondary text-decoration-line-through d-inline"
+                                        style="font-size: 12px;">Rs.1,469.00
+                                    </h5>
+                                    <ul class="card-text text-decoration-square"
+                                        style="font-size: 12px;  padding-left: 13px;    list-style-type: square;">
+
+                                        <li> Immersive HD sound perfect to party </li>
+                                        <li>on the card title and make up </li>
+                                        <li>the bulk of the card's content.</li>
+                                    </ul>
+                                    <a href="#" class="btn btn-dark rounded-pill px-4" style="    background-color: #000000;
+                                        ">Shop Now</a>
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
+                    <div class="carousel-item">
+                        <div class="col-4 mx-2">
+                            <div class="card rounded-5 m-5 a"
+                                style="   border: 0px;   width: 365px;  font-size: 16px;border-radius: 10px; ">
+                                <div class="text-center " style="background-color: silver;    border-top-left-radius: 10px;
+                                      border-top-right-radius: 10px;">
+                                    <img src="./Assets/img/31_2.png" height="255px" width="255px" class="" alt="...">
+                                </div>
+                                <div class="card-body" style="  height: 180px;
+                                      flex: 1 1 auto; padding-inline:10px; padding-top:5px ; padding-bottom: 0px;  border-radius: 10px;font-size: 10px;     background-color: #f1f1f1;
+                                      ">
+                                    <div class="text-danger">
+                                        <i class="fas fa-star active"></i>
+                                        <i class="fas fa-star active"></i>
+                                        <i class="fas fa-star active"></i>
+                                        <i class="fas fa-star active"></i>
+                                        <i class="fas fa-star d-inline"></i>
+                                        <h6 class="d-inline text-secondary">14 reviews</h6>
+                                    </div>
+                                    <h5 class="card-title " style="    margin-bottom: 5px;
+                                        font-size: 14px;">Misfit T2000</h5>
+                                    <h5 class="card-title text-danger fw-bold d-inline" style="font-size:14px">
+                                        Rs.1,469.00</h5>
+
+                                    <h5 class="card-text text-secondary text-decoration-line-through d-inline"
+                                        style="font-size: 12px;">Rs.1,469.00
+                                    </h5>
+                                    <ul class="card-text text-decoration-square"
+                                        style="font-size: 12px;  padding-left: 13px;    list-style-type: square;">
+
+                                        <li> Immersive HD sound perfect to party </li>
+                                        <li>on the card title and make up </li>
+                                        <li>the bulk of the card's content.</li>
+                                    </ul>
+                                    <a href="#" class="btn btn-dark rounded-pill px-4" style="    background-color: #000000;
+                                        ">Shop Now</a>
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
+                    <div class="carousel-item">
+                        <div class="col-4 mx-2">
+                            <div class="card rounded-5 m-5 a"
+                                style="   border: 0px;   width: 365px;  font-size: 16px;border-radius: 10px; ">
+                                <div class="text-center " style="background-color: silver;    border-top-left-radius: 10px;
+                                      border-top-right-radius: 10px;">
+                                    <img src="./Assets/img/31_3.png" height="255px" width="255px" class="" alt="...">
+                                </div>
+                                <div class="card-body" style="  height: 180px;
+                                      flex: 1 1 auto; padding-inline:10px; padding-top:5px ; padding-bottom: 0px;  border-radius: 10px;font-size: 10px;     background-color: #f1f1f1;
+                                      ">
+                                    <div class="text-danger">
+                                        <i class="fas fa-star active"></i>
+                                        <i class="fas fa-star active"></i>
+                                        <i class="fas fa-star active"></i>
+                                        <i class="fas fa-star active"></i>
+                                        <i class="fas fa-star d-inline"></i>
+                                        <h6 class="d-inline text-secondary">14 reviews</h6>
+                                    </div>
+                                    <h5 class="card-title " style="    margin-bottom: 5px;
+                                        font-size: 14px;">Misfit T2000</h5>
+                                    <h5 class="card-title text-danger fw-bold d-inline" style="font-size:14px">
+                                        Rs.1,469.00</h5>
+
+                                    <h5 class="card-text text-secondary text-decoration-line-through d-inline"
+                                        style="font-size: 12px;">Rs.1,469.00
+                                    </h5>
+                                    <ul class="card-text text-decoration-square"
+                                        style="font-size: 12px;  padding-left: 13px;    list-style-type: square;">
+
+                                        <li> Immersive HD sound perfect to party </li>
+                                        <li>on the card title and make up </li>
+                                        <li>the bulk of the card's content.</li>
+                                    </ul>
+                                    <a href="#" class="btn btn-dark rounded-pill px-4" style="    background-color: #000000;
+                                        ">Shop Now</a>
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
+                    <div class="carousel-item">
+                        <div class="col-4 mx-2">
+                            <div class="card rounded-5 m-5 a"
+                                style="   border: 0px;   width: 365px;  font-size: 16px;border-radius: 10px; ">
+                                <div class="text-center " style="background-color: silver;    border-top-left-radius: 10px;
+                                      border-top-right-radius: 10px;">
+                                    <img src="./Assets/img/31_4.png" height="255px" width="255px" class="" alt="...">
+                                </div>
+                                <div class="card-body" style="  height: 180px;
+                                      flex: 1 1 auto; padding-inline:10px; padding-top:5px ; padding-bottom: 0px;  border-radius: 10px;font-size: 10px;     background-color: #f1f1f1;
+                                      ">
+                                    <div class="text-danger">
+                                        <i class="fas fa-star active"></i>
+                                        <i class="fas fa-star active"></i>
+                                        <i class="fas fa-star active"></i>
+                                        <i class="fas fa-star active"></i>
+                                        <i class="fas fa-star d-inline"></i>
+                                        <h6 class="d-inline text-secondary">14 reviews</h6>
+                                    </div>
+                                    <h5 class="card-title " style="    margin-bottom: 5px;
+                                        font-size: 14px;">Misfit T2000</h5>
+                                    <h5 class="card-title text-danger fw-bold d-inline" style="font-size:14px">
+                                        Rs.1,469.00</h5>
+
+                                    <h5 class="card-text text-secondary text-decoration-line-through d-inline"
+                                        style="font-size: 12px;">Rs.1,469.00
+                                    </h5>
+                                    <ul class="card-text text-decoration-square"
+                                        style="font-size: 12px;  padding-left: 13px;    list-style-type: square;">
+
+                                        <li> Immersive HD sound perfect to party </li>
+                                        <li>on the card title and make up </li>
+                                        <li>the bulk of the card's content.</li>
+                                    </ul>
+                                    <a href="#" class="btn btn-dark rounded-pill px-4" style="    background-color: #000000;
+                                        ">Shop Now</a>
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
+                    <div class="carousel-item">
+                        <div class="col-4 mx-2">
+                            <div class="card rounded-5 m-5 a"
+                                style="   border: 0px;   width: 365px;  font-size: 16px;border-radius: 10px; ">
+                                <div class="text-center " style="background-color: silver;    border-top-left-radius: 10px;
+                                      border-top-right-radius: 10px;">
+                                    <img src="./Assets/img/31_5.png" height="255px" width="255px" class="" alt="...">
+                                </div>
+                                <div class="card-body" style="  height: 180px;
+                                      flex: 1 1 auto; padding-inline:10px; padding-top:5px ; padding-bottom: 0px;  border-radius: 10px;font-size: 10px;     background-color: #f1f1f1;
+                                      ">
+                                    <div class="text-danger">
+                                        <i class="fas fa-star active"></i>
+                                        <i class="fas fa-star active"></i>
+                                        <i class="fas fa-star active"></i>
+                                        <i class="fas fa-star active"></i>
+                                        <i class="fas fa-star d-inline"></i>
+                                        <h6 class="d-inline text-secondary">14 reviews</h6>
+                                    </div>
+                                    <h5 class="card-title " style="    margin-bottom: 5px;
+                                        font-size: 14px;">Misfit T2000</h5>
+                                    <h5 class="card-title text-danger fw-bold d-inline" style="font-size:14px">
+                                        Rs.1,469.00</h5>
+
+                                    <h5 class="card-text text-secondary text-decoration-line-through d-inline"
+                                        style="font-size: 12px;">Rs.1,469.00
+                                    </h5>
+                                    <ul class="card-text text-decoration-square"
+                                        style="font-size: 12px;  padding-left: 13px;    list-style-type: square;">
+
+                                        <li> Immersive HD sound perfect to party </li>
+                                        <li>on the card title and make up </li>
+                                        <li>the bulk of the card's content.</li>
+                                    </ul>
+                                    <a href="#" class="btn btn-dark rounded-pill px-4" style="    background-color: #000000;
+                                        ">Shop Now</a>
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
+                    <div class="carousel-item">
+                        <div class="col-4 mx-2">
+                            <div class="card rounded-5 m-5 a"
+                                style="   border: 0px;   width: 365px;  font-size: 16px;border-radius: 10px; ">
+                                <div class="text-center " style="background-color: silver;    border-top-left-radius: 10px;
+                                      border-top-right-radius: 10px;">
+                                    <img src="./Assets/img/31_6.png" height="255px" width="255px" class="" alt="...">
+                                </div>
+                                <div class="card-body" style="  height: 180px;
+                                      flex: 1 1 auto; padding-inline:10px; padding-top:5px ; padding-bottom: 0px;  border-radius: 10px;font-size: 10px;     background-color: #f1f1f1;
+                                      ">
+                                    <div class="text-danger">
+                                        <i class="fas fa-star active"></i>
+                                        <i class="fas fa-star active"></i>
+                                        <i class="fas fa-star active"></i>
+                                        <i class="fas fa-star active"></i>
+                                        <i class="fas fa-star d-inline"></i>
+                                        <h6 class="d-inline text-secondary">14 reviews</h6>
+                                    </div>
+                                    <h5 class="card-title " style="    margin-bottom: 5px;
+                                        font-size: 14px;">Misfit T2000</h5>
+                                    <h5 class="card-title text-danger fw-bold d-inline" style="font-size:14px">
+                                        Rs.1,469.00</h5>
+
+                                    <h5 class="card-text text-secondary text-decoration-line-through d-inline"
+                                        style="font-size: 12px;">Rs.1,469.00
+                                    </h5>
+                                    <ul class="card-text text-decoration-square"
+                                        style="font-size: 12px;  padding-left: 13px;    list-style-type: square;">
+
+                                        <li> Immersive HD sound perfect to party </li>
+                                        <li>on the card title and make up </li>
+                                        <li>the bulk of the card's content.</li>
+                                    </ul>
+                                    <a href="#" class="btn btn-dark rounded-pill px-4" style="    background-color: #000000;
+                                        ">Shop Now</a>
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
+                    <div class="carousel-item">
+                        <div class="col-4 mx-2">
+                            <div class="card rounded-5 m-5 a"
+                                style="   border: 0px;   width: 365px;  font-size: 16px;border-radius: 10px; ">
+                                <div class="text-center " style="background-color: silver;    border-top-left-radius: 10px;
+                                      border-top-right-radius: 10px;">
+                                    <img src="./Assets/img/31_7.png" height="255px" width="255px" class="" alt="...">
+                                </div>
+                                <div class="card-body" style="  height: 180px;
+                                      flex: 1 1 auto; padding-inline:10px; padding-top:5px ; padding-bottom: 0px;  border-radius: 10px;font-size: 10px;     background-color: #f1f1f1;
+                                      ">
+                                    <div class="text-danger">
+                                        <i class="fas fa-star active"></i>
+                                        <i class="fas fa-star active"></i>
+                                        <i class="fas fa-star active"></i>
+                                        <i class="fas fa-star active"></i>
+                                        <i class="fas fa-star d-inline"></i>
+                                        <h6 class="d-inline text-secondary">14 reviews</h6>
+                                    </div>
+                                    <h5 class="card-title " style="    margin-bottom: 5px;
+                                        font-size: 14px;">Misfit T2000</h5>
+                                    <h5 class="card-title text-danger fw-bold d-inline" style="font-size:14px">
+                                        Rs.1,469.00</h5>
+
+                                    <h5 class="card-text text-secondary text-decoration-line-through d-inline"
+                                        style="font-size: 12px;">Rs.1,469.00
+                                    </h5>
+                                    <ul class="card-text text-decoration-square"
+                                        style="font-size: 12px;  padding-left: 13px;    list-style-type: square;">
+
+                                        <li> Immersive HD sound perfect to party </li>
+                                        <li>on the card title and make up </li>
+                                        <li>the bulk of the card's content.</li>
+                                    </ul>
+                                    <a href="#" class="btn btn-dark rounded-pill px-4" style="    background-color: #000000;
+                                        ">Shop Now</a>
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
+                    <div class="carousel-item">
+                        <div class="col-4 mx-2">
+                            <div class="card rounded-5 m-5 a"
+                                style="   border: 0px;   width: 365px;  font-size: 16px;border-radius: 10px; ">
+                                <div class="text-center " style="background-color: silver;    border-top-left-radius: 10px;
+                                      border-top-right-radius: 10px;">
+                                    <img src="./Assets/img/31_8.png" height="255px" width="255px" class="" alt="...">
+                                </div>
+                                <div class="card-body" style="  height: 180px;
+                                      flex: 1 1 auto; padding-inline:10px; padding-top:5px ; padding-bottom: 0px;  border-radius: 10px;font-size: 10px;     background-color: #f1f1f1;
+                                      ">
+                                    <div class="text-danger">
+                                        <i class="fas fa-star active"></i>
+                                        <i class="fas fa-star active"></i>
+                                        <i class="fas fa-star active"></i>
+                                        <i class="fas fa-star active"></i>
+                                        <i class="fas fa-star d-inline"></i>
+                                        <h6 class="d-inline text-secondary">14 reviews</h6>
+                                    </div>
+                                    <h5 class="card-title " style="    margin-bottom: 5px;
+                                        font-size: 14px;">Misfit T2000</h5>
+                                    <h5 class="card-title text-danger fw-bold d-inline" style="font-size:14px">
+                                        Rs.1,469.00</h5>
+
+                                    <h5 class="card-text text-secondary text-decoration-line-through d-inline"
+                                        style="font-size: 12px;">Rs.1,469.00
+                                    </h5>
+                                    <ul class="card-text text-decoration-square"
+                                        style="font-size: 12px;  padding-left: 13px;    list-style-type: square;">
+
+                                        <li> Immersive HD sound perfect to party </li>
+                                        <li>on the card title and make up </li>
+                                        <li>the bulk of the card's content.</li>
+                                    </ul>
+                                    <a href="#" class="btn btn-dark rounded-pill px-4" style="    background-color: #000000;
+                                        ">Shop Now</a>
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
+                    <div class="carousel-item">
+                        <div class="col-4 mx-2">
+                            <div class="card rounded-5 m-5 a"
+                                style="   border: 0px;   width: 365px;  font-size: 16px;border-radius: 10px; ">
+                                <div class="text-center " style="background-color: silver;    border-top-left-radius: 10px;
+                                      border-top-right-radius: 10px;">
+                                    <img src="./Assets/img/31_9.png" height="255px" width="255px" class="" alt="...">
+                                </div>
+                                <div class="card-body" style="  height: 180px;
+                                      flex: 1 1 auto; padding-inline:10px; padding-top:5px ; padding-bottom: 0px;  border-radius: 10px;font-size: 10px;     background-color: #f1f1f1;
+                                      ">
+                                    <div class="text-danger">
+                                        <i class="fas fa-star active"></i>
+                                        <i class="fas fa-star active"></i>
+                                        <i class="fas fa-star active"></i>
+                                        <i class="fas fa-star active"></i>
+                                        <i class="fas fa-star d-inline"></i>
+                                        <h6 class="d-inline text-secondary">14 reviews</h6>
+                                    </div>
+                                    <h5 class="card-title " style="    margin-bottom: 5px;
+                                        font-size: 14px;">Misfit T2000</h5>
+                                    <h5 class="card-title text-danger fw-bold d-inline" style="font-size:14px">
+                                        Rs.1,469.00</h5>
+
+                                    <h5 class="card-text text-secondary text-decoration-line-through d-inline"
+                                        style="font-size: 12px;">Rs.1,469.00
+                                    </h5>
+                                    <ul class="card-text text-decoration-square"
+                                        style="font-size: 12px;  padding-left: 13px;    list-style-type: square;">
+
+                                        <li> Immersive HD sound perfect to party </li>
+                                        <li>on the card title and make up </li>
+                                        <li>the bulk of the card's content.</li>
+                                    </ul>
+                                    <a href="#" class="btn btn-dark rounded-pill px-4" style="    background-color: #000000;
+                                        ">Shop Now</a>
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+                <a class="carousel-control-prev bg-transparent w-aut" href="#recipeCarousel3" role="button"
+                    data-bs-slide="prev">
+                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                </a>
+                <a class="carousel-control-next bg-transparent w-aut" href="#recipeCarousel3" role="button"
+                    data-bs-slide="next">
+                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                </a>
+            </div>
+        </div>
+    </div>
+
+
+    <!-- img-slider -->
+
+
+
+    <div class="container-fluid  my-3">
+
+        <div class="container">
+            <h2 class="text-white text-center" style="line-height: 1.2em;
+    font-size: 50px;
+    font-weight: bolder;
+    margin-bottom: 20px;">Upto 75% Off On Earbuds</h2>
+        </div>
+        <div class="row mx-auto my-auto justify-content-center">
+            <div id="recipeCarousel1" class="carousel carousel1 slide" data-bs-ride="carousel">
+                <div class="carousel-inner" role="listbox"
+                    style="position: relative;width: 97%;padding: 0px 53px;overflow: hidden;">
+                    <div class="carousel-item active">
+                        <div class="col-4 mx-2">
+                            <img src="./Assets/img/01_2.png" height="344.55px" width="368px" class="" alt="...">
+                        </div>
+                    </div>
+                    <div class="carousel-item">
+                        <div class="col-4 mx-2">
+                            <img src="./Assets/IMG/01_3.png" height="344.55px" width="368px" class="" alt="...">
+                        </div>
+                    </div>
+                    <div class="carousel-item">
+                        <div class="col-4 mx-2">
+                            <img src="./Assets/IMG/01_4.png" height="344.55px" width="368px" class="" alt="...">
+                        </div>
+                    </div>
+                    <div class="carousel-item">
+                        <div class="col-4 mx-2">
+                            <img src="./Assets/IMG/01_5.png" height="344.55px" width="368px" class="" alt="...">
+                        </div>
+                    </div>
+                    <div class="carousel-item">
+                        <div class="col-4 mx-2">
+                            <img src="./Assets/IMG/01_6.png" height="344.55px" width="368px" class="" alt="...">
+                        </div>
+                    </div>
+                </div>
+                <a class="carousel-control-prev bg-transparent w-aut" href="#recipeCarousel1" role="button"
+                    data-bs-slide="prev">
+                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                </a>
+                <a class="carousel-control-next bg-transparent w-aut" href="#recipeCarousel1" role="button"
+                    data-bs-slide="next">
+                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                </a>
+            </div>
+        </div>
+    </div>
+
+
+
+    <!-- card4-slider -->
+
+    <div class="container mt-5">
+        <div>
+            <h2 class="text-white text-center" style="line-height: 1.2em;
+    font-size: 50px;
+    font-weight: bolder;
+    margin-bottom: 20px;">Upto 75% Off On Earbuds</h2>
+        </div>
+        <div class="row d-flex" style="flex-wrap: nowrap ;    ">
+            <div class="col flex-grow-1">
+                <div class="card rounded-5 m-5 a"
+                    style="   border: 0px;   width: 365px;  font-size: 16px;border-radius: 10px; ">
+                    <div class="text-center " style="background-color: silver;    border-top-left-radius: 10px;
+                      border-top-right-radius: 10px;">
+                        <img src="./Assets/img/31_2.png" height="255px" width="255px" class="" alt="...">
+                    </div>
+                    <div class="card-body" style="  height: 180px;
+                      flex: 1 1 auto; padding-inline:10px; padding-top:5px ; padding-bottom: 0px;  border-radius: 10px;font-size: 10px;     background-color: #f1f1f1;
+                      ">
+                        <div class="text-danger">
+                            <i class="fas fa-star active"></i>
+                            <i class="fas fa-star active"></i>
+                            <i class="fas fa-star active"></i>
+                            <i class="fas fa-star active"></i>
+                            <i class="fas fa-star d-inline"></i>
+                            <h6 class="d-inline text-secondary">14 reviews</h6>
+                        </div>
+                        <h5 class="card-title " style="    margin-bottom: 5px;
+                        font-size: 14px;">Misfit T2000</h5>
+                        <h5 class="card-title text-danger fw-bold d-inline" style="font-size:14px">
+                            Rs.1,469.00</h5>
+
+                        <h5 class="card-text text-secondary text-decoration-line-through d-inline"
+                            style="font-size: 12px;">Rs.1,469.00
+                        </h5>
+                        <ul class="card-text text-decoration-square"
+                            style="font-size: 12px;  padding-left: 13px;    list-style-type: square;">
+
+                            <li> Immersive HD sound perfect to party </li>
+                            <li>on the card title and make up </li>
+                            <li>the bulk of the card's content.</li>
+                        </ul>
+                        <a href="#" class="btn btn-dark rounded-pill px-4" style="    background-color: #000000;
+                        ">Shop Now</a>
+                    </div>
+
+                </div>
+
+            </div>
+            <div class="col flex-grow-1">
+                <div class="card rounded-5 m-5 a"
+                    style="   border: 0px;   width: 365px;  font-size: 16px;border-radius: 10px; ">
+                    <div class="text-center " style="background-color: silver;    border-top-left-radius: 10px;
+                      border-top-right-radius: 10px;">
+                        <img src="./Assets/img/31_2.png" height="255px" width="255px" class="" alt="...">
+                    </div>
+                    <div class="card-body" style="  height: 180px;
+                      flex: 1 1 auto; padding-inline:10px; padding-top:5px ; padding-bottom: 0px;  border-radius: 10px;font-size: 10px;     background-color: #f1f1f1;
+                      ">
+                        <div class="text-danger">
+                            <i class="fas fa-star active"></i>
+                            <i class="fas fa-star active"></i>
+                            <i class="fas fa-star active"></i>
+                            <i class="fas fa-star active"></i>
+                            <i class="fas fa-star d-inline"></i>
+                            <h6 class="d-inline text-secondary">14 reviews</h6>
+                        </div>
+                        <h5 class="card-title " style="    margin-bottom: 5px;
+                        font-size: 14px;">Misfit T2000</h5>
+                        <h5 class="card-title text-danger fw-bold d-inline" style="font-size:14px">
+                            Rs.1,469.00</h5>
+
+                        <h5 class="card-text text-secondary text-decoration-line-through d-inline"
+                            style="font-size: 12px;">Rs.1,469.00
+                        </h5>
+                        <ul class="card-text text-decoration-square"
+                            style="font-size: 12px;  padding-left: 13px;    list-style-type: square;">
+
+                            <li> Immersive HD sound perfect to party </li>
+                            <li>on the card title and make up </li>
+                            <li>the bulk of the card's content.</li>
+                        </ul>
+                        <a href="#" class="btn btn-dark rounded-pill px-4" style="    background-color: #000000;
+                        ">Shop Now</a>
+                    </div>
+
+                </div>
+            </div>
+            <div class="col flex-grow-1">
+                <div class="card rounded-5 m-5 a"
+                    style="   border: 0px;   width: 365px;  font-size: 16px;border-radius: 10px; ">
+                    <div class="text-center " style="background-color: silver;    border-top-left-radius: 10px;
+                      border-top-right-radius: 10px;">
+                        <img src="./Assets/img/31_2.png" height="255px" width="255px" class="" alt="...">
+                    </div>
+                    <div class="card-body" style="  height: 180px;
+                      flex: 1 1 auto; padding-inline:10px; padding-top:5px ; padding-bottom: 0px;  border-radius: 10px;font-size: 10px;     background-color: #f1f1f1;
+                      ">
+                        <div class="text-danger">
+                            <i class="fas fa-star active"></i>
+                            <i class="fas fa-star active"></i>
+                            <i class="fas fa-star active"></i>
+                            <i class="fas fa-star active"></i>
+                            <i class="fas fa-star d-inline"></i>
+                            <h6 class="d-inline text-secondary">14 reviews</h6>
+                        </div>
+                        <h5 class="card-title " style="    margin-bottom: 5px;
+                        font-size: 14px;">Misfit T2000</h5>
+                        <h5 class="card-title text-danger fw-bold d-inline" style="font-size:14px">
+                            Rs.1,469.00</h5>
+
+                        <h5 class="card-text text-secondary text-decoration-line-through d-inline"
+                            style="font-size: 12px;">Rs.1,469.00
+                        </h5>
+                        <ul class="card-text text-decoration-square"
+                            style="font-size: 12px;  padding-left: 13px;    list-style-type: square;">
+
+                            <li> Immersive HD sound perfect to party </li>
+                            <li>on the card title and make up </li>
+                            <li>the bulk of the card's content.</li>
+                        </ul>
+                        <a href="#" class="btn btn-dark rounded-pill px-4" style="    background-color: #000000;
+                        ">Shop Now</a>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- full slider -->
+
+    <div class="container-fluid mt-5 " style="background-color:#494949 ">
+        <div>
+            <p class="p-1  text-center " style="font-weight: 500; padding-bottom:0px ; font-size:50px;color:#FFFFFF">New
+                Launches</p>
+        </div>
+        <div id="carouselExampleFade" class="carousel slide carousel-fade" data-bs-ride="carousel" style="    position: relative;
+text-align: -webkit-center;">
+            <div class="carousel-inner">
+                <div class="carousel-item active">
+
+                    <div class="card mb-3 text-center " style="width: 1130px;  background-color: #cccccc;">
+                        <div class="row g-0">
+                            <div class="col-md-5">
+                                <img src="Assets/IMG/33_1.png" class="img-fluid rounded-circle" width="300px"
+                                    style="padding: 20px;" alt="...">
+                            </div>
+                            <div class="col-md-7">
+                                <div class="card-body p-5">
+                                    <h5 class="card-title fw-bolder" style="font-size: 17px;">Misfit T30</h5>
+                                    <p class="card-text text-start" style="font-size: 17px;">The seamlessly sleek,
+                                        inside
+                                        out - Misfit T30&nbsp;mens trimmer is so much more than what meets the eye! Its
+                                        ergonomic design, stainless steel blades, 60 minutes of cordless usage and 4
+                                        guiding
+                                        combs make this trimmer a steal deal for sure! Oh, and did we mention that it is
+                                        an
+                                        absolute looker!</p>
+                                    <p class="card-text"><a href="#"
+                                            class="badge rounded-pill px-5  py-2 text-light text-decoration-none"
+                                            style=" background-color:red; font-size: 13px;">SHOP NOW</a></p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="carousel-item">
+                    <div class="card mb-3 text-center " style="width: 1130px;  background-color: #cccccc;">
+                        <div class="row g-0">
+                            <div class="col-md-5">
+                                <img src="Assets/IMG/33_2.png" class="img-fluid rounded-circle" width="300px"
+                                    style="padding: 20px;" alt="...">
+                            </div>
+                            <div class="col-md-7">
+                                <div class="card-body p-5">
+                                    <h5 class="card-title fw-bolder" style="font-size: 17px;">Misfit T50 Lite</h5>
+                                    <p class="card-text text-start" style="font-size: 17px;">Making grooming delightful,
+                                        one
+                                        feature at a time - the Misfit T50 Lite is the best trimmer for men comes with
+                                        40
+                                        length settings, stainless steel blades, and up to 120 minutes of battery
+                                        runtime.
+                                        Wait, we’re not done here! The built-in safety lock makes it your best travel
+                                        buddy
+                                        and the ergonomic design surely adds more to the sleek look. We know you’re
+                                        excited
+                                        already!</p>
+                                    <p class="card-text"><a href="#"
+                                            class="badge rounded-pill px-5  py-2 text-light text-decoration-none"
+                                            style=" background-color:red; font-size: 13px;">SHOP NOW</a></p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="carousel-item">
+                    <div class="card mb-3 text-center " style="width: 1130px;  background-color: #cccccc;">
+                        <div class="row g-0">
+                            <div class="col-md-5">
+                                <img src="Assets/IMG/33_3.png" class="img-fluid rounded-circle" width="300px"
+                                    style="padding: 20px ;" alt="...">
+                            </div>
+                            <div class="col-md-7">
+                                <div class="card-body p-5">
+                                    <h5 class="card-title fw-bolder" style="font-size: 17px;">Misfit t150</h5>
+                                    <p class="card-text text-start" style="font-size: 17px;">Want swift grooming
+                                        sessions on
+                                        a budget? The IPX7 water resistance, titanium blade and digital display of the
+                                        Misfit T150 trimmer are here to make effortless grooming an everyday thing for
+                                        you.
+                                        The 45 length settings of the trimmer make sure to quirk up your grooming style,
+                                        and
+                                        90 minutes of cordless trimming let you groom on, and on, and on to your heart’s
+                                        content. Find a better grooming partner than this, we’ll wait!</p>
+                                    <p class="card-text"><a href="#"
+                                            class="badge rounded-pill px-5  py-2 text-light text-decoration-none"
+                                            style=" background-color:red; font-size: 13px;">SHOP NOW</a></p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="carousel-item">
+                    <div class="card mb-3 text-center " style="width: 1130px;  background-color: #cccccc;">
+                        <div class="row g-0">
+                            <div class="col-md-5">
+                                <img src="Assets/IMG/33_4.png" class="img-fluid rounded-circle" width="300px"
+                                    style="padding: 20px;" alt="...">
+                            </div>
+                            <div class="col-md-7">
+                                <div class="card-body p-5">
+                                    <h5 class="card-title fw-bolder" style="font-size: 17px;">Airdopes 452</h5>
+                                    <p class="card-text text-start" style="font-size: 17px;">It’s time to up the game
+                                        when
+                                        you have Airdopes 452 by your side. Equipped with our BEAST™️ mode for low
+                                        latency;
+                                        ENx™️ tech for crystal clear voice delivery and IWP™️ tech for seamless pairing,
+                                        this packs a punch! Apart from these, it also offers ASAP™️ Charge, Touch
+                                        Controls
+                                        as well as IPX4 Water Resistance for an all-round true wireless experience.</p>
+                                    <p class="card-text"><a href="#"
+                                            class="badge rounded-pill px-5  py-2 text-light text-decoration-none"
+                                            style=" background-color:red; font-size: 13px;">SHOP NOW</a></p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleFade"
+                data-bs-slide="prev">
+                <span class="carousel-control-prev-icon text-danger" aria-hidden="true"></span>
+                <span class="visually-hidden">Previous</span>
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleFade"
+                data-bs-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Next</span>
+            </button>
+        </div>
+    </div>
+
+
+    <!-- card5-slider -->
+
+
+
+    <div class="container-fluid  my-3">
+
+        <div class="container">
+            <h2 class="text-white text-center" style="line-height: 1.2em;
+    font-size: 50px;
+    font-weight: bolder;
+    margin-bottom: 20px;">Upto 75% Off On Top Wireless</h2>
+        </div>
+        <div class="row mx-auto my-auto justify-content-center">
+            <div id="recipeCarousel5" class="carousel carousel5 slide" data-bs-ride="carousel5">
+                <div class="carousel-inner d-flex" role="listbox"
+                    style="position: relative;width: 97%;padding: 0px 53px;overflow: hidden;">
+                    <div class="carousel-item active">
+                        <div class="col-4 mx-2">
+                            <div class="card rounded-5 m-5 a"
+                                style="   border: 0px;   width: 365px;  font-size: 16px;border-radius: 10px; ">
+                                <div class="text-center " style="background-color: silver;    border-top-left-radius: 10px;
+                                      border-top-right-radius: 10px;">
+                                    <img src="./Assets/img/31_1.png" height="255px" width="255px" class="" alt="...">
+                                </div>
+                                <div class="card-body" style="  height: 180px;
+                                      flex: 1 1 auto; padding-inline:10px; padding-top:5px ; padding-bottom: 0px;  border-radius: 10px;font-size: 10px;     background-color: #f1f1f1;
+                                      ">
+                                    <div class="text-danger">
+                                        <i class="fas fa-star active"></i>
+                                        <i class="fas fa-star active"></i>
+                                        <i class="fas fa-star active"></i>
+                                        <i class="fas fa-star active"></i>
+                                        <i class="fas fa-star d-inline"></i>
+                                        <h6 class="d-inline text-secondary">14 reviews</h6>
+                                    </div>
+                                    <h5 class="card-title " style="    margin-bottom: 5px;
+                                        font-size: 14px;">Misfit T2000</h5>
+                                    <h5 class="card-title text-danger fw-bold d-inline" style="font-size:14px">
+                                        Rs.1,469.00</h5>
+
+                                    <h5 class="card-text text-secondary text-decoration-line-through d-inline"
+                                        style="font-size: 12px;">Rs.1,469.00
+                                    </h5>
+                                    <ul class="card-text text-decoration-square"
+                                        style="font-size: 12px;  padding-left: 13px;    list-style-type: square;">
+
+                                        <li> Immersive HD sound perfect to party </li>
+                                        <li>on the card title and make up </li>
+                                        <li>the bulk of the card's content.</li>
+                                    </ul>
+                                    <a href="#" class="btn btn-dark rounded-pill px-4" style="    background-color: #000000;
+                                        ">Shop Now</a>
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
+                    <div class="carousel-item">
+                        <div class="col-4 mx-2">
+                            <div class="card rounded-5 m-5 a"
+                                style="   border: 0px;   width: 365px;  font-size: 16px;border-radius: 10px; ">
+                                <div class="text-center " style="background-color: silver;    border-top-left-radius: 10px;
+                                      border-top-right-radius: 10px;">
+                                    <img src="./Assets/img/31_2.png" height="255px" width="255px" class="" alt="...">
+                                </div>
+                                <div class="card-body" style="  height: 180px;
+                                      flex: 1 1 auto; padding-inline:10px; padding-top:5px ; padding-bottom: 0px;  border-radius: 10px;font-size: 10px;     background-color: #f1f1f1;
+                                      ">
+                                    <div class="text-danger">
+                                        <i class="fas fa-star active"></i>
+                                        <i class="fas fa-star active"></i>
+                                        <i class="fas fa-star active"></i>
+                                        <i class="fas fa-star active"></i>
+                                        <i class="fas fa-star d-inline"></i>
+                                        <h6 class="d-inline text-secondary">14 reviews</h6>
+                                    </div>
+                                    <h5 class="card-title " style="    margin-bottom: 5px;
+                                        font-size: 14px;">Misfit T2000</h5>
+                                    <h5 class="card-title text-danger fw-bold d-inline" style="font-size:14px">
+                                        Rs.1,469.00</h5>
+
+                                    <h5 class="card-text text-secondary text-decoration-line-through d-inline"
+                                        style="font-size: 12px;">Rs.1,469.00
+                                    </h5>
+                                    <ul class="card-text text-decoration-square"
+                                        style="font-size: 12px;  padding-left: 13px;    list-style-type: square;">
+
+                                        <li> Immersive HD sound perfect to party </li>
+                                        <li>on the card title and make up </li>
+                                        <li>the bulk of the card's content.</li>
+                                    </ul>
+                                    <a href="#" class="btn btn-dark rounded-pill px-4" style="    background-color: #000000;
+                                        ">Shop Now</a>
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
+                    <div class="carousel-item">
+                        <div class="col-4 mx-2">
+                            <div class="card rounded-5 m-5 a"
+                                style="   border: 0px;   width: 365px;  font-size: 16px;border-radius: 10px; ">
+                                <div class="text-center " style="background-color: silver;    border-top-left-radius: 10px;
+                                      border-top-right-radius: 10px;">
+                                    <img src="./Assets/img/31_3.png" height="255px" width="255px" class="" alt="...">
+                                </div>
+                                <div class="card-body" style="  height: 180px;
+                                      flex: 1 1 auto; padding-inline:10px; padding-top:5px ; padding-bottom: 0px;  border-radius: 10px;font-size: 10px;     background-color: #f1f1f1;
+                                      ">
+                                    <div class="text-danger">
+                                        <i class="fas fa-star active"></i>
+                                        <i class="fas fa-star active"></i>
+                                        <i class="fas fa-star active"></i>
+                                        <i class="fas fa-star active"></i>
+                                        <i class="fas fa-star d-inline"></i>
+                                        <h6 class="d-inline text-secondary">14 reviews</h6>
+                                    </div>
+                                    <h5 class="card-title " style="    margin-bottom: 5px;
+                                        font-size: 14px;">Misfit T2000</h5>
+                                    <h5 class="card-title text-danger fw-bold d-inline" style="font-size:14px">
+                                        Rs.1,469.00</h5>
+
+                                    <h5 class="card-text text-secondary text-decoration-line-through d-inline"
+                                        style="font-size: 12px;">Rs.1,469.00
+                                    </h5>
+                                    <ul class="card-text text-decoration-square"
+                                        style="font-size: 12px;  padding-left: 13px;    list-style-type: square;">
+
+                                        <li> Immersive HD sound perfect to party </li>
+                                        <li>on the card title and make up </li>
+                                        <li>the bulk of the card's content.</li>
+                                    </ul>
+                                    <a href="#" class="btn btn-dark rounded-pill px-4" style="    background-color: #000000;
+                                        ">Shop Now</a>
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
+                    <div class="carousel-item">
+                        <div class="col-4 mx-2">
+                            <div class="card rounded-5 m-5 a"
+                                style="   border: 0px;   width: 365px;  font-size: 16px;border-radius: 10px; ">
+                                <div class="text-center " style="background-color: silver;    border-top-left-radius: 10px;
+                                      border-top-right-radius: 10px;">
+                                    <img src="./Assets/img/31_4.png" height="255px" width="255px" class="" alt="...">
+                                </div>
+                                <div class="card-body" style="  height: 180px;
+                                      flex: 1 1 auto; padding-inline:10px; padding-top:5px ; padding-bottom: 0px;  border-radius: 10px;font-size: 10px;     background-color: #f1f1f1;
+                                      ">
+                                    <div class="text-danger">
+                                        <i class="fas fa-star active"></i>
+                                        <i class="fas fa-star active"></i>
+                                        <i class="fas fa-star active"></i>
+                                        <i class="fas fa-star active"></i>
+                                        <i class="fas fa-star d-inline"></i>
+                                        <h6 class="d-inline text-secondary">14 reviews</h6>
+                                    </div>
+                                    <h5 class="card-title " style="    margin-bottom: 5px;
+                                        font-size: 14px;">Misfit T2000</h5>
+                                    <h5 class="card-title text-danger fw-bold d-inline" style="font-size:14px">
+                                        Rs.1,469.00</h5>
+
+                                    <h5 class="card-text text-secondary text-decoration-line-through d-inline"
+                                        style="font-size: 12px;">Rs.1,469.00
+                                    </h5>
+                                    <ul class="card-text text-decoration-square"
+                                        style="font-size: 12px;  padding-left: 13px;    list-style-type: square;">
+
+                                        <li> Immersive HD sound perfect to party </li>
+                                        <li>on the card title and make up </li>
+                                        <li>the bulk of the card's content.</li>
+                                    </ul>
+                                    <a href="#" class="btn btn-dark rounded-pill px-4" style="    background-color: #000000;
+                                        ">Shop Now</a>
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
+                   
+
+                </div>
+                <a class="carousel-control-prev bg-transparent w-aut" href="#recipeCarousel5" role="button"
+                    data-bs-slide="prev">
+                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                </a>
+                <a class="carousel-control-next bg-transparent w-aut" href="#recipeCarousel5" role="button"
+                    data-bs-slide="next">
+                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                </a>
+            </div>
+        </div>
+    </div>
+    
+
+ 
+    <!-- card6-slider -->
+
+
+
+    <div class="container-fluid  my-3">
+
+        <div class="container">
+            <h2 class="text-white text-center" style="line-height: 1.2em;
+    font-size: 50px;
+    font-weight: bolder;
+    margin-bottom: 20px;">Upto 75% Off On Top Wired</h2>
+        </div>
+        <div class="row mx-auto my-auto justify-content-center">
+            <div id="recipeCarousel6" class="carousel carousel6 slide" data-bs-ride="carousel6">
+                <div class="carousel-inner d-flex" role="listbox"
+                    style="position: relative;width: 97%;padding: 0px 53px;overflow: hidden;">
+                    <div class="carousel-item active">
+                        <div class="col-4 mx-2">
+                            <div class="card rounded-5 m-5 a"
+                                style="   border: 0px;   width: 365px;  font-size: 16px;border-radius: 10px; ">
+                                <div class="text-center " style="background-color: silver;    border-top-left-radius: 10px;
+                                      border-top-right-radius: 10px;">
+                                    <img src="./Assets/img/31_1.png" height="255px" width="255px" class="" alt="...">
+                                </div>
+                                <div class="card-body" style="  height: 180px;
+                                      flex: 1 1 auto; padding-inline:10px; padding-top:5px ; padding-bottom: 0px;  border-radius: 10px;font-size: 10px;     background-color: #f1f1f1;
+                                      ">
+                                    <div class="text-danger">
+                                        <i class="fas fa-star active"></i>
+                                        <i class="fas fa-star active"></i>
+                                        <i class="fas fa-star active"></i>
+                                        <i class="fas fa-star active"></i>
+                                        <i class="fas fa-star d-inline"></i>
+                                        <h6 class="d-inline text-secondary">14 reviews</h6>
+                                    </div>
+                                    <h5 class="card-title " style="    margin-bottom: 5px;
+                                        font-size: 14px;">Misfit T2000</h5>
+                                    <h5 class="card-title text-danger fw-bold d-inline" style="font-size:14px">
+                                        Rs.1,469.00</h5>
+
+                                    <h5 class="card-text text-secondary text-decoration-line-through d-inline"
+                                        style="font-size: 12px;">Rs.1,469.00
+                                    </h5>
+                                    <ul class="card-text text-decoration-square"
+                                        style="font-size: 12px;  padding-left: 13px;    list-style-type: square;">
+
+                                        <li> Immersive HD sound perfect to party </li>
+                                        <li>on the card title and make up </li>
+                                        <li>the bulk of the card's content.</li>
+                                    </ul>
+                                    <a href="#" class="btn btn-dark rounded-pill px-4" style="    background-color: #000000;
+                                        ">Shop Now</a>
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
+                    <div class="carousel-item">
+                        <div class="col-4 mx-2">
+                            <div class="card rounded-5 m-5 a"
+                                style="   border: 0px;   width: 365px;  font-size: 16px;border-radius: 10px; ">
+                                <div class="text-center " style="background-color: silver;    border-top-left-radius: 10px;
+                                      border-top-right-radius: 10px;">
+                                    <img src="./Assets/img/31_2.png" height="255px" width="255px" class="" alt="...">
+                                </div>
+                                <div class="card-body" style="  height: 180px;
+                                      flex: 1 1 auto; padding-inline:10px; padding-top:5px ; padding-bottom: 0px;  border-radius: 10px;font-size: 10px;     background-color: #f1f1f1;
+                                      ">
+                                    <div class="text-danger">
+                                        <i class="fas fa-star active"></i>
+                                        <i class="fas fa-star active"></i>
+                                        <i class="fas fa-star active"></i>
+                                        <i class="fas fa-star active"></i>
+                                        <i class="fas fa-star d-inline"></i>
+                                        <h6 class="d-inline text-secondary">14 reviews</h6>
+                                    </div>
+                                    <h5 class="card-title " style="    margin-bottom: 5px;
+                                        font-size: 14px;">Misfit T2000</h5>
+                                    <h5 class="card-title text-danger fw-bold d-inline" style="font-size:14px">
+                                        Rs.1,469.00</h5>
+
+                                    <h5 class="card-text text-secondary text-decoration-line-through d-inline"
+                                        style="font-size: 12px;">Rs.1,469.00
+                                    </h5>
+                                    <ul class="card-text text-decoration-square"
+                                        style="font-size: 12px;  padding-left: 13px;    list-style-type: square;">
+
+                                        <li> Immersive HD sound perfect to party </li>
+                                        <li>on the card title and make up </li>
+                                        <li>the bulk of the card's content.</li>
+                                    </ul>
+                                    <a href="#" class="btn btn-dark rounded-pill px-4" style="    background-color: #000000;
+                                        ">Shop Now</a>
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
+                    <div class="carousel-item">
+                        <div class="col-4 mx-2">
+                            <div class="card rounded-5 m-5 a"
+                                style="   border: 0px;   width: 365px;  font-size: 16px;border-radius: 10px; ">
+                                <div class="text-center " style="background-color: silver;    border-top-left-radius: 10px;
+                                      border-top-right-radius: 10px;">
+                                    <img src="./Assets/img/31_3.png" height="255px" width="255px" class="" alt="...">
+                                </div>
+                                <div class="card-body" style="  height: 180px;
+                                      flex: 1 1 auto; padding-inline:10px; padding-top:5px ; padding-bottom: 0px;  border-radius: 10px;font-size: 10px;     background-color: #f1f1f1;
+                                      ">
+                                    <div class="text-danger">
+                                        <i class="fas fa-star active"></i>
+                                        <i class="fas fa-star active"></i>
+                                        <i class="fas fa-star active"></i>
+                                        <i class="fas fa-star active"></i>
+                                        <i class="fas fa-star d-inline"></i>
+                                        <h6 class="d-inline text-secondary">14 reviews</h6>
+                                    </div>
+                                    <h5 class="card-title " style="    margin-bottom: 5px;
+                                        font-size: 14px;">Misfit T2000</h5>
+                                    <h5 class="card-title text-danger fw-bold d-inline" style="font-size:14px">
+                                        Rs.1,469.00</h5>
+
+                                    <h5 class="card-text text-secondary text-decoration-line-through d-inline"
+                                        style="font-size: 12px;">Rs.1,469.00
+                                    </h5>
+                                    <ul class="card-text text-decoration-square"
+                                        style="font-size: 12px;  padding-left: 13px;    list-style-type: square;">
+
+                                        <li> Immersive HD sound perfect to party </li>
+                                        <li>on the card title and make up </li>
+                                        <li>the bulk of the card's content.</li>
+                                    </ul>
+                                    <a href="#" class="btn btn-dark rounded-pill px-4" style="    background-color: #000000;
+                                        ">Shop Now</a>
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
+                    <div class="carousel-item">
+                        <div class="col-4 mx-2">
+                            <div class="card rounded-5 m-5 a"
+                                style="   border: 0px;   width: 365px;  font-size: 16px;border-radius: 10px; ">
+                                <div class="text-center " style="background-color: silver;    border-top-left-radius: 10px;
+                                      border-top-right-radius: 10px;">
+                                    <img src="./Assets/img/31_4.png" height="255px" width="255px" class="" alt="...">
+                                </div>
+                                <div class="card-body" style="  height: 180px;
+                                      flex: 1 1 auto; padding-inline:10px; padding-top:5px ; padding-bottom: 0px;  border-radius: 10px;font-size: 10px;     background-color: #f1f1f1;
+                                      ">
+                                    <div class="text-danger">
+                                        <i class="fas fa-star active"></i>
+                                        <i class="fas fa-star active"></i>
+                                        <i class="fas fa-star active"></i>
+                                        <i class="fas fa-star active"></i>
+                                        <i class="fas fa-star d-inline"></i>
+                                        <h6 class="d-inline text-secondary">14 reviews</h6>
+                                    </div>
+                                    <h5 class="card-title " style="    margin-bottom: 5px;
+                                        font-size: 14px;">Misfit T2000</h5>
+                                    <h5 class="card-title text-danger fw-bold d-inline" style="font-size:14px">
+                                        Rs.1,469.00</h5>
+
+                                    <h5 class="card-text text-secondary text-decoration-line-through d-inline"
+                                        style="font-size: 12px;">Rs.1,469.00
+                                    </h5>
+                                    <ul class="card-text text-decoration-square"
+                                        style="font-size: 12px;  padding-left: 13px;    list-style-type: square;">
+
+                                        <li> Immersive HD sound perfect to party </li>
+                                        <li>on the card title and make up </li>
+                                        <li>the bulk of the card's content.</li>
+                                    </ul>
+                                    <a href="#" class="btn btn-dark rounded-pill px-4" style="    background-color: #000000;
+                                        ">Shop Now</a>
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
+                   
+
+                </div>
+                <a class="carousel-control-prev bg-transparent w-aut" href="#recipeCarousel6" role="button"
+                    data-bs-slide="prev">
+                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                </a>
+                <a class="carousel-control-next bg-transparent w-aut" href="#recipeCarousel6" role="button"
+                    data-bs-slide="next">
+                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                </a>
+            </div>
+        </div>
+    </div>
+    
+
+ 
+
+
+
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha38
+    -MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+    <!-- first -->
+    <script>
+        let items = document.querySelectorAll('.carousel1 .carousel-item')
+        console.log(items)
+        items.forEach((el) => {
+            const minPerSlide = 3
+            let next = el.nextElementSibling
+            for (var i = 1; i < minPerSlide; i++) {
+                console.log(!next)
+                if (!next) {
+                    // wrap carousel by using first child
+                    next = items[0]
+                }
+                let cloneChild = next.cloneNode(true)
+                el.appendChild(cloneChild.children[0])
+                next = next.nextElementSibling
+            }
+        })
+
+    </script>
+    <!-- second -->
+    <script>
+        let items1 = document.querySelectorAll('.carousel2 .carousel-item')
+        console.log(items1)
+        items1.forEach((el) => {
+            const minPerSlide = 3
+            let next1 = el.nextElementSibling
+            for (var i = 1; i < minPerSlide; i++) {
+                console.log(!next1)
+                if (!next1) {
+                    // wrap carousel by using first child
+                    next1 = items1[0]
+                }
+                let cloneChild = next1.cloneNode(true)
+                el.appendChild(cloneChild.children[0])
+                next = next1.nextElementSibling
+            }
+        })
+
+    </script>
+    <!-- card 3 -->
+    <script>
+        let items3 = document.querySelectorAll('.carousel3 .carousel-item')
+        console.log(items3)
+        items3.forEach((el) => {
+            const minPerSlide = 3
+            let next3 = el.nextElementSibling
+            for (var i = 1; i < minPerSlide; i++) {
+                console.log(!next3)
+                if (!next3) {
+                    // wrap carousel by using first child
+                    next1 = items3[0]
+                }
+                let cloneChild = next3.cloneNode(true)
+                el.appendChild(cloneChild.children[0])
+                next = next3.nextElementSibling
+            }
+        })
+
+    </script>
+
+        <!-- card 5 -->
+        <script>
+            let items5 = document.querySelectorAll('.carousel5 .carousel-item')
+            console.log(items5)
+            items5.forEach((el) => {
+                const minPerSlide = 3
+                let next5 = el.nextElementSibling
+                for (var i = 1; i < minPerSlide; i++) {
+                    console.log(!next5)
+                    if (!next5) {
+                        // wrap carousel by using first child
+                        next1 = items5[0]
+                    }
+                    let cloneChild = next5.cloneNode(true)
+                    el.appendChild(cloneChild.children[0])
+                    next = next5.nextElementSibling
+                }
+            })
+    
+        </script>
+         <!-- card 6 -->
+         <script>
+            let items6 = document.querySelectorAll('.carousel6 .carousel-item')
+            console.log(items6)
+            items6.forEach((el) => {
+                const minPerSlide = 3
+                let next6 = el.nextElementSibling
+                for (var i = 1; i < minPerSlide; i++) {
+                    console.log(!next6)
+                    if (!next6) {
+                        // wrap carousel by using first child
+                        next6 = items6[0]
+                    }
+                    let cloneChild = next6.cloneNode(true)
+                    el.appendChild(cloneChild.children[0])
+                    next = next6.nextElementSibling
+                }
+            })
+    
+        </script>
+
+<!-- 5 img -->
+<div class="container-flude mt-5">
+    <div class="row g-0">
+        <div class="col-12 col-sm-6">
+            <div class="row bg-dark position-relative text-center sp1">
+                <img class="gridheadphones" src="Assets/IMG/4_1.jpg "
+                    style='height: 100%; width: 100%; object-fit: contain'>
+                <div class="position-absolute txt" style="top: 65%;left: 0;width: 100%;">
+                    <p class="fw-bold fs-1 text-white">Sports</p>
+                    <p class="fw-500 text-white  infod " style=" display: none;"> Water and sweat resistant, light
+                        and secure fit makes them ideal for outdoor sports or workouts.</p>
+                </div>
+            </div>
+            <div class="row g-0  position-relative text-center">
+
+                <img class="gridheadphones" src="Assets/IMG/4_3.jpg"
+                    style='padding:0 ; height: 100%; width: 100%; object-fit: contain'>
+                <div class="position-absolute txt" style="top: 65%;left: 0;width: 100%;">
+                    <p class="fw-bold fs-1 text-white">Fashion</p>
+                    <p class="infod fw-500 text-white" style=" display: none;">Comfortable for long flights and
+                        drives with ergonomic, snug fit <br>and long lasting battery life</p>
+
+                </div>
+            </div>
+        </div>
+        <div class="col-12 col-sm-6">
+            <div class="row position-relative text-center">
+                <img class="gridheadphones" src="Assets/IMG/4_2.jpg"
+                    style='height: 100%; width: 100%; object-fit: contain'>
+                <div class="position-absolute txt" style="top: 65%;left: 0;width: 100%;">
+                    <p class="fw-bold fs-1 text-white">Travel</p>
+                    <p class="fw-500 text-white" style=" display: none;">Designs that keep up with the latest trends
+                        with vibrant &amp; unique colours.</p>
+
+                </div>
+            </div>
+            <div class="row g-0 position-relative text-center">
+                <div class="col-6 bg-dark">
+                    <img class="gridheadphones" src="Assets/IMG/4_5.jpg"
+                        style='height: 100%; width: 100%; object-fit: contain'>
+                    <div class="position-absolute txt" style="top: 65%;right: 25%;width: 100%;">
+                        <p class="fw-bold fs-1 text-white">All Time <br>Favourites</p>
+                        <p class="fw-500 text-white" style=" display: none;">Your most favourites at the <br>most
+                            incredible prices.</p>
+                    </div>
+                </div>
+                <div class="col-6 ">
+                    <img class="gridheadphones" src="Assets/IMG/4_6.jpg"
+                        style='height: 100%; width: 100%; object-fit: contain'>
+                    <div class="position-absolute txt" style="top: 65%;left: 25%;width: 100%;">
+                        <p class="fw-bold fs-1 text-white">WFH</p>
+                        <p class="fw-500 text-white" style=" display: none;">Comfortable ear wear suitable<br> for
+                            working from home, with <br>battery life that easily lasts an <br>entire day full of
+                            calls.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<br>
+  <!-- fullslider -->
+  <div class="container-flude fullcardslider d-flex justify-content-center mt-5">
+    <div id="carouselExampleInterval" class="carousel slide" data-bs-ride="carousel">
+        <div class="carousel-inner">
+            <div class="carousel-item active" data-bs-interval="10000">
+
+                <div class="card " style="max-width: 1264px;">
+                    <div class="row g-0">
+                        <div class="col-md-7">
+                            <div class="card-body">
+                                <h5 class="card-title  fw-bold display-4">Meet the boAtheads</h5>
+                                <hr class=" fw-bold" style="width: 150px; height: 3px; color: red;">
+                                <div class="boathead-name h4">
+                                    <span class="text-uppercase ">Kiara </span><span
+                                        class="text-uppercase">&nbsp;<span><strong>Advani </strong></span></span>
+                                </div>
+                                <div class="boathead-name h3 fw-bold" style="color: white;">
+                                    <p class="card-text">Groovy.Gorgeous.Glamorous.</p>
+                                </div>
+                                <p class="card-text" style="color: silver;    font-size: 16px;">Ever since making
+                                    her
+                                    first
+                                    appearance as a boAthead for the #GlamourOfTheStars campaign since June 2019,
+                                    Kiara's journey
+                                    with boAthead has been impecable, inspirational and influentional.</p>
+
+                            </div>
+                        </div>
+                        <div class="col-md-5">
+                            <img src="Assets/IMG/6_6.jpg" class="img-fluid rounded-start" alt="...">
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+            <div class="carousel-item" data-bs-interval="2000">
+                <div class="card " style="max-width: 1264px;">
+                    <div class="row g-0">
+                        <div class="col-md-7">
+                            <div class="card-body">
+                                <h5 class="card-title  fw-bold display-4">Meet the boAtheads</h5>
+                                <hr class=" fw-bold" style="width: 150px; height: 3px; color: red;">
+                                <div class="boathead-name h4">
+                                    <span class="text-uppercase ">Shreyas</span><span
+                                        class="text-uppercase">&nbsp;<span><strong>
+                                                Iyer</strong></span></span>
+                                </div>
+                                <div class="boathead-name h3 fw-bold" style="color: white;">
+                                    <p class="card-text">Determined.Dauntless.Defiant</p>
+                                </div>
+                                <p class="card-text" style="color: silver;    font-size: 16px;">It’s a treat to
+                                    watch
+                                    boAthead
+                                    Shreyas Iyer’s determined stance on the field and the way he produces a sweet
+                                    sound
+                                    with his
+                                    bat, just like #SoundOfTheChampions</p>
+
+                            </div>
+                        </div>
+                        <div class="col-md-5">
+                            <img src="Assets/IMG/6_5.jpg" class="img-fluid rounded-start" alt="...">
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+            <div class="carousel-item">
+                <div class="card " style="max-width: 1264px;">
+                    <div class="row g-0">
+                        <div class="col-md-7">
+                            <div class="card-body">
+                                <h5 class="card-title  fw-bold display-4">Meet the boAtheads</h5>
+                                <hr class=" fw-bold" style="width: 150px; height: 3px; color: red;">
+                                <div class="boathead-name h4">
+                                    <span class="text-uppercase ">KL</span><span
+                                        class="text-uppercase">&nbsp;<span><strong>Rahul</strong></span></span>
+                                </div>
+                                <div class="boathead-name h3 fw-bold" style="color: white;">
+                                    <p class="card-text">Classy.Charismatic.Charm.</p>
+                                </div>
+                                <p class="card-text" style="color: silver;    font-size: 16px;">Expect a powerful
+                                    and
+                                    smooth flowing
+                                    drive through the covers when the classy boAthead KL Rahul decides to up the
+                                    ante
+                                    and take
+                                    #SoundOfTheChampions to another new level</p>
+
+                            </div>
+                        </div>
+                        <div class="col-md-5">
+                            <img src="Assets/IMG/6_4.jpg" class="img-fluid rounded-start" alt="...">
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+            <div class="carousel-item " data-bs-interval="10000">
+
+                <div class="card " style="max-width: 1264px;">
+                    <div class="row g-0">
+                        <div class="col-md-7">
+                            <div class="card-body">
+                                <h5 class="card-title  fw-bold display-4">Meet the boAtheads</h5>
+                                <hr class=" fw-bold" style="width: 150px; height: 3px; color: red;">
+                                <div class="boathead-name h4">
+                                    <span class="text-uppercase ">Neha</span><span
+                                        class="text-uppercase">&nbsp;<span><strong>Kakkar</strong></span></span>
+                                </div>
+                                <div class="boathead-name h3 fw-bold" style="color: white;">
+                                    <p class="card-text">Stylish.Superb.Showstopper.</p>
+                                </div>
+                                <p class="card-text" style="color: silver;    font-size: 16px;">boAthead Neha
+                                    Kakkar’s
+                                    stylish
+                                    presence makes the deck stay lit as her captivating voice adds that superb
+                                    boAthead
+                                    spirit to
+                                    #SoulOfTheMusicians and makes everything go groovin’</p>
+
+                            </div>
+                        </div>
+                        <div class="col-md-5">
+                            <img src="Assets/IMG/7_1.png" class="img-fluid rounded-start" alt="...">
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+            <div class="carousel-item" data-bs-interval="2000">
+                <div class="card " style="max-width: 1264px;">
+                    <div class="row g-0">
+                        <div class="col-md-7">
+                            <div class="card-body">
+                                <h5 class="card-title  fw-bold display-4">Meet the boAtheads</h5>
+                                <hr class=" fw-bold" style="width: 150px; height: 3px; color: red;">
+                                <div class="boathead-name h4">
+                                    <span class="text-uppercase ">Kartik</span><span
+                                        class="text-uppercase">&nbsp;<span><strong>Aaryan</strong></span></span>
+                                </div>
+                                <div class="boathead-name h3 fw-bold" style="color: white;">
+                                    <p class="card-text">Cool.Calm.Collected.</p>
+                                </div>
+                                <p class="card-text" style="color: silver;    font-size: 16px;">Keeping the flag of
+                                    #GlamourOfTheStars high and in full flow Kartik Aaryan has added an immense deal
+                                    of
+                                    coolness
+                                    here during his journey as a boAthead</p>
+
+                            </div>
+                        </div>
+                        <div class="col-md-5">
+                            <img src="Assets/IMG/7_2.png" class="img-fluid rounded-start" alt="...">
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+            <div class="carousel-item">
+                <div class="card " style="max-width: 1264px;">
+                    <div class="row g-0">
+                        <div class="col-md-7">
+                            <div class="card-body">
+                                <h5 class="card-title  fw-bold display-4">Meet the boAtheads</h5>
+                                <hr class=" fw-bold" style="width: 150px; height: 3px; color: red;">
+                                <div class="boathead-name h4">
+                                    <span class="text-uppercase ">Shikhar</span><span
+                                        class="text-uppercase">&nbsp;<span><strong>Dhawan</strong></span></span>
+                                </div>
+                                <div class="boathead-name h3 fw-bold" style="color: white;">
+                                    <p class="card-text">Daring.Daredevil.Dapper.</p>
+                                </div>
+                                <p class="card-text" style="color: silver;    font-size: 16px;">When the Gabbar of
+                                    International
+                                    Cricket carries the baton of #SoundOfTheChampions, expect great things in the
+                                    offering. Our hard
+                                    hitting boAthead Shikhar Dhawan creates memorable times with his presence.</p>
+
+                            </div>
+                        </div>
+                        <div class="col-md-5">
+                            <img src="Assets/IMG/7_3.png" class="img-fluid rounded-start" alt="...">
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</div>
+<br>
+
+  <!-- blog -->
+  <div class="container-fluid blog d-flex-column justify-content-center">
+    <div>
+        <h1 class="p-3 fw-bolder display-5 text-center " style="color:#FFFFFF">boAt Blog</h1>
+    </div>
+    <div class="row row-cols-1 row-cols-md-3 g-4 px-5">
+        <div class="col">
+            <div class="card h-100 ">
+                <img src="Assets/IMG/7_1.png" class="inimg" alt="...">
+                <div class="card-body">
+                    <h5 class="card-title fw-bolder">The Ultimate Smartwatch Guide - Get The World On Your Wrist</h5>
+                </div>
+                <div class="card-footer">
+                    <button type="button text-light" class="btn btn-outline-danger">Read more</button>
+                </div>
+            </div>
+        </div>
+        <div class="col">
+            <div class="card h-100">
+                <img src="Assets/IMG/7_2.png" class="inimg" alt="...">
+                <div class="card-body">
+                    <h5 class="card-title fw-bolder">Top Shaving Mistakes You Should Stop Making</h5>
+                </div>
+                <div class="card-footer">
+                    <button type="button text-light" class="btn btn-outline-danger">Read more</button>
+                </div>
+            </div>
+        </div>
+        <div class="col">
+            <div class="card h-100">
+                <img src="Assets/IMG/7_3.png" class="inimg" alt="...">
+                <div class="card-body">
+                    <h5 class="card-title fw-bolder">The Ultimate Sail of the Year is here…Powered by 4 Crazy boAt Launches!</h5>
+                </div>
+                <div class="card-footer">
+                    <button type="button text-light" class="btn btn-outline-danger">Read more</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- line -->
+<div class="redline m-3 ">
+    <img src="Assets/IMG/8.png" width="60%">
+</div>
+<!-- new -->
+<div class="container-fluid slide2 d-flex-column justify-content-center ">
+    <div>
+        <h4 class="mb-2  text-center" style=" font-weight: 700; font-size: 50px; color:#FFFFFF">What They Say About
+            Us:</h4>
+    </div>
+
+    <div class="container-fluid" style="    padding: 30px;">
+        <div class="row ">
+            <div class="col gx-0">
+                <div class="card" style="width: 383px;     border: 0px; ">
+                    <div class="card-body text-center" style="padding:0px; ">
+                        <img src="Assets/IMG/8_1.png" style="width: 300px;" class="" alt="...">
+                        <div class="in" style="    padding: 17px;            ">
+                            <h5 class="card-title fw-bold text-light">"It is value for money, best sound especially
+                                bass"</h5>
+                            <p class="card-text py-4 fw-bold text-light">SAREN MOHIL</p>
+                            <a href="#" class="badge rounded-pill px-4  py-2 bg-light text-dark">SHOP NOW</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col  gx-0">
+                <div class="card" style="width: 383px;     border: 0px; ">
+                    <div class="card-body text-center" style="padding:0px; ">
+                        <img src="Assets/IMG/8_2.png" style="width: 300px;" class="" alt="...">
+                        <div class="in" style="    padding: 17px;            ">
+                            <h5 class="card-title fw-bold text-light">"The battery backup is something unbelievable"
+                            </h5>
+                            <p class="card-text py-4 fw-bold text-light">Namshad K N</p>
+                            <a href="#" class="badge rounded-pill px-4  py-2 bg-light text-dark">SHOP NOW</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col gx-0 ">
+                <div class="card" style="width: 383px;     border: 0px; ">
+                    <div class="card-body text-center" style="padding:0px; ">
+                        <img src="Assets/IMG/8_3.png" style="width: 300px;" class=" " alt="...">
+                        <div class="in" style="    padding: 14.4px;            ">
+                            <h5 class="card-title fw-bold text-light">"Amazing product, great sound quality and the
+                                mic performance is also awesome."</h5>
+                            <p class="card-text py-3 fw-bold text-light">Ashith</p>
+                            <a href="#" class="badge rounded-pill px-4  py-2 bg-light text-dark">SHOP NOW</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div>
+        <div>
+            <h1 class="p-3 fw-bolder display-5 text-center " style="color:#FFFFFF">The boAthead Vibe</h1>
+        </div>
+
+    </div>
+
+    <div class="d-flex-column justify-content-center text-center">
+        <a href="" class="text-decoration-none">
+            <h6 class="text-light border border-danger p-2 d-inline">Show more</h6>
+        </a>
+        <div>
+            <h1 class="p-5 fw-bolder display-4 text-center " style="color:#FFFFFF">In the Press</h1>
+        </div>
+
+        <div class="container comicon py-5">
+            <div class="d-flex justify-content-between">
+                <div class="">
+                    <img src="Assets/IMG/9_9.png" style="height: 77px;
+                margin: -6px;
+                padding: 8px;
+                padding-right: 44px;">
+                </div>
+                <div class="">
+                    <img src="Assets/IMG/9_2.png">
+                </div>
+                <div class="">
+                    <img src="Assets/IMG/9_3.png">
+                </div>
+                <div class="">
+                    <img src="Assets/IMG/9_4.png">
+                </div>
+                <div class="">
+                    <img src="Assets/IMG/9_5.png">
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <div class="d-flex-column justify-content-center text-center">
+        <img src="Assets/IMG/9.png" height="284px">
+    </div>
+
+
+    <!-- line   -->
+
+
+    <div class="pt-4">
+        <p class="text-center" style="font-size: 29px;">
+            <marquee scrollamount="10">
+
+                <span class="text-stroke">India’s No.1 Earwear Audio Brand.</span>
+                <span class="text-white">India’s No.1 Earwear Audio Brand.</span>
+                <span class="text-stroke">India’s No.1 Earwear Audio Brand.</span>
+                <span class="text-stroke">India’s No.1 Earwear Audio Brand.</span>
+                <span class="text-white">India’s No.1 Earwear Audio Brand.</span>
+                <span class="text-stroke">India’s No.1 Earwear Audio Brand.</span>
+                <span class="text-stroke">India’s No.1 Earwear Audio Brand.</span>
+                <span class="text-stroke">India’s No.1 Earwear Audio Brand.</span>
+
+                <span class="text-stroke">India’s No.1 Earwear Audio Brand.</span>
+                <span class="text-white">India’s No.1 Earwear Audio Brand.</span>
+                <span class="text-stroke">India’s No.1 Earwear Audio Brand.</span>
+                <span class="text-stroke">India’s No.1 Earwear Audio Brand.</span>
+                <span class="text-white">India’s No.1 Earwear Audio Brand.</span>
+                <span class="text-stroke">India’s No.1 Earwear Audio Brand.</span>
+                <span class="text-stroke">India’s No.1 Earwear Audio Brand.</span>
+                <span class="text-stroke">India’s No.1 Earwear Audio Brand.</span>
+
+                <span class="text-stroke">India’s No.1 Earwear Audio Brand.</span>
+                <span class="text-white">India’s No.1 Earwear Audio Brand.</span>
+                <span class="text-stroke">India’s No.1 Earwear Audio Brand.</span>
+                <span class="text-stroke">India’s No.1 Earwear Audio Brand.</span>
+                <span class="text-white">India’s No.1 Earwear Audio Brand.</span>
+                <span class="text-stroke">India’s No.1 Earwear Audio Brand.</span>
+                <span class="text-stroke">India’s No.1 Earwear Audio Brand.</span>
+                <span class="text-stroke">India’s No.1 Earwear Audio Brand.</span>
+            </marquee>
+        </p>
+    </div>
+
+</div>
+<div class="container-fluid iconnav  py-4 " style="background: #1c1c1c;padding: 0px;  color: white;">
+    <div class="row d-flex">
+        <div class="col-4">
+            <div class="row">
+                <div class="col-4">
+                    <img src="Assets/IMG/10_1.png" height="30px">
+
+                </div>
+                <div class="col-8">
+                    <p class="fw-700" style="font-size: 16px;    font-weight: 700;
+                    ">Free Shipping</p>
+                </div>
+            </div>
+        </div>
+        <div class="col-4">
+            <div class="row">
+                <div class="col-4">
+                    <img src="Assets/IMG/10_2.png" height="30px">
+                </div>
+                <div class="col-8">
+                    <p class="fw-700 " style="font-size: 16px;    font-weight: 700;
+                    ">Exclusive Deals</p>
+                </div>
+            </div>
+        </div>
+        <div class="col-4">
+            <div class="row">
+                <div class="col-4">
+                    <img src="Assets/IMG/10_3.png" height="30px">
+                </div>
+                <div class="col-8">
+                    <p class="fw-700" style="font-size: 16px;    font-weight: 700;
+                    ">Secure Checkout</p>
+                </div>
+            </div>
+        </div>
+
+    </div>
+</div>
+
+<div class=" text-center" style="background: #2c2c2c;padding:20px 20px;">
+    <p style="line-height: normal;font-size: 12px;max-width: 931px;margin: 0 auto;color: #8f8f8f">India's fastest
+        growing audio & wearables brand. The most incredible range of wireless earphones, earbuds, headphones, smart
+        watches, and home audio. From workouts to adventures, boAt will get you sailing!</p>
+</div>
+
+<!-- footer -->
+<footer class="footer-section">
+    <div class="container">
+
+        <div class="row  pt-5">
+            <div class="col-4">
+                <div>
+                    <img src="Assets/IMG/download.png" height="44px">
+                </div>
+                <div class="py-5 text-light">
+                    <p>Subscribe to email alerts. We promise not to spam your inbox.</p>
+                </div>
+                <div class="row">
+                    <div class="col">
+                        <input type="email" class="" placeholder="Email Address*" style="     HEIGHT: 34PX;
+                        BACKGROUND-COLOR: BLACK;
+                        BORDER-COLOR: #a0a0a0;">
+                    </div>
+                    <div class="col"> <button type="button" class="btn btn-outline-danger">SUBSCRIBE</button></div>
+
+                </div>
+            </div>
+            <div class="col-8 ">
+                <div class="row  ">
+                    <div class="col-4 ">
+                        <H5 class="fw-bolder text-light">SHOP</h5>
+                        <ul>
+                            <li><a href="">True Wireless Earbuds</a></li>
+                            <li><a href="">Wireless Headphones</a></li>
+                            <li><a href=""> Wired Headphones</a></li>
+                            <li><a href="">Wireless Speakers</a></li>
+                            <li><a href="">Home AudioSmart</a></li>
+                            <li><a href="">Mobile Accessories </a></li>
+                            <li><a href=""> Watches</a></li>
+                            <li><a href="">TRebel</a></li>
+                            <li><a href="">Misfit</a></li>
+                            <li><a href=""> Gift Card</a></li>
+                            <li><a href="">Rock In India</a></li>
+                            <li><a href="">Earn Rs.100</a></li>
+                    </div>
+                    <div class="col-4">
+                        <H5 class="fw-bolder text-light">HELP</H5>
+                        <UL>
+                            <li><a href=""> Track Your Order</a></li>
+                            <li><a href="">Warranty & Support</a></li>
+                            <li><a href="">Return Policy</a></li>
+                            <li><a href="">Service Centers</a></li>
+                            <li><a href="">Bulk Order</a></li>
+                            <li><a href="">FAQs</a></li>
+                        </UL>
+                    </div>
+                    <div class="col-4">
+                        <H5 class="fw-bolder text-light">COMPANY</H5>
+                        <ul>
+                            <li><a href="">About boAt</a></li>
+                            <li><a href="">News</a></li>
+                            <li><a href="">Read Our Blog</a></li>
+                            <li><a href="">Social Responsibility</a></li>
+                            <li><a href="">High5boAtheads</a></li>
+                            <li><a href="">Mobile Accessories </a></li>
+                            <li><a href="">Our Partners</a></li>
+                            <li><a href="">Terms of Service</a></li>
+                            <li><a href="">Privacy Policy</a></li>
+                        </ul>
+                    </div>
+                </div>
+
+            </div>
+            <div class="row">
+                <div class="container d-flex ">
+                    <div class="p-2"><i class="fab fa-twitter"></i></div>
+                    <div class="p-2"><i class="fab fa-facebook-square"></i></div>
+                    <div class="p-2"><i class="fab fa-youtube"></i></div>
+                    <div class="p-2"><i class="fab fa-instagram"></i></div>
+                    <div class="p-2"><i class="fab fa-linkedin"></i></div>
+                </div>
+
+            </div>
+            <div class="row">
+                <div class="col-5"><img src="Assets/IMG/11.png"> </div>
+                <div class="col-7">
+                    <div class="row">
+                        <div class="col-4">
+                            <h5 class="text-light fw-bolder">DOWNLOAD THE APP</h5>
+                        </div>
+                        <div class="col-4"><img src="Assets/IMG/11_1.png"></div>
+                        <div class="col-4"><img src="Assets/IMG/11_2.png"></div>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</footer>
+<div class="text-center mt-3">
+
+    <p class="text-light">© 2021 Imagine Marketing Private Limited. All Rights Reserved.</p>
+
+
+</div>
+
+
+
+    <script>
+        function hid() {
+            document.getElementById("shopitemout").style.display = "none";
+        }
+        function show() {
+            x = document.getElementById("shopitemout")
+            x.style.display = "block";
+
+
+        }
+
+        function openNav() {
+            document.getElementById("vnav").style.width = "82%";
+            document.getElementById("closenav").style.width = "100%";
+            document.getElementById("closenav").style.height = "100%";
+
+        }
+
+        /* Set the width of the side navigation to 0 */
+        function closeNav() {
+            document.getElementById("vnav").style.width = "0";
+            document.getElementById("closenav").style.width = "0";
+            document.getElementById("closenav").style.height = "0";
+        }
+
+
+    </script>
+</body>
+
+</html>

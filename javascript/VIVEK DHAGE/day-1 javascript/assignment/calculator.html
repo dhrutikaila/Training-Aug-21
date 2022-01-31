@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+  <meta charset="utf-8">
+  <title>Calculator</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-F3w7mX95PdgyTmZZMECAngseQB83DfGTowi0iMjiWaeVhAn4FJkqJByhZMI3AhiU" crossorigin="anonymous">
+</head>
+<body>
+
+<div class="container mt-5  px-4 py-4 border border-dark bg-light">
+  <form >
+    <div class="d-grid gap-3">
+    <div class="row">
+      <div class="d-flex justify-content-center">
+    <label for="">Please enter first number:</label><br>
+    <input type="number" name="n1" value="enter only numbers" pattern="[0-9]+" id="n1"><br><br>
+  </div>
+</div>
+
+<div class="row">
+  <div class="d-flex justify-content-center mt-auto">
+    <label for="">Please eneter first number:</label><br>
+    <input type="number" name="n1" value="enter only numbers" id="n2"><br><br>
+  </div>
+  </div>
+
+
+    <div class="row">
+      <div class="d-flex justify-content-center">
+    <label for="">Please select operation you want to perform:</label>
+    <input type="radio" name="radio" id="add" value="Addition">Addition</input>
+    <input type="radio" name="radio" id="sub" value="Subtraction">Subtraction</input>
+    <input type="radio" name="radio" id="mul" value="Multiplication">Multiplication</input>
+    <input type="radio" name="radio" id="div" value="Division">Division</input><br><br>
+  </div>
+  </div>
+
+    <div class="row">
+      <div class="d-flex justify-content-center">
+    <input type="text" id="answer1" name="result" value="result " readonly><br><br>
+  </div>
+  </div>
+
+    <div class="row">
+      <div class="d-flex justify-content-center">
+    <input class="border border-primary" style="margin-right:5px" type="button" onclick="op()" name="" value="Calculate">
+    <button class="border border-danger " type="reset" name="button">reset</button>
+  </div>
+  </div>
+
+</div>
+  </form>
+
+</div>
+
+
+  <script type="text/javascript">
+
+  function op(){
+
+    var num1 = document.getElementById("n1").value;
+    var num2 = document.getElementById("n2").value;
+    var ans = document.getElementById("answer1");
+
+    if(document.getElementById("add").checked){
+      ans.value =  parseInt(num1)+parseInt(num2);
+      document.getElementById("answer1").innerHTML=ans;
+    }
+    if(document.getElementById("sub").checked){
+      ans.value =  parseInt(num1)-parseInt(num2);
+      document.getElementById("answer1").innerHTML=ans;
+    }
+    if(document.getElementById("mul").checked){
+      ans.value =  parseInt(num1)*parseInt(num2);
+      document.getElementById("answer1").innerHTML=ans;
+    }
+    if(document.getElementById("div").checked){
+      ans.value =  parseInt(num1)/parseInt(num2);
+      document.getElementById("answer1").innerHTML=ans;
+    }
+  }
+
+
+
+
+  </script>
+
+
+
+
+
+
+
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-/bQdsTh/da6pkI1MST/rWKFNjaCP5gBSY4sEBT38Q/9RBh9AH40zEOg7Hlq2THRZ" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.3/dist/umd/popper.min.js" integrity="sha384-W8fXfP3gkOKtndU4JGtKDvXbO53Wy8SZCQHczT5FMiiqmQfUpWbYdTil/SxwZgAN" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/js/bootstrap.min.js" integrity="sha384-skAcpIdS7UcVUC05LJ9Dxay8AXcDYfBJqt1CJ85S/CFujBsIzCIv+l9liuYLaMQ/" crossorigin="anonymous"></script>
+</body>
+</html>

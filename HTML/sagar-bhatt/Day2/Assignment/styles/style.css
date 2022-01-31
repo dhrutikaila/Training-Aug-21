@@ -1,0 +1,172 @@
+:root {
+  font: 16px "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
+    "Lucida Sans", Arial, sans-serif;
+}
+body {
+  background-color: #313b47;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.container {
+  background-color: #ffffff;
+  border: 1px groove #333;
+  display: flex;
+  flex-wrap: wrap;
+  width: 64vw;
+  padding-bottom: 50px;
+  margin: 20px 0;
+}
+.header {
+  display: flex;
+  flex-flow: column wrap;
+  padding: 50px 50px 20px 50px;
+  width: 100vw;
+}
+.header i {
+  margin-left: 10px;
+}
+.header-top {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+.name {
+  text-transform: capitalize;
+  font-size: 3rem;
+}
+.socials {
+  line-height: 2;
+  font-size: 1.2rem;
+  text-align: right;
+}
+.header-bottom {
+  font-size: 1.3rem;
+  margin-top: 10px;
+}
+.main {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  width: 100vw;
+}
+.main .heading {
+  text-transform: uppercase;
+  font-size: 1.8rem;
+  font-weight: bolder;
+  padding-left: 50px;
+}
+.main .hr {
+  border-bottom: 2px solid #313c4e;
+  margin-top: 5px;
+  margin-bottom: 20px;
+}
+.main .margin {
+  margin-top: 40px;
+}
+.left {
+  display: flex;
+  flex-flow: column wrap;
+  justify-content: flex-start;
+  width: 55%;
+}
+.left .course {
+  text-transform: capitalize;
+  font-size: 1.7rem;
+  font-weight: bolder;
+  padding-left: 50px;
+  margin-bottom: 5px;
+  margin-top: 10px;
+}
+.course:first-child {
+  margin-top: 0;
+}
+.left .college {
+  text-transform: capitalize;
+  font-size: 1.5rem;
+  padding-left: 50px;
+  margin-bottom: 5px;
+}
+.left .info {
+  padding-left: 50px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+.project-title {
+  font-size: 1.3rem;
+  padding: 7px 50px;
+}
+.project-description {
+  font-size: 1.1rem;
+  font-style: italic;
+  color: #313b47;
+  padding: 0 50px;
+  text-align: justify;
+}
+.project-description:last-child {
+  margin-bottom: 0;
+}
+.project-description::before {
+  content: "-";
+  margin-right: 5px;
+}
+.video {
+  margin-top: 10px;
+  align-items: center;
+}
+.video > video {
+  padding: 0 50px;
+  width: 90%;
+  height: auto;
+}
+.right {
+  display: flex;
+  flex-flow: column wrap;
+  justify-content: flex-start;
+  width: 40%;
+}
+.cards {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+  align-items: flex-start;
+  padding: 0 50px;
+}
+.cards > .skills {
+  font-size: 1.2rem;
+  border: 1px solid #989da6;
+  border-radius: 5px;
+  background-color: #989da6;
+  color: white;
+  padding: 5px 10px;
+  margin: 5px;
+}
+.cards > .interests {
+  font-size: 1.2rem;
+  border: 1px solid #989da6;
+  border-radius: 5px;
+  color: black;
+  padding: 5px 10px;
+  margin: 5px;
+}
+.languages {
+  display: flex;
+  flex-flow: column wrap;
+  justify-content: flex-start;
+  align-items: flex-start;
+  padding: 7px 50px;
+}
+.main .title {
+  font-size: 1.3rem;
+}
+.main .description {
+  font-size: 1.1rem;
+  font-style: italic;
+  color: #313b47;
+  margin-bottom: 20px;
+}
+.main > .description:last-child {
+  margin-bottom: 0;
+}

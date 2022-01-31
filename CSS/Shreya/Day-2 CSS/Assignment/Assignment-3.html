@@ -1,0 +1,69 @@
+<!--Create Basic layout of the application which contain header, footer, leftbar and sidebar.
+Header keep brand logo and navigation bar for home, aboutus and contact us. Navigation should work properly.-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Assignment Day-3</title>
+    <style>
+        header{
+            height: 100px;
+            width: auto;
+            background-color:lightcoral;
+        }
+        #logo{
+            background-image: url("logo.png");
+            
+        }
+        .nav li {
+            display: inline-block;
+            font-size: 20px;
+            padding: 40px;
+            text-align: justify;
+            }
+            .menu {
+            float: auto;
+            }
+            .div1{
+                float: left;
+                height: 600px;
+                width: 400px;
+                background-color: lightgrey;
+            }
+            .div2{
+                float:initial;
+                height: 600px;
+                width: auto;
+                background-color: lightseagreen;
+            }
+            
+            .footer{
+                height: 40px;
+                width: auto;
+                background-color: lightgreen;
+            }
+    </style>
+</head>
+<body>
+    <header class="menu">
+        <ul class="nav">
+            <li><a href="#home">Home</a></li>
+            <li><a href="#about">About Us</a></li>
+            <li><a href="#clients">Our Clients</a></li>  
+            <li><a href="#contact">Contact Us</a></li>
+          </ul>
+          <div id="logo">
+
+          </div>
+    </header>
+    <div>
+        <div class="div1"></div>
+        <div class="div2"></div>
+    </div>
+    
+        <footer class="footer">
+    </footer>
+</body>
+</html>

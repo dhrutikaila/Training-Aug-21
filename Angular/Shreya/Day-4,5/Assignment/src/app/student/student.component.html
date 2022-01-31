@@ -1,0 +1,219 @@
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"
+    integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p"
+    crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js"
+    integrity="sha384-cVKIPhGWiC2Al4u+LWgxfKTRIcfu0JTxR+EQDz/bgldoEyl4H0zUF0QKbrJ0EcQF"
+    crossorigin="anonymous"></script>
+<div class="container">
+    <div class="w-auto h-100 bg-secondary pt-1 pb-1">
+        <p class="text-center display-4">Student Registration Form</p>
+    </div>
+    <form action="" [formGroup]="signUp" (ngSubmit)="onSubmit()">
+        <div class="row">
+            <div class="col-lg-4 col-md-4 mt-3 ">
+                <label for="Firstname" class="form-label">First Name </label>
+                <input type="text" class="form-control" id="Firstname" formControlName="firstName" required>
+                <span class="error" *ngIf="firstName?.invalid && firstName?.touched">Firstname must be entered</span>
+            </div>
+            <!-- <span style="color:red" *ngIf="f.firstName.errors?.required">
+                First Name is required
+            </span> -->
+            <!-- <div *ngIf="firstName.errors?.['required']" style="color: red;">
+                Name is required.
+              </div> -->
+            <div class="col-lg-4 col-md-4 mt-3">
+                <label for="Middlename" class="form-label">Middle Name </label>
+                <input type="text" class="form-control" id="Middlename" formControlName="middleName">
+                <span class="error" *ngIf="middleName?.invalid && middleName?.touched">Middlename must be entered</span>
+            </div>
+            <div class="col-lg-4 col-md-4 mt-3">
+                <label for="Lastname" class="form-label">Last Name </label>
+                <input type="text" class="form-control" id="Lastname" formControlName="lastName">
+                <span class="error" *ngIf="lastName?.invalid && lastName?.touched">Lastname must be entered</span>
+            </div>
+            <div class="col-lg-4 col-md-4 mt-3">
+                <label for="DOB" class="form-label">DOB </label>
+                <input type="date" class="form-control" id="DOB" formControlName="dob">
+                <span class="error" *ngIf="dob?.invalid && dob?.touched">Date Of Birth must be entered</span>
+            </div>
+            <div class="col-lg-4 col-md-4 mt-3">
+                <label for="PlaceOfBirth" class="form-label">Place Of Birth</label>
+                <input type="text" class="form-control" id="PlaceOfBirth" formControlName="placeOfBirth">
+                <span class="error" *ngIf="placeOfBirth?.invalid && placeOfBirth?.touched">Pace Of Birth must be entered</span>
+            </div>
+            <div class="col-lg-4 col-md-4 mt-3">
+                <label for="FirstLanguage" class="form-label">First Language</label>
+                <input type="text" class="form-control" id="FirstLanguage" formControlName="firstLanguage">
+                <span class="error" *ngIf="firstLanguage?.invalid && firstLanguage?.touched">FirstLanguage must be entered</span>
+            </div>
+        </div>  
+        <label for="Address" class="form-label mt-3 fs-4">Address Details </label>
+        <div class="row" formGroupName="address">
+            <div class="col-lg-4 col-md-4 mt-3">
+                <label for="City" class="form-label">City </label>
+                <input type="text" class="form-control" id="City" formControlName="city">
+                <span class="error" *ngIf="address?.invalid && address?.touched">City must be entered</span>
+            </div>
+            <div class="col-lg-4 col-md-4 mt-3">
+                <label for="State" class="form-label">State</label>
+                <input type="text" class="form-control" id="State" formControlName="state">
+                <span class="error" *ngIf="address?.invalid && address?.touched">State must be entered</span>
+            </div>
+            <div class="col-lg-4 col-md-4 mt-3">
+                <label for="Country" class="form-label">Country </label>
+                <input type="text" class="form-control" id="Country" formControlName="country">
+                <span class="error" *ngIf="address?.invalid && address?.touched">Country must be entered</span>
+            </div>
+            <div class="col-lg-4 col-md-4 mt-3">
+                <label for="pincode" class="form-label">Pin Code </label>
+                <input type="text" class="form-control" id="pincode" formControlName="pinCode">
+                <span class="error" *ngIf="address?.invalid && address?.touched">PinCode must be entered</span>
+            </div>
+        </div>
+        <label for="Father" class="form-label mt-3 fs-4">Father Details </label>
+        <div class="row" formGroupName="FatherDetails">
+            <div class="col-lg-4 col-md-4 mt-3">
+                <label for="FatherFName" class="form-label">First Name </label>
+                <input type="text" class="form-control" id="FatherFName" formControlName="firstName">
+                <span class="error" *ngIf="FatherDetails?.invalid && FatherDetails?.touched">Firstname must be entered</span>
+            </div>
+            <div class="col-lg-4 col-md-4 mt-3">
+                <label for="FatherMname" class="form-label">Middle Name </label>
+                <input type="text" class="form-control" id="FatherMname" formControlName="middleName">
+                <span class="error" *ngIf="FatherDetails?.invalid && FatherDetails?.touched">Middlename must be entered</span>
+            </div>
+            <div class="col-lg-4 col-md-4 mt-3">
+                <label for="FatherLName" class="form-label">Last Name</label>
+                <input type="text" class="form-control" id="FatherLName" formControlName="lastName">
+                <span class="error" *ngIf="FatherDetails?.invalid && FatherDetails?.touched">Lastname must be entered</span>
+            </div>
+            <div class="col-lg-4 col-md-4 mt-3">
+                <label for="FatherEmail" class="form-label">Email</label>
+                <input type="text" class="form-control" id="Email" formControlName="email">
+               
+            </div>
+            <div class="col-lg-4 col-md-4 mt-3">
+                <label for="EducationQualification" class="form-label">Education Qualification</label>
+                <input type="text" class="form-control" id="EducationQualification" formControlName="Qualification">
+                <span class="error" *ngIf="FatherDetails?.invalid && FatherDetails?.touched">Education Qualification must be entered</span>
+            </div>
+            <div class="col-lg-4 col-md-4 mt-3">
+                <label for="Profession" class="form-label">Profession </label>
+                <input type="text" class="form-control" id="Profession " formControlName="profession">
+                <span class="error" *ngIf="FatherDetails?.invalid && FatherDetails?.touched">Profession must be entered</span>
+            </div>
+            <div class="col-lg-4 col-md-4 mt-3">
+                <label for="Designation" class="form-label">Designation</label>
+                <input type="text" class="form-control" id="Designation" formControlName="designation">
+            </div>
+            <div class="col-lg-4 col-md-4 mt-3">
+                <label for="PhoneNumber" class="form-label">Phone Number</label>
+                <input type="text" class="form-control" id="PhoneNumber" formControlName="phoneNumber">
+                <span class="error" *ngIf="FatherDetails?.invalid && FatherDetails?.touched">Phone Number must be entered</span>
+            </div>
+        </div>
+        <label for="Mother" class="form-label mt-3 fs-4">Mother Details </label>
+        <div class="row" formGroupName="MotherDetails">
+            <div class="col-lg-4 col-md-4 mt-3">
+                <label for="MotherFName" class="form-label">First Name </label>
+                <input type="text" class="form-control" id="MotherFName" formControlName="firstName">
+                <span class="error" *ngIf="FatherDetails?.invalid && FatherDetails?.touched">Firstname must be entered</span>
+            </div>
+            <div class="col-lg-4 col-md-4 mt-3">
+                <label for="MotherMname" class="form-label">Middle Name </label>
+                <input type="text" class="form-control" id="MotherMname" formControlName="middleName">
+                <span class="error" *ngIf="MotherDetails?.invalid && MotherDetails?.touched">Middlename must be entered</span>
+            </div>
+            <div class="col-lg-4 col-md-4 mt-3">
+                <label for="MotherLName" class="form-label">Last Name</label>
+                <input type="text" class="form-control" id="MotherLName" formControlName="lastName">
+                <span class="error" *ngIf="MotherDetails?.invalid && MotherDetails?.touched">Lastname must be entered</span>
+            </div>
+            <div class="col-lg-4 col-md-4 mt-3">
+                <label for="MotherEmail" class="form-label">Email</label>
+                <input type="text" class="form-control" id="MotherEmail" formControlName="email">
+            </div>
+            <div class="col-lg-4 col-md-4 mt-3">
+                <label for="MotherEducationQualification" class="form-label">Education Qualification</label>
+                <input type="text" class="form-control" id="MotherEducationQualification"
+                    formControlName="Qualification">
+                <span class="error" *ngIf="MotherDetails?.invalid && MotherDetails?.touched">Education Qualification must be entered</span>
+            </div>
+            <div class="col-lg-4 col-md-4 mt-3">
+                <label for="MotherProfession" class="form-label">Profession </label>
+                <input type="text" class="form-control" id="MotherProfession" formControlName="profession">
+                <span class="error" *ngIf="MotherDetails?.invalid && MotherDetails?.touched">Profession must be entered</span>
+            </div>
+            <div class="col-lg-4 col-md-4 mt-3">
+                <label for="MotherDesignation" class="form-label">Designation</label>
+                <input type="text" class="form-control" id="MotherDesignation" formControlName="designation">
+            </div>
+            <div class="col-lg-4 col-md-4 mt-3">
+                <label for="MotherPhoneNumber" class="form-label">Phone Number</label>
+                <input type="text" class="form-control" id="MotherPhoneNumber" formControlName="phoneNumber">
+                <span class="error" *ngIf="MotherDetails?.invalid && MotherDetails?.touched">Phone Number must be entered</span>
+            </div>
+        </div>
+        <label for="Emergency" class="form-label mt-3 fs-4">Emergency Contact Details</label>
+
+        <div formArrayName="emergencyContact">
+            <div *ngFor="let emergencyContact of emergencyContact.controls; let i=index">
+                <div class="row" [formGroupName]="i">
+                    <div class="col-lg-4 col-md-4 mt-3">
+                        <label for="Relation" class="form-label">Relation</label>
+                        <input type="text" class="form-control" id="Relation" formControlName="relation">
+                        <span class="error" *ngIf="emergencyContact?.invalid && emergencyContact?.touched">Relation must be entered</span>
+                    </div>
+                    <div class="col-lg-4 col-md-4 mt-3">
+                        <label for="EPhoneNumber--{{i}}" class="form-label">Phone Number</label>
+                        <input type="text" class="form-control" id="EPhoneNumber --{{i}}" formControlName="phonenumber">
+                        <span class="error" *ngIf="emergencyContact?.invalid && emergencyContact?.touched">Phonenumber must be entered</span>
+                        
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="mt-3 ">
+            <button class="btn btn-danger mx-auto" (click)="addContact()">Add Contact</button>
+        </div>
+        <br>
+        <div class="row">
+            <div class="col-2 mx-auto">
+                <button class="btn btn-primary" type="submit">submit</button>
+            </div>
+        </div>
+    </form>
+</div>
+
+<div class="container">
+    <table class="table table-striped">
+        <thead>
+            <tr>
+                <th scope="col">Name</th>
+                <th scope="col">Date Of Birth</th>
+                <th scope="col">Place of birth</th>
+                <th scope="col">First Language</th>
+                <th scope="col">Address</th>
+                <th scope="col">Father Name</th>
+                <th scope="col">Profession</th>
+                <th scope="col">Phone Number</th>
+                
+            </tr>
+        </thead>
+        <tbody *ngFor="let Student of studentData">
+        <tr>
+            <td>{{Student.firstName}} {{Student.lastName}}</td>
+            <td>{{Student.dob}}</td>
+            <td>{{Student.placeOfBirth}}</td>
+            <td>{{Student.firstLanguage}}</td>
+            <td>{{Student.address.city}} , {{Student.address.state}} ,{{Student.address.country}} ,{{Student.address.pinCode}}</td>
+            <td>{{Student.FatherDetails.firstName}} {{Student.FatherDetails.lastName}} </td>
+            <td>{{Student.FatherDetails.profession}}</td>
+            <td>{{Student.FatherDetails.phoneNumber}}</td>
+            <!-- <td *ngFor = "let i in emergencyContact">{{i.phonenumber}}</td> -->
+        </tr>
+        </tbody>
+    </table>
+</div>

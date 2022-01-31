@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let name="Devanshu Chhaya"
+        let n=name.search("Chhaya")
+        console.log(n)
+
+        n=name.search(/chhaya/i)
+        console.log(n)
+
+        console.log(name.replace("Devanshu","Dev"))
+
+        console.log(name.replace(/dev/i,"Devanshu"))
+        
+        console.log(name.replace(""))
+
+        let text = "Is this all there is?";
+        let result = text.match(/is/g);
+        console.log(result)
+
+        let text1 = "\nIs th\nis it?";
+        let result1 = text1.match(/^is/m);
+        console.log(result1)
+
+        let text2 = "Is this all there is?";
+        let result2 = text2.match(/[h]/g);
+        console.log(result2)
+
+        let text3 = "123456789";
+        let result3 = text3.match(/[1-4]/g);
+        console.log(result3)
+
+        let text4 = "re, green, red, green, gren, gr, blue, yellow";
+        let result4 = text4.match(/(red|green)/g);
+        console.log(result4)
+
+        let text5 = "Give 100%!"; 
+        let result5 = text5.match(/\d/g);
+        console.log(result5)
+
+        let text6 = "Is this all there is?";
+        let result6 = text6.match(/\s/g);
+        console.log(result6)
+
+        let text7 = "HELLO, LOOK AT YOU!"; 
+        let result7 = text7.search(/\bLO/);
+        console.log(result7)
+        console.log(text7.search(/LO\b/));
+
+        let text8 = "Hellooo World!"; 
+        let result8 = text8.match(/o+/g);
+        console.log(result8)
+
+        console.log(text8.match(/\u0057/g))
+
+        console.log(text8.match(/lo*/g))
+
+        let text9 = "1, 100 or 1000?";
+        let result9 = text9.match(/10?/g);
+        console.log(result9)
+
+        
+
+    </script>
+</body>
+</html>

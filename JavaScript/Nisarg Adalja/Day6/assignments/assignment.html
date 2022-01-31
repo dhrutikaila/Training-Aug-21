@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-F3w7mX95PdgyTmZZMECAngseQB83DfGTowi0iMjiWaeVhAn4FJkqJByhZMI3AhiU" crossorigin="anonymous">
+
+</head>
+<body>
+    <div class="container" id="main">
+        <div class="row pb-3 pt-3 border border-dark">
+        <div class="col-sm-2">ProductID</div>
+        <div class="col-sm-2">ProductName</div>
+        <div class="col-sm-2">Price</div>
+        <div class="col-sm-2">Quantity</div>
+        <div class="col-sm-2">Add to Cart</div>
+        </div>
+
+    </div>
+
+    <script>
+       function minus(id){
+                         console.log("hii");
+            var div=document.getElementById(parseInt(id));
+            var span=document.getElementById('quan'+parseInt(id));
+            var quantity=parseInt(span.innerHTML);
+            console.log(quantity);
+            if(quantity==1){
+                quantity=1;
+                span.innerHTML=quantity;
+            }
+            if(quantity>1){
+                quanity=quantity-1;
+                span.innerHTML=quantity-1;
+            }
+            
+           // span.text=quantity;
+            console.log(div.innerHTML);
+        }
+        function plus(id){
+             console.log("hii");
+            var div=document.getElementById(parseInt(id));
+            console.log(div.innerHTML);
+            var span=document.getElementById('quan'+parseInt(id));
+            console.log(span);
+            var quantity=parseInt(span.innerHTML);
+            console.log(quantity);
+        
+            span.innerHTML=quantity+1;
+            console.log(div.innerHTML);
+        }
+        function addtocart(id){
+             console.log("hii");
+            try{
+                console.log("hi");
+
+            var data=JSON.parse(localStorage.getItem("cart"));
+            console.log(data);
+            var name=document.getElementById("name"+parseInt(id)).innerHTML;
+
+            var price=document.getElementById("price"+parseInt(id)).innerHTML;
+
+            var quantity=document.getElementById("quan"+parseInt(id)).innerHTML;
+            var names=[];
+            var bool=true;
+            for(var i=0;i<data.products.length;i++){
+                if(name==data.products[i].name){
+                    bool=false;
+                    data.products[i].name=name;
+                    data.products[i].price=price;
+                    data.products[i].quantity=quantity;
+                    data.products[i].totalPrice=quantity*price;
+                    localStorage.setItem("cart",JSON.stringify(data));
+                }
+                names.push(data.products[i].name);
+
+            }
+            product={};
+            if(bool==true){
+            product['name']=name;
+            product['price']=price;
+            product['quantity']=quantity;
+            product["totalPrice"]=price*quantity;
+            console.log(data.products);
+            data.products.push(product);
+            console.log(data.products);
+            localStorage.setItem("cart",JSON.stringify(data));
+            }
+            }
+            catch(e){
+                
+                data={};
+                lst=[];
+                products={};
+                products['name']=name;
+                products['price']=price;
+                products['quantity']=quantity;
+                products['totalPrice']=price*quantity;
+                lst.push(products);
+                data["products"]=lst;
+                console.log(data);
+                localStorage.setItem("cart",JSON.stringify(data));
+
+            
+            }
+
+        }
+
+        function summary(){
+            var cart=JSON.parse(localStorage.getItem("cart"));
+            console.log(cart);
+            console.log(cart.products);
+            for(var i=0;i<cart.products.length;i++){
+                console.log(cart.products[i]);
+                console.log('Product Name : '+cart.products[i].name+' product Price '+cart.products[i].price+' product Quantity '+cart.products[i].quantity);
+            }
+            window.location="summary.html";
+        }
+        /* Display Product information in Grid format with AddToCart option. once a user click on AddtoCart button should be stored in local storage. Click on cart summary will display that data into console.*/
+          fetch('http://127.0.0.1:5500/JavaScript/Nisarg%20Adalja/Day6/practice/products.json')
+	            .then(response => response.json())
+	            .then(function(data)
+                {
+                     
+                    console.log(data);
+                    var obj=data; 
+                    for(i=0;i<obj.products.length;i++){
+                        console.log("Name of te product is "+data.products[i].Name+', Product Price is '+data.products[i].Price+'$ , Product Location '+data.products[i].Location);
+                        var div=document.createElement('div');
+                        div.setAttribute("class","row pb-3 pt-3 border border-dark");
+                        div.setAttribute("id",(i+1));
+                        var id=document.createElement('div');
+                        id.setAttribute("class","col-sm-2");
+                        id.setAttribute("id","id"+(i+1));
+                        id.innerHTML= (i+1);
+                        div.appendChild(id);
+                        var name=document.createElement('div');
+                        name.setAttribute("class","col-sm-2");
+                        name.setAttribute("id","name"+(i+1));
+                        name.innerHTML= obj.products[i].Name;
+                        div.appendChild(name);
+                        var price=document.createElement('div');
+                        price.setAttribute("class","col-sm-2");
+                        price.setAttribute("id","price"+(i+1));
+                        price.innerHTML= obj.products[i].Price;
+                        div.appendChild(price);
+                        var quantity=document.createElement('div');
+                        quantity.setAttribute("class","col-sm-2");
+                        quantity.setAttribute("id","quantity");
+                        quantity.innerHTML= "<button class='btn btn-success' onclick='minus("+(i+1)+")'>-</button><span id='quan"+(i+1)+"'>1</span><button class='btn btn-success' onclick='plus("+(i+1)+")'>+</button>";
+                        div.appendChild(quantity);
+                        var cart=document.createElement('div');
+                        cart.setAttribute("class","col-sm-2");
+                        cart.innerHTML="<button class='btn btn-large btn-success' onclick='addtocart("+(i+1)+")'>Add to Cart</button>";
+                        div.appendChild(cart);
+                        document.getElementById("main").appendChild(div);
+                    }     
+                    btn=document.createElement('BUTTON');
+                    
+                    btn.setAttribute("class","btn btn-large btn-success mt-5 ms-auto me-auto mb-5");
+                    btn.setAttribute("onclick","summary()");
+                    btn.innerHTML="cart Summary";
+                    document.getElementById("main").appendChild(btn);
+                    
+
+                })
+                .catch(err => console.error(err));
+
+        
+    </script>
+     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-/bQdsTh/da6pkI1MST/rWKFNjaCP5gBSY4sEBT38Q/9RBh9AH40zEOg7Hlq2THRZ" crossorigin="anonymous">
+    </script>
+</body>
+</html>

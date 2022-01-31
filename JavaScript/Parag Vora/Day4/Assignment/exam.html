@@ -1,0 +1,114 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+
+    <title>Document</title>
+    <script src="./script.js"></script>
+</head>
+
+<body>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark m-2 text-white">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="#"><img style="height:40px;" src="../Assests/logo.jpg"></a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarScroll"
+                aria-controls="navbarScroll" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarScroll">
+                <ul class="navbar-nav me-auto my-2 my-lg-0 navbar-nav-scroll" style="--bs-scroll-height: 100px;">
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="#">University Of Mumbai</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Home</a>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="navbarScrollingDropdown" role="button"
+                            data-bs-toggle="dropdown" aria-expanded="false">
+                            About
+                        </a>
+                        <ul class="dropdown-menu" aria-labelledby="navbarScrollingDropdown">
+                            <li><a class="dropdown-item" href="#">Langauges</a></li>
+                            <li><a class="dropdown-item" href="#">Courses</a></li>
+                            <li>
+                                <hr class="dropdown-divider">
+                            </li>
+                            <li><a class="dropdown-item" href="#">Fees Structure</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Contact Us</a>
+                    </li>
+                </ul>
+                <div class="d-flex text-light " style="    margin-right: 15px;                ">
+                    <h3 id="hour" class="text-light">00</h3>
+                    <h3>:</h3>
+                    <h3 id="min" class="text-light">00</h3>
+                    <h3>:</h3>
+                    <h3 id="sec" class="text-light">00</h3>
+                  </div>
+                <form class="d-flex">
+                    <!-- <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search"> -->
+                    <button class="btn btn-outline-success btn-warning text-black-50" type="button" onclick="closetest()">Finsih
+                        Exam</button>
+                </form>
+            </div>
+        </div>
+    </nav>
+
+    <div class="card m-5 bg-primary text-black">
+        <div class="card-header  text-center">
+          <h5 class="card-title">JS EXAM</h5>
+        </div>
+        <div class="card-body">
+          <form>
+            <ul class="quiz ">
+              <li>
+                <h4>What is the value of 2+2?</h4>
+                <ul class="choices list-unstyled" >
+                  <li><label><input type="radio" name="question0" value="A"><span> 4</span></label></li>
+                  <li><label><input type="radio" name="question0" value="B"><span> 1</span></label></li>
+                  <li><label><input type="radio" name="question0" value="C"><span> 3</span></label></li>
+                  <li><label><input type="radio" name="question0" value="D"><span> 2</span></label></li>
+                </ul>
+              </li>
+              <br>
+              <li>
+                <h4>in which country gujrat state is located</h4>
+                <ul class="choices list-unstyled text-black fw-bold">
+                  <li><label><input type="radio" name="question1" value="A"> india</label></li>
+                  <li><label><input type="radio" name="question1" value="B"> uk</label></li>
+                  <li><label><input type="radio" name="question1" value="C"> russia</label></li>
+                  <li><label><input type="radio" name="question1" value="D"> bangladesh</label></li>
+                </ul>
+              </li>
+              <br>
+              <li>
+                <h4>identity element in mathematics for multipication</h4>
+                <ul class="choices list-unstyled">
+                  <li><input type="radio" name="question2" value="A"> 2</li>
+                  <li><input type="radio" name="question2" value="A"> 1</li>
+                  <li><input type="radio" name="question2" value="A"> 3</li>
+                  <li><input type="radio" name="question2" value="A"> 4</li>
+                </ul>
+              </li>
+            </ul>
+          </form>
+        </div>
+      </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+        crossorigin="anonymous"></script>
+    <script>timers()</script>
+</body>
+
+</html>

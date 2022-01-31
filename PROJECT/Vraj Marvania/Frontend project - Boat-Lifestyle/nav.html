@@ -1,0 +1,396 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <link href='https://fonts.googleapis.com/css?family=Montserrat' rel='stylesheet'>
+    <link href="Assets/css/style.css" rel='stylesheet'>
+    <link href='https://fonts.googleapis.com/css?family=Montserrat' rel='stylesheet'>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <!--load all styles -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://kenwheeler.github.io/slick/slick/slick.js"></script>
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css"
+        integrity="sha384-UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQ8lWUE00s/" crossorigin="anonymous">
+        <script src="Assets/js/auth.js"></script>
+
+        <script src="Assets/js/data.js"></script>
+    <script src="Assets/js/script.js"></script>
+
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&display=swap');
+    </style>
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.css" />
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css"
+        integrity="sha384-UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQ8lWUE00s/" crossorigin="anonymous">
+        <script>
+            $(document).ready(function () {
+                if (sessionStorage.getItem("user") == null) {
+                    $("#login").removeClass("d-none");
+    
+                }
+                else {
+                    $("#logout").removeClass("d-none");
+                    // var name = (JSON.parse(sessionStorage.getItem("user"))[0].First_Name)
+                    // $("#username").text("Hi " + name + "!")
+    
+    
+                }
+            })
+    
+        </script>
+    <style>
+        * {
+            font-family: 'Montserrat', sans-serif;
+            
+        }
+ 
+        .slider1.slick-initialized.slick-slider,
+        .slider2.slick-initialized.slick-slider {
+            display: flex;
+        }
+
+        i.fa.fa-chevron-right,
+        i.fa.fa-chevron-left {
+            font-size: 40px;
+            content: "\f053";
+            color: red;
+            padding-inline: 0px;
+        }
+    </style>
+
+<link rel="shortcut icon" href="https://utioutll.sirv.com/Smart%20Watches/nav/tablogo.jfif">
+<title>boat-lifestyle</title>
+</head>
+
+<body>
+    <!-- new offer -->
+    <div class="text-center " id="ban" style="background-color: #ff0000; ">
+        <a href="https://www.boat-lifestyle.com/collections" style="text-decoration:none">
+            <div class="announcement__inner" style="color: white;    padding: 6px;        ">
+                <b class="fw-bolder" style="font-size: 12.23px;">
+                    UPTO 75% OFF SITEWIDE* | GET UPTO Rs150 OFF USING LAZYPAY* | GET FLAT Rs75 CASHBACK USING
+                    MOBIKWIK*</b>
+            </div>
+        </a>
+    </div>
+
+
+    <!-- nav -->
+    <nav class="navbar navbar-expand-lg " style="background-color: rgb(0, 0, 0);">
+        <div class="container-fluid d-flex">
+            <div class="order-md-1   d-lg-none d-lg-block p-2 bd-highlight">
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" onclick="openNav()"
+                    data-bs-target="" aria-controls="navbarToggleExternalContent" aria-expanded="false"
+                    aria-label="Toggle navigation">
+                    <span class="fa fa-bars " style=" color: rgb(255, 255, 255);"></span>
+                </button>
+            </div>
+            <div class="order-md-1  order-1 py-2 bd-highlight">
+                <div class="container">
+                    <a class="navbar-brand" href="./index.html">  <img src="https://utioutll.sirv.com/Smart%20Watches/nav/logo.png" height="44px" id="logo"></a>
+                </div>
+            </div>
+
+            <div class="order-md-2 d-none d-lg-block p-2 bd-highlight">
+                <div class="p-2 bd-highlight ml-5 justify-item-start">
+                    <ul class="navbar-nav d-flex justify-content-center">
+                        <li class="nav-item dropdown bore" onmouseover="show()" onmouseout="hid()">
+                            <a class="nav-link " href="#" id="shopout" role="button" data-bs-toggle=""
+                                aria-expanded="false">
+                                <b>Shop</b>
+                                <i class="fas fa-angle-down"></i>
+                            </a>
+                            <ul>
+
+                                <div class="container-fluid  position-fixed pt-2 px-0" id="shopitemout"
+                                    onmouseover="show()"
+                                    style="top:72px;left:0px ;    transition-timing-function: linear;z-index:999;     transition: width 4s;">
+                                    <br>
+                                    <div class="d-flex-col  bg-dark p-4">
+                                        <div class="row pt-0">
+                                            <div class="col-3">
+                                                <a href="http://127.0.0.1:5500/ProductList.html?id=Wireless_Earbuds">
+                                                     <img src="https://utioutll.sirv.com/Smart%20Watches/nav/20_11.png" width="290px" height="145px"></a>
+                                            </div>
+                                            <div class="col-3">
+                                                <a href="http://127.0.0.1:5500/ProductList.html?id=Wireless_Headphones">
+                                                     <img src="https://utioutll.sirv.com/Smart%20Watches/nav/20_1.png" width="290px" height="145px"></a>
+                                            </div>
+                                            <div class="col-3">
+                                                <a href="http://127.0.0.1:5500/ProductList.html?id=Smart_Watches">
+                                                     <img src="https://utioutll.sirv.com/Smart%20Watches/nav/20_2.png" width="290px" height="145px"></a>
+                                            </div>
+                                            <div class="col-3">
+                                                <a href="http://127.0.0.1:5500/ProductList.html?id=Wired_Earphones">
+                                                     <img src="https://utioutll.sirv.com/Smart%20Watches/nav/20_3.png" width="290px" height="145px"></a>
+                                            </div>
+                                        </div>
+                                        <div class="row pt-4">
+                                            <div class="col-3">
+                                                <a href="http://127.0.0.1:5500/ProductList.html?id=Wireless_Speakers">
+                                                     <img src="https://utioutll.sirv.com/Smart%20Watches/nav/20_4.png" width="290px" height="145px"></a>
+                                            </div>
+                                            <div class="col-3">
+                                                <a href="http://127.0.0.1:5500/ProductList.html?id=Home_Audio">
+                                                     <img src="https://utioutll.sirv.com/Smart%20Watches/nav/20_5.png" width="290px" height="145px"></a>
+
+                                            </div>
+                                            <div class="col-3">
+                                                <a href="http://127.0.0.1:5500/ProductList.html?id=Mobile_Accessories">
+                                                     <img src="https://utioutll.sirv.com/Smart%20Watches/nav/20_6.png" width="290px" height="145px"></a>
+
+                                            </div>
+                                            <div class="col-3">
+                                                <a href="http://127.0.0.1:5500/ProductList.html?id=TRebel">
+                                                     <img src="https://utioutll.sirv.com/Smart%20Watches/nav/20_7.png" width="290px" height="145px"></a>
+
+                                            </div>
+                                        </div>
+                                        <div class="row text-center pt-4">
+                                            <div class="col-4">
+                                                <a href="http://127.0.0.1:5500/ProductList.html?id=Limited_Edition">
+                                                     <img src="https://utioutll.sirv.com/Smart%20Watches/nav/20_8.png" width="290px" height="145px"></a>
+                                            </div>
+                                            <div class="col-4">
+                                                <a href="http://127.0.0.1:5500/ProductList.html?id=Misfit">
+                                                     <img src="https://utioutll.sirv.com/Smart%20Watches/nav/20_9.png" width="290px" height="145px"></a>
+
+                                            </div>
+                                            <div class="col-4">
+                                                <a href="http://127.0.0.1:5500/ProductList.html?id=Immortal_Gaming">
+                                                     <img src="https://utioutll.sirv.com/Smart%20Watches/nav/20_10.png" width="290px" height="145px"></a>
+
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </ul>
+                        </li>
+                        <li class="nav-item bore">
+                            <a class="nav-link" href="#">The Ultimate Sail <span class="tmenu_item_text"></span></a>
+                        </li>
+
+                        <li class="nav-item dropdown">
+                            <a class="nav-link " href="#" id="morea" role="button" data-bs-toggle="dropdown"
+                                aria-expanded="false">
+                                More
+                                <i class="fas fa-angle-down"></i>
+                            </a>
+                            <ul class="dropdown-menu px-3 dropdown-toggle" id="moredrop"
+                                aria-labelledby="navbarDropdownMenuLink"
+                                style=" dispaly:none;    BACKGROUND-COLOR: BLACK;" onmouseleave="funclose()">
+                                <br>
+                                <li class="mb-2"><a class="dropdown-item" href="#">Plug-In Sale</a></li>
+                                <li class="mb-2"><a class="dropdown-item" href="#">Float Your boAt</a></li>
+                                <li class="mb-2"><a class="dropdown-item" href="#">Meet the boAtheads</a></li>
+                                <li class="mb-2"><a class="dropdown-item" href="#">Earn Rs.100</a></li>
+                            </ul>
+                        </li>
+                </div>
+            </div>
+            <div class="order-md-4   order-1         p-2 bd-highlight">
+                <div class="d-flex justify-content-start">
+
+
+                    <a href="" class="m-1"><img src="https://utioutll.sirv.com/Smart%20Watches/nav/icon1.png" height="21px">
+                        <a data-bs-toggle="collapse" href="#collapseExample" class="m-1" id="user"><img
+                                src="https://utioutll.sirv.com/Smart%20Watches/nav/icon3.png" height="21px"></a>
+
+
+                        <a href="./Cart.html" class="m-1 position-relative"><img src="https://utioutll.sirv.com/Smart%20Watches/nav/icon2.png" height="21px">
+                            <span
+                                class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger">
+                                +
+                                <span class="visually-hidden">unread messages</span>
+                            </span>
+                        </a>
+                </div>
+            </div>
+            <div class="order-md-3 order-3 d-lg-block  d-none   p-2 bd-highlight">
+                <div class="bd-highlight">
+                    <form class="d-flex serach">
+                        <span class="fa fa-search form-control-feedback" style="top: 29px;"></span></span>
+                        <input class="form-control me-2 rounded-pill  px-5" id="serch" style="height: 40.67px;"
+                            type="search" placeholder="Search..." aria-label="Search">
+                    </form>
+                </div>
+            </div>
+
+        </div>
+        </div>
+        <div class="row d-lg-none d-block" style="width: 101%;margin-inline: 5px;">
+            <div class="order-md-3 order-3 d-block    p-2 bd-highlight">
+                <div class="bd-highlight">
+                    <form class="d-flex serach">
+                        <span class="fa fa-search form-control-feedback" style="top: 71px;"></span>
+                        <input class="form-control me-2 rounded-pill  px-5" id="serch" style="height: 40.67px;"
+                            type="search" placeholder="Search..." aria-label="Search">
+                    </form>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <div class="collapse" id="navbarToggleExternalContent">
+        <div class="bg-dark p-4">
+            <h5 class="text-white h4">Collapsed content</h5>
+            <span class="text-muted">Toggleable via the navbar brand.</span>
+        </div>
+    </div>
+    <div id="myCanvasNav" class="overlay3" onclick="closeNav()" style="width: 0%; opacity: 0;"></div>
+
+    <!--user toggle -->
+    <div class="collapse position-absolute " id="collapseExample" style="z-index: 1000;top: 80px;
+    right: 10px;">
+        <div class="card card-body">
+            <div class="d-none" id="login">
+                            <h6 class="fw-bolder text-danger">Hi boAthead!<a>
+                    <div class="form-group ">
+                        <button type="submit" target="_self" onclick='location.href="http://127.0.0.1:5500/login.html"'
+                            class="btn text-light col-12 mt-4 fw-bolder py-2"
+                            style="width: 197px; background-color: #ff0000;">Log in</button>
+                    </div>
+            </div>
+
+            <div class="d-none" id="logout">
+                <h6 class="fw-bolder text-danger" id="username">Hi boAthead!<a>
+                    <div class="form-group ">
+                        <button type="button"  onclick="logout()"
+                            class="btn text-light col-12 mt-4 fw-bolder py-2"
+                            style="width: 197px; background-color: #ff0000;">Log out</button>
+                    </div>
+            </div>        
+        </div>
+    </div>
+    <!-- side nav -->
+    <div id="closenav">
+        <div class="vnav" id="vnav" style="background-color: rgb(0, 0, 0);">
+            <ul>
+                <a>
+                    <div>
+                        <li id="shopin"> <a href="javascript:"><b>Shop <i class="fas fa-angle-down px-4"
+                                        style="font-size: 15px;"></i></b></a>
+
+                            <div class="row imgshow" id="#imgshow">
+                                <div class="">
+                                     <img src="https://utioutll.sirv.com/Smart%20Watches/nav/20_11.png" width="200px" height="100px">
+                                </div>
+                                <div class="">
+                                     <img src="https://utioutll.sirv.com/Smart%20Watches/nav/20_1.png" width="200px" height="100px">
+                                </div>
+                                <div class="">
+                                     <img src="https://utioutll.sirv.com/Smart%20Watches/nav/20_2.png" width="200px" height="100px">
+                                </div>
+                                <div class="">
+                                     <img src="https://utioutll.sirv.com/Smart%20Watches/nav/20_3.png" width="200px" height="100px">
+                                </div>
+
+                                <div class="">
+                                     <img src="https://utioutll.sirv.com/Smart%20Watches/nav/20_4.png" width="200px" height="100px">
+                                </div>
+                                <div class="">
+                                     <img src="https://utioutll.sirv.com/Smart%20Watches/nav/20_5.png" width="200px" height="100px">
+
+                                </div>
+                                <div class="">
+                                     <img src="https://utioutll.sirv.com/Smart%20Watches/nav/20_6.png" width="200px" height="100px">
+
+                                </div>
+                                <div class="">
+                                     <img src="https://utioutll.sirv.com/Smart%20Watches/nav/20_7.png" width="200px" height="100px">
+
+                                </div>
+
+                                <div class="">
+                                     <img src="https://utioutll.sirv.com/Smart%20Watches/nav/20_8.png" width="200px" height="100px">
+                                </div>
+                                <div class="">
+                                     <img src="https://utioutll.sirv.com/Smart%20Watches/nav/20_9.png" width="200px" height="100px">
+
+                                </div>
+                                <div class="">
+                                     <img src="https://utioutll.sirv.com/Smart%20Watches/nav/20_10.png" width="200px" height="100px">
+
+                                </div>
+
+
+                            </div>
+                        </li>
+
+
+
+                        <a href="">
+                            <li>Pro It Up</li>
+                        </a>
+
+                        <a href="">
+                            <li>Sound Of Champions</li>
+                        </a>
+
+                        </li>
+                        <li>
+
+                            <a href="javascript:" class="moredatab" id="moredatab"><b>More <i
+                                        class="fas fa-angle-down px-4" style="font-size: 15px;"></i></b></a>
+                            <ul class="moredata" id="moredata" style="display: none;">
+                                <li><a class="dropdown-item" href="#">Plug-In Sale</a></li>
+                                <li><a class="dropdown-item" href="#">Float Your boAt</a></li>
+                                <li><a class="dropdown-item" href="#">Meet the boAtheads</a></li>
+                                <li><a class="dropdown-item" href="#">Earn Rs.100</a></li>
+                            </ul>
+                        </li>
+                        </li>
+                        <a href="">
+                            <li>Track Your Order</li>
+                        </a>
+
+
+                        <a href="">
+                            <li>Log in</li>
+                        </a>
+
+            </ul>
+
+            <a href="">
+                <div class="container d-flex ">
+                    <div class="p-2"><i class="fab fa-twitter"></i></div>
+                    <div class="p-2"><i class="fab fa-facebook-square"></i></div>
+                    <div class="p-2"><i class="fab fa-youtube"></i></div>
+                    <div class="p-2"><i class="fab fa-instagram"></i></div>
+                    <div class="p-2"><i class="fab fa-linkedin"></i></div>
+                </div>
+            </a>
+        </div>
+        </a>
+    </div>
+    </div>
+
+
+
+
+
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+        crossorigin="anonymous"></script>
+    <script>
+        function hid() {
+            document.getElementById("shopitemout").style.display = "none";
+        }
+        function show() {
+            x = document.getElementById("shopitemout")
+            x.style.display = "block";
+
+
+        }
+    </script>
+</body>
+
+</html>

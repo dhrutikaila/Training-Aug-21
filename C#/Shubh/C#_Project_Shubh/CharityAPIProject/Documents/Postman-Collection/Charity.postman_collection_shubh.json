@@ -1,0 +1,1284 @@
+{
+	"info": {
+		"_postman_id": "ed51a0ab-f78f-4f89-8f0d-66636b90c214",
+		"name": "Charity",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Authentication",
+			"item": [
+				{
+					"name": "register",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"username\":\"dhruvi\",\r\n    \"email\":\"dhruv1@gmail.com\",\r\n    \"password\":\"Dhruvit@123\",\r\n    \"PhoneNumber\":\"9157049687\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{base_url}}/authenticate/register-admin",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"authenticate",
+								"register-admin"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "register-admin",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"username\":\"dhruvi\",\r\n    \"email\":\"dhruv1@gmail.com\",\r\n    \"password\":\"Dhruvit@123\",\r\n    \"PhoneNumber\":\"9157049687\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{base_url}}/authenticate/register",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"authenticate",
+								"register"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "register-organisation",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"username\":\"dhruvi\",\r\n    \"email\":\"dhruv1@gmail.com\",\r\n    \"password\":\"Dhruvit@123\",\r\n    \"PhoneNumber\":\"9157049687\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{base_url}}/authenticate/register-organisation",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"authenticate",
+								"register-organisation"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "login",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"username\":\"dhruvi\",\r\n    \"password\":\"Dhruvit@123\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{base_url}}/authenticate/login?otp=1234",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"authenticate",
+								"login"
+							],
+							"query": [
+								{
+									"key": "otp",
+									"value": "1234"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Test Token",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJodHRwOi8vc2NoZW1hcy54bWxzb2FwLm9yZy93cy8yMDA1LzA1L2lkZW50aXR5L2NsYWltcy9uYW1lIjoiZGhydXZpIiwianRpIjoiOWIxODFjYjYtOWQ1NS00YmI1LTgxOTktYmU4MDgzZTlhMzk3IiwiaHR0cDovL3NjaGVtYXMubWljcm9zb2Z0LmNvbS93cy8yMDA4LzA2L2lkZW50aXR5L2NsYWltcy9yb2xlIjoiVXNlciIsImV4cCI6MTYzOTc1NDQ4NSwiaXNzIjoiaHR0cDovL2xvY2FsaG9zdDo0NDMyOCIsImF1ZCI6Imh0dHA6Ly9sb2NhbGhvc3Q6NDIwMCJ9.vJhxRn8X8hcXANEgZHuj4OGVo9X5qB0uIRA5alLJiG0",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJodHRwOi8vc2NoZW1hcy54bWxzb2FwLm9yZy93cy8yMDA1LzA1L2lkZW50aXR5L2NsYWltcy9uYW1lIjoiZGhydXYiLCJqdGkiOiI2MjI1Yjg1MC04Y2ExLTRjMzQtYjhhNS02YzVlYTRiMTU1ZWYiLCJodHRwOi8vc2NoZW1hcy5taWNyb3NvZnQuY29tL3dzLzIwMDgvMDYvaWRlbnRpdHkvY2xhaW1zL3JvbGUiOiJVc2VyIiwiZXhwIjoxNjM5NDMwNDQ0LCJpc3MiOiJodHRwOi8vbG9jYWxob3N0OjQ0MzI4IiwiYXVkIjoiaHR0cDovL2xvY2FsaG9zdDo0MjAwIn0.oUHOaUjriSn6XITSNuXSTbCf-lbTfsRWczdwO2ao7FI",
+								"type": "text",
+								"disabled": true
+							}
+						],
+						"url": {
+							"raw": "{{base_url}}/WeatherForecast",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"WeatherForecast"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "WeatherForcast",
+			"item": [
+				{
+					"name": "{{base_url}}/WeatherForecast",
+					"request": {
+						"auth": {
+							"type": "bearer"
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{base_url}}/WeatherForecast",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"WeatherForecast"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "RequirementType",
+			"item": [
+				{
+					"name": "{{base_url}}/RequirementType",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJodHRwOi8vc2NoZW1hcy54bWxzb2FwLm9yZy93cy8yMDA1LzA1L2lkZW50aXR5L2NsYWltcy9uYW1lIjoiZGhydXZpIiwianRpIjoiNmI3ZjAxMzAtMmM4YS00ZmJlLTk5ZTgtYjJjNWI0NWZjMDRjIiwiaHR0cDovL3NjaGVtYXMubWljcm9zb2Z0LmNvbS93cy8yMDA4LzA2L2lkZW50aXR5L2NsYWltcy9yb2xlIjoiVXNlciIsImV4cCI6MTY0MDAwOTk1MiwiaXNzIjoiaHR0cDovL2xvY2FsaG9zdDo0NDMyOCIsImF1ZCI6Imh0dHA6Ly9sb2NhbGhvc3Q6NDIwMCJ9.hQXPYtzLpnHB4qhFb58AuoSUYRQPti1H-KBzrplUOEk",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"RequirementTypeName\":\"Food\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{base_url}}/RequirementType",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"RequirementType"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "{{base_url}}/RequirementType",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJodHRwOi8vc2NoZW1hcy54bWxzb2FwLm9yZy93cy8yMDA1LzA1L2lkZW50aXR5L2NsYWltcy9uYW1lIjoiZGhydXZpIiwianRpIjoiNmI3ZjAxMzAtMmM4YS00ZmJlLTk5ZTgtYjJjNWI0NWZjMDRjIiwiaHR0cDovL3NjaGVtYXMubWljcm9zb2Z0LmNvbS93cy8yMDA4LzA2L2lkZW50aXR5L2NsYWltcy9yb2xlIjoiVXNlciIsImV4cCI6MTY0MDAwOTk1MiwiaXNzIjoiaHR0cDovL2xvY2FsaG9zdDo0NDMyOCIsImF1ZCI6Imh0dHA6Ly9sb2NhbGhvc3Q6NDIwMCJ9.hQXPYtzLpnHB4qhFb58AuoSUYRQPti1H-KBzrplUOEk",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{base_url}}/RequirementType",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"RequirementType"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "{{base_url}}/RequirementType/2",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJodHRwOi8vc2NoZW1hcy54bWxzb2FwLm9yZy93cy8yMDA1LzA1L2lkZW50aXR5L2NsYWltcy9uYW1lIjoiZGhydXZpIiwianRpIjoiNmI3ZjAxMzAtMmM4YS00ZmJlLTk5ZTgtYjJjNWI0NWZjMDRjIiwiaHR0cDovL3NjaGVtYXMubWljcm9zb2Z0LmNvbS93cy8yMDA4LzA2L2lkZW50aXR5L2NsYWltcy9yb2xlIjoiVXNlciIsImV4cCI6MTY0MDAwOTk1MiwiaXNzIjoiaHR0cDovL2xvY2FsaG9zdDo0NDMyOCIsImF1ZCI6Imh0dHA6Ly9sb2NhbGhvc3Q6NDIwMCJ9.hQXPYtzLpnHB4qhFb58AuoSUYRQPti1H-KBzrplUOEk",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{base_url}}/RequirementType/2",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"RequirementType",
+								"2"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "{{base_url}}/RequirementType/2",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJodHRwOi8vc2NoZW1hcy54bWxzb2FwLm9yZy93cy8yMDA1LzA1L2lkZW50aXR5L2NsYWltcy9uYW1lIjoiZGhydXZpIiwianRpIjoiMGMyZTU5ZTYtOTViMC00Zjk3LWFiZGEtNDdjYjA5MzlmYzczIiwiaHR0cDovL3NjaGVtYXMubWljcm9zb2Z0LmNvbS93cy8yMDA4LzA2L2lkZW50aXR5L2NsYWltcy9yb2xlIjoiVXNlciIsImV4cCI6MTY0MDAxMTEzOSwiaXNzIjoiaHR0cDovL2xvY2FsaG9zdDo0NDMyOCIsImF1ZCI6Imh0dHA6Ly9sb2NhbGhvc3Q6NDIwMCJ9.EdpJJVRJthZ4jvAM-wlERDZ6iFlmNnwfhvjwPH_LiM8",
+									"type": "string"
+								}
+							]
+						},
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"RequirementTypeName\":\"Health\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{base_url}}/RequirementType/2",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"RequirementType",
+								"2"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Post",
+			"item": [
+				{
+					"name": "{{base_url}}/Post",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJodHRwOi8vc2NoZW1hcy54bWxzb2FwLm9yZy93cy8yMDA1LzA1L2lkZW50aXR5L2NsYWltcy9uYW1lIjoiZGhydXZpIiwianRpIjoiMTRhZTY0ZmYtNmZiMi00OGRjLWI4NGUtYWJhOGMzMzNkZjk4IiwiaHR0cDovL3NjaGVtYXMubWljcm9zb2Z0LmNvbS93cy8yMDA4LzA2L2lkZW50aXR5L2NsYWltcy9yb2xlIjoiVXNlciIsImV4cCI6MTY0MDI2NzE4NCwiaXNzIjoiaHR0cDovL2xvY2FsaG9zdDo0NDMyOCIsImF1ZCI6Imh0dHA6Ly9sb2NhbGhvc3Q6NDIwMCJ9.iMuIS-9mR8sI9O9jpJQnXdS4i8YmJTTmpzY9Mv9Bzok",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [
+							{
+								"key": "",
+								"value": "",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{base_url}}/Post",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"Post"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "{{base_url}}/Post/{id}",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJodHRwOi8vc2NoZW1hcy54bWxzb2FwLm9yZy93cy8yMDA1LzA1L2lkZW50aXR5L2NsYWltcy9uYW1lIjoiZGhydXZpIiwianRpIjoiMTRhZTY0ZmYtNmZiMi00OGRjLWI4NGUtYWJhOGMzMzNkZjk4IiwiaHR0cDovL3NjaGVtYXMubWljcm9zb2Z0LmNvbS93cy8yMDA4LzA2L2lkZW50aXR5L2NsYWltcy9yb2xlIjoiVXNlciIsImV4cCI6MTY0MDI2NzE4NCwiaXNzIjoiaHR0cDovL2xvY2FsaG9zdDo0NDMyOCIsImF1ZCI6Imh0dHA6Ly9sb2NhbGhvc3Q6NDIwMCJ9.iMuIS-9mR8sI9O9jpJQnXdS4i8YmJTTmpzY9Mv9Bzok",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [
+							{
+								"key": "",
+								"value": "",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{base_url}}/Post/1",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"Post",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "{{base_url}}/Post",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJodHRwOi8vc2NoZW1hcy54bWxzb2FwLm9yZy93cy8yMDA1LzA1L2lkZW50aXR5L2NsYWltcy9uYW1lIjoiZGhydXZpIiwianRpIjoiMTRhZTY0ZmYtNmZiMi00OGRjLWI4NGUtYWJhOGMzMzNkZjk4IiwiaHR0cDovL3NjaGVtYXMubWljcm9zb2Z0LmNvbS93cy8yMDA4LzA2L2lkZW50aXR5L2NsYWltcy9yb2xlIjoiVXNlciIsImV4cCI6MTY0MDI2NzE4NCwiaXNzIjoiaHR0cDovL2xvY2FsaG9zdDo0NDMyOCIsImF1ZCI6Imh0dHA6Ly9sb2NhbGhvc3Q6NDIwMCJ9.iMuIS-9mR8sI9O9jpJQnXdS4i8YmJTTmpzY9Mv9Bzok",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [
+							{
+								"key": "",
+								"value": "",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"userId\":1,\r\n    \"PostDescription\":\"education\",\r\n    \"RequirementTypeId\":1,\r\n    \"LocationName\":\"Ghodasar\",\r\n    \"Longitude\":12.23,\r\n    \"Latitude\":23.65,\r\n    \"HelpRequiredCount\":54,\r\n    \"CityId\":1,\r\n    \"StateId\":1,\r\n    \"ImageURL\":\"https://www.the-aiff.com/assets/images/logo_blue.png\",\r\n    \"IsPublished\":true,\r\n    \"IsClosed\":false,\r\n    \"PincodeId\":1\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{base_url}}/Post",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"Post"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "{{base_url}}/Post/1",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJodHRwOi8vc2NoZW1hcy54bWxzb2FwLm9yZy93cy8yMDA1LzA1L2lkZW50aXR5L2NsYWltcy9uYW1lIjoiZGhydXZpIiwianRpIjoiMTRhZTY0ZmYtNmZiMi00OGRjLWI4NGUtYWJhOGMzMzNkZjk4IiwiaHR0cDovL3NjaGVtYXMubWljcm9zb2Z0LmNvbS93cy8yMDA4LzA2L2lkZW50aXR5L2NsYWltcy9yb2xlIjoiVXNlciIsImV4cCI6MTY0MDI2NzE4NCwiaXNzIjoiaHR0cDovL2xvY2FsaG9zdDo0NDMyOCIsImF1ZCI6Imh0dHA6Ly9sb2NhbGhvc3Q6NDIwMCJ9.iMuIS-9mR8sI9O9jpJQnXdS4i8YmJTTmpzY9Mv9Bzok",
+									"type": "string"
+								}
+							]
+						},
+						"method": "PUT",
+						"header": [
+							{
+								"key": "",
+								"value": "",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \r\n    \"Longitude\":12.23,\r\n    \"Latitude\":23.65,\r\n    \"HelpRequiredCount\":54,\r\n    \r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{base_url}}/Post/1",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"Post",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "{{base_url}}/Post/1",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJodHRwOi8vc2NoZW1hcy54bWxzb2FwLm9yZy93cy8yMDA1LzA1L2lkZW50aXR5L2NsYWltcy9uYW1lIjoiZGhydXZpIiwianRpIjoiMTRhZTY0ZmYtNmZiMi00OGRjLWI4NGUtYWJhOGMzMzNkZjk4IiwiaHR0cDovL3NjaGVtYXMubWljcm9zb2Z0LmNvbS93cy8yMDA4LzA2L2lkZW50aXR5L2NsYWltcy9yb2xlIjoiVXNlciIsImV4cCI6MTY0MDI2NzE4NCwiaXNzIjoiaHR0cDovL2xvY2FsaG9zdDo0NDMyOCIsImF1ZCI6Imh0dHA6Ly9sb2NhbGhvc3Q6NDIwMCJ9.iMuIS-9mR8sI9O9jpJQnXdS4i8YmJTTmpzY9Mv9Bzok",
+									"type": "string"
+								}
+							]
+						},
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "",
+								"value": "",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \r\n    \"Longitude\":12.23,\r\n    \"Latitude\":23.65,\r\n    \"HelpRequiredCount\":54,\r\n    \r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{base_url}}/Post/1",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"Post",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "{{base_url}}/Post/City/id",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJodHRwOi8vc2NoZW1hcy54bWxzb2FwLm9yZy93cy8yMDA1LzA1L2lkZW50aXR5L2NsYWltcy9uYW1lIjoiZGhydXZpIiwianRpIjoiMTRhZTY0ZmYtNmZiMi00OGRjLWI4NGUtYWJhOGMzMzNkZjk4IiwiaHR0cDovL3NjaGVtYXMubWljcm9zb2Z0LmNvbS93cy8yMDA4LzA2L2lkZW50aXR5L2NsYWltcy9yb2xlIjoiVXNlciIsImV4cCI6MTY0MDI2NzE4NCwiaXNzIjoiaHR0cDovL2xvY2FsaG9zdDo0NDMyOCIsImF1ZCI6Imh0dHA6Ly9sb2NhbGhvc3Q6NDIwMCJ9.iMuIS-9mR8sI9O9jpJQnXdS4i8YmJTTmpzY9Mv9Bzok",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [
+							{
+								"key": "",
+								"value": "",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \r\n    \"Longitude\":12.23,\r\n    \"Latitude\":23.65,\r\n    \"HelpRequiredCount\":54,\r\n    \r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{base_url}}/Post/City/id",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"Post",
+								"City",
+								"id"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "{{base_url}}/Post/State/id",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJodHRwOi8vc2NoZW1hcy54bWxzb2FwLm9yZy93cy8yMDA1LzA1L2lkZW50aXR5L2NsYWltcy9uYW1lIjoiZGhydXZpIiwianRpIjoiMTRhZTY0ZmYtNmZiMi00OGRjLWI4NGUtYWJhOGMzMzNkZjk4IiwiaHR0cDovL3NjaGVtYXMubWljcm9zb2Z0LmNvbS93cy8yMDA4LzA2L2lkZW50aXR5L2NsYWltcy9yb2xlIjoiVXNlciIsImV4cCI6MTY0MDI2NzE4NCwiaXNzIjoiaHR0cDovL2xvY2FsaG9zdDo0NDMyOCIsImF1ZCI6Imh0dHA6Ly9sb2NhbGhvc3Q6NDIwMCJ9.iMuIS-9mR8sI9O9jpJQnXdS4i8YmJTTmpzY9Mv9Bzok",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [
+							{
+								"key": "",
+								"value": "",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \r\n    \"Longitude\":12.23,\r\n    \"Latitude\":23.65,\r\n    \"HelpRequiredCount\":54,\r\n    \r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{base_url}}/Post/state/1",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"Post",
+								"state",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "{{base_url}}/Post/PincodeId/id",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJodHRwOi8vc2NoZW1hcy54bWxzb2FwLm9yZy93cy8yMDA1LzA1L2lkZW50aXR5L2NsYWltcy9uYW1lIjoiZGhydXZpIiwianRpIjoiMTRhZTY0ZmYtNmZiMi00OGRjLWI4NGUtYWJhOGMzMzNkZjk4IiwiaHR0cDovL3NjaGVtYXMubWljcm9zb2Z0LmNvbS93cy8yMDA4LzA2L2lkZW50aXR5L2NsYWltcy9yb2xlIjoiVXNlciIsImV4cCI6MTY0MDI2NzE4NCwiaXNzIjoiaHR0cDovL2xvY2FsaG9zdDo0NDMyOCIsImF1ZCI6Imh0dHA6Ly9sb2NhbGhvc3Q6NDIwMCJ9.iMuIS-9mR8sI9O9jpJQnXdS4i8YmJTTmpzY9Mv9Bzok",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [
+							{
+								"key": "",
+								"value": "",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \r\n    \"Longitude\":12.23,\r\n    \"Latitude\":23.65,\r\n    \"HelpRequiredCount\":54,\r\n    \r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{base_url}}/Post/pincode",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"Post",
+								"pincode"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "{{base_url}}/Post/Pincode/PincodeNo.",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJodHRwOi8vc2NoZW1hcy54bWxzb2FwLm9yZy93cy8yMDA1LzA1L2lkZW50aXR5L2NsYWltcy9uYW1lIjoiZGhydXZpIiwianRpIjoiMTRhZTY0ZmYtNmZiMi00OGRjLWI4NGUtYWJhOGMzMzNkZjk4IiwiaHR0cDovL3NjaGVtYXMubWljcm9zb2Z0LmNvbS93cy8yMDA4LzA2L2lkZW50aXR5L2NsYWltcy9yb2xlIjoiVXNlciIsImV4cCI6MTY0MDI2NzE4NCwiaXNzIjoiaHR0cDovL2xvY2FsaG9zdDo0NDMyOCIsImF1ZCI6Imh0dHA6Ly9sb2NhbGhvc3Q6NDIwMCJ9.iMuIS-9mR8sI9O9jpJQnXdS4i8YmJTTmpzY9Mv9Bzok",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [
+							{
+								"key": "",
+								"value": "",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \r\n    \"Longitude\":12.23,\r\n    \"Latitude\":23.65,\r\n    \"HelpRequiredCount\":54,\r\n    \r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{base_url}}/Post/pincode/380001",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"Post",
+								"pincode",
+								"380001"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "{{base_url}}/Post/Location/name",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJodHRwOi8vc2NoZW1hcy54bWxzb2FwLm9yZy93cy8yMDA1LzA1L2lkZW50aXR5L2NsYWltcy9uYW1lIjoiZGhydXZpIiwianRpIjoiMTRhZTY0ZmYtNmZiMi00OGRjLWI4NGUtYWJhOGMzMzNkZjk4IiwiaHR0cDovL3NjaGVtYXMubWljcm9zb2Z0LmNvbS93cy8yMDA4LzA2L2lkZW50aXR5L2NsYWltcy9yb2xlIjoiVXNlciIsImV4cCI6MTY0MDI2NzE4NCwiaXNzIjoiaHR0cDovL2xvY2FsaG9zdDo0NDMyOCIsImF1ZCI6Imh0dHA6Ly9sb2NhbGhvc3Q6NDIwMCJ9.iMuIS-9mR8sI9O9jpJQnXdS4i8YmJTTmpzY9Mv9Bzok",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [
+							{
+								"key": "",
+								"value": "",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \r\n    \"Longitude\":12.23,\r\n    \"Latitude\":23.65,\r\n    \"HelpRequiredCount\":54,\r\n    \r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{base_url}}/Post/Location/manjalpur",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"Post",
+								"Location",
+								"manjalpur"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "{{base_url}}/Post/user/name",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJodHRwOi8vc2NoZW1hcy54bWxzb2FwLm9yZy93cy8yMDA1LzA1L2lkZW50aXR5L2NsYWltcy9uYW1lIjoiZGhydXZpIiwianRpIjoiMTRhZTY0ZmYtNmZiMi00OGRjLWI4NGUtYWJhOGMzMzNkZjk4IiwiaHR0cDovL3NjaGVtYXMubWljcm9zb2Z0LmNvbS93cy8yMDA4LzA2L2lkZW50aXR5L2NsYWltcy9yb2xlIjoiVXNlciIsImV4cCI6MTY0MDI2NzE4NCwiaXNzIjoiaHR0cDovL2xvY2FsaG9zdDo0NDMyOCIsImF1ZCI6Imh0dHA6Ly9sb2NhbGhvc3Q6NDIwMCJ9.iMuIS-9mR8sI9O9jpJQnXdS4i8YmJTTmpzY9Mv9Bzok",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [
+							{
+								"key": "",
+								"value": "",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \r\n    \"Longitude\":12.23,\r\n    \"Latitude\":23.65,\r\n    \"HelpRequiredCount\":54,\r\n    \r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{base_url}}/Post/user/name",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"Post",
+								"user",
+								"name"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "{{base_url}}/Post/userid/id",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJodHRwOi8vc2NoZW1hcy54bWxzb2FwLm9yZy93cy8yMDA1LzA1L2lkZW50aXR5L2NsYWltcy9uYW1lIjoiZGhydXZpIiwianRpIjoiMTRhZTY0ZmYtNmZiMi00OGRjLWI4NGUtYWJhOGMzMzNkZjk4IiwiaHR0cDovL3NjaGVtYXMubWljcm9zb2Z0LmNvbS93cy8yMDA4LzA2L2lkZW50aXR5L2NsYWltcy9yb2xlIjoiVXNlciIsImV4cCI6MTY0MDI2NzE4NCwiaXNzIjoiaHR0cDovL2xvY2FsaG9zdDo0NDMyOCIsImF1ZCI6Imh0dHA6Ly9sb2NhbGhvc3Q6NDIwMCJ9.iMuIS-9mR8sI9O9jpJQnXdS4i8YmJTTmpzY9Mv9Bzok",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [
+							{
+								"key": "",
+								"value": "",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \r\n    \"Longitude\":12.23,\r\n    \"Latitude\":23.65,\r\n    \"HelpRequiredCount\":54,\r\n    \r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{base_url}}/Post/userid/i",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"Post",
+								"userid",
+								"i"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "{{base_url}}/Post/Timerange/date",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJodHRwOi8vc2NoZW1hcy54bWxzb2FwLm9yZy93cy8yMDA1LzA1L2lkZW50aXR5L2NsYWltcy9uYW1lIjoiZGhydXZpIiwianRpIjoiMTRhZTY0ZmYtNmZiMi00OGRjLWI4NGUtYWJhOGMzMzNkZjk4IiwiaHR0cDovL3NjaGVtYXMubWljcm9zb2Z0LmNvbS93cy8yMDA4LzA2L2lkZW50aXR5L2NsYWltcy9yb2xlIjoiVXNlciIsImV4cCI6MTY0MDI2NzE4NCwiaXNzIjoiaHR0cDovL2xvY2FsaG9zdDo0NDMyOCIsImF1ZCI6Imh0dHA6Ly9sb2NhbGhvc3Q6NDIwMCJ9.iMuIS-9mR8sI9O9jpJQnXdS4i8YmJTTmpzY9Mv9Bzok",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [
+							{
+								"key": "",
+								"value": "",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \r\n    \"Longitude\":12.23,\r\n    \"Latitude\":23.65,\r\n    \"HelpRequiredCount\":54,\r\n    \r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{base_url}}/Post/Timerange/date",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"Post",
+								"Timerange",
+								"date"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "CharityEventPost",
+			"item": [
+				{
+					"name": "{{base_url}}/CharityEventPost",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJodHRwOi8vc2NoZW1hcy54bWxzb2FwLm9yZy93cy8yMDA1LzA1L2lkZW50aXR5L2NsYWltcy9uYW1lIjoiZGhydXZpIiwianRpIjoiMTRhZTY0ZmYtNmZiMi00OGRjLWI4NGUtYWJhOGMzMzNkZjk4IiwiaHR0cDovL3NjaGVtYXMubWljcm9zb2Z0LmNvbS93cy8yMDA4LzA2L2lkZW50aXR5L2NsYWltcy9yb2xlIjoiVXNlciIsImV4cCI6MTY0MDI2NzE4NCwiaXNzIjoiaHR0cDovL2xvY2FsaG9zdDo0NDMyOCIsImF1ZCI6Imh0dHA6Ly9sb2NhbGhvc3Q6NDIwMCJ9.iMuIS-9mR8sI9O9jpJQnXdS4i8YmJTTmpzY9Mv9Bzok",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [
+							{
+								"key": "",
+								"value": "",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{base_url}}/CharityEventPost",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"CharityEventPost"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "{{base_url}}/CharityEventPost",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJodHRwOi8vc2NoZW1hcy54bWxzb2FwLm9yZy93cy8yMDA1LzA1L2lkZW50aXR5L2NsYWltcy9uYW1lIjoiZGhydXZpIiwianRpIjoiMTRhZTY0ZmYtNmZiMi00OGRjLWI4NGUtYWJhOGMzMzNkZjk4IiwiaHR0cDovL3NjaGVtYXMubWljcm9zb2Z0LmNvbS93cy8yMDA4LzA2L2lkZW50aXR5L2NsYWltcy9yb2xlIjoiVXNlciIsImV4cCI6MTY0MDI2NzE4NCwiaXNzIjoiaHR0cDovL2xvY2FsaG9zdDo0NDMyOCIsImF1ZCI6Imh0dHA6Ly9sb2NhbGhvc3Q6NDIwMCJ9.iMuIS-9mR8sI9O9jpJQnXdS4i8YmJTTmpzY9Mv9Bzok",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [
+							{
+								"key": "",
+								"value": "",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \r\n    \"EventId\":1,\r\n    \"UserId\":1,\r\n    \"PostUrl\":\"www.google.com.io\",\r\n    \"Content\":\"Academic event2_0\",\r\n    \"IsPublished\":true\r\n   \r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{base_url}}/CharityEventPost",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"CharityEventPost"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "{{base_url}}/CharityEventPost/2",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJodHRwOi8vc2NoZW1hcy54bWxzb2FwLm9yZy93cy8yMDA1LzA1L2lkZW50aXR5L2NsYWltcy9uYW1lIjoiZGhydXZpIiwianRpIjoiMTRhZTY0ZmYtNmZiMi00OGRjLWI4NGUtYWJhOGMzMzNkZjk4IiwiaHR0cDovL3NjaGVtYXMubWljcm9zb2Z0LmNvbS93cy8yMDA4LzA2L2lkZW50aXR5L2NsYWltcy9yb2xlIjoiVXNlciIsImV4cCI6MTY0MDI2NzE4NCwiaXNzIjoiaHR0cDovL2xvY2FsaG9zdDo0NDMyOCIsImF1ZCI6Imh0dHA6Ly9sb2NhbGhvc3Q6NDIwMCJ9.iMuIS-9mR8sI9O9jpJQnXdS4i8YmJTTmpzY9Mv9Bzok",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [
+							{
+								"key": "",
+								"value": "",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{base_url}}/CharityEventPost/2",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"CharityEventPost",
+								"2"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "{{base_url}}/CharityEventPost/user/{name}",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJodHRwOi8vc2NoZW1hcy54bWxzb2FwLm9yZy93cy8yMDA1LzA1L2lkZW50aXR5L2NsYWltcy9uYW1lIjoiZGhydXZpIiwianRpIjoiMTRhZTY0ZmYtNmZiMi00OGRjLWI4NGUtYWJhOGMzMzNkZjk4IiwiaHR0cDovL3NjaGVtYXMubWljcm9zb2Z0LmNvbS93cy8yMDA4LzA2L2lkZW50aXR5L2NsYWltcy9yb2xlIjoiVXNlciIsImV4cCI6MTY0MDI2NzE4NCwiaXNzIjoiaHR0cDovL2xvY2FsaG9zdDo0NDMyOCIsImF1ZCI6Imh0dHA6Ly9sb2NhbGhvc3Q6NDIwMCJ9.iMuIS-9mR8sI9O9jpJQnXdS4i8YmJTTmpzY9Mv9Bzok",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [
+							{
+								"key": "",
+								"value": "",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{base_url}}/CharityEventPost/user/",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"CharityEventPost",
+								"user",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "{{base_url}}/CharityEventPost/userid/1",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJodHRwOi8vc2NoZW1hcy54bWxzb2FwLm9yZy93cy8yMDA1LzA1L2lkZW50aXR5L2NsYWltcy9uYW1lIjoiZGhydXZpIiwianRpIjoiMTRhZTY0ZmYtNmZiMi00OGRjLWI4NGUtYWJhOGMzMzNkZjk4IiwiaHR0cDovL3NjaGVtYXMubWljcm9zb2Z0LmNvbS93cy8yMDA4LzA2L2lkZW50aXR5L2NsYWltcy9yb2xlIjoiVXNlciIsImV4cCI6MTY0MDI2NzE4NCwiaXNzIjoiaHR0cDovL2xvY2FsaG9zdDo0NDMyOCIsImF1ZCI6Imh0dHA6Ly9sb2NhbGhvc3Q6NDIwMCJ9.iMuIS-9mR8sI9O9jpJQnXdS4i8YmJTTmpzY9Mv9Bzok",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [
+							{
+								"key": "",
+								"value": "",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{base_url}}/CharityEventPost/userid/1",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"CharityEventPost",
+								"userid",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "{{base_url}}/CharityEventPost/id",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJodHRwOi8vc2NoZW1hcy54bWxzb2FwLm9yZy93cy8yMDA1LzA1L2lkZW50aXR5L2NsYWltcy9uYW1lIjoiZGhydXZpIiwianRpIjoiMTRhZTY0ZmYtNmZiMi00OGRjLWI4NGUtYWJhOGMzMzNkZjk4IiwiaHR0cDovL3NjaGVtYXMubWljcm9zb2Z0LmNvbS93cy8yMDA4LzA2L2lkZW50aXR5L2NsYWltcy9yb2xlIjoiVXNlciIsImV4cCI6MTY0MDI2NzE4NCwiaXNzIjoiaHR0cDovL2xvY2FsaG9zdDo0NDMyOCIsImF1ZCI6Imh0dHA6Ly9sb2NhbGhvc3Q6NDIwMCJ9.iMuIS-9mR8sI9O9jpJQnXdS4i8YmJTTmpzY9Mv9Bzok",
+									"type": "string"
+								}
+							]
+						},
+						"method": "PUT",
+						"header": [
+							{
+								"key": "",
+								"value": "",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{base_url}}/CharityEventPost/id",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"CharityEventPost",
+								"id"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "{{base_url}}/CharityEventPost/id",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJodHRwOi8vc2NoZW1hcy54bWxzb2FwLm9yZy93cy8yMDA1LzA1L2lkZW50aXR5L2NsYWltcy9uYW1lIjoiZGhydXZpIiwianRpIjoiMTRhZTY0ZmYtNmZiMi00OGRjLWI4NGUtYWJhOGMzMzNkZjk4IiwiaHR0cDovL3NjaGVtYXMubWljcm9zb2Z0LmNvbS93cy8yMDA4LzA2L2lkZW50aXR5L2NsYWltcy9yb2xlIjoiVXNlciIsImV4cCI6MTY0MDI2NzE4NCwiaXNzIjoiaHR0cDovL2xvY2FsaG9zdDo0NDMyOCIsImF1ZCI6Imh0dHA6Ly9sb2NhbGhvc3Q6NDIwMCJ9.iMuIS-9mR8sI9O9jpJQnXdS4i8YmJTTmpzY9Mv9Bzok",
+									"type": "string"
+								}
+							]
+						},
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "",
+								"value": "",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{base_url}}/CharityEventPost/id",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"CharityEventPost",
+								"id"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "{{base_url}}/CharityEventPost/timerange/{date}",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJodHRwOi8vc2NoZW1hcy54bWxzb2FwLm9yZy93cy8yMDA1LzA1L2lkZW50aXR5L2NsYWltcy9uYW1lIjoiZGhydXZpIiwianRpIjoiMTRhZTY0ZmYtNmZiMi00OGRjLWI4NGUtYWJhOGMzMzNkZjk4IiwiaHR0cDovL3NjaGVtYXMubWljcm9zb2Z0LmNvbS93cy8yMDA4LzA2L2lkZW50aXR5L2NsYWltcy9yb2xlIjoiVXNlciIsImV4cCI6MTY0MDI2NzE4NCwiaXNzIjoiaHR0cDovL2xvY2FsaG9zdDo0NDMyOCIsImF1ZCI6Imh0dHA6Ly9sb2NhbGhvc3Q6NDIwMCJ9.iMuIS-9mR8sI9O9jpJQnXdS4i8YmJTTmpzY9Mv9Bzok",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [
+							{
+								"key": "",
+								"value": "",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{base_url}}/CharityEventPost/timerange/2021-12-3",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"CharityEventPost",
+								"timerange",
+								"2021-12-3"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}

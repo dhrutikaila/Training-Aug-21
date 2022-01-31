@@ -1,0 +1,12 @@
+/* Practice 1 */
+body{
+    background-color: cornflowerblue;
+}
+.div1, .div2, .div3{
+    border: 2px solid black;
+    margin: 30px;
+    float: left;
+    height:300px;
+    width: 350px;
+
+}

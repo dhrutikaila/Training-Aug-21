@@ -1,0 +1,46 @@
+<!-- Hide elements with Media queries
+https://www.w3schools.com/css/tryit.asp?filename=tryresponsive_mediaquery_breakpoints -->
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hide elements with Media queries </title>
+    <style>
+        .one {
+            border: 2px solid black;
+            background-color: aliceblue;
+            padding: 20px;
+        }
+
+        .two {
+            border: 2px solid black;
+            background-color: aqua;
+            padding: 20px;
+        }
+
+        @media only screen and (max-width:600px) {
+            .one {
+                display: none;
+            }
+        }
+
+        @media only screen and (max-width:768px) {
+            .two {
+                display: none;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <h2>Hiding elements at different screen sizes </h2>
+    <p class="one">Lorem ipsum dolor sit amet consectetur adipisicing elit. Maiores alias modi ratione.</p>
+    <p class="two">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Accusantium, facilis laboriosam sed fugit
+        quaerat facere.</p>
+</body>
+
+</html>

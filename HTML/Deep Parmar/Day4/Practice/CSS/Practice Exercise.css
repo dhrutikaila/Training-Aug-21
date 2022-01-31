@@ -1,0 +1,42 @@
+/*  Provide text alignment to center to student Report Card which is created  in Day1 assignment */
+table,th,td{
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+    background-color: white;
+    border:1px solid black;
+}
+
+/* Provide Border to one paragraph and write some dummy text into it */
+p{
+    color: rgb(0, 204, 255);
+    background-color: white;
+    border:2px solid black;
+}
+
+/* Create city list in horizontal order(using display properties) */
+#list {
+    margin: 6vh 2vw;
+    padding: 1vh 4vw;
+    background-color: rgb(173, 248, 163);
+    color: rgb(235, 31, 31);
+}
+
+#list li {
+    display: inline-block;
+    padding: 18px 76px;
+    border-radius: 5px;
+    font-size: 25px;
+}
+
+#list li:hover {
+    background-color: rgb(46, 225, 241);
+    color: black;
+}
+
+
+/* Suppose html markup below, apply all h1 and h2 blue color.- */
+h1,h2{
+    color:rgb(73, 73, 240);
+    background-color: white;
+}

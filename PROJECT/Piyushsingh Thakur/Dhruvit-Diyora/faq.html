@@ -1,0 +1,396 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Free Health For all</title>
+    <link rel="stylesheet" href="./Styles/bootstrap.css" />
+    <link rel="stylesheet" href="./Styles/index.css" />
+    <link rel="stylesheet" href="./Styles/faq.css" />
+    <link
+      rel="canonical"
+      href="https://getbootstrap.com/docs/5.0/examples/carousel/"
+    />
+    <!-- <link rel="stylesheet" href="./Styles/index.css" /> -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3"
+      crossorigin="anonymous"
+    />
+    <link
+      rel="stylesheet"
+      href="https://use.fontawesome.com/releases/v5.2.0/css/all.css"
+      integrity="sha384-hWVjflwFxL6sNzntih27bfxkr27PmbbK/iSvJ+a4+0owXq79v+lsFkW54bOGbiDQ"
+      crossorigin="anonymous"
+    />
+  </head>
+  <body>
+    <nav class="navbar navbar-expand-lg navbar-dark fixed-top bg-dark">
+      <a class="navbar-brand ms-5" href="./index.html">FREE HEALTH</a>
+      <button
+        class="navbar-toggler"
+        type="button"
+        data-bs-toggle="collapse"
+        data-bs-target="#navbarCollapse"
+        aria-controls="navbarCollapse"
+        aria-expanded="false"
+        aria-label="Toggle navigation"
+      >
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarCollapse">
+        <ul class="navbar-nav me-auto mb-2 mb-md-0 ms-auto">
+          <li class="nav-item">
+            <a class="nav-link px-3" href="./index.html">Home</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link px-3" href="../team.html">Team</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link px-3" href="#">Services</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link px-3" href="#">Blogs</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link active px-3" href="#">FAQ</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link px-3" href="contactus.html">Contact</a>
+          </li>
+        </ul>
+        <ul class="navbar-nav text-center me-5 mb-md-0">
+          <li class="nav-item me-3 px-3">
+            <button
+              class="nav-link btn btn-primary text-white mt-2"
+              style="height: 80%"
+              id="loginbtn"
+              data-toggle="modal"
+              data-target="#loginModal"
+            >
+              Login
+            </button>
+          </li>
+          <li class="nav-item px-3">
+            <button
+              class="nav-link btn btn-primary text-white mt-2"
+              style="height: 80%"
+              id="signbtn"
+              data-toggle="modal"
+              data-target="#signupModal"
+            >
+              Signup
+            </button>
+          </li>
+        </ul>
+      </div>
+    </nav>
+    <!-- scroll button -->
+
+    <button
+      type="button"
+      class="btn btn-danger btn-floating btn-lg"
+      id="scroll"
+    >
+      <i class="fas fa-arrow-up"></i>
+    </button>
+    <div
+      class="modal fade"
+      id="loginModal"
+      tabindex="-1"
+      role="dialog"
+      aria-labelledby="loginModalLabel"
+      aria-hidden="true"
+    >
+      <div class="modal-dialog" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="loginModalLabel">Login</h5>
+            <button
+              type="button"
+              class="close closelogin"
+              data-dismiss="modal"
+              aria-label="Close"
+            >
+              <span aria-hidden="true">&times;</span>
+            </button>
+          </div>
+          <form>
+            <div class="modal-body">
+              <div class="form-group">
+                <label for="exampleInputEmail1">Email address</label>
+                <input
+                  type="email"
+                  class="form-control"
+                  id="exampleInputEmail1"
+                  aria-describedby="emailHelp"
+                  placeholder="Enter email"
+                  required
+                  pattern="^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$"
+                />
+                <small id="emailHelp" class="form-text text-muted"
+                  >We'll never share your email with anyone else.</small
+                >
+              </div>
+              <div class="form-group">
+                <label for="exampleInputPassword1">Password</label>
+                <input
+                  type="password"
+                  class="form-control"
+                  id="exampleInputPassword1"
+                  placeholder="Password"
+                />
+              </div>
+            </div>
+            <div class="modal-footer">
+              <button
+                type="button"
+                class="btn btn-secondary closelogin"
+                data-dismiss="modal"
+              >
+                Close
+              </button>
+              <button type="submit" id="logincheck" class="btn btn-primary">
+                Submit
+              </button>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+    <div
+      class="modal fade"
+      id="signupModal"
+      tabindex="-1"
+      role="dialog"
+      aria-labelledby="signupModalLabel"
+      aria-hidden="true"
+    >
+      <div class="modal-dialog" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="signupModalLabel">Signup</h5>
+            <button
+              type="button"
+              class="close closesignup"
+              data-dismiss="modal"
+              aria-label="Close"
+            >
+              <span aria-hidden="true">&times;</span>
+            </button>
+          </div>
+          <form>
+            <div class="modal-body">
+              <div class="form-group">
+                <label for="exampleInputEmail1">Email address</label>
+                <input
+                  type="email"
+                  class="form-control"
+                  id="signupInputEmail1"
+                  aria-describedby="emailHelp"
+                  placeholder="Enter email"
+                  required
+                  pattern="^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$"
+                />
+                <small id="emailHelp" class="form-text text-muted"
+                  >We'll never share your email with anyone else.</small
+                >
+              </div>
+              <div class="form-group">
+                <label for="exampleInputPassword1">Password</label>
+                <input
+                  type="password"
+                  class="form-control"
+                  id="signupInputPassword1"
+                  placeholder="Password"
+                />
+              </div>
+            </div>
+            <div class="modal-footer">
+              <button
+                type="button"
+                class="btn btn-secondary closesignup"
+                data-dismiss="modal"
+              >
+                Close
+              </button>
+              <button type="submit" id="signupUser" class="btn btn-primary">
+                Submit
+              </button>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+    <hr class="featurette-divider" />
+    <div class="container">
+      <div class="row">
+        <div class="col-md-6 col-sm-12 col-xs-12">
+          <h1 class="faqsHeading">
+            Any
+            <br />
+            Questions?
+          </h1>
+        </div>
+        <div
+          class="col-md-6 col-sm-12 col-xs-12 py-5"
+          style="margin-top: 51px"
+          id="myAccordion"
+        ></div>
+      </div>
+    </div>
+    <hr class="featurette-divider" />
+    <!-- FOOTER -->
+    <footer class="footer">
+      <div class="container bottom_border">
+        <div class="row">
+          <div class="col-sm-4 col-md col-sm-4 col-12 col">
+            <h5 class="headin5_amrc text-white pt2">Find us</h5>
+            <!--headin5_amrc-->
+            <p class="mb10">
+              Lorem Ipsum is simply dummy text of the printing and typesetting
+              industry. Lorem Ipsum has been the industry's standard dummy text
+              ever since the 1500s
+            </p>
+            <p>
+              <i class="fa fa-location-arrow"></i> B/H Nirma University,
+              Ekyarth, Near Vandemataram Fabula, Malabar County Rd, Chharodi,
+              Gujarat 382481
+            </p>
+            <p><i class="fa fa-phone"></i> +91-9157049688</p>
+            <p><i class="fa fa fa-envelope"></i> dhruvit.d9688@gmail.com</p>
+          </div>
+
+          <div class="col-sm-4 col-md col-6 col">
+            <h5 class="headin5_amrc text-white pt2">Quick links</h5>
+            <!--headin5_amrc-->
+            <ul class="footer_ul_amrc">
+              <li><a href="#">Privacy Policy</a></li>
+              <li><a href="#">Performance </a></li>
+              <li><a href="#">Our Petrons</a></li>
+              <li><a href="#">Our Services</a></li>
+              <li><a href="#">Statastics</a></li>
+            </ul>
+            <!--footer_ul_amrc ends here-->
+          </div>
+
+          <div class="col-sm-4 col-md col-6 col">
+            <h5 class="headin5_amrc text-white pt2">Quick links</h5>
+            <!--headin5_amrc-->
+            <ul class="footer_ul_amrc">
+              <li><a href="#">News & Events</a></li>
+
+              <li><a href="#">Support Us</a></li>
+              <li><a href="#">Event Photos</a></li>
+              <li><a href="#">Our Team</a></li>
+              <li><a href="#">Event Photos</a></li>
+            </ul>
+            <!--footer_ul_amrc ends here-->
+          </div>
+
+          <div class="col-sm-4 col-md col-12 col">
+            <h5 class="headin5_amrc text-white pt2">Newsletter</h5>
+            <!--headin5_amrc ends here-->
+
+            <ul class="footerU12">
+              <li>
+                <p class="my-3">Want to check our daily updates...</p>
+              </li>
+              <li>
+                <p>Join Out Newsletter</p>
+              </li>
+
+              <li>
+                <form action="#">
+                  <div class="input-group mb-3 mt-4">
+                    <input
+                      class="form-control"
+                      type="text"
+                      placeholder="Your Email Address"
+                      aria-label="Your Email Address"
+                      aria-describedby="button-addon2"
+                    />
+                    <button
+                      class="btn btn-primary"
+                      id="button-addon2"
+                      type="button"
+                    >
+                      Submit
+                    </button>
+                  </div>
+                </form>
+              </li>
+            </ul>
+            <!--footerU12 ends here-->
+          </div>
+        </div>
+      </div>
+
+      <div class="container">
+        <ul class="foote_bottom_ul_amrc">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="team.html">Team</a></li>
+          <li><a href="#">Services</a></li>
+          <li><a href="#">Blogs</a></li>
+          <li><a href="#">FAQ</a></li>
+          <li><a href="contactus.html">Contact</a></li>
+        </ul>
+        <!--foote_bottom_ul_amrc ends here-->
+        <p class="text-center">
+          Copyright @2021 | Managed by <a href="#">Dhruvit</a>
+        </p>
+
+        <ul class="socials">
+          <li>
+            <a href="https://hi-in.facebook.com/dhruvit.d9688"
+              ><i class="fab fa-facebook-f"></i
+            ></a>
+          </li>
+          <li>
+            <a href="https://twitter.com/dhruvitdiyora"
+              ><i class="fab fa-twitter"></i
+            ></a>
+          </li>
+          <li>
+            <a href="https://in.linkedin.com/in/dhruvitdiyora"
+              ><i class="fab fa-linkedin"></i
+            ></a>
+          </li>
+          <li>
+            <a href="https://www.instagram.com/dhruvit_diyora/"
+              ><i class="fab fa-instagram"></i
+            ></a>
+          </li>
+          <li>
+            <a href="mailto:dhruvit.d9688@gmail.com"
+              ><i class="fab fa-google-plus-g"></i
+            ></a>
+          </li>
+        </ul>
+        <!--social_footer_ul ends here-->
+      </div>
+    </footer>
+
+    <!-- ./container -->
+    <script
+      src="https://code.jquery.com/jquery-3.6.0.js"
+      integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk="
+      crossorigin="anonymous"
+    ></script>
+    <script src="./js/main.js"></script>
+    <script src="./js/faq.js"></script>
+
+    <script
+      src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.10.2/dist/umd/popper.min.js"
+      integrity="sha384-7+zCNj/IqJ95wo16oMtfsKbZ9ccEh31eOz1HGyDuCQ6wgnyJNSYdrPa03rtR1zdB"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.min.js"
+      integrity="sha384-QJHtvGhmr9XOIpI6YVutG+2QOK9T+ZnN4kzFN1RtK3zEFEIsxhlmWl5/YESvpZ13"
+      crossorigin="anonymous"
+    ></script>
+  </body>
+</html>

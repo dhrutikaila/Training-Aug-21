@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>practice</title>
+    <link href="assets/css/bootstrap.min.css" rel="stylesheet" />
+</head>
+<body>
+    <div class="container">
+        <div class="h3 text-center my-3">Form API</div>
+        <div>
+            <input type="number" id="inputOne" name="inputOne" class="form-control" min="10" max="70">
+            <label for="inputOne" id="validOne" class="text-danger"></label><br>
+            <label for="inputOne" id="validTwo" class="text-danger"></label>
+        </div>
+        <div class="d-flex">
+            <button onclick="backGo()" class="btn btn-primary mx-3">Back</button>
+            <button onclick="forwardGo()" class="btn btn-info mx-3">Froward</button>
+            <button onclick="goTwo()" class="btn btn-danger mx-3">Go-Back-2</button>
+            <button onclick="goForwardTwo()" class="btn btn-warning mx-3">Go-Forward-2</button>
+        </div>
+    </div>
+        <script src="assets/js/bootstrap.bundle.min.js"></script>
+        <script>
+            let formApi = document.querySelector('#inputOne');
+            formApi.onkeyup = () => {validateOne(formApi)};
+
+            function validateOne(formApi){
+                if(formApi.checkValidity()){
+                    document.getElementById('validOne').innerHTML = "Valid Input";
+                }else{
+                    document.getElementById('validOne').innerHTML = formApi.validationMessage;
+                }
+                let txt = 'Valid Input';
+                if(formApi.validity.rangeOverflow){
+                    txt = 'custom output for rangeOverflow';
+                }
+                if(formApi.validity.rangeUnderflow){
+                    txt = 'custom output for rangeUnderflow';
+                }
+                document.getElementById('validTwo').innerHTML = txt;
+            }
+
+            function backGo(){
+                window.history.back();
+            }  
+
+            function forwardGo(){
+                window.history.forward();
+            }
+
+            function goTwo(){
+                window.history.go(-2);
+            }
+            function goForwardTwo(){
+                window.history.go(2);
+            }
+
+            console.log(history.length);
+
+            localStorage.setItem('test','Demo');
+            console.log(localStorage.getItem('test'));
+            //localStorage.removeItem('test');
+
+            sessionStorage.setItem('sess','demo2');
+            console.log(sessionStorage.getItem('sess'));
+
+            // fetch 
+
+            let file = 'assets/json/demo.json';
+            let file2 = 'assets/json/demo.json';
+            fetch(file)
+            .then(x => x.text())
+            .then(y => console.log(y+'\nsuccess'))
+            .catch(err => console.log(err));
+            //let demo = fetch(file);
+            //console.log(demo);
+
+            // fetch using async
+
+            async function getJson(x){
+                let a  = await fetch(x);
+                let txt =  await a.text();
+                console.log(txt);
+            }
+
+            getJson(file);
+
+        </script>
+</body>
+</html>

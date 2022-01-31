@@ -1,0 +1,1805 @@
+{
+	"info": {
+		"_postman_id": "c08dde94-5315-40b7-bbdc-8d75ad07ad1f",
+		"name": "Charity",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Authentication",
+			"item": [
+				{
+					"name": "register",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"username\":\"preet\",\r\n    \"email\":\"preet@gmail.com\",\r\n    \"password\":\"Preet@123\",\r\n    \"PhoneNumber\":\"9173086970\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{base_url}}/authenticate/register",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"authenticate",
+								"register"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "register-admin",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"username\":\"dhruvi\",\r\n    \"email\":\"dhruv1@gmail.com\",\r\n    \"password\":\"Dhruvit@123\",\r\n    \"PhoneNumber\":\"9157049687\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{base_url}}/authenticate/register",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"authenticate",
+								"register"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "register-organisation",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"username\":\"dhruvi\",\r\n    \"email\":\"dhruv1@gmail.com\",\r\n    \"password\":\"Dhruvit@123\",\r\n    \"PhoneNumber\":\"9157049687\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{base_url}}/authenticate/register-organisation",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"authenticate",
+								"register-organisation"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "login",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"username\":\"dhruvi\",\r\n    \"password\":\"Dhruvit@123\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{base_url}}/authenticate/login?otp=1234",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"authenticate",
+								"login"
+							],
+							"query": [
+								{
+									"key": "otp",
+									"value": "1234"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Test Token",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJodHRwOi8vc2NoZW1hcy54bWxzb2FwLm9yZy93cy8yMDA1LzA1L2lkZW50aXR5L2NsYWltcy9uYW1lIjoiZGhydXZpIiwianRpIjoiOWIxODFjYjYtOWQ1NS00YmI1LTgxOTktYmU4MDgzZTlhMzk3IiwiaHR0cDovL3NjaGVtYXMubWljcm9zb2Z0LmNvbS93cy8yMDA4LzA2L2lkZW50aXR5L2NsYWltcy9yb2xlIjoiVXNlciIsImV4cCI6MTYzOTc1NDQ4NSwiaXNzIjoiaHR0cDovL2xvY2FsaG9zdDo0NDMyOCIsImF1ZCI6Imh0dHA6Ly9sb2NhbGhvc3Q6NDIwMCJ9.vJhxRn8X8hcXANEgZHuj4OGVo9X5qB0uIRA5alLJiG0",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJodHRwOi8vc2NoZW1hcy54bWxzb2FwLm9yZy93cy8yMDA1LzA1L2lkZW50aXR5L2NsYWltcy9uYW1lIjoiZGhydXYiLCJqdGkiOiI2MjI1Yjg1MC04Y2ExLTRjMzQtYjhhNS02YzVlYTRiMTU1ZWYiLCJodHRwOi8vc2NoZW1hcy5taWNyb3NvZnQuY29tL3dzLzIwMDgvMDYvaWRlbnRpdHkvY2xhaW1zL3JvbGUiOiJVc2VyIiwiZXhwIjoxNjM5NDMwNDQ0LCJpc3MiOiJodHRwOi8vbG9jYWxob3N0OjQ0MzI4IiwiYXVkIjoiaHR0cDovL2xvY2FsaG9zdDo0MjAwIn0.oUHOaUjriSn6XITSNuXSTbCf-lbTfsRWczdwO2ao7FI",
+								"type": "text",
+								"disabled": true
+							}
+						],
+						"url": {
+							"raw": "{{base_url}}/WeatherForecast",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"WeatherForecast"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "WeatherForcast",
+			"item": [
+				{
+					"name": "{{base_url}}/WeatherForecast",
+					"request": {
+						"auth": {
+							"type": "bearer"
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{base_url}}/WeatherForecast",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"WeatherForecast"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "RequirementType",
+			"item": [
+				{
+					"name": "{{base_url}}/RequirementType",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJodHRwOi8vc2NoZW1hcy54bWxzb2FwLm9yZy93cy8yMDA1LzA1L2lkZW50aXR5L2NsYWltcy9uYW1lIjoiZGhydXZpIiwianRpIjoiNmI3ZjAxMzAtMmM4YS00ZmJlLTk5ZTgtYjJjNWI0NWZjMDRjIiwiaHR0cDovL3NjaGVtYXMubWljcm9zb2Z0LmNvbS93cy8yMDA4LzA2L2lkZW50aXR5L2NsYWltcy9yb2xlIjoiVXNlciIsImV4cCI6MTY0MDAwOTk1MiwiaXNzIjoiaHR0cDovL2xvY2FsaG9zdDo0NDMyOCIsImF1ZCI6Imh0dHA6Ly9sb2NhbGhvc3Q6NDIwMCJ9.hQXPYtzLpnHB4qhFb58AuoSUYRQPti1H-KBzrplUOEk",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"RequirementTypeName\":\"Food\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{base_url}}/RequirementType",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"RequirementType"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "{{base_url}}/RequirementType",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJodHRwOi8vc2NoZW1hcy54bWxzb2FwLm9yZy93cy8yMDA1LzA1L2lkZW50aXR5L2NsYWltcy9uYW1lIjoiZGhydXZpIiwianRpIjoiNmI3ZjAxMzAtMmM4YS00ZmJlLTk5ZTgtYjJjNWI0NWZjMDRjIiwiaHR0cDovL3NjaGVtYXMubWljcm9zb2Z0LmNvbS93cy8yMDA4LzA2L2lkZW50aXR5L2NsYWltcy9yb2xlIjoiVXNlciIsImV4cCI6MTY0MDAwOTk1MiwiaXNzIjoiaHR0cDovL2xvY2FsaG9zdDo0NDMyOCIsImF1ZCI6Imh0dHA6Ly9sb2NhbGhvc3Q6NDIwMCJ9.hQXPYtzLpnHB4qhFb58AuoSUYRQPti1H-KBzrplUOEk",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{base_url}}/RequirementType",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"RequirementType"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "{{base_url}}/RequirementType/2",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJodHRwOi8vc2NoZW1hcy54bWxzb2FwLm9yZy93cy8yMDA1LzA1L2lkZW50aXR5L2NsYWltcy9uYW1lIjoiZGhydXZpIiwianRpIjoiNmI3ZjAxMzAtMmM4YS00ZmJlLTk5ZTgtYjJjNWI0NWZjMDRjIiwiaHR0cDovL3NjaGVtYXMubWljcm9zb2Z0LmNvbS93cy8yMDA4LzA2L2lkZW50aXR5L2NsYWltcy9yb2xlIjoiVXNlciIsImV4cCI6MTY0MDAwOTk1MiwiaXNzIjoiaHR0cDovL2xvY2FsaG9zdDo0NDMyOCIsImF1ZCI6Imh0dHA6Ly9sb2NhbGhvc3Q6NDIwMCJ9.hQXPYtzLpnHB4qhFb58AuoSUYRQPti1H-KBzrplUOEk",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{base_url}}/RequirementType/2",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"RequirementType",
+								"2"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "{{base_url}}/RequirementType/2",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJodHRwOi8vc2NoZW1hcy54bWxzb2FwLm9yZy93cy8yMDA1LzA1L2lkZW50aXR5L2NsYWltcy9uYW1lIjoiZGhydXZpIiwianRpIjoiMGMyZTU5ZTYtOTViMC00Zjk3LWFiZGEtNDdjYjA5MzlmYzczIiwiaHR0cDovL3NjaGVtYXMubWljcm9zb2Z0LmNvbS93cy8yMDA4LzA2L2lkZW50aXR5L2NsYWltcy9yb2xlIjoiVXNlciIsImV4cCI6MTY0MDAxMTEzOSwiaXNzIjoiaHR0cDovL2xvY2FsaG9zdDo0NDMyOCIsImF1ZCI6Imh0dHA6Ly9sb2NhbGhvc3Q6NDIwMCJ9.EdpJJVRJthZ4jvAM-wlERDZ6iFlmNnwfhvjwPH_LiM8",
+									"type": "string"
+								}
+							]
+						},
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"RequirementTypeName\":\"Health\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{base_url}}/RequirementType/2",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"RequirementType",
+								"2"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "ClusterLocation",
+			"item": [
+				{
+					"name": "{{base_url}}/clusterLocation",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJodHRwOi8vc2NoZW1hcy54bWxzb2FwLm9yZy93cy8yMDA1LzA1L2lkZW50aXR5L2NsYWltcy9uYW1lIjoicHJlZXQiLCJqdGkiOiI4YTQ4ZWIxNC1mYjQzLTQ4MzAtYjE3My0wMzM1ZWI5MDQxMmUiLCJodHRwOi8vc2NoZW1hcy5taWNyb3NvZnQuY29tL3dzLzIwMDgvMDYvaWRlbnRpdHkvY2xhaW1zL3JvbGUiOiJVc2VyIiwiZXhwIjoxNjQwMDM2NTEzLCJpc3MiOiJodHRwOi8vbG9jYWxob3N0OjQ0MzI4IiwiYXVkIjoiaHR0cDovL2xvY2FsaG9zdDo0MjAwIn0.bEP1MEXgvoiWe7eDvVLMP0XZ42w6K_6mLuaH_2KNEoM",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{base_url}}/clusterLocation",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"clusterLocation"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "{{base_url}}/clusterLocation/1",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{base_url}}/clusterLocation/1",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"clusterLocation",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "{{base_url}}/clusterLocation",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJodHRwOi8vc2NoZW1hcy54bWxzb2FwLm9yZy93cy8yMDA1LzA1L2lkZW50aXR5L2NsYWltcy9uYW1lIjoiZGhydXZpIiwianRpIjoiZDFlMWI5NTUtZGYxMS00YzFmLWE4YTEtNDc1YjY3MDBjMmQ3IiwiaHR0cDovL3NjaGVtYXMubWljcm9zb2Z0LmNvbS93cy8yMDA4LzA2L2lkZW50aXR5L2NsYWltcy9yb2xlIjoiQWRtaW4iLCJleHAiOjE2NDAwODk3NzAsImlzcyI6Imh0dHA6Ly9sb2NhbGhvc3Q6NDQzMjgiLCJhdWQiOiJodHRwOi8vbG9jYWxob3N0OjQyMDAifQ.mNkOkrGM0eO16bjg6wVOC6hYPsGH3wv_azTJeRs1zlw",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"userid\":1,\r\n    \"postid\":3,\r\n    \"requirementtypeid\":3,\r\n    \"locations\":\"Maninagar\",\r\n    \"cityid\":1,\r\n    \"stateid\":1,\r\n    \"peoplecount\":20,\r\n    \"isverified\":true,\r\n    \"pincodeid\":1\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{base_url}}/clusterLocation",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"clusterLocation"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "{{base_url}}/clusterLocation/9",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJodHRwOi8vc2NoZW1hcy54bWxzb2FwLm9yZy93cy8yMDA1LzA1L2lkZW50aXR5L2NsYWltcy9uYW1lIjoiZGhydXZpIiwianRpIjoiZDFlMWI5NTUtZGYxMS00YzFmLWE4YTEtNDc1YjY3MDBjMmQ3IiwiaHR0cDovL3NjaGVtYXMubWljcm9zb2Z0LmNvbS93cy8yMDA4LzA2L2lkZW50aXR5L2NsYWltcy9yb2xlIjoiQWRtaW4iLCJleHAiOjE2NDAwODk3NzAsImlzcyI6Imh0dHA6Ly9sb2NhbGhvc3Q6NDQzMjgiLCJhdWQiOiJodHRwOi8vbG9jYWxob3N0OjQyMDAifQ.mNkOkrGM0eO16bjg6wVOC6hYPsGH3wv_azTJeRs1zlw",
+									"type": "string"
+								}
+							]
+						},
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"userid\":1,\r\n    \"postid\":3,\r\n    \"requirementtypeid\":3,\r\n    \"locations\":\"Bapunagar\",\r\n    \"cityid\":1,\r\n    \"stateid\":1,\r\n    \"peoplecount\":20,\r\n    \"isverified\":true,\r\n    \"pincodeid\":1\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{base_url}}/clusterLocation/9",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"clusterLocation",
+								"9"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "{{base_url}}/clusterLocation/1",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJodHRwOi8vc2NoZW1hcy54bWxzb2FwLm9yZy93cy8yMDA1LzA1L2lkZW50aXR5L2NsYWltcy9uYW1lIjoiZGhydXZpIiwianRpIjoiMWI0ZjM1MjktYjc1Yi00OTg3LTg1ZTUtMGEwMzYxZjMwMjhjIiwiaHR0cDovL3NjaGVtYXMubWljcm9zb2Z0LmNvbS93cy8yMDA4LzA2L2lkZW50aXR5L2NsYWltcy9yb2xlIjoiQWRtaW4iLCJleHAiOjE2NDAxMjA1NjksImlzcyI6Imh0dHA6Ly9sb2NhbGhvc3Q6NDQzMjgiLCJhdWQiOiJodHRwOi8vbG9jYWxob3N0OjQyMDAifQ.6daFqJGNXkiCyEJIPHAdVtMGZ_IQ9R06-ZMlyNgAFIE",
+									"type": "string"
+								}
+							]
+						},
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "{{base_url}}/clusterLocation/1",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"clusterLocation",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "{{base_url}}/clusterLocation/pincodeid/1",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJodHRwOi8vc2NoZW1hcy54bWxzb2FwLm9yZy93cy8yMDA1LzA1L2lkZW50aXR5L2NsYWltcy9uYW1lIjoiZGhydXZpIiwianRpIjoiOTk2OTUzODAtY2QzNy00NWE3LTkyYTQtNzA0MjAxY2Y3MmMzIiwiaHR0cDovL3NjaGVtYXMubWljcm9zb2Z0LmNvbS93cy8yMDA4LzA2L2lkZW50aXR5L2NsYWltcy9yb2xlIjoiQWRtaW4iLCJleHAiOjE2NDAyNjU4ODQsImlzcyI6Imh0dHA6Ly9sb2NhbGhvc3Q6NDQzMjgiLCJhdWQiOiJodHRwOi8vbG9jYWxob3N0OjQyMDAifQ.Y4Yi7N-MNrDsSILLINjpHVabQPZPk_7c7_KQ7ud2x6E",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{base_url}}/clusterLocation/pincodeid/1",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"clusterLocation",
+								"pincodeid",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "{{base_url}}/clusterLocation/pincode/380007",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJodHRwOi8vc2NoZW1hcy54bWxzb2FwLm9yZy93cy8yMDA1LzA1L2lkZW50aXR5L2NsYWltcy9uYW1lIjoiZGhydXZpIiwianRpIjoiOTk2OTUzODAtY2QzNy00NWE3LTkyYTQtNzA0MjAxY2Y3MmMzIiwiaHR0cDovL3NjaGVtYXMubWljcm9zb2Z0LmNvbS93cy8yMDA4LzA2L2lkZW50aXR5L2NsYWltcy9yb2xlIjoiQWRtaW4iLCJleHAiOjE2NDAyNjU4ODQsImlzcyI6Imh0dHA6Ly9sb2NhbGhvc3Q6NDQzMjgiLCJhdWQiOiJodHRwOi8vbG9jYWxob3N0OjQyMDAifQ.Y4Yi7N-MNrDsSILLINjpHVabQPZPk_7c7_KQ7ud2x6E",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{base_url}}/clusterLocation/pincode/380007",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"clusterLocation",
+								"pincode",
+								"380007"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "{{base_url}}/clusterLocation/cityid/1",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJodHRwOi8vc2NoZW1hcy54bWxzb2FwLm9yZy93cy8yMDA1LzA1L2lkZW50aXR5L2NsYWltcy9uYW1lIjoiZGhydXZpIiwianRpIjoiOTk2OTUzODAtY2QzNy00NWE3LTkyYTQtNzA0MjAxY2Y3MmMzIiwiaHR0cDovL3NjaGVtYXMubWljcm9zb2Z0LmNvbS93cy8yMDA4LzA2L2lkZW50aXR5L2NsYWltcy9yb2xlIjoiQWRtaW4iLCJleHAiOjE2NDAyNjU4ODQsImlzcyI6Imh0dHA6Ly9sb2NhbGhvc3Q6NDQzMjgiLCJhdWQiOiJodHRwOi8vbG9jYWxob3N0OjQyMDAifQ.Y4Yi7N-MNrDsSILLINjpHVabQPZPk_7c7_KQ7ud2x6E",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{base_url}}/clusterLocation/cityid/1",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"clusterLocation",
+								"cityid",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "{{base_url}}/clusterLocation/city/Ahmedabad",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJodHRwOi8vc2NoZW1hcy54bWxzb2FwLm9yZy93cy8yMDA1LzA1L2lkZW50aXR5L2NsYWltcy9uYW1lIjoiZGhydXZpIiwianRpIjoiOTk2OTUzODAtY2QzNy00NWE3LTkyYTQtNzA0MjAxY2Y3MmMzIiwiaHR0cDovL3NjaGVtYXMubWljcm9zb2Z0LmNvbS93cy8yMDA4LzA2L2lkZW50aXR5L2NsYWltcy9yb2xlIjoiQWRtaW4iLCJleHAiOjE2NDAyNjU4ODQsImlzcyI6Imh0dHA6Ly9sb2NhbGhvc3Q6NDQzMjgiLCJhdWQiOiJodHRwOi8vbG9jYWxob3N0OjQyMDAifQ.Y4Yi7N-MNrDsSILLINjpHVabQPZPk_7c7_KQ7ud2x6E",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{base_url}}/clusterLocation/city/Ahmedabad",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"clusterLocation",
+								"city",
+								"Ahmedabad"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "{{base_url}}/clusterLocation/stateid/1",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJodHRwOi8vc2NoZW1hcy54bWxzb2FwLm9yZy93cy8yMDA1LzA1L2lkZW50aXR5L2NsYWltcy9uYW1lIjoiZGhydXZpIiwianRpIjoiOTk2OTUzODAtY2QzNy00NWE3LTkyYTQtNzA0MjAxY2Y3MmMzIiwiaHR0cDovL3NjaGVtYXMubWljcm9zb2Z0LmNvbS93cy8yMDA4LzA2L2lkZW50aXR5L2NsYWltcy9yb2xlIjoiQWRtaW4iLCJleHAiOjE2NDAyNjU4ODQsImlzcyI6Imh0dHA6Ly9sb2NhbGhvc3Q6NDQzMjgiLCJhdWQiOiJodHRwOi8vbG9jYWxob3N0OjQyMDAifQ.Y4Yi7N-MNrDsSILLINjpHVabQPZPk_7c7_KQ7ud2x6E",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{base_url}}/clusterLocation/stateid/1",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"clusterLocation",
+								"stateid",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "{{base_url}}/clusterLocation/location/Bapunagar",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJodHRwOi8vc2NoZW1hcy54bWxzb2FwLm9yZy93cy8yMDA1LzA1L2lkZW50aXR5L2NsYWltcy9uYW1lIjoiZGhydXZpIiwianRpIjoiOTk2OTUzODAtY2QzNy00NWE3LTkyYTQtNzA0MjAxY2Y3MmMzIiwiaHR0cDovL3NjaGVtYXMubWljcm9zb2Z0LmNvbS93cy8yMDA4LzA2L2lkZW50aXR5L2NsYWltcy9yb2xlIjoiQWRtaW4iLCJleHAiOjE2NDAyNjU4ODQsImlzcyI6Imh0dHA6Ly9sb2NhbGhvc3Q6NDQzMjgiLCJhdWQiOiJodHRwOi8vbG9jYWxob3N0OjQyMDAifQ.Y4Yi7N-MNrDsSILLINjpHVabQPZPk_7c7_KQ7ud2x6E",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{base_url}}/clusterLocation/location/Bapunagar",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"clusterLocation",
+								"location",
+								"Bapunagar"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "{{base_url}}/clusterLocation/requirementid/3",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJodHRwOi8vc2NoZW1hcy54bWxzb2FwLm9yZy93cy8yMDA1LzA1L2lkZW50aXR5L2NsYWltcy9uYW1lIjoiZGhydXZpIiwianRpIjoiOTk2OTUzODAtY2QzNy00NWE3LTkyYTQtNzA0MjAxY2Y3MmMzIiwiaHR0cDovL3NjaGVtYXMubWljcm9zb2Z0LmNvbS93cy8yMDA4LzA2L2lkZW50aXR5L2NsYWltcy9yb2xlIjoiQWRtaW4iLCJleHAiOjE2NDAyNjU4ODQsImlzcyI6Imh0dHA6Ly9sb2NhbGhvc3Q6NDQzMjgiLCJhdWQiOiJodHRwOi8vbG9jYWxob3N0OjQyMDAifQ.Y4Yi7N-MNrDsSILLINjpHVabQPZPk_7c7_KQ7ud2x6E",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{base_url}}/clusterLocation/requirementid/3",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"clusterLocation",
+								"requirementid",
+								"3"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Volunteer",
+			"item": [
+				{
+					"name": "{{base_url}}/volunteer",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJodHRwOi8vc2NoZW1hcy54bWxzb2FwLm9yZy93cy8yMDA1LzA1L2lkZW50aXR5L2NsYWltcy9uYW1lIjoicHJlZXQiLCJqdGkiOiIxZWE5MTc0ZS1iODJmLTQ4MDUtYjFjNC0wZmYxMTAxMDk3ODQiLCJodHRwOi8vc2NoZW1hcy5taWNyb3NvZnQuY29tL3dzLzIwMDgvMDYvaWRlbnRpdHkvY2xhaW1zL3JvbGUiOiJVc2VyIiwiZXhwIjoxNjQwMDQzOTc5LCJpc3MiOiJodHRwOi8vbG9jYWxob3N0OjQ0MzI4IiwiYXVkIjoiaHR0cDovL2xvY2FsaG9zdDo0MjAwIn0.cN-chbCm08Og585ZIYWKbQrF_XxSffLOwNHyTpUcFlU",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{base_url}}/volunteer",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"volunteer"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "{{base_url}}/volunteer/1",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{base_url}}/volunteer/1",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"volunteer",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "{{base_url}}/volunteer",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJodHRwOi8vc2NoZW1hcy54bWxzb2FwLm9yZy93cy8yMDA1LzA1L2lkZW50aXR5L2NsYWltcy9uYW1lIjoiZGhydXZpIiwianRpIjoiZDFlMWI5NTUtZGYxMS00YzFmLWE4YTEtNDc1YjY3MDBjMmQ3IiwiaHR0cDovL3NjaGVtYXMubWljcm9zb2Z0LmNvbS93cy8yMDA4LzA2L2lkZW50aXR5L2NsYWltcy9yb2xlIjoiQWRtaW4iLCJleHAiOjE2NDAwODk3NzAsImlzcyI6Imh0dHA6Ly9sb2NhbGhvc3Q6NDQzMjgiLCJhdWQiOiJodHRwOi8vbG9jYWxob3N0OjQyMDAifQ.mNkOkrGM0eO16bjg6wVOC6hYPsGH3wv_azTJeRs1zlw",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"volunteeruserid\":1,\r\n    \"organisationid\":3\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{base_url}}/volunteer",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"volunteer"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "{{base_url}}/volunteer/2",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJodHRwOi8vc2NoZW1hcy54bWxzb2FwLm9yZy93cy8yMDA1LzA1L2lkZW50aXR5L2NsYWltcy9uYW1lIjoiZGhydXZpIiwianRpIjoiZDFlMWI5NTUtZGYxMS00YzFmLWE4YTEtNDc1YjY3MDBjMmQ3IiwiaHR0cDovL3NjaGVtYXMubWljcm9zb2Z0LmNvbS93cy8yMDA4LzA2L2lkZW50aXR5L2NsYWltcy9yb2xlIjoiQWRtaW4iLCJleHAiOjE2NDAwODk3NzAsImlzcyI6Imh0dHA6Ly9sb2NhbGhvc3Q6NDQzMjgiLCJhdWQiOiJodHRwOi8vbG9jYWxob3N0OjQyMDAifQ.mNkOkrGM0eO16bjg6wVOC6hYPsGH3wv_azTJeRs1zlw",
+									"type": "string"
+								}
+							]
+						},
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"volunteeruserid\":1,\r\n    \"organisationid\":3\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{base_url}}/volunteer/2",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"volunteer",
+								"2"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "{{base_url}}/volunteer/1",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJodHRwOi8vc2NoZW1hcy54bWxzb2FwLm9yZy93cy8yMDA1LzA1L2lkZW50aXR5L2NsYWltcy9uYW1lIjoiZGhydXZpIiwianRpIjoiMWI0ZjM1MjktYjc1Yi00OTg3LTg1ZTUtMGEwMzYxZjMwMjhjIiwiaHR0cDovL3NjaGVtYXMubWljcm9zb2Z0LmNvbS93cy8yMDA4LzA2L2lkZW50aXR5L2NsYWltcy9yb2xlIjoiQWRtaW4iLCJleHAiOjE2NDAxMjA1NjksImlzcyI6Imh0dHA6Ly9sb2NhbGhvc3Q6NDQzMjgiLCJhdWQiOiJodHRwOi8vbG9jYWxob3N0OjQyMDAifQ.6daFqJGNXkiCyEJIPHAdVtMGZ_IQ9R06-ZMlyNgAFIE",
+									"type": "string"
+								}
+							]
+						},
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "{{base_url}}/volunteer/1",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"volunteer",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "{{base_url}}/volunteer/userid/1",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJodHRwOi8vc2NoZW1hcy54bWxzb2FwLm9yZy93cy8yMDA1LzA1L2lkZW50aXR5L2NsYWltcy9uYW1lIjoiZGhydXZpIiwianRpIjoiOTk2OTUzODAtY2QzNy00NWE3LTkyYTQtNzA0MjAxY2Y3MmMzIiwiaHR0cDovL3NjaGVtYXMubWljcm9zb2Z0LmNvbS93cy8yMDA4LzA2L2lkZW50aXR5L2NsYWltcy9yb2xlIjoiQWRtaW4iLCJleHAiOjE2NDAyNjU4ODQsImlzcyI6Imh0dHA6Ly9sb2NhbGhvc3Q6NDQzMjgiLCJhdWQiOiJodHRwOi8vbG9jYWxob3N0OjQyMDAifQ.Y4Yi7N-MNrDsSILLINjpHVabQPZPk_7c7_KQ7ud2x6E",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{base_url}}/volunteer/userid/1",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"volunteer",
+								"userid",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "{{base_url}}/volunteer/organisationid/3",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJodHRwOi8vc2NoZW1hcy54bWxzb2FwLm9yZy93cy8yMDA1LzA1L2lkZW50aXR5L2NsYWltcy9uYW1lIjoiZGhydXZpIiwianRpIjoiOTk2OTUzODAtY2QzNy00NWE3LTkyYTQtNzA0MjAxY2Y3MmMzIiwiaHR0cDovL3NjaGVtYXMubWljcm9zb2Z0LmNvbS93cy8yMDA4LzA2L2lkZW50aXR5L2NsYWltcy9yb2xlIjoiQWRtaW4iLCJleHAiOjE2NDAyNjU4ODQsImlzcyI6Imh0dHA6Ly9sb2NhbGhvc3Q6NDQzMjgiLCJhdWQiOiJodHRwOi8vbG9jYWxob3N0OjQyMDAifQ.Y4Yi7N-MNrDsSILLINjpHVabQPZPk_7c7_KQ7ud2x6E",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{base_url}}/volunteer/organisationid/3",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"volunteer",
+								"organisationid",
+								"3"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "{{base_url}}/volunteer/organisation/RHA",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJodHRwOi8vc2NoZW1hcy54bWxzb2FwLm9yZy93cy8yMDA1LzA1L2lkZW50aXR5L2NsYWltcy9uYW1lIjoiZGhydXZpIiwianRpIjoiOTk2OTUzODAtY2QzNy00NWE3LTkyYTQtNzA0MjAxY2Y3MmMzIiwiaHR0cDovL3NjaGVtYXMubWljcm9zb2Z0LmNvbS93cy8yMDA4LzA2L2lkZW50aXR5L2NsYWltcy9yb2xlIjoiQWRtaW4iLCJleHAiOjE2NDAyNjU4ODQsImlzcyI6Imh0dHA6Ly9sb2NhbGhvc3Q6NDQzMjgiLCJhdWQiOiJodHRwOi8vbG9jYWxob3N0OjQyMDAifQ.Y4Yi7N-MNrDsSILLINjpHVabQPZPk_7c7_KQ7ud2x6E",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{base_url}}/volunteer/organisation/RHA",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"volunteer",
+								"organisation",
+								"RHA"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "CharityEventInteract",
+			"item": [
+				{
+					"name": "{{base_url}}/charityEventInteract",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJodHRwOi8vc2NoZW1hcy54bWxzb2FwLm9yZy93cy8yMDA1LzA1L2lkZW50aXR5L2NsYWltcy9uYW1lIjoiZGhydXZpIiwianRpIjoiOTk2OTUzODAtY2QzNy00NWE3LTkyYTQtNzA0MjAxY2Y3MmMzIiwiaHR0cDovL3NjaGVtYXMubWljcm9zb2Z0LmNvbS93cy8yMDA4LzA2L2lkZW50aXR5L2NsYWltcy9yb2xlIjoiQWRtaW4iLCJleHAiOjE2NDAyNjU4ODQsImlzcyI6Imh0dHA6Ly9sb2NhbGhvc3Q6NDQzMjgiLCJhdWQiOiJodHRwOi8vbG9jYWxob3N0OjQyMDAifQ.Y4Yi7N-MNrDsSILLINjpHVabQPZPk_7c7_KQ7ud2x6E",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{base_url}}/charityEventInteract",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"charityEventInteract"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "{{base_url}}/charityEventInteract/1",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJodHRwOi8vc2NoZW1hcy54bWxzb2FwLm9yZy93cy8yMDA1LzA1L2lkZW50aXR5L2NsYWltcy9uYW1lIjoiZGhydXZpIiwianRpIjoiOTk2OTUzODAtY2QzNy00NWE3LTkyYTQtNzA0MjAxY2Y3MmMzIiwiaHR0cDovL3NjaGVtYXMubWljcm9zb2Z0LmNvbS93cy8yMDA4LzA2L2lkZW50aXR5L2NsYWltcy9yb2xlIjoiQWRtaW4iLCJleHAiOjE2NDAyNjU4ODQsImlzcyI6Imh0dHA6Ly9sb2NhbGhvc3Q6NDQzMjgiLCJhdWQiOiJodHRwOi8vbG9jYWxob3N0OjQyMDAifQ.Y4Yi7N-MNrDsSILLINjpHVabQPZPk_7c7_KQ7ud2x6E",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{base_url}}/charityEventInteract/1",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"charityEventInteract",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "{{base_url}}/charityEventInteract",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJodHRwOi8vc2NoZW1hcy54bWxzb2FwLm9yZy93cy8yMDA1LzA1L2lkZW50aXR5L2NsYWltcy9uYW1lIjoiZGhydXZpIiwianRpIjoiOTk2OTUzODAtY2QzNy00NWE3LTkyYTQtNzA0MjAxY2Y3MmMzIiwiaHR0cDovL3NjaGVtYXMubWljcm9zb2Z0LmNvbS93cy8yMDA4LzA2L2lkZW50aXR5L2NsYWltcy9yb2xlIjoiQWRtaW4iLCJleHAiOjE2NDAyNjU4ODQsImlzcyI6Imh0dHA6Ly9sb2NhbGhvc3Q6NDQzMjgiLCJhdWQiOiJodHRwOi8vbG9jYWxob3N0OjQyMDAifQ.Y4Yi7N-MNrDsSILLINjpHVabQPZPk_7c7_KQ7ud2x6E",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"eventid\":1,\r\n    \"userid\":1,\r\n    \"isinterested\":0,\r\n    \"isgoing\":0\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{base_url}}/charityEventInteract",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"charityEventInteract"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "{{base_url}}/charityEventInteract/3",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJodHRwOi8vc2NoZW1hcy54bWxzb2FwLm9yZy93cy8yMDA1LzA1L2lkZW50aXR5L2NsYWltcy9uYW1lIjoiZGhydXZpIiwianRpIjoiOTk2OTUzODAtY2QzNy00NWE3LTkyYTQtNzA0MjAxY2Y3MmMzIiwiaHR0cDovL3NjaGVtYXMubWljcm9zb2Z0LmNvbS93cy8yMDA4LzA2L2lkZW50aXR5L2NsYWltcy9yb2xlIjoiQWRtaW4iLCJleHAiOjE2NDAyNjU4ODQsImlzcyI6Imh0dHA6Ly9sb2NhbGhvc3Q6NDQzMjgiLCJhdWQiOiJodHRwOi8vbG9jYWxob3N0OjQyMDAifQ.Y4Yi7N-MNrDsSILLINjpHVabQPZPk_7c7_KQ7ud2x6E",
+									"type": "string"
+								}
+							]
+						},
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"charityeventinteractid\":3,\r\n    \"eventid\":1,\r\n    \"userid\":1,\r\n    \"isinterested\":0,\r\n    \"isgoing\":0\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{base_url}}/charityEventInteract/3",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"charityEventInteract",
+								"3"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "{{base_url}}/charityEventInteract/3",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJodHRwOi8vc2NoZW1hcy54bWxzb2FwLm9yZy93cy8yMDA1LzA1L2lkZW50aXR5L2NsYWltcy9uYW1lIjoiZGhydXZpIiwianRpIjoiOTk2OTUzODAtY2QzNy00NWE3LTkyYTQtNzA0MjAxY2Y3MmMzIiwiaHR0cDovL3NjaGVtYXMubWljcm9zb2Z0LmNvbS93cy8yMDA4LzA2L2lkZW50aXR5L2NsYWltcy9yb2xlIjoiQWRtaW4iLCJleHAiOjE2NDAyNjU4ODQsImlzcyI6Imh0dHA6Ly9sb2NhbGhvc3Q6NDQzMjgiLCJhdWQiOiJodHRwOi8vbG9jYWxob3N0OjQyMDAifQ.Y4Yi7N-MNrDsSILLINjpHVabQPZPk_7c7_KQ7ud2x6E",
+									"type": "string"
+								}
+							]
+						},
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "{{base_url}}/charityEventInteract/3",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"charityEventInteract",
+								"3"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "{{base_url}}/charityEventInteract/eventid/1",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJodHRwOi8vc2NoZW1hcy54bWxzb2FwLm9yZy93cy8yMDA1LzA1L2lkZW50aXR5L2NsYWltcy9uYW1lIjoiZGhydXZpIiwianRpIjoiOTk2OTUzODAtY2QzNy00NWE3LTkyYTQtNzA0MjAxY2Y3MmMzIiwiaHR0cDovL3NjaGVtYXMubWljcm9zb2Z0LmNvbS93cy8yMDA4LzA2L2lkZW50aXR5L2NsYWltcy9yb2xlIjoiQWRtaW4iLCJleHAiOjE2NDAyNjU4ODQsImlzcyI6Imh0dHA6Ly9sb2NhbGhvc3Q6NDQzMjgiLCJhdWQiOiJodHRwOi8vbG9jYWxob3N0OjQyMDAifQ.Y4Yi7N-MNrDsSILLINjpHVabQPZPk_7c7_KQ7ud2x6E",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{base_url}}/charityEventInteract/eventid/1",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"charityEventInteract",
+								"eventid",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "{{base_url}}/charityEventInteract/userid/1",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJodHRwOi8vc2NoZW1hcy54bWxzb2FwLm9yZy93cy8yMDA1LzA1L2lkZW50aXR5L2NsYWltcy9uYW1lIjoiZGhydXZpIiwianRpIjoiOTk2OTUzODAtY2QzNy00NWE3LTkyYTQtNzA0MjAxY2Y3MmMzIiwiaHR0cDovL3NjaGVtYXMubWljcm9zb2Z0LmNvbS93cy8yMDA4LzA2L2lkZW50aXR5L2NsYWltcy9yb2xlIjoiQWRtaW4iLCJleHAiOjE2NDAyNjU4ODQsImlzcyI6Imh0dHA6Ly9sb2NhbGhvc3Q6NDQzMjgiLCJhdWQiOiJodHRwOi8vbG9jYWxob3N0OjQyMDAifQ.Y4Yi7N-MNrDsSILLINjpHVabQPZPk_7c7_KQ7ud2x6E",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{base_url}}/charityEventInteract/userid/1",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"charityEventInteract",
+								"userid",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "{{base_url}}/charityEventInteract/interested/eventid/1",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJodHRwOi8vc2NoZW1hcy54bWxzb2FwLm9yZy93cy8yMDA1LzA1L2lkZW50aXR5L2NsYWltcy9uYW1lIjoiZGhydXZpIiwianRpIjoiOTk2OTUzODAtY2QzNy00NWE3LTkyYTQtNzA0MjAxY2Y3MmMzIiwiaHR0cDovL3NjaGVtYXMubWljcm9zb2Z0LmNvbS93cy8yMDA4LzA2L2lkZW50aXR5L2NsYWltcy9yb2xlIjoiQWRtaW4iLCJleHAiOjE2NDAyNjU4ODQsImlzcyI6Imh0dHA6Ly9sb2NhbGhvc3Q6NDQzMjgiLCJhdWQiOiJodHRwOi8vbG9jYWxob3N0OjQyMDAifQ.Y4Yi7N-MNrDsSILLINjpHVabQPZPk_7c7_KQ7ud2x6E",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{base_url}}/charityEventInteract/interested/eventid/1",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"charityEventInteract",
+								"interested",
+								"eventid",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "{{base_url}}/charityEventInteract/interested/userid/1",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJodHRwOi8vc2NoZW1hcy54bWxzb2FwLm9yZy93cy8yMDA1LzA1L2lkZW50aXR5L2NsYWltcy9uYW1lIjoiZGhydXZpIiwianRpIjoiOTk2OTUzODAtY2QzNy00NWE3LTkyYTQtNzA0MjAxY2Y3MmMzIiwiaHR0cDovL3NjaGVtYXMubWljcm9zb2Z0LmNvbS93cy8yMDA4LzA2L2lkZW50aXR5L2NsYWltcy9yb2xlIjoiQWRtaW4iLCJleHAiOjE2NDAyNjU4ODQsImlzcyI6Imh0dHA6Ly9sb2NhbGhvc3Q6NDQzMjgiLCJhdWQiOiJodHRwOi8vbG9jYWxob3N0OjQyMDAifQ.Y4Yi7N-MNrDsSILLINjpHVabQPZPk_7c7_KQ7ud2x6E",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{base_url}}/charityEventInteract/interested/userid/1",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"charityEventInteract",
+								"interested",
+								"userid",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "{{base_url}}/charityEventInteract/going/eventid/1",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJodHRwOi8vc2NoZW1hcy54bWxzb2FwLm9yZy93cy8yMDA1LzA1L2lkZW50aXR5L2NsYWltcy9uYW1lIjoiZGhydXZpIiwianRpIjoiOTk2OTUzODAtY2QzNy00NWE3LTkyYTQtNzA0MjAxY2Y3MmMzIiwiaHR0cDovL3NjaGVtYXMubWljcm9zb2Z0LmNvbS93cy8yMDA4LzA2L2lkZW50aXR5L2NsYWltcy9yb2xlIjoiQWRtaW4iLCJleHAiOjE2NDAyNjU4ODQsImlzcyI6Imh0dHA6Ly9sb2NhbGhvc3Q6NDQzMjgiLCJhdWQiOiJodHRwOi8vbG9jYWxob3N0OjQyMDAifQ.Y4Yi7N-MNrDsSILLINjpHVabQPZPk_7c7_KQ7ud2x6E",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{base_url}}/charityEventInteract/going/eventid/1",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"charityEventInteract",
+								"going",
+								"eventid",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "{{base_url}}/charityEventInteract/going/userid/1",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJodHRwOi8vc2NoZW1hcy54bWxzb2FwLm9yZy93cy8yMDA1LzA1L2lkZW50aXR5L2NsYWltcy9uYW1lIjoiZGhydXZpIiwianRpIjoiOTk2OTUzODAtY2QzNy00NWE3LTkyYTQtNzA0MjAxY2Y3MmMzIiwiaHR0cDovL3NjaGVtYXMubWljcm9zb2Z0LmNvbS93cy8yMDA4LzA2L2lkZW50aXR5L2NsYWltcy9yb2xlIjoiQWRtaW4iLCJleHAiOjE2NDAyNjU4ODQsImlzcyI6Imh0dHA6Ly9sb2NhbGhvc3Q6NDQzMjgiLCJhdWQiOiJodHRwOi8vbG9jYWxob3N0OjQyMDAifQ.Y4Yi7N-MNrDsSILLINjpHVabQPZPk_7c7_KQ7ud2x6E",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{base_url}}/charityEventInteract/going/userid/1",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"charityEventInteract",
+								"going",
+								"userid",
+								"1"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "OrganisationData",
+			"item": [
+				{
+					"name": "{{base_url}}/organisationData",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJodHRwOi8vc2NoZW1hcy54bWxzb2FwLm9yZy93cy8yMDA1LzA1L2lkZW50aXR5L2NsYWltcy9uYW1lIjoiZGhydXZpIiwianRpIjoiOTk2OTUzODAtY2QzNy00NWE3LTkyYTQtNzA0MjAxY2Y3MmMzIiwiaHR0cDovL3NjaGVtYXMubWljcm9zb2Z0LmNvbS93cy8yMDA4LzA2L2lkZW50aXR5L2NsYWltcy9yb2xlIjoiQWRtaW4iLCJleHAiOjE2NDAyNjU4ODQsImlzcyI6Imh0dHA6Ly9sb2NhbGhvc3Q6NDQzMjgiLCJhdWQiOiJodHRwOi8vbG9jYWxob3N0OjQyMDAifQ.Y4Yi7N-MNrDsSILLINjpHVabQPZPk_7c7_KQ7ud2x6E",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{base_url}}/organisationData",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"organisationData"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "{{base_url}}/organisationData/3",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJodHRwOi8vc2NoZW1hcy54bWxzb2FwLm9yZy93cy8yMDA1LzA1L2lkZW50aXR5L2NsYWltcy9uYW1lIjoiZGhydXZpIiwianRpIjoiOTk2OTUzODAtY2QzNy00NWE3LTkyYTQtNzA0MjAxY2Y3MmMzIiwiaHR0cDovL3NjaGVtYXMubWljcm9zb2Z0LmNvbS93cy8yMDA4LzA2L2lkZW50aXR5L2NsYWltcy9yb2xlIjoiQWRtaW4iLCJleHAiOjE2NDAyNjU4ODQsImlzcyI6Imh0dHA6Ly9sb2NhbGhvc3Q6NDQzMjgiLCJhdWQiOiJodHRwOi8vbG9jYWxob3N0OjQyMDAifQ.Y4Yi7N-MNrDsSILLINjpHVabQPZPk_7c7_KQ7ud2x6E",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{base_url}}/organisationData/3",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"organisationData",
+								"3"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "{{base_url}}/organisationData",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJodHRwOi8vc2NoZW1hcy54bWxzb2FwLm9yZy93cy8yMDA1LzA1L2lkZW50aXR5L2NsYWltcy9uYW1lIjoiZGhydXZpIiwianRpIjoiOTk2OTUzODAtY2QzNy00NWE3LTkyYTQtNzA0MjAxY2Y3MmMzIiwiaHR0cDovL3NjaGVtYXMubWljcm9zb2Z0LmNvbS93cy8yMDA4LzA2L2lkZW50aXR5L2NsYWltcy9yb2xlIjoiQWRtaW4iLCJleHAiOjE2NDAyNjU4ODQsImlzcyI6Imh0dHA6Ly9sb2NhbGhvc3Q6NDQzMjgiLCJhdWQiOiJodHRwOi8vbG9jYWxob3N0OjQyMDAifQ.Y4Yi7N-MNrDsSILLINjpHVabQPZPk_7c7_KQ7ud2x6E",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"organisationUserId\": 1,\r\n    \"organisationName\": \"RDHA\",\r\n    \"organisationAddress\": \"Punjab\",\r\n    \"organisationContactNo\": \"3214567890\",\r\n    \"organisationLogoUrl\": \"www.yahoo.com\",\r\n    \"isVerified\": true\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{base_url}}/organisationData",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"organisationData"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "{{base_url}}/organisationData/4",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJodHRwOi8vc2NoZW1hcy54bWxzb2FwLm9yZy93cy8yMDA1LzA1L2lkZW50aXR5L2NsYWltcy9uYW1lIjoiZGhydXZpIiwianRpIjoiOTk2OTUzODAtY2QzNy00NWE3LTkyYTQtNzA0MjAxY2Y3MmMzIiwiaHR0cDovL3NjaGVtYXMubWljcm9zb2Z0LmNvbS93cy8yMDA4LzA2L2lkZW50aXR5L2NsYWltcy9yb2xlIjoiQWRtaW4iLCJleHAiOjE2NDAyNjU4ODQsImlzcyI6Imh0dHA6Ly9sb2NhbGhvc3Q6NDQzMjgiLCJhdWQiOiJodHRwOi8vbG9jYWxob3N0OjQyMDAifQ.Y4Yi7N-MNrDsSILLINjpHVabQPZPk_7c7_KQ7ud2x6E",
+									"type": "string"
+								}
+							]
+						},
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"organisationUserId\": 1,\r\n    \"organisationName\": \"RDHA\",\r\n    \"organisationAddress\": \"Punjab\",\r\n    \"organisationContactNo\": \"3124567890\",\r\n    \"organisationLogoUrl\": \"www.yahoo.com\",\r\n    \"isVerified\": true\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{base_url}}/organisationData/4",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"organisationData",
+								"4"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "{{base_url}}/organisationData/4",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJodHRwOi8vc2NoZW1hcy54bWxzb2FwLm9yZy93cy8yMDA1LzA1L2lkZW50aXR5L2NsYWltcy9uYW1lIjoiZGhydXZpIiwianRpIjoiOTk2OTUzODAtY2QzNy00NWE3LTkyYTQtNzA0MjAxY2Y3MmMzIiwiaHR0cDovL3NjaGVtYXMubWljcm9zb2Z0LmNvbS93cy8yMDA4LzA2L2lkZW50aXR5L2NsYWltcy9yb2xlIjoiQWRtaW4iLCJleHAiOjE2NDAyNjU4ODQsImlzcyI6Imh0dHA6Ly9sb2NhbGhvc3Q6NDQzMjgiLCJhdWQiOiJodHRwOi8vbG9jYWxob3N0OjQyMDAifQ.Y4Yi7N-MNrDsSILLINjpHVabQPZPk_7c7_KQ7ud2x6E",
+									"type": "string"
+								}
+							]
+						},
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "{{base_url}}/organisationData/4",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"organisationData",
+								"4"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "{{base_url}}/organisationData/name/RHA",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJodHRwOi8vc2NoZW1hcy54bWxzb2FwLm9yZy93cy8yMDA1LzA1L2lkZW50aXR5L2NsYWltcy9uYW1lIjoiZGhydXZpIiwianRpIjoiOTk2OTUzODAtY2QzNy00NWE3LTkyYTQtNzA0MjAxY2Y3MmMzIiwiaHR0cDovL3NjaGVtYXMubWljcm9zb2Z0LmNvbS93cy8yMDA4LzA2L2lkZW50aXR5L2NsYWltcy9yb2xlIjoiQWRtaW4iLCJleHAiOjE2NDAyNjU4ODQsImlzcyI6Imh0dHA6Ly9sb2NhbGhvc3Q6NDQzMjgiLCJhdWQiOiJodHRwOi8vbG9jYWxob3N0OjQyMDAifQ.Y4Yi7N-MNrDsSILLINjpHVabQPZPk_7c7_KQ7ud2x6E",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{base_url}}/organisationData/name/RHA",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"organisationData",
+								"name",
+								"RHA"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "{{base_url}}/organisationData/userid/1",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJodHRwOi8vc2NoZW1hcy54bWxzb2FwLm9yZy93cy8yMDA1LzA1L2lkZW50aXR5L2NsYWltcy9uYW1lIjoiZGhydXZpIiwianRpIjoiOTk2OTUzODAtY2QzNy00NWE3LTkyYTQtNzA0MjAxY2Y3MmMzIiwiaHR0cDovL3NjaGVtYXMubWljcm9zb2Z0LmNvbS93cy8yMDA4LzA2L2lkZW50aXR5L2NsYWltcy9yb2xlIjoiQWRtaW4iLCJleHAiOjE2NDAyNjU4ODQsImlzcyI6Imh0dHA6Ly9sb2NhbGhvc3Q6NDQzMjgiLCJhdWQiOiJodHRwOi8vbG9jYWxob3N0OjQyMDAifQ.Y4Yi7N-MNrDsSILLINjpHVabQPZPk_7c7_KQ7ud2x6E",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{base_url}}/organisationData/userid/1",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"organisationData",
+								"userid",
+								"1"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "UserData",
+			"item": [
+				{
+					"name": "{{base_url}}/userData",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJodHRwOi8vc2NoZW1hcy54bWxzb2FwLm9yZy93cy8yMDA1LzA1L2lkZW50aXR5L2NsYWltcy9uYW1lIjoicHJlZXQiLCJqdGkiOiI1NzNkYjUyOS1mY2ViLTQ3NjUtYjQ2OS00NDE1NmJhMGM2MjEiLCJodHRwOi8vc2NoZW1hcy5taWNyb3NvZnQuY29tL3dzLzIwMDgvMDYvaWRlbnRpdHkvY2xhaW1zL3JvbGUiOiJVc2VyIiwiZXhwIjoxNjQwMjgyMjQ4LCJpc3MiOiJodHRwOi8vbG9jYWxob3N0OjQ0MzI4IiwiYXVkIjoiaHR0cDovL2xvY2FsaG9zdDo0MjAwIn0._R9hTlwKHV1z2KmIQ9BzOXYCTjEM-dvBsJmklRjcBOg",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{base_url}}/userData",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"userData"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "{{base_url}}/userData/1",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJodHRwOi8vc2NoZW1hcy54bWxzb2FwLm9yZy93cy8yMDA1LzA1L2lkZW50aXR5L2NsYWltcy9uYW1lIjoiZGhydXZpIiwianRpIjoiOTk2OTUzODAtY2QzNy00NWE3LTkyYTQtNzA0MjAxY2Y3MmMzIiwiaHR0cDovL3NjaGVtYXMubWljcm9zb2Z0LmNvbS93cy8yMDA4LzA2L2lkZW50aXR5L2NsYWltcy9yb2xlIjoiQWRtaW4iLCJleHAiOjE2NDAyNjU4ODQsImlzcyI6Imh0dHA6Ly9sb2NhbGhvc3Q6NDQzMjgiLCJhdWQiOiJodHRwOi8vbG9jYWxob3N0OjQyMDAifQ.Y4Yi7N-MNrDsSILLINjpHVabQPZPk_7c7_KQ7ud2x6E",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{base_url}}/userData/1",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"userData",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "{{base_url}}/userData",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJodHRwOi8vc2NoZW1hcy54bWxzb2FwLm9yZy93cy8yMDA1LzA1L2lkZW50aXR5L2NsYWltcy9uYW1lIjoiZGhydXZpIiwianRpIjoiOTk2OTUzODAtY2QzNy00NWE3LTkyYTQtNzA0MjAxY2Y3MmMzIiwiaHR0cDovL3NjaGVtYXMubWljcm9zb2Z0LmNvbS93cy8yMDA4LzA2L2lkZW50aXR5L2NsYWltcy9yb2xlIjoiQWRtaW4iLCJleHAiOjE2NDAyNjU4ODQsImlzcyI6Imh0dHA6Ly9sb2NhbGhvc3Q6NDQzMjgiLCJhdWQiOiJodHRwOi8vbG9jYWxob3N0OjQyMDAifQ.Y4Yi7N-MNrDsSILLINjpHVabQPZPk_7c7_KQ7ud2x6E",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"firstName\": \"Preet2\",\r\n    \"lastName\": \"Gandhi\",\r\n    \"gender\": \"Male\",\r\n    \"profileImage\": \"URL\",\r\n    \"userDescription\": \"None\",\r\n    \"userName\": \"preet2\",\r\n    \"emailAddress\": \"preet2@gmail.com\",\r\n    \"mobileNo\": \"9173086971\",\r\n    \"totalPostCount\": 1,\r\n    \"users\": 2,\r\n    \"cityId\": 1,\r\n    \"stateId\": 1,\r\n    \"pincodeId\": 1\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{base_url}}/userData",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"userData"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "{{base_url}}/userData/6",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJodHRwOi8vc2NoZW1hcy54bWxzb2FwLm9yZy93cy8yMDA1LzA1L2lkZW50aXR5L2NsYWltcy9uYW1lIjoiZGhydXZpIiwianRpIjoiOTk2OTUzODAtY2QzNy00NWE3LTkyYTQtNzA0MjAxY2Y3MmMzIiwiaHR0cDovL3NjaGVtYXMubWljcm9zb2Z0LmNvbS93cy8yMDA4LzA2L2lkZW50aXR5L2NsYWltcy9yb2xlIjoiQWRtaW4iLCJleHAiOjE2NDAyNjU4ODQsImlzcyI6Imh0dHA6Ly9sb2NhbGhvc3Q6NDQzMjgiLCJhdWQiOiJodHRwOi8vbG9jYWxob3N0OjQyMDAifQ.Y4Yi7N-MNrDsSILLINjpHVabQPZPk_7c7_KQ7ud2x6E",
+									"type": "string"
+								}
+							]
+						},
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"firstName\": \"Preet2\",\r\n    \"lastName\": \"Gandhi\",\r\n    \"gender\": \"Male\",\r\n    \"profileImage\": \"URL\",\r\n    \"userDescription\": \"No Description\",\r\n    \"userName\": \"preet2\",\r\n    \"emailAddress\": \"preet2@gmail.com\",\r\n    \"mobileNo\": \"9173086971\",\r\n    \"totalPostCount\": 1,\r\n    \"users\": 2,\r\n    \"cityId\": 1,\r\n    \"stateId\": 1,\r\n    \"pincodeId\": 1\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{base_url}}/userData/6",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"userData",
+								"6"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "{{base_url}}/userData/6",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJodHRwOi8vc2NoZW1hcy54bWxzb2FwLm9yZy93cy8yMDA1LzA1L2lkZW50aXR5L2NsYWltcy9uYW1lIjoiZGhydXZpIiwianRpIjoiOTk2OTUzODAtY2QzNy00NWE3LTkyYTQtNzA0MjAxY2Y3MmMzIiwiaHR0cDovL3NjaGVtYXMubWljcm9zb2Z0LmNvbS93cy8yMDA4LzA2L2lkZW50aXR5L2NsYWltcy9yb2xlIjoiQWRtaW4iLCJleHAiOjE2NDAyNjU4ODQsImlzcyI6Imh0dHA6Ly9sb2NhbGhvc3Q6NDQzMjgiLCJhdWQiOiJodHRwOi8vbG9jYWxob3N0OjQyMDAifQ.Y4Yi7N-MNrDsSILLINjpHVabQPZPk_7c7_KQ7ud2x6E",
+									"type": "string"
+								}
+							]
+						},
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "{{base_url}}/userData/6",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"userData",
+								"6"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "{{base_url}}/userData/cityid/1",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJodHRwOi8vc2NoZW1hcy54bWxzb2FwLm9yZy93cy8yMDA1LzA1L2lkZW50aXR5L2NsYWltcy9uYW1lIjoiZGhydXZpIiwianRpIjoiOTk2OTUzODAtY2QzNy00NWE3LTkyYTQtNzA0MjAxY2Y3MmMzIiwiaHR0cDovL3NjaGVtYXMubWljcm9zb2Z0LmNvbS93cy8yMDA4LzA2L2lkZW50aXR5L2NsYWltcy9yb2xlIjoiQWRtaW4iLCJleHAiOjE2NDAyNjU4ODQsImlzcyI6Imh0dHA6Ly9sb2NhbGhvc3Q6NDQzMjgiLCJhdWQiOiJodHRwOi8vbG9jYWxob3N0OjQyMDAifQ.Y4Yi7N-MNrDsSILLINjpHVabQPZPk_7c7_KQ7ud2x6E",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{base_url}}/userData/cityid/1",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"userData",
+								"cityid",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "{{base_url}}/userData/city/Ahmedabad",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJodHRwOi8vc2NoZW1hcy54bWxzb2FwLm9yZy93cy8yMDA1LzA1L2lkZW50aXR5L2NsYWltcy9uYW1lIjoiZGhydXZpIiwianRpIjoiOTk2OTUzODAtY2QzNy00NWE3LTkyYTQtNzA0MjAxY2Y3MmMzIiwiaHR0cDovL3NjaGVtYXMubWljcm9zb2Z0LmNvbS93cy8yMDA4LzA2L2lkZW50aXR5L2NsYWltcy9yb2xlIjoiQWRtaW4iLCJleHAiOjE2NDAyNjU4ODQsImlzcyI6Imh0dHA6Ly9sb2NhbGhvc3Q6NDQzMjgiLCJhdWQiOiJodHRwOi8vbG9jYWxob3N0OjQyMDAifQ.Y4Yi7N-MNrDsSILLINjpHVabQPZPk_7c7_KQ7ud2x6E",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{base_url}}/userData/city/Ahmedabad",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"userData",
+								"city",
+								"Ahmedabad"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "{{base_url}}/userData/pincode/380007",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJodHRwOi8vc2NoZW1hcy54bWxzb2FwLm9yZy93cy8yMDA1LzA1L2lkZW50aXR5L2NsYWltcy9uYW1lIjoiZGhydXZpIiwianRpIjoiOTk2OTUzODAtY2QzNy00NWE3LTkyYTQtNzA0MjAxY2Y3MmMzIiwiaHR0cDovL3NjaGVtYXMubWljcm9zb2Z0LmNvbS93cy8yMDA4LzA2L2lkZW50aXR5L2NsYWltcy9yb2xlIjoiQWRtaW4iLCJleHAiOjE2NDAyNjU4ODQsImlzcyI6Imh0dHA6Ly9sb2NhbGhvc3Q6NDQzMjgiLCJhdWQiOiJodHRwOi8vbG9jYWxob3N0OjQyMDAifQ.Y4Yi7N-MNrDsSILLINjpHVabQPZPk_7c7_KQ7ud2x6E",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{base_url}}/userData/pincode/380007",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"userData",
+								"pincode",
+								"380007"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "{{base_url}}/userData/stateid/1",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJodHRwOi8vc2NoZW1hcy54bWxzb2FwLm9yZy93cy8yMDA1LzA1L2lkZW50aXR5L2NsYWltcy9uYW1lIjoiZGhydXZpIiwianRpIjoiOTk2OTUzODAtY2QzNy00NWE3LTkyYTQtNzA0MjAxY2Y3MmMzIiwiaHR0cDovL3NjaGVtYXMubWljcm9zb2Z0LmNvbS93cy8yMDA4LzA2L2lkZW50aXR5L2NsYWltcy9yb2xlIjoiQWRtaW4iLCJleHAiOjE2NDAyNjU4ODQsImlzcyI6Imh0dHA6Ly9sb2NhbGhvc3Q6NDQzMjgiLCJhdWQiOiJodHRwOi8vbG9jYWxob3N0OjQyMDAifQ.Y4Yi7N-MNrDsSILLINjpHVabQPZPk_7c7_KQ7ud2x6E",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{base_url}}/userData/stateid/1",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"userData",
+								"stateid",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "{{base_url}}/userData/username/preet",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJodHRwOi8vc2NoZW1hcy54bWxzb2FwLm9yZy93cy8yMDA1LzA1L2lkZW50aXR5L2NsYWltcy9uYW1lIjoiZGhydXZpIiwianRpIjoiOTk2OTUzODAtY2QzNy00NWE3LTkyYTQtNzA0MjAxY2Y3MmMzIiwiaHR0cDovL3NjaGVtYXMubWljcm9zb2Z0LmNvbS93cy8yMDA4LzA2L2lkZW50aXR5L2NsYWltcy9yb2xlIjoiQWRtaW4iLCJleHAiOjE2NDAyNjU4ODQsImlzcyI6Imh0dHA6Ly9sb2NhbGhvc3Q6NDQzMjgiLCJhdWQiOiJodHRwOi8vbG9jYWxob3N0OjQyMDAifQ.Y4Yi7N-MNrDsSILLINjpHVabQPZPk_7c7_KQ7ud2x6E",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{base_url}}/userData/username/preet",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"userData",
+								"username",
+								"preet"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "{{base_url}}/userData/usersid/1",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJodHRwOi8vc2NoZW1hcy54bWxzb2FwLm9yZy93cy8yMDA1LzA1L2lkZW50aXR5L2NsYWltcy9uYW1lIjoiZGhydXZpIiwianRpIjoiOTk2OTUzODAtY2QzNy00NWE3LTkyYTQtNzA0MjAxY2Y3MmMzIiwiaHR0cDovL3NjaGVtYXMubWljcm9zb2Z0LmNvbS93cy8yMDA4LzA2L2lkZW50aXR5L2NsYWltcy9yb2xlIjoiQWRtaW4iLCJleHAiOjE2NDAyNjU4ODQsImlzcyI6Imh0dHA6Ly9sb2NhbGhvc3Q6NDQzMjgiLCJhdWQiOiJodHRwOi8vbG9jYWxob3N0OjQyMDAifQ.Y4Yi7N-MNrDsSILLINjpHVabQPZPk_7c7_KQ7ud2x6E",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{base_url}}/userData/usersid/1",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"userData",
+								"usersid",
+								"1"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}

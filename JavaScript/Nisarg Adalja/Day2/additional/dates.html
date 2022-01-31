@@ -1,0 +1,283 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dates</title>
+</head>
+
+<body>
+    <div id="demo">Dates are Changes after every 5 sec</div><br>
+    <div id="result"></div>
+</body>
+    <script>
+        function sleep(ms) {
+            return new Promise(resolve => setTimeout(resolve, ms));
+        }
+
+        var result=document.getElementById("result");
+        /*
+        Creating Date Objects
+        Date objects are created with the new Date() constructor.
+
+        There are 4 ways to create a new date object:
+
+            new Date()
+        new Date(year, month, day, hours, minutes, seconds, milliseconds)
+        new Date(milliseconds)
+        new Date(date string)*/
+        async function demo(){
+        const d = new Date();
+        const d1 = new Date(2021,9,7);
+        const d2=new Date(999999999999);
+        const d3=new Date("2021-05-19");
+        const d4= new Date(2018, 11, 24, 10, 33, 30, 0);
+        result.innerHTML=d;
+        setTimeout(function(){result.innerHTML="this date set by using year,month and date "+d1},5000);
+        await sleep(5000);
+        setTimeout(function(){result.innerHTML="this date created using miliseconds "+d2},6000);
+        await sleep(5000);
+        setTimeout(function(){result.innerHTML="this date created using string date "+d3},6000);
+        await sleep(5000);
+
+        setTimeout(function(){result.innerHTML="this date created using year,moth,date,hour,min,second date "+d4},6000);
+        /* Date Format type
+         ISO Date	"2015-03-25" (The International Standard)
+        Short Date	"03/25/2015"
+        Long Date	"Mar 25 2015" or "25 Mar 2015"*/
+        const d5 = new Date();
+        document.getElementById("demo").innerHTML = d5.toString();
+        
+        const d6 = new Date("03/25/2015");
+        setTimeout(function(){result.innerHTML="this date created using date,month,year "+d6},6000);
+        
+        const d7 = new Date("Mar 25 2015");
+        /*Date Input - Parsing Dates
+        If you have a valid date string, you can use the Date.parse() method to convert it to milliseconds.
+
+        Date.parse() returns the number of milliseconds between the date and January 1, 1970:
+        */
+        let msec = Date.parse("March 21, 2020");
+        document.getElementById("demo").innerHTML += msec;
+        let msec1 = Date.parse("March 21, 2012");
+        const d8 = new Date(msec1);
+        document.getElementById("demo").innerHTML  += d8;
+
+        /*The getTime() Method
+        The getTime() method returns the number of milliseconds since January 1, 1970:
+        */
+        const d9 = new Date();
+        document.getElementById("demo").innerHTML +=' '+ d9.getTime();
+
+        /*The getFullYear() Method
+        The getFullYear() method returns the year of a date as a four digit number:
+        */
+        document.getElementById("demo").innerHTML += ' '+ d9.getFullYear();
+
+        /*The getMonth() Method
+        The getMonth() method returns the month of a date as a number (0-11):
+        */
+        document.getElementById("demo").innerHTML += ' '+ d9.getMonth();
+        
+        const months = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"];
+        document.getElementById("demo").innerHTML +=' '+ months[d9.getMonth()];
+    
+        /*The getDate() Method
+        The getDate() method returns the day of a date as a number (1-31):*/ 
+
+        document.getElementById("demo").innerHTML +=' '+ d9.getDate();
+
+        /*The getHours() Method
+        The getHours() method returns the hours of a date as a number (0-23):
+        */
+        document.getElementById("demo").innerHTML +=' '+ d9.getHours();
+
+        /*The getMinutes() Method
+        The getMinutes() method returns the minutes of a date as a number (0-59):
+        */
+        document.getElementById("demo").innerHTML += ' '+d9.getMinutes();
+
+        /*The getSeconds() Method
+        The getSeconds() method returns the seconds of a date as a number (0-59):
+        */
+        document.getElementById("demo").innerHTML +=' '+ d9.getSeconds();
+
+        /*The getMilliseconds() Method
+        The getMilliseconds() method returns the milliseconds of a date as a number (0-999):
+
+        */
+        document.getElementById("demo").innerHTML += ' '+d9.getMilliseconds();
+
+
+        /*The getDay() Method
+        The getDay() method returns the weekday of a date as a number (0-6):
+        */
+        document.getElementById("demo").innerHTML += ' '+d9.getDay();
+
+        /*
+        getUTCDate()	Same as getDate(), but returns the UTC date
+getUTCDay()	Same as getDay(), but returns the UTC day
+getUTCFullYear()	Same as getFullYear(), but returns the UTC year
+getUTCHours()	Same as getHours(), but returns the UTC hour
+getUTCMilliseconds()	Same as getMilliseconds(), but returns the UTC milliseconds
+getUTCMinutes()	Same as getMinutes(), but returns the UTC minutes
+getUTCMonth()	Same as getMonth(), but returns the UTC month
+getUTCSeconds()	Same as getSeconds(), but returns the UTC seconds 
+        */
+        document.getElementById("demo").innerHTML+=' '+d9.getUTCDate()+ ' '+ d9.getUTCDay() +'month : '+ d9.getUTCMonth()+ ' Full year: '+d9.getUTCFullYear()+ 'utc hour '+d9.getUTCHours()+ 'millsecond '+d9.getUTCMilliseconds()+ 'min '+d9.getUTCMinutes()+ 'sec '+d9.getUTCSeconds();
+
+
+        //set date methods
+        //The setFullYear() method sets the year of a date object. In this example to 2020:
+        d9.setFullYear(2020);
+        document.getElementById("demo").innerHTML = d9;
+            
+        //we can set month and date using setfullyear method
+        d9.setFullYear(2020, 11, 3);
+        document.getElementById("demo").innerHTML = d9;
+        
+        /*The setMonth() Method
+        The setMonth() method sets the month of a date object (0-11):
+        */
+        d9.setMonth(11);
+
+        /*The setDate() Method
+        The setDate() method sets the day of a date object (1-31):*/
+        d9.setDate(15);
+
+        d9.setDate(d.getDate() + 50);
+
+        document.getElementById("demo").innerHTML = d9;
+        
+        //The setHours() Method
+        //The setHours() method sets the hours of a date object (0-23):
+    
+        d9.setHours(22);
+
+        /* The setMinutes() Method
+        The setMinutes() method sets the minutes of a date object (0-59):*/
+
+        d9.setMinutes(30);
+
+        /*The setSeconds() Method
+        The setSeconds() method sets the seconds of a date object (0-59):*/
+
+        d9.setSeconds(30);
+
+        let text9 = "";
+        const today = new Date();
+        const someday = new Date();
+        someday.setFullYear(2100, 0, 14);
+
+        if (someday > today) {
+            text = "Today is before January 14, 2100.";
+        } else {
+            text = "Today is after January 14, 2100.";
+        }
+
+
+result.innerHTML+=+ ' ' +Math.E        // returns Euler's number
+result.innerHTML+=' '+ Math.PI       // returns PI
+result.innerHTML+= ' '+Math.SQRT2    // returns the square root of 2
+result.innerHTML+=' ' + Math.SQRT1_2  // returns the square root of 1/2
+result.innerHTML+=' '+ Math.LN2      // returns the natural logarithm of 2
+result.innerHTML+=' '+Math.LN10     // returns the natural logarithm of 10
+result.innerHTML+=' '+Math.LOG2E    // returns base 2 logarithm of E
+result.innerHTML+=' '+Math.LOG10E   // returns base 10 logarithm of E
+
+
+result.innerHTML+=' '+Math.round(4.9);    // returns 5
+result.innerHTML+=' '+Math.round(4.7);    // returns 5
+result.innerHTML+=' '+Math.round(4.4);    // returns 4
+result.innerHTML+=' '+Math.round(4.2);    // returns 4
+result.innerHTML+=' '+Math.round(-4.2);    // returns -4
+
+result.innerHTML+=' '+Math.ceil(4.9);     // returns 5
+result.innerHTML+=' '+Math.ceil(4.7);     // returns 5
+result.innerHTML+=' '+Math.ceil(4.4);     // returns 5
+result.innerHTML+=' '+Math.ceil(4.2);     // returns 5
+result.innerHTML+=' '+Math.ceil(-4.2);     // returns -4
+
+result.innerHTML+=' '+Math.floor(4.9);    // returns 4
+result.innerHTML+=' '+Math.floor(4.7);    // returns 4
+result.innerHTML+=' '+Math.floor(4.4);    // returns 4
+result.innerHTML+=' '+Math.floor(4.2);    // returns 4
+result.innerHTML+=' '+Math.floor(-4.2);    // returns -5
+
+result.innerHTML+=' '+Math.trunc(4.9);    // returns 4
+result.innerHTML+=' '+Math.trunc(4.7);    // returns 4
+result.innerHTML+=' '+Math.trunc(4.4);    // returns 4
+result.innerHTML+=' '+Math.trunc(4.2);    // returns 4
+result.innerHTML+=' '+Math.trunc(-4.2);    // returns -4
+
+result.innerHTML+=' '+Math.sign(-4);    // returns -1
+result.innerHTML+=' '+Math.sign(0);    // returns 0
+result.innerHTML+=' '+Math.sign(4);    // returns 1
+
+result.innerHTML+=' '+Math.pow(8, 2);      // returns 64
+
+result.innerHTML+=' '+Math.sqrt(64);      // returns 8
+
+result.innerHTML+=' '+Math.abs(-4.7);     // returns 4.7
+
+result.innerHTML+=' '+Math.abs(-4.7);     // returns 4.7
+
+result.innerHTML+=' '+Math.sin(90 * Math.PI / 180); // returns 1 (the sine of 90 degrees)
+
+result.innerHTML+=' '+Math.sin(90) //return 1    
+
+result.innerHTML+=' '+Math.cos(0) //return 1
+
+result.innerHTML+=' '+Math.min(0,150,200,250,120,-170,-230);
+
+result.innerHTML+=' '+Math.max(0,250,230,150,200,210,190,-180,-270);
+
+result.innerHTML+='Random number : '+Math.random();
+
+
+
+
+
+
+
+/*
+Method	    Description
+abs(x)	    Returns the absolute value of x
+acos(x) 	Returns the arccosine of x, in radians
+acosh(x)	Returns the hyperbolic arccosine of x
+asin(x) 	Returns the arcsine of x, in radians
+asinh(x)	Returns the hyperbolic arcsine of x
+atan(x) 	Returns the arctangent of x as a numeric value between -PI/2 and PI/2 radians
+atan2(y, x)	Returns the arctangent of the quotient of its arguments
+atanh(x)	Returns the hyperbolic arctangent of x
+cbrt(x) 	Returns the cubic root of x
+ceil(x) 	Returns x, rounded upwards to the nearest integer
+cos(x)	    Returns the cosine of x (x is in radians)
+cosh(x) 	Returns the hyperbolic cosine of x
+exp(x)	    Returns the value of Ex
+floor(x)	Returns x, rounded downwards to the nearest integer
+log(x)	    Returns the natural logarithm (base E) of x
+max(x,y,.n)	Returns the number with the highest value
+min(x,y,.n) Returns the number with the lowest value
+pow(x, y)	Returns the value of x to the power of y
+random()	Returns a random number between 0 and 1
+round(x)	Rounds x to the nearest integer
+sign(x) 	Returns if x is negative, null or positive (-1, 0, 1)
+sin(x)  	Returns the sine of x (x is in radians)
+sinh(x) 	Returns the hyperbolic sine of x
+sqrt(x) 	Returns the square root of x
+tan(x)	    Returns the tangent of an angle
+tanh(x) 	Returns the hyperbolic tangent of a number
+trunc(x)	Returns the integer part of a number (x)
+*/
+
+
+    }
+demo();
+
+     </script>
+</body>
+
+</html>

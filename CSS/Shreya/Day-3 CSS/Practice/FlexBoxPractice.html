@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flexbox practice</title>
+    <style>
+        .conatiner-center{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 300px;
+            width: 50%;
+            background-color:gray;
+        } 
+        .conatiner-center > div {
+           background-color: #f1f1f1;
+            color: white;
+            width: 200px;
+            height: 200px;
+        }
+        .flex-wrap{
+            display: flex;
+            background-color: lightcyan;
+           flex-wrap: wrap; 
+           align-content: flex-start; 
+           text-align: center;      
+           height: 300px;
+        } 
+        .flex-wrap > div {
+            background-color: gray;
+            margin: 10px;
+            width: 90px;
+            padding: 30px;
+            font-size: large;
+        }
+        .flex-direction{
+            display: flex;
+            flex-direction:row;
+            background-color: lightcyan;
+            justify-content: start;
+            width: 50%;
+            height: 300px;
+        } 
+        .flex-direction > div {
+            background-color: gray;
+            margin: 10px;
+            width: 100px;
+            padding: 30px;
+            font-size: large;
+        }
+        .flex-container{
+            display: flex;
+            background-color: lightcyan;
+            width: 50%;
+            justify-content: space-around;
+        }
+        .flex-container > div {
+            background-color: gray;
+            margin: 10px;
+            padding: 30px;
+            font-size: large;
+        }
+    </style>
+</head>
+<body>
+    <h1>Flex box Conatiner</h1>
+    <div class="flex-container">
+        <div style="flex-grow: 2;">1</div>
+        <div style="flex-grow: 2;">2</div>
+        <div style="flex-grow: 10;">3</div>
+      </div>
+      <br><h2>Flex conatiner properties</h2>
+      <div class="flex-direction">
+        <div style="order: 3;align-self: flex-start;">1</div>
+        <div style="order: 1;flex-basis: 200px;align-self: flex-end;">2</div>
+        <div style="order: 2;align-self: center;">3</div>  
+      </div>
+      <br>
+      <br><h2>Flex wrap Propety</h2>
+      <div class="flex-wrap">
+        <div>1</div>
+        <div>2</div>
+        <div>3</div>  
+        <div>4</div>
+        <div>5</div>
+        <div>6</div>  
+        <div>7</div>
+        <div>8</div>
+        <div>9</div>  
+        <div>10</div>
+        <div>11</div>
+        <div>12</div>  
+        <div>13</div>
+        <div>14</div>
+        <div>15</div>  
+        <div>16</div>
+        
+      </div>
+      <h3>Perfectly Center flex ietm</h3>
+      <div class="conatiner-center">
+          <div></div>
+      </div>
+      
+</body>
+</html>

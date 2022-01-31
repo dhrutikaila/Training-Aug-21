@@ -1,0 +1,26 @@
+<table class="table">
+    <thead>
+        <th>Studnet Name</th>
+        <th>Birth</th>
+        <th>address</th>
+        <th>Father</th>
+        <th>Father Contact</th>
+        <th>Mother</th>
+        <th>Mother Contact</th>
+        <th>Emergency Contact name</th>
+        <th>Emergency Contact number</th>
+    </thead>
+    <tbody>
+        <tr *ngFor="let student of students">
+           <td>{{student.name.firstName}} {{student.name.lastName}}</td>
+           <td>{{student.Birth.DOB}}</td>
+           <td>{{student.address.city}} {{student.address.state}} {{student.address.PIN}}</td>
+           <td>{{student.Father.name.firstName}} {{student.Father.name.lastName}}</td>
+           <td>{{student.Father.phone}}</td>
+           <td>{{student.Mother.name.firstName}}{{student.Mother.name.lastName}}</td>
+           <td>{{student.Mother.phone}}</td>
+           <td>{{student.EmergencyContactList.relation}}</td>
+           <td>{{student.EmergencyContactList.number}}</td>
+        </tr>
+    </tbody>
+</table>

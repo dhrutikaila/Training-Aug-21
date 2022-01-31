@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+    .flex-container{
+        display:flex;
+        align-items: center;
+        /* align-items: baseline; */
+        /* align-items: flex-end; */
+        /* align-items: flex-start; */
+        /* align-items: stretch; */
+        
+        height: 220px;
+        background-color:darkslategrey;
+    }
+    .flex-container>div{
+        background-color:khaki;
+        font-size: 50px;
+        width: 120px;
+        margin:20px;
+        line-height: 100px;
+        text-align: center;
+        font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    }
+    
+    .flex-container-content{
+        position: relative;
+        top:50px;
+        display:flex;
+        background-color:darkslategrey;
+        height: 300px;
+        flex-wrap: wrap;
+        align-content: center;
+        /* align-content:space-around ; */
+        /* align-content: space-between; */
+        /* align-content: stretch; */
+        /* align-content: flex-end; */
+        /* align-content: flex-start; */
+        /* flex-wrap: nowrap; */
+        
+    }
+    .flex-container-content>div{
+        
+        background-color:khaki;
+        font-size: 30px;
+        margin: 20px;
+        width: 100px;
+        text-align: center;
+        line-height: 75px;
+        font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    }
+    
+    
+</style>
+</head>
+<body>
+
+<h1>
+    Flaxbox Practice
+</h1>    
+<div class="flex-container">
+  <div>1</div>
+  <div>2</div>
+  <div>3</div>  
+</div>
+
+
+<div class="flex-container-content">
+    <div>1</div>
+    <div>2</div>
+    <div>3</div>
+    <div>4</div>
+    <div>5</div>
+    <div>6</div>  
+    <div>7</div>
+    <div>8</div>
+    <div>9</div>  
+    <div>10</div>
+    <div>11</div>
+    <div>12</div>    
+  </div>
+    
+</body>
+</html>

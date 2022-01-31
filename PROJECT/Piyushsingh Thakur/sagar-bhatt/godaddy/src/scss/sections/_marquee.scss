@@ -1,0 +1,137 @@
+@use "../custom" as *;
+@use "../components/mixins" as *;
+
+.marquee {
+  @include block-spacer(1rem);
+  display: grid;
+  gap: 1rem;
+  word-wrap: break-word;
+
+  .card {
+    border: none;
+    text-align: center;
+    padding: 1.5rem;
+
+    &-title {
+      font-size: 1rem;
+      font-weight: 600;
+      line-height: 1.5;
+      margin-bottom: 1.5rem;
+    }
+    &-subtitle {
+      font-size: 2.3rem;
+      letter-spacing: -0.01em;
+      line-height: 1.2;
+      font-weight: 800;
+      font-family: gd-sage, "Times", "Times New Roman", serif;
+    }
+    &-text {
+      color: $secondary;
+    }
+    &-btn {
+      display: flex;
+      .btn {
+        flex-grow: 1;
+        text-align: center;
+        justify-content: center;
+        // margin: 0.75rem;
+        // padding: 0.8rem 3rem;
+      }
+    }
+  }
+  .domain-names {
+    background-color: $light-blue;
+  }
+  .web-hosting {
+    background: url(../../images/75068_MRQ_IN-HP_V2_Portrait.png);
+    background-position: bottom center;
+    background-size: cover;
+    height: 60vh;
+  }
+}
+
+@include media-breakpoint-up(md) {
+  .marquee {
+    .card {
+      display: grid;
+      grid-template-columns: 60% 40%;
+
+      &-top {
+        text-align: left;
+      }
+      &-btn {
+        display: inline-flex;
+        justify-content: end;
+        align-items: center;
+        .btn {
+          // height: 3.5rem;
+          flex-grow: 0;
+        }
+      }
+    }
+    .web-hosting {
+      display: flex;
+      flex-direction: column;
+      .card-top {
+        text-align: center;
+      }
+      .card-btn {
+        justify-content: center;
+        align-items: center;
+        .btn {
+          flex-grow: 0;
+        }
+      }
+    }
+  }
+}
+
+@media (min-width: 1024px) {
+  .marquee {
+    .card {
+      padding: 40px;
+    }
+    .web-hosting {
+      background: url(../../images/75068_MRQ_IN-HP_V2_Landscape.png);
+      background-position: bottom right;
+      background-repeat: no-repeat;
+      background-size: 110%;
+      height: 100%;
+      display: grid;
+      grid-template-columns: 50% 50%;
+
+      .card-top {
+        text-align: left;
+      }
+      .card-btn {
+        display: flex;
+        justify-content: start;
+        margin-left: -12px;
+      }
+    }
+  }
+}
+
+@include media-breakpoint-up(xl) {
+  .marquee {
+    grid-template-columns: 25% 75%;
+    height: 450px;
+
+    .domain-names {
+      display: flex;
+      flex-direction: column;
+
+      .card-btn {
+        justify-content: flex-start;
+        margin-top: 12px;
+        margin-bottom: 12px;
+        margin-left: -12px;
+      }
+    }
+    .web-hosting {
+      background-position: top right;
+      background-size: 110% 100%;
+      grid-template-columns: 50% 40%;
+    }
+  }
+}

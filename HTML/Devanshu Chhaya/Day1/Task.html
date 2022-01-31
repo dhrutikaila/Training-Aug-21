@@ -1,0 +1,59 @@
+
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta http-equiv="content-type" content="text/html; charset=utf-8" />
+        <title>Employee Form</title>
+        
+    </head>
+    <body>
+        <header>
+            <h1> Employee Regestration Form</h1>
+        </header>
+        <form>
+            <lable for="EmpName">Employee name:</lable>
+            <input id="EmpName" Type="Text" placeholder="Enter your fullname" required><br><br>
+            
+            <lable for="Age" value="50">Age:</lable>
+            <input type="number" id="Age" name="Age" value="23" required><br><br> 
+            
+            <label for="Gender">Gender:</label>
+            
+            <input type="radio" id="male" name="male">
+            <label for="male">Male</label>
+            
+            <input type="radio" id="female" name="female">
+            <label for="female">Female</label><br><br>
+            
+            <lable for="designation">Designation</lable>
+            <input type="text" value="Sr. SDE" id="designation" name="designation" required><br><br>
+            
+            
+            <lable for="salary">Salary:</lable>
+            <input id="salary" name="salary" type="Number" required><br><br>
+            
+            <label for="location">location:</label>
+            <input list="location" placeholder="Choose your location" required>
+                <datalist id="location">
+                    <option value="Ahmedabad">
+                    <option value="Baroda">
+                    <option value="Surat">
+                    <option value="Rajkot">
+                    <option value="Gandhinagar">
+                    <option value="Junagadh">                
+                </datalist><br><br>
+            
+            <lable for="Emali">EmailID:</lable> 
+            <input type="Email" id="Email" name="Email" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$" title="Please enter valid emailId" required><br><br>
+            
+            <lable for="Date">Date of Joining:</lable>
+            <input type="date" id="Date" name="Date" required> <br><br>
+            
+            <label for="contact">Contact Number:</label>
+            <input type="tel" id="contact" name="contact" placeholder="99999 99999" pattern="[0-9]{5} [0-9]{5}" required><br><br>
+            
+            <input type="submit">
+        </form>
+    </body>
+</html>
+

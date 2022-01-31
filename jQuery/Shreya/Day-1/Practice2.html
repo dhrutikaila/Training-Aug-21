@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="jquery-3.6.0.min.js"></script>
+</head>
+<body>
+    <p>hello</p>
+    <script>
+        $(document).ready(function(){
+            var h= $('<h1>Hello How are you</h1>') // create text with jQuery
+            $("p").append("<b> Appended Text</b> ");
+           // $("p").before(h);
+            //$("p").after(h);
+            $("p").prepend(h);
+          // $("p").remove();
+          var a = document.createElement("p");
+          a.innerHTML = "Shreya Thakkar";
+          $("body").append(a);
+          var app = $('<span>jQuery learning</span>');
+          $(app).appendTo('p');
+
+        });
+    </script>
+</body>
+</html>

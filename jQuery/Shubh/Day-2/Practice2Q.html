@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Practice2jQ</title>
+    <script src="../jquery-3.6.0.js"></script>
+    <link href="../../HTML/Shubh/bootstrap-5.0.2-dist/css/bootstrap.min.css">
+    <script src="Practice2jQ.js"></script>
+</head>
+<body>
+    <p>My name is Donald.</p>
+    <p class="intro">I live in Duckburg.</p>
+    <p>My best friend is Mickey.</p>
+    <hr>
+    <div><em>Hello world! What a beautiful day!
+        <p>In this example, by clicking on the button, we search for all the text nodes inside the div element and wrap them with a b element.</p></em>
+    </div>       
+    <button>Find all text nodes in div and wrap them</button>
+    <br>
+    <hr>
+    <div style="border:1px solid black;width:70%;position:relative;left:10px;top:10px">
+        <div style="border:1px solid black;margin:50px;background-color:yellow">
+        <p id="click">Click me to set the background color of the first positioned parent element of this paragraph.</p>    
+        </div>
+    </div>
+    <hr><br><br>
+    <div style="width:500px;" class="siblings">
+        <ul>ul (parent)  
+          <li>li (the previous sibling of "start")</li>
+          <li>li (the previous sibling of "start")</li>
+          <li class="start">li (sibling)</li>
+          <li>li (the next sibling of "start")</li>
+          <li>li (the next sibling of "start")</li>
+        </ul>  
+          <li>li 1</li>
+          <li>li 2</li>      
+      </div>
+    <hr>
+    <div class="ancestors">
+        <div style="width:500px;">div (great-grandparent)
+          <ul>ul (grandparent)  
+            <li>li (direct parent)
+              <span>span</span>
+            </li>
+          </ul>   
+        </div>
+      
+        <div style="width:500px;">div (grandparent)   
+          <p>p (direct parent)
+            <span>span</span>
+          </p> 
+        </div>
+    </div>
+    <hr>
+    <div class="descendants" style="width:500px;">div (current element) 
+        <p>p (child)
+          <span>span (grandchild)</span>   
+        </p>
+        <p>p (child)
+          <span>span (grandchild)</span>
+        </p> 
+    </div>
+    <hr>
+    <div id="last" style="border: 1px solid black;">
+        <p>A paragraph in a div.</p>
+        <p>Another paragraph in a div.</p>
+      </div>
+      <br>
+      
+      <div id="last" style="border: 1px solid black;">
+        <p>A paragraph in another div.</p>
+        <p>Another paragraph in another div.</p>
+      </div>
+      <br>
+      
+      <div id="last" style="border: 1px solid black;">
+        <p>A paragraph in another div.</p>
+        <p>Another paragraph in another div.</p>
+    </div>
+    <hr>
+</body>
+</html>

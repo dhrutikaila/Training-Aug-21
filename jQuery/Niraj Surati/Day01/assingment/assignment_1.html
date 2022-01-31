@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Assignment-1</title>
+    <link href="../assets/css/bootstrap.min.css" rel="stylesheet">
+</head>
+<body>
+    <div class="container">
+        <div class="h3 my-4 text-center" >Assignment-1</div>
+        <hr>
+        <div>
+            <h3 class="text-center my-4 text-danger">
+                Select Country from below Drop-Down
+            </h3>
+            <div>
+                <select name="country" id="country" class="form-select">
+                    <option selected="" value="0">Select Country</option>
+                    <option value="India">India</option>
+                    <option value="Japan">Japan</option>
+                    <option value="China">China</option>
+                    <option value="America">America</option>
+                    <option value="Russia">Russia</option>
+                </select>
+            </div>
+            <div class="text-center my-4">
+                <h3 class="text-primary">Your Selected Country : <span id="result"></span></h3>
+            </div>
+            <div class="text-center" id="labelCountries">
+                <label id="India">
+                    India
+                </label>
+                <label id="Japan">
+                    Japan
+                </label>
+                <label id="China">
+                    China
+                </label>
+                <label id="America">
+                    America
+                </label>
+                <label id="Russia">
+                    Russia
+                </label>
+            </div>
+        </div>
+    </div>
+    <script src="../assets/js/bootstrap.bundle.min.js"></script>
+    <script src="../assets/js/jquery-3.6.0.min.js"></script>
+    <script>
+        $(document).ready(function(){
+            $("body").css("background-color","#dae3f1")
+            $("#labelCountries").css({
+                "border" : "1px solid red",
+                "height" : "60px",
+                "width" : "50%",
+                "margin-left": "25%",
+                "font-size": "28px"
+            }).addClass("text-light bg-dark");
+            $("#labelCountries label").css({
+                "border" : "1px solid white"
+            }).addClass("align-middle px-2 my-2");
+            
+            $("#country").change(function(){
+                let resVal = $("#country").val();
+                $("#labelCountries label").hide();
+                if(resVal == "0"){
+                    $("#result").addClass("text-success").text("No Country Is Selected");
+                    $("#labelCountries label").show();
+                }
+                else{
+                    $("#result").addClass("text-success").text(resVal);
+                    $("[id = '"+resVal+"']").show();
+                }
+            });
+        });
+
+    
+    </script>
+</body>
+</html>

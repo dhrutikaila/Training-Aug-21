@@ -1,0 +1,51 @@
+@use "../custom" as *;
+@use "../components/mixins" as *;
+
+.product-grid {
+  @include block-spacer(2.15rem, 0.5rem);
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+
+  & > * {
+    margin: 0;
+    width: 100%;
+    display: flex;
+    padding: 1.5rem;
+    text-align: center;
+    align-items: center;
+    flex-direction: row;
+    text-decoration: none;
+    word-wrap: break-word;
+    justify-content: center;
+    color: #000;
+
+    &:nth-child(9) {
+      grid-column: 1/3;
+      flex-direction: column;
+    }
+    img {
+      width: 192px;
+      height: 64px;
+    }
+  }
+
+  .cloud {
+    &:hover {
+      background-color: $black;
+      color: $white;
+    }
+  }
+}
+
+@include media-breakpoint-up(lg) {
+  .product-grid {
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+    grid-auto-flow: column;
+
+    & > * {
+      &:nth-child(9) {
+        grid-area: 1/ 5/ 3/ 6;
+      }
+    }
+  }
+}

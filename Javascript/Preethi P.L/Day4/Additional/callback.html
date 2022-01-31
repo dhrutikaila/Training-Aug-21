@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Callbacks</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-F3w7mX95PdgyTmZZMECAngseQB83DfGTowi0iMjiWaeVhAn4FJkqJByhZMI3AhiU" crossorigin="anonymous">
+</head>
+<body>
+    <!--Header-->
+    <div class="container text-center mt-2">
+        <h1 class="display1">Callback</h1>
+        <hr>
+    </div>
+
+    <!--Main-->
+    <div class="container bg-light mt-3 p-2">
+        <h6>1. Return sum of two numbers</h6><br>
+        <div class="form-group w-25">
+            <label for="num1" class="form-label">Enter first number : </label>
+            <input type="number" class="form-control mb-2" id="num1" placeholder="First number">
+        </div>
+
+        <div class="form-group w-25">
+            <label for="num2" class="form-label">Enter second number : </label>
+            <input type="number" class="form-control mb-2" id="num2" placeholder="Second number">
+        </div>
+
+        <button class="btn btn-primary" onclick="sum(num1.value,num2.value,display)">Print Sum</button>
+        <p class="h4 mt-2">Result : <span id="result"></span></p>
+    </div>
+    
+    
+    <script>
+        //display result
+        function display(value)
+        {
+            document.getElementById("result").innerHTML = value;
+        }
+
+        //returns sum
+        function sum(num1,num2,callback)
+        {
+            callback(parseInt(num1) + parseInt(num2));
+        }
+        
+    </script>
+    <!-- Bootstrap JS Bundle with Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-/bQdsTh/da6pkI1MST/rWKFNjaCP5gBSY4sEBT38Q/9RBh9AH40zEOg7Hlq2THRZ" crossorigin="anonymous"></script>
+</body>
+</html>

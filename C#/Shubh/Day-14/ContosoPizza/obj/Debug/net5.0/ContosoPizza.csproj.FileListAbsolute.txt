@@ -1,0 +1,7 @@
+D:\Training-Aug-21\C#\Shubh\Day-14\ContosoPizza\obj\Debug\net5.0\ContosoPizza.csproj.AssemblyReference.cache
+D:\Training-Aug-21\C#\Shubh\Day-14\ContosoPizza\obj\Debug\net5.0\ContosoPizza.GeneratedMSBuildEditorConfig.editorconfig
+D:\Training-Aug-21\C#\Shubh\Day-14\ContosoPizza\obj\Debug\net5.0\ContosoPizza.AssemblyInfoInputs.cache
+D:\Training-Aug-21\C#\Shubh\Day-14\ContosoPizza\obj\Debug\net5.0\ContosoPizza.AssemblyInfo.cs
+D:\Training-Aug-21\C#\Shubh\Day-14\ContosoPizza\obj\Debug\net5.0\ContosoPizza.csproj.CoreCompileInputs.cache
+D:\Training-Aug-21\C#\Shubh\Day-14\ContosoPizza\obj\Debug\net5.0\ContosoPizza.MvcApplicationPartsAssemblyInfo.cs
+D:\Training-Aug-21\C#\Shubh\Day-14\ContosoPizza\obj\Debug\net5.0\ContosoPizza.MvcApplicationPartsAssemblyInfo.cache

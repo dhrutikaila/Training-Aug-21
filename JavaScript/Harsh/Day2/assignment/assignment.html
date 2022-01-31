@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <form>
+        <input type="text" name="date" id="date">
+        <button type="button" value="Submit" onclick="dateValidate()">Button</button>
+    </form>
+    <script>
+        function dateValidate() {
+            var dateString = document.getElementById("date").value;
+            var pattern = /^([0][0-9]|11|12)\-([0-2][0-9]|30|31)\-(19|20)\d{2}$/g;
+            if (dateString.match(pattern) == null) {
+                alert("enter valid date format");
+                return;
+            }
+            var parts = dateString.split("-");
+            var day = parseInt(parts[1]);
+            var month = parseInt(parts[0]);
+            var year = parseInt(parts[2]);
+            // check year 
+            if (year < 1000 || year > 3000) {
+
+                alert("please enter valid year or month");
+            }
+            // check month
+            else if (month < 1 || month > 12) {
+
+                alert("please enter valid month");
+            }
+            else if (month == 2) {
+                // check leap year
+                if (((year % 4 == 0) || (year % 400 == 0) && (day > 1 || day < 30))) {
+                    alert("correct date");
+                }
+                else {
+                    alert("incorrect date");
+                }
+            }
+            // check date
+            else if (day < 1 || day > 31) {
+
+                alert("please enter valid date");
+            }
+            // check month having 30 days
+            else if (month == 4 || month == 6 || month == 9 || month == 11) {
+                if (day < 1 || day > 30) {
+                    alert("please enter valid date");
+                }
+                else {
+                    alert("correct date")
+                }
+            }
+        }
+    </script>
+</body>
+
+</html>

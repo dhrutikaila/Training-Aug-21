@@ -1,0 +1,27 @@
+<!--Declare array with 5 city names and iterate these values with the help of loop and display it with alert.-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Practice Exercise 2</title>
+</head>
+<body>
+
+    <h2>Practice Exercise 2</h2>
+    <p>Declare array with 5 city names and iterate these values with the help of loop and display it with alert.</p>
+    <button onclick="view_city()">View City Names</button>
+    <script>
+        function view_city()
+        {
+            var city = ["Ahmedabad","Baroda","Surat","Rajkot","Gandhinagar"];
+            for(i=0 ; i<5 ; i++)
+            {
+                alert("City - "+i+" : "+city[i]);
+            }
+        }
+        
+    </script>
+</body>
+</html>

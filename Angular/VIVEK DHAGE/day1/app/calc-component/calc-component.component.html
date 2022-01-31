@@ -1,0 +1,28 @@
+<h4>calc-component works!</h4>
+
+<!-- <label for="">Enter numbers for calculation:</label>
+<input type="number" [(ngModel)]="n1">
+<input type="number" [(ngModel)]="n2">
+<p> addition : {{n1+n2}}</p>
+<p> subtraction : {{n1-n2}}</p>
+<p> multiplication : {{n1*n2}}</p>
+<p> divide : {{n1/n2}}</p> -->
+
+<div class="row g-3 align-items-center">
+  <div class="col-auto">
+    <label for="" class="col-form-label">Enter numbers for calculation:</label>
+  </div>
+  <br />
+  <div class="col-auto">
+    <input type="number" class="form-control" [(ngModel)]="n1" />
+    <input type="number" class="form-control" [(ngModel)]="n2" />
+  </div>
+  <div class="col-auto">
+    <span id="passwordHelpInline" class="form-text">
+      <p>addition : {{ n1 + n2 }}</p>
+      <p>subtraction : {{ n1 - n2 }}</p>
+      <p>multiplication : {{ n1 * n2 }}</p>
+      <p>divide : {{ n1 / n2 }}</p>
+    </span>
+  </div>
+</div>

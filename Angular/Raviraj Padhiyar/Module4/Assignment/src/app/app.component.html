@@ -1,0 +1,8 @@
+<div class="container">
+  <div class="row">
+    <div class="col-md-12">
+      <app-student-form (addnewStudent)="addStudent($event)" ></app-student-form>
+      <app-student-list [students]="students"></app-student-list>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,71 @@
+<!--4 Change Font size with Media Queries-->
+
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>CSS - Practice_Exercise_4</title>
+    <style>
+        .example {
+            padding: 20px;
+            color: white;
+        }
+
+        /* Extra small devices (phones, 600px and down) */
+        @media only screen and (max-width: 600px) {
+            .example {
+                background: red;
+                font-size: 10px;
+            }
+        }
+
+        /* Small devices (portrait tablets and large phones, 600px and up) */
+        @media only screen and (min-width: 600px) {
+            .example {
+                background: green;
+                font-size: 18px;
+            }
+        }
+
+        /* Medium devices (landscape tablets, 768px and up) */
+        @media only screen and (min-width: 768px) {
+            .example {
+                background: blue;
+                font-size: 30px;
+            }
+
+        }
+
+        /* Large devices (laptops/desktops, 992px and up) */
+        @media only screen and (min-width: 992px) {
+            .example {
+                background: orange;
+                font-size: 40px;
+            }
+        }
+
+        /* Extra large devices (large laptops and desktops, 1200px and up) */
+        @media only screen and (min-width: 1200px) {
+            .example {
+                background: pink;
+                font-size: 50px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <h3>Practice 4</h3>
+    <h5>
+        Change Font size with Media Queries
+    </h5>
+    <br>
+    <hr><br>
+    <p class="example">Resize the browser window to see how the background color of this paragraph changes on different
+        screen sizes.</p>
+
+</body>
+
+</html>

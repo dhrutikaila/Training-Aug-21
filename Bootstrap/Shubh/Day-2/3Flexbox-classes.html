@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flexbox Classes</title>
+    <link rel="stylesheet" href="../bootstrap-5.0.2-dist/css/bootstrap.min.css">
+    <style>
+      .d-flex{
+            background-color: aqua;
+            height:auto;
+        }
+      .p-2{
+        border: black 1px solid;
+      }
+
+    </style>
+</head>
+<body>
+    <div class="container">
+        <!--########################START HERE#########################-->
+    
+        <div class="d-flex p-2 bd-highlight">I'm a flexbox container!</div>
+        <br>
+        <div class="d-inline-flex p-2 bd-highlight">I'm an inline flexbox container!</div>
+        <br><br>
+
+        <!-- FLEX ROW & FLEX ITEMS -->
+        <div class="d-flex flex-row bd-highlight mb-3">
+          <div class="p-2 bd-highlight">Flex item 1</div>
+          <div class="p-2 bd-highlight">Flex item 2</div>
+          <div class="p-2 bd-highlight">Flex item 3</div>
+        </div>
+        <div class="d-flex flex-row-reverse bd-highlight">
+          <div class="p-2 bd-highlight">Flex item 1</div>
+          <div class="p-2 bd-highlight">Flex item 2</div>
+          <div class="p-2 bd-highlight">Flex item 3</div>
+        </div>
+        <br><br>
+
+        <!-- FLEX CONTAINER / FLEX COLUMN -->
+        <div class="d-flex flex-column bd-highlight mb-3">
+          <div class="p-2 bd-highlight">Flex item 1</div>
+          <div class="p-2 bd-highlight">Flex item 2</div>
+          <div class="p-2 bd-highlight">Flex item 3</div>
+        </div>
+        <div class="d-flex flex-column-reverse bd-highlight">
+          <div class="p-2 bd-highlight">Flex item 1</div>
+          <div class="p-2 bd-highlight">Flex item 2</div>
+          <div class="p-2 bd-highlight">Flex item 3</div>
+        </div>   
+        <br><br>
+
+    
+        <!-- JUSTIFY CONTENT -->
+        <div class="d-flex justify-content-start">Justify flex-item</div>
+        <div class="d-flex justify-content-end">Justify flex-item</div>
+        <div class="d-flex justify-content-center">Justify flex-item</div>
+        <div class="d-flex justify-content-between">Justify flex-item</div>
+        <div class="d-flex justify-content-around">Justify flex-item</div>
+        <div class="d-flex justify-content-evenly">Justify flex-item</div>
+        <br><br>
+
+        <!-- ALIGN ITEMS -->
+        <div class="d-flex align-items-start">Align</div>
+        <div class="d-flex align-items-end">Align</div>
+        <div class="d-flex align-items-center">Align</div>
+        <div class="d-flex align-items-baseline">Align</div>
+        <div class="d-flex align-items-stretch">Align</div>
+        <br><br>
+        <div class="align-self-start">Aligned flex item</div>
+        <div class="align-self-end">Aligned flex item</div>
+        <div class="align-self-center">Aligned flex item</div>
+        <div class="align-self-baseline">Aligned flex item</div>
+        <div class="align-self-stretch">Aligned flex item</div>
+        <br><br>
+        <div class="d-flex align-items-start flex-column bd-highlight mb-3" style="height: 200px;">
+          <div class="mb-auto p-2 bd-highlight">Flex item</div>
+          <div class="p-2 bd-highlight">Flex item</div>
+          <div class="p-2 bd-highlight">Flex item</div>
+        </div>
+        <br><br>
+        <div class="d-flex align-items-end flex-column bd-highlight mb-3" style="height: 200px;">
+          <div class="p-2 bd-highlight">Flex item</div>
+          <div class="p-2 bd-highlight">Flex item</div>
+          <div class="mt-auto p-2 bd-highlight">Flex item</div>
+        </div>
+        <br><br>
+
+        <!-- FILL-GROW-SHRINK ITEMS -->
+        <div class="d-flex bd-highlight">
+          <div class="p-2 flex-fill bd-highlight">Flex item with a lot of content</div>
+          <div class="p-2 flex-fill bd-highlight">Flex item</div>
+          <div class="p-2 flex-fill bd-highlight">Flex item</div>
+        </div>
+        <br>
+        <div class="d-flex bd-highlight">
+          <div class="p-2 flex-grow-1 bd-highlight">Flex item</div>
+          <div class="p-2 bd-highlight">Flex item</div>
+          <div class="p-2 bd-highlight">Third flex item</div>
+        </div>
+        <br>
+        <div class="d-flex bd-highlight">
+          <div class="p-2 w-100 bd-highlight">Flex item</div>
+          <div class="p-2 flex-shrink-1 bd-highlight">Flex item</div>
+        </div>
+        <br><br>
+
+        <!--MEDIA CONTENT FLEX-->
+        <div class="d-flex align-items-center">
+          <div class="flex-shrink-0">
+            <img src="https://tutorials.rxtrainees.radixweb.net/wp-content/uploads/2020/12/logo_2500X1875-2048x1536.jpg" alt="RxWeb Logo" width="120" height="100">
+          </div>
+          <div class="flex-grow-1 ms-3">
+            This is some content from a media component. You can replace this with any content and adjust it as needed.
+          </div>
+        </div>
+    </div>
+</body>
+</html>

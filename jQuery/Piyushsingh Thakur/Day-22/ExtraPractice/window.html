@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #box{
+            width: 400px;
+            height: 400px;
+            padding: 10px;
+            border: 2px solid black;
+            overflow: auto;
+            background-color: azure;
+        }
+    </style>
+</head>
+<center>
+<body>
+    <h1>window practice</h1>
+    
+
+        <div id="box">
+            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Modi sint omnis ullam recusandae quod facilis repudiandae nostrum dolore dolorem corporis iusto reiciendis, ab beatae consequuntur est, voluptates ex ea esse odit sequi explicabo maiores nemo commodi! Illo, dolore recusandae culpa exercitationem, at harum, nihil dolor nostrum laboriosam ducimus cupiditate nulla modi aspernatur quia! Corrupti magni suscipit architecto nulla quod mollitia in sunt consequatur autem iste nihil dolorem harum, commodi rerum ad, quaerat libero aliquam. Natus numquam non et distinctio pariatur ipsa quidem. Possimus obcaecati commodi facilis hic exercitationem cumque sed adipisci temporibus quia officia, libero ducimus ipsa ipsum necessitatibus, dolore beatae. Omnis ad perspiciatis nemo minima doloribus exercitationem et corrupti ipsa explicabo sit cumque culpa officiis sequi nam fugiat, impedit saepe, voluptates soluta quidem. Nisi deserunt earum, autem modi nam harum neque asperiores fuga debitis repudiandae distinctio adipisci, optio odio? Aut aliquam ipsa veritatis, tempore autem, doloremque omnis voluptates architecto possimus odit fuga facilis soluta. Recusandae ab eos perspiciatis ipsam hic quidem adipisci sapiente, similique veritatis necessitatibus laborum quisquam nulla inventore tempore reiciendis. Est ipsam maiores numquam, mollitia eligendi quos officiis exercitationem porro molestiae asperiores debitis, modi quae quam ab. Consequuntur tenetur vitae, voluptatibus autem rerum provident voluptatum exercitationem commodi.
+        </div>
+   
+
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Officia eos, porro tempora nihil suscipit nesciunt nobis commodi perspiciatis, beatae, alias reiciendis sapiente repellendus a vero itaque illo blanditiis odit laudantium. Hic nemo incidunt accusamus quisquam quibusdam expedita maxime nobis nulla dignissimos molestiae fuga nesciunt reiciendis, harum mollitia? Eligendi magnam reiciendis veniam fugit autem quia iusto, quam sint similique vitae tempore quod debitis, voluptatem omnis alias saepe qui facilis voluptatibus illo doloribus aperiam. Qui exercitationem itaque sequi quae iusto nisi minima velit aspernatur perferendis minus temporibus quibusdam dolor sint facere id nostrum rerum, corrupti earum. Sunt aut odio necessitatibus quidem alias non doloremque voluptatum esse incidunt? Quis animi ullam quod sequi iure a dolorum architecto consectetur esse quia recusandae facilis voluptatem, repudiandae, at rem aliquam nostrum tenetur voluptate! Impedit consequuntur hic, distinctio optio enim id unde ut earum? Veritatis fuga provident vitae ratione maiores illum optio. Ut praesentium consequuntur, mollitia ex ullam atque aperiam suscipit omnis quisquam quaerat perspiciatis veritatis blanditiis iure error numquam totam laborum nisi necessitatibus expedita aliquam nihil rem? Necessitatibus animi, tempora incidunt porro eligendi quia dignissimos ad nihil velit qui. Modi tempore iste minus animi quos assumenda alias numquam molestiae, voluptatem, sint unde doloremque, expedita quisquam consequuntur maiores porro possimus. Esse, similique laudantium ad quis sapiente iste doloremque ipsam officia, maxime dolor est laboriosam veritatis dolorem itaque delectus tempore repellat quam molestiae! Id nam quod expedita ratione sit, ducimus praesentium in eum distinctio porro? Commodi ad quidem temporibus facilis amet a libero, eligendi, voluptates officia id eius mollitia? Soluta labore quibusdam neque omnis modi quaerat aliquam natus hic delectus quisquam ut eligendi laudantium quos dolores cumque, officia repellendus ipsam reprehenderit dolorem tempora facilis commodi. Numquam iusto odio dignissimos ullam. Libero quibusdam blanditiis earum recusandae sed odit maxime quis. Similique reprehenderit sit repellat nihil repellendus! Eveniet eius maxime reprehenderit eaque sint quia odio aut, voluptates fugit iusto, dolorum ullam labore tempore magni tempora nobis expedita excepturi laborum molestiae enim illo? Libero adipisci ut animi nostrum saepe dignissimos, sint officia aspernatur laboriosam veritatis culpa molestiae repellat distinctio! Odio veritatis voluptate, maiores ex, modi sit enim eum temporibus harum beatae, id voluptatum incidunt esse voluptatem laborum et perferendis nam libero? Eligendi vel, consequuntur, quos accusantium exercitationem voluptatum sint aut asperiores tenetur minus repellat, minima inventore earum similique ut maxime dolores doloribus tempora sed laudantium alias! Doloremque omnis consequuntur accusantium consectetur distinctio? Vitae laudantium vero sit. At est iste dolore distinctio, facere molestias fugiat, quis non aut repudiandae voluptatum, minus architecto! Quos odio, iste temporibus quibusdam, totam rem consectetur, suscipit autem officiis ipsum cupiditate cumque nesciunt nam soluta veniam voluptate tenetur tempore? Optio rerum recusandae commodi nesciunt magnam praesentium, quae perferendis dignissimos placeat quaerat odit officiis! Voluptatibus quaerat velit totam quasi sequi impedit, a earum et accusantium at aperiam corrupti, assumenda ex voluptates exercitationem obcaecati rerum doloremque consectetur maxime? Repellendus dignissimos exercitationem maiores natus similique omnis placeat beatae architecto vitae quas fugiat nobis eum, id harum cum quia sunt quibusdam deleniti at accusantium consequuntur ex est. Molestias quis modi esse exercitationem.</p>
+</body>
+</center>
+<script src="jquery-3.6.0.min.js"></script>
+<script>
+    $(document).ready(function(){
+        $(window).scroll(function(){
+            console.log("you are scrolling")
+        })
+
+        $('#box').scroll(function(){
+            alert("you are scrolling")
+        })
+
+        $(window).resize(function(){
+            console.log("you are resizeing")
+        })
+    })
+</script>
+</html>

@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <h1>Lopp</h1>
+    <hr>
+    <h3>For loop</h3>
+    <p id="forloop"></p>
+    <hr>
+    <h3>For/In</h3>
+    <p id="forin"></p>
+    <hr>
+    <h3>For/Of</h3>
+    <p id="forof"></p>
+    <hr>
+    <h3>While</h3>
+    <p id="while">
+    <script>
+        var arr = ["Apple", "Microsoft", "AMD", "Intel"]
+        var output = "";
+        for (var i = 0; i < arr.length; i++) {
+            output += arr[i] + "<br>"
+        }
+        document.getElementById("forloop").innerHTML = output;
+
+        const person = { fname: "John", lname: "Doe", age: 25 };
+
+        let txt = "";
+        for (let x in person) {
+            txt += person[x] + " ";
+        }
+
+        document.getElementById("forin").innerHTML = txt;
+
+        let language = "JavaScript";
+
+        let text = "";
+        for (let x of language) {
+            text += x + "<br>";
+        }
+
+        document.getElementById("forof").innerHTML = text;
+
+     
+    </script>
+</body>
+
+</html>

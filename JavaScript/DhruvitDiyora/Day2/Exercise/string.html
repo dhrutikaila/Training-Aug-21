@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Javascript string methods practice</title>
+</head>
+
+<body>
+    <script>
+        var string = "Hello world"
+
+        //string length
+        console.log(string.length);
+
+        //string slice
+        console.log(string.slice(8, 15));
+        console.log(string.slice(-12, -5));
+        console.log(string.slice(5));
+
+        //string substring
+        console.log(string.substring(7, 13));
+        console.log(string.substr(7, 6));
+        console.log(string.substr(7));
+
+        //replace word
+        console.log(string.replace("WORLD", "Duniya"));
+        var string = "Hello world world";
+        console.log(string.replace("world", "Duniya"));
+        console.log(string.replace("world", "Duniya"));
+
+        //convert to lowercase
+        console.log(string.toLowerCase());
+        //convert to uppercase
+        console.log(string.toUpperCase());
+        var one = "Hello";
+        var two = "World";
+
+        //adding to strings
+        var words = one + two;
+
+        //concating words
+        var word = one.concat(" ", two)
+        console.log(word);
+        console.log(words);
+
+        //removing space
+        var text = "       Hello World!        ";
+        console.log(text.trim());
+        let text1 = "5";
+
+        //padstart string
+        console.log(text1.padStart(4, 0))
+
+        //padend string
+        console.log(text1.padEnd(4, 0))
+
+        //char at index
+        console.log(string.charAt(6));
+
+        //character code at index
+        console.log(string.charCodeAt(6));
+        console.log(string[3]);
+
+        //splitting by space
+        console.log(string.split(" "));
+
+        //splitting by characters
+        console.log(string.split(""));
+
+        //getting inedx of 
+        console.log(string.indexOf("llo"));
+
+        //getting last index of characters
+        console.log(string.lastIndexOf("He"));
+        console.log(string.indexOf("llo", 2));
+        console.log(string.lastIndexOf("He", 6));
+        var strings = "Hello world, welcome to the universe.";
+
+
+        console.log(strings.match(/o/g));
+        console.log(strings.includes("world"));
+        console.log(strings.includes("world", 12));
+
+        //getting starts with
+        console.log(strings.startsWith("Hello"));
+        console.log(strings.startsWith("world", 16));
+
+        //getting ends with
+        console.log(strings.endsWith("universe."));
+        console.log(strings.endsWith("universe.", 5));
+    </script>
+
+</body>
+
+</html>

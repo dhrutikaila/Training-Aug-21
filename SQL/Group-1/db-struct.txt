@@ -1,0 +1,35 @@
+GROUP-1: Charity Databse For Underprivileged People
+Members: Dhruvit, Hemanshu, Niraj, Piyush, Shubh
+
+
+1. Post
+	
+2. Roles
+	
+3. UserData
+	
+4. CharityEvent
+
+5. Organisation
+
+6. RequirementType
+
+7. Volunteer
+
+8. ClusterLocations
+
+9. City
+
+10. State
+
+11. Module
+
+12. Urgency
+
+13. Spam
+
+14. RoleType
+
+15. Pincode
+
+16. OTP

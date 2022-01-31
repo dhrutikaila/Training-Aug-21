@@ -1,0 +1,626 @@
+<!-- Parent div should contain 3 div inside. Div should be arranged in following manner.
+
+Practice position properties static, relative, fixed and absolute.
+Suppose we have a div with specific height and width and we need to arrange more text into it. Use overflow properties. -->
+
+<!-- The position Property
+The position property specifies the type of positioning method used for an element.
+
+There are five different position values:
+
+static
+relative
+fixed
+absolute
+sticky
+Elements are then positioned using the top, bottom, left, and right properties. However, these properties will not work unless the position property is set first. They also work differently depending on the position value. -->
+
+<!-- position: static; -->
+<!-- HTML elements are positioned static by default.
+
+Static positioned elements are not affected by the top, bottom, left, and right properties.
+
+An element with position: static; is not positioned in any special way; it is always positioned according to the normal flow of the page:
+
+This <div> element has position: static;
+Here is the CSS that is used:
+-->
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+div.static {
+  position: static;
+  border: 3px solid #73AD21;
+}
+</style>
+</head>
+<body>
+
+<h2>position: static;</h2>
+
+<p>An element with position: static; is not positioned in any special way; it is 
+always positioned according to the normal flow of the page:</p>
+
+<div class="static">
+  This div element has position: static;
+</div>
+
+</body>
+</html>
+
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+div.relative {
+  position: relative;
+  left: 30px;
+  border: 3px solid #73AD21;
+}
+</style>
+</head>
+<body>
+
+<h2>position: relative;</h2>
+
+<p>An element with position: relative; is positioned relative to its normal position:</p>
+
+<div class="relative">
+This div element has position: relative;
+</div>
+
+</body>
+</html>
+<!-- An element with position: fixed; is positioned relative to the viewport, which means it always stays in the same place even if the page is scrolled. The top, right, bottom, and left properties are used to position the element.
+
+A fixed element does not leave a gap in the page where it would normally have been located.
+
+Notice the fixed element in the lower-right corner of the page. Here is the CSS that is used: -->
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+    div.relative {
+  position: relative;
+  width: 400px;
+  height: 200px;
+  border: 3px solid #73AD21;
+} 
+
+div.absolute {
+  position: absolute;
+  top: 80px;
+  right: 0;
+  width: 200px;
+  height: 100px;
+  border: 3px solid #73AD21;
+}
+div.fixed {
+  position: fixed;
+  bottom: 0;
+  right: 0;
+  width: 300px;
+  border: 3px solid #73AD21;
+}
+ .left{
+            float:left;
+            border:1px solid red;
+        }
+        .right{
+            float:right;
+            border:1px solid blue;
+        }
+</style>
+</head>
+<body>
+
+<h2>position: fixed;</h2>
+
+<p>An element with position: fixed; is positioned relative to the viewport, which means it always stays in the same place even if the page is scrolled:</p>
+
+<div class="fixed">
+This div element has position: fixed;
+</div>
+<div class="relative">This div element has position: relative;</div>
+<div class="absolute">This div element has position: absolute;</div>
+
+<div class="floatexample">
+    <div class="left"><p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p></div>
+    <div class="right"><p>Lorem ipsum dolor sit amet consectetur adipisicing elit. molestias autem consectetur recusandae?</p></div>
+</div>
+</body>
+</html>
+<!-- position: absolute;
+An element with position: absolute; is positioned relative to the nearest positioned ancestor (instead of positioned relative to the viewport, like fixed).
+
+However; if an absolute positioned element has no positioned ancestors, it uses the document body, and moves along with page scrolling.
+
+Note: Absolute positioned elements are removed from the normal flow, and can overlap elements.
+
+Here is a simple example: -->
+<!--
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+div.relative {
+  position: relative;
+  width: 400px;
+  height: 200px;
+  border: 3px solid #73AD21;
+} 
+
+div.absolute {
+  position: absolute;
+  top: 80px;
+  right: 0;
+  width: 200px;
+  height: 100px;
+  border: 3px solid #73AD21;
+}
+</style>
+</head>
+<body>
+
+<h2>position: absolute;</h2>
+
+<p>An element with position: absolute; is positioned relative to the nearest positioned ancestor (instead of positioned relative to the viewport, like fixed):</p>
+
+<div class="relative">This div element has position: relative;</div>
+<div class="absolute">This div element has position: absolute;</div>
+</body>
+</html>-->
+<!-- position: sticky;
+An element with position: sticky; is positioned based on the user's scroll position.
+
+A sticky element toggles between relative and fixed, depending on the scroll position. It is positioned relative until a given offset position is met in the viewport - then it "sticks" in place (like position:fixed). -->
+<!--
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+div.sticky {
+  position: -webkit-sticky;
+  position: sticky;
+  top: 0;
+  padding: 5px;
+  background-color: #cae8ca;
+  border: 2px solid #4CAF50;
+}
+</style>
+</head>
+<body>
+
+<p>Try to <b>scroll</b> inside this frame to understand how sticky positioning works.</p>
+
+<div class="sticky">I am sticky!</div>
+
+<div style="padding-bottom:2000px">
+  <p>In this example, the sticky element sticks to the top of the page (top: 0), when you reach its scroll position.</p>
+  <p>Scroll back up to remove the stickyness.</p>
+  <p>Some text to enable scrolling.. Lorem ipsum dolor sit amet, illum definitiones no quo, maluisset concludaturque et eum, altera fabulas ut quo. Atqui causae gloriatur ius te, id agam omnis evertitur eum. Affert laboramus repudiandae nec et. Inciderint efficiantur his ad. Eum no molestiae voluptatibus.</p>
+  <p>Some text to enable scrolling.. Lorem ipsum dolor sit amet, illum definitiones no quo, maluisset concludaturque et eum, altera fabulas ut quo. Atqui causae gloriatur ius te, id agam omnis evertitur eum. Affert laboramus repudiandae nec et. Inciderint efficiantur his ad. Eum no molestiae voluptatibus.</p>
+</div>
+
+</body>
+</html>-->
+<!-- float-right and float:left -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .left{
+            float:left;
+            border:1px solid red;
+        }
+        .right{
+            float:right;
+            border:1px solid blue;
+        }
+    </style>
+    <style>
+
+        #nav1{
+            background-color: lightgray;
+            display: flex;
+            flex-direction: row;
+            height: 15vh !important;
+            width: 100vw !important;
+        }
+
+        #logo {
+            display: flex;
+            justify-content: center;
+
+        }
+
+        div img {}
+
+        div {
+            font-size: 30px;
+            margin-left: auto;
+            margin-top: 0vh !important;
+            margin-bottom: 0px;
+        }
+
+        div a {
+            text-decoration: none;
+            color: grey;
+            /* margin-left:3vw !important; */
+            margin-right: 3vw !important;
+            /* justify-content:center;*/
+        }
+
+        article {
+
+            height: 85vh;
+            width: 79vw;
+            float: left;
+            background-image: url("../../../HTML/Nisarg Adalja/assests/images/html5.jpg");
+            background-repeat: no-repeat;
+            background-size: cover;
+        }
+
+        h1 {
+            margin-top: 40px !important;
+        }
+        li{
+            font-size:30px;
+        }
+        aside {
+            display: flex;
+            flex-direction: column;
+            float: left;
+            height: 85vh;
+            width: 18vw;
+            background-color: orange;
+        }
+        header{
+            width:100% !important;
+        }
+        /* Dropdown Button */
+
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+        }
+
+        .navbar {
+            overflow: hidden;
+            display: flex;
+            flex-direction: column;
+            background-color: #333;
+        }
+
+        .navbar a {
+            float: left;
+            font-size: 20px;
+            color: white;
+            text-align: left;
+            padding: 14px 16px;
+            text-decoration: none;
+        }
+
+        .dropdown {
+            float: left;
+            overflow: hidden;
+        }
+
+        .dropdown .dropbtn {
+            font-size: 20px;
+            border: none;
+            outline: none;
+            color: white;
+            padding: 0px 0px;
+            background-color: inherit;
+            font-family: inherit;
+            margin: 0;
+        }
+
+        .navbar a:hover,
+        .dropdown:hover .dropbtn {
+            background-color: red;
+        }
+
+        .dropdown-content {
+            display: none;
+            position: absolute;
+            background-color: #f9f9f9;
+            min-width: 160px;
+            box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+            z-index: 1;
+        }
+
+        .dropdown-content a {
+            float: none;
+            color: black;
+            padding: 0px 0px;
+            text-decoration: none;
+            display: block;
+            text-align: left;
+        }
+
+        .dropdown-content a:hover {
+            background-color: #ddd;
+        }
+
+        .dropdown:hover .dropdown-content {
+            display: block;
+        }
+        .dropdown-content a:active {
+            background-color: #ddd;
+        }
+
+        .dropdown:active .dropdown-content {
+            display: block;
+        }
+
+        /* Dropdown Button */
+
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+        }
+
+        .navbar {
+            overflow: hidden;
+            display: flex;
+            flex-direction: column;
+            background-color: #333;
+        }
+
+        .navbar a {
+            float: left;
+            font-size: 20px;
+            color: white;
+            text-align: left;
+            padding: 14px 16px;
+            text-decoration: none;
+        }
+
+        .dropdown {
+            float: left;
+            overflow: hidden;
+        }
+
+        .dropdown .dropbtn {
+            font-size: 20px;
+            border: none;
+            outline: none;
+            color: white;
+            padding: 0px 0px;
+            background-color: inherit;
+            font-family: inherit;
+            margin: 0;
+        }
+
+        .navbar a:hover,
+        .dropdown:hover .dropbtn {
+            background-color: red;
+        }
+
+        .dropdown-content {
+            display: none;
+            position: absolute;
+            background-color: #f9f9f9;
+            min-width: 160px;
+            box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+            z-index: 1;
+        }
+
+        .dropdown-content a {
+            float: none;
+            color: black;
+            padding: 0px 0px;
+            text-decoration: none;
+            display: block;
+            text-align: left;
+        }
+
+        .dropdown-content a:hover {
+            background-color: #ddd;
+        }
+
+        .dropdown:hover .dropdown-content {
+            display: block;
+        }
+        .dropdown-content a:active {
+            background-color: #ddd;
+        }
+
+        .dropdown:active .dropdown-content {
+            display: block;
+        }
+    </style>
+    <style>
+        header{
+            background-color:red;
+            height:15vh;
+            width:100vw;
+        }
+        #nav{
+            
+            color:white !important;
+            font-size:20px;
+            
+            float:right;
+            margin-right:40vh !important;
+            margin-top:5vh !important;
+        }
+        nav a{
+            text-decoration:none;
+             color:white !important;
+            font-size:20px;
+            margin-left:3vw !important;
+         margin-right:3vw !important;
+        }
+        aside{
+            float:left;
+            height:70vh !important;
+            width:20%;
+            background-color:yellow;
+        }
+        article{
+            float:left;
+            height:70vh !important;
+            width:77vw !important;
+            background-color:orange;
+        }
+        footer{
+            clear:left;
+            background-color:pink;
+        }
+        #list li:nth-child(odd){
+            background-color:blue;
+        }
+        #list li:nth-child(even){
+            background-color: red;
+        }
+    </style>
+</head>
+<body>
+   <nav>
+        <div id="logo">
+            <img src="https://tutorials.rxtrainees.radixweb.net/wp-content/uploads/2020/12/logo_2500X1875.jpg"
+                height="50px" width="200px">
+        </div>
+        <div>
+            <a href="../../../../Modules/Project/Nisarg Adalja/nisargProject.html">HOME</a>
+            <a href="../../../../Modules/Project/Nisarg Adalja/htmlfile.html">HTML</a>
+            <a href="../../../../Modules/Project/Nisarg Adalja/cssfile.html">CSS</a>
+            <a href="../../../../Modules/Project/Nisarg Adalja/Bootstrap.html">Bootstrap</a>
+            <a href="../../../../Modules/Project/Nisarg Adalja/javascript.html">JAVASCRIPT</a>
+            <a href="../../../../Modules/Project/Nisarg Adalja/jquery.html">JQUERY</a>
+            <a href="../../../../Modules/Project/Nisarg Adalja/project.html">PORJECT</a>
+        </div>
+    </nav>
+     <aside>
+
+       <ol>
+            <li>Day-3
+                <ul>
+                    <div class="dropdown">
+                        <button class="dropbtn">Additional Exercise</button>
+                        <div class="dropdown-content">
+                            <a href="../additional/additional.html">additional.html</a>
+                        </div>
+                    </div>
+                    <div class="dropdown">
+                        <button class="dropbtn">Assignment Exercise</button>
+                        <div class="dropdown-content">
+                            <a href="../assignments/about.html">about.html</a>
+                              <a href="../assignments/assignments.html">assignment.html</a>
+                                <a href="../assignments/contact.html">contact.html</a>
+                        </div>
+                    </div>
+                    <div class="dropdown">
+                        <button class="dropbtn">Practice Exercise</button>
+                        <div class="dropdown-content">
+                            <a href="practice.html">practice.html</a>
+                             <a href="practice1.html">practice1.html</a>
+                            
+                        </div>
+                    </div>
+
+                </ul>
+            </li>
+             <li>Day-4
+                <ul>
+                    <div class="dropdown">
+                        <button class="dropbtn">Additional Exercise</button>
+                        <div class="dropdown-content">
+                            <a href="../../Day4/additional/additional.html">additional.html</a>
+                        </div>
+                    </div>
+                    <div class="dropdown">
+                        <button class="dropbtn">Assignment Exercise</button>
+                        <div class="dropdown-content">
+                            <a href="../../Day4/assignment/assignment.html">assignment.html</a>
+                        </div>
+                    </div>
+                    <div class="dropdown">
+                        <button class="dropbtn">Practice Exercise</button>
+                        <div class="dropdown-content">
+                            <a href="../../Day4/practice/practice.html">practice.html</a>
+                        </div>
+                    </div>
+
+                </ul>
+            </li>
+             <li>Day-5
+                <ul>
+                    <div class="dropdown">
+                        <button class="dropbtn">Additional Exercise</button>
+                        <div class="dropdown-content">
+                            <a href="../../Day5/additional/additional.html">additional.html</a>
+                        </div>
+                    </div>
+                    <div class="dropdown">
+                        <button class="dropbtn">Assignment Exercise</button>
+                        <div class="dropdown-content">
+                            <a href="../../Day5/assignments/assignment.html">assignment.html</a>
+                        </div>
+                    </div>
+                    <div class="dropdown">
+                        <button class="dropbtn">Practice Exercise</button>
+                        <div class="dropdown-content">
+                            <a href="../../Day5/practice/practice.html">practice.html</a>
+                        </div>
+                    </div>
+
+                </ul>
+            </li>
+        </ol>
+        </aside>
+      <article>
+          <!-- pesudo classes example -->
+    <div style="border:1px solid black" height="30vh" width="100vw">
+        <div class="left"></div>
+        <div class="right"></div>
+    </div>
+    <ul id="list">
+        <li>
+            Nisarg
+            <ul>
+                <li>
+                    Dhruvil
+                </li>
+                <li>Deep</li>
+                <li>Ridham</li>
+            </ul>
+        </li>
+        <li>Deep
+            <ul>
+                <li>
+                    Dhruvil
+                </li>
+                <li>Jenil</li>
+                <li>Ridham</li>
+            </ul>
+        <li>Dhruvil
+            <ul>
+                <li>
+                    Ridham
+                </li>
+                <li>Parth</li>
+                <li>Nikhil</li>
+            </ul>
+        </li>
+        <li>Ridham
+            <ul>
+                <li>
+                    Nikhil
+                </li>
+                <li>Mehul</li>
+                <li>Parth</li>
+            </ul>
+        </li>
+        
+    </ul>
+    </article>
+</body>
+</html>

@@ -1,0 +1,50 @@
+<!-- Design a form for storing employee details. (Employee name, age, Gender, designation, salary, location, Email ID, Date of Joining and contact number)
+
+Validation required
+    Age should be a number
+    Each field should contain value
+    Email ID should be in proper format
+    Date of joining should be in date format
+    Location should be in the drop down list
+    Use radio buttons for Gender
+-->
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form</title>
+</head>
+
+<body>
+    <div class="simple-form">
+        <form name="testform" action="" method="get">
+            <h3> Please fill out this form...</h3>
+            Employee Name:<input type="text" name="employee_name" required /><br><br>
+            Employee Age:<input type="number" name="age" required /><br><br>
+            Gender:
+            <input type="radio" name="Gender" required>male
+            <input type="radio" name="Gender">female
+            <br><br>
+            Designation:<input type="text" name="designation"><br><br>
+            Salary :<input type="number" name="salary" min="0" required /><br><br>
+            location:
+            <select name="location" required>
+                <option value="RAJKOT">RAJKOT</option>
+                <option value="AHMEDABAD">AHMEDABAD</option>
+                <option value="BHUJ">BHUJ</option>
+                <option value="JETPUR">JETPUR</option>
+            </select>
+            <br><br>
+            Email ID :<input type="email" name="email_id" required pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$"><br><br>
+            Date of Joining :<input type="date" name="date_of_joining" max="2021-09-14" required><br><br>
+            Contact Number : <input type="number" minlength="10" maxlength="10" name="contact_number" ><br><br>
+            <input type="submit"  value="submit now">
+        </form>
+    </div>
+</body>
+
+</html>

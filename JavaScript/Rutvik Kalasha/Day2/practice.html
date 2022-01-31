@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+
+        //1. Write a JavaScript function to check whether a string is blank or not
+        myFun =  function(input) {
+                if (input.length === 0)
+                return true;
+                else 
+                return false;
+            }
+        console.log(myFun(''));
+        console.log(myFun('Rutvik'));
+
+        //2. Write a JavaScript function to check whether a string is blank or not
+        myFun = function (str) {
+        return str.trim().split(" ");
+        };
+        console.log(myFun("Rutvik Kalasha"));
+
+        //3.Write a JavaScript function to extract a specified number of characters from a string.
+        myFun = function (str, length) {
+
+                                        if ((str.constructor === String) && (length>0)) {
+                                            return str.slice(0, length);
+                                            }
+                                        };
+                                        console.log(myFun("Rutvik Kalasha",6));
+
+        //4. Write a JavaScript function to get the current date.
+        var today = new Date();
+        var dd = today.getMonth()+1;
+        var mm = today.getDate()
+        var yyyy = today.getFullYear();
+
+        if(mm < 10){
+            mm = '0' + mm
+        }
+
+        if (dd < 10){
+            dd = '0' + dd
+        }
+
+        today = mm + '/' + dd + '/' + yyyy;
+        document.write(today);
+
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

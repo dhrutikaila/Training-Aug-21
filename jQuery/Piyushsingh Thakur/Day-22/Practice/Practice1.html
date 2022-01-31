@@ -1,0 +1,41 @@
+<!-- Create one paragraph, add some dummy text and apply blue background color using jquery -->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #box {
+            background-color: azure;
+            border: 2px solid black;
+            padding: 10px;
+            margin: 10px;
+        }
+    </style>
+</head>
+
+<body>
+    <script src="jquery-3.6.0.min.js"></script>
+    <!-- <script src="https://code.jquery.com/jquery-3.6.0.min.js"
+        integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script> -->
+
+    <h1>jquery Practice1 </h1>
+    <div class="test" id="box">
+        <h1>after click event the background color is changed</h1>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestias, adipisci odit porro aspernatur molestiae
+            totam.</p>
+    </div>
+</body>
+<script>
+    $(document).ready(function () {
+        $('#box').click(function () {
+            $('#box').css('background-color', 'blue')
+        })
+
+    })
+</script>
+
+</html>

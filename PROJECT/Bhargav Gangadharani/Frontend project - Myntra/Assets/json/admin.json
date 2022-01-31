@@ -1,0 +1,16 @@
+{
+    "admin" : [
+        {
+            "email" : "bhargav@gmail.com",
+            "password" : "123"
+        },
+        {
+            "email" : "ceo@gmail.com",
+            "password" : "123"
+        },
+        {
+            "email" : "myntra@gmail.com",
+            "password" : "123"
+        }
+    ]
+}

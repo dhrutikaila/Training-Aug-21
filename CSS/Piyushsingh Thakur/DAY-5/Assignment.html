@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<title>CSS Template</title>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: sans-serif
+}
+header {
+  background-color: rgb(93, 141, 95);
+  padding: 30px;
+  text-align: center;
+  font-size: 35px;
+  color: white;
+}
+nav {
+  float: left;
+  width: 15%;
+  height: 465px;
+  background: #ccc;
+  padding: 20px;
+}
+nav ul {
+  list-style-type: none;
+  padding: 0;
+  margin: 2px;
+}
+
+article {
+  float: left;
+  padding: 20px;
+  width: 85%;
+  background-color: #f1f1f1;
+}
+section::after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+footer {
+  background-color: #777;
+  padding: 10px;
+  text-align: center;
+  color: white;
+}
+</style>
+</head>
+<body>
+
+<header>
+  <h2>This is Header</h2>
+</header>
+
+<section>
+  <nav>
+    <ul>
+      <li><a href="#">item1</a></li>
+      <li><a href="#">item2</a></li>
+      <li><a href="#">item3</a></li>
+    </ul>
+  </nav>
+  
+  <article>
+    <h1>Heading</h1>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Autem eius dicta nostrum repudiandae voluptas ex quod nemo alias nobis, ratione, consequuntur necessitatibus, labore reprehenderit non veniam consectetur quae numquam ullam dignissimos architecto eaque quas commodi error. Ipsam ratione minus obcaecati accusantium? Laudantium obcaecati blanditiis adipisci officiis Lorem ipsum dolor sit amet consectetur adipisicing elit. Ex, inventore at veniam corporis eos voluptatum aut. Eum, iusto laudantium! Hic sapiente quod deleniti vero magni harum non error aut expedita exercitationem autem illo dignissimos temporibus in quam tempore adipisci corporis, nemo repellendus voluptatem id quo dicta reiciendis vel! Eos, adipisci. reprehenderit magnam deleniti aliquid doloremque molestiae, quae maxime fugit voluptate nihil quia atque inventore iure odio alias ex voluptates, suscipit placeat vitae sit. Nobis voluptatum quaerat officia quasi quas, commodi molestias aut, tempore praesentium, consequuntur repellat distinctio ratione tempora! Dicta, aliquam vitae non officia, ab ducimus voluptates, adipisci tempore cupiditate veritatis nulla at placeat..</p>
+    <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Dignissimos harum iure ipsum placeat, ab inventore corporis quidem voluptas nulla delectus adipisci quam voluptatum fuga dolor itaque nam. Odit nemo consequatur Lorem ipsum dolor, sit amet consectetur adipisicing elit. Dolorem quasi nesciunt minus similique, ipsum odio sapiente dolor at labore possimus rerum ducimus aliquid accusantium sunt iusto, voluptate velit quibusdam id temporibus error aspernatur a, perspiciatis nostrum! culpa, maxime itaque minus impedit quod quisquam obcaecati suscipit accusamus cum ratione nostrum possimus ipsam aliquid id numquam recusandae neque maiores temporibus eaque labore quas quo? Quo impedit ut ducimus!</p>
+  </article>
+</section>
+
+<footer>
+  <p>Footer</p>
+</footer>
+
+</body>
+</html>
+

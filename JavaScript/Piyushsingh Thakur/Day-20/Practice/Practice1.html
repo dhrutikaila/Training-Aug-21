@@ -1,0 +1,66 @@
+<!-- Store following JSON data into localstorage,read that data and print it into console.
+{ “products” : [   { “Name”: “Cheese”, “Price” : 2.50, “Location”: “Refrigerated foods”},   { “Name”: “Crisps”, “Price” : 3, “Location”: “the Snack isle”},   { “Name”: “Pizza”, “Price” : 4, “Location”: “Refrigerated foods”},   { “Name”: “Chocolate”, “Price” : 1.50, “Location”: “the Snack isle”},   { “Name”: “Self-raising flour”, “Price” : 1.50, “Location”: “Home baking”},   { “Name”: “Ground almonds”, “Price” : 3, “Location”: “Home baking”} ]}       -->
+
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JS Day20 Practice1</title>
+</head>
+
+<body>
+    <h1>check local storage</h1>
+
+</body>
+<script>
+    var a = {
+        "products": [
+            {
+                "Name": "Cheese",
+                "Price": 2.50,
+                "Location": "Refrigerated foods"
+            },
+            {
+                "Name": "Crisps",
+                "Price": 3,
+                "Location": "the Snack isle"
+            },
+            {
+                "Name": "Pizza",
+                "Price": 4,
+                "Location": "Refrigerated foods"
+            },
+            {
+                "Name": "Chocolate",
+                "Price": 1.50,
+                "Location": "the Snack isle"
+            },
+            {
+                "Name": "Self-raising flour",
+                "Price": 1.50,
+                "Location": "Home baking"
+            },
+            {
+                "Name": "Ground almonds",
+                "Price": 3,
+                "Location": "Home baking"
+            }
+        ]
+    }
+    localStorage.setItem("items", JSON.stringify(a));
+    sessionStorage.setItem('items', JSON.stringify(a));
+
+
+    var b = localStorage.getItem("items")
+    console.log("stored in local storage :" + b);
+
+    var c = sessionStorage.getItem("items")
+    console.log("stored in session storage :" + c);
+
+</script>
+
+</html>

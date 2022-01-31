@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Alerts-Progress_bar</title>
+    <link href="../assets/css/bootstrap.min.css" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/c7ca47b678.js" crossorigin="anonymous"></script>
+</head>
+<body>
+    <!-- navbar-start -->
+    <div class="container">
+        <div class="display-5 text-center">Alerts and Progress-bar</div>
+        <div class="container my-3">
+            <nav class="navbar nav navbar-expand-sm nav-pills nav-fill nav-justified "> 
+                <div class="nav-item dropdown mx-3">
+                    <button class="btn btn-primary  dropdown-toggle  w-100" id="nav-utilities-nav" data-bs-toggle="dropdown" data-bs-target="#nav-utilities">
+                        2: Utilities
+                    </button>
+                    <div class="dropdown-menu overflow-auto w-100" id="nav-utilities" >
+                        <a href="../2-utilities/2_2_basic_typography.html" class="dropdown-item">2.2 Basic Typography</a>
+                        <a href="../2-utilities/2_3_text_alignment.html" class="dropdown-item">2.3 Text Alignment </a>
+                        <a href="../2-utilities/2_4_floats_positions.html" class="dropdown-item">2.4 Floats & Position</a>
+                        <a href="../2-utilities/2_5_color.html"  class="dropdown-item">2.5 Colors & Background</a>
+                        <a href="../2-utilities/2_6_spacing.html"  class="dropdown-item">2.6 Spacing</a>
+                        <a href="../2-utilities/2_7_sizing.html"  class="dropdown-item">2.7 Sizing</a>
+                        <a href="../2-utilities/2_8_breakpoints.html"  class="dropdown-item">2.8 Breakpoints</a>
+                    </div>
+                </div> 
+                <div class="nav-item dropdown mx-3">
+                    <button class="btn btn-success dropdown-toggle w-100" id="nav-comp-nav" data-bs-toggle="dropdown">
+                        3: CSS Components
+                    </button>
+                    <div class="dropdown-menu  overflow-auto w-100">
+                        <a href="../3-componants/3_2_buttons.html" class="dropdown-item">3.2 Buttons</a>
+                        <a href="../3-componants/3_3_navbar.html" class="dropdown-item">3.3 Navbar</a>
+                        <a href="../3-componants/3_4_list-group.html" class="dropdown-item">3.4 List-group</a>
+                        <a href="../3-componants/3_5_Forms.html" class="dropdown-item">3.5 Forms</a>
+                        <a href="../3-componants/3_6_input_addons.html" class="dropdown-item">3.6 Input Addons</a>
+                        <a href="../3-componants/3_7_Alerts_progress_bar.html" class="dropdown-item">3.7 Alerts & Progressbar</a>
+                        <a href="../3-componants/3_8_tables_pagination.html" class="dropdown-item">3.8 Tables & Pagination</a>
+                        <a href="../3-componants/3_9_cards.html" class="dropdown-item">3.9 Cards</a>
+                    </div>
+                </div>    
+                <div class="nav-item dropdown mx-3">    
+                    <button class="btn btn-warning dropdown-toggle w-100" id="nav-grid-nav" data-bs-toggle="dropdown">
+                        4: Grid & Flexbox
+                    </button>
+                    <div class="dropdown-menu overflow-auto w-100">
+                        <a href="../4-Grid&Flexbox/4_2_grid_system.html" class="dropdown-item">4.2 Grid System</a>
+                        <a href="../4-Grid&Flexbox/4_3_grid_alignment.html" class="dropdown-item">4.2 Grid Alignment</a>
+                        <a href="../4-Grid&Flexbox/4_5_flexbox.html" class="dropdown-item">4.2 Flexbox</a>
+                        <a href="../4-Grid&Flexbox/4_6_automargin.html" class="dropdown-item">4.2 Auto Margin</a>
+                    </div>
+                </div>
+                <div class="nav-item dropdown mx-3">
+                    <button class="btn btn-danger dropdown-toggle w-100" id="nav-js-nav" data-bs-toggle="dropdown">
+                        5: javascript Widgets
+                    </button>
+                    <div class="dropdown-menu overflow-auto w-100">
+                        <a href="../5-javascript_widgets/5_2_carousel.html" class="dropdown-item">5.2 Carousel </a>
+                        <a href="../5-javascript_widgets/5_3_collapse.html" class="dropdown-item">5.3 Collapse </a>
+                        <a href="../5-javascript_widgets/5_4_tooltips.html" class="dropdown-item">5.4 Tooltips</a>
+                        <a href="../5-javascript_widgets/5_5_popovers.html" class="dropdown-item">5.5 Popovers</a>
+                        <a href="../5-javascript_widgets/5_6_modals.html" class="dropdown-item">5.6 Modals</a>
+                    </div>  
+                </div> 
+            </nav>
+        </div>
+        <hr class="text-secondary">
+    </div>
+    <!-- navbar-end -->
+    <div class="container">
+        <!-- alerts -->
+        <div class="h3">
+            Alerts
+        </div>
+        <div class="alert alert-primary">
+            <strong>Primary</strong> alert box
+            <a href="" class="alert-link">Read more</a>
+        </div>
+        <div class="alert alert-secondary">
+            <strong>Secondary</strong> alert box
+        </div>
+        <div class="alert alert-success">
+            <strong>Success</strong> alert box
+        </div>
+        <div class="alert alert-danger">
+            <strong>Danger</strong> alert box
+        </div>
+        <div class="alert alert-info">
+            <strong>Info</strong> alert box
+        </div>
+        <div class="alert alert-warning">
+            <strong>Warning</strong> alert box
+        </div>
+        <div class="alert alert-light">
+            <strong>Light</strong> alert box
+        </div>
+        <div class="alert alert-dark">
+            <strong>Dark</strong> alert box
+        </div>
+        <div class="alert alert-danger alert-dismissible fade show" role="alert">
+            <strong>Dismissible</strong> alert box
+            <button class="btn-close" data-bs-dismiss="alert" type="button">
+            </button>
+        </div>
+        <hr>
+        <!-- progress bar -->
+        <div class="h3">Progress Bar</div>
+        <div class="progress my-3" style="height:30px">
+            <div class="progress-bar bg-primary" style="width:30%" role="progressbar">
+            </div>
+        </div>
+        <div class="progress my-3" style="height:30px">
+            <div class="progress-bar bg-primary" style="width:30%" role="progressbar">
+                30%
+            </div>
+        </div>
+        <div class="progress my-3" style="height:30px">
+            <div class="progress-bar bg-success" style="width:50%" role="progressbar">
+                30%
+            </div>
+        </div>
+        <div class="progress my-3" style="height:30px">
+            <div class="progress-bar bg-warning" style="width:25%" role="progressbar">
+                25%
+            </div>
+            <div class="progress-bar bg-info" style="width:35%" role="progressbar">
+                35%
+            </div>
+            <div class="progress-bar bg-success" style="width:40%" role="progressbar">
+                40%
+            </div>
+        </div>
+        <div class="progress my-3" style="height:30px">
+            <div class="progress-bar progress-bar-striped bg-danger" style="width:50%" role="progressbar">
+                30%
+            </div>
+        </div>
+        <div class="progress my-3" style="height:30px">
+            <div class="progress-bar progress-bar-striped bg-dark progress-bar-animated" style="width:69%" role="progressbar">
+                69%
+            </div>
+        </div>
+        <br><br><br><br><br>
+    </div>
+
+    <script src="../assets/js/bootstrap.bundle.min.js" type="text/javascript"></script>
+</body>
+</html>

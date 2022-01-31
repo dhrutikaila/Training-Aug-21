@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <title>Assignment</title>
+    <style>
+        body {
+            background-color: #fafafa;
+        }
+    </style>
+</head>
+
+<body>
+    <h3 style="margin-left:20px; margin-top:20px;">Assignment</h3>
+    <pre style="margin-left:-20px">
+        Design a form for storing employee details. (Employee name, age, Gender, designation, salary, location, Email ID, Date of Joining 
+        and contact number)
+            i. Validation required
+                1.Age should be a number
+                2.Each field should contain value
+                3.Email ID should be in proper format
+                4.Date of joining should be in date format
+                5.EmployeeID should be at least 5 character long. use regular Expression
+            ii.Location should be in the drop down list
+            iii.Use radio buttons for Gender
+    </pre>
+
+    <br>
+    <hr><br>
+    <div class="container border text-center shadow rounded mb-5 pb-5" style="background-color:white;width:40%;">
+        
+            <h2 class="m-3">Employee Details</h2>
+
+            <div class="mb-3">
+                <label for="exampleInputName" class="form-label">Employee Id</label>
+                <input type="text" class="form-control" id="empId" required>
+            </div>
+
+            <div class="mb-3">
+                <label for="exampleInputName" class="form-label">Name</label>
+                <input type="text" class="form-control" id="name" required>
+            </div>
+
+            <div class="mb-3">
+                <label for="exampleInputName" class="form-label">Age</label>
+                <input type="number" class="form-control" id="age" required>
+            </div>
+
+            <lable>Gender: </lable>
+            <input type='radio' class="radio" name='gender' value='Female'> Female
+            <input type='radio' class="radio" name='gender' value='Male'> Male
+            <input type='radio' class="radio" name='gender' value='Other'> Other
+            <br><br>
+
+            <div class="mb-3">
+                <label for="exampleInputName" class="form-label">Designation</label>
+                <input type="text" class="form-control" id="designation">
+            </div>
+
+            <div class="mb-3">
+                <label for="exampleInputNumber" class="form-label">Salary</label>
+                <input type="number" class="form-control" id="salary">
+            </div>
+
+            <select class="form-select mt-3 mb-3" name="location" aria-label="Employee Location" id="location"> 
+                <option selected>Location</option>
+                <option value="Rajkot" name="city">Rajkot</option>
+                <option value="Ahmedabad" name="city">Ahmedabad</option>
+                <option value="Gandhinagar" name="city">Gandhinagar</option>
+                <option value="Vadodara" name="city">Vadodara</option>
+                <option value="Surat" name="city">Surat</option>
+            </select>
+
+            <div class="mb-3 mt-3">
+                <label for="exampleInputEmail1" class="form-label">Email address</label>
+                <input type="email" class="form-control" id="email" aria-describedby="emailHelp" required>
+                <div id="emailHelp" class="form-text">We'll never share your email with anyone else.</div>
+            </div>
+
+            <div class="mb-3">
+                <label for="exampleInputDate" class="form-label">Date of Joining</label>
+                <input type="date" class="form-control" id="date" required>
+            </div>
+
+            <div class="mb-3">
+                <label for="exampleInputNumber" class="form-label" required>Contact No</label>
+                <input type="tel" class="form-control" id="phoneNumber">
+            </div>
+
+            <button type="button" class="btn btn-primary" onclick="submit_data()">Submit</button>
+            <button type="reset" class="btn btn-primary">Reset</button>
+        
+    </div>
+    <script src="./Assignment.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous">
+        </script>
+</body>
+
+</html>

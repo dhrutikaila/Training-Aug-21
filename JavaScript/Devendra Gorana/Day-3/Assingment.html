@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Assingment</title>
+        <!-- Bootstrap CSS -->
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-F3w7mX95PdgyTmZZMECAngseQB83DfGTowi0iMjiWaeVhAn4FJkqJByhZMI3AhiU" crossorigin="anonymous">
+        <style>
+            input.invalid {
+            border-color: red;
+            }
+        </style>
+    </head>
+    <body>
+        <!-- Optional JavaScript; choose one of the two! -->
+
+        <!-- Option 1: Bootstrap Bundle with Popper -->
+
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-/bQdsTh/da6pkI1MST/rWKFNjaCP5gBSY4sEBT38Q/9RBh9AH40zEOg7Hlq2THRZ" crossorigin="anonymous"></script>
+
+        <!-- Option 2: Separate Popper and Bootstrap JS -->
+        <!--
+        <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.3/dist/umd/popper.min.js" integrity="sha384-W8fXfP3gkOKtndU4JGtKDvXbO53Wy8SZCQHczT5FMiiqmQfUpWbYdTil/SxwZgAN" crossorigin="anonymous"></script>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/js/bootstrap.min.js" integrity="sha384-skAcpIdS7UcVUC05LJ9Dxay8AXcDYfBJqt1CJ85S/CFujBsIzCIv+l9liuYLaMQ/" crossorigin="anonymous"></script>
+        -->
+
+        <!--
+            Design a form for storing employee details. (EmployeeID, Employee name, age, Gender, designation, salary, location, Email ID, Date of Joining and contact number)
+            Validation required
+                EmployeeID should be at least 5 character long. use regular Expression
+                Age should be a number
+                Each field should contain value
+                Email ID should be in proper format
+                Date of joining should be in date format
+                Location should be in the drop down list
+                Use radio buttons for Gender
+        -->
+
+
+        <div class="container border my-2">
+            <form class="m-2" id="form1">
+                <label class="form-label" for="empid">Employee ID:</label>
+                <input class="form-control" type="text" id="empid" maxlength="5" placeholder="Enter Employee ID" required>
+                <label class="form-label" for="empname">Employee Name:</label>
+                <input class="form-control" type="text" id="empname" placeholder="Enter Employee Name" required>
+                <div class="row">
+                    <div class="col-3">
+                    <label class="form-label" for="age">Age:</label>
+                    <input class="form-control" type="number" min="18" max="60" id="age" required>
+                    </div>
+                    <div class="col">
+                    
+                    <label class="form-label" for="gender">Gender:</label><br>
+                    <div class="form-control">
+                    <input class="form-check-input" type="radio" id="male" value="Male" required>
+                    <label class="form-check-label" for="male">Male</label>
+                    <input class="form-check-input" type="radio" id="female" value="Female" required>
+                    <label class="form-check-label" for="female">Female</label>
+                    <input class="form-check-input" type="radio" id="others" value="Others" required>
+                    <label class="form-check-label" for="others">Others</label>
+                    </div>
+                    </div>
+                </div>
+                <label class="form-label" for="designation">Designation:</label>
+                <input class="form-control" type="text" id="designation" required>
+                <div class="row">
+                    <div class="col-4">
+                        <label class="form-label" for="salary">Salary:</label>
+                        <input class="form-control" type="number" id="salary" required>
+                    </div>
+                    <div class="col">
+                        <label class="form-label" for="location">Location:</label>
+                        <select class="form-select" id="location">
+                        <option selected disabled>Select City</option>
+                        <option value="1">Ahmedabad</option>
+                        <option value="2">Benglore</option>
+                        <option value="3">Mumbai</option>
+                        <option value="4">Delhi</option>
+                        <option value="5">Pune</option>
+                        </select>
+                    </div>
+                </div>
+                <label class="form-label" for="email">Email Id:</label>
+                <input class="form-control" type="email" id="email" placeholder="abc@gmail.com" required>
+                <div class="row mb-2">
+                    <div class="col-4">
+                    <label class="form-label" for="dateofjoining">Date Of Joining:</label>
+                    <input class="form-control" type="date" id="dateofjoining" required>
+                    </div>
+                    <div class="col">
+                    <label class="form-label" for="contactnum">Contact Number:</label>
+                    <input class="form-control" type="tel" id="contactnum" maxlength="10" required>
+                    </div>
+                </div>    
+                <input class="form-check-input" type="checkbox" id="t&c" required>
+                <label class="form-check-label" for="t&c">I Agree With Terms And Conditions.</label>
+                <div class="d-grid my-2">
+                <button class="btn btn-success my-1" type="submit" onclick="Valid_EmpID()" id="btnSubmit">Submit</button>
+                <button class="btn btn-success my-1" type="button" onclick="reset_data()" id="btnReset">Reset</button>
+                </div>
+            </form>
+        </div>
+
+        <script>
+           /* var invalidClassName = 'invalid';
+            var inputs = document.querySelectorAll('input, select');
+            inputs.forEach(function (input) 
+            {
+                // Add a css class on submit when the input is invalid.
+                input.addEventListener('invalid', function () 
+                {
+                    input.classList.add(invalidClassName);
+                })
+
+                // Remove the class when the input becomes valid.
+                // 'input' will fire each time the user types
+                input.addEventListener('input', function () 
+                {
+                    if (input.validity.valid)  
+                    {
+                        input.classList.remove(invalidClassName);
+                    }
+                })
+            })*/
+            function Valid_EmpID()
+            {
+                let empid = document.getElementById("empid").value;
+                var pattern = /\bE/;
+                var result = pattern.test(empid);
+                if(result == false)
+                {
+                    alert("Employee ID Is Not Correct. \nPlease Follow This Format:E00001");
+                }
+            }
+            function reset_data()
+            {  
+                document.getElementById("form1").reset();  
+            }
+        </script>
+    </body>
+</html>

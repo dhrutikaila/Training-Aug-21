@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <div id="p"></div>
+    <div id="d"></div>
+    <script>
+
+        var a = prompt("enter number");
+        var b = prompt("enter number");
+        var c = prompt("enter number");
+        var sum = 0;
+        if (parseInt(a) > parseInt(b) && parseInt(a) > parseInt(c)) {
+            document.getElementById("p").innerHTML = "a is greater";
+        }
+        else if (parseInt(b) > parseInt(a) && parseInt(b) > parseInt(c)) {
+            document.getElementById("p").innerHTML = "b is greater";
+        }
+        else {
+            document.getElementById("p").innerHTML = "c is greater"
+        }
+        if (parseInt(a) > 40) {
+            sum += parseInt(a);
+        }
+        if (parseInt(b) > 40) {
+            sum += parseInt(b);
+        }
+        if (parseInt(c) > 40) {
+            sum += parseInt(c);
+        }
+        document.getElementById("d").innerHTML = sum;
+    </script>
+</body>
+
+</html>

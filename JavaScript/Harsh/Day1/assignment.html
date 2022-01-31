@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+</head>
+
+<body>
+    <form>
+        <div class="mb-2">
+            <label for="number1" class="form-label">Please enter first number</label>
+            <input type="text" class="form-control border-primary w-25" name="number1" id="number1">
+        </div>
+        <div class="mb-2">
+            <label for="number2" class="form-label">Please enter second number</label>
+            <input type="text" class="form-control  border-primary w-25" name="number2" id="number2">
+        </div>
+        <div class="form-check mb-2">
+            <input type="radio" class="form-check-input" name="radio" id="Addition" value="add">
+            <label for="Addition" class="form-check-label">Addition</label>
+        </div>
+        <div class="form-check mb-2">
+            <input type="radio" class="form-check-input" name="radio" id="Subtraction" value="sub">
+            <label for="Subtraction" class="form-check-label">Subtraction</label>
+        </div>
+        <div class="form-check mb-2">
+            <input type="radio" class="form-check-input" name="radio" id="Multiplication" value="mul">
+            <label for="Multiplication" class="form-check-label">Multiplication</label>
+        </div>
+        <div class="form-check mb-2">
+            <input type="radio" class="form-check-input" name="radio" id="Division" value="div">
+            <label for="Division" class="form-check-label">Division</label><br>
+        </div>
+        <div mb-2>
+            <label for="result" class="form-label">result</label>
+            <input type="text" class="form-control mb-5 border-primary w-25" name="result" id="result">
+        </div>
+        <div>
+            <button type="button" class="btn btn-outline-primary"
+                onclick="calculate(number1.value,number2.value,radio.value)">Calculate</button>
+            <button type="button" class="btn btn-outline-primary"
+                onclick="reset(number1.value,number2.value,radio.value)">Reset</button>
+        </div>
+    </form>
+
+    <script>
+        function calculate(num1, num2, radio) {
+            num1 = parseInt(num1);
+            num2 = parseInt(num2);
+            switch (radio) {
+                case "add": document.getElementById("result").value = num1 + num2;
+                    break;
+                case "sub": document.getElementById("result").value = num1 - num2;
+                    Break;
+                case "mul": document.getElementById("result").value = num1 * num2;
+                    Break;
+                case "div": document.getElementById("result").value = num1 / num2;
+                    break;
+                default: document.getElementById("result").value = "error";
+                    break;
+            }
+        }
+        function reset(num1, num2, radio) {
+            num1, num2, radio = "";
+        }
+    </script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+        crossorigin="anonymous"></script>
+</body>
+</body>
+
+</html>

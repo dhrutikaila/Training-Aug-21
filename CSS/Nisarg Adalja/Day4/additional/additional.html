@@ -1,0 +1,1545 @@
+<!DOCTYPE html>
+<!--  -->
+ <html>
+<head>
+  <style>
+        #nav1{
+            background-color: lightgray;
+            display: flex;
+            flex-direction: row;
+            height: 15vh !important;
+            width: 100vw !important;
+            justify-content: center;
+            text-align: center;
+            align-items: center;
+        }
+
+        #logo {
+            display: flex;
+            justify-content: center;
+
+        }
+
+        div img {}
+
+        div {
+            font-size: 30px;
+            margin-left: auto;
+            margin-top: 0vh !important;
+            margin-bottom: 0px;
+        }
+
+        div a {
+            text-decoration: none;
+            color: grey;
+            /* margin-left:3vw !important; */
+            margin-right: 3vw !important;
+            /* justify-content:center;*/
+        }
+
+        article {
+
+            height: 85vh;
+            width: 79vw;
+            float: left;
+            background-image: url("../../../HTML/Nisarg Adalja/assests/images/html5.jpg");
+            background-repeat: no-repeat;
+            background-size: cover;
+        }
+
+        h1 {
+            margin-top: 40px !important;
+        }
+        li{
+            font-size:30px;
+        }
+        aside {
+            display: flex;
+            flex-direction: column;
+            float: left;
+            height: 85vh;
+            width: 18vw;
+            background-color: orange;
+        }
+        header{
+            width:100% !important;
+        }
+        /* Dropdown Button */
+
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+        }
+
+        .navbar {
+            overflow: hidden;
+            display: flex;
+            flex-direction: column;
+            background-color: #333;
+        }
+
+        .navbar a {
+            float: left;
+            font-size: 20px;
+            color: white;
+            text-align: left;
+            padding: 14px 16px;
+            text-decoration: none;
+        }
+
+        .dropdown {
+            float: left;
+            overflow: hidden;
+        }
+
+        .dropdown .dropbtn {
+            font-size: 20px;
+            border: none;
+            outline: none;
+            color: white;
+            padding: 0px 0px;
+            background-color: inherit;
+            font-family: inherit;
+            margin: 0;
+        }
+
+        .navbar a:hover,
+        .dropdown:hover .dropbtn {
+            background-color: red;
+        }
+
+        .dropdown-content {
+            display: none;
+            position: absolute;
+            background-color: #f9f9f9;
+            min-width: 160px;
+            box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+            z-index: 1;
+        }
+
+        .dropdown-content a {
+            float: none;
+            color: black;
+            padding: 0px 0px;
+            text-decoration: none;
+            display: block;
+            text-align: left;
+        }
+
+        .dropdown-content a:hover {
+            background-color: #ddd;
+        }
+
+        .dropdown:hover .dropdown-content {
+            display: block;
+        }
+        .dropdown-content a:active {
+            background-color: #ddd;
+        }
+
+        .dropdown:active .dropdown-content {
+            display: block;
+        }
+
+        /* Dropdown Button */
+
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+        }
+
+        .navbar {
+            overflow: hidden;
+            display: flex;
+            flex-direction: column;
+            background-color: #333;
+        }
+
+        .navbar a {
+            float: left;
+            font-size: 20px;
+            color: white;
+            text-align: left;
+            padding: 14px 16px;
+            text-decoration: none;
+        }
+
+        .dropdown {
+            float: left;
+            overflow: hidden;
+        }
+
+        .dropdown .dropbtn {
+            font-size: 20px;
+            border: none;
+            outline: none;
+            color: white;
+            padding: 0px 0px;
+            background-color: inherit;
+            font-family: inherit;
+            margin: 0;
+        }
+
+        .navbar a:hover,
+        .dropdown:hover .dropbtn {
+            background-color: red;
+        }
+
+        .dropdown-content {
+            display: none;
+            position: absolute;
+            background-color: #f9f9f9;
+            min-width: 160px;
+            box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+            z-index: 1;
+        }
+
+        .dropdown-content a {
+            float: none;
+            color: black;
+            padding: 0px 0px;
+            text-decoration: none;
+            display: block;
+            text-align: left;
+        }
+
+        .dropdown-content a:hover {
+            background-color: #ddd;
+        }
+
+        .dropdown:hover .dropdown-content {
+            display: block;
+        }
+        .dropdown-content a:active {
+            background-color: #ddd;
+        }
+
+        .dropdown:active .dropdown-content {
+            display: block;
+        }
+    </style>
+    <style>
+        header{
+            background-color:red;
+            height:15vh;
+            width:100vw;
+        }
+        #nav{
+            
+            color:white !important;
+            font-size:20px;
+            
+            float:right;
+            margin-right:40vh !important;
+            margin-top:5vh !important;
+        }
+        nav a{
+            text-decoration:none;
+             color:white !important;
+            font-size:20px;
+            margin-left:3vw !important;
+         margin-right:3vw !important;
+        }
+        aside{
+            float:left;
+            height:70vh !important;
+            width:20%;
+            background-color:yellow;
+        }
+        article{
+            float:left;
+            height:70vh !important;
+            width:77vw !important;
+            background-color:orange;
+        }
+        footer{
+            clear:left;
+            background-color:pink;
+        }
+    </style>
+<style>
+p {
+    outline-color:red;
+    outline-style:solid;
+    outline-width:5px;
+    outline-offset:5px;
+    outline:red 5px 5px;
+}
+
+p.dotted {outline-style: dotted;}
+p.dashed {outline-style: dashed;}
+p.solid {outline-style: solid;}
+p.double {outline-style: double;}
+p.groove {outline-style: groove;}
+p.ridge {outline-style: ridge;}
+p.inset {outline-style: inset;}
+p.outset {outline-style: outset;}
+</style>
+ <style>
+
+        nav {
+            background-color: lightgray;
+            display: flex;
+            flex-direction: row;
+            height: 15vh !important;
+            width: 100vw !important;
+        }
+
+        #logo {
+            display: flex;
+            justify-content: center;
+
+        }
+
+        div img {}
+
+        div {
+            font-size: 30px;
+            margin-left: auto;
+            margin-top: 0vh !important;
+            margin-bottom: 0px;
+        }
+
+        div a {
+            text-decoration: none;
+            color: grey;
+            /* margin-left:3vw !important; */
+            margin-right: 3vw !important;
+            /* justify-content:center;*/
+        }
+
+        article {
+
+            height: 85vh;
+            width: 79vw;
+            float: left;
+            background-image: url("../../../HTML/Nisarg Adalja/assests/images/html5.jpg");
+            background-repeat: no-repeat;
+            background-size: cover;
+        }
+
+        h1 {
+            margin-top: 40px !important;
+        }
+        li{
+            font-size:30px;
+        }
+        aside {
+            display: flex;
+            flex-direction: column;
+            float: left;
+            height: 85vh;
+            width: 18vw;
+            background-color: orange;
+        }
+
+        /* Dropdown Button */
+
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+        }
+
+        .navbar {
+            overflow: hidden;
+            display: flex;
+            flex-direction: column;
+            background-color: #333;
+        }
+
+        .navbar a {
+            float: left;
+            font-size: 20px;
+            color: white;
+            text-align: left;
+            padding: 14px 16px;
+            text-decoration: none;
+        }
+
+        .dropdown {
+            float: left;
+            overflow: hidden;
+        }
+
+        .dropdown .dropbtn {
+            font-size: 20px;
+            border: none;
+            outline: none;
+            color: white;
+            padding: 0px 0px;
+            background-color: inherit;
+            font-family: inherit;
+            margin: 0;
+        }
+
+        .navbar a:hover,
+        .dropdown:hover .dropbtn {
+            background-color: red;
+        }
+
+        .dropdown-content {
+            display: none;
+            position: absolute;
+            background-color: #f9f9f9;
+            min-width: 160px;
+            box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+            z-index: 1;
+        }
+
+        .dropdown-content a {
+            float: none;
+            color: black;
+            padding: 0px 0px;
+            text-decoration: none;
+            display: block;
+            text-align: left;
+        }
+
+        .dropdown-content a:hover {
+            background-color: #ddd;
+        }
+
+        .dropdown:hover .dropdown-content {
+            display: block;
+        }
+        .dropdown-content a:active {
+            background-color: #ddd;
+        }
+
+        .dropdown:active .dropdown-content {
+            display: block;
+        }
+
+        /* Dropdown Button */
+
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+        }
+
+        .navbar {
+            overflow: hidden;
+            display: flex;
+            flex-direction: column;
+            background-color: #333;
+        }
+
+        .navbar a {
+            float: left;
+            font-size: 20px;
+            color: white;
+            text-align: left;
+            padding: 14px 16px;
+            text-decoration: none;
+        }
+
+        .dropdown {
+            float: left;
+            overflow: hidden;
+        }
+
+        .dropdown .dropbtn {
+            font-size: 20px;
+            border: none;
+            outline: none;
+            color: white;
+            padding: 0px 0px;
+            background-color: inherit;
+            font-family: inherit;
+            margin: 0;
+        }
+
+        .navbar a:hover,
+        .dropdown:hover .dropbtn {
+            background-color: red;
+        }
+
+        .dropdown-content {
+            display: none;
+            position: absolute;
+            background-color: #f9f9f9;
+            min-width: 160px;
+            box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+            z-index: 1;
+        }
+
+        .dropdown-content a {
+            float: none;
+            color: black;
+            padding: 0px 0px;
+            text-decoration: none;
+            display: block;
+            text-align: left;
+        }
+
+        .dropdown-content a:hover {
+            background-color: #ddd;
+        }
+
+        .dropdown:hover .dropdown-content {
+            display: block;
+        }
+        .dropdown-content a:active {
+            background-color: #ddd;
+        }
+
+        .dropdown:active .dropdown-content {
+            display: block;
+        }
+    </style>
+    <style>
+        body{
+        }
+        header{
+            background-color:#425061;
+            height:30vh;
+            width:82vw;
+        }
+        header h1{
+            color:white;
+            display:inline !important;
+            float:left;
+            margin-top:9vh;
+            margin-left:6vw;
+        }
+        header h2{
+            display:inline !important;
+            color:lightblue;
+            float:left;
+            clear:left;
+            margin-left:6vw !important;
+            margin-top :0vh !important;
+        }
+        header p{
+            display:inline;
+            color:lightblue;
+            float:left;
+            clear:left;
+            margin-left:6vw !important;
+            margin-top :2vh !important;
+        }
+        header img{
+            border:5px solid #313b47;
+            border-radius:50%;
+            float:right;
+            margin-top:6vh;
+            margin-right:6vw;
+        }
+        #contact{
+
+            height:25vh;
+            width:82vw;
+            background-color:#313b47 !important;
+        }
+        .details{
+            width:40vw !important;
+            float:left;
+        }
+        .details i{
+            color: white !important;
+            margin-top:3vh;
+            margin-left:6vw;
+            background-color:#313b47 !important;
+        }
+        i+a{
+            margin-left:1vw;
+            font-size: 12px;
+            text-decoration:none;
+            color:white;
+            margin-top:0vh !important;
+        }
+        i+p{
+            color:white !important;
+            margin-left:9vw;
+            font-size: 12px;
+            margin-top :-2vh !important;
+        }
+        .education{
+            display:inline;
+            margin-left:5vw !important;
+            margin-top:3vh !important;
+            width:33vw;
+            float:left;
+
+        }
+        .education h1{
+            color:#449399 !important;
+            text-decoration:underline;
+        }
+        .skills{
+            display: inline;
+            margin-top:5vh !important;
+            width:30vw;
+            float:right !important;
+            clear:left !important; 
+        }
+        .skills h1{
+           
+            color:#449399 !important;
+            text-decoration:underline;
+        }
+        .skills h2{
+            margin-top:5vh !important;
+        }
+        body{
+            background-color: aqua;
+        }
+        .main{
+            display: inline !important;
+            float:left !important;
+            width:45vw !important; 
+        }
+        .main1{
+            display: inline !important;
+            float:right !important;
+            margin-right:20px !important;
+
+        }
+        .skills span{
+            color:white !important;
+            display:inline-block !important;
+            height:5vh !important;
+            background-color:#449399;
+            border-radius:10px !important;
+            padding-top:10px !important;
+            margin-top:10px !important;
+            margin-left:5px !important;
+            margin-right: 5px !important;
+        }
+        .internships{
+
+        }
+        p a{
+            text-decoration:none;
+            color:black;
+        }
+    </style>
+</head>
+<body>
+<nav id="nav1">
+        <div id="logo">
+            <img src="https://tutorials.rxtrainees.radixweb.net/wp-content/uploads/2020/12/logo_2500X1875.jpg"
+                height="50px" width="200px">
+        </div>
+        <div>
+            <a href="../../../../Modules/Project/Nisarg Adalja/nisargProject.html">HOME</a>
+            <a href="../../../../Modules/Project/Nisarg Adalja/htmlfile.html">HTML</a>
+            <a href="../../../../Modules/Project/Nisarg Adalja/cssfile.html">CSS</a>
+            <a href="../../../../Modules/Project/Nisarg Adalja/Bootstrap.html">Bootstrap</a>
+            <a href="../../../../Modules/Project/Nisarg Adalja/javascript.html">JAVASCRIPT</a>
+            <a href="../../../../Modules/Project/Nisarg Adalja/jquery.html">JQUERY</a>
+            <a href="../../../../Modules/Project/Nisarg Adalja/project.html">PORJECT</a>
+        </div>
+    </nav>
+    <aside>
+      <ol>
+            <li class="d-block">Day-3<ul class="d-block">
+                    <div class="dropdown">
+                        <button class="dropbtn">Additional Exercise</button>
+                        <div class="dropdown-content d-block">
+                            <a href="../../Day3/additional/additional.html">additional.html</a>
+                        </div>
+                    </div>
+                    <div class="dropdown">
+                        <button class="dropbtn">Assignment Exercise</button>
+                        <div class="dropdown-content d-block">
+                            <a href="../../Day3/assignments/about.html">about.html</a>
+                              <a href="../../Day3/assignments/assignments.html">assignment.html</a>
+                                <a href="../../Day3/assignments/contact.html">contact.html</a>
+                        </div>
+                    </div>
+                    <div class="dropdown">
+                        <button class="dropbtn">Practice Exercise</button>
+                        <div class="dropdown-content d-block">
+                            <a href="../../Day3/practice/practice.html">practice.html</a>
+                            <a href="../../Day3/practice/practice1.html">practice1.html</a>
+                            
+                        </div>
+                    </div>
+                </ul>
+            </li>
+             <li class="d-block">Day-4<ul class="d-block">
+                    <div class="dropdown">
+                        <button class="dropbtn">Additional Exercise</button>
+                        <div class="dropdown-content d-block">
+                            <a href="../../Day4/additional/additional.html">additional.html</a>
+                        </div>
+                    </div>
+                    <div class="dropdown">
+                        <button class="dropbtn">Assignment Exercise</button>
+                        <div class="dropdown-content d-block">
+                            <a href="../../Day4/assignment/assignment.html">assignment.html</a>
+                        </div>
+                    </div>
+                    <div class="dropdown">
+                        <button class="dropbtn">Practice Exercise</button>
+                        <div class="dropdown-content d-block">
+                            <a href="../../Day4/practice/practice.html">practice.html</a>
+                        </div>
+                    </div>
+
+                </ul>
+            </li>
+             <li>Day-5<ul>
+                    <div class="dropdown">
+                        <button class="dropbtn">Additional Exercise</button>
+                        <div class="dropdown-content">
+                            <a href="../../Day5/additional/additional.html">additional.html</a>
+                        </div>
+                    </div>
+                    <div class="dropdown">
+                        <button class="dropbtn">Assignment Exercise</button>
+                        <div class="dropdown-content">
+                            <a href="../../Day5/assignments/assignment.html">assignment.html</a>
+                        </div>
+                    </div>
+                    <div class="dropdown">
+                        <button class="dropbtn">Practice Exercise</button>
+                        <div class="dropdown-content">
+                            <a href="../../Day5/practice/practice.html">practice.html</a>
+                        </div>
+                    </div>
+
+                </ul>
+            </li>
+            
+        </ol>
+    </aside>
+  <article>
+<h2>The outline-style Property</h2>
+
+<p class="dotted">A dotted outline</p>
+<p class="dashed">A dashed outline</p>
+<p class="solid">A solid outline</p>
+<p class="double">A double outline</p>
+<p class="groove">A groove outline. The effect depends on the outline-color value.</p>
+<p class="ridge">A ridge outline. The effect depends on the outline-color value.</p>
+<p class="inset">An inset outline. The effect depends on the outline-color value.</p>
+<p class="outset">An outset outline. The effect depends on the outline-color value.</p>
+</article>
+</body>
+</html>
+
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+.flex-container {
+  display: flex;
+  flex-wrap: nowrap;
+  width:100vw;
+  background-color: DodgerBlue;
+}
+
+.flex-container > div {
+  background-color: #f1f1f1;
+  width: 100px;
+  margin: 10px;
+  text-align: center;
+  line-height: 75px;
+  font-size: 30px;
+}
+.flex-container1 {
+  display: flex;
+  width:100vw !important;
+  height:30vh !important;
+  flex-wrap: nowrap;
+  background-color: DodgerBlue;
+}
+
+
+.flex-container1 > div {
+  background-color: #f1f1f1;
+  margin: 10px;
+  padding: 20px;
+  width:20vh !important;
+  font-size: 30px;
+}
+.flex-container2 {
+  display: flex;
+  flex-direction: column;
+  background-color: DodgerBlue;
+}
+
+.flex-container2 > div {
+  background-color: #f1f1f1;
+  width: 100px;
+  margin: 10px;
+  text-align: center;
+  line-height: 75px;
+  font-size: 30px;
+}
+.flex-container3 {
+  display: flex;
+  flex-direction: column-reverse;
+  background-color: DodgerBlue;
+}
+
+.flex-container4 {
+  display: flex;
+  flex-direction: row;
+  background-color: DodgerBlue;
+}
+
+.flex-container5 {
+  display: flex;
+  flex-direction: row-reverse;
+  background-color: DodgerBlue;
+}
+.flex-container3 > div,.flex-container4 > div, .flex-container5 > div {
+  background-color: #f1f1f1;
+  width: 100px;
+  margin: 10px;
+  text-align: center;
+  line-height: 75px;
+  font-size: 30px;
+}
+.flex-container6 {
+  display: flex;
+  flex-wrap: wrap;
+  background-color: DodgerBlue;
+}
+
+.flex-container6 > div {
+  background-color: #f1f1f1;
+  width: 100px;
+  margin: 10px;
+  text-align: center;
+  line-height: 75px;
+  font-size: 30px;
+}
+.flex-container7 {
+  display: flex;
+  flex-wrap: wrap-reverse;
+  background-color: DodgerBlue;
+}
+
+.flex-container7 > div {
+  background-color: #f1f1f1;
+  width: 100px;
+  margin: 10px;
+  text-align: center;
+  line-height: 75px;
+  font-size: 30px;
+}
+.flex-container8 {
+  display: flex;
+  flex-flow: row wrap;
+  background-color: DodgerBlue;
+}
+
+.flex-container8 > div {
+  background-color: #f1f1f1;
+  width: 100px;
+  margin: 10px;
+  text-align: center;
+  line-height: 75px;
+  font-size: 30px;
+}
+.flex-container9 {
+  display: flex;
+  justify-content: center;
+  background-color: DodgerBlue;
+}
+
+.flex-container9 > div {
+  background-color: #f1f1f1;
+  width: 100px;
+  margin: 10px;
+  text-align: center;
+  line-height: 75px;
+  font-size: 30px;
+}
+.flex-container10 {
+  display: flex;
+  justify-content: flex-start;
+  background-color: DodgerBlue;
+}
+
+.flex-container10 > div {
+  background-color: #f1f1f1;
+  width: 100px;
+  margin: 10px;
+  text-align: center;
+  line-height: 75px;
+  font-size: 30px;
+}
+.flex-container11 {
+  display: flex;
+  justify-content: flex-end;
+  background-color: DodgerBlue;
+}
+
+.flex-container11 > div {
+  background-color: #f1f1f1;
+  width: 100px;
+  margin: 10px;
+  text-align: center;
+  line-height: 75px;
+  font-size: 30px;
+}
+.flex-container12 {
+  display: flex;
+  justify-content: space-around;
+  background-color: DodgerBlue;
+}
+
+.flex-container12 > div {
+  background-color: #f1f1f1;
+  width: 100px;
+  margin: 10px;
+  text-align: center;
+  line-height: 75px;
+  font-size: 30px;
+}
+.flex-container13 {
+  display: flex;
+  justify-content: space-between;
+  background-color: DodgerBlue;
+}
+
+.flex-container13 > div {
+  background-color: #f1f1f1;
+  width: 100px;
+  margin: 10px;
+  text-align: center;
+  line-height: 75px;
+  font-size: 30px;
+}
+.flex-container14 {
+  display: flex;
+  height: 200px;
+  align-items: center;
+  background-color: DodgerBlue;
+}
+
+.flex-container14 > div {
+  background-color: #f1f1f1;
+  width: 100px;
+  margin: 10px;
+  text-align: center;
+  line-height: 75px;
+  font-size: 30px;
+}
+.flex-container15 {
+  display: flex;
+  height: 200px;
+  align-items: flex-start;
+  background-color: DodgerBlue;
+}
+
+.flex-container15 > div {
+  background-color: #f1f1f1;
+  width: 100px;
+  margin: 10px;
+  text-align: center;
+  line-height: 75px;
+  font-size: 30px;
+}
+.flex-container16 {
+  display: flex;
+  height: 200px;
+  align-items: flex-end;
+  background-color: DodgerBlue;
+}
+
+.flex-container16 > div {
+  background-color: #f1f1f1;
+  width: 100px;
+  margin: 10px;
+  text-align: center;
+  line-height: 75px;
+  font-size: 30px;
+}
+.flex-container17 {
+  display: flex;
+  height: 200px;
+  align-items: stretch;
+  background-color: DodgerBlue;
+}
+
+.flex-container17 > div {
+  background-color: #f1f1f1;
+  width: 100px;
+  margin: 10px;
+  text-align: center;
+  line-height: 75px;
+  font-size: 30px;
+}
+.flex-container18 {
+  display: flex;
+  height: 200px;
+  flex-wrap: wrap;
+  align-content: center;
+  background-color: DodgerBlue;
+}
+
+.flex-container18 > div {
+  background-color: #f1f1f1;
+  width: 100px;
+  margin: 10px;
+  text-align: center;
+  line-height: 75px;
+  font-size: 30px;
+}
+.flex-container19 {
+  display: flex;
+  height: 200px;
+  flex-wrap: wrap;
+  align-content: flex-start;
+  background-color: DodgerBlue;
+}
+
+.flex-container19 > div {
+  background-color: #f1f1f1;
+  width: 100px;
+  margin: 10px;
+  text-align: center;
+  line-height: 75px;
+  font-size: 30px;
+}
+.flex-container20 {
+  display: flex;
+  height: 200px;
+  flex-wrap: wrap;
+  align-content: flex-end;
+  background-color: DodgerBlue;
+}
+
+.flex-container20 > div {
+  background-color: #f1f1f1;
+  width: 100px;
+  margin: 10px;
+  text-align: center;
+  line-height: 75px;
+  font-size: 30px;
+}
+.flex-container21 {
+  display: flex;
+  height: 200px;
+  flex-wrap: wrap;
+  justify-content:center;
+  align-items: center;
+  background-color: DodgerBlue;
+}
+
+.flex-container21 > div {
+  background-color: #f1f1f1;
+  width: 100px;
+  margin: 10px;
+  text-align: center;
+  line-height: 75px;
+  font-size: 30px;
+}
+.flex-container22 {
+  display: flex;
+  align-items: stretch;
+  background-color: #f1f1f1;
+}
+
+.flex-container22 >div {
+  background-color: DodgerBlue;
+  color: white;
+  width: 100px;
+  margin: 10px;
+  text-align: center;
+  line-height: 75px;
+  font-size: 30px;
+}
+
+</style>
+<style>
+
+        #nav1{
+            background-color: lightgray;
+            display: flex;
+            flex-direction: row;
+            height: 15vh !important;
+            width: 100vw !important;
+        }
+
+        #logo {
+            display: flex;
+            justify-content: center;
+
+        }
+
+        div img {}
+
+        div {
+            font-size: 30px;
+            margin-left: auto;
+            margin-top: 0vh !important;
+            margin-bottom: 0px;
+        }
+
+        div a {
+            text-decoration: none;
+            color: grey;
+            /* margin-left:3vw !important; */
+            margin-right: 3vw !important;
+            /* justify-content:center;*/
+        }
+
+        article {
+
+            height: 85vh;
+            width: 79vw;
+            float: left;
+            background-image: url("../../../HTML/Nisarg Adalja/assests/images/html5.jpg");
+            background-repeat: no-repeat;
+            background-size: cover;
+        }
+
+        h1 {
+            margin-top: 40px !important;
+        }
+        li{
+            font-size:30px;
+        }
+        aside {
+            display: flex;
+            flex-direction: column;
+            float: left;
+            height: 85vh;
+            width: 18vw;
+            background-color: orange;
+        }
+        header{
+            width:100% !important;
+        }
+        /* Dropdown Button */
+
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+        }
+
+        .navbar {
+            overflow: hidden;
+            display: flex;
+            flex-direction: column;
+            background-color: #333;
+        }
+
+        .navbar a {
+            float: left;
+            font-size: 20px;
+            color: white;
+            text-align: left;
+            padding: 14px 16px;
+            text-decoration: none;
+        }
+
+        .dropdown {
+            float: left;
+            overflow: hidden;
+        }
+
+        .dropdown .dropbtn {
+            font-size: 20px;
+            border: none;
+            outline: none;
+            color: white;
+            padding: 0px 0px;
+            background-color: inherit;
+            font-family: inherit;
+            margin: 0;
+        }
+
+        .navbar a:hover,
+        .dropdown:hover .dropbtn {
+            background-color: red;
+        }
+
+        .dropdown-content {
+            display: none;
+            position: absolute;
+            background-color: #f9f9f9;
+            min-width: 160px;
+            box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+            z-index: 1;
+        }
+
+        .dropdown-content a {
+            float: none;
+            color: black;
+            padding: 0px 0px;
+            text-decoration: none;
+            display: block;
+            text-align: left;
+        }
+
+        .dropdown-content a:hover {
+            background-color: #ddd;
+        }
+
+        .dropdown:hover .dropdown-content {
+            display: block;
+        }
+        .dropdown-content a:active {
+            background-color: #ddd;
+        }
+
+        .dropdown:active .dropdown-content {
+            display: block;
+        }
+
+        /* Dropdown Button */
+
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+        }
+
+        .navbar {
+            overflow: hidden;
+            display: flex;
+            flex-direction: column;
+            background-color: #333;
+        }
+
+        .navbar a {
+            float: left;
+            font-size: 20px;
+            color: white;
+            text-align: left;
+            padding: 14px 16px;
+            text-decoration: none;
+        }
+
+        .dropdown {
+            float: left;
+            overflow: hidden;
+        }
+
+        .dropdown .dropbtn {
+            font-size: 20px;
+            border: none;
+            outline: none;
+            color: white;
+            padding: 0px 0px;
+            background-color: inherit;
+            font-family: inherit;
+            margin: 0;
+        }
+
+        .navbar a:hover,
+        .dropdown:hover .dropbtn {
+            background-color: red;
+        }
+
+        .dropdown-content {
+            display: none;
+            position: absolute;
+            background-color: #f9f9f9;
+            min-width: 160px;
+            box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+            z-index: 1;
+        }
+
+        .dropdown-content a {
+            float: none;
+            color: black;
+            padding: 0px 0px;
+            text-decoration: none;
+            display: block;
+            text-align: left;
+        }
+
+        .dropdown-content a:hover {
+            background-color: #ddd;
+        }
+
+        .dropdown:hover .dropdown-content {
+            display: block;
+        }
+        .dropdown-content a:active {
+            background-color: #ddd;
+        }
+
+        .dropdown:active .dropdown-content {
+            display: block;
+        }
+    </style>
+    <style>
+        header{
+            background-color:red;
+            height:15vh;
+            width:100vw;
+        }
+        #nav{
+            
+            color:white !important;
+            font-size:20px;
+            
+            float:right;
+            margin-right:40vh !important;
+            margin-top:5vh !important;
+        }
+        nav a{
+            text-decoration:none;
+             color:white !important;
+            font-size:20px;
+            margin-left:3vw !important;
+         margin-right:3vw !important;
+        }
+        aside{
+            float:left;
+            height:70vh !important;
+            width:20%;
+            background-color:yellow;
+        }
+        article{
+            float:left;
+            height:70vh !important;
+            width:77vw !important;
+            background-color:orange;
+        }
+        footer{
+            clear:left;
+            background-color:pink;
+        }
+    </style>
+</head>
+<body>
+<h1>Flexible Boxes</h1>
+
+<div class="flex-container">
+  <div>1</div>
+  <div>2</div>
+  <div>3</div>  
+  <div>4</div>
+  <div>5</div>
+  <div>6</div>  
+  <div>7</div>
+  <div>8</div>
+</div>
+
+<p>Try to resize the browser window.</p>
+<p>A container with "flex-wrap: nowrap;" will never wrap its items.</p>
+<p><strong>Note:</strong> Flexbox is not supported in Internet Explorer 10 or earlier versions.</p>
+
+<div class="flex-container1">
+  <div>1</div>
+  <div>2</div>
+  <div>3</div>  
+</div>
+<br><br>
+<!-- example for flex direction:column -->
+<div class="flex-container2">
+  <div>1</div>
+  <div>2</div>
+  <div>3</div>  
+</div><br><br>
+<div class="flex-container3">
+  <div>1</div>
+  <div>2</div>
+  <div>3</div>  
+</div><br><br>
+<div class="flex-container4">
+  <div>1</div>
+  <div>2</div>
+  <div>3</div>  
+</div><br><br>
+<div class="flex-container5">
+  <div>1</div>
+  <div>2</div>
+  <div>3</div>  
+</div><br><br>
+
+<div class="flex-container6">
+  <div>1</div>
+  <div>2</div>
+  <div>3</div>  
+  <div>4</div>
+  <div>5</div>
+  <div>6</div>  
+  <div>7</div>
+  <div>8</div>
+  <div>9</div>
+  <div>10</div>
+  <div>11</div>
+  <div>12</div>
+</div>
+<br><br>
+<div class="flex-container7">
+  <div>1</div>
+  <div>2</div>
+  <div>3</div>  
+  <div>4</div>
+  <div>5</div>
+  <div>6</div>  
+  <div>7</div>
+  <div>8</div>
+  <div>9</div>
+  <div>10</div>
+  <div>11</div>
+  <div>12</div>
+</div>
+<br><br>
+<!--  The flex-flow Property
+The flex-flow property is a shorthand property for setting both the flex-direction and flex-wrap properties. -->
+<div class="flex-container8">
+  <div>1</div>
+  <div>2</div>
+  <div>3</div>  
+  <div>4</div>
+  <div>5</div>
+  <div>6</div>  
+  <div>7</div>
+  <div>8</div>
+  <div>9</div>
+  <div>10</div>
+  <div>11</div>
+  <div>12</div>
+</div><br><br>
+<div class="flex-container9">
+  <div>1</div>
+  <div>2</div>
+  <div>3</div>  
+</div><br><br>
+<!--  The justify-content Property
+The "justify-content: flex-start;" aligns the flex items at the beginning of the container (this is default): -->
+<div class="flex-container10">
+  <div>1</div>
+  <div>2</div>
+  <div>3</div>  
+</div><br><br>
+<!-- The justify-content Property
+The "justify-content: flex-end;" aligns the flex items at the end of the container: -->
+<div class="flex-container11">
+  <div>1</div>
+  <div>2</div>
+  <div>3</div>  
+</div><br><br>
+<!-- The space-around value displays the flex items with space before, between, and after the lines: -->
+<div class="flex-container12">
+  <div>1</div>
+  <div>2</div>
+  <div>3</div>  
+</div><br><br>
+<!-- The space-between value displays the flex items with space between the lines: -->
+<div class="flex-container13">
+  <div>1</div>
+  <div>2</div>
+  <div>3</div>  
+</div><br><br>
+<!-- The align-items Property
+The align-items property is used to align the flex items. -->
+<div class="flex-container14">
+  <div>1</div>
+  <div>2</div>
+  <div>3</div>  
+</div><br><br>
+
+<!-- The flex-start value aligns the flex items at the top of the container: -->
+<div class="flex-container15">
+  <div>1</div>
+  <div>2</div>
+  <div>3</div>  
+</div><br><br>
+<!-- The flex-end value aligns the flex items at the bottom of the container: -->
+<div class="flex-container16">
+  <div>1</div>
+  <div>2</div>
+  <div>3</div>  
+</div><br><br>
+<!-- The stretch value stretches the flex items to fill the container (this is default): -->
+<div class="flex-container17">
+  <div>1</div>
+  <div>2</div>
+  <div>3</div>  
+</div><br><br>
+<!-- The center value displays display the flex lines in the middle of the container: -->
+<div class="flex-container18">
+  <div>1</div>
+  <div>2</div>
+  <div>3</div>  
+</div><br><br>
+<!-- The flex-start value displays the flex lines at the start of the container: -->
+<div class="flex-container19">
+  <div>1</div>
+  <div>2</div>
+  <div>3</div>  
+</div><br><br>
+<!-- The flex-end value displays the flex lines at the end of the container:  -->
+<div class="flex-container20">
+  <div>1</div>
+  <div>2</div>
+  <div>3</div>  
+</div><br><br>
+
+<!-- Perfect Centering
+In the following example we will solve a very common style problem: perfect centering.
+
+SOLUTION: Set both the justify-content and align-items properties to center, and the flex item will be perfectly centered:
+
+ -->
+ <div class="flex-container21">
+  <div>1</div>
+  <div>2</div>
+  <div>3</div>  
+</div><br><br>
+
+<div class="flex-container22">
+  <div style="order: 3">1</div>
+  <div style="order: 2">2</div>
+  <div style="order: 4">3</div> 
+  <div style="order: 1">4</div>
+</div><br><br>
+
+<!-- The flex-grow property specifies how much a flex item will grow relative to the rest of the flex items. -->
+<div class="flex-container22">
+  <div style="flex-grow: 1">1</div>
+  <div style="flex-grow: 4">2</div>
+  <div style="flex-grow: 8">3</div>
+</div><br><br>
+
+<!-- The flex-shrink property specifies how much a flex item will shrink relative to the rest of the flex items. -->
+<div class="flex-container22">
+  <div>1</div>
+  <div>2</div>
+  <div style="flex-shrink: 0">3</div>
+  <div style="flex-shrink: 3;">4</div>
+  <div>5</div>
+  <div>6</div>
+  <div>7</div>
+  <div>8</div>
+  <div style="flex-shrink:2">9</div>
+  <div>10</div>
+</div><br><br>
+
+<!-- The flex-basis property specifies the initial length of a flex item. -->
+<div class="flex-container22">
+  <div>1</div>
+  <div>2</div>
+  <div style="flex-basis: 200px">3</div>
+  <div>4</div>
+</div><br><br>
+<div class="flex-container22">
+  <div>1</div>
+  <div>2</div>
+  <div style="flex: 0 0 200px">3</div>
+  <div>4</div>
+</div><br><br>
+<!-- The align-self Property
+The align-self property specifies the alignment for the selected item inside the flexible container.
+
+The align-self property overrides the default alignment set by the container's align-items property. -->
+<div class="flex-container22">
+  <div>1</div>
+  <div>2</div>
+  <div style="align-self: center">3</div>
+  <div>4</div>
+</div>
+<div class="flex-container22">
+  <div>1</div>
+  <div style="align-self: flex-start">2</div>
+  <div style="align-self: flex-end">3</div>
+  <div>4</div>
+</div>
+</body>
+</html> 
+<!-- CSS Flex Container
+
+flex-direction
+flex-wrap
+flex-flow
+justify-content
+align-items
+align-content -->

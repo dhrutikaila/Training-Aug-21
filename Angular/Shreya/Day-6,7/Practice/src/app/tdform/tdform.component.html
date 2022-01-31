@@ -1,0 +1,51 @@
+<div class="container mt-3">
+    <form action="" (ngSubmit)="onSubmit()" #f="ngForm">
+        <div class="row">
+            <div class="col-6">
+                <div class="form-group" ngModelGroup = "userData" #userData="ngModelGroup">
+                    <label for="username">Username</label>
+                    <input type="text" id="username" class="form-control"ngModel name="username" required>
+                
+                <br>
+                <button class="btn btn-secondary" type="button" (click)="suggest()">Username Suggest</button>
+                <div class="form-group mt-3">
+                    <label for="email">Mail</label>
+                    <input type="email" id="email" class="form-control" ngModel name="email" required email #email="ngModel">
+                </div>
+            </div>
+                <span *ngIf="!email.valid && email.touched">Please enter a valid email !</span>
+                <p *ngIf= "!userData.valid && userData.touched">User data is  invalid </p>
+                <div class="form-group mt-3">
+                    <label for="secret">Secret Quetions</label>
+                    <select name="" id="secret" class="form-control" [ngModel]="defaultQuestion" name="secret">
+                        <option value="pet">First pet ?</option>
+                        <option value="teacher">First teacher ?</option>
+                    </select>
+                </div>
+                <div class="form-group mt-3">
+                    <textarea name="questionAnswer" rows="3" [(ngModel)]="answer" class="form-control"></textarea>
+                </div>
+                <p>Your reply {{answer}}</p>
+                
+                <div class="radio" *ngFor="let g of gender">
+                    <label for=""><input type="radio" name="gender" ngModel [value]="g" required>{{g}}</label>
+                </div>
+                <br>
+                <button class="btn btn-primary" type="submit" [disabled]="!f.valid">submit</button>
+            </div>
+        </div>
+    </form>
+</div>
+<hr>
+<div class="container">
+    <div class="row" *ngIf="submitted">
+        <div class="col-4">
+            <h3>Your data</h3>
+            <p>Username : {{user.username}}</p>
+            <p>Mail : {{user.email}}</p>
+            <p>Secret Que : {{user.secretQuestion}}</p>
+            <p>Answer: {{user.answer}} </p>
+            <p>Gender : {{user.gender}}</p>
+        </div>
+    </div>
+</div>

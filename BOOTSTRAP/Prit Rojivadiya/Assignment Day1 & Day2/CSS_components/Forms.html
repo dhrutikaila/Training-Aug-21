@@ -1,0 +1,212 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+        integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+
+    <title>Hello, world!</title>
+</head>
+
+<body>
+    
+    <div class="display-4 text-center mb-5">Bootstrap Learning</div>
+    <div class="container">
+         <div class="d-flex flex-row flex-wrap justify-content-around row">
+           <div class="btn-group col-md-3">
+             <button type="button" class="w-100 btn btn-primary dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+               Utilities
+             </button>
+             <div class="dropdown-menu">
+               <a class="dropdown-item" href="../utilities/Basic_typography.html">Basic_Typography</a>
+                 <a class="dropdown-item" href="../utilities/Breakpoint.html">Breakpoint</a>
+                 <a class="dropdown-item" href="../utilities/Colors_and_Background.html">Colors & Background</a>
+                 <a class="dropdown-item" href="../utilities/Floats_and_Fixed.html">Float & Fixed Positions</a>
+                 <a class="dropdown-item" href="../utilities/Sizing_and_Borders.html">Sizing & Borders</a>
+                 <a class="dropdown-item" href="../utilities/Spacing.html">Spacing</a>                
+                 <a class="dropdown-item" href="../utilities/Text_Alignment.html">Text Alignment</a>
+             </div>
+           </div>
+           <div class="btn-group col-md-3">
+             <button type="button" class="w-100 btn btn-success dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+               CSS Components
+             </button>
+             <div class="dropdown-menu">
+               <a class="dropdown-item" href="./Alerts_and_Progressbar.html">Alerts and Progress Bars</a>
+               <a class="dropdown-item" href="./Buttons_and_ButtonsGrp.html">Buttons & Buttons Groups</a>
+               <a class="dropdown-item" href="./Cards.html">Cards</a>
+               <a class="dropdown-item" href="./Forms.html">Forms</a>
+               <a class="dropdown-item" href="./InputGroups.html">Input Groups</a>
+               <a class="dropdown-item" href="./Listgroups_and_Badges.html">ListGroups & Badges</a>
+               <a class="dropdown-item" href="./Media_Object.html">Media Objects</a>
+               <a class="dropdown-item" href="./Navbar_and_Navs.html">Navbars & Nav</a>
+               <a class="dropdown-item" href="./Tables_and_Pagination.html">Tables & Pagination</a>
+             </div>
+           </div>
+           <div class="btn-group col-md-3">
+            <button type="button" class="w-100 btn btn-warning dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+              Grid and Flexbox
+            </button>
+            <div class="dropdown-menu">
+              <a class="dropdown-item" href="../Grid and Flexbox/AutoMargin_and_Wrapping.html">AutoMargin and Wrapping</a>
+                <a class="dropdown-item" href="../Grid and Flexbox/Flexbox.html">Flexbox</a>
+                <a class="dropdown-item" href="../Grid and Flexbox/Grid_Alignment.html">Grid Alignment</a>
+                <a class="dropdown-item" href="../Grid and Flexbox/Grid_System.html">Grid System</a>
+            </div>
+          </div>
+          <div class="btn-group col-md-3">
+            <button type="button" class="w-100 btn btn-danger dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+              Javasript Widgets
+            </button>
+            <div class="dropdown-menu">
+              <a class="dropdown-item" href="../Javascript Widgets/Carousel.html">Carousel</a>
+                <a class="dropdown-item" href="../Javascript Widgets/Collapse_and_Accordion.html">Collapse & Accordion</a>
+                <a class="dropdown-item" href="../Javascript Widgets/Modals.html">Modals</a>
+                <a class="dropdown-item" href="../Javascript Widgets/Popovers.html">Popovers</a>
+                <a class="dropdown-item" href="../Javascript Widgets/Tooltips.html">Tooltips</a>
+            </div>
+          </div>
+         </div>
+       </div>
+ 
+       <br><br>
+    
+    <div class="container">
+        <h4 class="my-3"><u>Forms</u></h4>
+
+        <!-- form -->
+        <h2>Form</h2>
+        <form action="">
+            <div class="form-group">
+                <label for="name">Name</label>
+                <input class="form-control form-control-sm" type="text" id="name" placeholder="Enter your name">
+            </div>
+
+            <div class="form-group">
+                <label for="email">Email</label>
+                <input class="form-control form-control-lg" type="email" id="email" placeholder="Enter mail">
+                <small class="form-text text-muted">Your email will not be shared</small>
+            </div>
+
+            <div class="form-group">
+                <label for="pwd">Password</label>
+                <input class="form-control" type="password" id="pwd" placeholder="enter password" readonly>
+            </div>
+
+            <div class="form-group">
+                <label for="gender">Gender</label>
+                <select class="form-control" id="gender">
+                    <option value="male">Male</option>
+                    <option value="female">Female</option>
+                </select>
+            </div>
+
+            <div class="form-group">
+                <label for="message">Message</label>
+                <textarea id="message" class="form-control" rows="3"></textarea>
+            </div>
+
+            <div class="form-group">
+                <label for="file">File input</label>
+                <input type="file" class="form-control-file" id="file">
+                <small class="fileHelp form-text text-muted">Max 3mb size</small>
+            </div>
+
+            <!-- form check -->
+            <fieldset class="form-group">
+                <legend>What are you using this service for?</legend>
+                <div class="form-check">
+                    <label class="form-check-label"> <input class="form-check-input" type="radio" value="option1"
+                            checked> Personal</label>
+                </div>
+                <div class="form-check">
+                    <label class="form-check-label"> <input class="form-check-input" type="radio" value="option2"
+                            checked> Professional</label>
+                </div>
+                <div class="form-check">
+                    <label class="form-check-label"> <input class="form-check-input" type="radio" value="option3"
+                            checked> Testing</label>
+                </div>
+            </fieldset>
+
+                <div class="form-check">
+                    <label for="checkbox" class="form-check-label">
+                        <input type="checkbox" class="form-check-input" id="checkbox">
+                        Sign up for newsletter
+                    </label>
+                </div>
+
+                <button type="submit" class="btn btn-primary">Submit</button>
+
+        </form>
+
+
+        <br><br>
+
+        <!-- inline form -->
+        <form class="form-inline">
+            <input type="text" id="uname" class="form-control mr-2" placeholder="Enter username">
+            <input type="password" id="pwd" class="form-control mr-2" placeholder="Enter Password">
+            <div class="form-ckeck">
+                <label class="form-check-label">
+                    <input type="checkbox" class="form-check-input"> Remember Me
+                </label>
+            </div>
+            <button type="submit" class="btn btn-info">Submit</button>
+        </form>
+
+        <br><br>
+
+        <!-- form row -->
+        <form>
+            <div class="form-row">
+                <div class="col">
+                    <input type="text" class="form-control" placeholder="Enter FirstName">
+                </div>
+                <div class="col">
+                    <input type="text" class="form-control" placeholder="Enter LastName">
+                </div>
+            </div>
+        </form>
+
+        <br><br>
+
+        <!-- validation -->
+        <div class="form-group">
+            <label for="uname">Username</label>
+            <input type="text" class="form-control is-valid" id="uname" placeholder="Enter Username">
+        </div>
+
+        <div class="form-group">
+            <label for="password">Password</label>
+            <input type="password" class="form-control is-invalid" id="password" placeholder="Enter Password">
+            <div class="invalid-feedback">Password not strong enough</div>
+        </div>
+
+        <div class="form-group">
+            <label for="password2">Confirm Password</label>
+            <input type="password" class="form-control is-invalid" id="password2" placeholder="Confirm Password">
+            <div class="invalid-feedback">Password do not match</div>
+        </div>
+
+    </div>
+
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+        integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+        crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
+        integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+        crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
+        integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+        crossorigin="anonymous"></script>
+</body>
+
+</html>

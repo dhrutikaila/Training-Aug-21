@@ -1,0 +1,92 @@
+<!-- Flexbox image gallery
+https://www.w3schools.com/css/tryit.asp?filename=trycss3_flexbox_image_gallery -->
+<!DOCTYPE html>
+<html>
+<style>
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: Arial;
+}
+
+.header {
+  text-align: center;
+  padding: 32px;
+}
+
+.row {
+  display: flex;
+  flex-wrap: wrap;
+  padding: 0 4px;
+}
+
+/* Create four equal columns that sits next to each other */
+.column {
+  flex: 25%;
+  max-width: 25%;
+  padding: 0 4px;
+}
+
+.column img {
+  margin-top: 8px;
+  vertical-align: middle;
+ 
+  width: 100%;
+}
+
+</style>
+<body>
+
+<!-- Header -->
+<div class="header">
+  <h1>Responsive Image Grid</h1>
+  <p>Resize the browser window to see the responsive effect.</p>
+</div>
+
+<!-- Photo Grid -->
+<div class="row"> 
+  <div class="column">
+    <img src="F:\training/images (1).jpg" >
+    <img src="F:\training/images (2).jpg" >
+    <img src="F:\training/images (3).jpg" >
+    <img src="F:\training/images (4).jpg" >
+    <img src="F:\training/images (5).jpg" >
+    <img src="F:\training/images (6).jpg" >
+   
+  </div>
+  
+  <div class="column">
+    <img src="F:\training/download (1).jpg" >
+    <img src="F:\training/download (2).jpg" >
+    <img src="F:\training/download (3).jpg" >
+    <img src="F:\training/download (4).jpg" >
+    <img src="F:\training/download (5).jpg" >
+    <img src="F:\training/download (6).jpg" >
+  </div>  
+   
+  <div class="column">
+    <img src="F:\training/images (1).jpg" >
+    <img src="F:\training/images (2).jpg" >
+    <img src="F:\training/images (3).jpg" >
+    <img src="F:\training/images (4).jpg" >
+    <img src="F:\training/images (5).jpg" >
+    <img src="F:\training/images (6).jpg" >
+   
+  </div>
+  
+  
+  <div class="column">
+    <img src="F:\training/download (1).jpg" >
+    <img src="F:\training/download (2).jpg" >
+    <img src="F:\training/download (3).jpg" >
+    <img src="F:\training/download (4).jpg" >
+    <img src="F:\training/download (5).jpg" >
+    <img src="F:\training/download (6).jpg" >
+  </div> 
+</div>
+
+</body>
+</html>

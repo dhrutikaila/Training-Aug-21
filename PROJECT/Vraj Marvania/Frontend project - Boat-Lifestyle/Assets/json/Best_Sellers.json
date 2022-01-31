@@ -1,0 +1,35 @@
+ 
+{     
+  "type":"Best_Sellers",
+  "data":[
+    {
+        "name": "BOAT Airdopes 121 v2",
+      "img": "https://utioutll.sirv.com/Smart%20Watches/best_saler/30_1.png",
+      "dis": ["Upto 75% Off On Best Sellers"," Stylish dual tone finish"," Immersive, HD sound quality"],
+      "price": "Rs. 999.00",
+      "oldprice": "Rs. 2,999.00"
+    },
+    {
+        "name": "BOAT Rockerz 245 V2",
+      "img": "https://utioutll.sirv.com/Smart%20Watches/best_saler/30_2.png",
+      "dis": [" Enjoy a playback of 3.5H per charge"," IPX5 water and sweat resistant"," Fast Charging"],
+      "price": "Rs. 799.00",
+      "oldprice": "Rs. 2,990.00"
+    },
+    {
+        "name": "Rockerz 330",
+      "img": "https://utioutll.sirv.com/Smart%20Watches/best_saler/30_3.png",
+      "dis": ["Immersive, HD sound quality","Immersive, HD sound quality","Immersive, HD sound quality"],
+      "price": "Rs. 1,099.00",
+      "oldprice": "Rs. 2,990.00"
+    },
+    {
+        "name": "BOAT BassHeads 105",
+      "img": "https://utioutll.sirv.com/Smart%20Watches/best_saler/30_4.png",
+      "dis": ["Immersive, HD sound quality","Immersive, HD sound quality","Immersive, HD sound quality"],
+      "price": "Rs. 299.00",
+      "oldprice": "Rs. 999.00"
+    }
+  ]
+}
+

@@ -1,0 +1,276 @@
+{
+    "element": [
+       {
+           "id": "1001",
+           "offername": "Navratri_offer",
+           "type": "category",
+           "startdate":"2021/10/10",
+           "enddate":"2021/10/18",
+           "titleimg": "assets/img/biggest_festive_offer.webp",
+           "cardimg": [
+               {
+                   "img": "assets/img/festive_offer_1.webp"
+               },
+               {
+                   "img": "assets/img/festive_offer_2.webp"
+               },
+               {
+                   "img": "assets/img/festive_offer_3.webp"
+               },
+               {
+                   "img": "assets/img/festive_offer_4.webp"
+               },
+               {
+                   "img": "assets/img/festive_offer_5.webp"
+               }]
+       },
+       {
+           "id": "1002",
+           "offername": "Navratri_offer",
+           "type": "category",
+           "startdate":"2021/10/10",
+           "enddate":"2021/10/18",
+           "titleimg": "assets/img/biggest_discount_categories.webp",
+            "cardimg": [
+               {
+                   "img": "assets/img/discount_category_1.webp"
+               },
+               {
+                   "img": "assets/img/discount_category_2.webp"
+               },
+               {
+                   "img": "assets/img/discount_category_3.webp"
+               },
+               {
+                   "img": "assets/img/discount_category_4.jpg"
+               },
+               {
+                   "img": "assets/img/discount_category_5.webp"
+               },
+               {
+                   "img": "assets/img/discount_category_6.webp"
+               },
+               {
+                   "img": "assets/img/discount_category_7.webp"
+               },
+               {
+                   "img": "assets/img/discount_category_8.webp"
+               },
+               {
+                   "img": "assets/img/discount_category_9.jpg"
+               },
+               {
+                   "img": "assets/img/discount_category_10.webp"
+               }
+           ]
+       },
+       {
+           "id": "1003",
+           "offername": "Navratri_offer",
+           "type": "category",
+           "startdate":"2021/10/10",
+           "enddate":"2021/10/18",
+           "titleimg": "assets/img/top_offer_brands.webp",
+            "cardimg": [
+               {
+                   "img": "assets/img/top_offer_brand_1.webp"
+               },
+               {
+                   "img": "assets/img/top_offer_brand_2.webp"
+               },
+               {
+                   "img": "assets/img/top_offer_brand_3.webp"
+               },
+               {
+                   "img": "assets/img/top_offer_brand_4.webp"
+               },
+               {
+                   "img": "assets/img/top_offer_brand_5.webp"
+               }
+           ]
+       },
+       {
+           "id": "1004",
+           "offername": "Navratri_offer",
+           "type": "category",
+           "startdate":"2021/10/10",
+           "enddate":"2021/10/18",
+           "titleimg": "assets/img/best_of_brands.webp",
+            "cardimg": [
+               {
+                   "img": "assets/img/best_of_brands_1.webp"
+               },
+               {
+                   "img": "assets/img/best_of_brands_2.webp"
+               },
+               {
+                   "img": "assets/img/best_of_brands_3.webp"
+               },
+               {
+                   "img": "assets/img/best_of_brands_4.webp"
+               },
+               {
+                   "img": "assets/img/best_of_brands_5.jpg"
+               },
+               {
+                   "img": "assets/img/best_of_brands_6.webp"
+               },
+               {
+                   "img": "assets/img/best_of_brands_7.webp"
+               },
+               {
+                   "img": "assets/img/best_of_brands_8.webp"
+               },
+               {
+                   "img": "assets/img/best_of_brands_9.webp"
+               },
+               {
+                   "img": "assets/img/best_of_brands_10.webp"
+               }
+           ]
+       },
+       {
+           "id": "1005",
+           "offername": "Navratri_offer",
+           "type": "category",
+           "startdate":"2021/10/10",
+           "enddate":"2021/10/18",
+           "titleimg": "assets/img/best_of_innerwear.webp",
+            "cardimg": [
+               {
+                   "img": "assets/img/best_of_innerwear_1.png"
+               },
+               {
+                   "img": "assets/img/best_of_innerwear_2.png"
+               },
+               {
+                   "img": "assets/img/best_of_innerwear_3.png"
+               },
+               {
+                   "img": "assets/img/best_of_innerwear_4.png"
+               }
+           ]
+       },
+       {
+           "id": "1006",
+           "offername": "Navratri_offer",
+           "type": "category",
+           "startdate":"2021/10/10",
+           "enddate":"2021/10/18",
+           "titleimg": "assets/img/best_of_kidswear.webp",
+            "cardimg": [
+               {
+                   "img": "assets/img/best_of_kidswear_1.png"
+               },
+               {
+                   "img": "assets/img/best_of_kidswear_2.png"
+               },
+               {
+                   "img": "assets/img/best_of_kidswear_3.png"
+               },
+               {
+                   "img": "assets/img/best_of_kidswear_4.png"
+               },
+               {
+                   "img": "assets/img/best_of_kidswear_5.png"
+               }
+           ]
+       },
+       {
+           "id": "1007",
+           "offername": "Navratri_offer",
+           "type": "category",
+           "startdate":"2021/10/10",
+           "enddate":"2021/10/18",
+           "titleimg": "assets/img/best_of_beauty.webp",
+            "cardimg": [
+               {
+                   "img": "assets/img/best_of_beauty_1.png"
+               },
+               {
+                   "img": "assets/img/best_of_beauty_2.png"
+               },
+               {
+                   "img": "assets/img/best_of_beauty_3.png"
+               },
+               {
+                   "img": "assets/img/best_of_beauty_4.png"
+               },
+               {
+                   "img": "assets/img/best_of_beauty_5.png"
+               }
+           ]
+       },
+       {
+           "id": "1008",
+           "offername": "Navratri_offer",
+           "type": "category",
+           "startdate":"2021/10/10",
+           "enddate":"2021/10/18",
+           "titleimg": "assets/img/top_styles_for_you.webp",
+            "cardimg": [
+               {
+                   "img": "assets/img/top_style_1.png"
+               },
+               {
+                   "img": "assets/img/top_style_2.png"
+               },
+               {
+                   "img": "assets/img/top_style_3.png"
+               },
+               {
+                   "img": "assets/img/top_style_4.png"
+               },
+               {
+                   "img": "assets/img/top_style_5.png"
+               },
+               {
+                   "img": "assets/img/top_style_6.png"
+               },
+               {
+                   "img": "assets/img/top_style_7.png"
+               },
+               {
+                   "img": "assets/img/top_style_8.png"
+               },
+               {
+                   "img": "assets/img/top_style_9.png"
+               },
+               {
+                   "img": "assets/img/top_style_10.png"
+               }
+           ]
+       },
+       {
+           "id": "1009",
+           "offername": "Navratri_offer",
+           "type": "offer-static",
+           "startdate":"2021/10/10",
+           "enddate":"2021/10/18",
+           "img": "assets/img/free_shipping.webp"
+       },
+       {
+            "id": "1010",
+            "offername": "Navratri_offer",
+            "type": "offer-static",
+            "startdate":"2021/10/10",
+            "enddate":"2021/10/18",
+            "img": "assets/img/offer.png"
+        },
+        {
+            "id": "1011",
+            "offername": "Navratri_offer",
+            "type": "offer-carousel",
+            "startdate":"2021/10/10",
+            "enddate":"2021/10/18",
+            "carouselimg": [
+                {
+                    "img": "Assets/img/icici_offer.webp"
+                },
+                {
+                    "img": "Assets/img/kotak_offer.jpg"
+                }
+            ]
+        }
+    ]
+}

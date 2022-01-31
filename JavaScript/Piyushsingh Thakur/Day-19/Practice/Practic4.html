@@ -1,0 +1,44 @@
+<!-- Using Function call create employee object with field Name, Address and Designation and pass it to function. -->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JS Day 19 Practice</title>
+    <link rel="stylesheet" href="../../bootstrap.css">
+</head>
+
+<body>
+    <h1 class="display-4 text-center bg-info text-white p-3">Function Call Practice</h1>
+    <div class="container bg-light">
+
+        <p class="text-white bg-dark" id="demo"></p>
+        <p class="text-white bg-dark" id="demo1"></p>
+    </div>
+
+    <script>
+        var employee = {
+            employeeDetails: function () {
+                return this.name + " " + this.address + " " + this.designation;
+            }
+        }
+        var employee1 = {
+            name: "Piyush",
+            address: "Ahmedabad",
+            designation: "Trainee engineer"
+        }
+        var employee2 = {
+            name: "Hit",
+            address: "Ahmedabad",
+            designation: " Engineer"
+        }
+        x = employee.employeeDetails.call(employee1);
+        y = employee.employeeDetails.call(employee2)
+        document.getElementById("demo").innerHTML = x;
+        document.getElementById("demo1").innerHTML = y;
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,43 @@
+[{
+        "Id": 1,
+        "Offer_Img": "https://docs.google.com/uc?id=1lAvxUCwWzpr3i2PHgQwBiXSlZeLTIohv",
+        "Offer_Title": "Amazon Pay - Get 25% back upto Rs.30",
+        "Offer_Discription": "Get 25% back upto Rs.30"
+    },
+    {
+        "Id": 2,
+        "Offer_Img": "https://docs.google.com/uc?id=1bdWk3MJ89NOHicOPuXMrHfQAs4Kvw9_t",
+        "Offer_Title": "Paytm Wallet - Up to ₹500 cashback when you pay via Paytm wallet, assured cashback of ₹30",
+        "Offer_Discription": "Up to ₹500 cashback when you pay via Paytm wallet, assured cashback of ₹30"
+    },
+    {
+        "Id": 3,
+        "Offer_Img": "https://docs.google.com/uc?id=1h2v4_504RW4jGPZ-a17felSmczzzq_vz",
+        "Offer_Title": "Airtel - Get 15% cashback upto ₹150 on min transaction of Rs. 600, for first time users",
+        "Offer_Discription": "Get 15% cashback upto ₹150 on min transaction of Rs. 600, for first time users"
+    },
+    {
+        "Id": 4,
+        "Offer_Img": "https://docs.google.com/uc?id=1rqMQ6eufeyd-4Uv2oHR8WdQjnSY4bBSs",
+        "Offer_Title": "Freecharge - Additional cashback up to ₹100 using Freecharge Pay Later or Freecharge Wallet",
+        "Offer_Discription": "Get additional cashback up to ₹100 using Freecharge Pay Later or Freecharge Wallet"
+    },
+    {
+        "Id": 5,
+        "Offer_Img": "https://docs.google.com/uc?id=1Czx8XdWxl7jETOoFKmsGYQscNJRwiWhV",
+        "Offer_Title": "Mobikwik - Get up to Rs.350 Cashback on your transaction with MobiKwik @ Dominos!",
+        "Offer_Discription": "Get up to Rs.350 Cashback on your transaction with MobiKwik @ Dominos!"
+    },
+    {
+        "Id": 6,
+        "Offer_Img": "https://docs.google.com/uc?id=1MB0kHgxKcsvkgQKJQDKolH_sNUvoib0A",
+        "Offer_Title": "Payzapp - Get 10% Cashback upto 50 with min txn of 250 on orders via Payzapp or HDFC Payzapp linked cards.",
+        "Offer_Discription": "Get 10% Cashback upto 50 with min txn of 250 on orders via Payzapp or HDFC Payzapp linked cards"
+    },
+    {
+        "Id": 7,
+        "Offer_Img": "https://docs.google.com/uc?id=1gdDlKxuPAT_xUFMVGVJLZahV835HOLKy",
+        "Offer_Title": "AU Bank - Get 20% CashBack* upto ₹200 on minimum transaction of ₹500",
+        "Offer_Discription": "Get 20% CashBack* upto ₹200 on minimum transaction of ₹500"
+    }
+]

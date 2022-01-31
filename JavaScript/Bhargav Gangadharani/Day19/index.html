@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-F3w7mX95PdgyTmZZMECAngseQB83DfGTowi0iMjiWaeVhAn4FJkqJByhZMI3AhiU" crossorigin="anonymous">
+    <title>Practice</title>
+</head>
+
+<body>
+    <div class="container bg-light border border-secondary rounded mt-5 p-5 text-center" style="overflow: auto;">
+        <p class="display-4">Practice Task 1</p>
+        <p class="lead">Using Function Expression, find the area of circle </p>
+        <form>
+            <label class="form-control-label" for="AreaCircle">Enter radius : </label>
+            <input class="form-control w-25 mx-auto" id="radius" type="text">
+        </form>
+        <p id="ans1" class="text-dark"></p>
+        <button class="btn btn-primary" onclick="areaCircle(document.forms[0].radius, document.getElementById('ans1'))">Find Area of Circle</button>
+    </div>
+
+    <div class="container bg-light border border-secondary rounded mt-5 p-5 text-center" style="overflow: auto;">
+        <p class="display-4">Practice Task 2</p>
+        <p class="lead">Using Function Constructor, find the area of rectangle </p>
+        <form>
+            <label class="form-control-label" for="Height">Enter Height : </label>
+            <input class="form-control w-25 mx-auto" id="height" type="text">
+            <label class="form-control-label" for="Width">Enter Width : </label>
+            <input class="form-control w-25 mx-auto" id="width" type="text">
+        </form>
+        <p id="ans2" class="text-dark"></p>
+        <button class="btn btn-primary" onclick="areaRect(document.forms[1].height,document.forms[1].width)">Find Area of Rectangle</button>
+    </div>
+
+    <div class="container bg-light border border-secondary rounded mt-5 p-5 text-center" style="overflow: auto;">
+        <p class="display-4">Practice Task 3</p>
+        <p class="lead"><b>Hoisting : </b>Hoisting allows to declare the function after the calling of that function. It will automatically define the function firest and declare it later. </p>
+        <p id="ans3" class="text-dark"></p>
+        <button class="btn btn-primary" onclick="ques3(document.getElementById('ans3'))">Example</button>
+    </div>
+
+    <div class="container bg-light border border-secondary rounded mt-5 p-5 text-center" style="overflow: auto;">
+        <p class="display-4">Practice Task 4</p>
+        <p class="lead">Using Function call create employee object with field Name, Address and Designation and pass it to function. </p>
+        <p id="ans4" class="text-dark"></p>
+        <p id="ans5" class="text-dark"></p>
+        <button class="btn btn-primary" onclick="empObj()">Example</button>
+    </div>
+
+    <div class="container bg-light border border-secondary rounded mt-5 p-5 text-center" style="overflow: auto;">
+        <p class="display-4">Practice Task 5</p>
+        <p class="lead">Using Function Apply pass employee object to a function defined in the function.. </p>
+        <p id="ans6" class="text-dark"></p>
+        <p id="ans7" class="text-dark"></p>
+        <button class="btn btn-primary" onclick="empObj2()">Example</button>
+    </div>
+
+    <div class="container bg-light border border-secondary rounded mt-5 p-5 text-center" style="overflow: auto;">
+        <p class="display-4">Practice Task 6</p>
+        <p class="lead"> <b>Closure: </b>Closure means that an inner function always has access to the variables and parameters of its outer function, even after the outer function has returned.  
+            it allows you to bind a variable to an execution context.</p>
+        <p id="displaycounter" class="text-dark"></p>
+        <button class="btn btn-primary" onclick="return closure()"> Count </button>
+    </div>
+
+   
+    
+    <script src="Assets/script.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-/bQdsTh/da6pkI1MST/rWKFNjaCP5gBSY4sEBT38Q/9RBh9AH40zEOg7Hlq2THRZ" crossorigin="anonymous"></script>
+</body>
+
+</html>

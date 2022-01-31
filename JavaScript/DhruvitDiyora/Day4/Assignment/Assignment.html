@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Javascript Day 4 Assignment</title>
+    <!-- CSS only -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-F3w7mX95PdgyTmZZMECAngseQB83DfGTowi0iMjiWaeVhAn4FJkqJByhZMI3AhiU" crossorigin="anonymous">
+</head>
+
+<body>
+    <div class="container">
+        <div class="row">
+            <div class="col-auto mx-auto">
+                <h2 class="text-decoration-underline text-center mt-5">Assignment1 (Day 18)</h2>
+                <div class="border border-6 border-primary p-3 mt-5">
+                    <div id="instructions">
+                        <p class="fs-4 text-center text-danger text-decoration-underline fw-bolder">Instructions</p>
+                        <ul>
+                            <li>Time Duration: 3 Hours.</li>
+                        </ul>
+                        <button type="button" class="btn btn-success mx-auto mt-4 d-flex" onclick="examStart()">Start
+                            Exam</button>
+                    </div>
+                    <div id="questionPaper" class="d-none">
+                        <div id="timer" class="fs-5 text-end"></div>
+                        <h3 class="text-center mb-3 text-info">Question</h3>
+                        <table>
+                            <thead>
+                                <tr>
+                                    <p class="fs-5">
+                                        This is question
+                                    </p>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td class="p-3"><input type="radio" name="answers" value="answer"
+                                            class="ms-0 me-3">Answer</td>
+                                    <td class="p-3"><input type="radio" name="answers" value="answer1"
+                                            class="ms-0 me-3">Another Answer</td>
+                                </tr>
+                                <tr>
+                                    <td class="p-3"><input type="radio" name="answers" value="answer2"
+                                            class="ms-0 me-3">Same looking answer</td>
+                                    <td class="p-3"><input type="radio" name="answers" value="answer3"
+                                            class="ms-0 me-3">probably the answer</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div id="afterExam" class="d-none fs-3 text-info">
+                        <h3 class="text-center mb-3 text-success"></h3>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+    </div>
+
+    <script src="./Assignment.js">
+    </script>
+    <!-- JavaScript Bundle with Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-/bQdsTh/da6pkI1MST/rWKFNjaCP5gBSY4sEBT38Q/9RBh9AH40zEOg7Hlq2THRZ" crossorigin="anonymous">
+    </script>
+</body>
+
+</html>

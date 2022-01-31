@@ -1,0 +1,91 @@
+/* Position the <h1> element to always be 50px from the top, and 50px from the right, relative to the window/frame edges */
+
+h1 {
+  position: fixed;
+  top: 50px;
+  right: 50px;
+  color: red;
+}
+
+/* Position the <h1> element 20px left, and 30px down, relative to its normal position. */
+h2 {
+  position: relative;
+  top: 30px;
+  left: -20px;
+  color: red;
+}
+/* Position the <h1> element 50px from the left, and 100px from the top, relative to the HTML page. */
+h3 {
+    position: absolute;
+    top: 100px;
+    left: 50px;
+    color: red;
+  }
+  /* Position the <img> element behind the text. */
+  /* img {
+    position: absolute;
+    left: 0px;
+    top: 0px;
+    z-index: -1;
+  } */
+  /* Position the element with the "topleft" class 30px from the left, and 15px from the top, relative to its container. */
+  .container {
+    position: relative;
+  }
+  
+  .topleft {
+    position: absolute;
+    left: 30px;
+    top: 15px;
+    font-size: 18px;
+  }
+/*   
+  img {
+    width: 100%;
+    height: auto;
+    opacity: 0.3;
+  } */
+div.sticky {
+  position: -webkit-sticky;
+  position: sticky;
+  top: 0;
+  padding: 5px;
+  background-color: #cae8ca;
+  border: 2px solid #4CAF50;
+} 
+
+/* overflow */
+#Overflow{
+    background-color: #eee;
+    width: 200px;
+    height: 50px;
+    border: 1px dotted black;
+    overflow: visible;
+}
+#Overflow2{
+    background-color: #eee;
+    width: 200px;
+    height: 50px;
+    border: 1px dotted black;
+    overflow: scroll;
+}
+#Overflow3{
+    background-color: #eee;
+    width: 200px;
+    height: 50px;
+    border: 1px dotted black;
+    overflow: hidden;
+}
+#Overflow4{
+    background-color: #eee;
+    width: 200px;
+    height: 50px;
+    border: 1px dotted black;
+    overflow: auto;
+} 
+/* Float */
+img{
+    height: 250px;
+    width: 200px;
+    float: right;
+}

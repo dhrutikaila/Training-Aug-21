@@ -1,0 +1,84 @@
+<div class="container">
+    <div class="w-75 bg-secondary pt-1 pb-1 mx-auto">
+        <p class="text-center display-4">Sign Up</p>
+    </div>
+    <div class="w-75 pt-1 pb-1 mx-auto">
+        <form action="" #f="ngForm" (ngSubmit)="onSubmit()">
+            <div class="row" ngModelGroup="userName" #userName = "ngModelGroup">
+                <div class="form-group col-lg-6 col-md-4 mt-3">
+                    <label for="Firstname" class="form-label">First Name </label>
+                    <input type="text" class="form-control" id="Firstname" ngModel name="firstname" required #firstname="ngModel">  
+                    <span *ngIf="!firstname.valid && firstname.touched" style="color: red;">Please enter a First name !</span>
+                </div>
+              
+                <div class="form-group col-lg-6 col-md-4 mt-3">
+                    <label for="Lastname" class="form-label">Last Name </label>
+                    <input type="text" class="form-control" id="Lastname"ngModel name="lastname" required #lastname= "ngModel">
+                </div>
+                <span *ngIf="!lastname.valid && lastname.touched" style="color: red;">Please enter a Last name !</span>
+            </div>
+            <br>
+            <button class="btn btn-secondary" type="button" (click)="suggest()">Username Suggest</button>
+        
+            <div class="row">
+                <div class="form-group col-lg-6 col-md-4 mt-3">
+                    <label for="phoneno" class="form-label">Phone Number</label>
+                    <input type="text" class="form-control" id="phoneno" ngModel name="phonenumber" required #phoeno="ngModel">
+                    <span *ngIf="!phoeno.valid && phoeno.touched" style="color: red;">Please enter a phone number !</span>
+                </div>
+                <div class="form-group col-lg-6 col-md-4 mt-3">
+                    <label for="email" class="form-label">Email</label>
+                    <input type="text" class="form-control" id="email" ngModel name="email" required #email="ngModel">
+                    <span *ngIf="!email.valid && email.touched" style="color: red;">Please enter a email !</span>
+                </div>
+            </div>
+            <div class="row">
+                <div class="form-group col-lg-6 col-md-4 mt-3">
+                    <label for="password" class="form-label">Password</label>
+                    <input type="password" class="form-control" id="password" ngModel name="password" required #password="ngModel">
+                    <span *ngIf="!password.valid && password.touched" style="color: red;">Please enter a Passsword !</span>
+                </div>
+                <div class="form-group col-lg-6 col-md-4 mt-3">
+                    <label for="cpassword" class="form-label">Confirm Password</label>
+                    <input type="password" class="form-control" id="cpassword" ngModel name="cpassword" required #cpassword="ngModel">
+                    <span *ngIf="!cpassword.valid && cpassword.touched" style="color: red;">Please enter a confirm Passsword !</span>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-lg-6 col-md-4 mt-3">
+                    Gender
+                    <div class="radio" *ngFor="let g of gender">
+                        <label for=""><input type="radio" name="gender" ngModel [value]="g" required>{{g}}</label>
+                    </div>
+                </div>
+                    <div class="form-group col-lg-6 col-md-4 mt-3 form-group">Address
+                        <textarea name="address" rows="3"  class="form-control"></textarea>
+                    </div>
+                    <button class="btn btn-secondary mx-auto mt-3" type="submit" style="width: 100px;" >submit</button>
+            </div>
+        </form>
+    </div>
+    <table class="table" *ngIf="submitted">
+        <thead>
+            <tr>
+              <th scope="col">First Name</th>
+              <th scope="col">Last Name</th>
+              <th scope="col">Email</th>
+              <th scope="col">Phone Number</th>
+              <th scope="col">Gender</th>
+              <th scope="col">Address</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+                <td>{{student.fname}}</td> 
+                <td>{{student.lname}}</td>
+                <td>{{student.email}}</td>
+                <td>{{student.phoneno}}</td>
+                <td>{{student.gender}}</td>
+                <td>{{student.address}}</td>
+            </tr>
+          </tbody>
+    </table>
+    </div>
+

@@ -1,0 +1,43 @@
+<h4>login-component works!</h4>
+
+<!-- Create Login Component which validate a user with below credential username=admin, password=admin -->
+
+
+ <div class="row g-3 align-items-center"> 
+        <h1>login</h1>        
+        <div class="col-4">
+          <label for="exampleInputEmail1" class="form-label">Name</label>
+          <input type="text" class="form-control" id="Name1" [(ngModel)]="Name">
+        </div>
+        <div class="col-4">
+          <label for="exampleInputPassword1" class="form-label">Password</label>
+          <input type="password" class="form-control" id="Pass1"[(ngModel)]="Pass">
+        </div>
+        <div class="col-12">
+        <button type="submit"  (click)="validation()" class="btn btn-primary" >Verify</button>
+      </div>
+        <div class="col-auto">
+          <span id="passwordHelpInline" class="form-text">
+            <p>{{valid}}</p>
+          </span>
+        </div>
+        
+      </div>
+
+    
+
+      <!-- 
+    <div class="row g-3 align-items-center">
+        <div class="col-auto">
+          <label for="" class="col-form-label">Enter Name To interpolate</label>
+        </div>
+        <div class="col-auto"><input type="text" class="form-control" [(ngModel)]="name">
+        </div>
+        <div class="col-auto">
+          <span id="" class="form-text">
+           
+          </span>
+
+          <p>{{msg}}</p>
+        </div>
+      </div> -->

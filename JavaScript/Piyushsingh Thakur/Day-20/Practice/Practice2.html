@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../../bootstrap.css">
+    <title>JS Day20 Practice2</title>
+</head>
+<center>
+
+    <body>
+        <div class="conatiner m-5">
+            <button class="btn btn-primary" onclick="practice('data.json')">Click to read file (view result in console)</button>
+        </div>
+    </body>
+</center>
+<script>
+    async function practice(fileName) {
+        let x = await fetch(fileName);
+        let y = await x.json();
+        
+        console.log(y);
+        let z=JSON.stringify(y)
+        console.log(z);
+    }
+</script>
+
+</html>

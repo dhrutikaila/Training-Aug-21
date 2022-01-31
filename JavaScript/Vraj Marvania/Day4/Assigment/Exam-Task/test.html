@@ -1,0 +1,113 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <!-- Required meta tags -->
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <!-- Bootstrap CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+
+  <title>test page</title>
+</head>
+
+<body>
+  <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+    <div class="container-fluid">
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarTogglerDemo03"
+        aria-controls="navbarTogglerDemo03" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <a class="navbar-brand" href="#"><img
+          src="https://upload.wikimedia.org/wikipedia/en/thumb/7/7a/University_of_Mumbai_coat_of_arms.svg/1200px-University_of_Mumbai_coat_of_arms.svg.png"
+          height="50px"></a>
+      <h2 class="text-light">University of Mumbai</h2>
+
+      <div class="collapse navbar-collapse" id="navbarTogglerDemo03">
+        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+        </ul>
+        <div class="d-flex text-light " style="    margin-right: 15px;                ">
+          <h3 id="hour" class="text-light">00</h3>
+          <h3>:</h3>
+          <h3 id="min" class="text-light">00</h3>
+          <h3>:</h3>
+          <h3 id="sec" class="text-light">00</h3>
+
+
+        </div>
+        <div class="d-flex text-light">
+
+
+          <button class="btn btn-danger " onclick="closetest()" type="btn">submit Exam</button>
+
+        </div>
+      </div>
+    </div>
+  </nav>
+  <nav class="navbar navbar-light bg-light">
+    <div class="container-fluid">
+      <h2 class="text-block">JavaScript Exam </h2>
+      <div class="d-flex">
+        <h2 class="">Subject-Code:EF23435</h2>
+
+      </div>
+    </div>
+  </nav>
+  <div class="card m-5 bg-dark text-light">
+    <div class="card-header  text-center">
+      <h5 class="card-title">JS EXAM</h5>
+    </div>
+    <div class="card-body">
+      <form>
+        <ul class="quiz">
+          <li>
+            <h4>How many letters are there in "JS"?</h4>
+            <ul class="choices">
+              <li><label><input type="radio" name="question0" value="A"><span>2</span></label></li>
+              <li><label><input type="radio" name="question0" value="B"><span>1</span></label></li>
+              <li><label><input type="radio" name="question0" value="C"><span>3</span></label></li>
+              <li><label><input type="radio" name="question0" value="D"><span>4</span></label></li>
+            </ul>
+          </li>
+          <li>
+            <h4>How many letters are there in "BMX"?</h4>
+            <ul class="choices">
+              <li><label><input type="radio" name="question1" value="A"><span>2</span></label></li>
+              <li><label><input type="radio" name="question1" value="B"><span>1</span></label></li>
+              <li><label><input type="radio" name="question1" value="C"><span>3</span></label></li>
+              <li><label><input type="radio" name="question1" value="D"><span>4</span></label></li>
+            </ul>
+          </li>
+          <li>
+            <h4>How many letters are there in "A"?</h4>
+            <ul class="choices">
+              <li><label><input type="radio" name="question2" value="A"><span>2</span></label></li>
+              <li><label><input type="radio" name="question2" value="B"><span>1</span></label></li>
+              <li><label><input type="radio" name="question2" value="C"><span>3</span></label></li>
+              <li><label><input type="radio" name="question2" value="D"><span>4</span></label></li>
+            </ul>
+          </li>
+        </ul>
+      </form>
+    </div>
+  </div>
+
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+    crossorigin="anonymous"></script>
+
+  <!-- Option 2: Separate Popper and Bootstrap JS -->
+  <!--
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js" integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js" integrity="sha384-cVKIPhGWiC2Al4u+LWgxfKTRIcfu0JTxR+EQDz/bgldoEyl4H0zUF0QKbrJ0EcQF" crossorigin="anonymous"></script>
+    -->
+
+  <script src="script.js">
+  </script>
+  <script>timers();</script>
+</body>
+
+</html>

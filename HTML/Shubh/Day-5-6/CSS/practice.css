@@ -1,0 +1,74 @@
+    #a {
+        border-style: dashed;
+        border-color: blue;
+    }
+    @media screen and (max-width: 500px) {
+        #a {
+            border-style: dashed;
+            border-color: red;                
+        }
+    }
+    #b {
+        border-style: solid;
+        border-color: cyan;
+        background-color: greenyellow;
+        padding: 10px 10px;
+    }
+    @media only screen and (min-width: 500px) {
+        #b {
+        border-style: solid;
+        border-color: red;
+        background-color: skyblue;
+        padding: 10px 10px;
+    }
+}
+    @media only screen and (min-width: 7800px) {
+        #b {
+        border-style: solid;
+        border-color: black;
+        background-color: tan;
+        padding: 10px 10px;
+    }
+}
+    @media only screen and (min-width: 3000px) {
+        #b {
+        border-style: solid;
+        border-color: green;
+        background-color: darkblue;
+        color: oldlace;
+        padding: 10px 10px;
+    }
+}
+    @media only screen and (min-width: 1000px) {
+        #b {
+        border-style: solid;
+        border-color: pink;
+        background-color: navy;
+        color: oldlace;
+        padding: 10px 10px;
+    }
+}
+    #c {
+            border-style: solid;
+            border-color: blue;
+            background-color: lightseagreen;
+            padding: 10px 10px;
+        }
+    @media screen and (min-width: 0px) and (max-width: 400px) {
+        #c { display: block; }
+        }
+
+    @media screen and (min-width: 401px) and (max-width: 1024px) {
+        #c { display: none; } 
+        }
+    #d {
+        border-style: double;
+        border-color: gray;
+        background-color: greenyellow;
+        padding: 10px 10px;
+    }
+    @media screen and (min-width: 0px) and (max-width: 400px) {
+        #d { font-size: 55px; 
+            color: white;
+        }
+        }

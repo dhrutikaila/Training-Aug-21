@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Practice</title>
+    <link href="../assets/css/bootstrap.min.css" rel="stylesheet" />
+</head>
+<body>
+    <div class="container">
+        <div class="h3 text-center my-3">Callbacks</div>
+        <div id="display"></div>
+        <div id="dis"></div>
+    </div>
+    <script src="../assets/js/bootstrap.min.js"></script>
+    <script>
+        function display(text){
+            document.getElementById('display').innerHTML = text;
+        }
+        function add(a,b,callback){
+            let c = a +b
+            callback(c)
+        }
+        let a = 10, b = 20;
+        add(a,b,display);
+
+        // difference between let and var
+
+        var d = 50;
+        let e = 5;
+        {
+            var d = 100;
+            let e = 10;
+            console.log(d); 
+            console.log(e); 
+        }
+
+        // Asynchronous practice
+        
+        console.log(d);
+        console.log(e);
+
+        setTimeout(asyncDemo, 30000);
+        function asyncDemo(){
+            document.write('<h1>Hello World!');
+        }
+        
+        setTimeout(function() { myFunction('<h1>hey</h1>');}, 3000);
+        function myFunction(value){
+            document.getElementById('dis').innerHTML = value;
+        }
+
+        setInterval(repeat, 1000)
+        function repeat(){
+            console.log('hi');
+        }
+
+        let str = "abc  bca";
+        console.log(typeof(str));
+        console.log(str.split('').reverse().join(''));
+
+    </script>
+</body>  
+</html>

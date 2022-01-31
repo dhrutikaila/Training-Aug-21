@@ -1,0 +1,159 @@
+<!-- Display Product information in Grid format with AddToCart option. 
+    once a user click on AddtoCart button should be stored in local storage.
+     Click on cart summary will display that data into console.
+ProductID	ProductName	Price	Quantity	 	 
+1	Cheese	100	1	Add to Cart	 
+2	Pen	150	2	Add to Cart	 
+3	Butter	100	1	Add to Cart	 
+4	Pencil	10	1	Add to Cart	 
+Cart Summary -->
+
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+
+    <title>Assignment</title>
+
+   
+
+</head>
+
+<body onload="getdata()">
+
+    <div class="container  mt-3  " id="maindiv">
+    
+        <div id="mydata" class="border mt-3">
+
+            <div class="row m-2">
+                <div class="col border text-center">ProductID</div>
+                <div class="col border text-center">ProductName</div>
+                <div class="col border text-center">Price</div>
+                <div class="col border text-center">Quantity</div>
+                <div class="col border text-center">Add</div>
+            </div>
+
+        </div>
+        
+            <button type="submit" class="btn btn-secondary m-2" onclick="summary()">Cart Summary</button>
+
+        </div>
+    </div>
+
+
+    <script>
+
+        function getdata(getbtn) {
+            fetch("http://127.0.0.1:5500/Day6/Assignment/Assignment.json")
+            .then((result) => {
+                    return result.json();
+                }
+            ).then(
+                (a) => {
+                    var data = JSON.stringify(a.Products)
+                    localStorage.setItem("Productsdata", data);
+                }
+            )
+            
+            localStorage.setItem("cartadd", "")
+
+            var div = document.getElementById("mydata")
+
+            var products = JSON.parse(localStorage.getItem("Productsdata"))
+
+            for (var i in products) {
+
+                var id = document.createTextNode(products[i].ProductID)
+                var name = document.createTextNode(products[i].ProductName)
+                var price = document.createTextNode(products[i].Price)
+                var quantity = document.createTextNode(products[i].Quantity)
+                var add = document.createTextNode("Add to Cart")
+
+                var cartbtn = document.createElement("button")
+                cartbtn.style.margin = "3px"
+                cartbtn.setAttribute("id", "btn" + i)
+                cartbtn.setAttribute("class", "btn btn-outline-primary")
+                var cartbtnid = "addtocart(" + (parseInt(i) + 1) + ")"
+                cartbtn.setAttribute("onclick", cartbtnid)
+                cartbtn.appendChild(add)
+
+                var row = document.createElement("div")
+                row.setAttribute("class", "row m-2")
+
+                var c1 = document.createElement("div")
+                c1.setAttribute("class", "col border text-center")
+
+                var c2 = document.createElement("div")
+                c2.setAttribute("class", "col border text-center")
+
+                var c3 = document.createElement("div")
+                c3.setAttribute("class", "col border text-center")
+
+                var c4 = document.createElement("div")
+                c4.setAttribute("class", "col border text-center")
+
+                var c5 = document.createElement("div")
+                c5.setAttribute("class", "col border text-center")
+
+                c1.appendChild(id)
+                c2.appendChild(name)
+                c3.appendChild(price)
+                c4.appendChild(quantity)
+                c5.appendChild(cartbtn)
+
+                row.appendChild(c1)
+                row.appendChild(c2)
+                row.appendChild(c3)
+                row.appendChild(c4)
+                row.appendChild(c5)
+
+                div.appendChild(row)
+            }
+        }
+
+
+
+        function addtocart(id) {
+            var products = JSON.parse(localStorage.getItem("Productsdata"))
+            var insertdata = localStorage.getItem("cartadd")
+            for (i in products) {
+                if (products[i].ProductID == parseInt(id)) {
+                    localStorage.setItem("cartadd", insertdata + products[i].ProductID + ",")
+                }
+            }
+        }
+
+        function summary() {
+
+            var products = JSON.parse(localStorage.getItem("Productsdata"))
+        
+            var data = localStorage.getItem("cartadd")
+            var array = data.split(",")
+
+            for (i in products) {
+                if (array.includes(products[i].ProductID)) {
+                    console.log("ProductID : " + products[i].ProductID +
+                               ", ProductName : " + products[i].ProductName +
+                             ", Price : " + products[i].Price +
+                             ", Quantity : " + products[i].Quantity 
+                       
+                    )
+            
+                }
+
+            }
+
+        }
+    </script>
+
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+        crossorigin="anonymous"></script>
+
+</body>
+
+</html>

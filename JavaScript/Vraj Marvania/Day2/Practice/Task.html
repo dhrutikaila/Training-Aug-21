@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        // Write a JavaScript function to check whether a string is blank or not
+
+            function IsStr(name) {
+                if (name.length > 0) {
+                    console.log("Is Not Blank String");
+                }
+                else {
+                    console.log("Is a Blank String");
+                }
+            }
+
+            // function call
+            var name = "";
+            IsStr(name);
+
+        // Write a JavaScript function to split a string and convert it into an array of words
+            function convert_Str_TO_Words(name) {
+                console.log(name.split(" "))
+            }
+
+            // function call
+            var name = "vraj rajeshbhai marvania"
+            convert_Str_TO_Words(name);
+
+
+        // Write a JavaScript function to extract a specified number of characters from a string.
+            function extract_Str(data, start, charNO) {
+                return (data.substr(start, charNO))
+            }
+
+            // function call
+
+            var data = "hi my name is vraj";
+            console.log(extract_Str(data, 2, 6))
+
+
+        // Write a JavaScript function to get the current date
+            function Today_Date() {
+                var d = new Date();
+                return d;
+            }
+            console.log("current date is :" + Today_Date());
+
+        // Try some operation with list like push, pop, shifting, deleting element*/
+
+            var info = ['java', 'python', 'C++', 'C', 'js']
+            var info2 = ['sql', 'css']
+            console.log(info)
+
+            // pop
+            info.pop()
+            console.log(info)
+
+            // push
+            info.push("html")
+            console.log(info)
+
+            // shift
+            info.shift()
+            console.log(info)
+
+            // unshift
+            info.unshift("Django")
+            console.log(info)
+
+            // delete
+            delete info[2]
+            // empty at 2nd 
+            console.log(info)
+
+            // concat
+            info = info.concat(info2)
+            console.log(info)
+
+            // splice
+            // first parameter (2) defines the position 
+            // second parameter (0) defines how many elements should be removed.
+            // new elements to be added.
+
+            // splice() to add Elements
+            info.splice(2, 0, "node");
+            console.log(info)
+
+
+            // splice() to Remove Elements
+            info.splice(2, 1);
+            console.log(info)
+
+            // Slicing an Array    
+
+            console.log(info.slice(1, 3))
+
+            console.log(info.slice(-1))
+
+            // To String 
+            console.log(info.toString())
+
+
+            //array sort
+
+            info.sort();
+            console.log(info)
+
+            //array reverse
+
+            info.reverse();
+            console.log(info)
+    </script>
+</head>
+<body>
+</body>
+</html>

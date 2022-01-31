@@ -1,0 +1,52 @@
+@use "components/mixins" as *;
+// scss-docs-start gray-color-variables
+$white: #fff;
+$gray-100: #f8f9fa;
+$gray-200: #e9ecef;
+$gray-300: #dee2e6;
+$gray-400: #ced4da;
+$gray-500: #adb5bd;
+$gray-600: #6c757d;
+$gray-700: #495057;
+$gray-800: #343a40;
+$gray-900: #212529;
+$black: #111111;
+$teal: #00838c;
+$light-blue: #ddeaf8;
+// scss-docs-end gray-color-variables
+
+// * OVERRIDE BOOTSTRAP VARIABLES
+$nav-link-padding-y: 0;
+$nav-link-padding-x: 0;
+$navbar-padding-y: 0;
+$navbar-padding-x: 0;
+$navbar-toggler-padding-x: 0;
+$navbar-toggler-padding-y: 0;
+$navbar-toggler-font-size: 1.7rem;
+$navbar-light-toggler-icon-bg: url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'><path stroke='#{$black}' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/></svg>") !default;
+
+$accordion-border-width: 1px;
+$accordion-button-focus-border-color: none;
+$accordion-button-focus-box-shadow: none;
+$accordion-button-active-bg: $white;
+$accordion-button-active-color: $black;
+
+@font-face {
+  font-family: gdSherpa;
+  src: url(../fonts/gdsherpa-vf.woff2);
+}
+@font-face {
+  font-family: gd-sage;
+  src: url(../fonts/GDSage-Bold.woff2);
+  font-weight: bold;
+}
+
+:root {
+  margin: 0 !important;
+  padding: 0 !important;
+  font-family: "gdSherpa", Arial, sans-serif;
+  color: $black;
+}
+
+// * IMPORT BOOTSTRAP 5
+@import "../../node_modules/bootstrap/scss/bootstrap.scss";

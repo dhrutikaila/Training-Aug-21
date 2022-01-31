@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"> </script>
+</head>
+
+<body>
+    <h2> Welcome to the javaTpoint.com </h2>
+    <h3> It is an example of using the jQuery getJson() method </h3>
+    <p> Click the following button to fetch the data. </p>
+
+    <div id="data" style="background-color : lightgreen;"> </div>
+
+    <button> Click me </button>
+
+    <script>
+        $(document).ready(function () {
+            $("button").click(function (event) {
+                $.getJSON('Sample.json', function (student, status) {
+                    alert(" The followind data is fetched from the external .json file." + "\nName: " + student.name + "\nAge: " + student.age + "\nRoll.No.: " + student.rollno + "\nStandard: " + student.standard);
+                    $('#data').append('<h3> Student Details </h3>');
+                    $('#data').append('<p> Name: ' + student.name + '</p>');
+                    $('#data').append('<p>Age : ' + student.age + '</p>');
+                    $('#data').append('<p> Roll.No.: ' + student.rollno + '</p>');
+                    $('#data').append('<p> Standard: ' + student.standard + '</p>');
+                    $('#data').append('<p> Status: ' + status + '</p>');
+                });
+            });
+        });
+    </script>
+</body>
+
+</html>

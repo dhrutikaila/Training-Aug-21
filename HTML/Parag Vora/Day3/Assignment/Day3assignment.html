@@ -1,0 +1,108 @@
+<!-- Create Basic layout of the application which contain header, footer, leftbar and sidebar.
+ -->
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Layout of App</title>
+    <style>
+        .main {
+            width: 100%;
+            background-color: antiquewhite;
+            text-align: center;
+            border: 2px solid black;
+            margin-left: 10px;
+            margin-right: auto;
+            width: 98%;
+        }
+        
+        .nav-bar {
+            width: 100%;
+            background-color: beige;
+            text-align: center;
+            border: 2px solid black;
+            margin-top: 10px;
+            margin-left: 10px;
+            margin-right: 10px;
+            width: 98%;
+        }
+        
+        .container {
+            display: grid;
+            grid-template-columns: 1fr 4fr 1fr;
+            margin-top: 10px;
+        }
+        
+        .item-1 {
+            height: 300px;
+            background-color: aliceblue;
+            margin: 10px;
+            border: 2px solid black;
+            padding: 2px;
+            text-align: justify;
+            padding: 3px;
+        }
+        
+        .item-2 {
+            height: 300px;
+            background-color: rgb(247, 181, 230);
+            margin: 10px;
+            border: 2px solid black;
+            padding: 2px;
+            padding: 3px;
+            text-align: justify;
+        }
+        
+        .item-3 {
+            height: 300px;
+            background-color: rgb(238, 214, 214);
+            margin: 10px;
+            border: 2px solid black;
+            padding: 2px;
+            padding: 3px;
+            text-align: justify;
+        }
+        
+        .footer {
+            border: 2px solid black;
+            background-color: blanchedalmond;
+            text-align: center;
+            margin-left: 10px;
+            display: grid;
+            width: 99%;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="main">
+        <h1>header</h1>
+        <p>My supercool header</p>
+    </div>
+    <div class="nav-bar">
+        <h1>Navigation Menu</h1>
+    </div>
+    <div class="container">
+        <div class="item-1">
+            <h2>Left content</h2>
+            <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Aspernatur adipisci itaque, eius molestiae, inventore illo officia vel, vitae laborum corporis incidunt dolores vero earum! Sit nostrum suscipit quas fuga provident.</p>
+        </div>
+        <div class="item-2">
+            <h2>Main content</h2>
+            <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Aspernatur adipisci itaque, eius molestiae, inventore illo officia vel, vitae laborum corporis incidunt dolores vero earum! Sit nostrum suscipit quas fuga provident.</p>
+        </div>
+        <div class="item-3">
+            <h2>Right content</h2>
+            <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Aspernatur adipisci itaque, eius molestiae, inventore illo officia vel, vitae laborum corporis incidunt dolores vero earum! Sit nostrum suscipit quas fuga provident.</p>
+        </div>
+    </div>
+    <div class="footer">
+        <h2>footer</h2>
+    </div>
+</body>
+
+</html>

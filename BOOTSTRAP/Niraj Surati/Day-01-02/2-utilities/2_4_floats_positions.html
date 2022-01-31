@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>floats_positions</title>
+    <link href="../assets/css/bootstrap.min.css" rel="stylesheet">
+</head>
+<body>
+    <!-- navbar-start -->
+    <div class="container">
+        <div class="display-5 text-center">Float Positions</div>
+        <div class="container my-3">
+            <nav class="navbar nav navbar-expand-sm nav-pills nav-fill nav-justified "> 
+                <div class="nav-item dropdown mx-3">
+                    <button class="btn btn-primary  dropdown-toggle  w-100" id="nav-utilities-nav" data-bs-toggle="dropdown" data-bs-target="#nav-utilities">
+                        2: Utilities
+                    </button>
+                    <div class="dropdown-menu overflow-auto w-100" id="nav-utilities" >
+                        <a href="../2-utilities/2_2_basic_typography.html" class="dropdown-item">2.2 Basic Typography</a>
+                        <a href="../2-utilities/2_3_text_alignment.html" class="dropdown-item">2.3 Text Alignment </a>
+                        <a href="../2-utilities/2_4_floats_positions.html" class="dropdown-item">2.4 Floats & Position</a>
+                        <a href="../2-utilities/2_5_color.html"  class="dropdown-item">2.5 Colors & Background</a>
+                        <a href="../2-utilities/2_6_spacing.html"  class="dropdown-item">2.6 Spacing</a>
+                        <a href="../2-utilities/2_7_sizing.html"  class="dropdown-item">2.7 Sizing</a>
+                        <a href="../2-utilities/2_8_breakpoints.html"  class="dropdown-item">2.8 Breakpoints</a>
+                    </div>
+                </div> 
+                <div class="nav-item dropdown mx-3">
+                    <button class="btn btn-success dropdown-toggle w-100" id="nav-comp-nav" data-bs-toggle="dropdown">
+                        3: CSS Components
+                    </button>
+                    <div class="dropdown-menu  overflow-auto w-100">
+                        <a href="../3-componants/3_2_buttons.html" class="dropdown-item">3.2 Buttons</a>
+                        <a href="../3-componants/3_3_navbar.html" class="dropdown-item">3.3 Navbar</a>
+                        <a href="../3-componants/3_4_list-group.html" class="dropdown-item">3.4 List-group</a>
+                        <a href="../3-componants/3_5_Forms.html" class="dropdown-item">3.5 Forms</a>
+                        <a href="../3-componants/3_6_input_addons.html" class="dropdown-item">3.6 Input Addons</a>
+                        <a href="../3-componants/3_7_Alerts_progress_bar.html" class="dropdown-item">3.7 Alerts & Progressbar</a>
+                        <a href="../3-componants/3_8_tables_pagination.html" class="dropdown-item">3.8 Tables & Pagination</a>
+                        <a href="../3-componants/3_9_cards.html" class="dropdown-item">3.9 Cards</a>
+                    </div>
+                </div>    
+                <div class="nav-item dropdown mx-3">    
+                    <button class="btn btn-warning dropdown-toggle w-100" id="nav-grid-nav" data-bs-toggle="dropdown">
+                        4: Grid & Flexbox
+                    </button>
+                    <div class="dropdown-menu overflow-auto w-100">
+                        <a href="../4-Grid&Flexbox/4_2_grid_system.html" class="dropdown-item">4.2 Grid System</a>
+                        <a href="../4-Grid&Flexbox/4_3_grid_alignment.html" class="dropdown-item">4.2 Grid Alignment</a>
+                        <a href="../4-Grid&Flexbox/4_5_flexbox.html" class="dropdown-item">4.2 Flexbox</a>
+                        <a href="../4-Grid&Flexbox/4_6_automargin.html" class="dropdown-item">4.2 Auto Margin</a>
+                    </div>
+                </div>
+                <div class="nav-item dropdown mx-3">
+                    <button class="btn btn-danger dropdown-toggle w-100" id="nav-js-nav" data-bs-toggle="dropdown">
+                        5: javascript Widgets
+                    </button>
+                    <div class="dropdown-menu overflow-auto w-100">
+                        <a href="../5-javascript_widgets/5_2_carousel.html" class="dropdown-item">5.2 Carousel </a>
+                        <a href="../5-javascript_widgets/5_3_collapse.html" class="dropdown-item">5.3 Collapse </a>
+                        <a href="../5-javascript_widgets/5_4_tooltips.html" class="dropdown-item">5.4 Tooltips</a>
+                        <a href="../5-javascript_widgets/5_5_popovers.html" class="dropdown-item">5.5 Popovers</a>
+                        <a href="../5-javascript_widgets/5_6_modals.html" class="dropdown-item">5.6 Modals</a>
+                    </div>  
+                </div> 
+            </nav>
+        </div>
+        <hr class="text-secondary">
+    </div>
+    <!-- navbar-end -->
+    <div class="container">
+        <!-- Float -->
+        <div class="h3">Float</div>
+        <div class="float-start">Float Left</div>
+        <div class="float-end">Float Right</div>
+        <div class="float-none">Float None</div>
+        <hr>
+        <!-- Float with responsive -->
+        <div class="h3">Float with responsive</div>
+        <div class="h5">Float left with responsive</div>
+            <div class="float-sm-start">Lorem ipsum dolor sit amet.</div> <br>
+            <div class="float-md-start">Lorem ipsum dolor sit amet.</div> <br>
+            <div class="float-lg-start">Lorem ipsum dolor sit amet.</div> <br>
+            <div class="float-xl-start">Lorem ipsum dolor sit amet.</div> <br>
+        <div class="h5">Float right with responsive</div>
+            <div class="float-sm-end">Lorem ipsum dolor sit amet.</div> <br>
+            <div class="float-md-end">Lorem ipsum dolor sit amet.</div> <br>
+            <div class="float-lg-end">Lorem ipsum dolor sit amet.</div> <br>
+            <div class="float-xl-end">Lorem ipsum dolor sit amet.</div> <br>
+        <div class="h5">Float none with responsive</div>
+            <div class="float-sm-none">Lorem ipsum dolor sit amet.</div>
+            <div class="float-md-none">Lorem ipsum dolor sit amet.</div>
+            <div class="float-lg-none">Lorem ipsum dolor sit amet.</div>
+            <div class="float-xl-none">Lorem ipsum dolor sit amet.</div>
+        <!-- clearfix -->
+        <div class="h3">Clearfix</div>
+        <div class="bg-warning clearfix">
+            <button class="btn btn-primary float-start">Left</button>
+            <button class="btn btn-success float-end">Right</button>
+        </div>
+        <p class="lead">
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+            Perspiciatis aperiam mollitia sint sed placeat ratione nemo est,
+            laudantium odio minima eligendi culpa, dignissimos tempore eos soluta saepe at optio? 
+            Possimus.
+        </p>
+        <!-- fixed -->
+        <div class="h3">fixed</div>
+        <h4 class="fixed-top"> Fixed Top</h3>
+        <h4 class="fixed-bottom"> Fixed Bottom</h3>
+        <h4 class="sticky-top"> Sticky top</h3>
+        <p>
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Error ullam, laboriosam nesciunt ratione totam, perferendis id magni reiciendis amet qui distinctio optio maxime. Consequatur, atque! Labore vel odio non earum ratione, officiis perspiciatis assumenda temporibus! Quibusdam quasi est asperiores similique!
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Error ullam, laboriosam nesciunt ratione totam, perferendis id magni reiciendis amet qui distinctio optio maxime. Consequatur, atque! Labore vel odio non earum ratione, officiis perspiciatis assumenda temporibus! Quibusdam quasi est asperiores similique!
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Error ullam, laboriosam nesciunt ratione totam, perferendis id magni reiciendis amet qui distinctio optio maxime. Consequatur, atque! Labore vel odio non earum ratione, officiis perspiciatis assumenda temporibus! Quibusdam quasi est asperiores similique!
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Error ullam, laboriosam nesciunt ratione totam, perferendis id magni reiciendis amet qui distinctio optio maxime. Consequatur, atque! Labore vel odio non earum ratione, officiis perspiciatis assumenda temporibus! Quibusdam quasi est asperiores similique!
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Error ullam, laboriosam nesciunt ratione totam, perferendis id magni reiciendis amet qui distinctio optio maxime. Consequatur, atque! Labore vel odio non earum ratione, officiis perspiciatis assumenda temporibus! Quibusdam quasi est asperiores similique!
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Error ullam, laboriosam nesciunt ratione totam, perferendis id magni reiciendis amet qui distinctio optio maxime. Consequatur, atque! Labore vel odio non earum ratione, officiis perspiciatis assumenda temporibus! Quibusdam quasi est asperiores similique!
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Error ullam, laboriosam nesciunt ratione totam, perferendis id magni reiciendis amet qui distinctio optio maxime. Consequatur, atque! Labore vel odio non earum ratione, officiis perspiciatis assumenda temporibus! Quibusdam quasi est asperiores similique!
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Error ullam, laboriosam nesciunt ratione totam, perferendis id magni reiciendis amet qui distinctio optio maxime. Consequatur, atque! Labore vel odio non earum ratione, officiis perspiciatis assumenda temporibus! Quibusdam quasi est asperiores similique!
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Error ullam, laboriosam nesciunt ratione totam, perferendis id magni reiciendis amet qui distinctio optio maxime. Consequatur, atque! Labore vel odio non earum ratione, officiis perspiciatis assumenda temporibus! Quibusdam quasi est asperiores similique!
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Error ullam, laboriosam nesciunt ratione totam, perferendis id magni reiciendis amet qui distinctio optio maxime. Consequatur, atque! Labore vel odio non earum ratione, officiis perspiciatis assumenda temporibus! Quibusdam quasi est asperiores similique!
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Error ullam, laboriosam nesciunt ratione totam, perferendis id magni reiciendis amet qui distinctio optio maxime. Consequatur, atque! Labore vel odio non earum ratione, officiis perspiciatis assumenda temporibus! Quibusdam quasi est asperiores similique!
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Error ullam, laboriosam nesciunt ratione totam, perferendis id magni reiciendis amet qui distinctio optio maxime. Consequatur, atque! Labore vel odio non earum ratione, officiis perspiciatis assumenda temporibus! Quibusdam quasi est asperiores similique!
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Error ullam, laboriosam nesciunt ratione totam, perferendis id magni reiciendis amet qui distinctio optio maxime. Consequatur, atque! Labore vel odio non earum ratione, officiis perspiciatis assumenda temporibus! Quibusdam quasi est asperiores similique!
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Error ullam, laboriosam nesciunt ratione totam, perferendis id magni reiciendis amet qui distinctio optio maxime. Consequatur, atque! Labore vel odio non earum ratione, officiis perspiciatis assumenda temporibus! Quibusdam quasi est asperiores similique!
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Error ullam, laboriosam nesciunt ratione totam, perferendis id magni reiciendis amet qui distinctio optio maxime. Consequatur, atque! Labore vel odio non earum ratione, officiis perspiciatis assumenda temporibus! Quibusdam quasi est asperiores similique!
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Error ullam, laboriosam nesciunt ratione totam, perferendis id magni reiciendis amet qui distinctio optio maxime. Consequatur, atque! Labore vel odio non earum ratione, officiis perspiciatis assumenda temporibus! Quibusdam quasi est asperiores similique!
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Error ullam, laboriosam nesciunt ratione totam, perferendis id magni reiciendis amet qui distinctio optio maxime. Consequatur, atque! Labore vel odio non earum ratione, officiis perspiciatis assumenda temporibus! Quibusdam quasi est asperiores similique!
+        </p>
+    </div>
+    <script src="../assets/js/bootstrap.min.js" type="text/javascript"></script>
+</body>
+</html>

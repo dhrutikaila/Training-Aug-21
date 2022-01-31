@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Practice</title>
+    <!--for id selector we need to use # symbol-->
+    <!--for class selector we need to use . -->
+    <!--for universal selector we need to use * symbol -->
+    <style>
+        body{
+            background-color: lightblue;
+            
+        }
+        h1{
+            text-align: center;
+            font-family: 'Segoe UI';
+            color: blue;
+        }
+        p{
+            color: cornflowerblue;
+            font-family: serif;
+            margin: auto;
+           
+        }
+        #para1{
+            color: darkgreen;
+        }
+        h2.center{
+            
+            margin: auto;
+            background-color: rgb(148, 157, 160);
+            width: 300px;
+        }
+        .intro{
+            opacity: 0.8;
+            margin: auto;
+            margin-top: 10px;
+            border: blue solid;
+        }
+        .nav {
+                background-color: yellow; 
+                list-style-type: none;
+                text-align: center;
+                margin: 0;
+                padding: 0;
+            }
+            .nav li {
+            display: inline-block;
+            font-size: 20px;
+            padding: 40px;
+            }
+            div.intro1{
+                border: 1px solid black;
+                margin-top: 50px;
+                margin-bottom: 100px;
+                margin-right: 100px;
+                margin-left: 150px;
+                background-color: lightblue;
+            }
+            img{
+                float: none;
+            }
+
+</style>
+</head>
+<body>
+    <h1>Shreya Thakkar </h1>
+    <h2 class="center" >HTML and CSS training  </h2>
+    <p class="center">training is conducted by Varsha oberoi.</p>
+    <p>paragraph is affected by the style</p>
+    <p id="para1">paragraph1 is affected by the id selector</p>
+    <div class="intro">
+            hello , I am shreya thakkar
+        <br>
+        <br>
+        <hr>
+        
+    </div>
+    <ul class="nav">
+        <li><a href="#home">Home</a></li>
+        <li><a href="#about">About Us</a></li>
+        <li><a href="#clients">Our Clients</a></li>  
+        <li><a href="#contact">Contact Us</a></li>
+      </ul>
+    <div class="intro1">
+        Shreya Thakkar 
+        HELLO EVERYONE
+    </div>
+    <img src="download.jpg"> <p>
+        this is nature image 
+    </p>
+</body>
+</html>

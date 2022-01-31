@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Html Practice</title>
+        <style>
+    header li{
+                display: inline-block;
+                height: 20px;
+                color:red;
+                
+    }
+    li:first-child{color:blue}
+</style>
+</head>
+
+<body>
+   <header><nav> 
+        <ul style="margin-left: 100px ;">
+            <li>Home</li>
+         <a href="https://www.google.com"><li style="padding-left: 20px;">About Us</li></a>
+         <li style="padding-left: 20px;"> Contact Us</li>
+        </ul>
+
+      </nav>
+    </header> 
+    <!-- heading tags -->
+    <h1>Html Tutorial</h1>
+    <h2>Html Tutorial</h2>
+    <h3>Html Tutorial</h3>
+    <h4>Html Tutorial</h4>
+    <h5>Html Tutorial</h5>
+    <h6>Html Tutorial</h6>
+
+    <!-- paragraph tag -->
+    <p>This is a paragraph</p>
+    <p>This is another paragraph</p>
+    <p>
+        This
+        is
+        a
+        paragraph
+    </p>
+    <pre>
+        This 
+        is 
+        a 
+        paragraph
+     </pre>
+    
+     <!-- link tag -->
+    <a href="https://www.google.com" target="_blank">Google</a><br><br>
+    <a href="https://www.google.com" target="_self">Google</a><br><br>
+    
+    <iframe src="https://www.w3.org/" height="500" Width="500" title="description" ></iframe><br><br>
+    
+
+    
+    <!-- image tag -->
+    <img src="./assets/image.jpg" alt="Nature Image" height="100" width="100"> <!--relative path -->
+    <!-- <img src="../../image.jpg" alt="Nature Image" height="100" width="100"> relative path -->
+    <img src="C:\Users\Harsh\Desktop\image.jpg" alt="Nature Image" height="100" width="100">
+    <!-- empty Tags -->
+    <br> <br>
+    <hr>
+    
+    <!-- style tag -->
+    <div style="background-color:powderblue;">
+    <h1 style="color:yellow ;">Html tutoriual</h1>
+    <p style="color:red;">This is red paragraph</p>
+    <p style="color:blue;">This is blue paragraph</p>
+    <P style="font-family:courier;">This is a paragraph</p>
+    <P style="font-size:100px;">This is a paragraph</p>
+    <P style="text-align:center;">This is a paragraph</p>
+
+    </div>
+    <!-- title Attribute -->
+    <p title="I' am tooltip">This is an paragraph</p>
+    <p title=about W3school>This is an paragraph</p>
+
+    <!-- formatting elements -->
+    <b>This text is bold</b><br>
+    <strong>This text is imprtant!</strong><br>
+    <i>This text i  s italic</i><br>
+    <em>This text is emphasized</em><br>
+    <small>This is some smaller text.</small>
+    <p>Do not forget to buy <mark>milk</mark></p>
+    <p>My favourite color is <del>blue</del> red</p>
+    <p>My favourite color is <del>blue</del> <ins>red</ins></p>
+    <P>This is <sub>subscriped</sub> text</P>
+    <p>H<sub>2</sub>O</p>
+    <P>This is <sup>superscripted</sup> text</P>
+    <p>WWW<sup>[1]</sup></p>
+
+    <!-- color tag -->
+    <p style="background-color:red;"> This is paragraph</p>
+    <p style="color:red;">This is paragraph</p>
+    <p style="border:2px solid yellow">This is paragraph</p> <!--color by name-->
+    <p style="color:rgb(105,255,155);">This is paragraph</p><!--color by rgb value-->
+    <p style="color:#95ff95;">This is paragraph</p> <!--color by hex value-->
+    <p style="background-color:black;color:white;">This is paragraph</p>
+
+
+    <!-- Table tag -->
+
+    <table style="border-spacing: 0px;" border="1">
+
+        <tr>
+            <th>Name</th>
+            <th>RollNo</th>
+            <th>Grade</th>
+        </tr>
+        <tr>
+        <td>Manav</td>
+        <td>55</td>
+         <td>A</td>   
+
+        </tr>
+        <tr>
+            <td>Raj</td>
+            <td>22</td>
+             <td>A</td>   
+    
+            </tr>
+           
+        </table>
+    
+        <!-- form tag -->
+
+        <form>
+
+            <label for="fname">FirstName:</label><br><input type="text" name="fname" id="fname">
+            <label for="lname"></label><br><input type="text" name="lname" id="lname" placeholder="LastName"><br>
+            <input type="submit" value="submit">
+
+        </form>
+        <form>
+            <input type="radio" name="fav_language" id="html" value="Html">
+            <label for="Html">Html</label><br>
+            <input type="radio" name="fav_language" id="css value="css>
+            <label for="css">css</label><br>
+            <input type="radio" name="fav_language" id="JavaScript" value="JavaScript">
+            <label for="JavaScript">JavaScript</label>
+            
+            </form>
+        </form>
+        <form>
+            <input type="checkbox" name="vehicle1" id="vehicle1" value="car">
+            <label for="vehicle1">Car</label><br>
+            <input type="checkbox" name="vehicle" id="vehicle" value="Bike">
+            <label for="vehicle">Bike</label><br>
+            <input type="checkbox" name="vehicle3" id="vehicle3" value="Boat">
+            <label for="vehicle3">Boat</label><br>
+            <input type="button" value="reset   ">
+           </form>
+           <form>
+            <textarea name="address" id="add" cols="5" rows="5"></textarea>
+
+           </form>
+           <form method="GET">
+
+            <select name="activity" id="act" required>
+                <option value="" disabled selected>choose activity</option>
+                <option value="sleeping">sleeping</option>
+                <option value="eating">eating</option>
+                <option value="learning">learning</option>
+                <option value="reading">reading</option>
+                <option value="playing">playing</option>
+                
+            </select>
+            <label for="fname">FirstName:</label><input type="text" name="fname" id="fname" list="NameList" required pattern="[a-z]{5}" title="character must be small">
+            <datalist id="NameList">
+                <option value="Manav" label="Manav"></option>
+                <option value="Manav" label="Manav"></option>
+                <option value="Manav" label="Manav"></option>
+
+               </datalist>
+               <input type="date" name="date" id="date" required>
+              
+               <input type="number" name="age" id="age" required autofocus min="18" max="25"> 
+               <input type="submit" value="submit"> 
+            
+           </form>
+
+           <header>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Reiciendis, ut?</header>
+         <footer>Lorem, ipsum.</footer>
+         
+    </body>
+</html>

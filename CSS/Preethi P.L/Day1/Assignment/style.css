@@ -1,0 +1,43 @@
+        header{
+            text-align: center;
+            color: white;
+            background-color: teal;
+            padding: 5px;
+            width:auto;
+        }
+        footer{
+            background-color:teal;
+            padding: 40px;
+            width: auto;
+        }
+        div.main{
+            margin:15px 200px;
+            border: 2px ridge black;
+            padding: 25px;
+        }
+        div.para{
+            font-family: serif;
+            color:black;
+            text-align:justify;
+            margin-left: 10px;
+            margin-right: 10px;
+            font-size: 18px;
+        }
+        h2{
+            font-family: serif;
+            color:black; 
+        }
+        h4{
+            font-family: serif;
+            color:dimgray;
+            margin-left: 10px;
+        }
+        h5{
+            font-family: serif;
+            color:teal;
+            margin-left: 10px;
+            font-weight: bold;
+            font-size: 16px;
+        }
+        
+    

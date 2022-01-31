@@ -1,0 +1,454 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Free Health For all</title>
+    <link rel="stylesheet" href="./Styles/bootstrap.css" />
+    <link rel="stylesheet" href="./Styles/index.css" />
+    <link
+      rel="canonical"
+      href="https://getbootstrap.com/docs/5.0/examples/carousel/"
+    />
+    <style>
+      html {
+        font-family: "helvetica neue", helvetica, arial, sans-serif;
+      }
+
+      thead th,
+      tfoot th {
+        font-family: "Rock Salt", cursive;
+      }
+
+      th {
+        letter-spacing: 2px;
+      }
+
+      td {
+        letter-spacing: 1px;
+      }
+
+      tbody td {
+        text-align: center;
+      }
+
+      tfoot th {
+        text-align: right;
+      }
+    </style>
+    <!-- <link rel="stylesheet" href="./Styles/index.css" /> -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3"
+      crossorigin="anonymous"
+    />
+    <link
+      rel="stylesheet"
+      href="https://use.fontawesome.com/releases/v5.2.0/css/all.css"
+      integrity="sha384-hWVjflwFxL6sNzntih27bfxkr27PmbbK/iSvJ+a4+0owXq79v+lsFkW54bOGbiDQ"
+      crossorigin="anonymous"
+    />
+  </head>
+  <body>
+    <header>
+      <nav class="navbar navbar-expand-lg navbar-dark fixed-top bg-dark">
+        <a class="navbar-brand ms-5" href="index.html">FREE HEALTH</a>
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarCollapse"
+          aria-controls="navbarCollapse"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarCollapse">
+          <ul class="navbar-nav me-auto mb-2 mb-md-0 ms-auto">
+            <li class="nav-item">
+              <a class="nav-link px-3" href="index.html">Home</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link px-3" href="../team.html">Team</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link px-3" href="#">Services</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link px-3" href="#">Blogs</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link px-3" href="faq.html">FAQ</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link px-3" href="contactus.html">Contact</a>
+            </li>
+          </ul>
+        </div>
+      </nav>
+    </header>
+    <main>
+      <!-- scroll button -->
+      <button
+        type="button"
+        class="btn btn-danger btn-floating btn-lg"
+        id="scroll"
+      >
+        <i class="fas fa-arrow-up"></i>
+      </button>
+      <!-- Modal -->
+
+      <hr class="featurette-divider" />
+
+      <div class="container">
+        <div
+          class="modal fade"
+          id="addFAQ"
+          tabindex="-1"
+          role="dialog"
+          aria-labelledby="AddQuestionLabel"
+          aria-hidden="true"
+        >
+          <div class="modal-dialog" role="document">
+            <div class="modal-content">
+              <div class="modal-header">
+                <h5 class="modal-title" id="AddQuestionLabel">Add FAQs</h5>
+                <button
+                  type="button"
+                  class="close closefaq"
+                  data-dismiss="modal"
+                  aria-label="Close"
+                >
+                  <span aria-hidden="true">&times;</span>
+                </button>
+              </div>
+              <form action>
+                <div class="modal-body">
+                  <div class="form-group">
+                    <label for="inputId">Id</label>
+                    <input
+                      type="number"
+                      class="form-control"
+                      id="inputId"
+                      placeholder="Enter Id"
+                      required
+                    />
+                  </div>
+                </div>
+                <div class="modal-body">
+                  <div class="form-group">
+                    <label for="inputQuestion">Question</label>
+                    <input
+                      type="text"
+                      class="form-control"
+                      id="inputQuestion"
+                      placeholder="Enter Question"
+                      required
+                    />
+                  </div>
+                  <div class="form-group">
+                    <label for="inputAnswer">Answer</label>
+                    <input
+                      type="text"
+                      class="form-control"
+                      id="inputAnswer"
+                      placeholder="Enter Answer"
+                    />
+                  </div>
+                </div>
+                <div class="modal-footer">
+                  <button
+                    type="button"
+                    class="btn btn-secondary closefaq"
+                    data-dismiss="modal"
+                  >
+                    Close
+                  </button>
+                  <button
+                    type="submit"
+                    id="addFAQSubmit"
+                    class="btn btn-primary"
+                  >
+                    Submit
+                  </button>
+                </div>
+              </form>
+            </div>
+          </div>
+        </div>
+        <div
+          class="modal fade"
+          id="AddTeam"
+          tabindex="-1"
+          role="dialog"
+          aria-labelledby="AddTeamLabel"
+          aria-hidden="true"
+        >
+          <div class="modal-dialog" role="document">
+            <div class="modal-content">
+              <div class="modal-header">
+                <h5 class="modal-title" id="AddTeamLabel">Add Team</h5>
+                <button
+                  type="button"
+                  class="close closeTeam"
+                  data-dismiss="modal"
+                  aria-label="Close"
+                >
+                  <span aria-hidden="true">&times;</span>
+                </button>
+              </div>
+              <form>
+                <div class="modal-body">
+                  <div class="form-group">
+                    <label for="nameInput">Name</label>
+                    <input
+                      type="text"
+                      class="form-control"
+                      id="nameInput"
+                      placeholder="Enter Name"
+                      required
+                    />
+                  </div>
+                  <div class="form-group">
+                    <label for="jobInput">Job</label>
+                    <input
+                      type="text"
+                      class="form-control"
+                      id="jobInput"
+                      placeholder="Enter Job"
+                      required
+                    />
+                  </div>
+                  <div class="form-group">
+                    <label for="detailsInput">Details</label>
+                    <input
+                      type="text"
+                      class="form-control"
+                      id="detailsInput"
+                      placeholder="Details"
+                    />
+                  </div>
+                  <div class="form-group">
+                    <label for="pictureInput">Picture</label>
+                    <input
+                      type="text"
+                      class="form-control"
+                      id="pictureInput"
+                      placeholder="Picture Link"
+                    />
+                  </div>
+                </div>
+                <div class="modal-footer">
+                  <button
+                    type="button"
+                    class="btn btn-secondary closeTeam"
+                    data-dismiss="modal"
+                  >
+                    Close
+                  </button>
+                  <button
+                    type="submit"
+                    id="AddTeamsbtn"
+                    class="btn btn-primary"
+                  >
+                    Submit
+                  </button>
+                </div>
+              </form>
+            </div>
+          </div>
+        </div>
+
+        <div class="row">
+          <h1 class="text-center col-11">FAQ</h1>
+          <button class="btn btn-primary col-1" id="addFAQbtn">Add</button>
+        </div>
+
+        <table class="table text-center" id="faqTbl">
+          <thead>
+            <tr>
+              <td class="col-1">Id</td>
+              <td class="col-3">Question</td>
+              <td class="col-8">Answer</td>
+              <td></td>
+            </tr>
+          </thead>
+          <tbody></tbody>
+        </table>
+        <hr class="featurette-divider" />
+        <div class="row">
+          <h1 class="text-center col-11">Teams</h1>
+          <button class="btn btn-primary col-1 text-center" id="addTeambtn">
+            Add
+          </button>
+        </div>
+
+        <table class="table text-center" id="teamTbl">
+          <thead>
+            <tr>
+              <td class="col-3">Name</td>
+              <td class="col-2">Job</td>
+              <td class="col-2">Details</td>
+              <td class="col-5">Picture</td>
+              <td></td>
+              <tbody></tbody>
+            </tr>
+          </thead>
+        </table>
+      </div>
+      <!-- /.container -->
+      <hr class="featurette-divider" />
+    </main>
+    <!-- FOOTER -->
+    <footer class="footer">
+      <div class="container bottom_border">
+        <div class="row">
+          <div class="col-sm-4 col-md col-sm-4 col-12 col">
+            <h5 class="headin5_amrc text-white pt2">Find us</h5>
+            <!--headin5_amrc-->
+            <p class="mb10">
+              Lorem Ipsum is simply dummy text of the printing and typesetting
+              industry. Lorem Ipsum has been the industry's standard dummy text
+              ever since the 1500s
+            </p>
+            <p>
+              <i class="fa fa-location-arrow"></i> B/H Nirma University,
+              Ekyarth, Near Vandemataram Fabula, Malabar County Rd, Chharodi,
+              Gujarat 382481
+            </p>
+            <p><i class="fa fa-phone"></i> +91-9157049688</p>
+            <p><i class="fa fa fa-envelope"></i> dhruvit.d9688@gmail.com</p>
+          </div>
+
+          <div class="col-sm-4 col-md col-6 col">
+            <h5 class="headin5_amrc text-white pt2">Quick links</h5>
+            <!--headin5_amrc-->
+            <ul class="footer_ul_amrc">
+              <li><a href="#">Privacy Policy</a></li>
+              <li><a href="#">Performance </a></li>
+              <li><a href="#">Our Petrons</a></li>
+              <li><a href="#">Our Services</a></li>
+              <li><a href="#">Statastics</a></li>
+            </ul>
+            <!--footer_ul_amrc ends here-->
+          </div>
+
+          <div class="col-sm-4 col-md col-6 col">
+            <h5 class="headin5_amrc text-white pt2">Quick links</h5>
+            <!--headin5_amrc-->
+            <ul class="footer_ul_amrc">
+              <li><a href="#">News & Events</a></li>
+
+              <li><a href="#">Support Us</a></li>
+              <li><a href="#">Event Photos</a></li>
+              <li><a href="#">Our Team</a></li>
+              <li><a href="#">Event Photos</a></li>
+            </ul>
+            <!--footer_ul_amrc ends here-->
+          </div>
+
+          <div class="col-sm-4 col-md col-12 col">
+            <h5 class="headin5_amrc text-white pt2">Newsletter</h5>
+            <!--headin5_amrc ends here-->
+
+            <ul class="footerU12">
+              <li>
+                <p class="my-3">Want to check our daily updates...</p>
+              </li>
+              <li>
+                <p>Join Out Newsletter</p>
+              </li>
+
+              <li>
+                <form action="#">
+                  <div class="input-group mb-3 mt-4">
+                    <input
+                      class="form-control"
+                      type="text"
+                      placeholder="Your Email Address"
+                      aria-label="Your Email Address"
+                      aria-describedby="button-addon2"
+                    />
+                    <button
+                      class="btn btn-primary"
+                      id="button-addon2"
+                      type="button"
+                    >
+                      Submit
+                    </button>
+                  </div>
+                </form>
+              </li>
+            </ul>
+            <!--footerU12 ends here-->
+          </div>
+        </div>
+      </div>
+
+      <div class="container">
+        <ul class="foote_bottom_ul_amrc">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="team.html">Team</a></li>
+          <li><a href="#">Services</a></li>
+          <li><a href="#">Blogs</a></li>
+          <li><a href="faq.html">FAQ</a></li>
+          <li><a href="contactus.html">Contact</a></li>
+        </ul>
+        <!--foote_bottom_ul_amrc ends here-->
+        <p class="text-center">
+          Copyright @2021 | Managed by <a href="#">Dhruvit</a>
+        </p>
+
+        <ul class="socials">
+          <li>
+            <a href="https://hi-in.facebook.com/dhruvit.d9688"
+              ><i class="fab fa-facebook-f"></i
+            ></a>
+          </li>
+          <li>
+            <a href="https://twitter.com/dhruvitdiyora"
+              ><i class="fab fa-twitter"></i
+            ></a>
+          </li>
+          <li>
+            <a href="https://in.linkedin.com/in/dhruvitdiyora"
+              ><i class="fab fa-linkedin"></i
+            ></a>
+          </li>
+          <li>
+            <a href="https://www.instagram.com/dhruvit_diyora/"
+              ><i class="fab fa-instagram"></i
+            ></a>
+          </li>
+          <li>
+            <a href="mailto:dhruvit.d9688@gmail.com"
+              ><i class="fab fa-google-plus-g"></i
+            ></a>
+          </li>
+        </ul>
+        <!--social_footer_ul ends here-->
+      </div>
+    </footer>
+
+    <!-- ./container -->
+    <script
+      src="https://code.jquery.com/jquery-3.6.0.js"
+      integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk="
+      crossorigin="anonymous"
+    ></script>
+    <script src="./js/admin.js"></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.10.2/dist/umd/popper.min.js"
+      integrity="sha384-7+zCNj/IqJ95wo16oMtfsKbZ9ccEh31eOz1HGyDuCQ6wgnyJNSYdrPa03rtR1zdB"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.min.js"
+      integrity="sha384-QJHtvGhmr9XOIpI6YVutG+2QOK9T+ZnN4kzFN1RtK3zEFEIsxhlmWl5/YESvpZ13"
+      crossorigin="anonymous"
+    ></script>
+  </body>
+</html>

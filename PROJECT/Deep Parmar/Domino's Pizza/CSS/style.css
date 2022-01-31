@@ -1,0 +1,270 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    text-transform: capitalize;
+    transition: all 0.2s linear;
+    /* overflow-x: hidden; */
+}
+
+
+/* navbar section */
+
+#header {
+    display: flex;
+    position: fixed;
+    top: 0px;
+    left: 0px;
+    right: 0px;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    background-color: #0066A7;
+    z-index: 1000;
+}
+
+#navbarToggler a {
+    color: white;
+}
+
+#navbarToggler a:hover {
+    color: rgb(22, 214, 248);
+    font-size: 25px !important;
+}
+
+#header_icon a {
+    color: white;
+}
+
+#hart:hover {
+    color: red;
+}
+
+#cart:hover {
+    color: rgb(12, 163, 251);
+}
+
+#user:hover {
+    color: rgb(19, 18, 18);
+}
+
+
+/* header section */
+
+#header_home {
+    display: flex;
+    justify-content: space-between;
+    height: 6vh;
+    width: 100%;
+    padding: 0.6rem 0px;
+    background-color: rgb(224, 221, 221);
+}
+
+
+/* body section */
+
+#main_section {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #0d4888;
+    padding-left: 3rem;
+}
+
+#section_2>img {
+    width: 100%;
+}
+
+
+/* zero contact ordering poster */
+
+#safty_img img {
+    width: 100%;
+}
+
+
+/* menu items in body  */
+
+#menu_icons {
+    display: flex;
+    flex-direction: column;
+    background: url('https://docs.google.com/uc?id=1ts_EScJNS9aQl-OwjFNxCT5ckH8Scae7') no-repeat;
+    height: 55vh;
+    margin: 0px 5vw;
+}
+
+#icons_container {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    width: 65%;
+    margin: 0px 15vw;
+}
+
+.icons {
+    background-color: rgb(226, 224, 224);
+    border-radius: 20px;
+    height: 10rem;
+    width: 15rem;
+    padding: 1.5rem;
+    text-align: center;
+}
+
+.icons>img {
+    height: auto;
+    width: 80px;
+}
+
+
+/* Textarea part */
+
+#text_web {
+    background-color: rgb(251, 243, 230);
+}
+
+#last_para {
+    margin-bottom: 0px !important;
+}
+
+
+/* Footer */
+
+#footer {
+    position: relative;
+    bottom: 0px;
+    height: 100%;
+    background-color: #222E3A;
+}
+
+#main_footer_section {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 0px 4rem;
+}
+
+#footer_section_1 img {
+    width: auto;
+}
+
+#footer_section_1 ul,
+li,
+a {
+    display: flex;
+    margin: 5px 2px;
+    padding: 3px;
+    color: white;
+    text-decoration: none;
+    list-style-type: none;
+}
+
+#footer #copy_right p {
+    margin-bottom: 0px !important;
+    background-color: #1A2735;
+}
+
+
+/* media queries  for different width*/
+
+@media screen and (max-width:1790px) {
+    #icons_container {
+        width: 100%;
+        margin: 0px 0px;
+    }
+    /* navbar */
+    #navbarToggler a {
+        font-size: 20px !important;
+    }
+    #navbarToggler a:hover {
+        font-size: 21px !important;
+    }
+}
+
+@media screen and (max-width:1111px) {
+    /* navbar */
+    #navbarToggler a {
+        font-size: 16px !important;
+    }
+    #navbarToggler a:hover {
+        color: rgb(22, 214, 248);
+        font-size: 17px !important;
+    }
+    #menu_icons {
+        height: 78vh;
+        margin: 10px 5vw;
+    }
+    .icons {
+        height: 10rem;
+        width: 15rem;
+        padding: 1rem;
+    }
+    .icons>img {
+        height: auto;
+        width: 90px;
+    }
+    /* footer part  */
+    #footer {
+        height: 100%;
+        background-color: #222E3A;
+    }
+    #footer_section_1 ul,
+    li {
+        margin: 0px 0px;
+        display: flex;
+        flex-direction: column;
+    }
+    #footer_icon {
+        position: relative;
+        top: 0px;
+        display: flex;
+        flex-direction: column;
+    }
+    #footer_icon img {
+        margin: 10px 15px;
+    }
+}
+
+@media screen and (max-width:843px) {
+    #main_section {
+        display: flex;
+        flex-direction: column;
+        background-color: #0d4888;
+        padding: 2rem 0px 0px 3rem;
+    }
+    #section_2>img {
+        margin-top: 3rem;
+        width: 100%;
+    }
+    #menu_icons {
+        height: 90vh;
+        margin: 10px 5vw;
+    }
+    .icons {
+        height: 9rem;
+        width: 15rem;
+        padding: 1rem;
+    }
+    .icons>img {
+        height: auto;
+        width: 80px;
+    }
+}
+
+@media screen and (max-width:578px) {
+    #menu_icons {
+        height: 90vh;
+        margin: 10px 5vw;
+    }
+    .icons {
+        height: 9rem;
+        width: 12rem;
+        padding: 1rem;
+    }
+    #text_web p {
+        font-size: 16px !important;
+    }
+    .icons>img {
+        height: auto;
+        width: 80px;
+    }
+}

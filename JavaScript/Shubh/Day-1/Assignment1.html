@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Assignment-10</title>
+    <link rel="stylesheet" href="../../../HTML/Shubh/bootstrap-5.0.2-dist/css/bootstrap.min.css">
+    <style>
+        /* Chrome, Safari, Edge, Opera */
+        input::-webkit-outer-spin-button,
+        input::-webkit-inner-spin-button {
+          -webkit-appearance: none;
+          margin: 0;
+        }
+    </style>
+</head>
+
+<body>
+        <div class="container">
+        <h1>Calculator</h1><br>
+        <form action="#">
+            <label for="num1">Number1</label>
+            <input type="number" id="num1"><br><br>
+
+            <label for="num2">Number2</label>
+            <input type="number" id="num2"><br><br>
+
+            <input type="radio" name="operation" id="add" value="addition">
+            <label for="add">Addition</label><br>
+
+            <input type="radio" name="operation" id="minus" value="subtraction">
+            <label for="minus">Subtraction</label><br>
+
+            <input type="radio" name="operation" id="multi" value="multiplication">
+            <label for="multi">Multiplication</label><br>
+
+
+            <input type="radio" name="operation" id="division" value="division">
+            <label for="division">Division</label><br><br>
+
+            <input type="reset" value="Reset" readonly>
+            <input type="button" value="Calculate" onclick="cal()"><br><br>
+
+            <label>The Result Is: </label>
+            <label for="result" id="result"></label>
+        </form>
+
+    <script>
+        function cal() {
+            var first = parseInt(document.getElementById('num1').value);
+            var second = parseInt(document.getElementById('num2').value);
+            var add = document.getElementById('add');
+            var sub = document.getElementById('minus');
+            var multiply = document.getElementById('multi');
+            var divide = document.getElementById('division');
+            var result = 0;
+            if (add.checked) {
+                result = first + second;
+                document.getElementById('result').innerHTML = result;
+            }
+            else if (minus.checked) {
+                result = first - second;
+                document.getElementById('result').innerHTML = result;
+            }
+            else if (multi.checked) {
+                result = first * second;
+                document.getElementById('result').innerHTML = result;
+            }
+            else if (division.checked) {
+                result = first / second;
+                document.getElementById('result').innerHTML = result;
+            }
+            else
+                alert("Please Enter Numbers to Perform a Operation")
+            return false;
+        }
+    </script>
+    </div>
+</body>
+
+</html>

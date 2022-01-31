@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        // Closures
+
+//inner function access all perameters of parent function
+function empinfo(name, surname) {
+  function fullname() {
+    console.log(name + " " + surname);
+  }
+  fullname(); //call inner fun
+}
+//call parent fun
+empinfo("vraj", "marvania");
+
+// 2
+
+function empinfo2(name, surname) {
+  function fullname() {
+    console.log(name + " " + surname);
+  }
+  return fullname;
+}
+
+var fname = empinfo2("Rutvik", "Kalasha");
+console.log(fname); //show a function deff
+fname();
+    </script>
+</body>
+</html>

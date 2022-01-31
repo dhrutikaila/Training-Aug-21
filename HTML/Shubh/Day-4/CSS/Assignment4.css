@@ -1,0 +1,101 @@
+    body {
+      font-family: Arial, Helvetica, sans-serif;
+    }
+    
+    .navbar {
+                  position:relative;
+                top: 0;
+                background-color: #011377;
+               
+                color:white;
+                margin: 0 auto;
+                overflow: hidden;
+    }
+    
+    .navbar a {
+      float: left;
+      font-size: 16px;
+      color: white;
+      text-align: center;
+      padding: 14px 16px;
+      text-decoration: none;
+      border-style: solid navy;
+    }
+    
+    .dropdown {
+      float: left;
+      overflow: hidden;
+    }
+    
+    .dropdown .dropbtn {
+      font-size: 16px;  
+      border: none;
+      outline: none;
+      display: inline-block;
+      color: white;
+      padding: 14px 16px;
+      background-color: inherit;
+      font-family: inherit;
+      margin: 0;
+      position: relative;
+    }
+    
+    .navbar a:hover, .dropdown:hover .dropbtn {
+      background-color: rgb(0, 234, 255);
+      color: black;
+    }
+    
+    .dropdown-content {
+      display: none;
+      position: relative;
+      background-color: #f9f9f9;
+    }
+    
+    .dropdown-content a {
+      float: none;
+      color: black;
+      padding: 12px 16px;
+      text-decoration: none;
+      display: block;
+      text-align: left;
+    }
+    
+    .dropdown-content a:hover {
+      background-color: #ddd;
+    }
+    
+    .dropdown:hover .dropdown-content {
+      display: block;
+    }
+    
+            footer {
+                width: 100%;
+                bottom: 0px;
+                background-color: #000;
+                color: rgb(44, 187, 253);
+                position: fixed;
+                padding-top:20px;
+                padding-bottom:50px;
+                text-align:center;
+                font-size:30px;
+                font-weight:bold;
+            }
+            #side {
+                display: table-cell;
+                background-image: url(https://cdn.britannica.com/q:60/51/190751-050-147B93F7/soccer-ball-goal.jpg);
+                background-size:contain;
+                width: 500px;
+                height: 750px;
+                vertical-align: top;
+            }
+            #main {
+                display: table-cell;
+                width: 2000px;
+                height: 100%;
+                background-image: url(https://images.hindustantimes.com/img/2021/05/15/1600x900/fifa-world-bangladesh-qatar-2022-qualifier-india_ccc38bae-e06d-11ea-983a-0aba0c178f59_1621070054334.jpg);
+            } 
+            @media screen and (max-width: 800px) {
+                        .left, .main, .right {
+                        width: 100%;
+            }
+            }

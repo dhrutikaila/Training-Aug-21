@@ -1,0 +1,104 @@
+<!--1)Design a form for storing employee details. (Employee name, age, Gender, designation, salary, location, Email ID, Date of Joining and contact number)
+Validation required
+1)Age should be a number
+2)Each field should contain value
+3)Email ID should be in proper format
+4)Date of joining should be in date format
+5)Location should be in the drop down list
+6)Use radio buttons for Gender -->
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Assignment_Day1</title>
+    <link rel="stylesheet" href="../../style.css">
+    <script src="https://kit.fontawesome.com/e153b670c8.js" crossorigin="anonymous"></script>
+</head>
+
+<body>
+    <div class="container-div">
+        <nav class="navbar">
+            <ul>
+                <li class="navbar-logo"><a href="../../index.html"><img src="../../Assets/Radix.jpg"></a></li>
+                <li class="navbar-links"><a href="../../index.html">Home</a></li>
+                <li class="navbar-links"><a href="../html.html">Html</a></li>
+                <li class="navbar-links"><a href="../../CSS/css.html">Css</a></li>
+                <li class="navbar-links"><a href="../../Bootstrap/bootstrap.html">Bootstrap</a></li>
+                <li class="navbar-links"><a href="../../Javascript/javascript.html">Javascript</a></li>
+                <li class="navbar-links"><a href="../../JQuery/jquery.html">JQuery</a></li>
+                <li class="navbar-links"><a href="../../Project/project.html">Project</a></li>
+            </ul>
+        </nav>
+        <div class="sidebar">
+            <ol>
+                <li><i class="fas fa-folder-open">&nbsp;&nbsp;&nbsp;Day 3</i>
+                    <ul class="folder">
+                        <li><i class="fas fa-folder-open">&nbsp;&nbsp;Practice Exercise</i>
+                            <ol class="subfolder" type="a">
+                                <li><a href="Practice_Exercise1.html">Practice_Exercise1</a></li>
+                                <li><a href="Practice_Exercise2.html">Practice_Exercise2</a></li>
+                                <li><a href="Practice_Exercise3.html">Practice_Exercise3</a></li>
+                                <li><a href="Practice_Exercise4.html">Practice_Exercise4</a></li>
+                                <li><a href="Practice_Exercise5.html">Practice_Exercise5</a></li>
+                            </ol>
+                        </li>
+                        <li><i class="fas fa-folder-open">&nbsp;&nbsp;Assignment</i>
+                            <ol class="subfolder" type="a">
+                                <li><a href="Assignment_Day1.html">Assignment1</a></li>
+                            </ol>
+                        </li>
+                    </ul>
+                </li><br>
+                <li><i class="fas fa-folder-open">&nbsp;&nbsp;&nbsp;Day 4</i>
+                    <ul class="folder">
+                        <li><i class="fas fa-folder-open">&nbsp;&nbsp;Practice Exercise</i>
+                            <ol class="subfolder" type="a">
+                                <li><a href="../Day 2/Practice_Exercise1.html">Practice_Exercise1</a></li>
+                                <li><a href="../Day 2/Practice_Exercise2.html">Practice_Exercise2</a></li>
+                                <li><a href="../Day 2/Practice_Exercise3.html">Practice_Exercise3</a></li>
+                                <li><a href="../Day 2/Practice_Exercise4.html">Practice_Exercise4</a></li>
+                                <li><a href="../Day 2/Practice_Exercise5.html">Practice_Exercise5</a></li>
+                            </ol>
+                        </li>
+                        <li><i class="fas fa-folder-open">&nbsp;&nbsp;Assignment</i>
+                            <ol class="subfolder" type="a">
+                                <li><a href="../Day 2/Assignment_Day2.html">Assignment1</a></li>
+                            </ol>
+                        </li>
+                    </ul>
+                </li>
+            </ol>
+        </div>
+        <main>
+            <div>
+                <form>
+                    <h3>Employee Details</h3>
+                    <label>Name: </label><input type="text" name="name" required><br><br>
+                    <label>Age: </label><input type="number" name="age" required><br><br>
+                    <label>Gender: </label><input type="radio" name="gender" value="male" required>Male
+                    <input type="radio" name="gender" value="female" required>Female
+                    <input type="radio" name="gender" value="other" required>Other <br><br>
+                    <label>Designation: </label><input type="text" name="designation" required><br><br>
+                    <label>Salary: </label><input type="number" name="salry" required><br><br>
+                    <label>Location: </label><select name="location">
+                        <option value="ahmedabad">Ahmedabad</option>
+                        <option value="vadodara">Vadodara</option>
+                        <option value="rajkot">Rajkot</option>
+                        <option value="surat">Surat</option>
+                    </select><br><br>
+                    <label>Email: </label><input type="email" name="email" required><br><br>
+                    <label>Date of Joining: </label><input type="date" name="joiningdate" required><br><br>
+                    <label>Contact No: </label><input type="tel" name="contactno" required><br><br>
+                    <input type="submit" value="Submit">
+                    <input type="reset" value="Reset">
+                </form>
+            </div>
+        </main>
+    </div>
+</body>
+
+</html>

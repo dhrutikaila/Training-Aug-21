@@ -1,0 +1,11 @@
+<h2>Login</h2> 
+
+<h5 class="mt-4 text-secondary">Username</h5>
+<input class="form-control" [(ngModel)]="usernameInput" type="text">
+<h5 class="text-secondary">Password</h5>
+<input class="form-control" [(ngModel)]="passwordInput" type="password">
+<br>
+
+<button class="btn btn-success mb-3" (click)="login()">Login</button>
+
+<p><b>{{answer}}</b></p>

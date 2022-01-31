@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Assignment-2</title>
+    <link rel="stylesheet" href="../assets/css/bootstrap.min.css">
+</head>
+<body>
+    <div class="container">
+        <div class="h2 text-center my-4">Assignment-2</div>
+        <hr>
+        <div class="row justify-content-sm-center">
+            <div class="form col-6">
+                <div class="h4 my-3">Check Date <small class="text-muted">format:MM-DD-YYYY</small></div>
+                <input type="text" class="form-control my-3" id="d" placeholder="Enter Some Text">
+                <div id="date" class="text-danger my-3">Date is empty</div> 
+                <div id="date1" class="text-danger my-3">Date is not Proper</div> 
+                <div id="date2" class="text-danger my-3">Date is not MM-DD-YYYY </div> 
+                <div id="chkMonth" class="text-danger my-3">Month is not Proper</div> 
+                <div id="chkDay" class="text-danger my-3">Day is not Proper</div> 
+                <div id="chkYear" class="text-danger my-3">Year is not Proper</div> 
+                <button type="button" onclick="chkDate(d.value)" class="btn btn-success my-2">Check</button> 
+            </div>
+            <div class="row justify-content-sm-center my-3">
+                <div class="col-md-6  d-flex flex-sm-row bg-warning"   style="border:1px solid black">
+                    <div class="h5 my-3">Result:</div>
+                    <div class="h5 my-3 ms-3" id="result"></div>
+                <div>
+            </div>
+        </div>
+    </div>
+    <script src="../assets/js/bootstrap.min.js"></script>
+    <script>
+        document.getElementById('date').style.display="none";
+        document.getElementById('date1').style.display="none";
+        document.getElementById('date2').style.display="none";
+        document.getElementById('chkMonth').style.display = "none";
+        document.getElementById('chkDay').style.display = "none";
+        document.getElementById('chkYear').style.display = "none"
+        document.getElementById('result').innerHTML = "";
+        function chkDate(d){
+            document.getElementById('date').style.display="none";
+            document.getElementById('date1').style.display="none";
+            document.getElementById('date2').style.display="none";
+            document.getElementById('chkMonth').style.display = "none";
+            document.getElementById('chkDay').style.display = "none";
+            document.getElementById('chkYear').style.display = "none";
+            document.getElementById('result').innerHTML = "";
+            
+            let thirtyFirst = [1,3,5,7,8,10,12]
+            
+            if(d == ''){
+                document.getElementById('date').style.display="block";
+                return;
+            }
+            let pattern = /^(0?[1-9]|1[0-2])\-(0?[1-9]|[1-2][0-9]|3[01])\-\d{4}$/;
+            if(pattern.test(d) ==false){
+                document.getElementById('date2').style.display="block";
+                return;
+            }
+            let strArray = d.split('-');
+            console.log(strArray);
+            if(strArray[0] > 12 || strArray[0] < 1){
+                document.getElementById('chkMonth').style.display = "block";
+                return;
+            }
+            if(strArray[1] > 28 || strArray[1] < 1){
+                if(thirtyFirst.includes(strArray[0])){
+                    if(strArray[1] > 31 || strArray[1] < 1){
+                        document.getElementById('chkDay').style.display = "block";
+                        return;
+                    }
+                }
+                if(strArray[0] == 2 && strArray[1] >=28){
+                    if(strArray[1] = 29 && strArray[2] % 4 != 0){
+                    document.getElementById('chkDay').style.display = "block";
+                    document.getElementById('chkMonth').style.display = "block";
+                    return;
+                    }
+                }
+            }
+            if(strArray[2] > 9999 || strArray[2] < 1000){
+                document.getElementById('chkYear').style.display = "block";
+                return;
+            }
+            let date1 = new Date(d)
+            /*console.log(date1)
+            if(date1 == 'Invalid Date')
+            {
+                console.log(date1);
+                document.getElementById('date1').style.display="block";
+                return;
+            }*/
+            document.getElementById('result').innerHTML = date1;
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-F3w7mX95PdgyTmZZMECAngseQB83DfGTowi0iMjiWaeVhAn4FJkqJByhZMI3AhiU" crossorigin="anonymous">
+    <title>Practice</title>
+    <script src="Assets/script.js"></script>
+    <style>
+        label{
+            font-size: 1.3rem;
+        }
+        body{
+            background-image: linear-gradient(360deg,#f9f9ff,#dee8ff);
+        }
+        .container {
+            box-shadow: 5px 5px 5px 5px #666 !important;
+        }
+    </style>
+</head>
+<body>
+    <div class="container my-4 px-5 border rounded border-light border-5">
+        <h3 class="display-4 my-2 text-center">Register An Employee</h3>
+        <form>
+            <div class="row">
+                <div class="col-md-6">
+                    <div class="my-2">
+                        <label for="empID">Employee ID</label>
+                        <input type="text" class="form-control" id="empID" onkeyup="checkId(this)" placeholder="eg. (A-Z)123">
+                        <div class="valid-feedback">
+                            Correct !
+                        </div>
+                        <div class="invalid-feedback">
+                            Please Enter Valid ID !!
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="my-2">
+                        <label for="empEmail">Employee Email</label>
+                        <input type="email" class="form-control" id="empEmail" onkeyup="checkEmail(this)" placeholder="Enter EmailID">
+                        <div class="valid-feedback">
+                            Looks Familiar !
+                        </div>
+                        <div class="invalid-feedback">
+                            Please Enter Valid Email ID !!
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="my-2">
+                <label for="empName">Employee Name</label>
+                <input type="text" class="form-control" id="empName" onkeyup="checkName(this)" placeholder="Enter Full Name">
+                <div class="valid-feedback">
+                    Now, Looks like a Full Name !
+                </div>
+                <div class="invalid-feedback">
+                    Supposed to Enter Full Name here !!
+                </div>
+
+            </div>
+            <div class="row">
+
+                <div class="col-md-6">
+
+                    <div class="my-2">
+                        <label for="empPhone">Contact Number</label>
+                        <input type="number" class="form-control" id="empPhone">
+                        <div class="valid-feedback">
+                            Fine !
+                        </div>
+                        <div class="invalid-feedback">
+                            Doesn't sound like a phone number !!
+                        </div>
+                    </div>
+
+                    <div class="my-2">
+                        <label for="gender">Gender</label><br>
+                        <input type="radio" class="form-check-input" name="gender" id="male" value="male">
+                        <label for="male">Male</label><br>
+                        <input type="radio" class="form-check-input" name="gender" id="female" value="female">
+                        <label for="circle">Female</label>
+                        <div class="valid-feedback">
+                            Okayy !
+                        </div>
+                        <div class="invalid-feedback">
+                            Please Enter any one !!
+                        </div>
+                    </div>
+
+                    <div class="my-2">
+                        <label for="empAge">Age</label>
+                        <input type="number" class="form-control" id="empAge" onkeyup="checkAge(this)">
+                        <div class="valid-feedback">
+                            Correct !
+                        </div>
+                        <div class="invalid-feedback">
+                            Ohh! It looks like you are not 18+! It should be above 18 to Proceed !!
+                        </div>
+                    </div>
+
+                    <div class="my-2">
+                        <label for="location">Location</label><br>
+                        <select class="form-control form-field" id="empLocation" name="location">
+                            <option value="">Select City</option>
+                            <option value="rajkot">Rajkot</option>
+                            <option value="ahmedabad">Ahmedabad</option>
+                        </select>
+                        <div class="valid-feedback">
+                            Done !
+                        </div>
+                        <div class="invalid-feedback">
+                            Forgot to select Location? 
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-md-6 mt-1">
+
+                    <div class="my-3">
+                        <label for="designation">Designation</label>
+                        <select class="form-control form-field" id="empDesignation" name="location">
+                            <option value="">Select Designation</option>
+                            <option value="developer">Developer</option>
+                            <option value="trainee">Trainee</option>
+                            <option value="trainer">Trainer</option>
+                            <option value="hr">HR</option>
+                            <option value="manager">Manager</option>
+                            <option value="technician">Technician</option>
+                        </select>
+                        <div class="valid-feedback">
+                            Done !
+                        </div>
+                        <div class="invalid-feedback">
+                            Didn't get any input here !!
+                        </div>
+                    </div>
+
+                    <div class="my-3">
+                        <label for="doj">Date of Joining</label>
+                        <input type="date" class="form-control" id="doj">
+                        <div class="valid-feedback">
+                            Valid !
+                        </div>
+                        <div class="invalid-feedback">
+                            Date is missing !!
+                        </div>
+                    </div>
+
+                    <div class="my-3">
+                        <label for="salary">Salary</label>
+                        <div class="input-group">
+                            <div class="input-group-append">
+                                <span class="input-group-text">Rs.</span>
+                            </div>
+                            <input type="text" class="form-control" id="salary">
+                            <div class="input-group-append">
+                                <span class="input-group-text">0.00</span>
+                            </div>
+                        </div>
+                        <div class="valid-feedback">
+                            Correct !
+                        </div>
+                        <div class="invalid-feedback">
+                            Salary should be filled out !!
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="text-center">
+                <button class="btn btn-primary mb-3 w-25" onclick="return regEmployee()">Submit</button>
+            </div>
+        </form>
+    </div>
+
+
+    
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-/bQdsTh/da6pkI1MST/rWKFNjaCP5gBSY4sEBT38Q/9RBh9AH40zEOg7Hlq2THRZ" crossorigin="anonymous"></script>
+</body>
+
+</html>

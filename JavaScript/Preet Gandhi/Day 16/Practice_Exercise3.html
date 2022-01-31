@@ -1,0 +1,52 @@
+<!-- Write a JavaScript function to extract a specified number of characters from a string. -->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Practice-Exercise2 (Day-16)</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+        crossorigin="anonymous"></script>
+</head>
+
+<body>
+    <div class="container mt-5 ">
+        <h2 class="text-decoration-underline text-center text-info">Practice_Exercise3 (Day-16)</h2><br><br>
+        <div class="border border-warning border-2 p-3 w-50 mx-auto">
+            <label class="fs-3 me-2">Enter String: </label><input type="text" id="string"><br><br>
+            <label class="fs-3 me-2">Enter no. of character: </label><input type="number" id="character"><br><br>
+            <button type="button" class="btn btn-primary" onclick="extractChar()">Submit</button><br><br>
+            <p id="result" class="fs-3"></p>
+        </div>
+    </div>
+    <script>
+        function extractChar() {
+            var str = document.getElementById("string").value;
+            var char = document.getElementById("character").value;
+            console.log(char);
+            var res = document.getElementById("result");
+
+
+
+            if (str.trim() === "" || char.trim() === "") {
+                res.innerHTML = "<b>Please provide input first.</b>";
+            }
+            else {
+                if (str.trim().length < char.trim()) {
+                    res.innerHTML = "Please enter value less than string length"
+                }
+                else {
+                    res.innerHTML = "<b>Result: </b>" + str.trim().slice(0, char);
+                }
+            }
+        }
+
+    </script>
+</body>
+
+</html>

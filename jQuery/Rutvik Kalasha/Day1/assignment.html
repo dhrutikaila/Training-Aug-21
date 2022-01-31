@@ -1,0 +1,54 @@
+<!--(1). Put a droplist with 5 country name from list object using jquery
+
+                  (Eg. India, United Kingdom..). Default value should “Please select”.
+
+                – Bellow droplist all country name which are in the dropdown that should display with Label :
+
+                  “Your Selected Country : “.
+
+                – By default all country name should display.
+
+                – Only that country name should appear which are you select from dropdown.
+
+                  All other label should be disappear.
+
+                – When i select ‘Please select’, all countries name should get displayed.
+         -->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>jQuery Day1</title>
+</head>
+
+<body>
+    
+
+    <div class="container">
+        <header>
+            <h1>Please Select</h1>
+        </header>
+        <form>
+            <select name="countries" id="countries">
+                <option value="" selected disabled hidden>Please select</option>
+            </select>
+            <br>
+            <br>
+            <br>
+            <label for="coutnries">Your Selected Country:
+                <span id="c-0"></span>
+                <span id="c-1"></span>
+                <span id="c-2"></span>
+                <span id="c-3"></span>
+                <span id="c-4"></span>
+            </label>
+        </form>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+        <script src="assignment.js"></script>
+    </div>
+</body>
+
+</html>

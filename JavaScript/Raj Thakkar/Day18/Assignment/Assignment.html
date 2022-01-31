@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <title>Assignment</title>
+</head>
+
+<body style="background-color: #fafafa;">
+    <h4 class="display-6">
+        University of Mumbai needs to set an online exam for their students. For that they need to set a timer for three
+        hours. After 3 hours exams should be finished. Note: Use promises and callbacks
+    </h4>
+    <div class="container mt-5 p-5 pt-0 border shadow rounded" style="background-color: white;">
+        <h1 class="display-5 mt-0 pt-3 mb-3">Assignment</h1>
+        <div class="p-3 mt-5">
+            <div id="instructions">
+                <p class="fs-5 text-center text-primary">Instructions</p>
+                <ul>
+                    <li>Instructions 1.</li>
+                    <li>Instructions 2.</li>
+                    <li>Instructions 3.</li>
+                    <li>Instructions 4.</li>
+                    <li>3 Hours of exam.</li>
+                </ul>
+                <button type="button" class="btn btn-outline-primary mx-auto mt-3 d-flex" onclick="start_exam()">Start
+                    Exam</button>
+            </div>
+            <div id="question" class="d-none">
+                <p id="timer" class="text-end"></p>
+                <h3 class="text-start mb-3 text-primary">Question 1</h3>
+                <table>
+                    <thead>
+                        <tr>
+                            <p>
+                                India Gate is in ________
+                            </p>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td class="p-3"><input type="radio" name="city" value="Mumbai" class="ms-0 me-3">Mumbai</td>
+                            <td class="p-3"><input type="radio" name="city" value="Delhi" class="ms-0 me-3">Delhi</td>
+                        </tr>
+                        <tr>
+                            <td class="p-3"><input type="radio" name="city" value="Ahmedabad" class="ms-0 me-3">Ahmedabad</td>
+                            <td class="p-3"><input type="radio" name="city" value="Chennai" class="ms-0 me-3">Chennai
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+        <script src="Assignment.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+            integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous">
+            </script>
+</body>
+
+</html>

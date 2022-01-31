@@ -1,0 +1,33 @@
+using System;
+
+public class Program
+{
+	public static void Main()
+	{
+		DateTime dt1 = new DateTime(2015, 12, 31);
+		DateTime dt2 = new DateTime(2018, 2, 2);
+		TimeSpan ts = new TimeSpan(25, 20, 55);
+		
+		DateTime newDate = dt1.Add(ts);
+		
+		Console.WriteLine(newDate);
+		
+		TimeSpan result = dt2.Subtract(dt1);
+		Console.WriteLine(result);
+	
+		var str = "5/12/2020";
+		DateTime dt;
+		
+			
+		string s = "2/3/2020 12:20:00";
+		Console.WriteLine(DateTime.Parse(s));
+		
+		var isValidDate = DateTime.TryParse(str, out dt);
+		if (isValidDate)
+			Console.WriteLine(dt);
+		else
+			Console.WriteLine($"{str} is not a valid date string");
+
+
+}
+}

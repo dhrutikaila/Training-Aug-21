@@ -1,0 +1,74 @@
+<!-- Create one paragraph, add some dummy text and apply blue background color using jquery -->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Assignment</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <script src="../../jQuery/jQuery.js"></script>
+    <script>
+        $(document).ready(function () {
+            $("#button").click(function () {
+
+                $.getJSON("https://gorest.co.in/public-api/users", function (jsonData, status) {
+                    if (status == "success") {
+                        $.each(jsonData.data, function (index, element) {
+                    $("#tbldata").append(
+                        "<tr>"
+                            + "<td>"+element.id+"</td>"
+                            + "<td>"+element.name+"</td>"
+                            + "<td>"+element.email+"</td>"
+                            + "<td>"+element.gender+"</td>"
+                            + "<td>"+element.status+"</td>"
+                            +"</tr>");                            
+                            
+                            // Another way:  
+                            // $("#tbldata").append($("<tr></tr>").append($("<td></td>").text(element.id)).append($("<td></td>").text(element.name)).append($("<td></td>").text(element.email)).append($("<td></td>").text(element.gender)).append($("<td></td>").text(element.status)));
+                            // ($("<td></td>").text("abc")).appendTo($("<tr></tr>").appendTo("#tbldata"));
+                        });
+                    }
+                    else {
+                        alert("Error: " + status);
+                    }
+                });
+
+            });
+        });
+    </script>
+
+
+</head>
+
+<body>
+    <h2 style="height: 5vh; color:cadetblue; text-align:center" class="mt-5">Use getJSON method access web api and
+        display the result in one table.</h2>
+
+    <div class="container border border-3 mt-5 w-50">
+        <h4 class="text-muted my-4">Click Below Button To see The API Data in Table Format</h4>
+        <button id="button" class="btn btn-primary mb-3">Click Here</button>
+        <table id="table" class="table table-hover">
+            <thead>
+                <tr>
+                    <th>Id</th>
+                    <th>Name</th>
+                    <th>Email</th>
+                    <th>Gender</th>
+                    <th>Status</th>
+                </tr>
+            </thead>
+
+            <tbody id="tbldata">
+
+            </tbody>
+        </table>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+        crossorigin="anonymous"></script>
+</body>
+
+</html>

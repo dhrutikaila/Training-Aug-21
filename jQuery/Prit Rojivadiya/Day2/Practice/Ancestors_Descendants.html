@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+</head>
+
+<body>
+
+    <div class="ancestors">
+        <div style="width:500px;">div (great-grandparent)
+            <ul>ul (grandparent)
+                <li>li (direct parent)
+                    <span>span</span>
+                </li>
+            </ul>
+        </div>
+
+        <div style="width:500px;">div (grandparent)
+            <p>p (direct parent)
+                <span>span</span>
+            </p>
+        </div>
+    </div>
+
+
+    <script>
+
+        $(document).ready(function () {
+
+            // jQuery ancestors
+
+            $("span").parent().css({ "color": "red", "border": "2px solid red" });
+
+            $("span").parents().css({ "color": "blue", "border": "2px solid blue" });
+
+            console.log($("span").parents("ul").html());
+
+            $("span").parentsUntil("div").css("color", "yellow");
+
+
+            // jQuery Descendants
+
+            $("div").children().css("font-size", "20px")
+
+            $("div").find("span").css("margin-left", "100px")
+
+            console.log($("div").find("*").text())
+
+            // jQuery siblings
+
+
+
+        });
+
+
+    </script>
+</body>
+
+</html>

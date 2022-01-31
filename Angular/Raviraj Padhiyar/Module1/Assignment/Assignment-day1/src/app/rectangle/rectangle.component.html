@@ -1,0 +1,14 @@
+<p class="display-4">calculate area of rectangle</p>
+
+<div class="mb-3">
+    <label class="form-label" >Enter length of rectangle</label>
+    <input class="form-control" type="number" [(ngModel)]="length" />
+    <br />
+    <label class="form-label" >Enter width of rectangle</label>
+    <input class="form-control" type="number" [(ngModel)]="width" />
+    <br />
+    <button class="btn btn-primary" type="button" (click)="calculateArea()">calculate Area</button>
+</div>
+
+<h3>Area of rectangle is {{ area }}</h3>
+

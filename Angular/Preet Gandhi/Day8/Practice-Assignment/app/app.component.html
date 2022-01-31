@@ -1,0 +1,76 @@
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
+  integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
+  integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
+
+<div class="container">
+
+  <!-- Practice Exercise -->
+  <h1 class="text-center my-3">Practice Exercise Day 8</h1>
+  <div class="border border-3 border-warning mt-5 p-3 content">
+    <div class="row">
+      <div class="col-xl-6">
+        <h4>Passing Data from Parent to Child Component</h4>
+        <h5>Welcome to {{title}}</h5>
+        <button class="btn btn-primary me-3 mb-4" (click)="increment()">Increment</button>
+        <button class="btn btn-danger mb-4" (click)="decrement()">Decrement</button>
+        <app-child [count]=Counter [item]=currentItem></app-child>
+      </div>
+      <div class="col-xl-6">
+        <h4>Passing Data from Child to Parent Component</h4>
+        <app-child2 (newItemEvent)="addItem($event)"></app-child2>
+        <ul>
+          <li *ngFor="let item of items">{{item}}</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+
+  <!-- Assignment -->
+  <h1 class="text-center mt-5">Assignment Day 8</h1>
+  <div class="border border-3 border-warning mt-5 p-3 content">
+    <div class="row">
+      <div class="col-xl-12">
+        <h4 class="text-center">Passing Data from Child to Parent Component</h4>
+        <h4 class="text-center">Then Passing Data from Parent to Child Component</h4>
+        <app-assignment-form (formData)="eventHandler($event)" [inputFormData]=childData></app-assignment-form>
+        <div class="row">
+          <div class="col-xl-12">
+            <h3 class="text-center mt-5">Student Data (Child to parent)</h3>
+            <p class="text-center">Table data displayed by parent component</p>
+            <table class="table table-danger table-hover table-bordered border-info mt-5">
+              <thead>
+                <tr>
+                  <th scope="col">FirstName</th>
+                  <th scope="col">LastName</th>
+                  <th scope="col">Dob</th>
+                  <th scope="col">PlaceOfBirth</th>
+                  <th scope="col">FatherFirstName</th>
+                  <th scope="col">MotherFirstName</th>
+                  <th scope="col">City</th>
+                  <th scope="col">State</th>
+                  <th scope="col">Country</th>
+                  <th scope="col">Pincode</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr *ngFor="let s of childData">
+                  <td>{{s.FirstName}}</td>
+                  <td>{{s.LastName}}</td>
+                  <td>{{s.Dob}}</td>
+                  <td>{{s.PlaceOfBirth}}</td>
+                  <td>{{s.Father.FatherFirstName}}</td>
+                  <td>{{s.Mother.MotherFirstName}}</td>
+                  <td>{{s.Address.City}}</td>
+                  <td>{{s.Address.State}}</td>
+                  <td>{{s.Address.Country}}</td>
+                  <td>{{s.Address.Pin}}</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

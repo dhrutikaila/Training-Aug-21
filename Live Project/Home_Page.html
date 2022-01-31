@@ -1,0 +1,1785 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>No Broker</title>
+        <!-- Bootstrap CSS -->
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-F3w7mX95PdgyTmZZMECAngseQB83DfGTowi0iMjiWaeVhAn4FJkqJByhZMI3AhiU" crossorigin="anonymous">
+        <script src="./jquery-3.6.0.js"></script>
+        <script src="./Home_Page.js"></script>
+        
+        <style>
+          /*Media Query*/
+          /*for mobile (max-width:576px) -small screen*/
+          @media only screen and (max-width: 576px) {
+            #youtubeVideo1 {
+              width: 85%;
+              height: 210px;
+            }
+
+            .appprmotion {
+              padding-left: 0px;
+              padding-right: 0px;
+            }
+
+            #divforappprmotionbutton {
+              display: flex;
+              justify-content: center;
+            }
+
+            .textcenterforappprmotion {
+              text-align: center;
+            }
+
+            #rowofdivforappprmotionbutton {
+              width: 100%;
+            }
+
+            #colfindproperty {
+              border-bottom-style: solid;
+              padding-bottom: 8px;
+              border-color: silver;
+            }
+
+            #collistyourproperty {
+              border-top-style: solid;
+              padding-top: 8px;
+              border-color: silver;
+            }
+
+            #checkEligibilityRow {
+              width: 100%;
+            }
+
+            #checkEligibilityContent {
+              width: 60%;
+            }
+
+            #btnCheckEligibility {
+              width: 23.25%;
+            }
+
+            #forBuilder1 {
+              margin-left: 2.4cm;
+            }
+
+            #forBuilder2 {
+              margin-left: 2.4cm;
+            }
+
+            #rowforpostadd {
+              width: 91%;
+            }
+
+            .topheadingforsite {
+              font-size: 22px;
+            }
+
+            #rentmenu {
+              width: 850px;
+              height: 4.5cm;
+            }
+
+            #setmarginforpostadd {
+              margin-top: 2.5cm;
+            }
+
+            #setmarginformenu {
+              margin-top: 0.6cm;
+              
+            }
+
+            #SecondPagedivContent1 {
+              width: 100%;
+              height: auto;
+            }
+
+            #secondpageContainer1 {
+              margin-left: 0%;
+              margin-right: 0%;
+            }
+
+            #contactdetailsofsecondpage {
+              margin-left: 0%;
+              margin-right: 0%;
+            }
+          }
+
+          /*Except mobile (max-width:576px) -largescreen*/
+          @media only screen and (min-width: 576px) {
+            .appprmotion {
+              padding-left: 4cm;
+            }
+
+            #divforappprmotionbutton {
+              display: flex;
+              justify-content: left;
+              padding-left: 10px;
+            }
+
+            #rowofdivforappprmotionbutton {
+              width: 70%;
+            }
+
+            #colfindproperty {
+              border-right-style: solid;
+              border-color: silver;
+            }
+
+            #collistyourproperty {
+              border-left-style: solid;
+              border-color: silver;
+            }
+
+            #checkEligibilityRow {
+              width: 90%;
+              display: flex;
+              justify-content: center;
+            }
+
+            #checkEligibilityicon {
+              width: 5%;
+            }
+
+            #checkEligibilityContent {
+              width: 35%;
+              justify-content: center;
+            }
+
+            #btnCheckEligibility {
+              width: 10.5%;
+            }
+
+            #forBuilder1 {
+              margin-left: 2.4cm;
+            }
+
+            #forBuilder2 {
+              margin-left: 3.4cm;
+            }
+
+            .topheadingforsite {
+              font-size: 31px;
+            }
+
+            #rentmenu {
+              width: 850px;
+              height: 1.6cm;
+            }
+
+            #setmarginforpostadd {
+              margin-top: 0.8cm;
+            }            
+
+            #btnforsearch {
+              border-style: solid; 
+              border-top-right-radius: 4px; 
+              border-bottom-left-radius: 0%; 
+              border-bottom-right-radius: 0%; 
+              border-top-left-radius: 0%; 
+              border-color: red;
+            }
+
+            #SecondPagedivContent1 {
+              width: 28%;
+              height: auto;
+            }
+
+            #secondpageContainer1 {
+              margin-left: 5cm;
+              margin-right: 5cm;
+            }
+
+            #contactdetailsofsecondpage {
+              margin-left: 5cm;
+              margin-right: 5cm;
+            }
+          }
+
+          /*for tablet (max-width:768px) -midieum screen*/
+          @media (min-width: 576px) and (max-width: 768px) {
+            #youtubeVideo1 {
+              width: 85%;
+              height: 280px;
+            }
+
+            #rowforpostadd {
+              width: 75%;
+            }
+          }
+
+          /*for laptop (max-width:992px) -large screen*/
+          @media (min-width: 768px) and (max-width: 992px) {
+            #youtubeVideo1 {
+              width: 85%;
+              height: 350px;
+            }
+            #rowforpostadd {
+              width: 75%;
+            }
+          }
+
+          /*   */
+          @media only screen and (min-width: 992px) {
+            #rowforpostadd {
+              width: 30%;
+            }
+          }
+        </style>
+    </head>
+    <body>
+
+        <!-- Optional JavaScript; choose one of the two! -->
+
+        <!-- Option 1: Bootstrap Bundle with Popper -->
+
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-/bQdsTh/da6pkI1MST/rWKFNjaCP5gBSY4sEBT38Q/9RBh9AH40zEOg7Hlq2THRZ" crossorigin="anonymous"></script>
+
+        <!-- Option 2: Separate Popper and Bootstrap JS -->
+        <!--
+        <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.3/dist/umd/popper.min.js" integrity="sha384-W8fXfP3gkOKtndU4JGtKDvXbO53Wy8SZCQHczT5FMiiqmQfUpWbYdTil/SxwZgAN" crossorigin="anonymous"></script>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/js/bootstrap.min.js" integrity="sha384-skAcpIdS7UcVUC05LJ9Dxay8AXcDYfBJqt1CJ85S/CFujBsIzCIv+l9liuYLaMQ/" crossorigin="anonymous"></script>
+        -->
+
+        <!--Navbar-->
+        <nav class="navbar navbar-expand-lg p-1 fixed-top navbar-light bg-white shadow">
+            <div class="container-fluid ps-1">
+              <button class="navbar-toggler border border-white p-1 bg-white" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasleft" aria-controls="navbarToggler" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon" style="height: 0.6cm; width: 0.9cm;"></span>
+              </button>
+
+              <a class="navbar-brand p-0" href="#"><img src="./Image/nb_logo_new_trans.svg"></a>
+              <div class="collapse navbar-collapse" id="navbarToggler">
+                  <ul class="navbar-nav ms-auto py-0 mb-0 mb-lg-0">
+                  <li class="nav-item mx-2">
+                    <a class="nav-link active py-1 px-2 my-1 border rounded" href="#">
+                        <img class="mx-1 pb-1" src="./Image/myBooking (1).svg">My Bookings
+                    </a>
+                  </li>
+                  <li class="nav-item mx-2">
+                    <a class="nav-link px-2 my-1 border rounded" href="#" style="padding: 5.5px;">
+                        <img class="mx-1 pe-1 border-end" src="./Image/payrent (1).png">Pay Rent
+                    </a>
+                  </li>
+                  <li class="nav-item mx-2">
+                    <a class="nav-link bg-success px-3 my-1 border rounded border-success text-white" href="#" style="padding: 5.5px;" id="navbtnForPropertyOwners">For Property Owners</a>
+                    <a class="nav-link bg-success px-3 my-1 border rounded border-success text-white" href="#" style="padding: 5.5px;" id="navbtnPostYourProperty">Post Your Property</a>
+                  </li>
+                  <li class="nav-item py-2">
+                    <a class="nav-link px-3 py-0" href="#">Sign Up</a>
+                  </li>
+                  <li class="nav-item py-2">
+                    <a class="nav-link px-3 py-0 border-end border-start" href="#">Log In</a>
+                  </li>
+                  <li class="nav-item py-2">
+                    <a class="nav-link px-3 py-0" href="#">
+                        <span class="navbar-toggler-icon me-1 mb-1"></span>Menu
+                    </a>
+                  </li>
+                </ul>
+              </div>
+            </div>
+        </nav>
+
+        <!--sidebar open when click toggle button-->
+        <div class="offcanvas offcanvas-start bg-white" id="offcanvasleft">
+          <div class="offcanvas-header border p-0 py-3" style="background-color: #fd3752;">
+            <a class="nav-link fw-bold text-white" href="#">
+              Login/Sign Up
+            </a>
+          </div>
+          <div class="offcanvas-body p-0">
+            <a class="nav-link py-2 my-1 mx-0 fw-bold text-muted text-dark" href="#">Home</a>
+            <a class="nav-link py-2 my-1 mx-0 fw-bold text-muted text-dark" href="#">Post Free Property ads</a>
+            <div class=" my-1">
+              <a class="nav-link bg-secondary bg-opacity-10 d-flex justify-content-between fw-bold text-muted text-dark" id="dropdownMenuButton1" href="#" data-bs-toggle="dropdown">
+                NBcase Wallet<span class="dropdown-toggle"></span>
+              </a>
+              <div id="dropdownitem1">
+                <a class="dropdown-item" href="#">Wallet Summary</a>
+                <a class="dropdown-item" href="#">Rewards</a>
+              </div>
+            </div>
+
+            <div class=" my-1">
+              <a class="nav-link bg-secondary bg-opacity-10 d-flex justify-content-between fw-bold text-muted text-dark" id="dropdownMenuButton2" href="#" data-bs-toggle="dropdown">
+                Residential Plans<span class="dropdown-toggle"></span>
+              </a>
+              <div id="dropdownitem2">
+                <a class="dropdown-item" href="#">For Owner</a>
+                <a class="dropdown-item" href="#">For Sellers</a>
+                <a class="dropdown-item" href="#">For Tenants</a>
+                <a class="dropdown-item" href="#">For For Buyers</a>
+              </div>
+            </div>
+
+            <div class=" my-1">
+              <a class="nav-link bg-secondary bg-opacity-10 d-flex justify-content-between fw-bold text-muted text-dark" id="dropdownMenuButton3" href="#" data-bs-toggle="dropdown">
+                Commercial Plans<span class="dropdown-toggle"></span>
+              </a>
+              <div id="dropdownitem3">
+                <a class="dropdown-item" href="#">For Owner</a>
+                <a class="dropdown-item" href="#">For Sellers</a>
+                <a class="dropdown-item" href="#">For Tenants</a>
+                <a class="dropdown-item" href="#">For For Buyers</a>
+              </div>
+            </div>
+
+            <div class=" my-1">
+              <a class="nav-link bg-secondary bg-opacity-10 d-flex justify-content-between fw-bold text-muted text-dark" id="dropdownMenuButton4" href="#" data-bs-toggle="dropdown">
+                Home Services<span class="dropdown-toggle"></span>
+              </a>
+              <div id="dropdownitem4">
+                <a class="dropdown-item" href="#">Packers and Movers</a>
+                <a class="dropdown-item" href="#">Painting</a>
+                <a class="dropdown-item" href="#">Cleaning</a>
+                <a class="dropdown-item" href="#">Interiors</a>
+                <a class="dropdown-item" href="#">Furniture</a>
+              </div>
+            </div>
+
+            <div class=" my-1">
+              <a class="nav-link bg-secondary bg-opacity-10 d-flex justify-content-between fw-bold text-muted text-dark" id="dropdownMenuButton5" href="#" data-bs-toggle="dropdown">
+                NoBroker Pay<span class="dropdown-toggle"></span>
+              </a>
+              <div id="dropdownitem5">
+                <a class="dropdown-item" href="#">Pay Your Rent</a>
+                <a class="dropdown-item" href="#">Deposite Payment</a>
+                <a class="dropdown-item" href="#">Maintenance Payments</a>
+                <a class="dropdown-item" href="#">Electricity & Gas Payment</a>
+              </div>
+            </div>
+
+            <div class=" my-1">
+              <a class="nav-link bg-secondary bg-opacity-10 d-flex justify-content-between fw-bold text-muted text-dark" id="dropdownMenuButton6" href="#" data-bs-toggle="dropdown">
+                Legal Assistance & Loan<span class="dropdown-toggle"></span>
+              </a>
+              <div id="dropdownitem6">
+                <a class="dropdown-item" href="#">Rental Agreement</a>
+                <a class="dropdown-item" href="#">Police Intimation</a>
+                <a class="dropdown-item" href="#">Home Loan</a>
+                <a class="dropdown-item" href="#">Home Deposit Loan</a>
+              </div>
+            </div>
+
+            <div class=" my-1">
+              <a class="nav-link bg-secondary bg-opacity-10 d-flex justify-content-between fw-bold text-muted text-dark" id="dropdownMenuButton7" href="#" data-bs-toggle="dropdown">
+                Utilities<span class="dropdown-toggle"></span>
+              </a>
+              <div id="dropdownitem7">
+                <a class="dropdown-item" href="#">Know Your Rent</a>
+                <a class="dropdown-item" href="#">Create Rent Receipts</a>
+                <a class="dropdown-item" href="#">Click & Earn</a>
+              </div>
+            </div>
+
+            <div class=" my-1">
+              <a class="nav-link bg-secondary bg-opacity-10 d-flex justify-content-between fw-bold text-muted text-dark" id="dropdownMenuButton8" href="#" data-bs-toggle="dropdown">
+                Help & Support<span class="dropdown-toggle"></span>
+              </a>
+              <div id="dropdownitem8">
+                <a class="dropdown-item" href="#">Support Topics</a>
+                <a class="dropdown-item" href="#">Blog</a>
+                <a class="dropdown-item" href="#">Feedback</a>
+                <a class="dropdown-item" href="#">About Us</a>
+              </div>
+            </div>
+
+          </div>
+        </div>
+
+      <!--Main Page Content-->  
+      <div id="mainpagecontent">
+        <!--   -->
+        <div class="p-4" style="height: 385px; margin-top: 1.5cm;">
+          <div class="text-secondary text-opacity-85 text-center mb-3 pt-5 topheadingforsite">
+            World's Largest No Brokerage Property Site
+          </div>
+          <div class="mb-4 d-flex justify-content-center">
+            <div class="p-2 rounded bg-warning bg-opacity-25">
+              <img src="./Image/ncoinIcon.png" style="width: 0.7cm; height: 0.7cm;">
+              <a class="" href="#">
+                <strong>Pay rent</strong>
+              </a>  
+               and Earn upto 
+              <strong> ₹2100+ cashback</strong>
+            </div>
+          </div>
+
+          <div class="d-flex justify-content-center ">
+            <div class="border rounded-top row" style="width: 11cm; height: 1.2cm;">
+              <div class="col text-center py-2" style="color: red; border-bottom-style: solid; border-bottom-color: red;" id="btnBuy">
+                Buy
+              </div>
+              <div class="col border-start border-end text-center py-2" id="btnRent">
+                Rent
+              </div>
+              <div class="col text-center py-2" id="btnCommercial">
+                Commercial
+              </div>
+            </div>
+          </div>
+
+          <div class="d-flex justify-content-center">
+            <div class="border rounded-top row p-0" style="width: 850px; height: 1.4cm;">
+                <div class="col-3 col-sm-2 d-flex p-0 border-end">
+                  <select class="form-select border-0 rounded-0">
+                    <option selected>Mumbai</option>
+                    <option>Bangalore</option>
+                    <option>Pune</option>
+                    <option>Chennai</option>
+                    <option>Gurgaon</option>
+                    <option>Hyderabad</option>
+                    <option>Delhi</option>
+                    <option>Noida</option>
+                    <option>Greater Noida</option>
+                    <option>Ghaziabad</option>
+                    <option>Faridabad</option>
+                  </select>
+                </div>
+                <div class="col-9 col-sm-8 d-flex p-0">
+                  <input class="form-control border-white rounded-0" type="text" placeholder="Search upto 3 localities or landmarks">
+                </div>
+                <div class="col-12 col-sm-2 p-0 d-grid">
+                  <button class="btn btn-danger" type="button" id="btnforsearch">Search</button>
+                </div>
+            </div>
+          </div>
+
+          <div class="d-flex justify-content-center" id="setmarginformenu">
+            <div class="border border-top-0 row p-0 bg-light bg-opacity-50" style="width: 850px; height: 1.6cm;" id="buymenu">
+              <div class="col-3 d-flex p-2 pe-1">
+                <select class="form-select border rounded">
+                  <option selected disabled>Apartment Type</option>
+                  <option>1 RK</option>
+                  <option>1 BHK</option>
+                  <option>2 BHK</option>
+                  <option>3 BHK</option>
+                  <option>4 BHK</option>
+                  <option>4+ BHK</option>
+                </select>
+              </div>
+              <div class="col-3 d-flex p-2 ps-1">
+                <select class="form-select border rounded">
+                  <option selected disabled>Property Status</option>
+                  <option>Under Construction</option>
+                  <option>Ready</option>
+                </select>
+              </div>
+            </div>
+
+            <div class="border border-top-0 row p-0 bg-light bg-opacity-50" id="rentmenu">
+              <div class="col-12 col-sm-5 d-flex flex-row align-items-center p-2 pe-1">
+                <div class="form-check mx-2">
+                  <input class="form-check-input" type="radio" id="radioFullHouse">
+                  <label class="form-check-label">Full House</label>
+                </div>
+                <div class="form-check mx-2">
+                  <input class="form-check-input" type="radio" id="radioPgHostel">
+                  <label class="form-check-label">PG/Hostel</label>
+                </div>
+                <div class="form-check mx-2">
+                  <input class="form-check-input" type="radio" id="radioFlatmates">
+                  <label class="form-check-label">Flatmates</label>
+                </div>
+              </div>
+              <div class="col-12 col-sm-3 d-flex p-2 ps-1 pe-1">
+                <select class="form-select border rounded">
+                  <option selected disabled>Apartment Type</option>
+                  <option>1 RK</option>
+                  <option>1 BHK</option>
+                  <option>2 BHK</option>
+                  <option>3 BHK</option>
+                  <option>4 BHK</option>
+                  <option>4+ BHK</option>
+                </select>
+              </div>
+              <div class="col-12 col-sm-3 d-flex p-2 ps-1">
+                <select class="form-select border rounded">
+                  <option selected disabled>Availability</option>
+                  <option>Immediate</option>
+                  <option>Within 15 Days</option>
+                  <option>Within 30 Days</option>
+                  <option>After 30 Days</option>
+                </select>
+              </div>
+            </div>
+
+            <div class="border border-top-0 row p-0 bg-light bg-opacity-50" style="width: 850px; height: 1.6cm;" id="commercialmenu">
+              <div class="col-2 d-flex flex-row align-items-center p-2 pe-1 me-2">
+                <div class="form-check mx-2">
+                  <input class="form-check-input" type="radio" id="radioCommercialRent">
+                  <label class="form-check-label">Rent</label>
+                </div>
+                <div class="form-check mx-2">
+                  <input class="form-check-input" type="radio" id="radioCommercialBuy">
+                  <label class="form-check-label">Buy</label>
+                </div>
+              </div>
+              <div class="col-3 d-flex p-2 ps-1 pe-1">
+                <select class="form-select border rounded">
+                  <option selected disabled>Property Type</option>
+                  <option>Office-Space</option>
+                  <option>Co-Working</option>
+                  <option>Restaurant/Cafe</option>
+                  <option>Shop</option>
+                  <option>Showroom</option>
+                  <option>Industrial Building</option>
+                  <option>Industrial Shed</option>
+                  <option>GoWdown/Warehouse</option>
+                  <option>Other Business</option>
+                </select>
+              </div>
+            </div>
+
+          </div>
+        </div>
+
+        <!---->
+        <div id="setmarginforpostadd">
+          <div class="d-flex justify-content-center">
+            <div class="row" id="rowforpostadd">
+              <div class="col pe-0 py-3"><div class="border"></div></div>
+              <div class="col-6 col-sm-6 text-center pt-1">Are you a Property Owner?</div>
+              <div class="col ps-0 py-3"><div class="border"></div></div>
+            </div>
+          </div>
+          <div class="text-center my-3">
+            <button class="btn btn-success px-4" type="button" onclick="obclickbtnPostadd()">Post Free Property ad</button>
+          </div>
+        </div>
+
+        <!---->
+        <div class="d-flex justify-content-center bg-dark text-white mt-4">
+          <div class="row py-2 d-flex flex-nowrap" id="checkEligibilityRow">
+            <div class="col-2 text-center d-flex" id="checkEligibilityicon">
+              <img src="./Image/homeloan.png">
+            </div>
+            <div class="col-8 d-flex flex-wrap align-items-center px-0" id="checkEligibilityContent">
+              <small class="d-flex flex-wrap">Do you know how much </small><span class="fw-bold mx-1 d-flex flex-wrap">loan </span><small class="d-flex flex-wrap">you can get? Get maximum with </small><span class="fw-bold mx-1 d-flex flex-wrap">NoBroker</span>
+            </div>
+            <div class="col-2 d-flex align-items-center ps-0 pe-1" id="btnCheckEligibility">
+              <button class="btn btn-warning py-1 px-3 ms-1" type="button"><small>Check Eligibility </small></button> 
+            </div>
+          </div>
+        </div>
+
+        <!---->
+        <div class="d-flex justify-content-center">
+          <div class="row row-cols-2 row-cols-sm-3 row-cols-md-6 pt-1" style="width: 100%;" id="buyContent">
+            <div class="col text-center py-2 px-3">
+              <div class="mb-1" style="height: 0.5cm;"></div>
+              <img src="./Image/homeloan.png" style="height: 1.5cm;">
+              <div class="mt-1" style="height: 1.4cm;">Home Loan</div>
+            </div>
+            <div class="col text-center py-2 px-3">
+              <div class="mb-1" style="height: 0.5cm;"></div>
+              <img src="./Image/propertyLegleServices.png" style="height: 1.5cm;">
+              <div class="mt-1" style="height: 1.4cm;">Property Legal Services</div>
+            </div>
+            <div class="col text-center py-2 px-3">
+              <div class="mb-1" style="height: 0.5cm;"></div>
+              <img src="./Image/saleAgreement.png" style="height: 1.5cm;">
+              <div class="mt-1" style="height: 1.4cm;">Sale Agreement</div>
+            </div>
+            <div class="col text-center py-2 px-3">
+              <div class="mb-1" style="height: 0.5cm;"></div>
+              <img src="./Image/newBuilderProject.png" style="height: 1.5cm;">
+              <div class="mt-1" style="height: 1.4cm;">New Builder Projects</div>
+            </div>
+            <div class="col text-center py-2 px-3">
+              <div class="mb-1" style="height: 0.5cm;"></div>
+              <img src="./Image/interiors.svg" style="height: 1.5cm;">
+              <div class="mt-1" style="height: 1.4cm;">Interiors</div>
+            </div>
+            <div class="col text-center py-2 px-3">
+              <div class="mb-1" style="height: 0.5cm;"></div>
+              <img src="./Image/noBrokerForNri.png" style="height: 1.5cm;">
+              <div class="mt-1" style="height: 1.4cm;">NoBroker for NRI's</div>
+            </div>
+          </div>
+        
+          <div class="row row-cols-2 row-cols-sm-3 row-cols-md-6 pt-1" style="width: 100%;" id="rentContent">
+            <div class="col text-center py-2 px-3">
+              <div class="mb-1" style="height: 0.5cm;"></div>
+              <img src="./Image/rentalAgreement.png" style="height: 1.5cm;">
+              <div class="mt-1" style="height: 1.4cm;">Rental Agreement</div>
+            </div>
+            <div class="col text-center py-2 px-3">
+              <div class="mb-1" style="height: 0.5cm;"></div>
+              <img src="./Image/payrent.png" style="height: 1.5cm;">
+              <div class="mt-1" style="height: 1.4cm;">Pay Rent</div>
+            </div>
+            <div class="col text-center py-2 px-3">
+              <div class="mb-1" style="height: 0.5cm;"></div>
+              <img src="./Image/refer&earn.png" style="height: 1.5cm;">
+              <div class="mt-1" style="height: 1.4cm;">Refer & Earn</div>
+            </div>
+            <div class="col text-center py-2 px-3">
+              <div class="mb-1" style="height: 0.5cm;"></div>
+              <img src="./Image/painting&cleaning.png" style="height: 1.5cm;">
+              <div class="mt-1" style="height: 1.4cm;">Painting & Cleaning</div>
+            </div>
+            <div class="col text-center py-2 px-3">
+              <div class="mb-1" style="height: 0.5cm;"></div>
+              <img src="./Image/packers&movers.png" style="height: 1.5cm;">
+              <div class="mt-1" style="height: 1.4cm;">Packers & Movers</div>
+            </div>
+            <div class="col text-center py-2 px-3">
+              <div class="mb-1" style="height: 0.5cm;"></div>
+              <img src="./Image/noBrokerForNri.png" style="height: 1.5cm;">
+              <div class="mt-1" style="height: 1.4cm;">NoBroker for NRI's</div>
+            </div>
+          </div>
+        </div>
+
+        <!---->
+        <div>
+          <!---->
+          <div class="px-0 py-4 d-flex justify-content-center">
+            <div class="row px-0" style="width:100%">
+              <div class="col-4 d-flex justify-content-end px-0">
+                <div class="row" style="width: 100%;">
+                  <div class="col px-0">
+                    <div class="border-top border-2" style="margin-top: 0.5cm;"></div>
+                  </div>
+                  <div class="col-1 px-0 py-2">
+                    <div class="border border-danger rounded-circle" style="height: 0.6cm; width: 0.6cm;"></div>
+                  </div>
+                </div>
+              </div>
+              <div class="col-4 px-0 text-center text-secondary fw-normal fs-3">
+                Why Use NoBroker
+              </div>
+              <div class="col-4 d-flex justify-content-start px-0">
+                <div class="row" style="width: 100%;">
+                  <div class="col-1 d-flex justify-content-end px-0 py-2">
+                    <div class="border border-danger rounded-circle" style="height: 0.6cm; width: 0.6cm;"></div>
+                  </div>
+                  <div class="col px-0">
+                    <div class="border-top border-2" style="margin-top: 0.5cm;"></div>
+                  </div>
+                </div>
+              </div>
+
+            </div>
+          </div>  
+          
+          <!---->  
+          <div class="mt-4 d-flex justify-content-center">
+            <div class="row row-cols-2 row-cols-sm-4 px-0" style="width:100%">
+              <div class="col text-center">
+                <img src="./Image/avoidBrokers.png">
+                <div class="fs-5">Avoid Brokers</div>
+                <div class="fs-6">We directly connect you to verified owners to save brokerage</div>
+              </div>
+              <div class="col text-center">
+                <img src="./Image/freeListing.png">
+                <div class="fs-5">Free Listing</div>
+                <div class="fs-6">Easy listing process. Also using WhatsApp</div>
+              </div>
+              <div class="col text-center">
+                <img src="./Image/shortlistWithoutVisit.png">
+                <div class="fs-5">Shortlist Without Visit</div>
+                <div class="fs-6">Extensive information makes it easy</div>
+              </div>
+              <div class="col text-center">
+                <img src="./Image/rentalAgreement(1).png">
+                <div class="fs-5">Rental Agreement</div>
+                <div class="fs-6">Assistance in creating Rental agreement & Paper work</div>
+              </div>
+            </div>
+          </div>
+
+          <!---->
+          <div class="py-3 my-3 bg-secondary bg-opacity-10">
+            <div class="px-0 py-4 d-flex justify-content-center">
+              <div class="row px-0" style="width:100%">
+                <div class="col-4 d-flex justify-content-end px-0">
+                  <div class="row" style="width: 100%;">
+                    <div class="col px-0">
+                      <div class="border-top border-2" style="margin-top: 1.1cm;"></div>
+                    </div>
+                    <div class="col-1 px-0">
+                      <div class="border border-danger rounded-circle" style="height: 0.6cm; width: 0.6cm; margin-top: 0.8cm;"></div>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-4 px-0 text-center text-secondary fw-normal fs-3">
+                  NoBroker Business Assist Plan For Builders
+                </div>
+                <div class="col-4 d-flex justify-content-start px-0">
+                  <div class="row" style="width: 100%;">
+                    <div class="col-1 d-flex justify-content-end px-0">
+                      <div class="border border-danger rounded-circle" style="height: 0.6cm; width: 0.6cm; margin-top: 0.8cm;"></div>
+                    </div>
+                    <div class="col px-0">
+                      <div class="border-top border-2" style="margin-top: 1.1cm;"></div>
+                    </div>
+                  </div>
+                </div>
+  
+              </div>
+            </div>   
+            
+            <!---->
+            <div class="mt-3 d-flex justify-content-center pb-5">
+              <div class="row">
+              <div class="col" id="forBuilder1">
+                <img src="./image/download (2).png">
+              </div>
+              <div class="col mt-5 me-3" id="forBuilder2">
+                <div class="fs-5 text-secondary">Get in touch with us to Sell or Rent Your Projects</div>
+                <div class="mt-4 mb-2"><button class="btn btn-danger" type="button">Enquire Now</button></div>
+                <hr>
+                <div class="my-2 fs-6 text-secondary">For Builder Enquiries : +91 91080 50400</div>
+              </div>
+              </div>
+            </div>
+          </div>
+
+          <!---->
+          <div class="py-5">
+            <div class="d-flex justify-content-center">
+              <div class="row px-0" style="width:100%">
+                <div class="col-4 d-flex justify-content-end px-0">
+                  <div class="row" style="width: 100%;">
+                    <div class="col px-0">
+                      <div class="border-top border-2" style="margin-top: 0.5cm;"></div>
+                    </div>
+                    <div class="col-1 px-0 py-2">
+                      <div class="border border-danger rounded-circle" style="height: 0.6cm; width: 0.6cm;"></div>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-4 px-0 text-center text-secondary fw-normal fs-3">
+                  We Make A Difference
+                </div>
+                <div class="col-4 d-flex justify-content-start px-0">
+                  <div class="row" style="width: 100%;">
+                    <div class="col-1 d-flex justify-content-end px-0 py-2">
+                      <div class="border border-danger rounded-circle" style="height: 0.6cm; width: 0.6cm;"></div>
+                    </div>
+                    <div class="col px-0">
+                      <div class="border-top border-2" style="margin-top: 0.5cm;"></div>
+                    </div>
+                  </div>
+                </div>
+  
+              </div> 
+            </div>
+            
+            <!---->
+            <div class="d-flex justify-content-center">
+              <div class="row row-cols-1 row-cols-sm-3 mt-4" style="width:100%">
+                <div class="col text-center">
+                  <div class="d-flex justify-content-center">
+                    <div class="border border-2 border-danger rounded-circle text-danger fs-2 fw-normal d-flex align-items-center  justify-content-center" style="height: 4.5cm; width: 4.5cm;">₹130 Cr+</div>
+                  </div>
+                  <div class="fs-5 mt-3">Brokerage Saved Monthly</div>
+                </div>
+                <div class="col text-center">
+                  <div class="d-flex justify-content-center">
+                    <div class="border border-2 border-danger rounded-circle text-danger fs-2 fw-normal d-flex align-items-center  justify-content-center" style="height: 4.5cm; width: 4.5cm;">₹30 Lakh+</div>
+                  </div>
+                  <div class="fs-5 mt-3">Customers Connected Monthly</div>
+                </div>
+                <div class="col text-center">
+                  <div class="d-flex justify-content-center">
+                    <div class="border border-2 border-danger rounded-circle text-danger fs-2 fw-normal d-flex align-items-center justify-content-center" style="height: 4.5cm; width: 4.5cm;">₹2 Lakh+</div>
+                  </div>
+                  <div class="fs-5 mt-3">New Listing Monthly</div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!---->
+          <div class="py-5 bg-dark">
+            <div class="px-5 text-center text-white h2">Our Customers Loves Us</div>
+            <div class="my-4 d-flex justify-content-center">
+              <iframe class="px-2" id="youtubeVideo1" src="https://www.youtube.com/watch?v=0ChlgxhXVws&t=4s" height="390" width="60%"></iframe>
+            </div>
+
+            <!---->
+            <div class="px-3 my-5">
+              <div id="carouselControls" class="carousel slide border border-0" data-bs-touch="true" data-bs-ride="carousel">
+                <div class="carousel-inner">
+                  <div class="carousel-item active">
+                    <div class="row row-cols-1 px-4 row-cols-md-3 d-flex justify-content-evenly">
+                      <div class="col py-0 px-3">
+                        <div class="card p-3 bg-white">
+                          <div class="card-header border-0 bg-transparent p-0 d-flex justify-content-center">
+                            <div class="row" style="width: 100%;">
+                              <div class="col-3">
+                                <img class="rounded-circle" src="./Image/card_img_1.jfif" style="height: 1.3cm; width: 1.3cm;">
+                              </div>
+                              <div class="col ps-4">
+                                <div class="row row-cols-1 p-0">    
+                                  <div class="col p-0 fs-6">
+                                      Ms.Dhoni
+                                  </div>
+                                  <div class="col p-0">
+                                    <img src="./Image/five_star_icon.jfif" style="height: 0.5cm; width: 0.5cm;">
+                                    <img src="./Image/five_star_icon.jfif" style="height: 0.5cm; width: 0.5cm;">
+                                    <img src="./Image/five_star_icon.jfif" style="height: 0.5cm; width: 0.5cm;">
+                                    <img src="./Image/five_star_icon.jfif" style="height: 0.5cm; width: 0.5cm;">
+                                    <img src="./Image/five_star_icon.jfif" style="height: 0.5cm; width: 0.5cm;"> 
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                          <div class="card-body">
+                            <h6 class="card-title mb-0">Found Great Place to Stay via NoBroker</h6>
+                            <p class="card-text fs-6">"NoBroker provides a great place to stay with safe environment. if they show you something about property that is always same as it. No fake pictures."</p>
+                          </div>
+                        </div>
+                      </div>
+                      
+                      <div class="col py-0 px-3">
+                        <div class="card p-3 bg-white">
+                          <div class="card-header border-0 bg-transparent p-0 d-flex justify-content-center">
+                            <div class="row" style="width: 100%;">
+                              <div class="col-3">
+                                <img class="rounded-circle" src="./Image/card_img_1.jfif" style="height: 1.3cm; width: 1.3cm;">
+                              </div>
+                              <div class="col ps-4">
+                                <div class="row row-cols-1 p-0">    
+                                  <div class="col p-0 fs-6">
+                                      Ms.Dhoni
+                                  </div>
+                                  <div class="col p-0">
+                                    <img src="./Image/five_star_icon.jfif" style="height: 0.5cm; width: 0.5cm;">
+                                    <img src="./Image/five_star_icon.jfif" style="height: 0.5cm; width: 0.5cm;">
+                                    <img src="./Image/five_star_icon.jfif" style="height: 0.5cm; width: 0.5cm;">
+                                    <img src="./Image/five_star_icon.jfif" style="height: 0.5cm; width: 0.5cm;">
+                                    <img src="./Image/five_star_icon.jfif" style="height: 0.5cm; width: 0.5cm;"> 
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                          <div class="card-body">
+                            <h6 class="card-title mb-0">Found Great Place to Stay via NoBroker</h6>
+                            <p class="card-text fs-6">"NoBroker provides a great place to stay with safe environment. if they show you something about property that is always same as it. No fake pictures."</p>
+                          </div>
+                        </div>
+                      </div>
+
+                      <div class="col py-0 px-3">
+                        <div class="card p-3 bg-white">
+                          <div class="card-header border-0 bg-transparent p-0 d-flex justify-content-center">
+                            <div class="row" style="width: 100%;">
+                              <div class="col-3">
+                                <img class="rounded-circle" src="./Image/card_img_1.jfif" style="height: 1.3cm; width: 1.3cm;">
+                              </div>
+                              <div class="col ps-4">
+                                <div class="row row-cols-1 p-0">    
+                                  <div class="col p-0 fs-6">
+                                      Ms.Dhoni
+                                  </div>
+                                  <div class="col p-0">
+                                    <img src="./Image/five_star_icon.jfif" style="height: 0.5cm; width: 0.5cm;">
+                                    <img src="./Image/five_star_icon.jfif" style="height: 0.5cm; width: 0.5cm;">
+                                    <img src="./Image/five_star_icon.jfif" style="height: 0.5cm; width: 0.5cm;">
+                                    <img src="./Image/five_star_icon.jfif" style="height: 0.5cm; width: 0.5cm;">
+                                    <img src="./Image/five_star_icon.jfif" style="height: 0.5cm; width: 0.5cm;"> 
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                          <div class="card-body">
+                            <h6 class="card-title mb-0">Found Great Place to Stay via NoBroker</h6>
+                            <p class="card-text fs-6">"NoBroker provides a great place to stay with safe environment. if they show you something about property that is always same as it. No fake pictures."</p>
+                          </div>
+                        </div>
+                      </div>
+
+                    </div>
+                  </div>
+
+                  
+                  
+                  <div class="carousel-item">
+                    <div class="row row-cols-1 row-cols-sm-3 px-4 d-flex justify-content-evenly">
+                      <div class="col py-0 px-3">
+                        <div class="card p-3 bg-white">
+                          <div class="card-header border-0 bg-transparent p-0 d-flex justify-content-center">
+                            <div class="row" style="width: 100%;">
+                              <div class="col-3">
+                                <img class="rounded-circle" src="./Image/card_img_1.jfif" style="height: 1.3cm; width: 1.3cm;">
+                              </div>
+                              <div class="col ps-4">
+                                <div class="row row-cols-1 p-0">    
+                                  <div class="col p-0 fs-6">
+                                      Ms.Dhoni
+                                  </div>
+                                  <div class="col p-0">
+                                    <img src="./Image/five_star_icon.jfif" style="height: 0.5cm; width: 0.5cm;">
+                                    <img src="./Image/five_star_icon.jfif" style="height: 0.5cm; width: 0.5cm;">
+                                    <img src="./Image/five_star_icon.jfif" style="height: 0.5cm; width: 0.5cm;">
+                                    <img src="./Image/five_star_icon.jfif" style="height: 0.5cm; width: 0.5cm;">
+                                    <img src="./Image/five_star_icon.jfif" style="height: 0.5cm; width: 0.5cm;"> 
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                          <div class="card-body">
+                            <h6 class="card-title mb-0">Found Great Place to Stay via NoBroker</h6>
+                            <p class="card-text fs-6">"NoBroker provides a great place to stay with safe environment. if they show you something about property that is always same as it. No fake pictures."</p>
+                          </div>
+                        </div>
+                      </div>
+
+                      <div class="col py-0 px-3">
+                        <div class="card p-3 bg-white">
+                          <div class="card-header border-0 bg-transparent p-0 d-flex justify-content-center">
+                            <div class="row" style="width: 100%;">
+                              <div class="col-3">
+                                <img class="rounded-circle" src="./Image/card_img_1.jfif" style="height: 1.3cm; width: 1.3cm;">
+                              </div>
+                              <div class="col ps-4">
+                                <div class="row row-cols-1 p-0">    
+                                  <div class="col p-0 fs-6">
+                                      Ms.Dhoni
+                                  </div>
+                                  <div class="col p-0">
+                                    <img src="./Image/five_star_icon.jfif" style="height: 0.5cm; width: 0.5cm;">
+                                    <img src="./Image/five_star_icon.jfif" style="height: 0.5cm; width: 0.5cm;">
+                                    <img src="./Image/five_star_icon.jfif" style="height: 0.5cm; width: 0.5cm;">
+                                    <img src="./Image/five_star_icon.jfif" style="height: 0.5cm; width: 0.5cm;">
+                                    <img src="./Image/five_star_icon.jfif" style="height: 0.5cm; width: 0.5cm;"> 
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                          <div class="card-body">
+                            <h6 class="card-title mb-0">Found Great Place to Stay via NoBroker</h6>
+                            <p class="card-text fs-6">"NoBroker provides a great place to stay with safe environment. if they show you something about property that is always same as it. No fake pictures."</p>
+                          </div>
+                        </div>
+                      </div>
+
+                      <div class="col py-0 px-3">
+                        <div class="card p-3 bg-white">
+                          <div class="card-header border-0 bg-transparent p-0 d-flex justify-content-center">
+                            <div class="row" style="width: 100%;">
+                              <div class="col-3">
+                                <img class="rounded-circle" src="./Image/card_img_1.jfif" style="height: 1.3cm; width: 1.3cm;">
+                              </div>
+                              <div class="col ps-4">
+                                <div class="row row-cols-1 p-0">    
+                                  <div class="col p-0 fs-6">
+                                      Ms.Dhoni
+                                  </div>
+                                  <div class="col p-0">
+                                    <img src="./Image/five_star_icon.jfif" style="height: 0.5cm; width: 0.5cm;">
+                                    <img src="./Image/five_star_icon.jfif" style="height: 0.5cm; width: 0.5cm;">
+                                    <img src="./Image/five_star_icon.jfif" style="height: 0.5cm; width: 0.5cm;">
+                                    <img src="./Image/five_star_icon.jfif" style="height: 0.5cm; width: 0.5cm;">
+                                    <img src="./Image/five_star_icon.jfif" style="height: 0.5cm; width: 0.5cm;"> 
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                          <div class="card-body">
+                            <h6 class="card-title mb-0">Found Great Place to Stay via NoBroker</h6>
+                            <p class="card-text fs-6">"NoBroker provides a great place to stay with safe environment. if they show you something about property that is always same as it. No fake pictures."</p>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+
+                </div>
+                <button class="carousel-control-prev" type="button" style="width: 0.8cm;" data-bs-target="#carouselControls" data-bs-slide="prev">
+                  <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                  <span class="visually-hidden">Previous</span>
+                </button>
+                <button class="carousel-control-next" type="button" style="width: 0.8cm;" data-bs-target="#carouselControls" data-bs-slide="next">
+                  <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                  <span class="visually-hidden">Next</span>
+                </button>
+              </div>
+            </div>
+
+            <!---->
+            <div class="text-center"><a class="text-white" href="#">More Testimonials</a></div>
+          </div>
+        </div>
+
+        <!---->
+        <div class="p-5">
+          <div class="px-4 row row-cols-1 row-cols-sm-2">
+            <div class="col-sm-5 col-12 d-flex justify-content-center appprmotion">
+              <img src="./Image/homeAppPromotion.png" style="height: 9.5cm; width: 8.3cm;">
+            </div>
+            <div class="col-sm-7 col-12 appprmotion">
+              <div class="text-danger fs-3 mb-4 textcenterforappprmotion" style="margin-top: 2cm;">Find A New Home On The Go</div>
+              <div class="fs-5 textcenterforappprmotion">Download our app</div>
+              <div class="fs-6 text-secondary textcenterforappprmotion">Where Convenience is at your fingertip</div>
+              <div id="divforappprmotionbutton">
+              <div class="row my-4" id="rowofdivforappprmotionbutton">
+                <div class="col-6 d-flex ps-0">
+                  <img src="./Image/homeAppPromotionGooglePlay.png">
+                </div>
+                <div class="col-6 d-flex pe-0">
+                  <img src="./Image/homeAppPromotionAppstore.svg">
+                </div>
+              </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+      <!--Post free Property btn click event and page content-->
+      <div id="Postfreeaddcontent">
+        <div class="mt-5 py-4">
+          <div class="text-secondary text-opacity-85 text-center mb-4 pt-0 topheadingforsite ">
+            Sell or Rent Your Property For Free
+          </div>
+          
+          <div class="row border my-2" id="secondpageContainer1">
+            <div class="col-4 bg-secondary bg-opacity-10 p-4" id="SecondPagedivContent1">
+              <div class="h6">Why Post through us?</div>
+              <div class="text-secondary my-2">
+                <img class="me-3" src="./Image/Zero_Brokerage.svg"><small>Zero Brokerage</small>
+              </div>
+              <div class="text-secondary my-2">
+                <img class="me-3" src="./Image/Tenant.svg"><small>Faster Tenants</small>
+              </div>
+              <div class="text-secondary my-2">
+                <img class="me-3" src="./Image/tenant_buyer_connections.svg"><small>10 lac tenants/buyers connections</small>
+              </div>
+              <div class="mt-5">
+                <div class="h6">30 Lac+ Home Owners Trust Us</div>
+                <div class="carousel slide" data-bs-ride="carousel">
+                  <div class="carousel-inner">
+                    <div class="carousel-item active text-secondary fs-6">
+                      I posted a property ad online on NoBroker. Its an efficient real estate website because despite my busy schedule they did a great job of contacting me at the right times. To keep me updated they sent mails & messages. They found a great tenant for my rental property as per my demands.
+                      <br>
+                      <div class="h6 mt-3"><span class="text-dark">Aldrin</span><span class="muted"> | Bangloare</span></div>
+                    </div>
+                    <div class="carousel-item text-secondary fs-6">
+                      NoBroker.com is a free property ad posting site that I have tried before. I found that it aids me well and gets the right tenants for my properties. This is the second time I am trying them and my expectation was higher. Amazingly, the 1st person identified by them has become the tenant!
+                      <br>
+                      <div class="h6 mt-3"><span class="text-dark">Anil</span><span class="muted"> | Pune</span></div>
+                    </div>
+                    <div class="carousel-item text-secondary fs-6">
+                      After posting my property ads on No broker they provided me with an easy way to rent out my apartment, it was otherwise very difficult for me to do. NoBroker found the right people whom I can trust for my rental property.               
+                      <br>
+                      <div class="h6 mt-3"><span class="text-dark">Lakshmi</span><span class="muted"> | Bangloare</span></div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="col my-4 px-5 py-4">
+              <div class="row my-3">
+                <div class="col"><input class="form-control" type="text" placeholder="Name" required></div>
+                <div class="col"><input class="form-control" type="email" placeholder="Email" required></div>
+              </div>
+              <div class="row my-3">
+                <div class="col">
+                  <input class="form-control" type="tel" placeholder="Mobile Number" min="0" maxlength="10" required>
+                </div>
+                <div class="col">
+                  <select class="form-select" required>
+                    <option selected disabled>Select City</option>
+                    <option>Mumbai</option>
+                    <option>Bangalore</option>
+                    <option>Pune</option>
+                    <option>Chennai</option>
+                    <option>Gurgaon</option>
+                    <option>Hyderabad</option>
+                    <option>Delhi</option>
+                    <option>Noida</option>
+                    <option>Greater Noida</option>
+                    <option>Ghaziabad</option>
+                    <option>Faridabad</option>
+                  </select>
+                </div>
+              </div>
+              <div class="my-3 row">
+                <div class="col-8 col-sm-4">Get updates on WhatsApp</div>
+                <div class="col ps-0 form-check d-flex align-items-center form-switch">
+                  <input class="form-check-input" type="checkbox" role="switch">
+                </div>
+              </div>
+              <div class="my-3 h6 text-center"><small>Property Type</small></div>
+
+              <div class="mt-3 d-flex justify-content-center">
+                <div class="row border">
+                  <div class="col text-center py-2 px-5 border-bottom border-3 border-success h6 mb-0" id="btnPropertyTypeResidential">Residential</div>
+                  <div class="col text-center py-2 px-5 bg-secondary bg-opacity-10 h6 mb-0" id="btnPropertyTypeCommercial">Commercial</div>
+                </div>
+              </div>
+
+              <div class="px-4 py-3 border">
+                <div class="my-1 h6 text-center">Select Property Ad Type</div>
+                <div class="d-flex justify-content-center my-3 mx-4">
+                  <div class="row w-100" id="secondpageonclickReaidentialContent">
+                    <div class="col-12 col-sm border text-center py-2 mx-2 bg-success text-white rounded" id="btnofsecondpageRent">Rent</div>
+                    <div class="col-12 col-sm border text-center py-2 mx-2 rounded bg-secondary bg-opacity-10" id="btnofsecondpageResale">Resale</div>
+                    <div class="col-12 col-sm border text-center py-2 mx-2 rounded bg-secondary bg-opacity-10" id="btnofsecondpagePgHostel">PG/Hostel</div>
+                    <div class="col-12 col-sm border text-center py-2 mx-2 rounded bg-secondary bg-opacity-10" id="btnofsecondpageFlatmates">Flatmates</div>
+                  </div>
+                
+                  <div class="row w-50" id="secondpageonclickCommercialContent">
+                    <div class="col border text-center py-2 mx-2 bg-success text-white rounded" id="btnofsecondpageRentforCommercial">Rent</div>
+                    <div class="col border text-center py-2 mx-2 bg-success bg-secondary bg-opacity-10 rounded" id="btnofsecondpageSaleforCommercial">Sale</div>
+                  </div>
+                </div>
+              </div>
+              <div class="my-3 d-grid">
+                <button class="btn btn-danger py-2 fs-5 fw-normal text-white" id="btn_start_postig_add" onclick="btn_move()" type="button">Start Posting Your Ad For Free</button>
+              </div>
+            </div>
+          </div>
+
+          <div class="text-center my-3 bg-warning bg-opacity-25 py-1" id="contactdetailsofsecondpage">Give a missed call to 869-000-5267 to get help with your property listing</div>
+        </div>
+      </div>
+
+      <!--Manage Rent Property Page-------------------------------------------------------------------------------------------->
+      <div id="Manage_Rent_property_Content" style="">
+          <div class="border bg-secondary bg-opacity-10" style="margin-top: 1.61cm; margin-bottom: 1cm;">
+            <div class=" d-flex justify-content-center" style="margin-left: 4.3cm; margin-right: 4.3cm;">
+                <div class="row w-100 ">
+                    <div class="col-2 px-0 mx-1 bg-white">
+                        <div class="fs-6 fw-bold py-4 px-2 border-start border-4 border-success" id="propertyDetails1">Property Details</div><hr class="my-0 mx-0">
+                        <div class="fs-6 fw-bold py-4 px-2" id="localitiesDetails1">Localities Details</div><hr class="my-0 mx-0">
+                        <div class="fs-6 fw-bold py-4 px-2" id="rentalDetails1">Rental Details</div><hr class="my-0 mx-0">
+                        <div class="fs-6 fw-bold py-4 px-2" id="amenities1">Amenities</div><hr class="my-0 mx-0">
+                        <div class="fs-6 fw-bold py-4 px-2" id="gallary1">Gallary</div><hr class="my-0 mx-0">
+                    </div>
+                    <div class="col py-2 px-0 mx-1 bg-white">
+                        <div id="PropertyDetailsContent1">
+                            <div class="fw-bold fs-5 text-success ms-5 my-3">Provide Property Details</div>
+                            
+                            <div class="mx-5 my-4">
+                                <label class="form-label fw-bold fs-6">Apartment Type</label>
+                                <select class="form-select" required>
+                                    <option selected>Select</option>
+                                    <option value="1">Apartment</option>
+                                    <option value="2">Independent House/Villa</option>
+                                    <option value="3">Gated Community Villa</option>
+                                </select>
+                            </div>
+                            <div class="d-flex justify-content-center my-3 mx-5">
+                                <div class="row w-100">
+                                    <div class="col-6 ps-0">
+                                        <label class="form-label fw-bold fs-6">BHK Type</label>
+                                        <select class="form-select" required>
+                                            <option value="">1 RK</option>
+                                            <option selected>1 BHK</option>
+                                            <option value="">2 BHK</option>
+                                            <option value="">3 BHK</option>
+                                            <option value="">4 BHK</option>
+                                            <option value="">4+ BHK</option>
+                                        </select>
+                                    </div>
+                                    <div class="col-3">
+                                        <label class="form-label fw-bold fs-6">Floor</label>
+                                        <input class="form-control" type="number" min="1" max="99" required>
+                                    </div>
+                                    <div class="col-3">
+                                        <label class="form-label fw-bold fs-6">Total Floor</label>
+                                        <input class="form-control" type="number" min="1" max="99" required>
+                                    </div> 
+                                </div>
+                            </div>
+                            <div class="d-flex justify-content-center my-3 mx-5">
+                                <div class="row w-100">
+                                    <div class="col-6 ps-0">
+                                        <label class="form-label fw-bold fs-6">Property Age</label>
+                                        <select class="form-select" required>
+                                            <option selected>Select</option>
+                                            <option value="">Less then a Year</option>
+                                            <option value="">1 to 3 Year</option>
+                                            <option value="">3 to 5 Year</option>
+                                            <option value="">5 to 10 Year</option>
+                                            <option value="">More then 10 Year</option>
+                                        </select>
+                                    </div>
+                                    <div class="col-6">
+                                        <label class="form-label fw-bold fs-6">Facing</label>
+                                        <select class="form-select" required>
+                                            <option selected>Select</option>
+                                            <option value="North">North</option>
+                                            <option value="South">South</option>
+                                            <option value="East">East</option>
+                                            <option value="West">West</option>
+                                            <option value="North-East">North-East</option>
+                                            <option value="South-East">South-East</option>
+                                            <option value="North-West">North-West</option>
+                                            <option value="South-West">South-West</option>
+                                            <option value="Don't Know">Don't Know</option>
+                                        </select>
+                                    </div>
+                                </div>
+                            </div>
+    
+                            <div class="d-flex justify-content-center my-3 mx-5">
+                                <div class="row w-100">
+                                    <div class="col-6 ps-0">
+                                        <label class="form-label fw-bold fs-6">Built Up Area</label>
+                                        <input class="form-control" type="number" placeholder="Enter in Sq.ft" min="0" maxlength="5" required>
+                                    </div> 
+                                </div>
+                            </div>
+    
+                            <div class="d-grid mt-5">
+                                <button class="btn btn-danger text-white py-3" id="save_continue1" type="button">Save & Continue</button>
+                            </div>
+                        </div>
+
+                        <!---->
+                        <div id="localityDetailsContent1">
+                            <div class="fw-bold fs-5 text-success ms-5 my-3">Provide Locality Details</div>
+                            
+                            <div class="d-flex justify-content-center my-3 mx-5">
+                                <div class="row w-100">
+                                    <div class="col-6 ps-0">
+                                        <label class="form-label fw-bold fs-6">House Number</label>
+                                        <input class="form-control" type="number" min="1" placeholder="Enter House No." required>
+                                    </div>
+                                    <div class="col-6">
+                                        <label class="form-label fw-bold fs-6">Locality</label>
+                                        <input class="form-control" type="text" placeholder="Enter Locality/Society Name" required>
+                                    </div>    
+                                </div>
+                            </div>
+                            <div class="d-flex justify-content-center my-3 mx-5">
+                                <div class="row w-100">
+                                    <div class="col-6 ps-0">
+                                        <label class="form-label fw-bold fs-6">Street/Area</label>
+                                        <input class="form-control" type="text" placeholder="Enter Street/Area Name" required>
+                                    </div>
+                                    <div class="col-6">
+                                        <label class="form-label fw-bold fs-6">City</label>
+                                        <select class="form-select" required>
+                                            <option selected disabled>Select</option>
+                                            <option value="Bangalore">Bangalore</option>
+                                            <option value="Pune">Pune</option>
+                                            <option value="Mumbai">Mumbai</option>
+                                            <option value="Chennai">Chennai</option>
+                                            <option value="Gurgaon">Gurgaon</option>
+                                            <option value="Hyderabad">Hyderabad</option>
+                                            <option value="Delhi">Delhi</option>
+                                            <option value="Faridabad">Faridabad</option>
+                                            <option value="Ghaziabad">Ghaziabad</option>
+                                            <option value="Noida">Noida</option>
+                                            <option value="Greater Noida">Greater Noida</option>
+                                        </select>
+                                    </div>
+                                </div>
+                            </div>
+    
+                            <div class="d-flex justify-content-center" style="margin-top: 6.1cm;">
+                                <div class="row w-100">
+                                    <div class="col d-grid">
+                                        <button class="btn btn-secondary btn-opacity-25 text-white py-3" id="back2" type="button">Back</button>
+                                    </div>
+                                    <div class="col d-grid">
+                                        <button class="btn btn-danger text-white py-3" id="save_continue2" type="button">Save & Continue</button>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                        </div>
+
+                        <!---->
+                        <div id="rentalDetailsContent1">
+                            <div class="fw-bold fs-5 text-success ms-5 my-3">Provide Rental Details</div>
+                            
+                            <div class="mx-5 my-4">
+                                <label class="form-label fw-bold fs-6">Property Available For</label>
+                                <div class="row w-50 mt-2">
+                                    <div class="col-5">
+                                        <div class="form-check">
+                                            <input class="form-check-input" type="radio">
+                                            <label class="form-check-label">Only Rent</label>
+                                        </div>
+                                    </div>
+                                    <div class="col-5 ps-0">
+                                        <div class="form-check">
+                                            <input class="form-check-input" type="radio">
+                                            <label class="form-check-label">Only Lease</label>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="d-flex justify-content-center my-3 mx-5">
+                                <div class="row w-100">
+                                    <div class="col-6 ps-0">
+                                        <label class="form-label fw-bold fs-6">Expected Rent</label>
+                                        <input class="form-control" type="number" min="0" maxlength="7" placeholder="Enter Amount in RS/Month" required>
+                                    </div>
+                                    <div class="col-6">
+                                        <label class="form-label fw-bold fs-6">Expected Deposit</label>
+                                        <input class="form-control" type="number" min="0" maxlength="7" placeholder="Enter Amount" required>
+                                    </div>    
+                                </div>
+                            </div>
+
+                            <div class="ms-5">
+                                <div class="form-check">
+                                    <input class="form-check-input" type="checkbox">
+                                    <label class="form-check-label">Rent Negotiable</label>
+                                </div>
+                            </div>
+
+                            <div class="d-flex justify-content-center my-3 mx-5">
+                                <div class="row w-100">
+                                    <div class="col-6 ps-0">
+                                        <label class="form-label fw-bold fs-6">Monthly Maintenance</label>
+                                        <select class="form-select" required>
+                                            <option selected disabled>Select</option>
+                                            <option value="Maintenance Included">Maintenance Included</option>
+                                            <option value="Maintenance Extra">Maintenance Extra</option>
+                                        </select>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="d-flex justify-content-center my-3 mx-5">
+                                <div class="row w-100">
+                                    <div class="col-6 ps-0">
+                                        <label class="form-label fw-bold fs-6">Available From</label>
+                                        <input class="form-control" type="date" required>
+                                    </div>
+                                    <div class="col-6">
+                                        <label class="form-label fw-bold fs-6">Preferred Tenants</label>
+                                        <select class="form-select" required>
+                                            <option selected disabled>Select</option>
+                                            <option value="Dosn't Matter">Dosn't Matter</option>
+                                            <option value="Family">Family</option>
+                                            <option value="Bachelors">Bachelors</option>
+                                            <option value="Company">Company</option>
+                                        </select>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="d-flex justify-content-center my-3 mx-5">
+                                <div class="row w-100">
+                                    <div class="col-6 ps-0">
+                                        <label class="form-label fw-bold fs-6">Furnishing</label>
+                                        <select class="form-select" required>
+                                            <option selected disabled>Select</option>
+                                            <option value="Fully Furnished">Fully Furnished</option>
+                                            <option value="Semi-Furnished">Semi-Furnished</option>
+                                            <option value="Unfurnished">Unfurnished</option>
+                                        </select>
+                                    </div>
+                                    <div class="col-6">
+                                        <label class="form-label fw-bold fs-6">Parking</label>
+                                        <select class="form-select" required>
+                                            <option selected disabled>Select</option>
+                                            <option value="Bike">Bike</option>
+                                            <option value="Car">Car</option>
+                                            <option value="Both">Both</option>
+                                            <option value="None">None</option>
+                                        </select>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="d-flex justify-content-center my-3 mx-5">
+                                <div class="row w-100">
+                                    <div class="col-12 ps-0">
+                                        <label class="form-label fw-bold fs-6">Description</label>
+                                        <textarea class="form-control" maxlength="500" placeholder="Write a few lines about your property something which is special and makes your property stand out. Please do not mention your contact details in any format." required></textarea>
+                                    </div>
+                                </div>
+                            </div>
+    
+                            <div class="d-flex justify-content-center mt-5 mb-4">
+                                <div class="row w-100">
+                                    <div class="col d-grid">
+                                        <button class="btn btn-secondary btn-opacity-25 text-white py-3" id="back3" type="button">Back</button>
+                                    </div>
+                                    <div class="col d-grid">
+                                        <button class="btn btn-danger text-white py-3" id="save_continue3" type="button">Save & Continue</button>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                        </div>
+
+                        <!---->
+                        <div id="amenitiesContent1">
+                            <div class="fw-bold fs-5 text-success ms-5 my-3">Provide Additional Details About Your Property to get Maximum Visibility</div>
+                            
+                            
+                            <div class="d-flex justify-content-center my-3 mx-5">
+                                <div class="row w-100">
+                                    <div class="col ps-0">
+                                        <label class="form-label fw-bold fs-6">Bathroom(s)</label>
+                                        <input class="form-control" type="number" min="0" max="100" maxlength="2" placeholder="Enter Amount in RS/Month" required>
+                                    </div>
+                                    <div class="col">
+                                        <label class="form-label fw-bold fs-6">Balcony</label>
+                                        <input class="form-control" type="number" min="0" max="100" maxlength="3" placeholder="Enter Amount" required>
+                                    </div>
+                                    <div class="col">
+                                        <label class="form-label fw-bold fs-6">Water Supply</label>
+                                        <select class="form-select" required>
+                                            <option selected disabled>Select</option>
+                                            <option value="Corporation">Corporation</option>
+                                            <option value="Borwell">Borwell</option>
+                                            <option value="Both">Both</option>
+                                        </select>
+                                    </div>    
+                                </div>
+                            </div>
+
+                            <div class="d-flex justify-content-center my-3 mx-5">
+                                <div class="row w-100">
+                                    <div class="col ps-0">
+                                        <label class="form-label fw-bold fs-6">Gym</label>
+                                        <select class="form-select" required>
+                                            <option selected disabled>Select</option>
+                                            <option value="Yes">Yes</option>
+                                            <option value="No">No</option>
+                                        </select>
+                                    </div>
+                                    <div class="col">
+                                        <label class="form-label fw-bold fs-6">Non-Vag-Allowed</label>
+                                        <select class="form-select" required>
+                                            <option selected disabled>Select</option>
+                                            <option value="Yes">Yes</option>
+                                            <option value="No">No</option>
+                                        </select>
+                                    </div>
+                                    <div class="col">
+                                        <label class="form-label fw-bold fs-6">Gated Security</label>
+                                        <select class="form-select" required>
+                                            <option selected disabled>Select</option>
+                                            <option value="Yes">Yes</option>
+                                            <option value="No">No</option>
+                                        </select>
+                                    </div>    
+                                </div>
+                            </div>
+
+                            <div class="d-flex justify-content-center my-3 mx-5">
+                                <div class="row w-100">
+                                    <div class="col-6 ps-0">
+                                        <label class="form-label fw-bold fs-6">Who will show the house?</label>
+                                        <select class="form-select" required>
+                                            <option selected disabled>Select</option>
+                                            <option value="Need Help">Need Help</option>
+                                            <option value="I will show">I will show</option>
+                                            <option value="Neighbours">Neighbours</option>
+                                            <option value="Friends/Relative">Friends/Relative</option>
+                                            <option value="Security">Security</option>
+                                            <option value="Tenants">Tenants</option>
+                                            <option value="Others">Others</option>
+                                        </select>
+                                    </div>
+                                    <div class="col-6">
+                                        <label class="form-label fw-bold fs-6">Secondary Number</label>
+                                        <input class="form-control" type="tel" min="0" maxlength="10" placeholder="Secondary Number" required>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <hr class="my-4 mx-5">
+                            <div class="text-secondary fs-5 mx-5">Select the available amenities</div>
+                            <div class="d-flex justify-content-center my-3 mx-5">
+                                <div class="row w-100">
+                                    <div class="col-6 ps-0">
+                                        <div class="form-check my-3">
+                                            <input class="form-check-input" type="checkbox">
+                                            <label class="form-check-label">Lift</label>
+                                        </div>
+                                        <div class="form-check my-3">
+                                            <input class="form-check-input" type="checkbox">
+                                            <label class="form-check-label">Air Conditioner</label>
+                                        </div>
+                                        <div class="form-check my-3">
+                                            <input class="form-check-input" type="checkbox">
+                                            <label class="form-check-label">Intercom</label>
+                                        </div>
+                                        <div class="form-check my-3">
+                                            <input class="form-check-input" type="checkbox">
+                                            <label class="form-check-label">Children Play Area</label>
+                                        </div>
+                                        <div class="form-check my-3">
+                                            <input class="form-check-input" type="checkbox">
+                                            <label class="form-check-label">Servant Room</label>
+                                        </div>
+                                        <div class="form-check my-3">
+                                            <input class="form-check-input" type="checkbox">
+                                            <label class="form-check-label">Gas Pipeline</label>
+                                        </div>
+                                        <div class="form-check my-3">
+                                            <input class="form-check-input" type="checkbox">
+                                            <label class="form-check-label">Rain Water Harvesting</label>
+                                        </div>
+                                        <div class="form-check my-3">
+                                            <input class="form-check-input" type="checkbox">
+                                            <label class="form-check-label">House Keeping</label>
+                                        </div>
+                                        <div class="form-check my-3">
+                                            <input class="form-check-input" type="checkbox">
+                                            <label class="form-check-label">Visitor Parking</label>
+                                        </div>
+                                    </div>
+                                    <div class="col-6">
+                                        <div class="form-check my-3">
+                                            <input class="form-check-input" type="checkbox">
+                                            <label class="form-check-label">Internet Services</label>
+                                        </div>
+                                        <div class="form-check my-3">
+                                            <input class="form-check-input" type="checkbox">
+                                            <label class="form-check-label">Club House</label>
+                                        </div>
+                                        <div class="form-check my-3">
+                                            <input class="form-check-input" type="checkbox">
+                                            <label class="form-check-label">Swimming Pool</label>
+                                        </div>
+                                        <div class="form-check my-3">
+                                            <input class="form-check-input" type="checkbox">
+                                            <label class="form-check-label">Fire Safety</label>
+                                        </div>
+                                        <div class="form-check my-3">
+                                            <input class="form-check-input" type="checkbox">
+                                            <label class="form-check-label">Shopping Center</label>
+                                        </div>
+                                        <div class="form-check my-3">
+                                            <input class="form-check-input" type="checkbox">
+                                            <label class="form-check-label">Park</label>
+                                        </div>
+                                        <div class="form-check my-3">
+                                            <input class="form-check-input" type="checkbox">
+                                            <label class="form-check-label">Sewage Treatment Plant</label>
+                                        </div>
+                                        <div class="form-check my-3">
+                                            <input class="form-check-input" type="checkbox">
+                                            <label class="form-check-label">Power Backup</label>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            
+    
+                            <div class="d-flex justify-content-center mt-5 mb-4">
+                                <div class="row w-100">
+                                    <div class="col d-grid">
+                                        <button class="btn btn-secondary btn-opacity-25 text-white py-3" id="back4" type="button">Back</button>
+                                    </div>
+                                    <div class="col d-grid">
+                                        <button class="btn btn-danger text-white py-3" id="save_continue4" type="button">Save & Continue</button>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                        </div>
+
+                        <!---->
+                        <div id="gallaryContent1">
+                            <div class="fw-bold fs-5 text-success ms-5 my-3">Upload Photos</div>
+                            
+                            <div class="d-flex justify-content-center my-3 mx-5 border">
+                                <div class="row w-100 py-3 px-5">
+                                    <div class="col-12 text-center">
+                                        <div>Add Photos to get more responses</div>
+                                    </div>
+                                    <div class="col-12 text-center mt-3">
+                                        <button class="btn btn-success text-white py-2 px-3" id="Add_Photos" type="button">Add Photos</button>
+                                    </div>
+                                </div>
+                            </div>
+    
+                            <div class="d-flex justify-content-center mt-5 mb-4">
+                                <div class="row w-100" style="margin-top: 6.1cm;">
+                                    <div class="col d-grid">
+                                        <button class="btn btn-secondary btn-opacity-25 text-white py-3" id="back5" type="button">Back</button>
+                                    </div>
+                                    <div class="col d-grid">
+                                        <button class="btn btn-danger text-white py-3" id="save_continue5" type="button">Save & Continue</button>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                        </div>
+
+                    </div>
+
+                    
+                    <div class="col-2 px-2 py-2 mx-1 bg-white">
+                        <div class="border px-2 py-2">
+                            <div class="h6 text-center">Get Tenants Faster</div>
+                            <div class="text-center my-3">Subscribe to our owner plans and find Tenants quickly and with ease</div>
+                            <div class="text-center my-2"><img src="./Image/privacyLogo.svg"></div>
+                            <div class="text-center my-1"><small>Privacy</small></div>
+                            <div class="text-center my-2"><img src="./Image/promotedListing.svg"></div>
+                            <div class="text-center my-1"><small>Promoted Listing</small></div>
+                            <div class="text-center my-2"><img src="./Image/facebookLogo.svg"></div>
+                            <div class="text-center my-1"><small>Social Marketing</small></div>
+                            <div class="text-center my-2"><img src="./Image/rentConsultation.svg"></div>
+                            <div class="text-center my-1"><small>Price Construction</small></div>
+                            <div class="text-center my-3"><button class="btn btn-success text-white px-2 py-1" type="button">Show Interest</button></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+      </div>
+      <!----------------------------------------------------------------------------------------------------------------------->
+
+        <!---->
+        <div class="d-flex justify-content-center">
+          <!---->
+          <div class="row row-cols-3 row-cols-md-6 border-top border-1 bg-secondary bg-opacity-10 w-100">
+            <div class="col fw-bold text-center text-dark text-opacity-75 py-3 px-4" style="border-bottom-style: solid; border-bottom-color: black; color: black; background-color: silver;" id="btnbottomFlatforSale">Flats for Sale</div>
+            <div class="col fw-bold text-center text-dark text-opacity-75 py-3 px-4" id="btnbottomFlatforRent">Flats for Rent</div>
+            <div class="col fw-bold text-center text-dark text-opacity-75 py-3 px-4" id="btnbottomFlatforPg">Flats for PG</div>
+            <div class="col fw-bold text-center text-dark text-opacity-75 py-3 px-4" id="btnbottomFlatmates">Flatmates</div>
+            <div class="col fw-bold text-center text-dark text-opacity-75 py-3 px-4" id="btnbottomMiscellaneous">Miscellaneous</div>
+            <div class="col fw-bold text-center text-dark text-opacity-75 py-3 px-4" id="btnbottomCommercial">Commercial</div>
+          </div>
+        </div>
+
+        <!---->
+          <div class="py-3 px-4">
+            <div class="fw-bold fs-5 pb-2 text-center text-md-start">NoBroker Services</div>
+          </div>
+          <div class="d-flex justify-content-center">
+            <div class="row row-cols-1 row-cols-md-2 w-100">
+              <div class="col">
+                <div class="fs-6 ms-2">Buy</div><br>
+                <button class="btn bg-secondary bg-opacity-25 py-1 px-2 m-2">Home Loan</button>
+                <button class="btn bg-secondary bg-opacity-25 py-1 px-2 m-2">Property Legal Services</button>
+                <button class="btn bg-secondary bg-opacity-25 py-1 px-2 m-2">Interiors</button>
+                <button class="btn bg-secondary bg-opacity-25 py-1 px-2 m-2">Sale Agreement</button>
+                <button class="btn bg-secondary bg-opacity-25 py-1 px-2 m-2">NoBroker For NRI's</button>
+                <button class="btn bg-secondary bg-opacity-25 py-1 px-2 m-2">New Builder Project</button>
+                <button class="btn bg-secondary bg-opacity-25 py-1 px-2 m-2">EMI Calculator</button>
+                <button class="btn bg-secondary bg-opacity-25 py-1 px-2 m-2">Home Loan Balance Transfer</button>
+                <button class="btn bg-secondary bg-opacity-25 py-1 px-2 m-2">Home Loan Eligibility Check</button>
+                <button class="btn bg-secondary bg-opacity-25 py-1 px-2 m-2">Apply Home Loan</button>
+                <button class="btn bg-secondary bg-opacity-25 py-1 px-2 m-2">Pre Approved Home Loan</button>
+                <button class="btn bg-secondary bg-opacity-25 py-1 px-2 m-2">Buy/Sell Property Questions</button>
+              </div>
+              <div class="col">
+                <div class="fs-6 ms-2 mt-4 mt-md-0">Rent</div><br>
+                <button class="btn bg-secondary bg-opacity-25 py-1 px-2 m-2">Rental Agreement</button>
+                <button class="btn bg-secondary bg-opacity-25 py-1 px-2 m-2">Pay Rent</button>
+                <button class="btn bg-secondary bg-opacity-25 py-1 px-2 m-2">Refer And Earn</button>
+                <button class="btn bg-secondary bg-opacity-25 py-1 px-2 m-2">Home Services</button>
+                <button class="btn bg-secondary bg-opacity-25 py-1 px-2 m-2">Packers and Movers</button>
+                <button class="btn bg-secondary bg-opacity-25 py-1 px-2 m-2">Property Management in India</button>
+                <button class="btn bg-secondary bg-opacity-25 py-1 px-2 m-2">Home Services Questions</button>
+                <button class="btn bg-secondary bg-opacity-25 py-1 px-2 m-2">Rent Services Questions</button>
+              </div>
+            </div>
+          </div>
+        
+        <!---->
+        <div class="py-4 px-5 my-4 bg-secondary bg-opacity-10">
+          <div class="row row-cols-1 row-cols-sm-2">
+            <div class="col text-center" id="colfindproperty">
+              <div class="fs-5 fw-bold text-dark text-opacity-75">Find Property</div>
+              <div>Select from thousands of options,without brokerage.</div>
+              <div class="mt-3"><button class="btn btn-dark py-1 px-4" type="button">Find Now</button></div>
+            </div>
+            <div class="col text-center" id="collistyourproperty">
+              <div class="fs-5 fw-bold text-dark text-opacity-75">List Your Property</div>
+              <div>For Free. Without any brokerage.</div>
+              <div class="mt-3"><button class="btn btn-dark py-1 px-4" type="button">Free Posting</button></div>
+            </div>
+          </div>
+        </div>
+      
+        <!---->
+        <div class="pt-4">
+          <div class="d-flex justify-content-center flex-wrap">
+            <div class="row" style="width: 75%;">
+              <div class="col border d-flex align-items-center justify-content-center fs-6">
+                About Us
+              </div>
+              <div class="col border d-flex align-items-center justify-content-center fs-6">
+                Careers
+              </div>
+              <div class="col border d-flex align-items-center justify-content-center fs-6">
+                Terms & Conditions
+              </div>
+              <div class="col border d-flex align-items-center justify-content-center fs-6">
+                Privacy Policy
+              </div>
+              <div class="col border d-flex align-items-center justify-content-center fs-6">
+                Testimonials
+              </div>
+              <div class="col border d-flex align-items-center justify-content-center fs-6">
+                Sitemap
+              </div>
+              <div class="col border d-flex align-items-center justify-content-center fs-6">
+                FAQs
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <hr class="my-5" style="margin-left: 10%; margin-right: 10%;">
+
+        <!---->
+        <div class="d-flex justify-content-center">
+          <div class="row" style="width: 10cm;">
+            <div class="col-6 d-flex ps-0 text-center"><img src="./Image/homeAppPromotionGooglePlay.png"></div>
+            <div class="col-6 d-flex pe-0 text-center"><img src="./Image/homeAppPromotionAppstore.svg"></div>
+          </div>
+        </div>
+
+        <!---->
+        <div class="mt-4 d-flex justify-content-center">
+          <div class="row" style="width: 14cm;">
+            <div class="col d-flex justify-content-center">
+              <div class="rounded-circle p-2 bg-secondary bg-opacity-25 d-flex align-items-center justify-content-center h-100" style="width: 1.05cm;">
+                <img src="./Image/facebookIcon.svg">
+              </div>
+            </div>
+            <div class="col d-flex justify-content-center">
+              <div class="rounded-circle p-1 bg-secondary bg-opacity-25 d-flex align-items-center justify-content-center h-100" style="width: 1.05cm;">
+                <img src="./Image/twitterIcon.svg">
+              </div>
+            </div>
+            <div class="col d-flex justify-content-center">
+              <div class="rounded-circle p-1 bg-secondary bg-opacity-25 d-flex align-items-center justify-content-center h-100" style="width: 1.05cm;">
+                <img src="./Image/instagramIcon.svg">
+              </div>
+            </div>
+            <div class="col d-flex justify-content-center">
+              <div class="rounded-circle p-1 bg-secondary bg-opacity-25 d-flex align-items-center justify-content-center h-100" style="width: 1.05cm;">
+                <img src="./Image/linkedinIcon.svg">
+              </div>
+            </div>
+            <div class="col d-flex justify-content-center">
+              <div class="rounded-circle p-1 bg-secondary bg-opacity-25 d-flex align-items-center justify-content-center h-100" style="width: 1.05cm;">
+                <img src="./Image/youtubeIcon.svg">
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!---->
+        <div class="py-4 text-center text-secondary fs-6">
+          @2021 NoBroker Radix Project By Devendra Gorana
+        </div>
+
+    </body>
+</html>

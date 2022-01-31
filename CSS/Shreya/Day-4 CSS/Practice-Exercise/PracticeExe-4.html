@@ -1,0 +1,31 @@
+<!--Change Font size with Media Queries
+https://www.w3schools.com/css/css_rwd_mediaqueries.asp-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        p.example{
+            background-color: cadetblue;
+            padding: 10px;
+        }
+        @media screen and (min-width:600px) {
+            p.example{
+                font-size: 80px;
+            }
+        }
+        @media screen and (max-width:600px) {
+            p.example{
+                font-size: 30px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <p class="example">Lorem ipsum dolor sit amet consectetur adipisicing elit. Esse repellat excepturi officiis praesentium
+         reprehenderit quod necessitatibus ex illo, a eius, consectetur qui. Aut doloremque iusto, suscipit odio beatae eaque soluta?</p>
+</body>
+</html>

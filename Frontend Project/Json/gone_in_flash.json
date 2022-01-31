@@ -1,0 +1,38 @@
+[
+    {
+        "ID":1,
+        "timer": "14:23:55",
+        "image": "../Assets/GoneInFlash/1624522463778.png",
+        "name": "Realem Buds Q2 Neo",
+        "color":"blue",
+        "price": "&#8377;1499",
+        "dprice":"&#8377;1599"
+    },
+    {
+        "ID":2,
+        "timer": "14:23:55",
+        "image": "../Assets/GoneInFlash/1626361731335.png",
+        "name": "Realme Watch",
+        "color":"black",
+        "price": "&#8377;2799",
+        "dprice":"&#8377;3499"
+    },
+    {
+        "ID":3,
+        "timer": "14:23:55",
+        "image": "../Assets/GoneInFlash/1594281899320.jpg",
+        "name": "Realme powerbank",
+        "color":"black",
+        "price": "&#8377;999",
+        "dprice":"&#8377;1100"
+    },
+    {
+        "ID":4,
+        "timer": "14:23:55",
+        "image": "../Assets/GoneInFlash/1628766799682.png",
+        "name": "Realme laptop",
+        "color":"black grey",
+        "price": "&#8377;32500",
+        "dprice":"&#8377;33500"
+    }
+]

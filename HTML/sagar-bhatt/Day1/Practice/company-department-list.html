@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Department List</title>
+    <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.9.0/css/all.min.css"
+    integrity="sha512-q3eWabyZPc1XTCmF+8/LuE1ozpg5xxn7iO89yfSOd5/oKvyqLngoNGsx8jq92Y8eXJ/IRxQbEC+FGSYxtk2oiw=="
+    crossorigin="anonymous"
+  />
+  <link rel="stylesheet" href="../../Project/assets/css/style.css" />
+
+    <style>
+      ul.dept-node{
+        list-style-type: disc;
+      }
+      ul.dept-dotnet{
+        list-style-type: square;
+      }
+      ul.dept-php{
+        list-style-type: circle;
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+      <div class="logo">
+        <!-- <img
+          src="https://tutorials.rxtrainees.radixweb.net/wp-content/uploads/2020/12/logo_2500X1875-2048x1536.jpg"
+          alt="logo"
+        /> -->
+        <span><a href="../../../../Project/sagar-bhatt/web-tutorials/index.html">RadixWeb</a></span>
+      </div>
+      <nav>
+        <input type="checkbox" id="click" />
+        <label for="click" class="menu-btn">
+          <i class="fas fa-bars"></i>
+        </label>
+        <ul>
+          <li>
+            <a href="../../../../Project/sagar-bhatt/web-tutorials/index.html">
+              Home
+            </a>
+          </li>
+          <li><a href="../../Project/index.html" class="active">HTML/CSS</a></li>
+          <li><a href="../../../../Bootstrap/sagar-bhatt/Project/index.html">Bootstrap</a></li>
+          <!-- <li><a href="#">SCSS</a></li> -->
+          <li><a href="../../../../JavaScript/sagar-bhatt/Project/index.html">Javascript</a></li>
+          <li><a href="../../../../jQuery/sagar-bhatt/Project/index.html">jQuery</a></li>
+        </ul>
+      </nav>
+    </header>
+    <article>
+      <aside>
+        <!-- * Day-1 -->
+        <div class="folder-container">
+          <div class="folder">Day1</div>
+          <div class="sub-folder">Practice</div>
+          <div class="file">
+            <a href="./company-department-list.html">
+              Company department list
+            </a>
+          </div>
+          <div class="file">
+            <a href="./horizontal-navbar.html"> Horizontal navbar </a>
+          </div>
+          <div class="file">
+            <a href="./login-form.html">Login form</a>
+          </div>
+          <div class="file">
+            <a href="./news-article.html" target="_blank">News Article</a>
+          </div>
+          <div class="file">
+            <a href="./student-report-card.html"> Student report card </a>
+          </div>
+          <div class="sub-folder">Assignment</div>
+          <div class="file">
+            <a href="../Assignment/employee-details-form.html"> Employee details form </a>
+          </div>
+        </div>
+        <!-- * Day-2 -->
+        <div class="folder-container">
+          <div class="folder">Day2</div>
+          <div class="sub-folder">Practice</div>
+          <div class="file">
+            <a href="../../Day2/Practice/index.html">CSS Selector</a>
+          </div>
+          <div class="sub-folder">Assignment</div>
+          <div class="file">
+            <a href="../../Day2/Assignment/resume.html" target="_blank">
+              My Resume
+            </a>
+          </div>
+        </div>
+        <!-- * Day-3 -->
+        <div class="folder-container">
+          <div class="folder">Day3</div>
+          <div class="sub-folder">Practice</div>
+          <div class="file">
+            <a href="../../Day3/Practice/display.html">CSS Display</a>
+          </div>
+          <div class="file">
+            <a href="../../Day3/Practice/overflow.html">CSS Overflow</a>
+          </div>
+          <div class="file">
+            <a href="../../Day3/Practice/positions.html">CSS Positions</a>
+          </div>
+          <div class="sub-folder">Assignment</div>
+          <div class="file">
+            <a href="../../Day3/Assignment/basic-layout.html" target="_blank">
+              Basic Web Layout
+            </a>
+          </div>
+        </div>
+        <!-- * Day-4 -->
+        <div class="folder-container">
+          <div class="folder">Day4</div>
+          <div class="sub-folder">Practice</div>
+          <div class="file">
+            <a href="../../Day4/Practice/flexbox.html">CSS Flexbox</a>
+          </div>
+          <div class="file">
+            <a href="../../Day4/Practice/image-gallery-flexbox.html" target="_blank">
+              Image Gallery(Flex)
+            </a>
+          </div>
+          <div class="sub-folder">Assignment</div>
+          <div class="file">
+            <a href="../../Day4/Assignment/menu-list.html" target="_blank"> Menu List </a>
+          </div>
+        </div>
+        <!-- * Day-5 -->
+        <div class="folder-container">
+          <div class="folder">Day5</div>
+          <div class="sub-folder">Practice</div>
+          <div class="file">
+            <a href="../../Day5/Practice/media-queries.html"
+              >CSS Media Queries</a
+            >
+          </div>
+          <div class="sub-folder">Assignment</div>
+          <div class="file">
+            <a href="../../Day5/Assignment/photo-gallery.html" target="_blank"
+              >Photo Gallery(Grid)</a
+            >
+          </div>
+        </div>
+
+      </aside>
+      <section>
+        <dd>
+          <dt>Departments:</dt>
+          <dd>
+            <ol>
+              <li>NodeJS
+                <ul class="dept-node">
+                  <li>Sagar
+                    <ol type="i">
+                      <li>Harsh</li>
+                      <li>Khushbu</li>
+                      <li>Zeel</li>
+                    </ol>
+                  </li>
+                </ul>
+              </li>
+              <li>DotNet
+                <ul class="dept-dotnet">
+                  <li>Meet
+                    <ol type="a">
+                      <li>Akash</li>
+                      <li>Vaidehi</li>
+                      <li>Nirav</li>
+                    </ol>
+                  </li>
+                </ul>
+              </li>
+              <li>PHP
+                <ul class="dept-php">
+                  <li>Niraj
+                    <ol type="1" start="3" reversed>
+                      <li>Vishal</li>
+                      <li>Vaibhavi</li>
+                      <li>Tirth</li>
+                    </ol>
+                  </li>
+                </ul>
+              </li>
+            </ol>
+          </dd>
+        </dd>
+
+      </section>
+    </article>
+
+  </body>
+</html>

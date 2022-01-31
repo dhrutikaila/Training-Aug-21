@@ -1,0 +1,28 @@
+<!-- There is one Hide/show the text inside the #helpText span element when the user’s mouse passes over the text “ -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script>
+        $(document).ready(function()
+        {
+            $("#helptext").mouseover(function(){
+                $("p").show();
+            });
+           $("#helptext").mouseout(function(){
+                $("p").hide();
+            });
+        });
+    </script>
+</head>
+<body>
+    <div>
+    <span id="helptext">hello guys</span>
+    <p style="display: none;"> how are you</p>
+</div>
+</body>
+</html>

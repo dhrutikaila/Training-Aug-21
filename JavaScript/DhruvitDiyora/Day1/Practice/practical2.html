@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JS Practical 2</title>
+</head>
+<body>
+    <h1>Declare array with 5 city names and iterate these values with the help of loop and display it with alert.
+</h1>
+<button type="button" onclick="checkfor()">Check using for</button>
+<button type="button" onclick="checkwhile()">Check using while</button>
+    <script type="text/javascript">
+    function checkfor(){
+        var cities = new Array("surat","anand","delhi","mumbai","chennai");
+            for(var i=0;i<cities.length;i++){
+                setTimeout(function(){
+                }, 1000); 
+                alert(cities[i]);
+
+            }
+    }
+    function checkwhile(){
+        var cities = new Array("surat","anand","delhi","mumbai","chennai");
+        var i=0;
+        while (i<cities.length){
+            setTimeout(function(){
+                }, 1000); 
+            alert(cities[i]);
+            i++;
+        }
+        }
+            
+    </script>
+</body>
+</html>

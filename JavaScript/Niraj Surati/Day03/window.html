@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Practice</title>
+    <link href="assets/css/bootstrap.min.css" rel="stylesheet" />
+</head>
+<body>
+    <div class="container">
+        <div class="h4 text-center my-3">Window</div>
+        <button class="btn btn-secondary my-3" id="btnId1" onclick="funcWin()">
+            Open
+        </button>
+        <button class="btn btn-danger my-3" id="btnId1" onclick="funcWin3()">
+            Git
+        </button>
+        <button class="btn btn-success my-3" id="btnId2" onclick="funcWin2()">
+            Close
+        </button>
+        <p id="pId1">height:&nbsp;</p>
+        <p id="pId2">width:&nbsp;</p>
+        <p id="pId3">Available height:&nbsp;</p>
+        <p id="pId4">Available width:&nbsp;</p>
+        <p id="pId5">Color Depth :&nbsp;</p>
+        <p id="pId6">Pixel Depth :&nbsp;</p>
+        <hr>
+        <p id="pId7">Window location href:&nbsp;</p>
+        <p id="pId8">Window location hostname:&nbsp;</p>
+        <p id="pId9">Window location pathname:&nbsp;</p>
+        <p id="pId10">Window location protocol:&nbsp;</p>
+        <p id="pId11">Window location port:&nbsp;</p>
+        <hr>
+        <button class="btn btn-warning my-3" id="btnId1" onclick="back()">
+            back
+        </button>
+        <button class="btn btn-success my-3" id="btnId1" onclick="forward()">
+            forward
+        </button>
+        <hr>     
+        <p id="pId12">Cookies: &nbsp;</p>
+        <p id="pId13">App Name: &nbsp;</p>
+        <p id="pId14">App Code Name: &nbsp;</p>
+        <p id="pId15">Product: &nbsp;</p>
+        <p id="pId16">App Version: &nbsp;</p>
+        <p id="pId17">User Agent: &nbsp;</p>
+        <p id="pId18">Platform: &nbsp;</p>
+        <p id="pId19">Language: &nbsp;</p>
+        <p id="pId20">Online: &nbsp;</p>
+        <p id="pId21">Java Enabled: &nbsp;</p>
+        <hr>
+        <button class="btn btn-warning my-3" id="btnId1" onclick="newWin()">
+            new
+        </button>
+        <button class="btn btn-success my-3" id="btnId1" onclick="reSize()">
+            resize
+        </button>
+    </div>
+    <script src="assets/js/bootstrap.bundle.min.js"></script>
+    <script>
+        function funcWin(){
+            window.resizeTo(50,50);
+            window.console.log(screen.width);
+            window.open('https://www.google.com');
+        }
+        function funcWin2(){
+            window.close();
+        }
+        function funcWin3(){
+            window.location.assign('https://github.com/ns14bee');
+        }
+
+        document.getElementById('pId1').insertAdjacentHTML('beforeend',screen.height);
+        document.getElementById('pId2').insertAdjacentHTML('beforeend',screen.width);
+        document.getElementById('pId3').insertAdjacentHTML('beforeend',screen.availHeight);
+        document.getElementById('pId4').insertAdjacentHTML('beforeend',screen.availWidth);
+        document.getElementById('pId5').insertAdjacentHTML('beforeend',screen.colorDepth);
+        document.getElementById('pId6').insertAdjacentHTML('beforeend',screen.pixelDepth);
+
+        // windows location
+
+        document.getElementById('pId7').insertAdjacentHTML('beforeend',window.location.href);
+        document.getElementById('pId8').insertAdjacentHTML('beforeend',window.location.hostname);
+        document.getElementById('pId9').insertAdjacentHTML('beforeend',window.location.pathname);
+        document.getElementById('pId10').insertAdjacentHTML('beforeend',window.location.protocol);
+        document.getElementById('pId11').insertAdjacentHTML('beforeend',window.location.port);
+        
+        // windows history
+
+            function back(){
+                window.history.back();
+            }
+            function forward(){
+                window.history.forward();
+            }
+
+        // windows navigator
+        document.getElementById('pId12').insertAdjacentHTML('beforeend',navigator.cookieEnabled);
+        document.getElementById('pId13').insertAdjacentHTML('beforeend',navigator.appName);
+        document.getElementById('pId14').insertAdjacentHTML('beforeend',navigator.appCodeName);
+        document.getElementById('pId15').insertAdjacentHTML('beforeend',navigator.product);
+        document.getElementById('pId16').insertAdjacentHTML('beforeend',navigator.appVersion);
+        document.getElementById('pId17').insertAdjacentHTML('beforeend',navigator.userAgent);
+        document.getElementById('pId18').insertAdjacentHTML('beforeend',navigator.platform);
+        document.getElementById('pId19').insertAdjacentHTML('beforeend',navigator.language);
+        document.getElementById('pId20').insertAdjacentHTML('beforeend',navigator.onLine);
+        document.getElementById('pId21').insertAdjacentHTML('beforeend',navigator.javaEnabled());
+        
+        let win;
+
+        function newWin(){
+            win = window.open('','','height=100, width=100');
+        }
+        function reSize(){
+            win.resizeTo(500,500);
+        }
+    </script>
+</body>
+</html>

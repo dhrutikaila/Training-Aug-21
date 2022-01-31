@@ -1,0 +1,63 @@
+<!-- Accept three numbers from the user using prompt, find the greater of these three numbers 
+    and do the sum of that numbers which are greater than 40. -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Practice 1</title>
+</head>
+<body>
+    <p id="greatest"></p>
+    <p id="sum"></p>
+    <script>
+        var num1 = prompt('Enter first number');
+        var num2 = prompt('Enter second number');
+        var num3 = prompt('Enter third number');
+        var n1 = parseInt(num1);
+        var n2 = parseInt(num2);
+        var n3 = parseInt(num3);
+
+        document.write(" Three numbers are: " )
+        document.writeln(n1);
+        document.writeln(n2);
+        document.writeln(n3);
+
+        // greatest of three numbers
+
+        var greatesNum = 0;
+        if(n1 > n2){
+            if(n1 > n3){
+                greatesNum = n1;
+            }else{
+                greatesNum = n3;
+            }
+        }else if(n2 > n3){
+            greatesNum = n2;
+        }else{
+            greatesNum = n3;
+        }
+        document.getElementById('greatest').innerHTML = "Greatest of three numbers is "+greatesNum;
+
+
+        // sum of numbers which are greater than 40
+
+        var sum = 0;
+        
+        function sumOfNums( x, y, z){
+            for(let i = 0;i<arguments.length;i++){
+                if(arguments[i] > 40){
+                    sum = sum + arguments[i];
+                }
+            }
+            return sum;
+        }
+
+        sumOfNums(n1,n2,n3);
+        document.getElementById('sum').innerHTML = "sum of elements which are greater than 40 is " +sum; 
+
+    </script>
+</body>
+</html>

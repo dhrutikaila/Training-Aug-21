@@ -1,0 +1,52 @@
+<!-- Change Font size with Media Queries -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DAY7-8 PRACTICE1</title>
+    <style>
+        body{
+            background-color: rgb(215, 218, 96);
+        }
+
+        .content{
+            background-color: rgb(48, 90, 77);
+            padding: 5px;
+            margin: 15px;
+            border: 6px solid rgb(21, 21, 184);
+        }
+     @media(min-width:901px) and (max-width: 1400px) {
+            .content{
+                font-size: 40px;
+            }
+            
+        }
+        @media(min-width:601px) and (max-width: 900px) {
+            .content{
+                font-size: 60px;
+            }
+            
+        }
+        @media (max-width:600px){
+            .content{
+                font-size: 20px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <center>
+        <h1> DAY7-8 PRACTICE4 </h1>
+        <h2>Change The Font Size</h2>
+    </center>
+
+    <div class="content">
+        <h1> Hello World</h1>
+
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Temporibus magni molestias, accusantium sapiente ex cumque, non, doloremque sit quia provident reprehenderit quidem! Rem modi voluptate vel quos. Dignissimos, quia hic ab cupiditate deleniti optio perferendis laborum. Necessitatibus laudantium explicabo voluptates nisi ipsum vel ducimus temporibus illum eum beatae assumenda minima laborum vero maiores praesentium aliquam, veritatis blanditiis voluptatem! Sint, recusandae.</p>
+    </div>
+</body>
+</html>

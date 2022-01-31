@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script defer>
+        function city(){
+            var city = ["Ahmedabad","Botad","Rajkot","Surat","Salangpur"]
+            for(var i=0; i<city.length; i++){
+                alert("Welcome to "+city[i]);
+            }
+        }
+
+        function Calculation(){
+            num1 = prompt("Enter First Numbe");
+            num2 = prompt("Enter Second Numbe");
+            num3 = prompt("Enter Third Numbe");
+
+
+            if(num1>num2 && num1>num3)
+				{
+					document.getElementById("result").innerHTML=num1+" is greatst Number";
+				}
+				else if(num2>num1 && num2>num3)
+				{
+					document.getElementById("result").innerHTML=num2+" is greatst Number";
+				}
+				else if(num3>num1 && num3>num1)
+				{
+					document.getElementById("result").innerHTML=num3+" is greatst Number";
+				}
+    
+                var sum = 0;
+                if(num1 > 40){
+                    sum += parseInt(num1);
+                }
+                if(num2 > 40){
+                    sum += parseInt(num1);
+                }
+                if(num3 > 40){
+                    sum += parseInt(num1);
+                }
+                document.getElementById("sum").innerHTML="Sum is: " + sum;
+        }
+
+    </script>
+</head>
+<body>
+    <button class="btn btn-info mt-3 d-block" type="button" onclick="city()">Location</button>
+    <button class="btn btn-info mt-3 d-block" type="button" onclick="Calculation()">Calculation</button>
+    <p class="fw-bolder border-secondary d-block my-3" id="result"></p>
+    <p class="fw-bolder border-secondary d-block my-3" id="sum"></p>
+</body>
+</html>

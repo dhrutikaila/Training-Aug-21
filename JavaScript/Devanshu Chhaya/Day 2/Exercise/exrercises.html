@@ -1,0 +1,159 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-F3w7mX95PdgyTmZZMECAngseQB83DfGTowi0iMjiWaeVhAn4FJkqJByhZMI3AhiU" crossorigin="anonymous">
+
+    <title>Hello, world!</title>
+</head>
+
+<body>
+
+
+    <div class="container w-50">
+
+        <h1>Exercise:1</h1>
+
+        <label for="string" class="form-label">Enter a string</label>
+        <input type="text" id="input" class="form-control" aria-describedby="enter">
+
+        <button type="submit" class="btn btn-primary mt-2" onclick="check(input.value)">Submit</button>
+        <div id="res"></div>
+    </div>
+
+    <hr>
+
+    <div class="container w-50">
+
+        <h1>Exercise:2</h1>
+
+        <label for="string" class="form-label">Enter a string</label>
+        <input type="text" id="arrayconvert" class="form-control">
+
+        <button type="submit" class="btn btn-primary mt-2" onclick="array(arrayconvert.value,result)">Submit</button>
+        <div class="mt-2 display-5" id="result"></div>
+
+    </div>
+    <hr>
+    <div class="container w-50">
+
+        <h1>Exercise:3</h1>
+
+        <label for="string" class="form-label">Enter a string</label>
+        <input type="text" id="mystring" class="form-control">
+
+
+        <label for="string" class="form-label">Enter a number</label>
+        <input type="number" id="number" class="form-control">
+
+        <button type="submit" class="btn btn-primary mt-2"
+            onclick="noofchar(mystring.value,number.value,slice)">Submit</button>
+        <div class="mt-2 display-5" id="slice"></div>
+    </div>
+    <hr>
+    <div class="container w-50">
+
+        <h1>Exercise:4</h1>
+        <button type="submit" class="btn btn-secondary mt-2" onclick="todaydate(current)">Current Date</button>
+        <div class="mt-2 display-5" id="current"></div>
+    </div>
+    <hr>
+
+    <div class="container w-50">
+
+        <p id="exer5_1"></p>
+        <button class="btn btn-warning" onclick="pushfun()">Push Button</button>
+        <button class="btn btn-warning" onclick="popfun()">Pop Button</button>
+        <button class="btn btn-warning" onclick="shiftfun()">Shift Button</button>
+        <button class="btn btn-warning" onclick="deletefun()">Delete Button</button>
+        <p id="exer5_2"></p>
+    </div>
+    <script>
+
+        function check(str) {
+            if (str.length == 0) {
+                alert("Please enter a string...")
+            }
+            else {
+                alert(str)
+            }
+        }
+
+        function array(str, result) {
+
+            if (str.length == 0) {
+                alert("String is empty")
+            }
+            else {
+                var arr = str.split(" ");
+                result.innerHTML = arr;
+            }
+
+        }
+
+
+        function noofchar(str, char, slice) {
+
+            if (str.length == 0) {
+                alert("String is empty")
+            }
+            else {
+                var chars = str.slice(0, parseInt(char));
+                slice.innerHTML = chars;
+            }
+
+        }
+
+        function todaydate(current) {
+            var d = new Date();
+            current.innerHTML = d;
+        }
+
+        let listofapp = ["LinkedIn", "Insta", "Snapchat"];
+
+        document.getElementById("exer5_1").innerHTML = listofapp;
+        function pushfun() {
+            listofapp.push("WhatsApp");
+            var element = document.getElementById("exer5_2");
+            element.innerHTML = listofapp;
+        }
+
+        function popfun() {
+            listofapp.pop();
+            var element = document.getElementById("exer5_2");
+            element.innerHTML = listofapp;
+        }
+
+        function shiftfun() {
+            listofapp.shift();
+            var element = document.getElementById("exer5_2");
+            element.innerHTML = listofapp;
+        }
+        function deletefun() {
+            delete listofapp[0];
+            var element = document.getElementById("exer5_2");
+            element.innerHTML = listofapp;
+        }
+
+    </script>
+    <!-- Optional JavaScript; choose one of the two! -->
+
+    <!-- Option 1: Bootstrap Bundle with Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-/bQdsTh/da6pkI1MST/rWKFNjaCP5gBSY4sEBT38Q/9RBh9AH40zEOg7Hlq2THRZ"
+        crossorigin="anonymous"></script>
+
+    <!-- Option 2: Separate Popper and Bootstrap JS -->
+    <!--
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.3/dist/umd/popper.min.js" integrity="sha384-W8fXfP3gkOKtndU4JGtKDvXbO53Wy8SZCQHczT5FMiiqmQfUpWbYdTil/SxwZgAN" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/js/bootstrap.min.js" integrity="sha384-skAcpIdS7UcVUC05LJ9Dxay8AXcDYfBJqt1CJ85S/CFujBsIzCIv+l9liuYLaMQ/" crossorigin="anonymous"></script>
+    -->
+</body>
+
+</html>

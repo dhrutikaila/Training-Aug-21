@@ -1,0 +1,69 @@
+<!-- Write a JavaScript function to extract a specified number of characters from a string. -->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./../../bootstrap.css">
+    <title>JS Day16 practice3</title>
+</head>
+
+<body>
+    <div class="container p-3 mt-5">
+        <form>
+            <p class="display-4">Task3</p>
+            
+            <div class="form-group">
+                <label for="string3">Enter String : </label>
+                <input id="string3" class="form-control" type="text">
+            </div>
+            <div class="form-group">
+                <label for="startIndex">Enter Starting Index : </label>
+                <input id="startIndex" class="form-control" type="number">
+            </div>
+            <div class="form-group">
+                <label for="numChar">Enter number of characters : </label>
+                <input id="numChar" class="form-control" type="number">
+            </div>
+            <input class="btn btn-primary" type="submit" value="Submit" onclick="return extractString()">
+
+            <div>
+                <p id="extractedString" class="lead pt-3"></p>
+            </div>
+        </form>
+    </div>
+
+</body>
+<script>
+    function extractString() {
+        var str3 = document.getElementById('string3').value;
+        var startIndex = document.getElementById('startIndex').value;
+        var numChar = document.getElementById('numChar').value;
+
+        if (str3 == "") {
+            alert("Please Enter String");
+            return false;
+        }
+
+        if (startIndex == "") {
+            alert("Enter Valid Starting Index");
+            return false;
+        }
+
+        if (numChar <= 0) {
+            alert("Enter Valid Number of Characters.");
+            return false;
+        }
+
+        var subString = str3.substr(startIndex, numChar);
+
+        document.getElementById('extractedString').innerText = "Extracted String : " + subString;
+
+        return false;
+    }
+
+</script>
+
+</html>

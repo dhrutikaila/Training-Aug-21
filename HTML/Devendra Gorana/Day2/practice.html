@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Day2 Practice</title>
+        <style>
+            table, th, td {
+            border: 1px solid black;
+            text-align: center;
+            }
+            /*Css For practical 2*/
+            #p2 {
+                background-color: aquamarine;
+                /*border-style: dotted;*/
+                /*border-style: dashed;*/
+                border-style: solid;
+                /*border-style: double;*/
+                /*border-style: groove;*/
+                /*border-style: ridge;*/
+                /*border-style: inset;*/
+                /*border-style: outset;*/
+                /*border-style: none;*/
+                /*border-style: hidden;*/
+                /*border-style: dotted dashed solid double;*/
+            }
+            /*Css For Practical 3*/
+            #P3 {
+                list-style-type: none;
+                margin: 0;
+                padding: 0;
+                overflow: hidden;
+                position: fixed;
+                width: 100%;
+                height: 0.35in;
+                top: 0px;
+            }
+            .inoneline {
+                display: inline;
+                font-size: 25px;
+                background-color: #333;
+            }
+            .fontcol {
+                color: white;
+                padding: 2px 16px;
+                text-decoration: none;
+                background-color: #333;
+            }
+            #city {
+                color: white;
+                float: left;
+                background-color:rgb(255, 0, 34);
+                height: 0.35in;
+                width: 1in;
+                text-align: center;
+            }
+            * {
+                background-color: rgb(142, 142, 151);
+            }
+            #P5 h1,h2 {
+                background-color: blue;
+            }
+        </style>
+    </head>
+    <body>
+        <br><br>
+        <h4>1.Provide text alignment to center to student Report Card which is created  in Day1 assignment</h4>
+        <table style="border: 1px solid black;">
+            <tr>
+                <th colspan="2">Student Report Card</th>
+            </tr>
+            <tr>
+                <th>RollNo</th>
+                <td>101</td>
+            </tr>
+            <tr>
+                <th>Name</th>
+                <td>Deven Khurana</td>
+            </tr>
+            <tr>
+                <th>Year Of Passing</th>
+                <td>2018</td>
+            </tr>
+            <tr>
+                <th>Subject</th>
+                <th>Grade</th>
+            </tr>
+            <tr>
+                <td>English</td>
+                <td>B+</td>
+            </tr>
+            <tr>
+                <td>Mathe</td>
+                <td>A+</td>
+            </tr>
+            <tr>
+                <td>Scince</td>
+                <td>A</td>
+            </tr>
+            <tr>
+                <td>History</td>
+                <td>C</td>
+            </tr>
+        </table>
+        <hr>
+        <h4>2.Provide Border to one paragraph and write some dummy text into it</h4>
+        <pre id="p2">
+            Developments in digital technologies,
+            from advancement in data, robotics, 
+            3D printing and artificial intelligence, 
+            is at the core of Sandvik.
+            Read about we use 
+            technology and digitalization to 
+            secure innovation for the 21st century.  
+        </pre>
+        <hr>
+        <h4>3.Create city list in horizontal order(using display properties)</h4>
+        <h5>Best Place To Visit In This City.</h5>
+        <ul id="P3" style="background-color: #333;">
+            <li class="inoneline" id="city">City</li>
+            <li class="inoneline"><a class="fontcol" href="https://www.bing.com/search?q=best+place+to+visit+in+ahmedabad&pc=COS2&ptag=D081421-N0640AF30FAE38D3&form=CONBDF&conlogo=CT3334466">Ahmedabad</a></li>
+            <li class="inoneline"><a class="fontcol" href="https://www.bing.com/search?q=best+place+to+visit+in+surat&qs=n&form=QBRE&sp=-1&pq=best+place+to+visit+in+surat&sc=1-28&sk=&cvid=236364BA6C5C46559FA9571DA5902BF5">Surat</a></li>
+            <li class="inoneline"><a class="fontcol" href="https://www.bing.com/search?q=best+place+to+visit+in+jaipur&qs=n&form=QBRE&sp=-1&pq=best+place+to+visit+in+jaipur&sc=3-29&sk=&cvid=12277797201B4ECCBC89C24FA3CA63CD">Jaipur</a></li>
+            <li class="inoneline"><a class="fontcol" href="https://www.bing.com/search?q=best+place+to+visit+in+mumbai&qs=n&form=QBRE&sp=-1&pq=best+place+to+visit+in+mumbai&sc=2-29&sk=&cvid=FA92968159014E28941E1B351996FB9A">Mumbai</a></li>
+            <li class="inoneline"><a class="fontcol" href="https://www.bing.com/search?q=best+place+to+visit+in+benglore&qs=n&form=QBRE&sp=-1&pq=best+place+to+visit+in+benglore&sc=2-31&sk=&cvid=09F82C3EF67E444395BFC1CC7FEE27F5">Benglore</a></li>
+            <li class="inoneline" style="color: chartreuse; float: right;">Horizontal Menu  .</li>
+        </ul>
+        <h5>The Horizontal Menu is Top of the page.</h5>
+        <hr>
+        <h4>4.Provide universal selector and apply blue color to a page</h4>
+        <p>This code in the style tag.</p>
+        <hr>
+        <h4>5.Suppose html markup below, apply all h1 and h2 blue color.</h4>
+        <div id="P5">
+            <h1>Heading1</h1>
+            <h2>Sub Heading</h2>
+            <h1>Heading2</h1>
+            <h2>Sub heading</h2>
+        </div>
+    </body>
+</html>

@@ -1,0 +1,202 @@
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>CSS - Practice_Exercise_2</title>
+    <link rel="stylesheet" href="../../../Style.css">
+    <script src="https://kit.fontawesome.com/e153b670c8.js" crossorigin="anonymous"></script>
+    <style>
+        ul {
+            padding-left: 20px;
+        }
+        i{
+            margin-top: 10px;
+        }
+        ol>ul>li >a{
+            text-decoration: none;
+            color: black;
+        }
+        ol>ul>li>a:hover{
+            font-weight: bold;
+        }
+        .body__right {
+            padding-left: 20px;
+            padding-top: 20px;
+            background-color: rgb(227, 227, 236);
+            overflow: scroll;
+        }
+
+        .parent_div2_1 {
+            width: 250px;
+            height: 250px;
+            background-color: cornflowerblue;
+            position: relative;
+            margin: 0;
+        }
+
+        .child_div_2_1 {
+            width: 100px;
+            height: 100px;
+            background-color: #999999;
+            position: absolute;
+            bottom: 0px;
+            right: 0px;
+
+        }
+
+        /*================================*/
+
+        .parent_div2_2 {
+            width: 250px;
+            height: 250px;
+            background-color: cornflowerblue;
+            position: static;
+        }
+
+        .child_div_2_2 {
+            width: 100px;
+            height: 100px;
+            background-color: #999999;
+            position: absolute;
+            margin-left: 300px;
+        }
+
+        /*================================*/
+        .parent_div2_3 {
+            width: 250px;
+            height: 250px;
+            background-color: cornflowerblue;
+            position: fixed;
+        }
+
+        .child_div_2_3 {
+            width: 100px;
+            height: 100px;
+            background-color: #999999;
+            position: absolute;
+            margin-left: 300px;
+
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <nav class="navbar">
+            <div>
+                <a href="../../../TutorialSite.html">
+                    <img class="heder_logo" src="../../../Assests/adwords.png">
+                </a>
+            </div>
+
+            <ul class="nav_list">
+                <li class="list_item">
+                    <a href="../../../TutorialSite.html">Home</a>
+                </li>
+                <li class="list_item">
+                    <a href="../../../HTML/html.html">HTML</a>
+                </li>
+                <li class="list_item">
+                    <a href="../../CSS.html">CSS</a>
+                </li>
+                <li class="list_item">
+                    <a href="../../../BootStrap/BootStrap.html">Bootstrap</a>
+                </li>
+                <li class="list_item">
+                    <a href="../../../JavaScript/JavaScripts.html">JavaScript</a>
+                </li>
+                <li class="list_item">
+                    <a href="../../../jQuery/jQuery.html">jQuery</a>
+                </li>
+                <li class="list_item">
+                    <a href="../../../Project/Project.html">Project</a>
+                </li>
+            </ul>
+        </nav>
+        <div class="body">
+            <div class="body__left">
+                <p style="font-weight: bold; font-size:20px; margin-top:10px">CSS</p>
+                <i class="fas fa-folder-open" style="margin-left: -20px;">Day3</i>
+                <ol type="i">
+                    <li>Practice Exercise</li>
+                    <ul type="disc">
+                        <li><a href="./Practice Exercise_1.html">Practice_Exercise_1</a></li>
+                        <li><a href="./Practice Exercise_2.html">Practice_Exercise_2</a></li>
+                        <li><a href="./Practice Exercise_3.html">Practice_Exercise_3</a></li>
+                    </ul>
+                    <li>Assignment</li>
+                    <ul type="disc">
+                        <li><a href="../Assignment/Assignment Day3.html">Assignment Day3</a></li>
+                    </ul>
+                </ol>
+                <i class="fas fa-folder-open" style="margin-left: -20px;">Day4</i>
+                <ol type="i">
+                    <li>Practice Exercise</li>
+                    <ul type="disc">
+                        <li><a href="../../Day4/Practice Excercise/Practice exercise_1.html">Practice_Exercise_1</a></li>
+                        <li><a href="../../Day4/Practice Excercise/Practice exercise_2.html">Practice_Exercise_2</a></li>
+                        <li><a href="../../Day4/Practice Excercise/Practice exercise_3.html">Practice_Exercise_3</a></li>
+                        <li><a href="../../Day4/Practice Excercise/Practice exercise_4.html">Practice_Exercise_4</a></li>
+                        <li><a href="../../Day4/Practice Excercise/Practice exercise_5.html">Practice_Exercise_5</a></li>
+                        <li><a href="../../Day4/Practice Excercise/Practice exercise_6.html">Practice_Exercise_6</a></li>
+                        <li><a href="../../Day4/Practice Excercise/Practice exercise_7.html">Practice_Exercise_7</a></li>
+                    </ul>
+                    <li>Assignment</li>
+                    <ul type="disc">
+                        <li><a href="../../Day4/Assignment/Assignment Day4.html">Assignment Day4</a></li>
+                    </ul>
+                </ol>
+                <i class="fas fa-folder-open" style="margin-left: -20px;">Day5</i>
+                <ol type="i">
+                    <li>Practice Exercise</li>
+                    <ul type="disc">
+                        <li><a href="../../Day5/Practice/Practice Excercise_1.html">Practice_Exercise_1</a></li>
+                        <li><a href="../../Day5/Practice/Practice Excercise_2.html">Practice_Exercise_2</a></li>
+                        <li><a href="../../Day5/Practice/Practice Excercise_3.html">Practice_Exercise_3</a></li>
+                        <li><a href="../../Day5/Practice/Practice Excercise_4.html">Practice_Exercise_4</a></li>
+                    </ul>
+                    <li>Assignment</li>
+                    <ul type="disc">
+                        <li><a href="../../Day5/Assignment/Assignment Day5-6.html">Assignment Day5-6</a></li>
+                    </ul>
+                </ol>
+            </div>
+            <div class="body__right">
+                <h3>Practice 2</h3>
+                <p>
+                    Practice position properties static, relative, fixed and absolute.
+                </p>
+                <br><hr><br>
+                
+                <!--#1 Relative-->
+                <div style="display: inline-block; width:1200px;">
+                    <h4>Postion Relative, absolute</h4>
+                    <div class="parent_div2_1">1
+                        <div class="child_div_2_1">1</div>
+                    </div>
+            
+                    <!--#2 Static-->
+                    <h4>Postion Static,absolute</h4>
+                    <div class="parent_div2_2">2
+                        <div class="child_div_2_2">2</div>
+                    </div>
+                </div>
+            
+                <!--#2 Fixed-->
+                <h4>Postion Fixed,absolute</h4>
+                <div class="parent_div2_2">3
+                    <div class="child_div_2_2">3</div>
+                </div>
+                </div>
+            </div>
+        </div>
+        <div class="footer">
+            CopyRights &copy;Raj Thakkar
+        </div>
+    </div>
+</body>
+
+</html>
+

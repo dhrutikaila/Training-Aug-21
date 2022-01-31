@@ -1,0 +1,219 @@
+:root {
+  --blackish: #202020;
+  --dark-grey: #3f3f3f;
+  --med-grey: #707070;
+  --egg-yellow: #ffdf6c;
+  --touch-of-grey: #f5f5f5;
+  --white: #ffffff;
+}
+::selection {
+  background-color: var(--egg-yellow);
+  color: var(--dark-grey);
+}
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+body {
+  font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
+    "Lucida Sans", Arial, sans-serif;
+  background-color: var(--white);
+}
+header {
+  background-color: var(--blackish);
+  padding: 10px;
+  font-weight: bold;
+}
+header .logo {
+  float: left;
+}
+header .logo span {
+  color: var(--white);
+  align-self: center;
+  font: bold 1.5rem Cursive, Arial, Helvetica, sans-serif;
+}
+header .logo a {
+  color: var(--white);
+  text-decoration: none;
+}
+nav .menu-btn i {
+  color: var(--white);
+  cursor: pointer;
+}
+header nav {
+  text-align: right;
+  padding: 10px;
+}
+#click {
+  display: none;
+}
+header ul {
+  text-align: center;
+  list-style: none;
+  display: none;
+  transition: all 0.4s ease-in-out 0s;
+}
+#click:checked ~ ul {
+  left: 0%;
+  display: contents;
+}
+header ul li {
+  padding: 5px 0;
+}
+header nav a {
+  text-decoration: none;
+  color: var(--white);
+  position: relative;
+}
+header nav .active {
+  color: var(--egg-yellow);
+}
+article {
+  padding: 10px;
+  display: grid;
+  grid-template-columns: auto;
+  gap: 10px;
+  background-color: var(--touch-of-grey);
+}
+aside {
+  padding: 20px;
+  color: var(--blackish);
+  border: 2px groove var(--dark-grey);
+  text-transform: capitalize;
+}
+.folder-container {
+  margin-bottom: 30px;
+}
+aside div.folder {
+  color: var(--blackish);
+}
+aside div.sub-folder {
+  margin-top: 10px;
+  margin-left: 20px;
+  margin-bottom: 5px;
+  color: var(--dark-grey);
+  text-transform: capitalize;
+}
+aside div.sub-folder:before,
+aside div.folder:before {
+  font-family: "Font Awesome 5 Free";
+  font-weight: 900;
+  content: "\f07c";
+  margin-right: 5px;
+  color: var(--dark-grey);
+}
+aside div.file {
+  margin-bottom: 5px;
+  margin-left: 40px;
+}
+aside div.file:before {
+  font-family: "Font Awesome 5 Free";
+  font-weight: 300;
+  content: "\f15c";
+  margin-right: 5px;
+  color: var(--egg-yellow);
+}
+aside div a {
+  color: var(--med-grey);
+}
+aside div a:hover {
+  color: var(--egg-yellow);
+}
+aside div a:active {
+  color: var(--egg-yellow);
+}
+section {
+  padding: 35px !important;
+  border: 2px groove var(--dark-grey);
+  /* min-height: 90vh; */
+}
+
+/* TODO: Media Queries */
+@media only screen and (min-width: 500px) {
+  aside {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+  }
+  .folder-container {
+    display: grid;
+  }
+}
+@media only screen and (min-width: 768px) {
+  header {
+    display: grid;
+    grid-template-columns: auto 1fr;
+    align-items: center;
+  }
+  header .logo span {
+    font-size: 1.5rem;
+  }
+  header .menu-btn i {
+    display: none;
+  }
+  #click:checked ~ ul,
+  header nav ul {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+  }
+  header nav ul li a::after {
+    content: "";
+    position: absolute;
+    width: 0%;
+    height: 3px;
+    background-color: var(--white);
+    left: 0;
+    bottom: -10px;
+    transition: all 0.4s ease-in-out 0s;
+  }
+  header nav ul li a:hover::after {
+    width: 100%;
+  }
+  header nav ul li .active::after {
+    background-color: var(--egg-yellow);
+  }
+  /* article {
+    grid-template-columns: auto 1fr;
+  }*/
+  aside {
+    grid-template-columns: repeat(3, auto);
+  }
+  section {
+    min-height: 70vh;
+  }
+}
+@media only screen and (min-width: 992px) {
+  body {
+    font-size: 1.1rem;
+  }
+  header {
+    display: grid;
+    grid-template-columns: auto auto;
+    align-items: center;
+  }
+  header .logo span {
+    font-size: 2rem;
+  }
+  article {
+    grid-template-columns: auto 1fr;
+  }
+  aside {
+    display: block;
+  }
+  section {
+    min-height: 90vh;
+  }
+  /* lottie-player {
+    height: 82vh;
+  } */
+}
+@media only screen and (min-width: 1200px) {
+  body {
+    font-size: 1.2rem;
+  }
+}

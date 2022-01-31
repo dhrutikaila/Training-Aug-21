@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+  </head>
+  <body>
+
+
+
+    <script type="text/javascript">
+
+var emp={
+  full_det: function(city, contact){
+    console.log(this.name+" "+this.designation+" "+this.status+" "+city+" "+contact);
+    document.write(this.name+" "+this.designation+" "+this.status+" "+city+" "+contact);
+  }
+}
+
+
+var employee_1 = {
+  name:"naman",
+  designation: "senior dev" ,
+   status: "working"
+  }
+
+emp.full_det.apply(employee_1, ["Baroda", "+91 9387652980"]);
+
+
+    </script>
+
+
+  </body>
+</html>

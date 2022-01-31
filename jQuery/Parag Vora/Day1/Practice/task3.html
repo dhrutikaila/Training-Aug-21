@@ -1,0 +1,104 @@
+<!-- 3. – Label : “Please select your technology :”
+
+        – Consider following set of radio buttons :-
+
+        - “PHP”, “ASP.NET”, “ASP”, “JSP”, “PERL”, “Cold Fusion”, “Other”. Layout these buttons in a Horizontal manner.
+
+        – Clicking on a particular radio button should display the related technology name besides label : “You have  selected : “.
+
+        – Use multiple “span” HTML element for displaying the related message.
+
+        – Note that radio button should be selectable by clicking on the corresponding label. -->
+
+<!doctype html>
+<html lang="en">
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- jQuery Cdn -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+
+    <title>Document</title>
+</head>
+
+<body>
+    <div class="container mt-2">
+        <div class="form-check">
+            <label class="form-check-label" for="flexRadioDefault1">
+                Please select your technology :
+            </label>
+        </div>
+        <div class="form-check ms-3">
+            <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault1" value="PHP">
+            <label class="form-check-label" for="flexRadioDefault1">
+                PHP
+            </label>
+        </div>
+        <div class="form-check ms-3">
+            <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault2" value="ASP.NET">
+            <label class="form-check-label" for="flexRadioDefault2">
+                ASP.NET
+            </label>
+        </div>
+        <div class="form-check ms-3">
+            <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault3" value="ASP">
+            <label class="form-check-label" for="flexRadioDefault3">
+                ASP
+            </label>
+        </div>
+        <div class="form-check ms-3">
+            <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault4" value="JSP">
+            <label class="form-check-label" for="flexRadioDefault4">
+                JSP
+            </label>
+        </div>
+        <div class="form-check ms-3">
+            <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault5" value="PERL">
+            <label class="form-check-label" for="flexRadioDefault5">
+                PERL
+            </label>
+        </div>
+        <div class="form-check ms-3">
+            <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault6" value="Cold Fusion">
+            <label class="form-check-label" for="flexRadioDefault6">
+                Cold Fusion
+            </label>
+        </div>
+        <div class="form-check ms-3">
+            <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault7" value="other">
+            <label class="form-check-label" for="flexRadioDefault7">
+                Other
+            </label>
+        </div>
+        <div class="m-3">
+            <span id="result">&nbsp;</span>
+        </div>
+    </div>
+
+    <!-- jquery -->
+    <script>
+        $(function () {
+            $("input[name='flexRadioDefault']").click(function(){
+            var radioValue = $("input[name='flexRadioDefault']:checked").val();
+            // if(radioValue){
+            //     alert("Your are a - " + radioValue);
+            // }
+            $("#result").html("You Have Selected : "+radioValue)
+        });
+        })
+    </script>
+
+    <!-- bootstrap -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+        crossorigin="anonymous"></script>
+</body>
+
+</html>

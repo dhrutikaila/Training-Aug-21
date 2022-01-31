@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #box{
+            border: 2px solid black;
+            width: 550px;
+        }
+        .red{
+            background-color: red;
+        }
+
+        .blue{
+            background-color: blue;
+        }
+    </style>
+</head>
+<body>
+    <h1>class practice</h1>
+    <div id="box">
+        <h1>heading inside box</h1>
+        <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Nisi nihil repellendus blanditiis. Ex dolores, vero fugit ducimus in velit! Veniam.
+        </p>
+    </div>
+
+    <button id="add">Add Class</button>
+    <button id="remove">remove Class</button>
+    <button id="toggle">toggle Class</button>
+    <script src="jquery-3.6.0.min.js"></script>
+
+</body>
+<script>
+    $(document).ready(function(){
+        $('#add').click(function(){
+            $('#box').addClass("red blue")
+        })
+
+        $('#remove').click(function(){
+            $('#box').removeClass("red blue")
+        })
+
+        $('#toggle').click(function(){
+            $('#box').toggleClass("red blue")
+        })
+
+        //on and off method
+        
+            $('#box').on('click' , function(){
+                $(this).css("background-color", 'orange')
+            })
+        
+            $('#box').on('mouseover mouseout' , function(){
+                $(this).toggleClass("background-color", 'blue')
+            })
+
+         
+    })
+</script>
+</html>

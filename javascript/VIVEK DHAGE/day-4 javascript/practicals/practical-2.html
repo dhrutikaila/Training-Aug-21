@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<h2>JavaScript Callbacks</h2>
+
+<p>Do a calculation and then display the result.</p>
+
+<p id="demo"></p>
+
+<script>
+
+  <!-- exa-1 -->
+  <!-- first use of var keyword -->
+  function varGreeter(){
+    var a = 10;
+    var a = 20; //a is replaced
+    console.log(a);
+  }
+  varGreeter();
+
+
+
+  <!-- use of let keyword -->
+  // function varGreeter(){
+  //  let a = 10;
+  //  let a = 20; //it will give SyntaxError:
+  //          //because Identifier 'a' has already been declared
+  //   console.log(a);
+  // }
+  // varGreeter();
+
+
+
+
+  <!-- exa-2 -->
+  // use of var -2
+  var first = "first var";
+  var num = 5;
+  if (num>1){
+    var first = num + " is greater";
+  }
+
+  console.log(first);
+
+<!--  use of let-2 -->
+let first = "first var";
+let num = 5;
+if (num>1){
+  let first = num + " is greater";
+}
+
+console.log(first);
+
+
+</script>
+
+
+</body>
+</html>

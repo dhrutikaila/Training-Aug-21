@@ -1,0 +1,33 @@
+<!-- Using Function Apply pass employee object to a function defined in the function -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <label id="result"></label>
+     
+    <script>
+        const person = {
+          empdata: function() {
+            return "Employee Name : "+this.Name + "<br> Address : " + this.Address+"<br> Designation : "+ this.Designation;
+          }
+        }
+        
+        const Employee1 = {
+         Name : "Suraj Joshi",
+         Address : "Vadodara",
+         Designation : "Trainee"
+
+        }
+        
+        document.getElementById("result").innerHTML = person.empdata.apply(Employee1); 
+        </script>
+        
+        </body>
+        </html>
+</body>
+</html>

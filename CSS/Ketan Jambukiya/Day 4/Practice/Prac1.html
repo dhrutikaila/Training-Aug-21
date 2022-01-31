@@ -1,0 +1,43 @@
+<!-- You have one h1 and one paragraph in your page with blue color border. For all the media screen and query selector (maximum width 500px) it should be change to red color border. -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .abc{
+            background-color: blue;
+            padding: 2px;
+        }
+        /* Extra small devices (phones, 500px and down) */
+        @media only screen and (max-width: 500px) {
+          .abc {background: red;}
+        }
+         /* Small devices (portrait tablets and large phones, 600px and up) */
+         @media only screen and (min-width: 600px) {
+          .abc {background: green;}
+        }
+        
+        /* Medium devices (landscape tablets, 768px and up) */
+        @media only screen and (min-width: 768px) {
+          .abc {background: blue;}
+        } 
+        
+        /* Large devices (laptops/desktops, 992px and up) */
+        @media only screen and (min-width: 992px) {
+          .abc {background: yellow;}
+        } 
+        
+        /* Extra large devices (large laptops and desktops, 1200px and up) */
+        @media only screen and (min-width: 1200px) {
+          .abc {background: pink;}
+        }
+    </style>
+</head>
+<body>
+    <h2>paragraph</h2>
+    <p class="abc">Lorem ipsum dolor sit amet consectetur adipisicing elit. Eius delectus aperiam ducimus ut? Eum cum consequatur dolores, accusantium nobis non deleniti, enim nostrum quidem nihil beatae quis dolorem dolor culpa.</p>
+</body>
+</html>

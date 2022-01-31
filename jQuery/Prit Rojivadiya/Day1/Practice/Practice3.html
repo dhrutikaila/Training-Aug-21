@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+</head>
+<body>
+
+    <h3>Please select your technology</h3>
+
+    <input type="radio" name="tech" id="PHP" value="PHP"> <label for="PHP"> <span class="PHP"> -- You selected </span> PHP</label> <br>
+    <input type="radio" name="tech" id="ASP.NET" value="ASPNET"> <label for="ASP.NET"> <span class="ASPNET"> -- You selected </span> ASP.NET</label>  <br>
+    <input type="radio" name="tech" id="ASP" value="ASP"> <label for="ASP"> <span  class="ASP"> -- You selected </span>ASP</label> <br>
+    <input type="radio" name="tech" id="JSP" value="JSP"> <label for="JSP">  <span  class="JSP"> -- You selected </span> JSP</label> <br>
+    <input type="radio" name="tech" id="PERL" value="PERL"> <label for="PERL"> <span  class="PERL"> -- You selected </span> PERL</label> <br>
+    <input type="radio" name="tech" id="Cold Fusion" value="Cold_Fusion"> <label for="Cold Fusion"> <span  class="Cold_Fusion"> -- You selected </span> Cold Fusion</label>  <br>
+    <input type="radio" name="tech" id="Other" value="Other"> <label for="Other"> <span class="Other"> -- You selected </span> Other</label>  <br>
+
+    <script>
+        /*
+        – Label : “Please select your technology :”
+        – Consider following set of radio buttons :-
+          “PHP”, “ASP.NET”, “ASP”, “JSP”, “PERL”, “Cold Fusion”, “Other”. Layout these buttons in a Horizontal manner.
+        – Clicking on a particular radio button should display the related technology name besides label : “You have  selected : “.
+        – Use multiple “span” HTML element for displaying the related message.
+        – Note that radio button should be selectable by clicking on the corresponding label.
+        */
+
+        $(document).ready(function(){
+            $('span').css("display","none");
+
+            $('input[type="radio"]').click(function(){
+                console.log($('input[type="radio"]:checked').val())
+                let val = $('input[type="radio"]:checked').val();
+                $('span').css("display","none");
+                $(`.${val}`).css("display","inline-block");
+            })
+        
+        })
+
+    </script>
+</body>
+</html>

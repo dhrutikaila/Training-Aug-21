@@ -1,0 +1,55 @@
+<!-- – Put a droplist with 5 country name from list object using jquery
+(Eg. India, United Kingdom..). Default value should “Please select”.
+– Bellow droplist all country name which are in the dropdown that should display with Label :
+“Your Selected Country : “.
+– By default all country name should display.
+– Only that country name should appear which are you select from dropdown.
+All other label should be disappear.
+– When i select ‘Please select’, all countries name should get displayed. -->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Assignment</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <script src="../../jQuery/jQuery.js"></script>
+
+    <script>
+        $(document).ready(function(){
+            $("#country").change(function(){
+                $("#display").html("Your Selected Country :"+$("#country").val())
+            });
+        });
+    </script>
+
+</head>
+
+<body>
+
+    <h2 style="height: 5vh; color:cadetblue; text-align:center" class="mt-5">Bellow droplist all country name which are in the dropdown that should display with Label :
+        "Your Selected Country :"</h2>
+
+    <div class="container text-center bg-info border mt-5 w-25">
+        <h3 class="text-primary my-3">Please Select Your Country</h3>
+        <form>
+            <select name="country" class="form-select my-3" id="country">
+                <option value="">--Please select--</option>
+                <option value="India">India</option>
+                <option value="United Kingdom">United Kingdom</option>
+                <option value="Brazil">Brazil</option>
+                <option value="Australia">Australia</option>
+                <option value="Sweden">Sweden</option>
+            </select>
+            <div id="display" class="text-danger fs-5 mb-2"></div>
+        </form>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+        crossorigin="anonymous"></script>
+</body>
+
+</html>

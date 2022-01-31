@@ -1,0 +1,168 @@
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>CSS - Practice_Exercise_4</title>
+    <link rel="stylesheet" href="../../../Style.css">
+    <script src="https://kit.fontawesome.com/e153b670c8.js" crossorigin="anonymous"></script>
+    <style>
+        ul {
+            padding-left: 20px;
+        }
+
+        i {
+            margin-top: 10px;
+        }
+
+        ol>ul>li>a {
+            text-decoration: none;
+            color: black;
+        }
+
+        ol>ul>li>a:hover {
+            font-weight: bold;
+        }
+
+        .body__right {
+            padding-left: 20px;
+            padding-top: 20px;
+            background-color: rgb(227, 227, 236);
+        }
+
+        .parent_div {
+            border: 1px solid rgb(37, 37, 37);
+            background-color: cornflowerblue;
+            width: fit-content;
+            padding: 4px;
+            display: flex;
+
+        }
+
+        .child_div {
+            border: 1px solid rgb(37, 37, 37);
+            width: 70px;
+            height: 70px;
+        }
+
+        .body__right__div {
+            background-color: lightblue;
+            width: 200px;
+            padding: 25px;
+            border: 25px solid navy;
+            margin: 25px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <nav class="navbar">
+            <div>
+                <a href="../../../TutorialSite.html">
+                    <img class="heder_logo" src="../../../Assests/adwords.png">
+                </a>
+            </div>
+
+            <ul class="nav_list">
+                <li class="list_item">
+                    <a href="../../../TutorialSite.html">Home</a>
+                </li>
+                <li class="list_item">
+                    <a href="../../../HTML/html.html">HTML</a>
+                </li>
+                <li class="list_item">
+                    <a href="../../CSS.html">CSS</a>
+                </li>
+                <li class="list_item">
+                    <a href="../../../BootStrap/BootStrap.html">Bootstrap</a>
+                </li>
+                <li class="list_item">
+                    <a href="../../../JavaScript/JavaScripts.html">JavaScript</a>
+                </li>
+                <li class="list_item">
+                    <a href="../../../jQuery/jQuery.html">jQuery</a>
+                </li>
+                <li class="list_item">
+                    <a href="../../../Project/Project.html">Project</a>
+                </li>
+            </ul>
+        </nav>
+        <div class="body">
+            <div class="body__left">
+                <p style="font-weight: bold; font-size:20px; margin-top:10px">CSS</p>
+                <i class="fas fa-folder-open" style="margin-left: -20px;">Day3</i>
+                <ol type="i">
+                    <li>Practice Exercise</li>
+                    <ul type="disc">
+                        <li><a href="../../Day3/Practice Exercise/Practice Exercise_1.html">Practice_Exercise_1</a></li>
+                        <li><a href="../../Day3/Practice Exercise/Practice Exercise_2.html">Practice_Exercise_2</a></li>
+                        <li><a href="../../Day3/Practice Exercise/Practice Exercise_3.html">Practice_Exercise_3</a></li>
+                    </ul>
+                    <li>Assignment</li>
+                    <ul type="disc">
+                        <li><a href="../../Day3/Assignment/Assignment Day3.html">Assignment Day3</a></li>
+                    </ul>
+                </ol>
+                <i class="fas fa-folder-open" style="margin-left: -20px;">Day4</i>
+                <ol type="i">
+                    <li>Practice Exercise</li>
+                    <ul type="disc">
+                        <li><a href="../../Day4/Practice Excercise/Practice exercise_1.html">Practice_Exercise_1</a>
+                        </li>
+                        <li><a href="../../Day4/Practice Excercise/Practice exercise_2.html">Practice_Exercise_2</a>
+                        </li>
+                        <li><a href="../../Day4/Practice Excercise/Practice exercise_3.html">Practice_Exercise_3</a>
+                        </li>
+                        <li><a href="../../Day4/Practice Excercise/Practice exercise_4.html">Practice_Exercise_4</a>
+                        </li>
+                        <li><a href="../../Day4/Practice Excercise/Practice exercise_5.html">Practice_Exercise_5</a>
+                        </li>
+                        <li><a href="../../Day4/Practice Excercise/Practice exercise_6.html">Practice_Exercise_6</a>
+                        </li>
+                        <li><a href="../../Day4/Practice Excercise/Practice exercise_7.html">Practice_Exercise_7</a>
+                        </li>
+                    </ul>
+                    <li>Assignment</li>
+                    <ul type="disc">
+                        <li><a href="../../Day4/Assignment/Assignment Day4.html">Assignment Day4</a></li>
+                    </ul>
+                </ol>
+                <i class="fas fa-folder-open" style="margin-left: -20px;">Day5</i>
+                <ol type="i">
+                    <li>Practice Exercise</li>
+                    <ul type="disc">
+                        <li><a href="../../Day5/Practice/Practice Excercise_1.html">Practice_Exercise_1</a></li>
+                        <li><a href="../../Day5/Practice/Practice Excercise_2.html">Practice_Exercise_2</a></li>
+                        <li><a href="../../Day5/Practice/Practice Excercise_3.html">Practice_Exercise_3</a></li>
+                        <li><a href="../../Day5/Practice/Practice Excercise_4.html">Practice_Exercise_4</a></li>
+                    </ul>
+                    <li>Assignment</li>
+                    <ul type="disc">
+                        <li><a href="../../Day5/Assignment/Assignment Day5-6.html">Assignment Day5-6</a></li>
+                    </ul>
+                </ol>
+            </div>
+            <div class="body__right">
+                <h3>Practice 4</h3>
+                <p>Set the margin of the div to "25px".</p>
+                <br>
+                <hr><br>
+                <div class="body__right__div">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
+                    tempor
+                    incididunt ut labore et dolore magna aliqua.
+                </div>
+            </div>
+        </div>
+        <div class="footer">
+            CopyRights &copy;Raj Thakkar
+        </div>
+    </div>
+</body>
+
+</html>
+
+
+
+

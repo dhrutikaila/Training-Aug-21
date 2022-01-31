@@ -1,0 +1,18 @@
+.container {
+  grid-template-areas:
+    "head head"
+    "sidebar main"
+    "sidebar footer";
+}
+
+.sidebar {
+  grid-area: sidebar;
+  background-color: var(--light-primary-color);
+  text-align: justify;
+  padding: 10px 0px 0px 10px;
+  overflow: auto;
+}
+
+.sidebar li {
+  list-style: none;
+}

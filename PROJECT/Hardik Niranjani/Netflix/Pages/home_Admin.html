@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/png" href="../Assets/ICO.png" />
+    <link rel="stylesheet" href="../Style/home_Admin.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-F3w7mX95PdgyTmZZMECAngseQB83DfGTowi0iMjiWaeVhAn4FJkqJByhZMI3AhiU" crossorigin="anonymous">
+    <title>Netflix - Home Admin</title>
+</head>
+
+<body>
+    <div class="index_main">
+        <div class="index__body container-fluid p-0">
+            <div class="index__header container-fluid p-5 d-inline-flex mt-0">
+                <!-- logo -->
+               <img src="../Assets/Premium Logo_1.png" onclick="window.location.href='home.html';"></a>
+                <div class="d-inline-flex ">
+                    <!-- Add movie button -->
+                    <button type="button" class="add_movie_button btn btn-danger me-3" style="background-color:#F40612;"
+                        onclick="window.location.href='Add_Movie.html';">Add Movies/Series</button>
+                    <!-- logout button -->
+                    <button type="button" class="logout_btn btn btn-danger" style=" background-color:#F40612;"
+                        onclick="logout();">
+                        Logout
+                    </button>
+                    <!-- Profile avatar -->
+                    <a href="Profile.html" style="margin-top:-5px"><img class="profile_img ms-2 dropdown" src="../Assets/User_Profile.jpg" style="z-index: 2;"></a>
+                    <!-- dropdown menu -->
+                    <div class="dropdown">
+                        <button class="dropdown_profile btn w-100 dropdown-toggle" type="button"
+                            data-bs-toggle="dropdown"></button>
+                        <div class="dropdown-menu" style="background-color:#00000054">
+                            <p class="text-white ms-2">Welcome:
+                                <script>
+                                    document.write(localStorage.getItem('loged_user_name'))
+                                </script>
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- Body section -->
+            <div class="body_banner  index__body_mid" style="margin-top:-95px;">
+                <div id="carouselExampleFade" class="carousel slide carousel-fade" data-bs-ride="carousel">
+                    <div class="carousel-inner">
+                      <div class="carousel-item active">
+                        <img src="../Assets/Home_Page_Banner/Original Series.jpg" class="d-block w-100" alt="...">
+                      </div>
+                      <div class="carousel-item">
+                        <img src="../Assets/Home_Page_Banner/Narcos.jpg" class="d-block w-100" alt="...">
+                      </div>
+                      <div class="carousel-item">
+                        <img src="../Assets/Home_Page_Banner/The Witcher.jpg" class="d-block w-100" alt="...">
+                      </div>
+                      <div class="carousel-item">
+                        <img src="../Assets/Home_Page_Banner/MoneyHeiest_2.jpg" class="d-block w-100" alt="...">
+                      </div>
+                      <div class="carousel-item">
+                        <img src="../Assets/Home_Page_Banner/Dardavil.jpg" class="d-block w-100" alt="...">
+                      </div>
+                      <div class="carousel-item">
+                        <img src="../Assets/Home_Page_Banner/EL_Camino.jpg" class="d-block w-100" alt="...">
+                      </div>
+                      <div class="carousel-item">
+                        <img src="../Assets/Home_Page_Banner/Kingdom.jpg" class="d-block w-100" alt="...">
+                      </div>
+                      <div class="carousel-item">
+                        <img src="../Assets/Home_Page_Banner/Extraction.jpg" class="d-block w-100" alt="...">
+                      </div>
+                    </div>
+                    <!-- <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleFade" data-bs-slide="prev">
+                      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                      <span class="visually-hidden">Previous</span>
+                    </button>
+                    <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleFade" data-bs-slide="next">
+                      <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                      <span class="visually-hidden">Next</span>
+                    </button> -->
+                  </div>
+            </div>
+            <div class="index__body" style="margin-top:500px"></div>
+        </div>
+        <div class="index__footer">
+            <p class="w-100 h-100 p-4 mb-0 text-white"
+                style="background-color: #000000; z-index: 2; text-align: center;">@Hardik P. Niranjani</p>
+        </div>
+    </div>
+    <script src="../Js/home_Admin.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-/bQdsTh/da6pkI1MST/rWKFNjaCP5gBSY4sEBT38Q/9RBh9AH40zEOg7Hlq2THRZ" crossorigin="anonymous">
+        </script>
+</body>
+
+</html>

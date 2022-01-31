@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body id="main">
+    <div id="demo"></div>
+    <button onclick="alert('Hello')">Click me.</button>
+            <!-- When the button is clicked, the function "myFunction" should be executed.-->
+        <button onclick="myFunction()">Click me.</button>
+        <!-- The <div> element should turn red when someone moves the mouse over it. -->
+        <div onmouseover="this.style.backgroundColor='red'">myDIV.</div>
+
+    <script>
+        //Create a variable called carName and assign the value Volvo to it.
+        var carName = "Volvo";
+        //Create a variable called x, assign the value 50 to it.
+        var x = 50
+        //Display the sum of 5 + 10, using two variables: x and y.
+        var x = 5;
+        var y = 10;
+        document.getElementById("demo").innerHTML = x + y;
+        //Use the correct assignment operator that will result in x being 15 (same as x = x + y).
+        x = 10;
+        y = 5;
+        x += y;
+
+        //Multiply 10 with 5, and alert the result:
+        alert(10 * 5);
+        //Use the correct assignment operator that will result in x being 50 (same as x = x * y).
+        //Execute the function named myFunction.
+
+        function myFunction() {
+            alert("Hello World!");
+        }
+        myFunction();
+        x = 10;
+        y = 5;
+        x *= y;
+        //Create a variable called z, assign x + y to it, and display the result in an alert box.
+
+
+        var x = 5;
+        var y = 10;
+        var z = x + y;
+        alert(z);
+        //Divide 10 by 2, and alert the result.
+        alert(10 / 2);
+
+        //Objects
+        /* Alert "John" by extracting information from the person object.
+         */
+        var person = {
+            firstName: "John",
+            lastName: "Doe"
+        };
+
+        alert(person.firstName);
+
+        /* Add the following property and value to the person object: country: Norway.
+
+        */
+        var person = {
+            firstName: "John",
+            lastName: "Doe",
+            country: "Norway"
+        };
+
+        /* Create an object called person with name = John, age = 50.
+        Then, access the object to alert("John is 50").
+
+        */
+        var person = {
+            name: "John",
+            age: 50
+        };
+        alert(person.name + " is " + person.age);
+        
+        //for loop
+        //Create a loop that runs from 0 to 9.
+        let i;
+        for(i= 0; i< 10; i++) {
+            console.log(i);
+        }
+        //const fruits = ["Apple", "Banana", "Orange"];
+        //this type of for is used in Arrays,String,Maps,NodeLists
+        for (x of fruits) {
+            console.log(x);
+        }
+     </script>
+        <!-- Events -->
+        <!-- The <button> element should do something when someone clicks on it. Try to fix it! -->
+
+        
+</body>
+
+</html>

@@ -1,0 +1,138 @@
+@use "../custom" as *;
+@use "../components/mixins" as *;
+
+.guides-section {
+  @include block-spacer(8vh, 8vh, 0);
+  position: relative;
+  background-image: url(../../images/img-guide-row-portrait.jpg);
+  background-position: bottom center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 376px;
+  border-style: solid;
+  border-width: 0 0 0.25rem;
+  color: $black;
+  border-image: linear-gradient(135deg, #1976d2, #744bc4) 1;
+  display: flex;
+  flex-direction: column;
+
+  .pipe {
+    margin-left: 4vw;
+    margin-top: 1.5rem;
+    padding-left: 0.5rem;
+    font-size: 13px;
+    font-weight: 500;
+    height: 3vh;
+    width: auto;
+    border-image: linear-gradient(356.56deg, #1976d2 -38.42%, #9e42b5 150.39%) 1;
+    border-style: solid;
+    border-width: 0 0 0 0.188rem;
+  }
+  .guide-content {
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    padding: 4vw;
+    top: 100%;
+    align-items: center;
+    text-align: center;
+  }
+  .logo {
+    height: 1.13rem;
+    margin-bottom: 0.5rem;
+  }
+  .heading {
+    font-size: 2.3rem;
+    letter-spacing: -0.01em;
+    line-height: 1.2;
+    font-weight: 800;
+    font-family: gd-sage, "Times", "Times New Roman", serif;
+    margin-bottom: 0.5rem;
+  }
+  p {
+    margin-bottom: 1rem;
+    font-size: 1rem;
+    line-height: 1.5;
+  }
+  .input-group {
+    margin-bottom: 4vh;
+    margin-top: 2vh;
+
+    input[type="text"] {
+      font-size: 1rem;
+      line-height: 1.5rem;
+      height: 3.75rem;
+      padding: 16px 0 16px 20px;
+      background-color: $white;
+      border-radius: 0;
+      box-shadow: none;
+
+      &::placeholder {
+        font-size: 1.1rem;
+        color: rgba(#2b2b2b, 0.4);
+      }
+
+      &:focus {
+        border: 1px solid $black;
+        outline: 3px solid #1976d2;
+      }
+    }
+    .input-group-text {
+      display: flex;
+      justify-content: center;
+      font-size: 1rem;
+      cursor: pointer;
+      background-color: $black;
+      color: $white;
+      line-height: 1.5rem;
+      height: 3.75rem;
+      // min-width: 10vw;
+      padding: 0 2rem;
+    }
+  }
+  .links {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    a {
+      color: $black;
+      font-weight: 700;
+      margin-right: 2rem;
+      padding: 0.75rem 0;
+
+      &:hover {
+        text-decoration: none;
+      }
+    }
+  }
+}
+
+@include media-breakpoint-up(md) {
+  .guides-section {
+    position: unset !important;
+    background-image: url(../../images/img-guide-row-tablet.jpg);
+    background-position: center;
+    min-height: 68vh;
+
+    @include media-breakpoint-up(lg) {
+      background-image: url(../../images/img-guide-row-landscape.jpg);
+
+      .heading {
+        font-size: 4rem;
+      }
+    }
+    .guide-content {
+      width: 55%;
+      position: unset !important;
+      align-self: flex-end;
+      align-items: flex-start;
+      text-align: left;
+    }
+    .logo {
+      align-self: flex-start;
+    }
+    .links {
+      flex-direction: row !important;
+    }
+  }
+}

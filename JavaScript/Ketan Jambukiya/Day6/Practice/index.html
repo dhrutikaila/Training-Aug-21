@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body onload="getdata()">
+    <script >   
+        function getdata()
+{
+      
+    fetch("http://127.0.0.1:5500/Day6/Practice/a.json")
+    .then((result) => {
+         return result.json();
+    })
+    .then((res)=>{
+       
+        var data = JSON.stringify(res)
+        localStorage.setItem("data",data);
+
+        var product = JSON.parse(localStorage.getItem("data"));
+        console.log(product);
+
+    })
+    .catch((error)=>{
+        console.log(error); 
+    });
+}
+
+    </script>
+</body>
+</html>

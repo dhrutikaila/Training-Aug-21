@@ -1,0 +1,43 @@
+Social charity website: food page
+Total pages to design:
+1. Home
+2. Food
+3. About us
+4. Contact us
+5. Log in
+
+1. Home
+Navbar: Name: Home Food Education Health About_us Contact_us Log_in
+Slider
+The problem
+The idea
+Uniqueness of organisation
+How you can help?
+Where have we reached
+Footer
+
+2. Food
+Navbar
+Posts of food requirements & areas
+footer
+
+3. About us
++Who we are
++Who has joined hands with us
++FAQ
+
+4. Contact us
+
+5. Log_in
+
+:: Things to keep in mind::
+Home page:
+Slider, problem, idea-> images
+About us: 
+should be fetched through Json
+FAQ collapse
+Log in:
+Validation should be checked with jQuery, storing data in local storage, setting session time out
+Food page: 
+posts should be fetched from JSON in local storage on load
+... more to be added

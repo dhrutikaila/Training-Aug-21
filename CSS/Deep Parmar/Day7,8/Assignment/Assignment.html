@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>Assignment</title>
+  <style>
+    * {
+      box-sizing: border-box;
+    }
+
+    h1 {
+      color: lightcoral;
+    }
+
+    .header {
+      text-align: center;
+      padding: 32px;
+    }
+
+    .row {
+      display: flex;
+      flex-wrap: wrap;
+      padding: 0 4px;
+    }
+
+    /* Create four equal columns that sits next to each other */
+    .column {
+      flex: 25%;
+      max-width: 25%;
+      padding: 0 4px;
+    }
+
+    .column img {
+      margin-top: 8px;
+      vertical-align: middle;
+    }
+
+    /* Responsive layout - makes a two column-layout instead of four columns */
+    @media (max-width: 800px) {
+      h1 {
+        color: lightseagreen;
+      }
+
+      .column {
+        flex: 50%;
+        max-width: 50%;
+      }
+    }
+
+    /* Responsive layout - makes the two columns stack on top of each other instead of next to each other */
+    @media (max-width: 600px) {
+      h1 {
+        color: lightsteelblue;
+      }
+
+      .column {
+        flex: 100%;
+        max-width: 100%;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <!-- Header -->
+  <div class="header">
+    <h1>Responsive Image Grid</h1>
+    <p>Resize the browser window to see the responsive effect.</p>
+  </div>
+
+  <hr>
+
+  <!-- Photo Grid -->
+  <div class="row">
+    <div class="column">
+      <img src="https://picsum.photos/200/300" style="width:100%">
+      <img src="https://picsum.photos/250/350" style="width:100%">
+      <img src="https://picsum.photos/300/400" style="width:100%">
+      <img src="https://picsum.photos/200/308" style="width:100%">
+      <img src="https://picsum.photos/200/308" style="width:100%">
+      <img src="https://picsum.photos/209/308" style="width:100%">
+      <img src="https://picsum.photos/210/308" style="width:100%">
+    </div>
+
+    <div class="column">
+      <img src="https://picsum.photos/210/310" style="width:100%">
+      <img src="https://picsum.photos/350/450" style="width:100%">
+      <img src="https://picsum.photos/305/405" style="width:100%">
+      <img src="https://picsum.photos/205/308" style="width:100%">
+      <img src="https://picsum.photos/220/308" style="width:100%">
+      <img src="https://picsum.photos/229/308" style="width:100%">
+      <img src="https://picsum.photos/240/310" style="width:100%">
+    </div>
+
+    <div class="column">
+      <img src="https://picsum.photos/310/410" style="width:100%">
+      <img src="https://picsum.photos/300/450" style="width:100%">
+      <img src="https://picsum.photos/310/405" style="width:100%">
+      <img src="https://picsum.photos/250/318" style="width:100%">
+      <img src="https://picsum.photos/220/400" style="width:100%">
+      <img src="https://picsum.photos/259/318" style="width:100%">
+      <img src="https://picsum.photos/250/610" style="width:100%">
+    </div>
+
+    <div class="column">
+      <img src="https://picsum.photos/315/410" style="width:100%">
+      <img src="https://picsum.photos/308/450" style="width:100%">
+      <img src="https://picsum.photos/315/405" style="width:100%">
+      <img src="https://picsum.photos/255/318" style="width:100%">
+      <img src="https://picsum.photos/229/400" style="width:100%">
+      <img src="https://picsum.photos/270/318" style="width:100%">
+      <img src="https://picsum.photos/450/610" style="width:100%">
+    </div>
+
+  </div>
+
+</body>
+
+</html>

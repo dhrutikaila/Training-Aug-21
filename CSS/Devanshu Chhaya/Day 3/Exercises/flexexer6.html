@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>flex-box</title>
+    <style>
+        .flex-container{
+            display:flex;
+            flex-direction: row-reverse;
+            background-color:midnightblue;
+        }
+        .flex-container>div{
+            background-color:lightgreen;
+            margin:20px;
+            width:100px;
+            text-align: center;
+            line-height: 75px;
+            font-family:'Times New Roman', Times, serif;
+            font-size: 50px;
+        }
+    </style>
+</head>
+<body>
+    <h1>This is flex box with 3 items.</h1>
+    <div class="flex-container">
+        <div>1</div>
+        <div>2</div>
+        <div>3</div>
+    </div>
+</body>
+</html>

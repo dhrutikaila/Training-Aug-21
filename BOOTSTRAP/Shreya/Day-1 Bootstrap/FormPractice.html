@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Form Practice</title>
+  <link rel="stylesheet" href="bootstrap.min.css">
+</head>
+
+<body>
+  <script src="bootstrap.bundle.min.js"></script>
+  <div class="container">
+    <form>
+      <div class="m-3">
+        <label for="name">Name</label>
+        <input type="text" id="name" placeholder="Enter name" class="form-control">
+      </div>
+      <div class=" m-3">
+        <label for="email">Email</label>
+        <input type="email" id="email" placeholder="Enter email" class="form-control form-control-lg">
+      </div>
+      <div class="m-3">
+        <label for="password">Password</label>
+        <input type="password" id="password" placeholder="Enter password" class="form-control form-control-sm" readonly>
+      </div>
+      <div class="m-3">
+        <label for="email">Readonly email</label>
+        <input type="email" id="email" value="shreya@gmail.com" class="form-control form-control" readonly>
+      </div>
+      <div class="m-3">
+        <input type="text" id="text" placeholder="disabled Example" class="form-control form-control" disabled>
+      </div>
+      <div class="m-3">
+        <label for="formFile" class="form-label">File</label>
+        <input class="form-control" type="file" id="formFile">
+      </div>
+      <div class="m-3">
+        <label for="exampleColorInput" class="form-label">Color picker</label>
+        <input type="color" class="form-control form-control-color" id="exampleColorInput" value="#563d7c"
+          title="Choose your color">
+      </div>
+      <!--custom select -->
+      <div class="m-3">
+        <select class="form-select">
+          <option selected>Open this select menu</option>
+          <option value="1">Item 1</option>
+          <option value="2">Item 2</option>
+          <option value="3">Item 3</option>
+        </select>
+      </div>
+      <div class="m-3">
+        <select class="form-select " multiple>
+          <option selected>Open this select menu</option>
+          <option value="1">Item 1</option>
+          <option value="2">Item 2</option>
+          <option value="3">Item 3</option>
+        </select>
+      </div>
+      <div class="m-3">
+        <select class="form-select " disabled>
+          <option selected>Disable select menu </option>
+          <option value="1">Item 1</option>
+          <option value="2">Item 2</option>
+          <option value="3">Item 3</option>
+        </select>
+      </div>
+      <!--For radio button and check box-->
+      <label class="form-check-label" for="check1">Intrest:
+        <div class="form-check">
+          <input class="form-check-input" type="checkbox" value="" id="check1">
+          <label class="form-check-label" for="check1">
+            Developer
+          </label>
+        </div>
+        <div class="form-check">
+          <input class="form-check-input" type="checkbox" value="" id="check2" checked>
+          <label class="form-check-label" for="check2">
+            Designer
+          </label>
+        </div>
+        <!--for disable checkbox-->
+        <label class="form-check-label" for="check3">Intrest:
+          <div class="form-check">
+            <input class="form-check-input" type="checkbox" value="" disabled id="check3">
+            <label class="form-check-label" for="check3">
+              Developer
+            </label>
+          </div>
+          <div class="form-check">
+            <input class="form-check-input" type="checkbox" value="" id="check4" checked disabled>
+            <label class="form-check-label" for="check4">
+              Designer
+            </label>
+          </div><br>
+          <!--Radio button-->
+          <div class="form-check">
+            <input class="form-check-input" type="radio" name="radio1" id="radio1">
+            <label class="form-check-label" for="radio1">
+              Female
+            </label>
+          </div>
+          <div class="form-check">
+            <input class="form-check-input" type="radio" name="radio2" id="radio2">
+            <label class="form-check-label" for="radio2">
+              Male
+            </label>
+          </div><br>
+          <h4>Switch</h4>
+          <div class="form-check form-switch">
+            <input class="form-check-input" type="checkbox" id="flexSwitchCheckDefault">
+            <label class="form-check-label" for="flexSwitchCheckDefault">Switch 1</label>
+          </div><br>
+          <h4>inline checkbox</h4>
+          <div class="form-check form-check-inline">
+            <input class="form-check-input" type="checkbox" id="inlineCheckbox1" value="option1">
+            <label class="form-check-label" for="inlineCheckbox1">1</label>
+          </div>
+          <div class="form-check form-check-inline">
+            <input class="form-check-input" type="checkbox" id="inlineCheckbox2" value="option2">
+            <label class="form-check-label" for="inlineCheckbox2">2</label>
+          </div>
+          <hr>
+          <!--Form raw-->
+
+          <h4>Validation practice</h4>
+          <div class="m-3">
+            <label for="name">Name</label>
+            <input type="text" id="name" placeholder="Enter name" class="form-control is-valid">
+          </div>
+          <div class=" m-3">
+            <label for="email">Email</label>
+            <input type="email" id="email" placeholder="Enter email" class="form-control form-control-lg is-invalid">
+          </div>
+    </form>
+    <h4>form</h4>
+    <form class="was-validated">
+      <div class="m-3">
+        <label for="name">Name</label>
+        <input type="text" id="name" placeholder="Enter name" class="form-control" required>
+      </div>
+      <div class=" m-3">
+        <label for="email">Email</label>
+        <input type="email" id="email" placeholder="Enter email" class="form-control form-control-lg" required>
+      </div>
+    </form>
+    <h4>Valid tooltip</h4>
+    <form class="needs-validation" novalidate>
+      <div class="m-3 position-relative">
+        <label for="name1">Name</label>
+        <input type="text" id="name1" placeholder="Enter name" class="form-control" required>
+        <div class="invalid-tooltip">
+          Enter name..
+        </div>
+      </div>
+      <div class="m-3 position-relative">
+        <label for="email">Email</label>
+        <input type="email" id="email" placeholder="Enter email" class="form-control form-control" required>
+      </div>
+      <div class="invalid-tooltip">
+        Enter name..
+      </div>
+      <div class="m-3">
+        <button class="btn btn-primary" type="submit">Submit</button>
+      </div>
+    </form>
+  </div>
+
+</html>

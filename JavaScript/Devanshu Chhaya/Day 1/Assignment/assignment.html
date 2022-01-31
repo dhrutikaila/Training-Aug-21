@@ -1,0 +1,134 @@
+<!-- Create an application for performing basic math operations like Addition, Subtraction,   Multiplication and Division.
+
+Consider following elements:
+
+ Label : “Please enter first number : ” with Text Box
+ Label : “Please enter second number : ” with Text Box
+ Label : “Please select operation you want to perform : ” with set of Radio Buttons like “Addition”, “Subtraction”, “Multiplication” and “Division” presented in vertical manner.
+Two buttons,  “Calculate” and “Reset”
+ Label: “Result is: ” with final result – Place all the checks to make sure that user enters only numeric values for text boxes. Clicking on “Calculate” button will perform the requested operation and
+ the result will be displayed below “Calculate” and “Reset” buttons in the form of text,  
+  e.g. : “Result is : 10”. – Clicking on “Reset” button will reset all the form information including radio button   selection and result text. -->
+
+<!doctype html>
+<html lang="en">
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-F3w7mX95PdgyTmZZMECAngseQB83DfGTowi0iMjiWaeVhAn4FJkqJByhZMI3AhiU" crossorigin="anonymous">
+
+    <title>Assignment</title>
+</head>
+
+<body>
+    <h1 class="display-3 fw-bolder text-center">Calculator</h1>
+    <div class="container mt-3">
+        <div class="row align-items-cente justify-content-center">
+            <div class="col-4">
+                <form>
+                    <div class="mb-3">
+                        <label for="number1" class="form-label">Enter the Number 1</label>
+                        <input type="number" class="form-control" id="number1">
+                    </div>
+                    <div class="mb-3">
+                        <label for="number2" class="form-label">Enter the Number 1</label>
+                        <input type="number" class="form-control" id="number2">
+                    </div>
+                </form>
+            </div>
+            <div class="col-4">
+                <label class="form-label">Please select operation you want to perform : </label>  
+                <div class="form-check">
+                      
+                    <input class="form-check-input" type="radio" name="flexRadioDefault" id="Sum">
+                    <label class="form-check-label" for="flexRadioDefault1">
+                        Sum
+                    </label>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" name="flexRadioDefault" id="Dif">
+                    <label class="form-check-label" for="flexRadioDefault2">
+                        Difference
+                    </label>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" name="flexRadioDefault" id="Mul">
+                    <label class="form-check-label" for="flexRadioDefault2">
+                        Multiplication
+                    </label>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" name="flexRadioDefault" id="Div">
+                    <label class="form-check-label" for="flexRadioDefault2">
+                        Division
+                    </label>
+                </div><br>
+                <ul class="list-inline">
+                    <li class="list-inline-item"><button class="btn btn-primary block"
+                            onclick="calculate(number1.value,number2.value,result)">Calculate</button></li>
+                    <li class="list-inline-item"><button class="btn btn-primary block" onclick="reset()">Reset</button></li>
+                </ul>
+                <p>Result: <span id="result"></span></p>
+            </div>
+        </div>
+    </div>
+   
+    <script>
+        function calculate(num1, num2, result) {
+
+                num1 = parseInt(num1);
+                num2 = parseInt(num2);
+
+
+                switch (true) {
+                    case document.getElementById('Sum').checked == true:
+                        result.innerHTML = num1 + num2;
+                        break;
+
+                    case document.getElementById('Dif').checked == true:
+                        result.innerHTML = num1 - num2;
+                        break;
+
+                    case document.getElementById('Mul').checked == true:
+                        result.innerHTML = num1 * num2;
+                        break;
+
+                    case document.getElementById('Div').checked == true:
+                        result.innerHTML = num1 / num2;
+                        break;
+
+                }
+
+            }
+
+            function reset(){
+                document.getElementById("number1").value=null;
+                document.getElementById("number2").value=null;
+                document.getElementById("Sum").checked=false;
+                document.getElementById("Dif").checked=false;
+                document.getElementById("Mul").checked=false;
+                document.getElementById("Div").checked=false;
+                
+            }
+    </script>
+
+    <!-- Optional JavaScript; choose one of the two! -->
+
+    <!-- Option 1: Bootstrap Bundle with Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-/bQdsTh/da6pkI1MST/rWKFNjaCP5gBSY4sEBT38Q/9RBh9AH40zEOg7Hlq2THRZ"
+        crossorigin="anonymous"></script>
+
+    <!-- Option 2: Separate Popper and Bootstrap JS -->
+    <!--
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.3/dist/umd/popper.min.js" integrity="sha384-W8fXfP3gkOKtndU4JGtKDvXbO53Wy8SZCQHczT5FMiiqmQfUpWbYdTil/SxwZgAN" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/js/bootstrap.min.js" integrity="sha384-skAcpIdS7UcVUC05LJ9Dxay8AXcDYfBJqt1CJ85S/CFujBsIzCIv+l9liuYLaMQ/" crossorigin="anonymous"></script>
+    -->
+</body>
+
+</html>

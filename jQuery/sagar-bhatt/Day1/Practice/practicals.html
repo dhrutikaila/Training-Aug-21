@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Practicals Day 1</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-F3w7mX95PdgyTmZZMECAngseQB83DfGTowi0iMjiWaeVhAn4FJkqJByhZMI3AhiU"
+      crossorigin="anonymous"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.9.0/css/all.min.css"
+      integrity="sha512-q3eWabyZPc1XTCmF+8/LuE1ozpg5xxn7iO89yfSOd5/oKvyqLngoNGsx8jq92Y8eXJ/IRxQbEC+FGSYxtk2oiw=="
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="../../Project/assets/css/style.css" />
+  </head>
+  <body>
+    <header>
+      <div class="logo">
+        <span>
+          <a href="../../../Project/sagar-bhatt/web-tutorials/index.html">
+            RadixWeb
+          </a>
+        </span>
+      </div>
+      <nav>
+        <input type="checkbox" id="click" />
+        <label for="click" class="menu-btn">
+          <i class="fas fa-bars"></i>
+        </label>
+        <ul>
+          <li>
+            <a href="../../../../Project/sagar-bhatt/web-tutorials/index.html">
+              Home
+            </a>
+          </li>
+          <li>
+            <a href="../../../../HTML/sagar-bhatt/Project/index.html"
+              >HTML/CSS</a
+            >
+          </li>
+          <li>
+            <a href="../../../../Bootstrap/sagar-bhatt/Project/index.html">
+              Bootstrap
+            </a>
+          </li>
+          <!-- <li><a href="#">SCSS</a></li> -->
+          <li>
+            <a href="../../../../JavaScript/sagar-bhatt/Project/index.html">
+              Javascript
+            </a>
+          </li>
+          <li>
+            <a href="../../Project/index.html" class="active"> jQuery </a>
+          </li>
+        </ul>
+      </nav>
+    </header>
+    <article>
+      <aside>
+        <!-- * Day-1 -->
+        <div class="folder-container">
+          <div class="folder">Day1</div>
+          <div class="sub-folder">Practice</div>
+          <div class="file">
+            <a href="./practicals.html"> jQuery Practicals </a>
+          </div>
+          <div class="sub-folder">Assignment</div>
+          <div class="file">
+            <a href="../Assignment/assignment.html"> jQuery Assignment </a>
+          </div>
+        </div>
+        <!-- * Day-2 -->
+        <div class="folder-container">
+          <div class="folder">Day2</div>
+          <div class="sub-folder">Practice</div>
+          <div class="file">
+            <a href="../../Day2/jquery.html"> jQuery Practicals </a>
+          </div>
+          <div class="sub-folder">Assignment</div>
+          <div class="file">
+            <a href="../../Day2/Assignment/assignment.html">
+              jQuery Assignment
+            </a>
+          </div>
+        </div>
+      </aside>
+      <section>
+        <div class="container-fluid font-monospace pt-1">
+          <div class="accordion" id="accordionBasic">
+            <div class="accordion-item">
+              <div class="accordion-header fs-5" id="headingOne">
+                <button
+                  class="accordion-button"
+                  data-bs-toggle="collapse"
+                  data-bs-target="#collapseOne"
+                  aria-expanded="true"
+                  aria-controls="collapseOne"
+                >
+                  Practical 1: Create one paragraph, add some dummy text and
+                  apply blue background color using jquery.
+                </button>
+              </div>
+              <div
+                class="accordion-collapse collapse show"
+                id="collapseOne"
+                aria-labelledby="headingOne"
+                data-bs-parent="#accordionBasic"
+              >
+                <div class="accordion-body bg-light fs-5 text-dark">
+                  <p class="firstPara"></p>
+                </div>
+              </div>
+            </div>
+            <div class="accordion-item">
+              <div class="accordion-header fs-5" id="headingTwo">
+                <button
+                  class="accordion-button"
+                  data-bs-toggle="collapse"
+                  data-bs-target="#collapseTwo"
+                  aria-expanded="true"
+                  aria-controls="collapseTwo"
+                >
+                  Practical 2: There is one Hide/show the text inside the
+                  #helpText span element when the user’s mouse passes over the
+                  text.
+                </button>
+              </div>
+              <div
+                class="accordion-collapse collapse show"
+                id="collapseTwo"
+                aria-labelledby="headingTwo"
+                data-bs-parent="#accordionBasic"
+              >
+                <div class="accordion-body bg-light fs-5 text-dark">
+                  <div id="helpText">
+                    Hide/show:<br />
+                    <span></span>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="accordion-item">
+              <div class="accordion-header fs-5" id="headingThree">
+                <button
+                  class="accordion-button"
+                  data-bs-toggle="collapse"
+                  data-bs-target="#collapseThree"
+                  aria-expanded="true"
+                  aria-controls="collapseThree"
+                >
+                  Practical 3: Clicking on a particular radio button should
+                  display the related technology name besides label : “You have
+                  selected : “.
+                </button>
+              </div>
+              <div
+                class="accordion-collapse collapse show"
+                id="collapseThree"
+                aria-labelledby="headingThree"
+                data-bs-parent="#accordionBasic"
+              >
+                <div class="accordion-body bg-light fs-5 text-dark">
+                  <div class="technologies"></div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </article>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-/bQdsTh/da6pkI1MST/rWKFNjaCP5gBSY4sEBT38Q/9RBh9AH40zEOg7Hlq2THRZ"
+      crossorigin="anonymous"
+    ></script>
+
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-/bQdsTh/da6pkI1MST/rWKFNjaCP5gBSY4sEBT38Q/9RBh9AH40zEOg7Hlq2THRZ"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"
+      integrity="sha512-894YE6QWD5I59HgZOGReFYm4dnWc1Qt5NtvYSaNcOP+u1T9qYdvdihz0PPSiiqn/+/3e7Jo4EaG7TubfWGUrMQ=="
+      crossorigin="anonymous"
+    ></script>
+    <script src="./js/practicals.js"></script>
+  </body>
+</html>

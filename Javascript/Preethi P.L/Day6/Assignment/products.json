@@ -1,0 +1,26 @@
+{"products":[
+    {
+        "ProductId" : 1,
+        "ProductName" : "Cheese",
+        "Price" : 100,
+        "Quantity" : 1
+    },
+    {
+        "ProductId" : 2,
+        "ProductName" : "Pen",
+        "Price" : 150,
+        "Quantity" : 2
+    },
+    {
+        "ProductId" : 3,
+        "ProductName" : "Butter",
+        "Price" : 100,
+        "Quantity" : 1
+    },
+    {
+        "ProductId" : 4,
+        "ProductName" : "Pencil",
+        "Price" : 10,
+        "Quantity" : 1
+    }
+]}

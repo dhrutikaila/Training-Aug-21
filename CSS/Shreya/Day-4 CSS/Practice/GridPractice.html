@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .container {
+            display: grid;
+            height: 100vh;
+            grid-template-columns: 1fr 1fr 1fr;
+            grid-template-rows: 0.2fr 1.5fr 1.2fr 0.8fr;
+            grid-template-areas: "nav nav nav "
+                "slidebar main main"
+                "slidebar content1 content2"
+                "slidebar footer footer";
+            grid-gap: 0.2rem;
+            font-family: 'Times New Roman', Times, serif;
+            font-weight: 800;
+            text-transform: uppercase;
+            font-size: 20px;
+            text-align: center;
+
+        }
+
+        nav {
+            background-color: aqua;
+            grid-area: nav;
+        }
+
+        main {
+            background-color: lightpink;
+            grid-area: main;
+        }
+
+        #slidebar {
+            background-color: lightsalmon;
+            grid-area: slidebar;
+        }
+
+        #content1 {
+            background-color: cadetblue;
+            grid-area: content1;
+        }
+
+        #content2 {
+            background-color: darkcyan;
+            grid-area: content2;
+        }
+
+        footer {
+            background-color: darkgrey;
+            grid-area: footer;
+        }
+
+        @media only screen and (max-width:550px) {
+            .container {
+                grid-template-columns: 1fr;
+                grid-template-rows: 0.4fr 0.4fr 2.2fr 1.2fr 1fr;
+                grid-template-areas: "nav"
+                    "main"
+                    "slidebar"
+                    "content1"
+                    "content2"
+                    "footer";
+
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <nav>Nav</nav>
+        <main>Main</main>
+        <div id="slidebar">sidebar</div>
+        <div id="content1">content1</div>
+        <div id="content2">content2</div>
+        <footer>Footer</footer>
+    </div>
+</body>
+
+</html>

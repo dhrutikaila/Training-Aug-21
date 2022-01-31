@@ -1,0 +1,84 @@
+<!--– Put a droplist with 5 country name from list object using jquery
+
+                  (Eg. India, United Kingdom..). Default value should “Please select”.
+
+                – Bellow droplist all country name which are in the dropdown that should display with Label :
+
+                  “Your Selected Country : “.
+
+                – By default all country name should display.
+
+                – Only that country name should appear which are you select from dropdown.
+
+                  All other label should be disappear.
+
+                – When i select ‘Please select’, all countries name should get displayed.-->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Practice Exercise-3</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-F3w7mX95PdgyTmZZMECAngseQB83DfGTowi0iMjiWaeVhAn4FJkqJByhZMI3AhiU" crossorigin="anonymous">
+    
+    <!--JQuery-->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+    <script>
+        $(document).ready(function(){
+            $(".form-check-input").click(function(){
+                $("#tech").text("You have selected : "+$(this).val());
+            }); 
+        });
+
+    </script>
+</head>
+<body>
+    
+    <!--Header-->
+    <div class="container text-center mt-2">
+        <h1 class="display1">Practice Exercise 3</h1>
+        <hr>
+    </div>
+
+    <!--Main-->
+    <div class="container bg-light mt-3 p-2">
+        <form id="myform">
+            <fieldset class="form-group">
+                <legend>Please select your technology : <span id="tech"></span></legend>
+                <div class="form-check form-check-inline">
+                    <label for="PHP" class=form-check-label>PHP</label>
+                    <input type="radio" class="form-check-input" value="PHP" id="PHP" name="technology">
+                </div>
+                <div class="form-check form-check-inline">
+                    <label for="ASP.NET" class=form-check-label>ASP.NET</label>
+                    <input type="radio" class="form-check-input" value="ASP.NET" id="ASP.NET" name="technology">
+                </div>
+                <div class="form-check form-check-inline">
+                    <label for="ASP" class=form-check-label>ASP</label>
+                    <input type="radio" class="form-check-input" value="ASP" id="ASP" name="technology">
+                </div>
+                <div class="form-check form-check-inline">
+                    <label for="JSP" class=form-check-label>JSP</label>
+                    <input type="radio" class="form-check-input" value="JSP" id="JSP" name="technology">
+                </div>
+                <div class="form-check form-check-inline">
+                    <label for="PERL" class=form-check-label>PERL</label>
+                    <input type="radio" class="form-check-input" value="PERL" id="PERL" name="technology">
+                </div>
+                <div class="form-check form-check-inline">
+                    <label for="Cold Fusion" class=form-check-label>Cold Fusion</label>
+                    <input type="radio" class="form-check-input" value="Cold Fusion" id="Cold Fusion" name="technology">
+                </div>
+                <div class="form-check form-check-inline">
+                    <label for="Other" class=form-check-label>Other</label>
+                    <input type="radio" class="form-check-input" value="Other" id="Other" name="technology">
+                </div>    
+            </fieldset>    
+        </form>
+    </div>
+    </body>
+</html>

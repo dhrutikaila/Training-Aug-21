@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-F3w7mX95PdgyTmZZMECAngseQB83DfGTowi0iMjiWaeVhAn4FJkqJByhZMI3AhiU" crossorigin="anonymous">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <title>Practice Day22/23</title>
+</head>
+<body>
+    <div class="container bg-light border border-secondary rounded mt-5 p-5 text-center">
+    <form>
+        <label class="form-control-label d-inline mx-5 mt-4" for="name">Enter Name : </label>
+        <input class="form-control w-25 mx-auto d-inline mt-4" id="name" type="text">
+    </form>
+    </div>
+
+    <div class="container bg-light border border-secondary rounded mt-5 p-5 text-center">
+        <p>If you click on the "Hide" button, I will disappear.</p>
+    
+        <button class="btn btn-info" id="hide">Hide</button>
+        <button class="btn btn-info" id="show">Show</button>
+    </div>
+
+    <div class="container bg-light border border-secondary rounded mt-5 p-5 text-center">
+        <button id="animate" class="btn btn-info">Start Animation</button>
+        <div id="elem"style="background:blue; height:100px; width:100px;"></div>
+
+    </div>
+
+    <div class="container bg-light border border-secondary rounded mt-5 p-5 text-center">
+        <p id="p1">jQuery is fun!!</p>
+        <button class="btn btn-info" id="callback">Click me</button>
+    </div>
+
+    <div class="container bg-light border border-secondary rounded my-5 p-5 text-center">
+        <button class="btn btn-info" onclick="appendText()">Append Elem?</button>
+        <p id="append"></p>
+    </div>
+    
+    <script>
+        $(document).ready(function () {
+            //Event
+                $("input").focus(function () {
+                    $(this).css("background-color", "yellow");
+                });
+                $("input").blur(function () {
+                    $(this).css("background-color", "green");
+                });
+            //Hide-Show
+                $("#hide").click(function () {
+                    $("p").hide();
+                });
+                $("#show").click(function () {
+                    $("p").show();
+                });
+            //Animation
+                $("#animate").click(function () {
+                var div = $("#elem");
+                div.animate({ height: '300px', opacity: '0.4' }, "slow");
+                div.animate({ width: '300px', opacity: '0.8' }, "slow");
+                div.animate({ height: '100px', opacity: '0.4' }, "slow");
+                div.animate({ width: '100px', opacity: '0.8' }, "slow");
+            });
+            //Callback
+            $("#callback").click(function () {
+                $("#p1").css("color", "red")
+                    .slideUp(2000)
+                    .slideDown(2000);
+            });
+        });
+        
+        //Add Element
+        function appendText() {
+                var txt1 = "<p>Text.</p>";        // Create text with HTML
+                var txt2 = $("<p></p>").text("Text.");  // Create text with jQuery
+                var txt3 = document.createElement("p");
+                txt3.innerHTML = "Text.";         // Create text with DOM
+                $("#append").append(txt1, txt2, txt3);   // Append new elements
+            }
+ 
+           
+           
+                  
+    </script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-/bQdsTh/da6pkI1MST/rWKFNjaCP5gBSY4sEBT38Q/9RBh9AH40zEOg7Hlq2THRZ" crossorigin="anonymous"></script>
+</body>
+
+</html>

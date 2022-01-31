@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="assets/css/bootstrap.min.css">
+</head>
+<body>
+    <div class="container">
+        <div class="h3 text-center my-4">Vacancies</div>
+        <hr class="text-secondary">
+        <div class="d-flex w-100 justify-content-center align-content-between">
+            <form class="w-50">
+                <div class="form-group">
+                    <label class="form-label" for="name">Department Name</label>
+                    <input type="text" id="dept" placeholder="Enter Department" class="form-control">
+                </div>
+                <div class="form-group">
+                    <label class="form-label" for="name">Total Vacancies</label>
+                    <input type="number" id="vacNo" placeholder="Enter Total Vacancies" class="form-control" min="0">
+                </div>
+                <Button class="btn btn-primary mt-3" type="button" onClick="classObj.setVacancies(dept.value,vacNo.value)">submit</Button>
+            </form>
+        </div>
+        <div class="d-flex w-100 justify-content-center align-content-between mt-5" id="tableData">
+
+        </div>
+    </div>
+    <script src="assets/js/bootstrap.bundle.min.js"></script>
+    <script src="assets/js/vacancies.js"></script>
+</body>
+</html>

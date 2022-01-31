@@ -1,0 +1,61 @@
+<!--Create a menu list of the website. It should be responsive.-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Assignment</title>
+    <style>
+        body{
+            margin:0px;
+            background-color: rgb(240, 245, 245);
+        }
+        .header{
+            padding:30px;
+            background-color:rgb(5, 196, 196);
+            text-align: center;
+            font-size: 30px;
+            font-weight: bold;
+            color: white;
+        }
+        .nav{
+            display: flex;
+            flex-direction: row;
+            overflow: hidden;
+            background-color:rgb(87, 85, 85);
+            text-align: center;
+        }
+        .nav a{
+            
+            float: left;
+            display: block;
+            padding: 20px;
+            color: white;
+            text-decoration: none;
+        }
+        .nav a:hover{
+            background-color: lightgray;
+            color: black;
+        }
+        @media (max-width: 800px) {
+            .nav {
+                flex-direction: column;
+            }
+        }
+
+
+    </style>
+</head>
+<body>
+    <div class="header">
+        Logo Here
+    </div>
+    <div class="nav">
+            <a href="#">HOME</a>
+            <a href="#">ABOUT US</a>
+            <a href="#">CONTACT US</a>
+            <a href="#">LOGIN</a>
+    </div>
+</body>
+</html>

@@ -1,0 +1,47 @@
+<!-- Using Function call create employee object with field Name, Address and Designation and pass it to function. -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Practice_Exercise4 (Day 19)</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+</head>
+<body>
+    <div class="container">
+        <div class="row">
+            <div class="col-8 mx-auto ">
+                <h2 class="text-decoration-underline text-center mt-5">Practice_Exercise4 (Day 19)</h2>
+                <div class="border border-3 border-dark mx-auto mt-4 bg-info w-75">
+                    <div class="ms-3 mt-4 text-start fs-5">
+                        <h3>Code:</h3>
+                        <p>var employee = { <br>
+                            fieldName: "IT", <br>
+                            address: "Ekyarth, Malabar county road, Chharodi", <br>
+                            designation: "Software Developer", <br>
+                            } <br>
+                            var getData = { <br>
+                            fullData: function (age,gender) { <br>
+                            return "Field: " + this.fieldName + <br> 
+                            ", Adress: " + this.address + <br>
+                            ",Designation: " + this.designation + <br>
+                             "Age: " + age + <br>
+                             "Gender: " + gender ; <br>
+                            } } <br><br>
+                            getData.fullData.call(employee,"15","Male");
+                        </p>
+                    </div>
+                    <div class="ms-3 mt-4">
+                        <h3>Output:</h3>
+                        <p id="output" class="fs-5"></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="JS/Practice4.js"></script>
+</body>
+</html>

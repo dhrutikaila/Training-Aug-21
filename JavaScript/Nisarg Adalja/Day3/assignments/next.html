@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-F3w7mX95PdgyTmZZMECAngseQB83DfGTowi0iMjiWaeVhAn4FJkqJByhZMI3AhiU" crossorigin="anonymous">
+
+</head>
+<body>
+    <div id="container">
+
+    </div>
+    <script>
+        container=document.getElementById("container");
+        container.setAttribute("class","container");
+        var Person = JSON.parse(localStorage.getItem('person')); 
+        console.log(Person);
+        console.log(Person["EmployeeID"]);
+        var tbl=document.createElement("table");
+        tbl.setAttribute("class","mt-5 table table-striped table-dark border border-dark text-dark");
+        var tr=document.createElement("tr");
+        tr.setAttribute("class","border border-dark");
+        //var td=document.createElement("td");
+        var th=document.createElement("th");
+        th.innerHTML="EmployeeID";
+        th.setAttribute("scope","col");
+        tr.appendChild(th);
+        var th=document.createElement("th");
+        th.innerHTML="EmployeeName";
+        th.setAttribute("scope","col");
+        tr.appendChild(th);
+        var th=document.createElement("th");
+        th.innerHTML="Age";
+        th.setAttribute("scope","col");
+        tr.appendChild(th);
+        var th=document.createElement("th");
+        th.innerHTML="Gender";
+        th.setAttribute("scope","col");
+        tr.appendChild(th);
+        var th=document.createElement("th");
+        th.innerHTML="Designation";
+        th.setAttribute("scope","col");
+        tr.appendChild(th);
+        var th=document.createElement("th");
+        th.innerHTML="Salary";
+        th.setAttribute("scope","col");
+        tr.appendChild(th);
+        var th=document.createElement("th");
+        th.innerHTML="Location";
+        th.setAttribute("scope","col");
+        tr.appendChild(th);
+        var th=document.createElement("th");
+        th.innerHTML="Email";
+        th.setAttribute("scope","col");
+        tr.appendChild(th);
+        var th=document.createElement("th");
+        th.innerHTML="Date";
+        th.setAttribute("scope","col");
+        tr.appendChild(th);
+        var th=document.createElement("th");
+        th.innerHTML="contact";
+        th.setAttribute("scope","col");
+        tr.appendChild(th);
+        tbl.appendChild(tr);
+
+        var tr=document.createElement("tr");
+
+        tr.setAttribute("class","border border-dark");
+        //var td=document.createElement("td");
+        var td=document.createElement("td");
+        td.innerHTML=Person["EmployeeID"];
+        td.setAttribute("scope","col");
+        tr.appendChild(td);
+        var td=document.createElement("td");
+        td.innerHTML=Person["EmployeeName"];
+        td.setAttribute("scope","col");
+        tr.appendChild(td);
+        var td=document.createElement("td");
+        td.innerHTML=Person["age"];
+        td.setAttribute("scope","col");
+        tr.appendChild(td);
+        var td=document.createElement("td");
+        td.innerHTML=Person["gender"];
+        td.setAttribute("scope","col");
+        tr.appendChild(td);
+        var td=document.createElement("td");
+        td.innerHTML=Person["designation"];
+        td.setAttribute("scope","col");
+        tr.appendChild(td);
+        var td=document.createElement("td");
+        td.innerHTML=Person["salary"];
+        td.setAttribute("scope","col");
+        tr.appendChild(td);
+        var td=document.createElement("td");
+        td.innerHTML=Person["location"];
+        td.setAttribute("scope","col");
+        tr.appendChild(td);
+        var td=document.createElement("td");
+        td.innerHTML=Person["email"];
+        td.setAttribute("scope","col");
+        tr.appendChild(td);
+        var td= document.createElement("td");
+        td.innerHTML=Person["date"];
+        td.setAttribute("scope","col");
+        tr.appendChild(td);
+        var td=document.createElement("td");
+        td.innerHTML=Person["contact"];
+        td.setAttribute("scope","col");
+        tr.appendChild(td);
+
+        tbl.appendChild(tr);
+        container.appendChild(tbl);
+
+
+    </script>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-/bQdsTh/da6pkI1MST/rWKFNjaCP5gBSY4sEBT38Q/9RBh9AH40zEOg7Hlq2THRZ" crossorigin="anonymous">
+    </script>
+</body>
+</html>

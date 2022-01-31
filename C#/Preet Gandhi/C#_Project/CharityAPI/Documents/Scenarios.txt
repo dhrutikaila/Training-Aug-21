@@ -1,0 +1,222 @@
+Thoughts:
+1. Spam users table
+2. Charity event: join count: how much volunteers/users have joined=> volunteer/user id??
+Context of not connecting post-charity event:
+post: done by normal user, for seeking help
+charityEvent: done by orgaisation, for distribution/activity
+
+
+Table vise edits:
+
+1. Charity event:
+    1. City: city id (short)
+    2. User: user id
+    3. Pincode, city: pincode id (long)
+    4. Event name, Event type: event id
+    5. Ongoing events: (filter) start date, end date
+    6. Search by Organisation: organisation id
+    Changes: 
+    (Organisation Id: not null, ClusterLocationId: null)
+
+2. Cities:
+    1. Search by post: Post id
+    2. Search by pincode, city: pincode id (long)
+    3. Search by city: city id (short)
+
+3. ClusterLocations:
+    1. Search by requirement: RequirementType id
+    2. Search by pincode, city, state: pincode id (long)
+    3. Search by city: city id (short)
+    4. Search by location name: ClusterLocationId
+    5. Search by state: state id (short)
+    // no use of post id as multiple post for a single cluster will be there
+
+4. Module:  // No use for fetching module details- it can be used to fetch other apis
+    1. ModuleName, ModuleType: Module id
+
+5. Organisation:
+    1. Search by name: Organisation id
+    2. Search by User(organisation creator): user id
+    3. Search by pincode, city, state: pincode id (long)
+    4. Search by city: city id (short)
+    5. Search by state: state id (short)
+    6. Search by a view of Charity Event: charity event => Organisation id
+    7. Search by a view of Volunteer: Volunteer => Organisation id
+    Changes:
+    (City, state, pincode) id   
+
+6. Pincode:
+    1. Pincode, P.O. name: pincode id
+    //Optional: search by city/state => city/state id, ain't worth as it'll give a long list
+    2. Search by cluster: clusterLocation id
+    3. Search by post: Post id
+    4. Search by charity event: Charity Event id
+
+7. Post:
+    1. Search by username, userid: user id
+    2. Search by pincode, city, state: pincode id (long)
+    3. Search by city: city id (short)
+    4. Search by state: state id (short)
+    5. Search by requirement: RequirementType id
+    6. Search by location name: Post id, clusterLocation id
+    7. Search by spam: Spam id
+    8. Search by urgency: Urgency id
+    // Longitude-lattitude??
+
+8. RequirementType:
+    1. Search by RequirementTypeName: RequirementType id
+    2. Search by Post: post id
+    // Search by location name: post-clusterLocation id??
+
+9. Roles:
+    Role permission id: user, RoleType, Role, module??
+    1. Search by user: user id
+    2. Search by RoleType, Role: RoleType id
+    3. Search by module: Module id
+
+10. RoleType:
+    1. Search by RoleType, RoleType id: RoleType id
+
+11. Spam:
+    1. Search by post: post id (will get =>User, pincode, city, state, location)
+    2. Search by user: user id
+
+12. States:
+    1. Search by State Id, State Name: State id
+    2. Search by City id, Pincode id: Pincode id (City id-city)
+
+13. User Data:
+    1. Search by first-last name, username, user id, city, state, pincode, volunteer id, organisation id, event organiser id: user id
+    2. Search by pincode, city, state: pincode id (long)
+    3. Search by city: city id (short)
+    4. Search by state: state id (short)
+    5. Search by post: post id
+    6. if charity event column added=> charityEvent id
+    7. Spam post: spam(post) id (which post is spam=> ban/restrict the user)
+    // Extra: search by role??
+
+14. Urgency:
+    1. Search by post: post id (will get =>User, pincode, city, state, location)
+    2. Search by user: user id
+
+15. Volunteer:
+    1. Search by user id, user name: user id
+    2. Search by organisation id, orgaisation name, : organisation id
+    3. if charity event column added=> charityEvent id
+
+:: Table modification ::
+UserData:
+    1. Admin: Userid, username, email address, password hash, roletype
+    2. User: Userid, username, email address, password hash, roletype
+    3. UserProfile: Gender, ProfileImage, UserDescription, Mobile No, username (unique check)
+
+----------------------------------------------------------------------------------
+Log-in/Sign-up Button: 
+
+16. Log-in as user/orgaisation/admin:
+    email/username*
+    password*
+    => UserData-check
+
+17. Sign-up:
+    firstname*
+    lastname
+    email*
+    password*
+    username*=> available for unique/default set
+    mobile no.*
+    city
+    => UserData-add
+
+18. Forgot password:
+    email-mobile no-username*
+    => UserData=> email password reset link ==>>
+
+    Optional:
+    Signup-Login through: FB, mail, twitter
+
+19. Post:
+
+19.1 Food-Education-Health (User):
+    Camera access/storage access: photo
+    RequirementType: => RequirementType table
+    Post Description: => Manually
+    Location: => Manually, longi-latti??
+    HelpRequiredCount: => manually
+    Post Button click => Post table-add
+
+19.2 Charity event (Organisation):
+    Camera access/storage access: photo =>Default=>Organisation logo
+    RequirementType: => RequirementType table
+    Post Description: => Manually
+    Location: => Manually, longi-latti??
+    Event Start-End Date: => Calendar
+    ?? For more info: => Contact no.
+    Post Button click => Charity Event table-add
+
+20. Organisation:
+UI
+Navbar- Organisation=> Join Now
+
+    20.1 Details: => if logged in => fetch from user data
+        firstname*
+        lastname
+        email*
+        password*
+        username*=> available for unique/default set
+        mobile no.*
+        city
+        Join now => Volunteer add
+
+    20.2 => if not logged in
+        firstname*
+        lastname
+        email*
+        password*
+        username*=> available for unique/default set
+        mobile no.*
+        city
+        Join now => UserData, Volunteer add
+
+21. UserProfile: => edit
+    name, username, email, contact no., city, profile image, user description, gender
+    Save => UserData
+
+
+-----------------------------------------------------------------------------------
+Scenarios:
+
+Total Page:
+Home: Navbar, Slider, Abstract, Where we reached, 5 featured posts, how you can help
+
+1. Guest User: => not logged in
+View:
+Home page, About us, Contact us, log in pop up, Health, Food, Education posts
+
+2. User:
+View:
+Home, Health, Food, Education, organisation, About us, Contact us, log out, profile view, post feed, create post (Pincode,City, State filtered post)
+
+3. Admin: =>
+View:
+Spam post: => User ban, post remove
+New user/organisation: => User approval
+Post Requirement fulfill/ charity event completeion: => Post/Event close (or after a certain time period)
+All user/organisation profile view + (admin's own profile view)
+
+4.Organisation:
+View:
+Profile, Event feed, create Event, volunteers list, post feed, Home, Health, Food, Education, organisation, About us, Contact us, log out
+
+5. Event feed: 6. Post feed:
+View:
+Posts/Events:
+user/organisation name, date posted, end date, photo, post-event description
+Event (includes posts inside which normal user can post)
+
+// 7. Save post/event: book-mark post
+
+8. OTP Authentication at login time 
+// Social accounts login: (FB, E-mail, Insta, Twitter)
+
+9. Post limit feature (>5 no more post for the day for the same user)

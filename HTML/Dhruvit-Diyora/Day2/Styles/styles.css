@@ -1,0 +1,184 @@
+h1,h2,p{
+    text-align: center;
+    color: blue;
+}
+#slogan{
+    font-size: 20px;
+    color: green;
+    font-style: italic;
+}
+#practice{
+    border:3px; 
+    border-style:solid; 
+    border-color:#FF0000; 
+    padding: 1em;
+    text-align: left;
+    color: black;
+}
+/* * {
+    color: 
+    blue; 
+    background: 
+    grey; 
+    } */
+.intro {
+  background-color: yellow;
+}
+#firstname {
+    background-color: forestgreen;
+}
+p.intro {
+    background-color: black;
+}
+/* div > p {
+    background-color: red;
+} */
+/* div p {
+    background-color: red;
+} */
+div + p {
+    background-color: red;
+}
+p ~ ul {
+  background: #ff0000;
+}
+a[target] {
+    background-color: yellow;
+}
+[title~=flower] {
+    border: 5px solid yellow;
+}
+/* [lang=en] {
+    background: yellow;
+  } */
+  div[class^="test"] {
+    background: #ffff00;
+  }
+  div[class$="test"] {
+    background: #ffff00;
+  }
+  ::-webkit-input-placeholder { /* Edge */
+    color: red;
+  }
+  
+  :-ms-input-placeholder { /* Internet Explorer */
+    color: red;
+  }
+  
+  ::placeholder {
+    color: red;
+  }
+  a:visited {
+    color: pink;
+  }
+  p::after { 
+    content: " - Remember this";
+  }
+  p::before {
+    content: "Read this -";
+  }
+  input:checked {
+    height: 50px;
+    width: 50px;
+  }
+  input[type=text]:enabled {
+    background: #ffff00;
+  }
+  
+  input[type=text]:disabled {
+    background: #dddddd;
+  }
+  p:empty {
+    width: 100px;
+    height: 20px;
+    background: #ff0000;
+  }
+  p:first-child {
+    background-color: green;
+  }
+  p::first-letter {
+    font-size: 200%;
+    color: #8A2BE2;
+  }
+  p::first-line {
+    background-color: yellow;
+  }
+  p.dotted {border-style: dotted;}
+p.dashed {border-style: dashed;}
+p.solid {border-style: solid;}
+p.double {border-style: double;}
+p.groove {border-style: groove;}
+p.ridge {border-style: ridge;}
+p.inset {border-style: inset;}
+p.outset {border-style: outset;}
+p.none {border-style: none;}
+p.hidden {border-style: hidden;}
+p.mix {border-style: dotted dashed solid double;}
+body {
+    background-image: url("../Assets/1.jpg");
+    background-repeat: no-repeat;
+    background-position: right top;
+  background-attachment: fixed;;
+  }
+  p:first-of-type {
+    background: violet;
+  }
+  input:focus {
+    background-color: red;
+  }
+  input:in-range {
+    border: 2px solid white;
+  }
+  input:invalid {
+    border: 2px solid red;
+  }
+  input:indeterminate {
+    box-shadow: 0 0 1px 1px red;
+  }
+  p:lang(it) { 
+    background: wheat;
+  }
+  p:last-child {
+    background:green;
+  }
+  ::marker { 
+    color: green;
+  }
+  p:nth-child(2) {
+    background: red;
+  }
+  p:nth-last-of-type(2) {
+    background: red;
+  }
+  p:nth-of-type(2) {
+    background: red;
+  }
+  p:only-child {
+    background: red;
+  }
+  input:out-of-range {
+    border: 2px solid red;
+  }
+  input:read-only {
+    background-color: yellow;
+  }
+  input:read-write {
+    background-color: yellow;
+  }
+  input:required {
+    background-color: yellow;
+  }
+  :root {
+    background: #ff0000;
+  }
+  ::selection {
+    color: red;
+    background: yellow;
+  }
+  :target {
+    border: 2px solid #D4D4D4;
+    background-color: #e5eecc;
+  }
+  input:valid {
+    background-color: yellow;
+  }

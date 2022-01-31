@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+* {
+  box-sizing: border-box;
+}
+
+.flex-container {
+  display: flex;
+  flex-direction: row;
+  font-size: 30px;
+  text-align: center;
+  margin:20px;
+}
+
+.flex-item-1 {
+  background-color: khaki;
+  padding: 10px;
+  flex: 33%;
+}
+
+.flex-item-2 {
+  background-color: darkslategrey;
+  padding: 10px;
+  flex: 33%;
+}
+
+
+.flex-item-3 {
+  background-color: khaki;
+  padding: 10px;
+  flex: 33%;
+}
+
+/* Responsive layout - makes a one column-layout instead of two-column layout */
+@media (max-width: 600px) {
+  .flex-container {
+    flex-direction: column;
+  }
+}
+</style>
+</head>
+<body>
+
+<h1>Responisve Flexbox</h1>
+
+<p><b>Resize the browser window to see that the direction changes when the 
+screen size is 600px wide or smaller.</b></p>
+
+<div class="flex-container">
+  <div class="flex-item-1">1</div>
+  <div class="flex-item-2">2</div>
+  <div class="flex-item-3">3</div>
+  
+</div>
+
+</body>
+</html>

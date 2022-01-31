@@ -1,0 +1,44 @@
+<!-- Practice position properties static, relative, fixed and absolute. -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        .divs{
+            height: 100px;
+            width: 100px;
+        }
+        #div1{
+            background-color: yellow;
+            /* top: 50px; */
+            position: absolute;
+        }
+        #div2{
+            background-color: blue;
+            top: 50px;
+            left: 50px;
+            position: relative;
+        }
+        #div3{
+            background-color: red;
+            bottom: 0;
+            right: 50px;
+            position: fixed;
+        }
+    </style>
+</head>
+<body>
+    <div id="div1" class="divs"></div>
+    <div id="div2" class="divs"></div>
+    <div id="div3" class="divs"></div>
+</body>
+</html>

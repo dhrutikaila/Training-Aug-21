@@ -1,0 +1,27 @@
+<p>helloworld works!</p>
+<app-server></app-server>
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" 
+integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" 
+integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+
+<!--bind disable property with typescript property -->
+<label for="">Server name</label>
+<!--$ sign event is access to event data -->
+<!-- <input type="text" class="form-control" (input) = "onUpdateServerName($event)"> -->
+
+<input type="text" class="form-control" [(ngModel)]="serverName" >
+<br>
+<!-- <p>{{serverName}}</p> -->
+<button class="btn btn-primary"
+    [disabled]="!allowNewServer"
+    (click)="onCreateServer()">Add server</button>
+
+<!-- <p>{{serverCreationStatus}}</p> -->
+<p *ngIf = "serverCreated">Server was created , server name is {{serverName}}</p>
+<label for="username">Username :</label>
+<input type="text" class="form-control" [(ngModel)]="username" >
+<label for="Password">Password :</label>
+<input type="text" class="form-control" [(ngModel)]="password" >
+<button class="btn btn-primary"(click)="login()">Login</button>
+<p>{{res}}</p>

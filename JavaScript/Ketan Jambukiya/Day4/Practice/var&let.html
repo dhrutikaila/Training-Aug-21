@@ -1,0 +1,39 @@
+<!--  Explain difference between var and let keyword using example. -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <label id="result"></label>
+    <label id="answer"></label>
+    <script>
+       
+         var a=10;
+
+        if(true)
+        {
+            var a=78;
+            document.getElementById("result").innerHTML = a;
+
+        }
+
+        document.getElementById("result").innerHTML = a;
+
+        var b=10;
+        if(true)
+        {
+            let b=78;
+            document.getElementById("answer").innerHTML = b;
+
+        }
+
+        document.getElementById("answer").innerHTML = b;
+
+    </script>
+
+</body>
+</html>

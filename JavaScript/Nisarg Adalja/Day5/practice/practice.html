@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        /*1. Using Function Expression, find the area of circle*/
+        //Fuction Expression
+        const areaOfCircle = function (r) {
+            return 3.14 * r * r;
+        };
+        var area = areaOfCircle(14);
+        console.log("area of Circle is " + area);
+
+        /*2. Using Function Constructor, find the area of rectangle*/
+        //Function Constructor
+        const areaOfRectangle = new Function("a", "b", "return a*b");
+        var area = areaOfRectangle(10, 15);
+        console.log("area of Rectangle is " + area);
+
+
+        /* 3. Explain usage of Function Hosing using example */
+
+        console.log(myFunction(5));
+
+        function myFunction(y) {
+            return y * y;
+        }
+
+        function cube(square, a) {
+            return square * a;
+        }
+        cube(square(10), 15);
+
+        function square(a) {
+            return a * a;
+        }
+
+        /*4. Using Function call create employee object with field Name, Address and Designation and pass it to function.*/
+
+        var employee = {
+            Name: "Nisarg Adalja",
+            Address: "Jivraj park,Ahmedabad",
+            Designation: "Node.js Developer"
+        }
+
+        function getempData(emp) {
+            return emp.Name + ' ' + emp.Address + ' ' + emp.Designation;
+        }
+        console.log(getempData(employee));
+
+        var employee = {
+            Name: "Nisarg Adalja",
+            Address: "Jivraj park,Ahmedabad",
+            Designation: "Node.js Developer",
+            getData: function () {
+                return this.Name + ' ' + this.Address + ' ' + this.Designation;
+            }
+        }
+        console.log(employee.getData());
+        console.log(employee.getData.call(employee));
+
+
+        /*5. Using Function Apply pass employee object to a function defined in the function.*/
+
+        var employee = {
+            Name: "Deep Dave",
+            Address: "Jivraj park,Ahmedabad",
+            Designation: "Java Developer"
+        }
+
+        function EmployeeDetails() {
+            const basic = function BasicDetails() {
+                return this.Name + ' ' + this.Address + ' ' + this.Designation;
+            }
+            return basic;
+        }
+        console.log(EmployeeDetails().apply(employee));
+
+
+        /*6. Explain Function closure with practical*/
+
+        const add = (function () {
+            let counter = 0;
+            return function () {
+                counter += 1;
+                return counter
+            }
+        })();
+
+        add();
+        add();
+        add();
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+</head>
+
+<body>
+  <h3>Select any country: </h3>
+  <br>
+  <select name="country" id="country">
+    <option value="Please Select" selected>Please Select</option>
+    <option value="India" class="india">India</option>
+    <option value="USA"> USA</option>
+    <option value="Canada"> Canada</option>
+    <option value="Australia"> Australia</option>
+    <option value="Japan"> Japan</option>
+  </select>
+  <br><br>  
+  <br>
+  <label>Your Selected Country: </label>
+  <br>
+  <br>
+  <div id="countries">
+    <p id="cnt"></p>
+    <span>India</span> <br>
+    <span>USA</span> <br>
+    <span>Canada</span> <br>
+    <span>Australia</span> <br>
+    <span>Japan</span> <br>
+  </div>
+  <script>
+    /*
+    – Put a droplist with 5 country name from list object using jquery
+      (Eg. India, United Kingdom..). Default value should “Please select”.
+    – Bellow droplist all country name which are in the dropdown that should display with Label :
+      “Your Selected Country : “.
+    – By default all country name should display.
+    – Only that country name should appear which are you select from dropdown.
+      All other label should be disappear.
+    – When i select ‘Please select’, all countries name should get displayed.
+    */
+
+    $(document).ready(function () {
+      $('select').on('change', function () {
+        let selectedVal = $(this).val()
+        if(selectedVal == "Please Select"){
+          $('#cnt').css('display','none');
+          $('span').css("display","inline-block");
+        }else{
+          $('span').css({"display":"none"});
+          console.log(selectedVal)
+          $('#cnt').css('display','block');
+          $('#cnt').text(selectedVal)
+        }
+      })
+    })
+
+  </script>
+</body>
+
+</html>

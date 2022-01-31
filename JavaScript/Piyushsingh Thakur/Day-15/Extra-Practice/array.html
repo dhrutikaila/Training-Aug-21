@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Array Practice</title>
+</head>
+
+<body>
+    <h1>array Practice</h1>
+    <script>
+        var myVar = 23;
+        var myVar2 = 'string';
+        var myVar3 = true;
+        var myVar4 = null;
+        var myVar5 = undefined;
+
+        let employee = {
+            name: "piyush",
+            location: "ahmedabad",
+            department: "dot net"
+        }
+
+        console.log(employee);
+        // document.write(employee)
+
+
+        var arr = [7, 2, 2, 'piyush', 'thakur']
+        console.log(arr.length);
+        // document.write(arr);
+
+        for (let i = 0; i <= 5; i++) {
+            document.write(arr[i] + "<br>");
+        }
+
+        //with the help of ul and li
+        document.write("<ul>")
+        for (let i = 0; i <= 5; i++) {
+            document.write("<li>" + arr[i] + "</li>");
+        }
+        document.write("</ul>")
+
+        //sort
+        arr = arr.sort()
+        console.log(arr);
+
+        //push
+        arr.push('this is pushed')
+        console.log(arr);
+
+
+        //new array
+        var arr1 = new Array(34, 5, 'hello', 'world')
+        console.log(arr1);
+
+        //array with n number element
+        var arr2 = new Array(22)
+        console.log(arr2);
+
+
+        var add = [10, 20, 30, 40, 50]
+        var sum = 0
+        for (let i = 0; i <= 4; i++) {
+            document.write(add[i] + "<br>");
+            sum= sum + add[i];
+
+        }
+
+        document.write("sum= "+sum)
+
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,52 @@
+h4{
+    background-color: rgb(0, 217, 255);
+    color: white;
+    width: 500px;
+    margin-top: 20px;
+}
+
+#info{
+    margin:10px ;
+}
+
+#info a{
+    color: black;
+    text-decoration: none;
+}
+
+#info a:hover
+{
+    font-size:20px ;
+    color: rgb(36, 186, 231);
+}
+
+#skills{
+    margin: 0px 30px;
+}
+
+.innerlist{
+    margin:0px 30px;
+}
+
+th{
+    color:black;
+    background-color: wheat;
+}
+
+table,th,td{
+    text-align: center;
+    border:1px solid black;
+    padding: 10px;
+}
+tr:hover{
+    background-color: rgb(0, 255, 255);
+}
+.stuff {
+    margin: 2vh 10vw;
+    height: 1000px;
+  }
+
+  video{
+      padding-left: 250px;
+  }
+

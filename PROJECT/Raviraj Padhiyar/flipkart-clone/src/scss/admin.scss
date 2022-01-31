@@ -1,0 +1,275 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@100;400;500&display=swap");
+
+body {
+  background-color: #fff;
+}
+
+#navbar {
+  // overflow: auto;
+  height: 56px;
+  width: 100%;
+  z-index: 1;
+  top: 0;
+  position: sticky;
+  background-color: #2874f0;
+
+  .container-fluid {
+    display: grid;
+    grid-template-columns: 100px 150px 1fr 300px 150px;
+    grid-template-rows: 1fr;
+    grid-template-areas: ". logo form nav cart";
+  }
+
+  .navbar-brand {
+    width: 75px;
+    grid-area: logo;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+
+    .logo-img {
+      width: 75px;
+    }
+
+    .logo-text {
+      margin: 0;
+      width: 75px;
+      font-family: Roboto;
+      font-size: 11px;
+      line-height: 15.4px;
+      font-style: italic;
+      display: flex;
+      align-items: center;
+      justify-content: space-evenly;
+
+      .plus {
+        color: #ffe500;
+        display: flex;
+        align-items: center;
+
+        img {
+          align-self: flex-start;
+          width: 10px;
+        }
+      }
+    }
+  }
+
+  #navbarnav {
+    grid-area: nav;
+
+    ul {
+      width: 100%;
+      display: flex;
+      justify-content: space-evenly;
+      align-items: center;
+
+      .account-nav {
+        .btn {
+          padding: 5px 40px;
+          border-radius: 0;
+          background-color: #fff;
+          color: #2874f0;
+          font-family: Roboto;
+          font-weight: 500;
+        }
+      }
+
+      .more-nav {
+        margin: auto;
+        width: 56px;
+        color: #fff;
+        font-family: Roboto;
+        font-weight: 500;
+      }
+    }
+  }
+
+  .cart {
+    grid-area: cart;
+    color: #fff;
+    width: 60px;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+
+    span {
+      font-family: Roboto;
+      font-weight: 500;
+    }
+  }
+
+  form {
+    width: 560px;
+    grid-area: form;
+    margin: 0 12px;
+
+    .input-group {
+      input {
+        border: none;
+        border-radius: 0;
+        height: 36px;
+        padding-top: 0;
+        padding-bottom: 0;
+        font-size: 14px;
+      }
+
+      .input-group-text {
+        background: #fff;
+        height: 36px;
+        border-radius: 0;
+        outline: none;
+        border: none;
+        color: #2874f0;
+      }
+    }
+  }
+}
+
+#admin-op {
+  .container-fluid {
+    padding-left: 0px;
+    min-height: 100vh;
+    display: grid;
+    grid-template-columns: 1fr 3fr;
+    grid-template-areas: "pr-info op";
+    background-color: #fff;
+    .admin-detail {
+      height: 100%;
+      background-color: #2874f0;
+      grid-area: pr-info;
+      .card {
+        height: 100%;
+        background-color: #2874f0;
+        border-radius: 0;
+        border: none;
+
+        display: flex;
+        align-items: center;
+        .card-img-top {
+          max-width: 150px;
+        }
+      }
+    }
+    .operations {
+      grid-area: op;
+
+      .nav {
+        border-bottom: 1px solid #acacac;
+      }
+
+      .tab-content {
+        #pills-allProduct {
+          tr {
+            img {
+              max-height: 100px;
+              max-width: 100px;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+footer {
+  background-color: #172337;
+  color: #fff;
+  font-size: 12px;
+  text-align: start;
+
+  li {
+    list-style: none;
+
+    a {
+      text-decoration: none;
+      color: #fff;
+    }
+  }
+
+  .footer-links {
+    padding-top: 12px;
+    display: flex;
+    justify-content: space-evenly;
+
+    h4{
+      font-size: 12px;
+    }
+    .about {
+      h4 {
+        padding-left: 32px;
+        font-size: 12px;
+      }
+    }
+
+    .help {
+      h4 {
+        padding-left: 32px;
+        font-size: 12px;
+      }
+    }
+
+    .Policy {
+      h4 {
+        padding-left: 32px;
+        font-size: 12px;
+      }
+    }
+
+    .Social {
+      h4 {
+        padding-left: 32px;
+        font-size: 12px;
+      }
+    }
+  }
+  .copyright {
+    border-top: 1px solid white;
+    display: flex;
+    justify-content: space-evenly;
+  }
+}
+
+@media screen and (max-width: 565px) {
+  body {
+    overflow-x: auto;
+  }
+
+  #navbar {
+    height: 110px;
+    width: 100%;
+    .container-fluid {
+      width: 100vw;
+      grid-template-columns: 60px 1fr 20px;
+      grid-template-rows: 1fr 1fr;
+      grid-template-areas:
+        "btn logo cart"
+        "form form form";
+
+      .navbar-toggler {
+        grid-area: btn;
+        padding: 0;
+        width: 50px;
+        border: 2px solid;
+      }
+
+      form {
+        width: 100%;
+        margin: 0;
+      }
+    }
+  }
+
+  footer{
+    .footer-links{
+      flex-direction: column;
+      justify-content: space-evenly;
+      align-items: flex-start;
+
+      h4{
+        padding-left: 0;
+      }
+    }
+  }
+}

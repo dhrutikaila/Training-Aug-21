@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Practice exercise
+    </title>
+</head>
+<body>
+    <h3 >Exe-1</h3>
+    <div class="raw">
+        <div class="col">
+            <form>
+                <label for="string">Enter string</label>
+                <input type="text" id="str2">
+                <button type="button" onclick="CheckStr()">Check String</button>
+                <h3>String is :<span id="result1"></span></h3>
+            </form>
+        </div>
+    </div>
+<h3>Exe-2</h3>
+  <div class="raw">
+      <div class="col">
+          <form >
+              <label for="string">Enter string</label>
+              <input type="text" id="str1">
+              <button type="button" onclick="ConvertArr()">ConvertArray</button>
+              <h3>Converted array is :<span id="result"></span></h3>
+          </form>
+      </div>
+  </div>
+  <h3 >Exe-3</h3>
+  <div class="raw">
+      <div class="col">
+          <form>
+              <label for="string">Enter string</label>
+              <input type="text" id="str3">
+              <label for="string">Enter the number of starting of the length</label>
+              <input type="number" id="numStart">
+              <label for="string">Enter the number of end of the length</label>
+              <input type="number" id="numEnd"><br><br>
+              <button type="button" onclick="ExtractChar()">Extract Character</button>
+              <h3>Extract Character is :<span id="char"></span></h3>
+          </form>
+      </div>
+  </div>
+
+
+    <script>
+        function ExtractChar(){
+            var string = document.getElementById('str3').value;
+            var start = document.getElementById('numStart').value;
+            var end = document.getElementById('numEnd').value;
+                if(string=="")
+                {
+                    alert("please enter string");
+                }
+              else  if(start=="")
+                {
+                    alert("please enter the number of starting length");
+                }  
+                res = string.slice(start,end);
+                document.getElementById("char").innerHTML=res;
+        }
+        function CheckStr(){
+            var str3=document.getElementById('str2').value;
+            if (str3==""){
+                document.getElementById("result1").innerHTML = 'String is Empty';
+            }
+            else{
+                document.getElementById("result1").innerHTML = 'String is not Empty';
+            }
+        }
+        function ConvertArr(){
+            var str = document.getElementById('str1').value;
+            if(str=="")
+            {
+                alert("please enter string");
+            }
+            arr = str.split('');
+            document.getElementById("result").innerHTML=arr;
+        }  
+    </script>
+</body>
+</html>

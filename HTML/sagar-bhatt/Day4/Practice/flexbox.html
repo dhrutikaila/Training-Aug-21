@@ -1,0 +1,279 @@
+<!--
+    ? 1-https://www.w3schools.com/css/exercise.asp?filename=exercise_boxmodel1
+    ? 2-https://www.w3schools.com/css/exercise.asp?filename=exercise_boxmodel2
+    ? 3-https://www.w3schools.com/css/exercise.asp?filename=exercise_boxmodel3
+    ? 4-https://www.w3schools.com/css/exercise.asp?filename=exercise_boxmodel4
+    ? 5-Create a flexbox with four flex items
+    ? 6-Flexbox with three flex items –right to left direction
+-->
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.9.0/css/all.min.css"
+      integrity="sha512-q3eWabyZPc1XTCmF+8/LuE1ozpg5xxn7iO89yfSOd5/oKvyqLngoNGsx8jq92Y8eXJ/IRxQbEC+FGSYxtk2oiw=="
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="../../Project/assets/css/style.css" />
+
+    <style>
+      .box-model {
+        background-color: #ffffff;
+        width: 200px;
+        padding: 25px;
+        border: 25px solid #707070;
+        margin: 25px;
+      }
+      .flex-container {
+        display: flex;
+        background-color: #707070;
+        width: fit-content;
+      }
+      .flex {
+        display: flex;
+        flex-direction: row-reverse;
+        background-color: #707070;
+        width: fit-content;
+      }
+      .flex-container .flex-item,
+      .flex .flex-item {
+        padding: 10px;
+        margin: 10px;
+        background-color: #ffffff;
+      }
+      .container {
+        display: flex;
+        /* flex-direction: column;
+        flex-wrap: wrap; */
+        flex-flow: row wrap; /* flex-flow: Shorthand for flex-direction flex-wrap*/
+        background-color: #707070;
+        align-items: center;
+        justify-content: center;
+      }
+      .item {
+        padding: 70px;
+        margin: 50px;
+        background-color: #ffffff;
+      }
+      .item:nth-child(odd) {
+        /* flex-grow: 1;
+        flex-shrink: 1;
+        flex-basis: 200px; */
+        flex: 1 1 200px; /* flex: Shorthand for flex-grow, flex-shrink, flex-basis */
+      }
+      .item:nth-child(even) {
+        flex: 1 1 100px;
+        order: 1;
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+      <div class="logo">
+        <!-- <img
+          src="https://tutorials.rxtrainees.radixweb.net/wp-content/uploads/2020/12/logo_2500X1875-2048x1536.jpg"
+          alt="logo"
+        /> -->
+        <span>
+          <a href="../../../../Project/sagar-bhatt/web-tutorials/index.html">
+            RadixWeb
+          </a>
+        </span>
+      </div>
+      <nav>
+        <input type="checkbox" id="click" />
+        <label for="click" class="menu-btn">
+          <i class="fas fa-bars"></i>
+        </label>
+        <ul>
+          <li>
+            <a href="../../../../Project/sagar-bhatt/web-tutorials/index.html">
+              Home
+            </a>
+          </li>
+          <li>
+            <a href="../../Project/index.html" class="active">HTML/CSS</a>
+          </li>
+          <li>
+            <a href="../../../../Bootstrap/sagar-bhatt/Project/index.html">
+              Bootstrap
+            </a>
+          </li>
+          <!-- <li><a href="#">SCSS</a></li> -->
+          <li>
+            <a href="../../../../JavaScript/sagar-bhatt/Project/index.html">
+              Javascript
+            </a>
+          </li>
+          <li>
+            <a href="../../../../jQuery/sagar-bhatt/Project/index.html">
+              jQuery
+            </a>
+          </li>
+        </ul>
+      </nav>
+    </header>
+    <article>
+      <aside>
+        <!-- * Day-1 -->
+        <div class="folder-container">
+          <div class="folder">Day1</div>
+          <div class="sub-folder">Practice</div>
+          <div class="file">
+            <a href="../../Day1/Practice/company-department-list.html">
+              Company department list
+            </a>
+          </div>
+          <div class="file">
+            <a href="../../Day1/Practice/horizontal-navbar.html">
+              Horizontal navbar
+            </a>
+          </div>
+          <div class="file">
+            <a href="../../Day1/Practice/login-form.html">Login form</a>
+          </div>
+          <div class="file">
+            <a href="../../Day1/Practice/news-article.html" target="_blank"
+              >News Article</a
+            >
+          </div>
+          <div class="file">
+            <a href="../../Day1/Practice/student-report-card.html">
+              Student report card
+            </a>
+          </div>
+          <div class="sub-folder">Assignment</div>
+          <div class="file">
+            <a href="../../Day1/Assignment/employee-details-form.html">
+              Employee details form
+            </a>
+          </div>
+        </div>
+        <!-- * Day-2 -->
+        <div class="folder-container">
+          <div class="folder">Day2</div>
+          <div class="sub-folder">Practice</div>
+          <div class="file">
+            <a href="../../Day2/Practice/index.html">CSS Selector</a>
+          </div>
+          <div class="sub-folder">Assignment</div>
+          <div class="file">
+            <a href="../../Day2/Assignment/resume.html" target="_blank">
+              My Resume
+            </a>
+          </div>
+        </div>
+        <!-- * Day-3 -->
+        <div class="folder-container">
+          <div class="folder">Day3</div>
+          <div class="sub-folder">Practice</div>
+          <div class="file">
+            <a href="../../Day3/Practice/display.html">CSS Display</a>
+          </div>
+          <div class="file">
+            <a href="../../Day3/Practice/overflow.html">CSS Overflow</a>
+          </div>
+          <div class="file">
+            <a href="../../Day3/Practice/positions.html">CSS Positions</a>
+          </div>
+          <div class="sub-folder">Assignment</div>
+          <div class="file">
+            <a href="../../Day3/Assignment/basic-layout.html" target="_blank">
+              Basic Web Layout
+            </a>
+          </div>
+        </div>
+        <!-- * Day-4 -->
+        <div class="folder-container">
+          <div class="folder">Day4</div>
+          <div class="sub-folder">Practice</div>
+          <div class="file">
+            <a href="./flexbox.html">CSS Flexbox</a>
+          </div>
+          <div class="file">
+            <a href="./image-gallery-flexbox.html" target="_blank">
+              Image Gallery(Flex)
+            </a>
+          </div>
+          <div class="sub-folder">Assignment</div>
+          <div class="file">
+            <a href="../Assignment/menu-list.html" target="_blank">
+              Menu List
+            </a>
+          </div>
+        </div>
+        <!-- * Day-5 -->
+        <div class="folder-container">
+          <div class="folder">Day5</div>
+          <div class="sub-folder">Practice</div>
+          <div class="file">
+            <a href="../../Day5/Practice/media-queries.html"
+              >CSS Media Queries</a
+            >
+          </div>
+          <div class="sub-folder">Assignment</div>
+          <div class="file">
+            <a href="../../Day5/Assignment/photo-gallery.html" target="_blank"
+              >Photo Gallery(Grid)</a
+            >
+          </div>
+        </div>
+      </aside>
+      <section>
+        <h1>CSS Box Model</h1>
+        <div class="box-model">
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+          eiusmod tempor incididunt ut labore et dolore magna aliqua.
+        </div>
+        <h1>CSS Flexbox</h1>
+        <div class="flex-container">
+          <div class="flex-item">1</div>
+          <div class="flex-item">2</div>
+          <div class="flex-item">3</div>
+          <div class="flex-item">4</div>
+        </div>
+        <br />
+        <div class="flex">
+          <div class="flex-item">1</div>
+          <div class="flex-item">2</div>
+          <div class="flex-item">3</div>
+        </div>
+        <br />
+        <div class="container">
+          <div class="item">1</div>
+          <div class="item">2</div>
+          <div class="item">3</div>
+          <div class="item">4</div>
+          <div class="item">5</div>
+        </div>
+      </section>
+    </article>
+  </body>
+</html>
+
+<!-- * CSS box model:
+    It is essentially a box that wraps around every HTML element.
+    It consists of: margins, borders, padding, and the actual content.
+
+    * Flexbox: Parent Element (Container), Child Elements (Items)
+    The Flexible Box Layout Module, makes it easier to design flexible responsive layout structure without using float or positioning.
+    The flex container properties are:
+      flex-direction
+      flex-wrap
+      flex-flow
+      justify-content
+      align-items
+      align-content
+    The CSS Flexbox Items Properties:
+      align-self
+      flex
+      flex-basis
+      flex-grow
+      flex-shrink
+      order
+-->

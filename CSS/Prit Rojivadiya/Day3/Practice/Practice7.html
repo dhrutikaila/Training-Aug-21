@@ -1,0 +1,86 @@
+<!-- Flexbox image gallery -->
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            background-color: dodgerblue;
+        }
+
+        .row {
+            display: flex;
+            flex-wrap: wrap;
+            padding: 0 4px;
+        }
+
+        .col {
+            /* width: 25%; */
+            flex: 25%;
+            max-width: 25%;
+            padding: 0 10px;
+        }
+
+        img {
+            width: 100%;
+            margin-top: 10px;
+            vertical-align: middle;
+        }
+
+        @media (max-width: 800px) {
+            .col {
+                flex: 50%;
+                max-width: 50%;
+            }
+        }
+
+        @media (max-width: 500px) {
+            .col {
+                flex: 100%;
+                max-width: 100%;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="row">
+        <div class="col">
+            <img src="./Assets/A.jpg" alt="">
+            <img src="./Assets/B.jpg" alt="">
+            <img src="./Assets/C.jpg" alt="">
+            <img src="./Assets/D.jpg" alt="">
+        </div>
+        <div class="col">
+            <img src="./Assets/E.jpg" alt="">
+            <img src="./Assets/F.jpg" alt="">
+            <img src="./Assets/G.jpg" alt="">
+            <img src="./Assets/H.jpg" alt="">
+        </div>
+        <div class="col">
+            <img src="./Assets/I.jpg" alt="">
+            <img src="./Assets/J.jpg" alt="">
+            <img src="./Assets/K.jpg" alt="">
+            <img src="./Assets/L.jpg" alt="">
+        </div>
+        <div class="col">
+            <img src="./Assets/M.jpg" alt="">
+            <img src="./Assets/N.jpg" alt="">
+            <img src="./Assets/O.jpg" alt="">
+            <img src="./Assets/p19.jpg" alt="">
+        </div>
+    </div>
+</body>
+
+</html>

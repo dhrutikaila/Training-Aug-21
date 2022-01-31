@@ -1,0 +1,47 @@
+<!-- Using Function Expression,find the area of circle -->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Practice Exercise1</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+
+</head>
+
+<body>
+
+    <h2 style="height: 5vh; color:cadetblue; text-align:center" class="mt-5">Using Function Expression, find the area of
+        circle </h2>
+    <div class="container border mt-5 w-25">
+        <div class="form-group">
+        <label for="radius" class="form-label text-muted my-3 fs-4">Enter the Radius of Circle</label>
+        <input type="number" name="num" id="radius" class="form-control mb-2" placeholder="Enter Radius">
+    </div>
+        <button class="btn btn-primary my-3" onclick="areaCircle(radius.value)">Find Area</button>
+        <div id="area" class="text-success fs-4 my-3"></div>
+    </div>
+
+    <script>
+        function areaCircle(radius){
+
+            const pi = 3.14;
+            //Find Square of radius
+            function sqr_radius(radius) {
+                return (radius * radius);
+            }
+
+            //use function as expression & find the area of circle
+            var circleArea = pi * sqr_radius(radius);
+
+            document.getElementById("area").innerHTML="Area Of Circle which Radius is "+radius+" is :"+circleArea;
+        }
+    </script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+        crossorigin="anonymous"></script>
+</body>
+
+</html>

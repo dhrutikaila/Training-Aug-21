@@ -1,0 +1,73 @@
+<!--Design a form for storing employee details. (Employee name, age, Gender, designation, salary, location,
+ Email ID, Date of Joining and contact number)
+Validation required
+Age should be a number
+Each field should contain value
+Email ID should be in proper format
+Date of joining should be in date format
+Location should be in the drop down list
+Use radio buttons for Gender-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Employee Form</title>
+</head>
+<body>
+    <h1>Employee Details</h1>
+    <form method="GET">
+        <label for = "EmpName">Name: </lable>
+        <input type="text" name="empname" id="EmpName" required>
+        <br>
+        <br>
+        <label for = "EmpEmail">Email: </lable>
+        <input type="email" name="email" id="EmpEmail"  required>
+        <br>
+        <br>
+        <label for = "tel-data">Contact Number:</lable>
+        <input type="tel" id="tel-data" name="EmpContact" required>
+        <br>
+        <br>
+        <label for = "EmpAge">Age: </lable>
+        <input type="number" name="age" id="EmpAge" min="18" max="40"  required>
+        <br>
+        <br>
+        <label for="Gender">Gender:</label>
+        <input type="radio" id="html" name="Gender" value="Male">
+        <label for="Male">Male</label>
+        <input type="radio" id="css" name="Gender" value="Female">
+        <label for="Female">Female</label>
+        <input type="radio" id="css" name="Gender" value="Other">
+        <label for="Other">Other</label>
+        <br>
+        <br>
+        <label for="location">Location:</label>
+        <select name="location" id="location">
+        <option value="default">Default</option>
+        <option value="Ahmedabad">Ahmedabad</option>
+        <option value="Gandhinagar">Gandhinagar</option>
+        <option value="Rajkot">Rajkot</option>
+        <option value="Surat">Surat</option>
+        <option value="Vadodara">Vadodara</option>
+        </select>
+        <br>
+        <br>
+        <label for = "EmpDesignation">Designation: </lable>
+        <input type="text" name="Designation" id="EmpDesignation"  required>
+        <br>
+        <br>
+        <label for = "EmpSalary">Salary: </lable>
+        <input type="number" name="Salary" id="EmpSalary"  required>
+        <br>
+        <br>
+        <label for = "date-input">Date Of joining:</lable>
+        <input type="date" id = "date-input" name="EmpDOJ">
+        <br>
+        <br>
+        <input type="submit" name="submit" value="submit">
+
+     </form>
+</body>
+</html>

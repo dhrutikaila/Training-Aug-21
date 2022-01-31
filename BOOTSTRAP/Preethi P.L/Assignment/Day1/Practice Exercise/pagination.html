@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pagination</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-F3w7mX95PdgyTmZZMECAngseQB83DfGTowi0iMjiWaeVhAn4FJkqJByhZMI3AhiU" crossorigin="anonymous">
+</head>
+<body>
+    <header>
+        <nav class="navbar navbar-expand-sm p-4 bg-light justify-content-center">
+            <ul class="navbar-nav">
+                  <li class="nav-item dropdown">
+                      <button class="btn btn-primary dropdown-toggle btn-lg" data-bs-toggle="dropdown">
+                          2. Utilities
+                        </button>
+                        <ul class="dropdown-menu px-3">
+                          <li><a class="dropdown-item" href="/Assignment/Day1/Practice Exercise/typography.html">2.2 Basic Typography</a></li>
+                          <li><a class="dropdown-item" href="/Assignment/Day1/Practice Exercise/Text-Align_Display.html">2.3 Text Alignment & Display</a></li>
+                          <li><a class="dropdown-item" href="/Assignment/Day1/Practice Exercise/float_fixed_positions.html">2.4 Floats & Fixed Position</a></li>
+                          <li><a class="dropdown-item" href="/Assignment/Day1/Practice Exercise/colors_bg.html">2.5 Colors & Background</a></li>
+                          <li><a class="dropdown-item" href="/Assignment/Day1/Practice Exercise/margin_spacing.html">2.6 Margin & Spacing</a></li>
+                          <li><a class="dropdown-item" href="/Assignment/Day1/Practice Exercise/Sizing_borders.html">2.7 Sizing & Borders</a></li>
+                          <li><a class="dropdown-item" href="/Assignment/Day1/Practice Exercise/breakpoints.html">2.8 Breakpoints</a></li>
+                        </ul>    
+                  </li>
+                  <li class="nav-item dropdown px-3">
+                      <button class="btn btn-success  dropdown-toggle btn-lg" data-bs-toggle="dropdown">
+                          3. CSS Components
+                        </button>
+                        <ul class="dropdown-menu">
+                          <li><a class="dropdown-item" href="/Assignment/Day1/Practice Exercise/buttons.html">3.2 Buttons & Button Groups</a></li>
+                          <li><a class="dropdown-item" href="/Assignment/Day1/Practice Exercise/navbar.html">3.3 Navbars & Nav</a></li>
+                          <li><a class="dropdown-item" href="/Assignment/Day1/Practice Exercise/List.html">3.4 Listgroups</a></li>
+                          <li><a class="dropdown-item" href="/Assignment/Day1/Practice Exercise/badges.html">3.5 Badges</a></li>
+                          <li><a class="dropdown-item" href="/Assignment/Day1/Practice Exercise/forms.html">3.6 Forms & Input</a></li>
+                          <li><a class="dropdown-item" href="/Assignment/Day1/Practice Exercise/Input_groups_addons.html">3.7 Input Groups</a></li>
+                          <li><a class="dropdown-item" href="/Assignment/Day1/Practice Exercise/alerts.html">3.8 Alerts</a></li>
+                          <li><a class="dropdown-item" href="/Assignment/Day1/Practice Exercise/progress_bars.html">3.9 Progress bars</a></li>
+                          <li><a class="dropdown-item" href="/Assignment/Day1/Practice Exercise/tables.html">3.10 Tables</a></li>
+                          <li><a class="dropdown-item" href="/Assignment/Day1/Practice Exercise/pagination.html">3.11 Pagination</a></li>
+                          <li><a class="dropdown-item" href="/Assignment/Day1/Practice Exercise/cards.html">3.12 Cards</a></li>
+                          <li><a class="dropdown-item" href="/Assignment/Day1/Practice Exercise/breadcrumbs.html">3.13 Breadcrumbs</a></li>
+                        </ul>    
+                  </li>
+                  <li class="nav-item dropdown px-3">
+                      <button class="btn btn-warning dropdown-toggle btn-lg" data-bs-toggle="dropdown">
+                          4. Grid & Flexbox
+                        </button>
+                        <ul class="dropdown-menu">
+                          <li><a class="dropdown-item" href="/Assignment/Day2/Practice Exercise/Grid_system.html">4.1 Grid System</a></li>
+                          <li><a class="dropdown-item" href="/Assignment/Day2/Practice Exercise/Grid_Align.html">4.2 Grid Alignment</a></li>
+                          <li><a class="dropdown-item" href="/Assignment/Day2/Practice Exercise/flexbox.html">4.3 Flexbox</a></li>
+                          <li><a class="dropdown-item" href="/Assignment/Day2/Practice Exercise/AutoMargins_wrap.html">4.4 AutoMargins & wrapping</a></li>
+                         
+                        </ul>    
+                  </li>
+                  <li class="nav-item dropdown px-3">
+                      <button class="btn btn-danger dropdown-toggle btn-lg" data-bs-toggle="dropdown">
+                          5. Javascript Widgets
+                        </button>
+                        <ul class="dropdown-menu">
+                          <li><a class="dropdown-item" href="/Assignment/Day2/Practice Exercise/Carousel.html">5.1 Carousel</a></li>
+                          <li><a class="dropdown-item" href="/Assignment/Day2/Practice Exercise/Collapse_accordion.html">5.2 Collapse & accordion</a></li>
+                          <li><a class="dropdown-item" href="/Assignment/Day2/Practice Exercise/Tooltips.html">5.3 Tooltips</a></li>
+                          <li><a class="dropdown-item" href="/Assignment/Day2/Practice Exercise/Popover.html">5.4 Popovers</a></li>
+                          <li><a class="dropdown-item" href="/Assignment/Day2/Practice Exercise/Modals.html">5.5 Modal</a></li>
+                        </ul>    
+                  </li>
+              </ul>  
+          </nav>
+    </header>
+
+    
+    <div class="container mt-3">
+        <h1>Pagination</h1>
+        <nav>
+            <ul class="pagination">
+                <li class="page-item"><a class="page-link" href="#">Previous</a></li>
+                <li class="page-item"><a class="page-link" href="#">1</a></li>
+                <li class="page-item"><a class="page-link" href="#">2</a></li>
+                <li class="page-item"><a class="page-link" href="#">3</a></li>
+                <li class="page-item"><a class="page-link" href="#">Next</a></li>
+            </ul>
+        </nav>
+        <h1>Disable</h1>
+        <nav>
+            <ul class="pagination">
+                <li class="page-item disabled"><a class="page-link" href="#">Previous</a></li>
+                <li class="page-item"><a class="page-link" href="#">1</a></li>
+                <li class="page-item"><a class="page-link" href="#">2</a></li>
+                <li class="page-item"><a class="page-link" href="#">3</a></li>
+                <li class="page-item"><a class="page-link" href="#">Next</a></li>
+            </ul>
+        </nav>
+        <h1>Active</h1>
+        <nav>
+            <ul class="pagination">
+                <li class="page-item"><a class="page-link" href="#">Previous</a></li>
+                <li class="page-item active"><a class="page-link" href="#">1</a></li>
+                <li class="page-item"><a class="page-link" href="#">2</a></li>
+                <li class="page-item"><a class="page-link" href="#">3</a></li>
+                <li class="page-item"><a class="page-link" href="#">Next</a></li>
+            </ul>
+        </nav>
+        <h1>Pagination centered</h1>
+        <nav>
+            <ul class="pagination justify-content-center">
+                <li class="page-item"><a class="page-link" href="#">Previous</a></li>
+                <li class="page-item active"><a class="page-link" href="#">1</a></li>
+                <li class="page-item"><a class="page-link" href="#">2</a></li>
+                <li class="page-item"><a class="page-link" href="#">3</a></li>
+                <li class="page-item"><a class="page-link" href="#">Next</a></li>
+            </ul>
+        </nav>
+        <h1>Pagination right</h1>
+        <nav>
+            <ul class="pagination justify-content-end">
+                <li class="page-item"><a class="page-link" href="#">Previous</a></li>
+                <li class="page-item active"><a class="page-link" href="#">1</a></li>
+                <li class="page-item"><a class="page-link" href="#">2</a></li>
+                <li class="page-item"><a class="page-link" href="#">3</a></li>
+                <li class="page-item"><a class="page-link" href="#">Next</a></li>
+            </ul>
+        </nav>
+        <h1>Pagination small</h1>
+        <nav>
+            <ul class="pagination pagination-sm">
+                <li class="page-item"><a class="page-link" href="#">Previous</a></li>
+                <li class="page-item active"><a class="page-link" href="#">1</a></li>
+                <li class="page-item"><a class="page-link" href="#">2</a></li>
+                <li class="page-item"><a class="page-link" href="#">3</a></li>
+                <li class="page-item"><a class="page-link" href="#">Next</a></li>
+            </ul>
+        </nav>
+        <h1>Pagination large</h1>
+        <nav>
+            <ul class="pagination pagination-lg">
+                <li class="page-item"><a class="page-link" href="#">Previous</a></li>
+                <li class="page-item active"><a class="page-link" href="#">1</a></li>
+                <li class="page-item"><a class="page-link" href="#">2</a></li>
+                <li class="page-item"><a class="page-link" href="#">3</a></li>
+                <li class="page-item"><a class="page-link" href="#">Next</a></li>
+            </ul>
+        </nav>
+        
+    </div>
+
+    <!-- Bootstrap JS Bundle with Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-/bQdsTh/da6pkI1MST/rWKFNjaCP5gBSY4sEBT38Q/9RBh9AH40zEOg7Hlq2THRZ" crossorigin="anonymous"></script>
+    
+    
+</body>
+</html>

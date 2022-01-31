@@ -1,0 +1,333 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="description" content="FrontEnd Project: Social Charity Website's Home Page.">
+  <meta name="author" content="Shubh Patel">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>FrontEnd Project-About us Page</title>
+
+  <link href="bootstrap-5.0.2-dist/css/bootstrap.min.css" rel="stylesheet">
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-JEW9xMcG8R+pH31jmWH6WWP0WintQrMb4s7ZOdauHnUtxwoG2vI5DkLtS3qm9Ekf"
+    crossorigin="anonymous"></script>
+  <script src="./js/login.js"></script>
+  <link rel="stylesheet" href="./CSS/aboutus.css">
+</head>
+
+<body>
+  <header>
+    <nav class="navbar navbar-expand-md navbar-dark bg-primary">
+      <div class="container-fluid">
+        <a class="navbar-brand" href="index.html">Rx-Web Foundation</a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse"
+          aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarCollapse">
+          <ul class="navbar-nav me-auto mb-2 mb-md-0">
+            <li class="nav-item">
+              <a class="nav-link" href="index.html">Home</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="Food.html">Food</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">Education</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">Health</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">Blogs</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link active" aria-current="page" href="#">About Us</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="Contact_us.html">Contact Us</a>
+            </li>
+
+          </ul>
+          <button onclick="document.getElementById('id01').style.display='block'" style="width:auto;">Login</button>
+        </div>
+      </div>
+    </nav>
+    <div id="id01" class="modal">
+
+      <form class="modal-content animate" action="index.html">
+        <span onclick="document.getElementById('id01').style.display='none'" class="close"
+          title="Back to main content">&times;</span><br>
+        <div class="container">
+
+          <label for="userName"><b>Email</b></label>
+          <input type="email" id="userName" placeholder="Enter Username" name="uname" required>
+
+          <label for="userPw"><b>Password</b></label>
+          <input type="password" id="userPw" placeholder="Password" required>
+
+          <button id="log" type="submit" class="bg-primary justify-content-between" onclick="check()">Login</button><br>
+          <div id="remember">
+            <input type="checkbox" checked="checked" value="lsRememberMe" id="rememberMe"
+              style="display: inline-block;">
+            <label><b>Remember me</b></label>
+          </div>
+          <a href="#">Forgot password</a><br>
+          <a>New User? <a href="#">Sign-up here.</a></a><br>
+          <button id="can" type="button" onclick="document.getElementById('id01').style.display='none'"
+            class="cancelbtn bg-danger">Cancel</button>
+        </div>
+
+      </form>
+    </div>
+
+    <script src="login.js"></script>
+  </header>
+
+  <main class="main">
+
+    <div class="container">
+      <hr>
+      <p class="h1">Our proud partners</p>
+      <hr>
+      <p class="h2">Food:</p>
+      <script src="aboutus.js"></script>
+      <table id="Food" class="table table-primary table-bordered table-striped table-hover">
+        <thead>
+          <tr>
+            <th data-field="no">No.</th>
+            <th data-field="image">Partner</th>
+            <th data-field="name">Name</th>
+            <th data-field="smiles">Smiles Served Together</th>
+          </tr>
+        </thead>
+      </table>
+      <table class="table table-primary table-bordered table-striped table-hover">
+        <thead>
+          <tr>
+            <th>No.</th>
+            <th>Partner</th>
+            <th>Name</th>
+            <th>Smiles Served Together</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>1</td>
+            <td><img src="Asset/rha.png" width="100" height="100"></td>
+            <td>Robin Hood Army</td>
+            <td>6325486</td>
+          </tr>
+          <tr>
+            <td>2</td>
+            <td><img src="Asset/dk.jpg" width="100" height="100"></td>
+            <td>DonateKart</td>
+            <td>500000</td>
+          </tr>
+          <tr>
+            <td>3</td>
+            <td><img src="Asset/ap.jpg" width="100" height="100"></td>
+            <td>The Akshayapatra Foundation</td>
+            <td>1546000</td>
+          </tr>
+          <tr>
+            <td>4</td>
+            <td><img src="Asset/jj.jpg" width="100" height="100"></td>
+            <td>Jay Jalaram Group</td>
+            <td>50000</td>
+          </tr>
+          <tr>
+            <td>5</td>
+            <td><img src="Asset/rx.png" width="100" height="100"></td>
+            <td>RadixWeb</td>
+            <td>486000</td>
+          </tr>
+          <tr>
+            <td>6</td>
+            <td><img src="Asset/dfthr.jpg" width="100" height="100"></td>
+            <td>Doughfather-Urban Khichdi</td>
+            <td>1500</td>
+          </tr>
+        </tbody>
+      </table>
+      <hr>
+      <p class="h2">Education:</p>
+      <table class="table table-primary table-bordered table-striped table-hover">
+        <thead>
+          <tr>
+            <th>No.</th>
+            <th>Partner</th>
+            <th>Name</th>
+            <th>Educated Minds Together</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>1</td>
+            <td><img src="Asset/aca.jpg" width="100" height="100"></td>
+            <td>Robin Hood Academy</td>
+            <td>7625</td>
+          </tr>
+          <tr>
+            <td>2</td>
+            <td><img src="Asset/aasman.jpeg" width="150" height="100"></td>
+            <td>Aasman Foundation</td>
+            <td>6000</td>
+          </tr>
+          <tr>
+            <td>3</td>
+            <td><img src="Asset/gujarat-education-dept.png" width="100" height="100"></td>
+            <td>Ministry of Education</td>
+            <td>4860</td>
+          </tr>
+        </tbody>
+      </table>
+      <hr>
+      <p class="h2">Health:</p>
+      <table class="table table-primary table-bordered table-striped table-hover">
+        <thead>
+          <tr>
+            <th>No.</th>
+            <th>Partner</th>
+            <th>Name</th>
+            <th>Camp count</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>1</td>
+            <td><img src="Asset/rcrs.jpg" width="100" height="100"></td>
+            <td>Red Cross Society India-Ahmedabad</td>
+            <td>50</td>
+          </tr>
+          <tr>
+            <td>2</td>
+            <td><img src="Asset/rcrs.jpg" width="100" height="100"></td>
+            <td>Red Cross Society India-Vadodara</td>
+            <td>48</td>
+          </tr>
+          <tr>
+            <td>3</td>
+            <td><img src="Asset/hcg.png" width="100" height="100"></td>
+            <td>HCG Hospital, Ahmdabad</td>
+            <td>10</td>
+          </tr>
+        </tbody>
+      </table>
+      <hr>
+      <p class="h1">FAQ's:</p>
+      <div class="accordion accordion-flush" id="accordionFlushExample">
+        <div class="accordion-item">
+          <h2 class="accordion-header" id="flush-headingOne">
+            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+              data-bs-target="#flush-collapseOne" aria-expanded="false" aria-controls="flush-collapseOne">
+              What is RxWeb Foundation?
+            </button>
+          </h2>
+          <div id="flush-collapseOne" class="accordion-collapse collapse" aria-labelledby="flush-headingOne"
+            data-bs-parent="#accordionFlushExample">
+            <div class="accordion-body">Placeholder content for this accordion, which is intended to demonstrate the
+              <code>.accordion-flush</code> class. This is the first item's accordion body.</div>
+          </div>
+        </div>
+        <div class="accordion-item">
+          <h2 class="accordion-header" id="flush-headingTwo">
+            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+              data-bs-target="#flush-collapseTwo" aria-expanded="false" aria-controls="flush-collapseTwo">
+              How did this starts?
+            </button>
+          </h2>
+          <div id="flush-collapseTwo" class="accordion-collapse collapse" aria-labelledby="flush-headingTwo"
+            data-bs-parent="#accordionFlushExample">
+            <div class="accordion-body">Placeholder content for this accordion, which is intended to demonstrate the
+              <code>.accordion-flush</code> class. This is the second item's accordion body. Let's imagine this being
+              filled with some actual content.</div>
+          </div>
+        </div>
+        <div class="accordion-item">
+          <h2 class="accordion-header" id="flush-heading">
+            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+              data-bs-target="#flush-collapse3" aria-expanded="false" aria-controls="flush-collapse3">
+              So where are you now?
+            </button>
+          </h2>
+          <div id="flush-collapse3" class="accordion-collapse collapse" aria-labelledby="flush-heading3"
+            data-bs-parent="#accordionFlushExample">
+            <div class="accordion-body">Placeholder content for this accordion, which is intended to demonstrate the
+              <code>.accordion-flush</code> class. This is the second item's accordion body. Let's imagine this being
+              filled with some actual content.</div>
+          </div>
+        </div>
+        <div class="accordion-item">
+          <h2 class="accordion-header" id="flush-heading5">
+            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+              data-bs-target="#flush-collapse5" aria-expanded="false" aria-controls="flush-collapse5">
+              I like this, how can I help?
+            </button>
+          </h2>
+          <div id="flush-collapse5" class="accordion-collapse collapse" aria-labelledby="flush-heading5"
+            data-bs-parent="#accordionFlushExample">
+            <div class="accordion-body">Placeholder content for this accordion, which is intended to demonstrate the
+              <code>.accordion-flush</code> class. This is the second item's accordion body. Let's imagine this being
+              filled with some actual content.</div>
+          </div>
+        </div>
+        <div class="accordion-item">
+          <h2 class="accordion-header" id="flush-heading6">
+            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+              data-bs-target="#flush-collapse6" aria-expanded="false" aria-controls="flush-collapse6">
+              How can I donate?
+            </button>
+          </h2>
+          <div id="flush-collapse6" class="accordion-collapse collapse" aria-labelledby="flush-heading6"
+            data-bs-parent="#accordionFlushExample">
+            <div class="accordion-body">Placeholder content for this accordion, which is intended to demonstrate the
+              <code>.accordion-flush</code> class. This is the second item's accordion body. Let's imagine this being
+              filled with some actual content.</div>
+          </div>
+        </div>
+        <div class="accordion-item">
+          <h2 class="accordion-header" id="flush-heading7">
+            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+              data-bs-target="#flush-collapse7" aria-expanded="false" aria-controls="flush-collapse7">
+              So, do you have any rules?
+            </button>
+          </h2>
+          <div id="flush-collapse7" class="accordion-collapse collapse" aria-labelledby="flush-heading7"
+            data-bs-parent="#accordionFlushExample">
+            <div class="accordion-body">Placeholder content for this accordion, which is intended to demonstrate the
+              <code>.accordion-flush</code> class. This is the third item's accordion body. Nothing more exciting
+              happening here in terms of content, but just filling up the space to make it look, at least at first
+              glance, a bit more representative of how this would look in a real-world application.</div>
+          </div>
+        </div>
+        <div class="accordion-item">
+          <h2 class="accordion-header" id="flush-heading6">
+            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+              data-bs-target="#flush-collapse8" aria-expanded="false" aria-controls="flush-collapse8">
+              I don't find my question here- help!
+            </button>
+          </h2>
+          <div id="flush-collapse8" class="accordion-collapse collapse" aria-labelledby="flush-heading8"
+            data-bs-parent="#accordionFlushExample">
+            <div class="accordion-body">Placeholder content for this accordion, which is intended to demonstrate the
+              <code>.accordion-flush</code> class. This is the second item's accordion body. Let's imagine this being
+              filled with some actual content.</div>
+          </div>
+        </div>
+      </div>
+      <hr>
+  </main>
+  <!-- FOOTER -->
+  <footer class="ftr bg-primary">
+    <p class="float-end"><a class="href" href="#">Back to top</a></p>
+    <a>Have any thoughts or suggestions: <a class="href" href="Contact_us.html">Contact us</a></a>
+    <p class="navbar-brand">Rx-Web Foundation ©</p>
+  </footer>
+  <script src="../assets/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="../jQuery/jquery-3.6.0.js"></script>
+</body>
+
+</html>

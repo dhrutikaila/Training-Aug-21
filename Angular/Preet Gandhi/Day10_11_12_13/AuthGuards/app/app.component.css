@@ -1,0 +1,6 @@
+.home-link:hover{
+    background-color: rgb(96, 237, 247);
+    color: red;
+    border-radius: 5px;
+    transition: .5s;
+}

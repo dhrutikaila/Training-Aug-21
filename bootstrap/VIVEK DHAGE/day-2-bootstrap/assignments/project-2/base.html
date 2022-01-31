@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>HOME</title>
+	 <meta name=”viewport” content=”width=device-width, initial-scale=1.0” >
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+
+<style type="text/css">
+
+*{
+	font-family: sans-serif;
+}
+
+body{
+	height: 100vh;
+	background: yellow;
+}
+
+
+	
+.container{
+	display: grid;
+	grid-template-columns:  1fr;
+	grid-template-rows: 0.1fr 0.1fr 1fr;
+	grid-gap: 0.4rem;
+
+	grid-template-areas: 
+	"head "
+	"nav "
+	"content ";
+}
+
+
+
+.header{
+	grid-area: head;
+	background: inherit;
+	color: whitesmoke;
+	text-align: center;
+	font-weight: 700;
+	font-size: 20px;	
+
+}
+
+.navigation{
+	color: white;
+	background: inherit;
+	grid-area: nav;
+}
+
+nav {
+	display: flex;
+	justify-content: center;
+	text-decoration: none;
+}   
+
+.select{
+height: 20px;
+width: 80px;
+ flex-direction: row;
+ padding: 0 4px;
+ justify-content: space-between;
+ padding-right: 5px;
+ text-decoration: none;
+ font-family: Arial;
+ font-size: 20px;
+ background: yellow;
+}
+
+.select{
+	padding-right: 20px;
+}
+.list{
+	margin: 0 12px;
+	text-decoration: none;
+	color: white;
+}
+
+footer{
+	grid-area: foot;
+	background: red;
+	color: whitesmoke;
+	text-align: center;
+	font-weight: 700;
+	font-size: 20px;	
+
+}
+
+
+.bg{width: 1205px;
+	 height: 400px;
+	  background: url(download.jfif) ;background-repeat: no-repeat; background-size: cover;
+	}
+
+.list{
+	
+}
+
+.side1{
+	grid-area: side;
+
+
+}
+
+.display{
+	grid-area: content;
+}
+
+
+
+
+
+
+</style>
+</head>
+<body>
+
+<div class="container">
+
+<div class="container-fluid center-block">
+	<header class="head center-block">
+		<h1 class="text-center my-3" style="font-size: 20px; padding-top: 3px;">SITE</h1>
+	</header>
+</div>
+
+<div class="navigation">
+	<nav class="nav1 my-4">
+		<div class="dropdown mx-4">
+  			<button class="btn  btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+  			  utilities
+  			</button>
+  			<div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+    		<a class="dropdown-item" href="#">Action</a>
+    		<a class="dropdown-item" href="#">Another action</a>
+    		<a class="dropdown-item" href="#">Something else here</a>
+  			</div>
+		</div>
+
+				<div class="dropdown mx-4">
+  			<button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+  			  Dropdown button
+  			</button>
+  			<div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+    		<a class="dropdown-item" href="#">Action</a>
+    		<a class="dropdown-item" href="#">Another action</a>
+    		<a class="dropdown-item" href="#">Something else here</a>
+  			</div>
+		</div>
+
+				<div class="dropdown mx-4">
+  			<button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+  			  Dropdown button
+  			</button>
+  			<div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+    		<a class="dropdown-item" href="#">Action</a>
+    		<a class="dropdown-item" href="#">Another action</a>
+    		<a class="dropdown-item" href="#">Something else here</a>
+  			</div>
+		</div>
+
+				<div class="dropdown mx-4">
+  			<button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+  			  Dropdown button
+  			</button>
+  			<div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+    		<a class="dropdown-item" href="#">Action</a>
+    		<a class="dropdown-item" href="#">Another action</a>
+    		<a class="dropdown-item" href="#">Something else here</a>
+  			</div>
+		</div>
+
+
+
+	</nav>
+</div>
+
+<div class="bg" >
+	
+</div>
+
+
+<div class="content">
+	<article>
+	</article>	
+</div>
+
+
+
+
+
+</div>
+</body>
+</html>

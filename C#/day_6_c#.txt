@@ -1,0 +1,135 @@
+using System;
+
+namespace MyApplication
+{
+  class Animal  // Base class (parent) 
+  {
+    public virtual void animalSound()
+    {
+      Console.WriteLine("The animal makes a sound");
+    }
+  }
+
+  class Pig : Animal  // Derived class (child) 
+  {
+    public override void animalSound()
+    {
+      Console.WriteLine("The pig says: wee wee");
+    }
+  }
+
+  class Dog : Animal  // Derived class (child) 
+  {
+    public  override void animalSound()
+    {
+      Console.WriteLine("The dog says: bow wow");
+    }
+  }
+
+  class Program
+  {
+    static void Main(string[] args)
+    {
+      Animal myAnimal = new Animal();  // Create a Animal object
+      Animal myPig = new Pig();  // Create a Pig object
+      Animal myDog = new Dog();  // Create a Dog object
+      
+      myAnimal.animalSound();
+      myPig.animalSound();
+      myDog.animalSound();
+    }
+  }
+}
+
+//------------------------------
+
+
+
+
+using System;
+
+namespace MyApplication
+{
+  class Program
+  {
+    enum Months
+    {
+      January,    // 0
+      February,   // 1
+      March,      // 2
+      April,      // 3
+      May,        // 4
+      June,       // 5
+      July        // 6
+    }
+    static void Main(string[] args)
+    {
+      int myNum = (int) Months.April;
+      Console.WriteLine(myNum);
+    }
+  }
+}
+//--------------------------
+
+enum Level 
+{
+  Low,
+  Medium,
+  High
+}
+
+static void Main(string[] args) 
+{
+  Level myVar = Level.Medium;
+  switch(myVar) 
+  {
+    case Level.Low:
+      Console.WriteLine("Low level");
+      break;
+    case Level.Medium:
+       Console.WriteLine("Medium level");
+      break;
+    case Level.High:
+      Console.WriteLine("High level");
+      break;
+  }
+}
+
+
+
+//------------------------------ass-1
+
+// C# program to illustrate the use of Delegates
+using System;
+namespace day6_one{
+	
+class delex {
+	
+public delegate void compute(int l, int b);
+	
+	public void sum(int l, int b)
+	{
+    	int area;
+        area = l * b;
+		Console.WriteLine("area is  = "+ area);
+	}
+
+
+public static void Main(String []args)
+{
+	
+	delex obj = new delex();
+
+	
+	compute del_obj1 = new compute(obj.sum);
+	
+
+	del_obj1(100, 40);
+	
+
+}
+}
+}
+
+
+//-----------------------asss-2

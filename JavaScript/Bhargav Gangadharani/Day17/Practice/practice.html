@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-F3w7mX95PdgyTmZZMECAngseQB83DfGTowi0iMjiWaeVhAn4FJkqJByhZMI3AhiU" crossorigin="anonymous">
+    <title>Practice</title>
+    <script src="Assets/main.js"></script>
+    <style>
+        button{
+            transition: 200ms ease;
+        }
+        .container {
+            box-shadow: 5px 5px 5px gray;
+        }
+
+    </style>
+</head>
+<body>
+<div class="container border border-2 border-secondary">
+    <div class="row m-3">
+        <div class="col-4 w-25 h-25m-2">
+            <p>Click the button to display the domain name of the server that loaded this document.</p>
+            <p id="domain"></p>
+            <button onclick="DomainName()">Try it</button>
+        </div>
+        <div class="col-4 w-25 h-25 m-2">
+            <p>The full URL of this document is: <br><span id="url"></span>.</p>
+            <button onclick="url()">Try it</button>
+        </div>
+        <div class="col-4 w-25 h-50 m-2">
+        <div class="w-100 h-100" id="box" style="background:grey;" onmouseenter="change(this)">
+            Loop ( Enter Mouse on me ) <br> Repeat !!
+        </div>
+    </div>
+    <div class="row m-3">
+        <div class="col-4 w-25 h-25 m-2">
+            Search on Google <button id="btn" onclick="search()">Click me </button>
+        </div>
+        <div class="col-4 w-25 h-25 m-2">
+            <p>Resize screen to check</p>
+            <span id="show"></span>
+        </div>
+        <div class="col-4 w-25 h-25 m-2">
+            <p>Click Button to see changing colors</p>
+            <button onclick="color(this)">Colors</button>
+            <button onclick="myStopFunction()">Stop</button>
+        </div>
+    </div>
+</div>
+
+<script>
+    document.getElementById("show").innerHTML = "Screen Height is : "  + screen.height + "<br> Screen Width is : " + window.innerWidth;
+</script>
+
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-/bQdsTh/da6pkI1MST/rWKFNjaCP5gBSY4sEBT38Q/9RBh9AH40zEOg7Hlq2THRZ" crossorigin="anonymous"></script>
+</body>
+
+</html>

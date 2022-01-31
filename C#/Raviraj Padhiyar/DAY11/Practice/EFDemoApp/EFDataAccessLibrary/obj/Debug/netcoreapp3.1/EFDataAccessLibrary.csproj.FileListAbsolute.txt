@@ -1,0 +1,10 @@
+C:\Users\ravi\source\repos\EFDemoApp\EFDataAccessLibrary\bin\Debug\netcoreapp3.1\EFDataAccessLibrary.deps.json
+C:\Users\ravi\source\repos\EFDemoApp\EFDataAccessLibrary\bin\Debug\netcoreapp3.1\EFDataAccessLibrary.dll
+C:\Users\ravi\source\repos\EFDemoApp\EFDataAccessLibrary\bin\Debug\netcoreapp3.1\EFDataAccessLibrary.pdb
+C:\Users\ravi\source\repos\EFDemoApp\EFDataAccessLibrary\obj\Debug\netcoreapp3.1\EFDataAccessLibrary.csproj.AssemblyReference.cache
+C:\Users\ravi\source\repos\EFDemoApp\EFDataAccessLibrary\obj\Debug\netcoreapp3.1\EFDataAccessLibrary.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\ravi\source\repos\EFDemoApp\EFDataAccessLibrary\obj\Debug\netcoreapp3.1\EFDataAccessLibrary.AssemblyInfoInputs.cache
+C:\Users\ravi\source\repos\EFDemoApp\EFDataAccessLibrary\obj\Debug\netcoreapp3.1\EFDataAccessLibrary.AssemblyInfo.cs
+C:\Users\ravi\source\repos\EFDemoApp\EFDataAccessLibrary\obj\Debug\netcoreapp3.1\EFDataAccessLibrary.csproj.CoreCompileInputs.cache
+C:\Users\ravi\source\repos\EFDemoApp\EFDataAccessLibrary\obj\Debug\netcoreapp3.1\EFDataAccessLibrary.dll
+C:\Users\ravi\source\repos\EFDemoApp\EFDataAccessLibrary\obj\Debug\netcoreapp3.1\EFDataAccessLibrary.pdb

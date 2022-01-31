@@ -1,0 +1,238 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <link rel="stylesheet" href="./Assets/css/style.css">
+    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css"
+        integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous" />
+    <link rel="icon" href="./Assets/images/udemyIcon.png" type="image/icon type">
+    <title>Signin</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+</head>
+
+<body>
+    <nav class="navbar navbar-expand-lg navbar-light bg-white p-3">
+        <div class="container-fluid">
+            <!-- <a class="navbar-brand mx-3 logo h1 text-primary" href="./index.html">Udemy</a> -->
+            <a class="navbar-brand mx-3 logo h1 text-primary" href="./index.html"><img
+                    src="./Assets/images/logo-udemy.svg" height="44px" width="100px" alt=""></a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+                aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav mb-2 me-auto mb-lg-0">
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button"
+                            data-bs-toggle="dropdown" aria-expanded="false">
+                            Categories
+                        </a>
+                        <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                            <li><a class="dropdown-item" href="./JScourse.html">Javascript</a></li>
+                            <li><a class="dropdown-item" href="./pythonCourse.html">Python</a></li>
+                            <li><a class="dropdown-item" href="./webCourses.html">Web development</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item">
+                        <div class="input-icons">
+                            <i class="fas fa-search icon btn" type="button" onclick="myfun()"></i>
+                            <input type="text" class="form-control input-field nav-link"
+                                placeholder="Search for anything" id="searchbar" aria-label="Username"
+                                aria-describedby="basic-addon1" />
+                        </div>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" target="_blank" href="./udemyBusiness.html">Udemy Business</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" target="_blank" href="./teachOnUdemy.html">Teach on Udemy</a>
+                    </li>
+                </ul>
+                <form class="d-flex">
+                    <a class="nav-link" href="./cart.html"><i class="fas fa-shopping-cart"></i></a>
+                    <button class="btn btn-outline-dark me-2" onclick="openSignin()"> Log In </button>
+                    <button class="btn btn-dark me-2" onclick="openSignup()">Sign Up</button>
+                    <button class="btn btn-outline-dark" type="button" data-bs-target="#langModal"
+                        data-bs-toggle="modal"><i class="fas fa-globe"></i></button>
+                </form>
+            </div>
+        </div>
+    </nav>
+
+    <!-- header -->
+    <div class="container my-5">
+        <div class="row justify-content-center">
+            <div class="col-10 col-sm-8 col-md-6 col-lg-4">
+                <h4 class="text-center">Log In to Your Udemy Account!</h4>
+                <hr>
+                <form class="row row-cols-lg-auto g-3 align-items-center">
+
+                    <div class="col-12">
+                        <label class="visually-hidden" for="username">username</label>
+                        <div class="input-group">
+                            <div class="input-group-text"><i class="fas fa-envelope"></i></div>
+                            <input type="text" class="form-control" id="username" placeholder="username">
+                        </div>
+                    </div>
+                    <div class="col-12">
+                        <label class="visually-hidden" for="password">Password</label>
+                        <div class="input-group">
+                            <div class="input-group-text"><i class="fas fa-lock"></i></div>
+                            <input type="password" class="form-control" id="password" placeholder="Password">
+                        </div>
+                    </div>
+
+                    <div class="col-12">
+                        <button type="button" class="btn btn-primary d-block w-100"
+                            style="background-color: blueviolet;" onclick="validateUser()">Log In</button>
+                    </div>
+
+                    <div class="col-12 text-center">
+                        <p class="text-center">or&nbsp; <span style="color: blueviolet;"> Forgot
+                                Password</span></p>
+                    </div>
+
+                    <div class="col-12 text-center">
+                        <p class="text-center">Don't have an account?
+                            <a href="./Signup.html"> Sign Up </a>
+                        </p>
+                    </div>
+
+                    <div class="col-12 text-center">
+                        <p class="text-center"> <b> Other login options </b> </p>
+                        <div class="row">
+                            <div class="col-4"><i class="fab fa-facebook fa-2x"></i></div>
+                            <div class="col-4"><i class="fab fa-google fa-2x"></i></div>
+                            <div class="col-4"><i class="fab fa-apple fa-2x"></i></div>
+                        </div>
+                    </div>
+
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <!-- modal -->
+    <div class="modal fade" id="langModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel">Choose a language</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <div class="row">
+                        <div class="col-12 col-sm-6 col-md-4">
+                            <ul class="list-unstyled">
+                                <li>English</li>
+                                <li>Deutsch</li>
+                                <li>Italiano</li>
+                            </ul>
+                        </div>
+                        <div class="col-12 col-sm-6 col-md-4">
+                            <ul class="list-unstyled">
+                                <li>Polski</li>
+                                <li>Indonesian</li>
+                                <li>Nederlands</li>
+                            </ul>
+                        </div>
+                        <div class="col-12 col-sm-6 col-md-4">
+                            <ul class="list-unstyled">
+                                <li>Portugues</li>
+                                <li>Romana</li>
+                                <li>Gujarati</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <footer class="bg-dark text-white p-5" id="IndexFooter">
+        <div class="row">
+            <div class="col-sm-3 col-12">
+                <ul class="list-unstyled">
+                    <li><a href="">Udemy Business</a></li>
+                    <li><a href="">Teach on Udemy</a></li>
+                    <li><a href="">Get the app</a></li>
+                    <li><a href="">About Us</a></li>
+                    <li><a href="">Contact Us</a></li>
+                </ul>
+            </div>
+            <div class="col-sm-3 col-12">
+                <ul class="list-unstyled">
+                    <li><a href="">Career</a></li>
+                    <li><a href="">Blog</a></li>
+                    <li><a href="">Help and Support</a></li>
+                    <li><a href="">Affiliate</a></li>
+                </ul>
+            </div>
+            <div class="col-sm-3 col-12 me-md-auto">
+                <ul class="list-unstyled">
+                    <li><a href="">Terms</a></li>
+                    <li><a href="">Privacy policy</a></li>
+                    <li><a href="">Sitemap</a></li>
+                </ul>
+            </div>
+            <div class="col-sm-3 col-12 text-sm-end">
+                <button class="btn btn-outline-light" data-bs-target="#langModal" data-bs-toggle="modal"><i
+                        class="fas fa-globe"></i> English</button>
+            </div>
+        </div>
+        <div class="row mt-5 justify-content-between">
+            <div class="col-sm-4">
+                <img src="./Assets/images/logo-udemy-inverted.svg" height="44px" width="100px" alt="">
+            </div>
+            <div class="col-sm-4 text-sm-end">
+                <p> © Copyrigt since 2021</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        function validateUser() {
+            let uname = document.getElementById('username').value;
+            let pwd = document.getElementById('password').value;
+            console.log(pwd)
+            let data = localStorage.getItem(`user${uname}`);
+            let jsondata = JSON.parse(data);
+            let upwd = jsondata.pwd;
+            console.log(upwd);
+            if (upwd == pwd) {
+                alert('login successful')
+            } else {
+                alert('wrong uname or password')
+            }
+        }
+
+        // sign in window
+        function openSignin() {
+            window.open('./Signin.html')
+        }
+
+        // sign up window
+        function openSignup() {
+            window.open('./Signup.html')
+        }
+
+    </script>
+
+    <script src="./Assets/js/courses.js"></script>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+        crossorigin="anonymous"></script>
+</body>
+
+</html>

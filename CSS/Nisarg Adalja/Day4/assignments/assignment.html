@@ -1,0 +1,434 @@
+<!-- Create a menu list of the website. It should be responsive. -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title></title>
+    <style>
+        #navbar{
+            background-color:dodgerblue;
+            display:flex;
+            flex-direction:row;
+        }
+        #navbar{
+            justify-content:right;
+            padding-right:100px !important;
+            margin-bottom:5vh !important;
+        }
+        #navbar div a{
+            text-decoration: none;
+            background-color: DodgerBlue;
+            color: white;
+            width: 100px;
+           margin-left: 100px !important;
+            justify-content:center !important;
+            align-items:center;
+            text-align: center !important;
+            margin: 10px;
+            text-align: center;
+            line-height: 75px;
+            font-size: 30px;
+        } 
+        aside{
+            width:20vw;
+            height:70vh !important;
+            float:left;
+            margin-left:3vw !important;
+            margin-right:3vw !important;
+        }
+        article{
+            width:65vw;
+            height:70vh !important;
+            float:left;
+            margin-right:3vw !important;
+        }
+        footer{
+            background-color:blueviolet;
+            clear:left;
+            width:100%;
+        }
+        @media screen and (max-width:800px){
+            #navbar{
+                display:flex;
+                flex-direction:column;
+                justify-content:center;
+                width:100% !important;
+            }
+            #navbar div a{
+                margin-left:10px !important;
+               
+            }
+        }
+    </style>
+    <style>
+
+        #nav1{
+            background-color: lightgray;
+            display: flex;
+            flex-direction: row;
+            height: 15vh !important;
+            width: 100vw !important;
+        }
+
+        #logo {
+            display: flex;
+            justify-content: center;
+
+        }
+
+        div img {}
+
+        div {
+            font-size: 30px;
+            margin-left: auto;
+            margin-top: 0vh !important;
+            margin-bottom: 0px;
+        }
+
+        div a {
+            text-decoration: none;
+            color: grey;
+            /* margin-left:3vw !important; */
+            margin-right: 3vw !important;
+            /* justify-content:center;*/
+        }
+
+        article {
+
+            height: 85vh;
+            width: 79vw;
+            float: left;
+            background-image: url("../../../HTML/Nisarg Adalja/assests/images/html5.jpg");
+            background-repeat: no-repeat;
+            background-size: cover;
+        }
+
+        h1 {
+            margin-top: 40px !important;
+        }
+        li{
+            font-size:30px;
+        }
+        aside {
+            display: flex;
+            flex-direction: column;
+            float: left;
+            height: 85vh;
+            width: 18vw;
+            background-color: orange;
+        }
+        header{
+            width:100% !important;
+        }
+        /* Dropdown Button */
+
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+        }
+
+        .navbar {
+            overflow: hidden;
+            display: flex;
+            flex-direction: column;
+            background-color: #333;
+        }
+
+        .navbar a {
+            float: left;
+            font-size: 20px;
+            color: white;
+            text-align: left;
+            padding: 14px 16px;
+            text-decoration: none;
+        }
+
+        .dropdown {
+            float: left;
+            overflow: hidden;
+        }
+
+        .dropdown .dropbtn {
+            font-size: 20px;
+            border: none;
+            outline: none;
+            color: white;
+            padding: 0px 0px;
+            background-color: inherit;
+            font-family: inherit;
+            margin: 0;
+        }
+
+        .navbar a:hover,
+        .dropdown:hover .dropbtn {
+            background-color: red;
+        }
+
+        .dropdown-content {
+            display: none;
+            position: absolute;
+            background-color: #f9f9f9;
+            min-width: 160px;
+            box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+            z-index: 1;
+        }
+
+        .dropdown-content a {
+            float: none;
+            color: black;
+            padding: 0px 0px;
+            text-decoration: none;
+            display: block;
+            text-align: left;
+        }
+
+        .dropdown-content a:hover {
+            background-color: #ddd;
+        }
+
+        .dropdown:hover .dropdown-content {
+            display: block;
+        }
+        .dropdown-content a:active {
+            background-color: #ddd;
+        }
+
+        .dropdown:active .dropdown-content {
+            display: block;
+        }
+
+        /* Dropdown Button */
+
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+        }
+
+        .navbar {
+            overflow: hidden;
+            display: flex;
+            flex-direction: column;
+            background-color: #333;
+        }
+
+        .navbar a {
+            float: left;
+            font-size: 20px;
+            color: white;
+            text-align: left;
+            padding: 14px 16px;
+            text-decoration: none;
+        }
+
+        .dropdown {
+            float: left;
+            overflow: hidden;
+        }
+
+        .dropdown .dropbtn {
+            font-size: 20px;
+            border: none;
+            outline: none;
+            color: white;
+            padding: 0px 0px;
+            background-color: inherit;
+            font-family: inherit;
+            margin: 0;
+        }
+
+        .navbar a:hover,
+        .dropdown:hover .dropbtn {
+            background-color: red;
+        }
+
+        .dropdown-content {
+            display: none;
+            position: absolute;
+            background-color: #f9f9f9;
+            min-width: 160px;
+            box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+            z-index: 1;
+        }
+
+        .dropdown-content a {
+            float: none;
+            color: black;
+            padding: 0px 0px;
+            text-decoration: none;
+            display: block;
+            text-align: left;
+        }
+
+        .dropdown-content a:hover {
+            background-color: #ddd;
+        }
+
+        .dropdown:hover .dropdown-content {
+            display: block;
+        }
+        .dropdown-content a:active {
+            background-color: #ddd;
+        }
+
+        .dropdown:active .dropdown-content {
+            display: block;
+        }
+    </style>
+    <style>
+        header{
+            background-color:red;
+            height:15vh;
+            width:100vw;
+        }
+        #nav{
+            
+            color:white !important;
+            font-size:20px;
+            
+            float:right;
+            margin-right:40vh !important;
+            margin-top:5vh !important;
+        }
+        nav a{
+            text-decoration:none;
+             color:white !important;
+            font-size:20px;
+            margin-left:3vw !important;
+         margin-right:3vw !important;
+        }
+        aside{
+            float:left;
+            height:70vh !important;
+            width:20%;
+            background-color:yellow;
+        }
+        article{
+            float:left;
+            height:70vh !important;
+            width:77vw !important;
+            background-color:orange;
+        }
+        footer{
+            clear:left;
+            background-color:pink;
+        }
+    </style>
+</head>
+<body>
+    <nav id="nav1">
+        <div id="logo">
+            <img src="https://tutorials.rxtrainees.radixweb.net/wp-content/uploads/2020/12/logo_2500X1875.jpg"
+                height="50px" width="200px">
+        </div>
+        <div>
+            <a href="../../../../Modules/Project/Nisarg Adalja/nisargProject.html">HOME</a>
+            <a href="../../../../Modules/Project/Nisarg Adalja/htmlfile.html">HTML</a>
+            <a href="../../../../Modules/Project/Nisarg Adalja/cssfile.html">CSS</a>
+            <a href="../../../../Modules/Project/Nisarg Adalja/Bootstrap.html">Bootstrap</a>
+            <a href="../../../../Modules/Project/Nisarg Adalja/javascript.html">JAVASCRIPT</a>
+            <a href="../../../../Modules/Project/Nisarg Adalja/jquery.html">JQUERY</a>
+            <a href="../../../../Modules/Project/Nisarg Adalja/project.html">PORJECT</a>
+        </div>
+    </nav>
+    <aside>
+      <ol>
+            <li>Day-3
+                <ul>
+                    <div class="dropdown">
+                        <button class="dropbtn">Additional Exercise</button>
+                        <div class="dropdown-content">
+                            <a href="../../Day3/additional/additional.html">additional.html</a>
+                        </div>
+                    </div>
+                    <div class="dropdown">
+                        <button class="dropbtn">Assignment Exercise</button>
+                        <div class="dropdown-content">
+                            <a href="../../Day3/assignments/about.html">about.html</a>
+                              <a href="../../Day3/assignments/assignments.html">assignment.html</a>
+                                <a href="../../Day3/assignments/contact.html">contact.html</a>
+                        </div>
+                    </div>
+                    <div class="dropdown">
+                        <button class="dropbtn">Practice Exercise</button>
+                        <div class="dropdown-content">
+                            <a href="../../Day3/practice/practice.html">practice.html</a>
+                            <a href="../../Day3/practice/practice1.html">practice1.html</a>
+                            
+                        </div>
+                    </div>
+
+                </ul>
+            </li>
+             <li>Day-4
+                <ul>
+                    <div class="dropdown">
+                        <button class="dropbtn">Additional Exercise</button>
+                        <div class="dropdown-content">
+                            <a href="../../Day4/additional/additional.html">additional.html</a>
+                        </div>
+                    </div>
+                    <div class="dropdown">
+                        <button class="dropbtn">Assignment Exercise</button>
+                        <div class="dropdown-content">
+                            <a href="../../Day4/assignment/assignment.html">assignment.html</a>
+                        </div>
+                    </div>
+                    <div class="dropdown">
+                        <button class="dropbtn">Practice Exercise</button>
+                        <div class="dropdown-content">
+                            <a href="../../Day4/practice/practice.html">practice.html</a>
+                        </div>
+                    </div>
+
+                </ul>
+            </li>
+             <li>Day-5
+                <ul>
+                    <div class="dropdown">
+                        <button class="dropbtn">Additional Exercise</button>
+                        <div class="dropdown-content">
+                            <a href="../../../HTML/Nisarg Adalja/Day5/additional/additional.html">additional.html</a>
+                        </div>
+                    </div>
+                    <div class="dropdown">
+                        <button class="dropbtn">Assignment Exercise</button>
+                        <div class="dropdown-content">
+                            <a href="../../../HTML/Nisarg Adalja/Day5/assignments/assignment.html">assignment.html</a>
+                        </div>
+                    </div>
+                    <div class="dropdown">
+                        <button class="dropbtn">Practice Exercise</button>
+                        <div class="dropdown-content">
+                            <a href="../../../HTML/Nisarg Adalja/Day5/practice/practice.html">practice.html</a>
+                        </div>
+                    </div>
+
+                </ul>
+            </li>
+        </ol>
+    </aside>
+    <article>
+    <nav id="navbar">
+        <div><a href="">Home</a></div>
+        <div><a href="#">About</a></div>
+        <div><a href="##">Course</a></div>
+        <div><a href="##">Services</a></div>
+        <div><a href="##">Contact</a></div>
+    </nav>
+    <aside>
+        <h1>This is aside </h1>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Numquam cumque dignissimos fugit magnam facere doloribus odio odit? Provident quod magni illum optio repudiandae ratione asperiores animi sunt, eum pariatur dolorum.</p>
+    </aside>
+    <article>
+        <h1>This is Article</h1>
+        <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Deleniti enim porro iste, ipsam qui laudantium corrupti doloremque obcaecati ipsum eius quam, nesciunt iusto dolore alias! Est sapiente mollitia facere eligendi?</p>
+    </article>
+    <footer>
+        <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quaerat quia voluptatum, suscipit, libero, quos veniam quisquam ut amet quod possimus impedit adipisci doloribus porro dicta necessitatibus nemo labore magnam fugiat!
+        @copyright by Nisarg Adalja
+        </p>
+    </footer>
+    </article>
+    
+</body>
+</html>

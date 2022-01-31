@@ -1,0 +1,46 @@
+
+using System;
+using System.Collections;
+
+class temp {
+
+	static public void Main()
+	{
+
+		Stack my_stack = new Stack();
+
+		my_stack.Push("gordan");
+		my_stack.Push("alvaro");
+		my_stack.Push("dioallo");
+		my_stack.Push("ruben");
+        
+        if (my_stack.Contains("alvaro") == true)
+        {
+            Console.WriteLine("Element is found...!!");
+        }
+ 
+        else
+        {
+            Console.WriteLine("Element is not found...!!");
+        }
+
+		Console.WriteLine("Total elements present in"+
+					" my_stack: {0}", my_stack.Count);
+                    
+                    
+        Console.WriteLine("Topmost element of my_stack "+"is{0}",my_stack.Peek());
+													
+		my_stack.Pop();
+        my_stack.Pop();
+
+		Console.WriteLine("Total elements present in "+
+					"my_stack: {0}", my_stack.Count);
+
+							
+		my_stack.Clear();
+
+		Console.WriteLine("Total elements present in "+
+					"my_stack: {0}", my_stack.Count);
+													
+	}
+}

@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Assignment</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-F3w7mX95PdgyTmZZMECAngseQB83DfGTowi0iMjiWaeVhAn4FJkqJByhZMI3AhiU" crossorigin="anonymous">
+</head>
+<body>
+    <!--Header-->
+    <div class="container text-center mt-2">
+        <h1 class="display1">Assignment</h1>
+        <hr>
+    </div>
+
+    <!--Main-->
+    <div class="container bg-light mt-3 p-2">
+        <p>Q. Date entered by the user should be checked for whether it is a Valid Date or not.</p><br>
+        <form>
+            <div class="form-group">
+                <label for="date" class="control-label">Enter date :</label>
+                <input type="text" class="form-control" id="date" placeholder="MM-DD-YYYY">
+                <small class="form-text text-muted">Date should be in MM-DD-YYY format.</small>
+            </div><br>
+
+            <input type="button" class="btn btn-success" onclick="check_date()" value="Check Date">
+            <input type="reset" class="btn btn-danger" value="Reset">
+        </form>
+    </div>
+
+    <!--JS-->
+    <script>
+
+        //Function to check date is valid or not
+        function check_date(dt)
+        {
+            var dt = document.getElementById("date").value;
+            var pattern = /^(0?[1-9]|1[012])\-(0?[1-9]|[12][0-9]|3[01])\-\d{4}$/;
+            
+            if(pattern.test(dt) == false)
+            {
+                alert("Invalid Date");
+            }
+            else
+            {
+                var date = dt.split("-");
+                var dd = parseInt(date[0]);
+                var mm = parseInt(date[1]);
+                var yyyy = parseInt(date[2]);
+                    
+                //Check month & day & year
+                if (mm < 1 || mm > 12 || yyyy <= 0000 || yyyy >= 9999)
+                {
+                    alert("Invalid Date!");
+                }
+                else if (mm == 2)
+                {
+                    //Check leap year
+                    if (((yyyy%4 == 0 && yyyy%100 != 0) || (yyyy%400 == 0)) && (dd >= 1 && dd < 30))
+                    {
+                        alert("Valid Date!");
+                    }
+                    else
+                    {
+                        alert("Invalid Date");
+                    }
+                }
+                //Month having 30 days
+                else if ((mm == 4 || mm == 6 || mm == 9 || mm == 11) && (dd >=1 && dd <=30))
+                {
+                    alert("Valid Date");
+                }
+                //Month having 31 days
+                else if ((mm == 1 || mm == 3 || mm == 5 || mm == 7 || mm == 8 || mm == 10 || mm == 12)  && (dd >=1 && dd <=31))
+                {
+                    alert("Valid Date");
+                } 
+                else
+                {
+                    alert("Invalid Date");
+                }
+            }
+        }
+    </script>
+</body>
+</html>

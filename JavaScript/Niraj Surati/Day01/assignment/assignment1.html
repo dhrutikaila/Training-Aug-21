@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Assignment-1</title>
+    <link rel="stylesheet" href="../assets/css/bootstrap.min.css">
+</head>
+<body>
+    <div class="container">
+        <div class="h2 text-center my-4">Calculator Using Javascript</div>
+        <div class="row justify-content-sm-center">
+            <form class="col-md-6 justify-content-sm-center"   style="border:1px solid black">
+                <div class="d-sm-flex w-sm-100 justify-content-sm-center">
+                    <div class="m-3 w-sm-50">
+                        <label class="form-label" for="Number 1">Number 1</label>
+                        <input type="text" class="form-control" id="n1" placeholder="Enter First Number">
+                        <div id="chkNum1" class="text-danger">Please Enter Number</div>        
+                    </div>
+                    <div class="m-3 w-sm-50 " >
+                        <label class="form-label" for="Number 2">Number 2</label>
+                        <input type="text" class="form-control"  id="n2" placeholder="Enter Second Number">
+                        <div id="chkNum2" class="text-danger">Please Enter Number</div>
+                    </div>
+                </div>
+                <div class="m-3 ">
+                    <fieldset class="form-group d-md-flex justify-content-sm-center">
+                        <div class="form-check px-md-3">
+                            <label class="form-check-label">
+                                <input type="radio" name="Calc" value="1" class="form-check-input">Addition
+                            </label>
+                        </div>
+                        <div class="form-check px-md-3">
+                            <label class="form-check-label">
+                                <input type="radio" name="Calc" value="2" class="form-check-input">Subtraction
+                            </label>
+                        </div>
+                        <div class="form-check px-md-3">
+                            <label class="form-check-label">
+                                <input type="radio" name="Calc"  value="3" class="form-check-input">Multiplication
+                            </label>
+                        </div>
+                        <div class="form-check px-md-3">
+                            <label class="form-check-label">
+                                <input type="radio" name="Calc"  value="4" class="form-check-input">Division
+                            </label>
+                        </div>
+                    </fieldset>
+                    <div id="chkRadio" class="text-danger">Please Select Option</div>  
+                </div>
+                <div class="m-3 text-center">
+                    <button type="button" onclick="calculate(n1.value,n2.value,Calc.value)" class="btn btn-success">Calculate</button>
+                    <button type="button" onclick="clearScreen()" class="btn btn-info">Clear</button>
+                </div>
+            </form>
+        </div>
+        <div class="row justify-content-sm-center my-3">
+            <div class="col-md-6  d-flex flex-sm-row justify-content-sm-evenly bg-warning"   style="border:1px solid black">
+                <div class="h5 my-3">Result:</div>
+                <div class="h5 my-3" id="result"></div>
+            <div>
+        </div>
+    </div>
+    
+    <script src="../assets/js/bootstrap.min.js"></script>
+    <script>
+        document.getElementById('chkNum1').style.display="none";
+        document.getElementById('chkNum2').style.display="none";
+        document.getElementById('chkRadio').style.display="none";
+        document.getElementById('result').innerHTML ="";
+        function calculate(n1,n2,i){
+            document.getElementById('result').innerHTML ="";
+            document.getElementById('chkNum1').style.display="none";
+            document.getElementById('chkNum2').style.display="none";
+            document.getElementById('chkRadio').style.display="none";
+            n1 = parseInt(n1);
+            n2 = parseInt(n2);
+            i = parseInt(i);
+            if(isNaN(n1)){
+                document.getElementById('chkNum1').style.display="block";
+                return
+            }
+            if(isNaN(n2)){
+                document.getElementById('chkNum2').style.display="block";
+                return
+            }
+            if(isNaN(i)){
+                document.getElementById('chkRadio').style.display="block";
+                return
+            }
+            switch(i){
+                case 1:
+                    document.getElementById('result').innerHTML =  n1 + n2;
+                    break;
+                case 2:
+                    document.getElementById('result').innerHTML =  n1 - n2;
+                    break;
+                case 3:
+                    document.getElementById('result').innerHTML =  n1 * n2;
+                    break;
+                case 4:
+                    document.getElementById('result').innerHTML =  n1 / n2;
+                    break; 
+                default:
+                    document.getElementById('result').innerHTML = "Error";
+            }
+        }
+        function clearScreen(){
+            document.getElementById('chkNum1').style.display="none";
+            document.getElementById('chkNum2').style.display="none";
+            document.getElementById('chkRadio').style.display="none";
+            document.getElementById('n1').value = "";
+            document.getElementById('n2').value = "";
+            document.querySelector('input[name="Calc"]:checked').setAttribute("checked",false);
+            //console.log(document.querySelector('input[name="Calc"]:checked').value);
+            document.querySelector('input[name="Calc"]:checked').checked = false;
+            document.getElementById('result').innerHTML ="";
+        }
+    </script>
+</body>
+</html>

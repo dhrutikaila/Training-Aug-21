@@ -1,0 +1,39 @@
+<!-- Define a function called callback which receives an argument and prints the square of that number. -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Practice1</title>
+</head>
+<body>
+    <center>
+
+       
+            <h1> Practice1</h1>
+            <label for="number">Enter Number : </label>
+            <input type="number" id="number" >
+            
+            <p id="square"></p>
+            <button  onclick="squareNumber()">Square</button>
+       
+    </center>
+</body>
+<script>
+    function squareNumber(){
+
+function mySquare (num, callback){
+    callback(num*num);
+}
+
+function print(square){
+    document.getElementById('square').innerText = "Square : " + square;
+}
+
+number =  document.getElementById('number').value;
+mySquare(number,print);
+}
+
+</script>
+</html>

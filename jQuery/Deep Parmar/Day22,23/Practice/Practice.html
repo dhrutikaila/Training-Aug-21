@@ -1,0 +1,380 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Practice</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <script src="../../jQuery/jQuery.js"></script>
+    <script>
+        $(document).ready(function () {
+
+            //     <!-- jQuery Selectors -->
+            // <!-- The element Selector -->
+            $("button").click(function () {
+                $("p").hide();
+                //Selectors
+                // id selector
+                $("#test").hide();
+                // class selector
+                $(".test").hide();
+            });
+
+            // Events
+            $("p").click(function () {
+                $(this).hide();
+            });
+
+            $("#p1").mouseenter(function () {
+                alert("You entered p1!");
+            });
+            $(".p2").dblclick(function () {
+                $(this).hide();
+            });
+            $("#q1").mouseleave(function () {
+                alert("Bye! You now leave p1!");
+            });
+            $("#q2").mousedown(function () {
+                alert("Mouse down over p1!");
+            });
+
+            $("#p3").mouseup(function () {
+                alert("Mouse up over p1!");
+            });
+
+            // The hover() method takes two functions and is a combination of the mouseenter() and mouseleave() methods.
+            $("#p4").hover(function () {
+                alert("You can hover this line");
+            }, function () {
+                alert("You can leave this line")
+            });
+
+            $("input").focus(function () {
+                $(this).css("background-color", "yellow")
+            })
+            $("input").blur(function () {
+                $(this).css("background-color", "green")
+            })
+
+
+            $("#on").on({
+                mouseenter: (function () {
+                    $(this).css("background-color", "lightgray")
+                }),
+                mouseleave: (function () {
+                    $(this).css("background-color", "lightblue")
+                }),
+                click: (function () {
+                    $(this).css("background-color", "yellow")
+                })
+            })
+
+            $("#hide").click(function () {
+                $("p").hide();
+            });
+            $("#show").click(function () {
+                $("p").show();
+            })
+
+            $("#slow").click(function () {
+                $("p").hide(1000);
+            })
+
+            $("#Toggle").click(function () {
+                $("p").toggle("slow");
+            })
+
+            // Hide, show, Toggle, fadeIn, fadeout
+            $("#fade").click(function () {
+                $("#div1").fadeIn();
+                $("#div2").fadeIn("slow");
+                $("#div3").fadeIn(3000);
+            });
+            $("#fadeout").click(function () {
+                $("#div1").fadeOut()
+                $("#div2").fadeOut("slow")
+                $("#div3").fadeOut(3000)
+            })
+            $("#fadeToggle").click(function () {
+                $("#div1").fadeToggle()
+                $("#div2").fadeToggle("slow")
+                $("#div3").fadeToggle(3000)
+            })
+            $("#fadeto").click(function () {
+                $("#div1").fadeTo("slow", 0.18)
+                $("#div2").fadeTo("slow", 0.15)
+                $("#div3").fadeTo("slow", 0.12)
+            })
+
+            //jQuery DOM Manipulation
+            // text()
+            $("#btn1").click(function () {
+                alert("Text: " + $("#test2").text());
+            });
+
+            // html()
+            $("#btn2").click(function () {
+                alert("HTML: " + $("#test2").html());
+            });
+            // val()
+            $("#btn3").click(function () {
+                alert("value: " + $("#test4").val());
+            })
+
+            // attr()
+            $("#btn4").click(function () {
+                alert($("#ts").attr("href"));
+            });
+
+            $("#btn5").click(function () {
+                $("#test5").text("Hello world!");
+            });
+            $("#btn6").click(function () {
+                $("#test6").html("<b>Hello world!</b>");
+            });
+            $("#btn7").click(function () {
+                $("#test7").val("Dolly Duck");
+            });
+
+            $("#btn8").click(function () {
+                $("#ts").attr("href", "https://www.w3schools.com/")
+            })
+
+            //jQuery Add Elements
+            // append()
+            $("#btn11").click(function () {
+                $("div#new").append(" <b>Appended text</b>.");
+            });
+
+            $("#btn12").click(function () {
+                $("ol").append("<li>Appended item</li>");
+            });
+
+            // prepend()
+            $("#btn9").click(function () {
+                $(".new").prepend("<b>Prepended text</b>. ");
+            });
+            $("#btn10").click(function () {
+                $("ol").prepend("<li>Prepended item</li>");
+            });
+            // after()
+            // before()
+            $("#btn13").click(function () {
+                $("img").before("<b>Before</b>");
+            });
+
+            $("#btn14").click(function () {
+                $("img").after("<i>After</i>");
+            });
+            // remove()
+            $("#btn15").click(function () {
+                $("p").remove(".test, .demo");
+            });
+            $("#btn16").click(function () {
+                $("#div4").remove();
+            })
+            // empty()
+            $("#btn17").click(function () {
+                $("#div4").empty();
+            })
+            // setting CSS
+            // css()
+            $("#btn18").click(function () {
+                $("div#css").css("background-color", "yellow")
+            })
+
+            //iterate
+            // $.each()
+
+            $("div").each(function (i) {
+                if (this.style.color !== "blue") {
+                    this.style.color = "blue";
+                } else {
+                    this.style.color = "";
+                }
+            });
+
+
+        });
+    </script>
+    <style>
+        .test {
+            color: red;
+            font-size: 20px;
+        }
+
+        .demo {
+            color: green;
+            font-size: 25px;
+        }
+    </style>
+</head>
+
+<body>
+
+    <h2 style="height: 5vh; color:cadetblue; text-align:center" class="mt-5">Practice</h2>
+
+    <div class="container border mt-5 w-50">
+        <!-- jQuery Selectors -->
+        <!-- The element Selector -->
+
+        <p class="text-muted">This is a paragraph.</p>
+        <p class="text-muted">This is element Selector paragraph.</p>
+
+        <!-- id selector -->
+        <div class="text-muted" id="test">This is id selector paragraph</div>
+        <br>
+        <!-- class selector -->
+        <div class="text-muted" class="test">This is class selector paragraph.</div>
+        <button class="btn btn-primary">Click me to hide paragraphs</button>
+        <hr>
+        <!-- jQuery Event -->
+        <br>
+        <p class="text-muted">If you click on me, I will disappear.</p>
+
+        <br>
+        <div class="text-muted" class="p2">If you double-click on me, I will disappear.</div>
+
+        <br>
+        <p class="text-muted" id="p1">Enter this paragraph.</p>
+
+        <br>
+        <p class="text-muted" id="q1">Leave this paragraph.</p>
+
+
+        <br>
+        <p class="text-muted" id="q2">Mouse down over</p>
+
+        <br>
+        <p class="text-muted" id="p3">Mouse down over</p>
+
+        <br>
+        <p class="text-muted" id="p4">hover this line</p>
+
+        <br>
+        Name: <input type="text" name="fullname"><br>
+        Email: <input type="text" name="email">
+
+        <br>
+        <br>
+        <div class="text-muted" id="on">Click or move the mouse pointer over this paragraph.</div>
+
+        <hr><br>
+        <!-- Hide, Show, Toggle, Slide, Fade, and Animate.  -->
+        <p class="text-muted">If you click on the "Hide" button, I will disappear.</p>
+        <p>This is a paragraph with little content.</p>
+
+        <button id="hide" class="btn btn-primary">Hide</button>
+        <button id="show" class="btn btn-primary">Show</button>
+
+        <button id="slow" class="btn btn-primary">slowHide</button>
+
+        <br>
+        <br>
+        <button id="Toggle" class="btn btn-primary">Toggle between hiding and showing the paragraphs</button>
+
+
+        <br><br>
+        <button id="fade" class="btn btn-primary">Click to fade in boxes</button><br><br>
+        <button id="fadeout" class="btn btn-primary">Click to fade out boxes</button><br><br>
+        <button id="fadeToggle" class="btn btn-primary">Click to fade in/out boxes</button><br><br>
+        <button id="fadeto" class="btn btn-primary">Click to fade boxes</button><br><br>
+
+
+        <div id="div1" style="width:80px;height:80px;background-color:red;"></div><br>
+        <div id="div2" style="width:80px;height:80px;background-color:green;"></div><br>
+        <div id="div3" style="width:80px;height:80px;background-color:blue;"></div>
+
+        <br>
+        <hr><br>
+        <!-- jQuery DOM Manipulation -->
+        <p class="text-muted" id="test2">This is some <b>bold</b> text in a paragraph.</p>
+
+        <button id="btn1" class="btn btn-primary">Show Text</button>
+        <button id="btn2" class="btn btn-primary">Show HTML</button>
+        <br><br>
+
+        <p>Name: <input type="text" id="test4" value="Mickey Mouse"></p><br>
+        <button id="btn3" class="btn btn-primary">Show Value</button>
+        <br>
+
+        <p><a class="text-muted" href="https://tutorials.rxtrainees.radixweb.net/training-plan/" id="ts">rxtrainees</a>
+        </p>
+        <button id="btn4" class="btn btn-primary">Show href Value</button>
+
+        <br>
+        <p class="text-muted" id="test5">This is a paragraph.</p>
+        <p class="text-muted" id="test6">This is another paragraph.</p>
+
+        <p>Input field: <input type="text" id="test7" value="Mickey Mouse"></p>
+
+        <button id="btn5" class="btn btn-primary">Set Text</button>
+        <button id="btn6" class="btn btn-primary">Set HTML</button>
+        <button id="btn7" class="btn btn-primary">Set Value</button>
+        <button id="btn8" class="btn btn-primary">Set attribute</button>
+
+        <br>
+        <hr>
+        <!-- jQuery Add Elements -->
+        <br>
+        <div id="new">This is a paragraph.</div>
+        <div class="new">This is a paragraph.</div>
+
+        <ol>
+            <li>List item 1</li>
+            <li>List item 2</li>
+            <li>List item 3</li>
+        </ol>
+
+        <button id="btn11" class="btn btn-primary">Append text</button>
+        <button id="btn12" class="btn btn-primary">Append list items</button> <br><br>
+        <button id="btn9" class="btn btn-primary">Prepend text</button>
+        <button id="btn10" class="btn btn-primary">Prepend list item</button>
+        <br>
+        <br>
+        <img src="https://picsum.photos/200/300" alt="jQuery" width="100" height="140"><br><br>
+        <button id="btn13" class="btn btn-primary">Insert before</button>
+        <button id="btn14" class="btn btn-primary">Insert after</button>
+
+        <br>
+        <br>
+        <p class="test">This is p element with class="test".</p>
+        <p class="test">This is p element with class="test".</p>
+        <p class="demo">This is p element with class="demo".</p>
+
+        <button id="btn15" class="btn btn-primary">Remove all p elements with class="test" and class="demo"</button>
+        <br><br>
+        <div id="div4" style="height:100px;width:300px;border:1px solid black;background-color:yellow;">
+
+            This is some text in the div.
+            <p>This is a paragraph in the div.</p>
+            <p>This is another paragraph in the div.</p>
+
+        </div>
+        <br>
+        <button id="btn16" class="btn btn-primary">Remove the div element</button>
+        <button id="btn17" class="btn btn-primary">Empty the div element</button>
+
+        <hr><br>
+        <!-- css() -->
+        <div id="css" style="background-color:#ff0000">This is a paragraph.</div>
+        <br><br>
+        <button id="btn18" class="btn btn-primary">Set background-color of p</button>
+        <hr><br>
+        <!-- iterate
+            $.each() -->
+        <div>Click here</div>
+        <div>to iterate through</div>
+        <div>these divs.</div>
+
+    </div>
+
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+        crossorigin="anonymous"></script>
+</body>
+
+</html>

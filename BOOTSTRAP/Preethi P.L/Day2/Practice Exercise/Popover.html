@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bootstrap Grid</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-F3w7mX95PdgyTmZZMECAngseQB83DfGTowi0iMjiWaeVhAn4FJkqJByhZMI3AhiU" crossorigin="anonymous">
+    
+</head>
+<body>
+    <div class="container mt-3">
+        <h2>Popovers</h2><br><br><br>
+        <button class="btn btn-danger" data-bs-toggle="popover" data-bs-placement="top" 
+        title="Popover title" data-bs-content="Lorem ipsum dolor sit amet consectetur.">
+            Toggle popover
+        </button>
+        
+        <button class="btn btn-success" data-bs-toggle="popover" data-bs-placement="right" 
+        title="Popover title" data-bs-content="Lorem ipsum dolor sit amet consectetur.">
+            Toggle popover
+        </button>
+        
+        <button class="btn btn-primary" data-bs-toggle="popover" data-bs-placement="left" 
+        title="Popover title" data-bs-content="Lorem ipsum dolor sit amet consectetur.">
+            Toggle popover
+        </button>
+        
+        <button class="btn btn-warning" data-bs-toggle="popover" data-bs-placement="bottom" 
+        title="Popover title" data-bs-content="Lorem ipsum dolor sit amet consectetur.">
+            Toggle popover
+        </button>
+        <br><br><br>
+
+        <!--Dismissible Popover-->
+        <h2>Dismissible Popover</h2>
+
+        <button id="mypopover" class="btn btn-secondary" data-bs-toggle="popover" data-bs-placement="bottom" 
+        title="Popover title" data-bs-content="Lorem ipsum dolor sit amet consectetur." data-bs-trigger="focus">
+            Toggle popover
+        </button><br><br><br>
+
+        <!--Controll with js-->
+        <h2>Control with js</h2>
+
+        <button class="btn btn-info" onclick="showPopover()">Show Popover</button>
+        <button class="btn btn-info" onclick="hidePopover()">Hide Popover</button>
+        <button class="btn btn-info" onclick="togglePopover()">Toggle Popover</button>
+    </div>
+    <!-- Bootstrap Bundle with Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-/bQdsTh/da6pkI1MST/rWKFNjaCP5gBSY4sEBT38Q/9RBh9AH40zEOg7Hlq2THRZ" crossorigin="anonymous"></script>
+    <!-- <script type="text/javascript" src="https://code.jquery.com/jquery-1.7.1.min.js"></script> --> -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+    <script>
+        $(document).ready(function(){
+          $('[data-bs-toggle="popover"]').popover();
+        });
+
+        function showPopover(){
+            $('#mypopover').popover('show');
+        }
+
+        function hidePopover(){
+            $('#mypopover').popover('hide');
+        }
+
+        function togglePopover(){
+            $('#mypopover').popover('toggle');
+        }
+
+        //Popover events
+
+        $('#myPopover').on('show.bs.popover',function(){
+            console.log('Popover Show');
+        });
+
+        $('#myPopover').on('shown.bs.popover',function(){
+            console.log('Popover Shown');
+        });
+
+        $('#myPopover').on('hide.bs.popover',function(){
+            console.log('Popover Hide');
+        });
+
+        $('#myPopover').on('hidden.bs.popover',function(){
+            console.log('Popover Hidden');
+        });
+    </script>
+
+        
+    
+</body>
+</html>

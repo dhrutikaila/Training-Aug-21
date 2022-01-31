@@ -1,0 +1,310 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <link rel="stylesheet" href="./Assets/css/style.css">
+    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css"
+        integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous" />
+    <link rel="icon" href="./Assets/images/udemyIcon.png" type="image/icon type">
+    <title>Python</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+</head>
+
+<body>
+    <nav class="navbar navbar-expand-lg navbar-light bg-white p-3">
+        <div class="container-fluid">
+            <!-- <a class="navbar-brand mx-3 logo h1 text-primary" href="./index.html">Udemy</a> -->
+            <a class="navbar-brand mx-3 logo h1 text-primary" href="./index.html"><img
+                    src="./Assets/images/logo-udemy.svg" height="44px" width="100px" alt=""></a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+                aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav mb-2 me-auto mb-lg-0">
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button"
+                            data-bs-toggle="dropdown" aria-expanded="false">
+                            Categories
+                        </a>
+                        <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                            <li><a class="dropdown-item" href="./JScourse.html">Javascript</a></li>
+                            <li><a class="dropdown-item" href="./pythonCourse.html">Python</a></li>
+                            <li><a class="dropdown-item" href="./webCourses.html">Web development</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item">
+                        <div class="input-icons">
+                            <i class="fas fa-search icon btn" type="button" onclick="myfun()"></i>
+                            <input type="text" class="form-control input-field nav-link"
+                                placeholder="Search for anything" id="searchbar" aria-label="Username"
+                                aria-describedby="basic-addon1" />
+                        </div>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" target="_blank" href="./udemyBusiness.html">Udemy Business</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" target="_blank" href="./teachOnUdemy.html">Teach on Udemy</a>
+                    </li>
+                </ul>
+                <form class="d-flex">
+                    <a class="nav-link" href="./cart.html"><i class="fas fa-shopping-cart"></i></a>
+                    <button class="btn btn-outline-dark me-2" onclick="openSignin()"> Log In </button>
+                    <button class="btn btn-dark me-2" onclick="openSignup()">Sign Up</button>
+                    <button class="btn btn-outline-dark" type="button" data-bs-target="#langModal"
+                        data-bs-toggle="modal"><i class="fas fa-globe"></i></button>
+                </form>
+            </div>
+        </div>
+    </nav>
+
+    <!-- header -->
+    <div class="container my-5">
+        <h2>Results for Python</h2>
+        <div class="row my-5">
+            <div class="col-sm-3 col-12">
+                <h3>Filter</h3>
+                <h4>Price</h4>
+                <div class="form-check">
+                    <input class="form-check-input" name="price" type="checkbox" id="inlineCheckbox1" value="option1">
+                    <label class="form-check-label" for="inlineCheckbox1"> &lt; 401 </label>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input" name="price" type="checkbox" id="inlineCheckbox2" value="option2">
+                    <label class="form-check-label" for="inlineCheckbox2">401 - 1000</label>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input" name="price" type="checkbox" id="inlineCheckbox3" value="option3">
+                    <label class="form-check-label" for="inlineCheckbox3">&gt; 1000</label>
+                </div>
+                <button type="button" class="btn btn-primary my-2" onclick="applyFilter()">Apply</button>
+                <button type="button" class="btn btn-primary my-2" onclick="removeFilter()">Clear</button>
+            </div>
+            <div class="col-sm-9 col-12 " id="pythoncourses">
+                <!-- <div class="d-flex flex-column flex-sm-row align-items-center border border-2 my-2">
+                    <div class="flex-shrink-0 border border-right">
+                        <img src="./Assets/images/pythonCourse/p1.jpg" class="img-fluid" alt="...">
+                    </div>
+                    <div class="flex-grow-1 ms-3">
+                        <h3>Title</h3>
+                        <p>₹Price</p>
+                        <button class="btn btn-success" type="button" onclick="addtoCart(val)" >Add to cart</button>
+                    </div>
+                </div> -->
+            </div>
+        </div>
+    </div>
+
+    <!-- modal -->
+    <div class="modal fade" id="langModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel">Choose a language</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <div class="row">
+                        <div class="col-12 col-sm-6 col-md-4">
+                            <ul class="list-unstyled">
+                                <li>English</li>
+                                <li>Deutsch</li>
+                                <li>Italiano</li>
+                            </ul>
+                        </div>
+                        <div class="col-12 col-sm-6 col-md-4">
+                            <ul class="list-unstyled">
+                                <li>Polski</li>
+                                <li>Indonesian</li>
+                                <li>Nederlands</li>
+                            </ul>
+                        </div>
+                        <div class="col-12 col-sm-6 col-md-4">
+                            <ul class="list-unstyled">
+                                <li>Portugues</li>
+                                <li>Romana</li>
+                                <li>Gujarati</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <footer class="bg-dark text-white p-5" id="IndexFooter">
+        <div class="row">
+            <div class="col-sm-3 col-12">
+                <ul class="list-unstyled">
+                    <li><a href="">Udemy Business</a></li>
+                    <li><a href="">Teach on Udemy</a></li>
+                    <li><a href="">Get the app</a></li>
+                    <li><a href="">About Us</a></li>
+                    <li><a href="">Contact Us</a></li>
+                </ul>
+            </div>
+            <div class="col-sm-3 col-12">
+                <ul class="list-unstyled">
+                    <li><a href="">Career</a></li>
+                    <li><a href="">Blog</a></li>
+                    <li><a href="">Help and Support</a></li>
+                    <li><a href="">Affiliate</a></li>
+                </ul>
+            </div>
+            <div class="col-sm-3 col-12 me-md-auto">
+                <ul class="list-unstyled">
+                    <li><a href="">Terms</a></li>
+                    <li><a href="">Privacy policy</a></li>
+                    <li><a href="">Sitemap</a></li>
+                </ul>
+            </div>
+            <div class="col-sm-3 col-12 text-sm-end">
+                <button class="btn btn-outline-light" data-bs-target="#langModal" data-bs-toggle="modal"><i
+                        class="fas fa-globe"></i> English</button>
+            </div>
+        </div>
+        <div class="row mt-5 justify-content-between">
+            <div class="col-sm-4">
+                <img src="./Assets/images/logo-udemy-inverted.svg" height="44px" width="100px" alt="">
+            </div>
+            <div class="col-sm-4 text-sm-end">
+                <p> © Copyrigt since 2021</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="./Assets/js/courses.js"></script>
+
+    <script>
+
+        $(document).ready(function () {
+            console.log(JSON.parse(localStorage.getItem("pythonCourses")))
+            var jsc = JSON.parse(localStorage.getItem("pythonCourses"));
+            var js = "";
+            jsc.forEach((j) => {
+                js += `
+                <div class="d-flex flex-column flex-sm-row align-items-center border border-2 my-2">
+                    <div class="flex-shrink-0 border border-right">
+                        <img src="${j.img}" class="img-fluid" alt="...">
+                    </div>
+                    <div class="flex-grow-1 ms-3">
+                        <h4 class = 'text-justify' >${j.heading}</h4>
+                        <p>₹${j.price}</p>
+                        <button class="btn btn-success" type="button" onclick="addtoCart(${j.id})" >Add to cart</button>
+                    </div>
+                </div>
+            `
+            })
+            document.getElementById('pythoncourses').innerHTML = js;
+        })
+
+        function addtoCart(n) {
+            var x = JSON.parse(localStorage.getItem("pythonCourses"));
+            x.forEach((y) => {
+                if (y.id == n) {
+                    localStorage.setItem(`cart${n}`, JSON.stringify(y));
+                    alert('Course added to cart')
+                }
+            })
+        }
+
+        function applyFilter() {
+            var arr = [];
+            $("input:checkbox[name=price]:checked").each(function () {
+                arr.push($(this).val());
+            });
+            console.log(arr);
+            if (arr.length != 0) {
+                document.getElementById('pythoncourses').innerHTML = "";
+                var jsc = JSON.parse(localStorage.getItem("pythonCourses"));
+                var js = "";
+                for (let i = 0; i < arr.length; i++) {
+                    if (arr[i] == 'option1') {
+                        jsc.forEach((j) => {
+                            if (j.price < 401) {
+                                js += `
+                                <div class="d-flex flex-column flex-sm-row align-items-center border border-2 my-2">
+                                    <div class="flex-shrink-0 border border-right">
+                                        <img src="${j.img}" class="img-fluid" alt="...">
+                                    </div>
+                                    <div class="flex-grow-1 ms-3">
+                                        <h4 class = 'text-justify' >${j.heading}</h4>
+                                        <p>₹${j.price}</p>
+                                        <button class="btn btn-success" type="button" onclick="addtoCart(${j.id})" >Add to cart</button>
+                                    </div>
+                                </div>
+                                `
+                            }
+                        })
+                    } else if (arr[i] == 'option2') {
+                        jsc.forEach((j) => {
+                            if (j.price > 400 && j.price < 1001) {
+                                js += `
+                                <div class="d-flex flex-column flex-sm-row align-items-center border border-2 my-2">
+                                    <div class="flex-shrink-0 border border-right">
+                                        <img src="${j.img}" class="img-fluid" alt="...">
+                                    </div>
+                                    <div class="flex-grow-1 ms-3">
+                                        <h4 class = 'text-justify' >${j.heading}</h4>
+                                        <p>₹${j.price}</p>
+                                        <button class="btn btn-success" type="button" onclick="addtoCart(${j.id})" >Add to cart</button>
+                                    </div>
+                                </div>
+                                `
+                            }
+                        })
+                    } else {
+                        jsc.forEach((j) => {
+                            if (j.price > 1000) {
+                                js += `
+                                <div class="d-flex flex-column flex-sm-row align-items-center border border-2 my-2">
+                                    <div class="flex-shrink-0 border border-right">
+                                        <img src="${j.img}" class="img-fluid" alt="...">
+                                    </div>
+                                    <div class="flex-grow-1 ms-3">
+                                        <h4 class = 'text-justify' >${j.heading}</h4>
+                                        <p>₹${j.price}</p>
+                                        <button class="btn btn-success" type="button" onclick="addtoCart(${j.id})" >Add to cart</button>
+                                    </div>
+                                </div>
+                                `
+                            }
+                        })
+                    }
+                }
+                document.getElementById('pythoncourses').innerHTML = js;
+            }
+        }
+
+        function removeFilter() {
+            location.reload();
+        }
+
+        // sign in window
+        function openSignin() {
+            window.open('./Signin.html')
+        }
+
+        // sign up window
+        function openSignup() {
+            window.open('./Signup.html')
+        }
+    </script>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+        crossorigin="anonymous"></script>
+</body>
+
+</html>

@@ -1,0 +1,122 @@
+body
+{
+    background-color: azure;
+    border: 5px solid black;
+    
+}
+
+h1
+{
+    text-align: center;
+    color:blueviolet;
+}
+h2
+{
+    text-align: center;
+    color:blue;
+}
+h3
+{
+    text-align: center;
+    color:purple;
+}
+h4
+{
+    text-align: left;
+    color:red;
+    margin: 10px;
+    font-size: large; 
+    margin-top: 10px; 
+}
+table
+{
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+    border: 1px solid green;
+    background-color: khaki;
+    color: crimson;
+    width: 800px;
+    height: 200px;
+}
+#proficient
+{
+    border: 2px solid black;
+    display: inline-block;
+    margin: 5px;
+    padding: 5px;
+    color: black;
+    background-color: aqua;
+}
+#intermediate
+{
+    border: 2px solid black;
+    display: inline-block;
+    margin-left: 50px;
+    padding: 10px;
+    color: black;
+    background-color: aqua;
+}
+#basics
+{
+    border: 2px solid black;
+    display: inline-block;
+    margin-left: 50px;
+    padding: 10px;
+    color: black;
+    background-color: aqua;
+}
+#database
+{
+    border: 2px solid black;
+    display: inline-block;
+    margin-left: 50px;
+    padding: 10px;
+    color: black;
+    background-color: aqua;
+}
+.skills
+{
+    margin-left: 380px;
+    
+}
+p
+{
+    border: 2px solid black;
+    margin: 10px;
+    display: inline-block;
+    width: 45%;
+    font-size: 18px;
+    color:maroon;
+    background-color: gainsboro;
+}
+video
+{
+    border: 2px solid black;
+    margin-top: 10px;
+    display: inline-block;
+    width: 45%;
+    font-size: 18px;
+    color:maroon;
+    background-color: gainsboro;
+}
+.awards 
+{
+    border: 3px solid black;
+    margin: 5px;
+    padding: 5px;
+    color:darkblue;
+    font-size: 18px;
+}
+i
+{
+color: red;
+}
+#ec
+{
+    border: 2px solid black;
+    margin: 10px;
+    font-size: 18px;
+    color:maroon;
+    background-color: gainsboro;
+}

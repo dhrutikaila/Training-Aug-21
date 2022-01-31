@@ -1,0 +1,460 @@
+{
+    "Bestsellers": [{
+            "Id": 1,
+            "Img_Src": "https://docs.google.com/uc?id=1598n_BwXSs15PGGxihSCRH533gfSgNUP",
+            "Pizza_Type": "https://docs.google.com/uc?id=1O-YlCvu6OSKx2ymKPy7qBzmOeV_nNjDH",
+            "Pizza_Name": "The Unthinkable Pizza",
+            "Description": "Loaded with Plant Based Protein topping along with Black Olives & Red Paprika enjoy this unique 100%",
+            "Price": "459"
+        },
+        {
+            "Id": 2,
+            "Img_Src": "https://docs.google.com/uc?id=1v7I5Lt-g4H0MdseqZ-UK0TYc3Ai0sdLD",
+            "Pizza_Type": "https://docs.google.com/uc?id=1O-YlCvu6OSKx2ymKPy7qBzmOeV_nNjDH",
+            "Pizza_Name": "Margherita",
+            "Description": "A classic delight with 100% Real mozzarella cheese",
+            "Price": "199"
+        },
+        {
+            "Id": 3,
+            "Img_Src": "https://docs.google.com/uc?id=1l1JaIwMjAu4ubv2zNEeJdzwS71au-gB1",
+            "Pizza_Type": "https://docs.google.com/uc?id=1O-YlCvu6OSKx2ymKPy7qBzmOeV_nNjDH",
+            "Pizza_Name": "Farmhouse",
+            "Description": "Delightful combination of onion, capsicum, tomato & grilled mushroom",
+            "Price": "694"
+        },
+        {
+            "Id": 4,
+            "Img_Src": "https://docs.google.com/uc?id=1k5ftsHV1EUcjoXPR6_MOApjc61BjgHFP",
+            "Pizza_Type": "https://docs.google.com/uc?id=1O-YlCvu6OSKx2ymKPy7qBzmOeV_nNjDH",
+            "Pizza_Name": "Veg Extravaganza",
+            "Description": "Black olives, capsicum, onion, grilled mushroom, corn, tomato, jalapeno & extra cheese",
+            "Price": "459"
+        },
+        {
+            "Id": 5,
+            "Img_Src": "https://docs.google.com/uc?id=15e0JHmYrGiyYNuv9yAMRMqGpi1kDLBm7",
+            "Pizza_Type": "https://docs.google.com/uc?id=1O-YlCvu6OSKx2ymKPy7qBzmOeV_nNjDH",
+            "Pizza_Name": "Cheese n Corn",
+            "Description": "Sweet & Juicy Golden corn and 100% real mozzarella cheese in a delectable combination",
+            "Price": "309"
+        },
+        {
+            "Id": 6,
+            "Img_Src": "https://docs.google.com/uc?id=1q4VgE8oafb_9txHnJcIdLh4Xdv5S0jef",
+            "Pizza_Type": "https://docs.google.com/uc?id=1O-YlCvu6OSKx2ymKPy7qBzmOeV_nNjDH",
+            "Pizza_Name": "Veggie Paradise",
+            "Description": "The awesome foursome! Golden corn, black olives, capsicum, red paprika",
+            "Price": "399"
+        },
+        {
+            "Id": 7,
+            "Img_Src": "https://docs.google.com/uc?id=1OBOE61_4-Sl0HXBFKDIt4-Q2UXkqSU-8",
+            "Pizza_Type": "https://docs.google.com/uc?id=1wvdcu7_CRbIsO1f1fFzDYv_I-WiSbFGB",
+            "Pizza_Name": "Pepper Barbecue Chicken",
+            "Description": "Pepper barbecue chicken for that extra zing",
+            "Price": "399"
+        }
+    ],
+    "VegPizza": [{
+            "Id": 1,
+            "Img_Src": "https://docs.google.com/uc?id=1598n_BwXSs15PGGxihSCRH533gfSgNUP",
+            "Pizza_Type": "https://docs.google.com/uc?id=1O-YlCvu6OSKx2ymKPy7qBzmOeV_nNjDH",
+            "Pizza_Name": "The Unthinkable Pizza",
+            "Description": "Loaded with Plant Based Protein topping along with Black Olives & Red Paprika enjoy this unique 100%",
+            "Price": "459"
+        },
+        {
+            "Id": 2,
+            "Img_Src": "https://docs.google.com/uc?id=1qxleZmnnS-htanIuq1pG4zgGQIl3zYqx",
+            "Pizza_Type": "https://docs.google.com/uc?id=1O-YlCvu6OSKx2ymKPy7qBzmOeV_nNjDH",
+            "Pizza_Name": "The Cheese Dominator",
+            "Description": "Loaded with 1 Pound of Mozzarella and gooey Liquid Cheese on a Classic Large",
+            "Price": "579"
+        },
+        {
+            "Id": 3,
+            "Img_Src": "https://docs.google.com/uc?id=1qxleZmnnS-htanIuq1pG4zgGQIl3zYqx",
+            "Pizza_Type": "https://docs.google.com/uc?id=1O-YlCvu6OSKx2ymKPy7qBzmOeV_nNjDH",
+            "Pizza_Name": "The 4 Cheese Pizza",
+            "Description": "Cheese Overloaded pizza with 4 different varieties of cheese and 4 times the cheese of a",
+            "Price": "654"
+        },
+        {
+            "Id": 4,
+            "Img_Src": "https://docs.google.com/uc?id=1v7I5Lt-g4H0MdseqZ-UK0TYc3Ai0sdLD",
+            "Pizza_Type": "https://docs.google.com/uc?id=1O-YlCvu6OSKx2ymKPy7qBzmOeV_nNjDH",
+            "Pizza_Name": "Margherita",
+            "Description": "A classic delight with 100% Real mozzarella cheese",
+            "Price": "199"
+        },
+        {
+            "Id": 5,
+            "Img_Src": "https://docs.google.com/uc?id=1l1JaIwMjAu4ubv2zNEeJdzwS71au-gB1",
+            "Pizza_Type": "https://docs.google.com/uc?id=1O-YlCvu6OSKx2ymKPy7qBzmOeV_nNjDH",
+            "Pizza_Name": "Farmhouse",
+            "Description": "Delightful combination of onion, capsicum, tomato & grilled mushroom",
+            "Price": "694"
+        },
+        {
+            "Id": 6,
+            "Img_Src": "https://docs.google.com/uc?id=17s0wdc065l0fPIAsyw4XAR3yC7vQgte3",
+            "Pizza_Type": "https://docs.google.com/uc?id=1O-YlCvu6OSKx2ymKPy7qBzmOeV_nNjDH",
+            "Pizza_Name": "Veg Extravaganza",
+            "Description": "Black olives, capsicum, onion, grilled mushroom, corn, tomato, jalapeno & extra cheese",
+            "Price": "459"
+        },
+        {
+            "Id": 7,
+            "Img_Src": "https://docs.google.com/uc?id=15e0JHmYrGiyYNuv9yAMRMqGpi1kDLBm7",
+            "Pizza_Type": "https://docs.google.com/uc?id=1O-YlCvu6OSKx2ymKPy7qBzmOeV_nNjDH",
+            "Pizza_Name": "Cheese n Corn",
+            "Description": "Sweet & Juicy Golden corn and 100% real mozzarella cheese in a delectable combination",
+            "Price": "309"
+        },
+        {
+            "Id": 8,
+            "Img_Src": "https://docs.google.com/uc?id=1q4VgE8oafb_9txHnJcIdLh4Xdv5S0jef",
+            "Pizza_Type": "https://docs.google.com/uc?id=1O-YlCvu6OSKx2ymKPy7qBzmOeV_nNjDH",
+            "Pizza_Name": "Veggie Paradise",
+            "Description": "The awesome foursome! Golden corn, black olives, capsicum, red paprika",
+            "Price": "399"
+        },
+        {
+            "Id": 9,
+            "Img_Src": "https://docs.google.com/uc?id=1cJTkhuB65IxGXK1yac4aLFVFElDsBDR4",
+            "Pizza_Type": "https://docs.google.com/uc?id=1O-YlCvu6OSKx2ymKPy7qBzmOeV_nNjDH",
+            "Pizza_Name": "Kadhai Paneer",
+            "Description": "Paneer chunks in your favourite spicy kadhai masala flavors, with toppings of onion ",
+            "Price": "459"
+        }
+    ],
+    "NonVegPizza": [{
+            "Id": 1,
+            "Img_Src": "https://docs.google.com/uc?id=1Om6IYbTTnV1ATm4LIlYEi5CBA0C7hFn0",
+            "Pizza_Type": "https://docs.google.com/uc?id=1wvdcu7_CRbIsO1f1fFzDYv_I-WiSbFGB",
+            "Pizza_Name": "Chicken Golden Delight",
+            "Description": "Double pepper barbecue chicken, golden corn and extra cheese, true delight",
+            "Price": "459"
+        },
+        {
+            "Id": 2,
+            "Img_Src": "https://docs.google.com/uc?id=1EkhlToS5NIfUd7vbsJ3JCs7YduKDEYyF",
+            "Pizza_Type": "https://docs.google.com/uc?id=1wvdcu7_CRbIsO1f1fFzDYv_I-WiSbFGB",
+            "Pizza_Name": "Chicken Pepperoni",
+            "Description": "A classic American taste! Relish the delectable flavor of Chicken Pepperoni, topped",
+            "Price": "579"
+        },
+        {
+            "Id": 3,
+            "Img_Src": "https://docs.google.com/uc?id=1OBOE61_4-Sl0HXBFKDIt4-Q2UXkqSU-8",
+            "Pizza_Type": "https://docs.google.com/uc?id=1wvdcu7_CRbIsO1f1fFzDYv_I-WiSbFGB",
+            "Pizza_Name": "Pepper Barbecue Chicken",
+            "Description": "Pepper barbecue chicken for that extra zing",
+            "Price": "399"
+        },
+        {
+            "Id": 4,
+            "Img_Src": "https://docs.google.com/uc?id=1h4cxaHizH8ei4nknSa9vJxs2tcggd3p9",
+            "Pizza_Type": "https://docs.google.com/uc?id=1wvdcu7_CRbIsO1f1fFzDYv_I-WiSbFGB",
+            "Pizza_Name": "Chicken Fiesta",
+            "Description": "Grilled chicken rashers, peri-peri chicken, onion & capsicum, a complete fiesta",
+            "Price": "459"
+        },
+        {
+            "Id": 5,
+            "Img_Src": "https://docs.google.com/uc?id=1TFIivOBahQdDuxxgSQBKxnhaaTZXeTZp",
+            "Pizza_Type": "https://docs.google.com/uc?id=1wvdcu7_CRbIsO1f1fFzDYv_I-WiSbFGB",
+            "Pizza_Name": "Non Veg Supreme",
+            "Description": "Supreme combination of black olives, onion, capsicum, grilled mushroom, pepper barbecue chicken, peri-peri",
+            "Price": "579"
+        }
+    ],
+    "NewLaunches": [{
+            "Id": 1,
+            "Img_Src": "https://docs.google.com/uc?id=1qxleZmnnS-htanIuq1pG4zgGQIl3zYqx",
+            "Pizza_Type": "https://docs.google.com/uc?id=1O-YlCvu6OSKx2ymKPy7qBzmOeV_nNjDH",
+            "Pizza_Name": "The 4 Cheese Pizza",
+            "Description": "Cheese Overloaded pizza with 4 different varieties of cheese and 4 times the cheese of a",
+            "Price": "654"
+        },
+        {
+            "Id": 2,
+            "Img_Src": "https://docs.google.com/uc?id=1qxleZmnnS-htanIuq1pG4zgGQIl3zYqx",
+            "Pizza_Type": "https://docs.google.com/uc?id=1O-YlCvu6OSKx2ymKPy7qBzmOeV_nNjDH",
+            "Pizza_Name": "The Cheese Dominator",
+            "Description": "Loaded with 1 Pound of Mozzarella and gooey Liquid Cheese on a Classic Large",
+            "Price": "579"
+        },
+        {
+            "Id": 3,
+            "Img_Src": "https://docs.google.com/uc?id=1598n_BwXSs15PGGxihSCRH533gfSgNUP",
+            "Pizza_Type": "https://docs.google.com/uc?id=1O-YlCvu6OSKx2ymKPy7qBzmOeV_nNjDH",
+            "Pizza_Name": "The Unthinkable Pizza",
+            "Description": "Loaded with Plant Based Protein topping along with Black Olives & Red Paprika enjoy this unique 100%",
+            "Price": "459"
+        },
+        {
+            "Id": 4,
+            "Img_Src": "https://docs.google.com/uc?id=1v7I5Lt-g4H0MdseqZ-UK0TYc3Ai0sdLD",
+            "Pizza_Type": "https://docs.google.com/uc?id=1O-YlCvu6OSKx2ymKPy7qBzmOeV_nNjDH",
+            "Pizza_Name": "Creamy Tomato Pasta Pizza - Veg",
+            "Description": "Loaded with a delicious creamy tomato pasta topping , green capsicum, crunchy red and yellow bell peppers and black",
+            "Price": "399"
+        }
+    ],
+    "MealsCombos": [{
+            "Id": 1,
+            "Img_Src": "https://docs.google.com/uc?id=1EtyuSHqJfmHFlGPzCvMW6syDtLpLVyJQ",
+            "Pizza_Type": "https://docs.google.com/uc?id=1O-YlCvu6OSKx2ymKPy7qBzmOeV_nNjDH",
+            "Pizza_Name": "Clean Bowled Classic Veg Combo",
+            "Description": "Onion Pizza Mania + Pepsi PET",
+            "Price": "105"
+        },
+        {
+            "Id": 2,
+            "Img_Src": "https://docs.google.com/uc?id=1c0fothTkR8WWn-q1tLj4gOT38Sa8Gc10",
+            "Pizza_Type": "https://docs.google.com/uc?id=1O-YlCvu6OSKx2ymKPy7qBzmOeV_nNjDH",
+            "Pizza_Name": "Clean Bowled Spicy Combo",
+            "Description": "Pizza Mania Capsicum Pizza Mania + Pepsi PET",
+            "Price": "121"
+        },
+        {
+            "Id": 3,
+            "Img_Src": "https://docs.google.com/uc?id=1WmYAohItfFYlgvAWe8yvG17OE3AeNtpy",
+            "Pizza_Type": "https://docs.google.com/uc?id=1O-YlCvu6OSKx2ymKPy7qBzmOeV_nNjDH",
+            "Pizza_Name": "Clean Bowled Golden Corn Combo",
+            "Description": "Golden Corn Pizza Mania + Pepsi PET",
+            "Price": "129"
+        },
+        {
+            "Id": 4,
+            "Img_Src": "https://docs.google.com/uc?id=1z6b1WUAKXX5dW7O2T1uyjJ-BoBHJa424",
+            "Pizza_Type": "https://docs.google.com/uc?id=1O-YlCvu6OSKx2ymKPy7qBzmOeV_nNjDH",
+            "Pizza_Name": "Clean Bowled Paneer Special Combo",
+            "Description": "Paneer Onion Pizza Mania + Pepsi PET",
+            "Price": "399"
+        },
+        {
+            "Id": 5,
+            "Img_Src": "https://docs.google.com/uc?id=1avOHsfZhq6Swz5Q5vmIir8MNPdET6c25",
+            "Pizza_Type": "https://docs.google.com/uc?id=1O-YlCvu6OSKx2ymKPy7qBzmOeV_nNjDH",
+            "Pizza_Name": "Clean Bowled Cheesy Combo",
+            "Description": "Chessy Pizza Mania + Pepsi PET",
+            "Price": "694"
+        }
+    ],
+    "PizzaMania": [{
+            "Id": 1,
+            "Img_Src": "https://docs.google.com/uc?id=1dYPtKopze_1n_ECSYpasSDiZV7fG-YZE",
+            "Pizza_Type": "https://docs.google.com/uc?id=1wvdcu7_CRbIsO1f1fFzDYv_I-WiSbFGB",
+            "Pizza_Name": "Non Veg Loaded",
+            "Description": "Chicken sausage, pepper barbecue chicken & peri-peri chicken in a fresh pan",
+            "Price": "165"
+        },
+        {
+            "Id": 2,
+            "Img_Src": "https://docs.google.com/uc?id=1dStnTPxCyPuA4vy5jp8SguT6POB15brA",
+            "Pizza_Type": "https://docs.google.com/uc?id=1O-YlCvu6OSKx2ymKPy7qBzmOeV_nNjDH",
+            "Pizza_Name": "Golden Corn",
+            "Description": "Sweet & juicy golden corn for that lipsmacking taste",
+            "Price": "85"
+        },
+        {
+            "Id": 3,
+            "Img_Src": "https://docs.google.com/uc?id=1llu70ZFNF9J0L4NOi3VRh-Vb36kPlmG5",
+            "Pizza_Type": "https://docs.google.com/uc?id=1O-YlCvu6OSKx2ymKPy7qBzmOeV_nNjDH",
+            "Pizza_Name": "Capsicum",
+            "Description": "Fresh & crisp capsicum for the perfect crunch in pizza",
+            "Price": "79"
+        },
+        {
+            "Id": 4,
+            "Img_Src": "https://docs.google.com/uc?id=1EmKcBkhDlotuFAJWsy317ToW18mZnzAx",
+            "Pizza_Type": "https://docs.google.com/uc?id=1O-YlCvu6OSKx2ymKPy7qBzmOeV_nNjDH",
+            "Pizza_Name": "Onion",
+            "Description": "Crunchy onion on a cheesy base. The pizza mania classic",
+            "Price": "65"
+        },
+        {
+            "Id": 5,
+            "Img_Src": "https://docs.google.com/uc?id=1lKGcKQ3WEXWCCt8h-p-tyRJQzvZrBPgP",
+            "Pizza_Type": "https://docs.google.com/uc?id=1O-YlCvu6OSKx2ymKPy7qBzmOeV_nNjDH",
+            "Pizza_Name": "Paneer & Onion",
+            "Description": "Creamy Paneer & Onion",
+            "Price": "99"
+        }
+    ],
+    "SpecialityChicken": [{
+            "Id": 1,
+            "Img_Src": "https://docs.google.com/uc?id=1eH9X01j6u5redblOvKMuydwD7juMcdpP",
+            "Pizza_Type": "https://docs.google.com/uc?id=1wvdcu7_CRbIsO1f1fFzDYv_I-WiSbFGB",
+            "Pizza_Name": "Peppy Chicken Nuggets",
+            "Description": "Oven baked soft tender boneless nuggets sprinkled with peri peri seasoning",
+            "Price": "139"
+        },
+        {
+            "Id": 2,
+            "Img_Src": "https://docs.google.com/uc?id=1XoSi6MxX1PYP8RkmAosXCv0yyoV7pc6d",
+            "Pizza_Type": "https://docs.google.com/uc?id=1wvdcu7_CRbIsO1f1fFzDYv_I-WiSbFGB",
+            "Pizza_Name": "Moroccan Spice Chicken Chunks",
+            "Description": "Soft juicy chicken pieces coated with spicy harissa sauce and sprinkled with basil parsley",
+            "Price": "149"
+        },
+        {
+            "Id": 3,
+            "Img_Src": "https://docs.google.com/uc?id=1lEsySsVcfay2oJqqVkyxm9DX4grqfQ1V",
+            "Pizza_Type": "https://docs.google.com/uc?id=1wvdcu7_CRbIsO1f1fFzDYv_I-WiSbFGB",
+            "Pizza_Name": "Cheesy Meatballs",
+            "Description": "Cheesy delicious chicken meatballs coated with a layer of spicy tangy sauces and exotic toppings",
+            "Price": "119"
+        }
+    ],
+    "Sides": [{
+            "Id": 1,
+            "Img_Src": "https://docs.google.com/uc?id=1EXssJ3MZMD2r_eNqFNy-JT3-7a1wmd6H",
+            "Pizza_Type": "https://docs.google.com/uc?id=1O-YlCvu6OSKx2ymKPy7qBzmOeV_nNjDH",
+            "Pizza_Name": "Paneer Tikka Stuffed Garlic Bread",
+            "Description": "Freshly Baked Stuffed Garlic Bread with Cheese, Onion and Paneer Tikka fillings. Comes with a dash of Basil Parsley Sprinkle on top",
+            "Price": "159"
+        },
+        {
+            "Id": 2,
+            "Img_Src": "https://docs.google.com/uc?id=1CARRjBIS5T12WdfnHcfuDrYCkytbB91V",
+            "Pizza_Type": "https://docs.google.com/uc?id=1wvdcu7_CRbIsO1f1fFzDYv_I-WiSbFGB",
+            "Pizza_Name": "Chicken Pepperoni Stuffed Garlic Bread",
+            "Description": "Freshly Baked Garlic Bread stuffed with Delectable Chicken Pepperoni, Cheese and sprinkled with Basil Parsley",
+            "Price": "159"
+        },
+        {
+            "Id": 3,
+            "Img_Src": "https://docs.google.com/uc?id=1qwdABnILkk3PVrqm_7JVQrIx5s-ubCx7",
+            "Pizza_Type": "https://docs.google.com/uc?id=1O-YlCvu6OSKx2ymKPy7qBzmOeV_nNjDH",
+            "Pizza_Name": "Garlic Breadsticks",
+            "Description": "Baked to perfection. Your perfect pizza partner! Tastes best with dip",
+            "Price": "99"
+        },
+        {
+            "Id": 4,
+            "Img_Src": "https://docs.google.com/uc?id=1HV2skeI7vTuWUTaMnzgHf4jck9dmu8Oa",
+            "Pizza_Type": "https://docs.google.com/uc?id=1O-YlCvu6OSKx2ymKPy7qBzmOeV_nNjDH",
+            "Pizza_Name": "Cheesy Jalapeno Dip",
+            "Description": "A spicy, tangy flavored cheese dip is a an absolute delight with your favourite Garlic Breadsticks & Stuffed",
+            "Price": "25"
+        },
+        {
+            "Id": 5,
+            "Img_Src": "https://docs.google.com/uc?id=1LFMZ7chi4ppaaVWRznrm_2OeINweUX09",
+            "Pizza_Type": "https://docs.google.com/uc?id=1O-YlCvu6OSKx2ymKPy7qBzmOeV_nNjDH",
+            "Pizza_Name": "Cheesy Dip",
+            "Description": "An all-time favorite with your Garlic Breadsticks & Stuffed Garlic Bread for a",
+            "Price": "25"
+        },
+        {
+            "Id": 6,
+            "Img_Src": "https://docs.google.com/uc?id=1UUkk8plsNXu9lA0g54qF1pUi6As2N3f6",
+            "Pizza_Type": "https://docs.google.com/uc?id=1O-YlCvu6OSKx2ymKPy7qBzmOeV_nNjDH",
+            "Pizza_Name": "Taco Mexicana Veg",
+            "Description": "Truly irresistible! Crispy taco with veg patty & creamy harissa sauce",
+            "Price": "129"
+        },
+        {
+            "Id": 7,
+            "Img_Src": "https://docs.google.com/uc?id=1QUgGGb1kox7C0FUe86P6PaJGujqfzQdd",
+            "Pizza_Type": "https://docs.google.com/uc?id=1O-YlCvu6OSKx2ymKPy7qBzmOeV_nNjDH",
+            "Pizza_Name": "Tomato Ketchup",
+            "Description": "Goodness of Tomato Ketchup in mini sachets",
+            "Price": "1"
+        },
+        {
+            "Id": 8,
+            "Img_Src": "https://docs.google.com/uc?id=158JCFFu_y9Bu_XoE4FaxtPIQiNiN2s2e",
+            "Pizza_Type": "https://docs.google.com/uc?id=1O-YlCvu6OSKx2ymKPy7qBzmOeV_nNjDH",
+            "Pizza_Name": "Potato Cheese Shots",
+            "Description": "Crisp and golden outside, flavorful burst of cheese, potato & spice inside",
+            "Price": "69"
+        },
+        {
+            "Id": 9,
+            "Img_Src": "https://docs.google.com/uc?id=1ZUQASPsUBEYEXQazF4IX7VhbAql4G0VM",
+            "Pizza_Type": "https://docs.google.com/uc?id=1O-YlCvu6OSKx2ymKPy7qBzmOeV_nNjDH",
+            "Pizza_Name": "Cheesy Jalapeno Pasta Veg",
+            "Description": "Instant Fusilli Pasta, Cheesy Jalapeno Sauce, Onion, Jalapeno, Parsley sprinkle",
+            "Price": "129"
+        }
+    ],
+    "Beverages": [{
+            "Id": 1,
+            "Img_Src": "https://docs.google.com/uc?id=1fD6Rgy_SuVgTf0UBzruRABKSTCO-3Rd8",
+            "Pizza_Type": "https://docs.google.com/uc?id=1O-YlCvu6OSKx2ymKPy7qBzmOeV_nNjDH",
+            "Pizza_Name": "Mountain Dew Ice (500ml)",
+            "Description": "Refreshing lemony drink",
+            "Price": "60"
+        },
+        {
+            "Id": 2,
+            "Img_Src": "https://docs.google.com/uc?id=1mIShhwBbETGH4CpfNSGncfAmDiwyFhBG",
+            "Pizza_Type": "https://docs.google.com/uc?id=1O-YlCvu6OSKx2ymKPy7qBzmOeV_nNjDH",
+            "Pizza_Name": "Pepsi (500ml)",
+            "Description": "Sparkling and Refreshing Beverage",
+            "Price": "60"
+        },
+        {
+            "Id": 3,
+            "Img_Src": "https://docs.google.com/uc?id=1h4XU84QJ20ez2VWy2C8RDRPFph2jykxZ",
+            "Pizza_Type": "https://docs.google.com/uc?id=1O-YlCvu6OSKx2ymKPy7qBzmOeV_nNjDH",
+            "Pizza_Name": "7Up (500ml)",
+            "Description": "Refreshing clear drink with a natural lemon flavor",
+            "Price": "60"
+        },
+        {
+            "Id": 4,
+            "Img_Src": "https://docs.google.com/uc?id=17UwjXLU0sNoUp6hdXET8WYXpOVDK1Ly9",
+            "Pizza_Type": "https://docs.google.com/uc?id=1O-YlCvu6OSKx2ymKPy7qBzmOeV_nNjDH",
+            "Pizza_Name": "Mirinda (500ml)",
+            "Description": "Delicious Orange Flavoured beverage",
+            "Price": "60"
+        },
+        {
+            "Id": 5,
+            "Img_Src": "https://docs.google.com/uc?id=1PsxoINFk9mXXCnPIztICqWKt15-QDn00",
+            "Pizza_Type": "https://docs.google.com/uc?id=1O-YlCvu6OSKx2ymKPy7qBzmOeV_nNjDH",
+            "Pizza_Name": "Bailley One (500ml)",
+            "Description": "Packaged Drinking Water",
+            "Price": "20"
+        },
+        {
+            "Id": 6,
+            "Img_Src": "https://docs.google.com/uc?id=1EQ6ix_J9C5ZTwJYZ4_SSEMLA9_gkVA4c",
+            "Pizza_Type": "https://docs.google.com/uc?id=1O-YlCvu6OSKx2ymKPy7qBzmOeV_nNjDH",
+            "Pizza_Name": "Lipton Ice Tea ( 350 ml)",
+            "Description": "Refreshment Sahi, Gas Nahi",
+            "Price": "60"
+        }
+    ],
+    "Dessert": [{
+            "Id": 1,
+            "Img_Src": "https://docs.google.com/uc?id=1NVaoAIF1TOItzWoFX5XXUFgI0beh4iKT",
+            "Pizza_Type": "https://docs.google.com/uc?id=1O-YlCvu6OSKx2ymKPy7qBzmOeV_nNjDH",
+            "Pizza_Name": "Choco Lava Cake",
+            "Description": "Chocolate lovers delight! Indulgent, gooey molten lava inside chocolate cake",
+            "Price": "99"
+        },
+        {
+            "Id": 2,
+            "Img_Src": "https://docs.google.com/uc?id=1RR3GJYpRC6y8T0vI_JCoRwDL_zUr4hYg",
+            "Pizza_Type": "https://docs.google.com/uc?id=1O-YlCvu6OSKx2ymKPy7qBzmOeV_nNjDH",
+            "Pizza_Name": "Butterscotch Mousse Cake",
+            "Description": "Sweet temptation! Butterscotch flavored mousse",
+            "Price": "99"
+        },
+        {
+            "Id": 3,
+            "Img_Src": "https://docs.google.com/uc?id=1Ha7ybs-sx8g6vlL19twJKLZEF5ib3R8S",
+            "Pizza_Type": "https://docs.google.com/uc?id=1O-YlCvu6OSKx2ymKPy7qBzmOeV_nNjDH",
+            "Pizza_Name": "Brownie Fantasy",
+            "Description": "Sweet Temptation! Hot Chocolate Brownie drizzled with chocolate fudge sauce",
+            "Price": "59"
+        }
+    ]
+}

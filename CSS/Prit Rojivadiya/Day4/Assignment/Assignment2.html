@@ -1,0 +1,225 @@
+<!-- Create Responsive Layout with Navigation. Image will be shared through redmine. -->
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            display: flex;
+            flex-direction: column;
+            height: 100vh;
+        }
+
+        nav {
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+            background-color: #f1f1f1;
+            padding: 10px;
+        }
+
+        img {
+            width: 140px;
+        }
+
+        .nav-item {
+            display: inline-block;
+            padding: 15px;
+            font-size: 17px;
+            font-weight: 600;
+        }
+
+        .nav-item:hover {
+            background-color: red;
+            border-radius: 20px;
+            color: white;
+            cursor: pointer;
+        }
+
+        .maindiv {
+            padding: 10px;
+            display: flex;
+            flex-wrap: wrap;
+        }
+
+        .div1 {
+            flex: 20%;
+            padding: 20px;
+        }
+
+        .categories {
+            width: 100%;
+        }
+
+        .category {
+            list-style: none;
+            background-color: red;
+            color: white;
+            border-radius: 7px;
+            line-height: 20px;
+            margin: 10px 10px 10px 0px;
+            font-weight: bolder;
+            padding: 10px;
+        }
+        .category:hover{
+            transform: scale(1.1);
+            box-shadow: 3px 3px 7px 1px black;
+        }
+        .div2 {
+            flex: 60%;
+            padding: 20px 0px 0px 0px;
+        }
+
+        .para {
+            padding: 10px;
+            text-align: justify;
+        }
+        .para1{
+            padding: 20px 0px 20px 00px;
+        }
+
+        #imgcontent {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .div3 {
+            flex: 20%;
+            padding: 20px;
+        }
+        .subdiv3{
+            margin: 10px;
+            flex: 20%;
+            background-color: red;
+            border-radius: 10px;
+            color: white;
+            padding: 20px;
+        }
+        .head2 {
+            padding: 0px 10px 10px 0px;
+        }
+
+        .ans {
+            text-align: justify;
+            margin-bottom: 10px;
+        }
+
+        footer {
+            margin-top: auto;
+            text-align: center;
+            background-color: red;
+            color: white;
+            line-height: 50px;
+        }
+
+      
+        @media screen and (max-width: 600px) {
+            nav {
+                flex-direction: column;
+            }
+
+            .navbar,
+            .logo {
+                text-align: center;
+            }
+
+            #imgcontent
+            {
+                flex-direction: column;
+            }
+        }
+
+        @media screen and (max-width: 360px) {
+            .nav-item {
+                display: block;
+            }
+
+            #imgcontent
+            {
+                flex-direction: column;
+            }
+            .div1{
+                flex: 100%;
+            }
+        }
+
+    </style>
+</head>
+
+<body>
+    <nav>
+        <div class="logo">
+            <img src="./Assets/logo.png" alt="logo">
+        </div>
+        <div class="menus">
+            <ul class="navbar">
+                <li class="nav-item">Home</li>
+                <li class="nav-item">Services</li>
+                <li class="nav-item">About</li>
+                <li class="nav-item">Contact</li>
+            </ul>
+        </div>
+    </nav>
+    <div class="maindiv">
+        <div class="div1">
+            <ul class="categories">
+                <li class="category">Category1</li>
+                <li class="category">Category2</li>
+                <li class="category">Category3</li>
+                <li class="category">Category4</li>
+            </ul>
+        </div>
+        <div class="div2">
+            <h1 style="color: red;padding: 0px 10px 10px 10px;">Content</h1>
+            <p class="para">Lorem ipsum dolor sit amet consectetur adipisicing elit. Hic nostrum voluptas magni
+                pariatur, alias architecto nulla explicabo corrupti blanditiis a sed, quasi dolorem ad accusantium
+                tenetur autem adipisci, necessitatibus natus.</p>
+            <p class="para">Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequatur ipsa fugiat rerum.
+                Aperiam, odio, error ipsa dicta itaque voluptatibus voluptatem similique aliquam unde quos ut totam
+                dolorum magni eum eligendi!</p>
+            <p class="para">Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequatur ipsa fugiat rerum.
+                Aperiam, odio, error ipsa dicta itaque voluptatibus voluptatem similique aliquam unde quos ut totam
+                dolorum magni eum eligendi!</p>
+            <div class="para" id="imgcontent">
+                <div class="div4">
+                    <img src="./Assets/Prit12.png" alt="logoimg" style="padding: 10px;">
+                </div>
+                <div class="div5">
+                    <p class="para1">Lorem ipsum dolor sit amet consectetur adipisicing elit. Amet accusamus
+                        voluptatibus facilis similique suscipit excepturi cupiditate, voluptate nisi illum, adipisci
+                        labore. Magni autem esse modi deleniti amet maiores aut mollitia!</p>
+                </div>
+            </div>
+        </div>
+        <div class="div3">
+            <div class="subdiv3">
+                <h2 class="head2">Ques1</h2>
+                <p class="ans">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Veniam exercitationem aperiam
+                    accusamus! Reprehenderit ipsam facere debitis.</p>
+                <h2 class="head2">Ques2</h2>
+                <p class="ans">Lorem ipsum dolor sit amet consectetur adipisicing elit. In dolores, harum assumenda
+                    dolore atque aliquid. Vitae, sint?</p>
+                <h2 class="head2">Ques3</h2>
+                <p class="ans">Lorem ipsum dolor sit amet consectetur adipisicing elit. Non iste obcaecati reiciendis
+                    architecto iste corrupti esse.</p>
+            </div>
+        </div>
+    </div>
+    <footer>
+        Copyright &#169; Since 2021
+    </footer>
+</body>
+
+</html>

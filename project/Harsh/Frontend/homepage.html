@@ -1,0 +1,527 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <link rel="stylesheet" href="./style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"
+        integrity="sha512-1ycn6IcaQQ40/MKBW2W4Rhis/DbILU74C1vSrLJxCq57o941Ym01SwNsOMqvEBFlcgUa6xLiPY/NS5R+E6ztJQ=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+
+</head>
+
+<body>
+    <header id="header">
+        <div class="nav1" style="position: relative;right: 25px;">
+            <ul class="nav d-flex justify-content-end">
+                <i class="fa fa-map-marker text-white pt-2 mt-1" style="position: relative;left: 50px;"></i>
+                <li class="nav-item content" style="position: relative;left: 40px;"><a
+                        class="nav-link text-white fw-bold" href="#">Find a
+                        store</a></li>
+                <li class="nav-item content pe-0" style="position: relative;left: 20px;"><a
+                        class="nav-link text-white fw-bold" href="#">Buying
+                        guides</a>
+                </li>
+                <li class="nav-item"><a class="nav-link text-white fw-bold" href="#">Contact us</a></li>
+            </ul>
+        </div>
+        <div class="d-flex justify-content-around" style="position: relative;right: 25px;">
+            <div class="ps-5 pb-2">
+                <img src="./assets/logo.png" alt="noimageload">
+            </div>
+            <div class="pt-2" style="position: relative;left: 30px;">
+                <div class="input-group">
+                    <input type="text" class="form-control" placeholder="Find your favorite products"
+                        style="width: 300px;">
+                    <button type="button" class="btn" id="btn">Search</button>
+                </div>
+            </div>
+            <div class="pt-2">
+                <ul class="nav">
+                    <li class="nav-item content" style="position: relative;left: 50px;"><a
+                            class="nav-link text-white fw-bold" href="#">Select your
+                            location</a>
+                    </li>
+                    <i class="fa fa-shopping-cart text-white" aria-hidden="true"
+                        style="position: relative;top: 12px; left: 50px;"></i>
+                    <li class="nav-item content" style="position: relative;left: 45px;"><a
+                            class="nav-link text-white fw-bold" href="#">Cart</a></li>
+                    <i class="fa fa-user text-white" style="position: relative;top: 12px; left: 40px;"></i>
+                    <li class="nav-item" style=" position: relative;left: 30px;"><a class="nav-link text-white fw-bold"
+                            href="./login.html">login</a></li>
+                </ul>
+            </div>
+        </div>
+
+        <ul class="nav nav-tabs d-flex justify-content-evenly nav2" style="background-color: #1F4985;">
+            <li class="nav-item dropdown" style="position: relative;top: -5px;">
+                <a class="nav-link dropdown-toggle text-white fw-bold" data-bs-toggle="dropdown" href="#">MOBILES &
+                    TABLETS</a>
+                <ul class="dropdown-menu">
+                    <img src="./assets/navbar/1.jpg" alt="noimage" width="1200px" height="350px"
+                        style="margin-top: -12px;">
+                    <div class="d-flex position-absolute top-0">
+                        <div class="ms-4">
+                            <div class="mb-4"><a href="#" class="text-white fw-bold">Smartphones</a>
+                                <div><a href="#" class="text-white">iphone13</a></div>
+                                <div><a href="#" class="text-white">JIO Exclusive Device</a></div>
+                            </div>
+                            <div class="mb-4"><a href="#" class="text-white fw-bold">Tablets & eReaders</a>
+                                <div><a href="#" class="text-white">EveryDay use Tablets
+                                        below 15000</a></div>
+                                <div><a href="#" class="text-white">Premium Tablets,Above 15001</a></div>
+                            </div>
+                            <div class="mb-4"><a href="#" class="text-white fw-bold">Accessories</a>
+                                <div><a href="#" class="text-white">Apple Accessories</a>
+                                </div>
+                                <div><a href="#" class="text-white">Mobile Accessories</a></div>
+                                <div><a href="#" class="text-white">Tablet Accessories</a></div>
+                            </div>
+                            <div class="mb-4"><a href="#" class="text-white fw-bold">eSlates</a>
+                            </div>
+                        </div>
+                        <div class="ms-4">
+                            <div class="mb-4"><a href="#" class="text-white fw-bold">Smart wearables</a>
+                                <div><a href="#" class="text-white">Trending Smart Watches</a></div>
+                            </div>
+                            <div class="mb-4"><a href="#" class="text-white fw-bold">Power Banks</a>
+                                <div><a href="#" class="text-white">10k mAh Starting @ Rs.499</a></div>
+                            </div>
+                            <div class="mb-4"><a href="#" class="text-white fw-bold">Headphones & Headsets</a>
+                                <div><a href="#" class="text-white">Reconnect Disney|Marvel headphones</a></div>
+                            </div>
+                            <div class="mb-4"><a href="#" class="text-white fw-bold">Memory Cards</a>
+                            </div>
+                        </div>
+                    </div>
+                </ul>
+            </li>
+
+            <li class="nav-item dropdown" style="position: relative;top: -5px;">
+                <a class="nav-link dropdown-toggle text-white fw-bold" data-bs-toggle="dropdown" href="#">COMPUTERS</a>
+                <ul class="dropdown-menu">
+                    <img src="./assets/navbar/1.jpg" alt="noimage" width="1200px" height="350px"
+                        style="margin-top: -12px;">
+                    <div class="d-flex position-absolute top-0 ">
+                        <div class="ms-4">
+                            <div class="mb-4"><a href="#" class="text-white fw-bold">Laptops</a>
+                                <div><a href="#" class="text-white">Basic use Laptops</a></div>
+                                <div><a href="#" class="text-white">Student Laptops</a></div>
+                                <div><a href="#" class="text-white">Thin and light Laptops</a></div>
+                                <div><a href="#" class="text-white">Multi-Tasking Laptops</a></div>
+                                <div><a href="#" class="text-white">Gaming Laptops</a></div>
+                                <div><a href="#" class="text-white">Contact Creator Laptops</a></div>
+                            </div>
+                            <div class="mb-4"><a href="#" class="text-white fw-bold">Computer Software</a>
+                            </div>
+                            <div class="mb-4"><a href="#" class="text-white fw-bold">Desktops & All-In-Ones</a>
+                            </div>
+                            <div class="mb-4"><a href="#" class="text-white fw-bold">Computer Monitors</a>
+                            </div>
+                        </div>
+                        <div class="ms-4">
+                            <div class="mb-4"><a href="#" class="text-white fw-bold">Bluetooth & WiFI
+                                    Speakers</a>
+                            </div>
+                            <div class="mb-4"><a href="#" class="text-white fw-bold">Internet Connectivity
+                                    Devices</a>
+                                <div><a href="#" class="text-white">Wireless Hotspot</a></div>
+                                <div><a href="#" class="text-white">Routers</a></div>
+                            </div>
+                            <div class="mb-4"><a href="#" class="text-white fw-bold">Printers</a>
+                            </div>
+                            <div class="mb-4"><a href="#" class="text-white fw-bold">Toners & Ink Cartridges</a>
+                            </div>
+                            <div class="mb-2"><a href="#" class="text-white fw-bold">Data Storage Devices</a>
+                                <div><a href="#" class="text-white">Pen Drives & OTG Drives</a></div>
+                                <div><a href="#" class="text-white">Hard Drives & SSD</a></div>
+                            </div>
+                            <div class="mb-4"><a href="#" class="text-white fw-bold">Gift Cards</a>
+                            </div>
+                        </div>
+                        <div class="ms-4">
+                            <div class="mb-4"><a href="#" class="text-white fw-bold">Computer Accessories</a>
+                                <div><a href="#" class="text-white">Upto 72% Off, Only on Reliancedigital.in</a>
+                                </div>
+                                <div><a href="#" class="text-white">Computer Networking Cables</a></div>
+                                <div><a href="#" class="text-white">Laptop Bags & Sleeves</a></div>
+                                <div><a href="#" class="text-white">Laptop Cooling Pad</a></div>
+                                <div><a href="#" class="text-white">Laptop Screen Protectors</a></div>
+                            </div>
+                            <div class="mb-4"><a href="#" class="text-white fw-bold">Input Devices</a>
+                                <div><a href="#" class="text-white">Keyboards</a></div>
+                                <div><a href="#" class="text-white">Mouse & Mouse Pads</a></div>
+                            </div>
+                        </div>
+                    </div>
+                </ul>
+            </li>
+            <li class="nav-item dropdown" style="position: relative;top: -5px;">
+                <a class="nav-link dropdown-toggle text-white fw-bold" data-bs-toggle="dropdown" href="#">CAMERAS</a>
+                <ul class="dropdown-menu">
+                    <img src="./assets/navbar/3.jpg" alt="noimage" width="1200px" height="350px"
+                        style="margin-top: -12px;">
+                    <div class="d-flex position-absolute top-0 ">
+                        <div class="ms-4">
+                            <div class="mb-4"><a href="#" class="text-white fw-bold">DSLR Cameras</a>
+                            </div>
+                            <div class="mb-4"><a href="#" class="text-white fw-bold">Mirrorless Cameras</a>
+                            </div>
+                            <div class="mb-4"><a href="#" class="text-white fw-bold">Point & Shoot Cameras</a>
+                            </div>
+                            <div class="mb-4"><a href="#" class="text-white fw-bold">ProSumer Cameras</a>
+                            </div>
+                            <div class="mb-4"><a href="#" class="text-white fw-bold">Action Cameras</a>
+                            </div>
+                            <div class="mb-4"><a href="#" class="text-white fw-bold">Photo Storage Devices</a>
+                                <div><a href="#" class="text-white">Memory Cards</a></div>
+                                <div><a href="#" class="text-white">Pen Drives</a></div>
+                            </div>
+                        </div>
+                        <div class="ms-4">
+                            <div class="mb-4"><a href="#" class="text-white fw-bold">Binoculars</a>
+                            </div>
+                            <div class="mb-4"><a href="#" class="text-white fw-bold">Camera Lens</a>
+                            </div>
+                            <div class="mb-4"><a href="#" class="text-white fw-bold">Digital Camera
+                                    Accessories</a>
+                                <div><a href="#" class="text-white">Camera Batteries & Chargers</a></div>
+                                <div><a href="#" class="text-white">Camera bags & cases</a></div>
+                                <div><a href="#" class="text-white">Tripods & Monopods</a></div>
+                            </div>
+                            <div class="mb-4"><a href="#" class="text-white fw-bold">Action Camera
+                                    Accessories</a>
+                            </div>
+                        </div>
+                    </div>
+                </ul>
+            </li>
+            <li class="nav-item dropdown" style="position: relative;top: -5px;">
+                <a class="nav-link dropdown-toggle text-white fw-bold" data-bs-toggle="dropdown" href="#">KITCHEN
+                    APPLIANCES</a>
+                <ul class="dropdown-menu">
+                    <img src="./assets/navbar/2.jpg" alt="noimage" width="1200px" height="350px"
+                        style="margin-top: -12px;">
+                    <div class="d-flex position-absolute top-0 ">
+                        <div class="ms-4">
+                            <div class="mb-4"><a href="#" class="text-white fw-bold">Microwave Ovens</a>
+                            </div>
+                            <div class="mb-4"><a href="#" class="text-white fw-bold">Water Purifiers</a>
+                            </div>
+                            <div class="mb-4"><a href="#" class="text-white fw-bold">Fruits and Vegetable
+                                    Cleaner</a>
+                            </div>
+                            <div class="mb-4"><a href="#" class="text-white fw-bold">Oven Toaster
+                                    Grillers(OTG)</a>
+                            </div>
+                            <div class="mb-4"><a href="#" class="text-white fw-bold">Cookwares</a>
+                            </div>
+                            <div class="mb-4"><a href="#" class="text-white fw-bold">Juicer Mixer Grinders</a>
+                                <div><a href="#" class="text-white">Juicers</a></div>
+                                <div><a href="#" class="text-white">Hand Mixers</a></div>
+                                <div><a href="#" class="text-white">Mixer Grinders</a></div>
+                            </div>
+                        </div>
+                        <div class="ms-4">
+                            <div class="mb-3"><a href="#" class="text-white fw-bold">Induction Cookers</a>
+                            </div>
+                            <div class="mb-3"><a href="#" class="text-white fw-bold">Food Processors</a>
+                            </div>
+                            <div class="mb-3"><a href="#" class="text-white fw-bold">Blenders</a>
+                            </div>
+                            <div class="mb-3"><a href="#" class="text-white fw-bold">Kitchen Hobs & Gas
+                                    Stoves</a>
+                            </div>
+                            <div class="mb-3"><a href="#" class="text-white fw-bold">Kitchen Chimneys</a>
+                            </div>
+                            <div class="mb-3"><a href="#" class="text-white fw-bold">Rice Cookers</a>
+                            </div>
+                            <div class="mb-3"><a href="#" class="text-white fw-bold">Sandwich Makers</a>
+                            </div>
+                            <div class="mb-3"><a href="#" class="text-white fw-bold">Popup Toasters</a>
+                            </div>
+                            <div class="mb-3"><a href="#" class="text-white fw-bold">Coffee Makers &
+                                    Grinders</a>
+                            </div>
+                        </div>
+                        <div class="ms-4">
+                            <div class="mb-3"><a href="#" class="text-white fw-bold">Reconnect Disney|Marvel
+                                    Kitchen
+                                    Collection</a>
+                            </div>
+                            <div class="mb-3"><a href="#" class="text-white fw-bold">Specialty Appliances</a>
+                            </div>
+                            <div class="mb-3"><a href="#" class="text-white fw-bold">Electric Kettles</a>
+                            </div>
+                            <div class="mb-3"><a href="#" class="text-white fw-bold">Water Dispensers</a>
+                            </div>
+                            <div class="mb-3"><a href="#" class="text-white fw-bold">Wet Grinders</a>
+                            </div>
+                        </div>
+                    </div>
+                </ul>
+            </li>
+            <li class="nav-item dropdown" style="position: relative;top: -5px;">
+                <a class="nav-link dropdown-toggle text-white fw-bold" data-bs-toggle="dropdown" href="#">PERSONAL
+                    CARE
+                    &
+                    GROOMING</a>
+                <ul class="dropdown-menu">
+                    <img src="./assets/navbar/4.png" alt="noimage" width="1200px" height="350px"
+                        style="margin-top: -12px;">
+                    <div class="d-flex position-absolute top-0 ">
+                        <div class="ms-4">
+                            <div class="mb-4"><a href="#" class="text-white fw-bold">Shavers & Trimmers</a>
+                            </div>
+                            <div class="mb-4"><a href="#" class="text-white fw-bold">Epilators</a>
+                            </div>
+                            <div class="mb-4"><a href="#" class="text-white fw-bold">Hair Dryers & Stylers</a>
+                            </div>
+                            <div class="mb-4"><a href="#" class="text-white fw-bold">Irons</a>
+                            </div>
+                        </div>
+                        <div class="ms-4">
+                            <div class="mb-4"><a href="#" class="text-white fw-bold">Reconnect Disney|Marvel
+                                    Grooming
+                                    Collection</a>
+                            </div>
+                            <div class="mb-4"><a href="#" class="text-white fw-bold">Hygiene & Personal Care</a>
+                                <div><a href="#" class="text-white">Digital Thermometers</a></div>
+                                <div><a href="#" class="text-white">Massager</a></div>
+                            </div>
+                        </div>
+                    </div>
+                </ul>
+            </li>
+            <li class="nav-item dropdown" style="position: relative;top: -5px;">
+                <a class="nav-link dropdown-toggle text-white fw-bold" data-bs-toggle="dropdown"
+                    href="#">ACCESSORIES</a>
+                <ul class="dropdown-menu">
+                    <img src="./assets/navbar/1.jpg" alt="noimage" width="1200px" height="350px"
+                        style="margin-top: -12px;">
+                    <div class="d-flex position-absolute top-0 ">
+                        <div class="ms-4">
+                            <div class="mb-4"><a href="#" class="text-white fw-bold">Bags, Cases & Sleeves</a>
+                            </div>
+                            <div class="mb-4"><a href="#" class="text-white fw-bold">Smart Devices</a>
+                                <div><a href="#" class="text-white">Smart Plugs</a></div>
+                                <div><a href="#" class="text-white">Smart Cameras</a></div>
+                                <div><a href="#" class="text-white">Smart Sensors</a></div>
+                                <div><a href="#" class="text-white">Smart Lights</a></div>
+                                <div><a href="#" class="text-white">Smart Speakers</a></div>
+                            </div>
+                            <div class="mb-4"><a href="#" class="text-white fw-bold">Batteries & PowerBanks</a>
+                            </div>
+                            <div class="mb-4"><a href="#" class="text-white fw-bold">Cables & Cords</a>
+                            </div>
+                            <div class="mb-4"><a href="#" class="text-white fw-bold">Chargers & Adapters</a>
+                            </div>
+                            <div class="mb-4"><a href="#" class="text-white fw-bold">Multimedia Speakers</a>
+                            </div>
+                            <div class="mb-4"><a href="#" class="text-white fw-bold">Audio/Video Accessories</a>
+                            </div>
+                        </div>
+                        <div class="ms-4">
+                            <div class="mb-2"><a href="#" class="text-white fw-bold">Reconnect Disney|Marvel
+                                    Grooming
+                                    Collection</a>
+                            </div>
+                            <div class="mb-2"><a href="#" class="text-white fw-bold">Memory Cards</a>
+                            </div>
+                            <div class="mb-2"><a href="#" class="text-white fw-bold">Mounts & Stands</a>
+                            </div>
+                            <div class="mb-2"><a href="#" class="text-white fw-bold">Pen Drives</a>
+                            </div>
+                            <div class="mb-2"><a href="#" class="text-white fw-bold">Routers</a>
+                            </div>
+                            <div class="mb-2"><a href="#" class="text-white fw-bold">Screen Guards &
+                                    Protectors</a>
+                            </div>
+                            <div class="mb-2"><a href="#" class="text-white fw-bold">Power Strips & Extension
+                                    Cords</a>
+                            </div>
+                            <div class="mb-2"><a href="#" class="text-white fw-bold">Stabilizers</a>
+                            </div>
+                            <div class="mb-2"><a href="#" class="text-white fw-bold">Surge Protectors</a>
+                            </div>
+                            <div class="mb-2"><a href="#" class="text-white fw-bold">Webcams</a>
+                            </div>
+                            <div class="mb-2"><a href="#" class="text-white fw-bold">Cleaners & Protectors</a>
+                            </div>
+
+                        </div>
+                        <div class="ms-4">
+                            <div class="mb-4"><a href="#" class="text-white fw-bold">External Hard Disks</a>
+                            </div>
+                            <div class="mb-4"><a href="#" class="text-white fw-bold">Headphones & Headsets</a>
+                            </div>
+                            <div class="mb-4"><a href="#" class="text-white fw-bold">Keyboards</a>
+                            </div>
+                            <div class="mb-4"><a href="#" class="text-white fw-bold">Indoor Lighting</a>
+                            </div>
+                        </div>
+                    </div>
+                </ul>
+            </li>
+        </ul>
+    </header>
+    <div>
+        <img src="./assets/Banner.jpeg" class="img-fluid" alt="noimageload" style="margin-top:-5px;">
+    </div>
+    <div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="carousel">
+        <ul class="carousel-indicators">
+            <li data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active">
+            </li>
+            <li data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1"></li>
+            <li data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2"></li>
+            <li data-bs-target="#carouselExampleIndicators" data-bs-slide-to="3"></li>
+            <li data-bs-target="#carouselExampleIndicators" data-bs-slide-to="4"></li>
+            <li data-bs-target="#carouselExampleIndicators" data-bs-slide-to="5"></li>
+            <li data-bs-target="#carouselExampleIndicators" data-bs-slide-to="6"></li>
+            <li data-bs-target="#carouselExampleIndicators" data-bs-slide-to="7"></li>
+        </ul>
+        <div class="carousel-inner">
+            <div class="carousel-item active">
+                <img src="./assets/carousel1/1.jpg" alt="noimageload">
+            </div>
+            <div class="carousel-item">
+                <img src="./assets/carousel1/2.jpg" alt="noimageload">
+            </div>
+            <div class="carousel-item">
+                <img src="./assets/carousel1/3.jpg" alt="noimageload">
+            </div>
+            <div class="carousel-item">
+                <img src="./assets/carousel1/4.jpg" alt="noimageload">
+            </div>
+            <div class="carousel-item">
+                <img src="./assets/carousel1/5.jpg" alt="noimageload">
+            </div>
+            <div class="carousel-item">
+                <img src="./assets/carousel1/6.jpg" alt="noimageload">
+            </div>
+            <div class="carousel-item">
+                <img src="./assets/carousel1/7.jpg" alt="noimageload">
+            </div>
+            <div class="carousel-item">
+                <img src="./assets/carousel1/8.jpg" alt="noimageload">
+            </div>
+        </div>
+        <a class="carousel-control-prev" role="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
+            <i class="fa fa-angle-left fs-2 fw-bold" aria-hidden="true"
+                style="color: black;position:relative;right: 20px;"></i>
+            </span>
+        </a>
+        <a class="carousel-control-next" role="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="next">
+            <i class="fa fa-angle-right fs-2 fw-bold" aria-hidden="true"
+                style="color: black;position:relative;left: 20px;"></i>
+            </span>
+        </a>
+    </div>
+
+    <span class="fw-bold ps-5 fs-5" style="position: relative;top: 20px;">DEALS WORTH GRABBING</span>
+    <div class="d-flex mt-5 justify-content-around flex-wrap">
+        <img src="./assets/images/1.jpg" class="img-fluid" width="250px" alt="noimageload">
+        <img src="./assets/images/2.jpg" class="img-fluid" width="250px" alt="noimageload">
+        <img src="./assets/images/3.jpg" class="img-fluid" width="250px" alt="noimageload">
+        <img src="./assets/images/4.jpg" class="img-fluid" width="250px" alt="noimageload">
+    </div>
+    <div class="d-flex mt-5 justify-content-around flex-wrap mb-5">
+        <img src="./assets/images/5.jpg" class="img-fluid" width="250px" alt=" noimageload">
+        <img src="./assets/images/6.jpg" class="img-fluid" width="250px" alt=" noimageload">
+        <img src="./assets/images/7.jpg" class="img-fluid" width="250px" alt=" noimageload">
+        <img src="./assets/images/8.jpg" class="img-fluid" width="250px" alt=" noimageload">
+    </div>
+
+    <span class="border-end border-dark pe-2">TRENDING DEALS</span> <a href="#"
+        style="text-decoration: none;color: blue;font-size: small;">VIEW ALL</a>
+    <footer>
+        <div style="background-color: #1F4985;" class="d-flex justify-content-around flex-wrap">
+            <div>
+                <span class="text-white fw-bold">PRODUCT CATEGORIES</span>
+                <div><a href="#" class="text-white">Smartphones</a></div>
+                <div><a href="#" class="text-white">Laptops</a></div>
+                <div><a href="#" class="text-white">DSLR Cameras</a></div>
+                <div><a href="#" class="text-white">Televisions</a></div>
+                <div><a href="#" class="text-white">Air Conditioners</a></div>
+                <div><a href="#" class="text-white">Refrigerators</a></div>
+                <div><a href="#" class="text-white">kitchen Appliances</a></div>
+                <div><a href="#" class="text-white">Accessories</a></div>
+                <div><a href="#" class="text-white">Personal Care & Grooming</a></div>
+            </div>
+            <div>
+                <span class="text-white fw-bold">SITE INFO</span>
+                <div><a href="#" class="text-white">About Reliance Digital</a></div>
+                <div><a href="#" class="text-white">resQ Services</a></div>
+                <div><a href="#" class="text-white">Site Map</a></div>
+                <div><a href="#" class="text-white">Gift Cards</a></div>
+                <div><a href="#" class="text-white">Corporate Enquires</a></div>
+                <div><a href="#" class="text-white">Contact Us</a></div>
+            </div>
+            <div>
+                <span class="text-white fw-bold">RESOURCE CENTER</span>
+                <div><a href="#" class="text-white">Product Reviews</a></div>
+                <div><a href="#" class="text-white">Buying Guides</a></div>
+                <div><a href="#" class="text-white">How Tos</a></div>
+                <div><a href="#" class="text-white">Featured Stories</a></div>
+                <div><a href="#" class="text-white">Events & Happenings</a></div>
+            </div>
+            <div>
+                <span class="text-white fw-bold">POLICIES</span>
+                <div><a href="#" class="text-white">Terms of use</a></div>
+                <div><a href="#" class="text-white">Cancellations & Returns</a></div>
+                <div><a href="#" class="text-white">Privacy policy</a></div>
+                <div><a href="#" class="text-white">E-waste policy</a></div>
+                <div><a href="#" class="text-white">EMI Terms & Conditions</a></div>
+                <div><a href="#" class="text-white">Pricing and Payments Policy</a></div>
+            </div>
+            <div class="clearfix">
+                <span class="text-white fw-bold">POLICIES</span>
+                <div><a href="#" class="text-white">Terms of use</a></div>
+                <div><a href="#" class="text-white">Cancellations & Returns</a></div>
+                <div><a href="#" class="text-white">Privacy policy</a></div>
+                <div><a href="#" class="text-white">E-waste policy</a></div>
+                <div><a href="#" class="text-white">EMI Terms & Conditions</a></div>
+                <div><a href="#" class="text-white">Pricing and Payments Policy</a></div>
+            </div>
+        </div>
+        <div style="background-color: #1F4985;height:100px;" class="d-flex ps-5 flex-wrap">
+            <div style="padding-top: 20px;">
+                <span class="text-white fw-bold">FOLLOW US</span>
+                <p><a href="https://www.facebook.com"><i class="fa fa-facebook-official text-white"
+                            aria-hidden="true"></i></a>
+                    <a href="https://www.twitter.com"><i class="fa fa-twitter text-white ps-2"
+                            aria-hidden="true"></i></a>
+                    <a href="https://www.youtube.com"><i class="fa fa-youtube text-white ps-2"
+                            aria-hidden="true"></i></a>
+                </p>
+            </div>
+            <div style="padding-top: 20px;">
+                <span class=" text-white fw-bold" style="padding-left: 200px;">EXPERIENCE
+                    RELIANCE DIGITAL APP ON
+                    MOBILE</span><br>
+                <a href="https://play.google.com/"><img src="./assets/footer/1.png" alt="noimageload" height="40px"
+                        style="padding-left: 200px;"></a>
+                <a href="https://apps.apple.com/"><img src="./assets/footer/2.png" alt="" height="40px"></a>
+            </div>
+        </div>
+        <div style="background-color: #0A244A; height: 70px;">
+            <span class="text-white" style="position: relative; left: 500px;top: 20px;"> © 2021 Reliance Digital. All
+                Rights
+                Reserved.</span>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+        crossorigin="anonymous"></script>
+
+</body>
+
+</html>

@@ -1,0 +1,593 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>HOME</title>
+
+<style type="text/css">
+
+*{
+	font-family: sans-serif;
+}
+
+body{
+	height: 100vh;
+}
+
+
+	
+.container1{
+	display: grid;
+	grid-template-columns: 0.3fr 1fr;
+	grid-template-rows: 0.1fr 0.1fr 1fr 0.1fr;
+	grid-gap: 0.4rem;
+
+	grid-template-areas: 
+	"head head "
+	"nav nav "
+	"side content"
+	"foot foot";
+}
+
+.header1{
+	grid-area: head;
+	background: red;
+	color: whitesmoke;
+	text-align: center;
+	font-weight: 700;
+	font-size: 20px;	
+
+}
+
+.navigation{
+	color: white;
+	background: red;
+	grid-area: nav;
+}
+
+.nav1 > ul{
+	display: flex;
+	justify-content: center;
+	text-decoration: none;
+}    
+.list{
+	margin: 0 12px;
+	text-decoration: none;
+	color: white;
+}
+
+footer{
+	grid-area: foot;
+	background: red;
+	color: whitesmoke;
+	text-align: center;
+	font-weight: 700;
+	font-size: 20px;	
+
+}
+
+.list{
+	
+}
+
+.side1{
+	grid-area: side;
+
+
+}
+
+.content{
+	grid-area: content;
+	display: block;
+}
+
+.content{
+	
+}
+
+
+
+
+
+
+
+</style>
+</head>
+<body>
+
+<div class="container1">
+
+<div class="header1">
+	<header class="head">
+		<h1 style="font-size: 20px; padding-top: 3px;">TASK SITE</h1>
+	</header>
+</div>
+
+<div class="navigation">
+	<nav class="nav1">
+		<ul type="none">
+			<li class="list"><a href="C:\Users\om\Desktop\temporary practices\projects\task_site.html">HOME</a></li>
+			<li class="list"><a href="">SQL</a></li>
+			<li class="list" id="active"><a href="">HTML-CSS</a></li>
+			<li class="list"><a href="">JAVASCRIPT</a></li>
+			<li class="list"><a href="">JQUERY</a></li>
+		</ul>
+	</nav>
+</div>
+
+<div class="side1">
+	<aside class="sidebar">
+    <ol>
+		<li>DAY-1
+			<ul>
+				<li>
+					practices
+					<ol>
+						<li><a href="html\VIVEK DHAGE\DAY 1 HTML\practice\student_marks.html">practical</a></li>
+					</ol>
+				</li>
+				<li>assignments
+					<ol>
+						<li><a href="html\VIVEK DHAGE\DAY 1 HTML\assignment\task1.html">assignment</a></li>
+					</ol>
+				</li>
+			</ul>
+		</li>
+	</ol>
+	<ol>
+		<li>DAY-2
+			<ul>
+				<li>
+					practices
+					<ol>
+						<li><a href="html\VIVEK DHAGE\DAY 2 HTML\practice\html_day2.html">practical</a></li>
+					</ol>
+				</li>
+				<li>assignments
+					<ol>
+						<li><a href="html\VIVEK DHAGE\DAY 2 HTML\assignment\personalized_resume(day2-assignment).html">assignment</a></li>
+					</ol>
+				</li>
+			</ul>
+		</li>
+ 	</ol>
+    <ol>
+		<li>DAY-3
+			<ul>
+				<li>
+					practices
+					<ol>
+						<li><a href="html\VIVEK DHAGE\DAY 3 HTML\practices\day-3_html.html">practical</a></li>
+					</ol>
+				</li>
+				<li>assignments
+					<ol>
+						<li><a href="html\VIVEK DHAGE\DAY 3 HTML\assignments\day-html_assignment.html">assignment</a></li>
+					</ol>
+				</li>
+			</ul>
+		</li>
+	</ol>
+	<ol>
+		<li>DAY-4
+			<ul>
+				<li>
+					practices
+					<ol>
+						<li><a href="html\VIVEK DHAGE\DAY 4 HTML-CSS\practicals\practical-1.html">practical-1</a></li>
+						<li><a href="html\VIVEK DHAGE\DAY 4 HTML-CSS\practicals\practical-2.html">practical-2</a></li>
+						<li><a href="html/VIVEK DHAGE/DAY 4 HTML-CSS/practicals/practical-3.html">practical-3</a></li>
+					</ol>
+				</li>
+				<li>assignments
+					<ol>
+						<li><a href="html/VIVEK DHAGE/DAY 4 HTML-CSS/assignment/assignment-day-4.html">assignment</a></li>
+					</ol>
+				</li>
+			</ul>
+		</li>
+	</ol>
+	</aside>
+</div>
+
+
+<div class="display" style="border: 1px solid black;">
+	<div class="content">
+	<article>
+
+
+
+
+
+
+
+
+
+<div>
+	<nav>
+	<a href="home.html">Home  </a>
+	<a href="about.html">About us  </a>
+	<a href="contact.html"> Contactus   </a>
+	</nav>
+</div>
+
+
+	<div>
+	<table border="2" width="500px;" height="500px;" style="margin-left:440px; margin-top: 35px;" cellpadding="22"
+	cellspacing="3">
+		<caption>	student details</caption>
+		<tr>
+			<th colspan="4">STUDENT REPORT CARD</th>
+		</tr>
+		<tr>
+			<th>Name</th>
+			<td>vivek dhage</td>
+			<th rowspan="2">year</th>
+			<td rowspan="2">2020</td>
+		</tr>
+		<tr>
+			<th>roll</th>
+			<th>20</th>
+		</tr>
+		<hr/>
+		<tr>
+			<th>subjects</th>
+			<th>marks</th>
+			<th colspan="2">grades</th>
+		</tr>
+		<tr>
+			<td>maths</td>
+			<td>77</td>
+			<td colspan="2">b1</td>
+		</tr>
+		<tr>
+			<td>maths</td>
+			<td>77</td>
+			<td colspan="2">b1</td>
+		</tr>
+		<tr>
+			<td>maths</td>
+			<td>77</td>
+			<td colspan="2">b1</td>
+		</tr>
+		<tr>
+			<td>maths</td>
+			<td>77</td>
+			<td colspan="2">b1</td>
+		</tr>
+		<tr>
+			<td>maths</td>
+			<td>77</td>
+			<td colspan="2">b1</td>
+		</tr>
+		<tr>
+			<th>Total</th>
+			<td>385</td>
+			<td colspan="2">B1</td>	
+		</tr>
+
+
+	</table>
+	</div>
+
+<div class="container" style="margin:90px; padding:20px;">
+	<form method="POST" action="task1.html">
+
+	<table border="0" cellspacing="5" cellpadding="5"> 
+		<tr>
+		<td>
+		<label>User Name:</label>
+		<input type="text" name="name" required="required"><br><br>
+		</td>
+
+		<td>	
+		<label>Password:</label>
+		<input type="Password" name="pass" required pattern=".{8,}"><br><br>
+		</td>
+		</tr>
+
+			<tr>
+		<td>
+		<input type="submit" name="submit" value="submit">
+		</td> 
+		</tr>
+	</table>
+</form>
+
+</div>
+
+<article>
+	<h1>UCL UPDATE</h1>
+	<h4>barcelona vs bayern</h4>
+	<p>
+	POSSIBLE LINEUPS
+Barcelona (3-5-2): Ter Stegen; Araujo, Piqué, Lenglet; Roberto, De Jong, Busquets, Pedri, Alba; L. De Jong, Memphis
+<br>
+Bayern (4-2-3-1): Neuer; Pavard, Süle, Upamecano, Davies; Kimmich, Goretzka; Musiala, Müller, Sané; Lewandowski		
+	</p>
+</article>
+
+
+
+
+	
+
+
+
+
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title></title>
+<style>
+
+
+.img1{
+	display: inline-block;
+}
+
+#basic_det{
+	float: right; 
+	margin-top: 50px;
+	margin-right: 400px;
+}
+.vl {
+  border-left: 6px solid green;
+  height: 10px;
+}
+
+img{
+	width: 150px;
+	height: 190px;
+	margin-left: 30px;
+	border: grey 5px ridge;
+
+}
+
+
+.main_container{
+	background-color: grey;
+}
+.container {
+  width: 97%;
+  padding: 4px;
+  background-color: #ddd;
+}
+table{
+	position: relative;
+	text-align: left;
+	padding-left: 4px;
+	border-collapse: collapse;
+
+		
+}
+#result_table{
+	position:relative;
+  	width:500px;
+    height:100px;
+    left:10px;
+    top:1px;
+	margin-left: 20px;
+
+}
+
+.skills {
+  text-align: right;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  color: white;
+}
+
+.html {
+	width: 90%; background-color: rgb(0, 250, 10);
+}
+.css {
+	width: 80%; background-color: rgb(0, 20, 250);
+}
+.js {
+	width: 65%; background-color: rgb(250, 20, 10);
+}
+.php {
+	width: 60%; background-color: rgb(120, 50, 10);
+}
+</style>
+
+</head>
+<body>
+<div class="main_container">
+
+
+	<div class="container" id="img1">
+		<img src="assets/img1.jpg">
+		
+		<div id="basic_det">
+			<h1>Saurabh Shukla</h1>
+			<h5>Software engineer</h5>
+		</div>
+	</div>
+
+
+
+	<div class="container">
+		<section>
+			<h4>About Me</h4>
+			<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+			tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+			quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+			consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse</p>
+		</section>
+		<hr>
+
+		<table class="tbl" id="tbl"  >
+			<tr>
+				<th>Age:</th>
+				<td>20</td>
+			</tr>
+				<tr>
+				<th>Email:</th>
+				<td>saurabh998@gmail.com</td>
+			</tr>
+				<tr>
+				<th>Phone:</th>
+				<td>+91 9846358264</td>
+			</tr>
+				<tr>
+				<th>Address:</th>
+				<td>204, maruti society, niranjan tower, samarpan road, Itava, 297-463 </td>
+			</tr>
+		</table>
+	</div>
+
+
+
+<div class="container" id="marks">
+	<table border="2" width="120px;" height="80px;" style="margin-left:440px; margin-top: 35px;" cellpadding="22"
+	cellspacing="3" id="result_table">
+		<caption>	Education details</caption>
+		
+		
+			<th>Education</th>
+			<th>marks</th>
+		</tr>
+		<tr>
+			<td>ssc</td>
+			<th>77</th>
+		</tr>
+		<tr>
+			<th>HSC</th>
+			<td>88</td>
+		</tr>
+		<tr>
+			<th>BE</th>
+			<td>79</td>
+			
+		</tr>
+		
+
+
+	</table>
+</div>
+
+
+
+<div class="container">
+		<h3>Professional skill</h3>
+
+	<h5>My Skills</h5>
+
+	<p>HTML</p>
+	<div class="container">
+  		<div class="skills html">90%</div>
+	</div>
+
+	<p>CSS</p>
+	<div class="container">
+  		<div class="skills css">80%</div>
+	</div>
+
+	<p>JavaScript</p>
+	<div class="container">
+  		<div class="skills js">65%</div>
+	</div>
+
+	<p>PHP</p>
+	<div class="container">
+  		<div class="skills php">60%</div>
+	</div>
+</div>
+
+
+<div class="container">
+	<h3>Work Experience</h3>
+	<ul type="none">
+		<li>
+			<section>
+				<h5>Front-end developer</h5>
+				<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod</p>			
+			</section>
+		</li>
+		<li>
+			<section>
+				<h5>laravel developer</h5>
+				<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod</p>			
+			</section>
+		</li>
+	</ul>
+</div>
+
+<div class="container">
+	<section>
+		<h5>Hobbies:</h5>
+		<p>cricket, cars, karate</p>
+	</section>
+		<section>
+		<h5>Languages:</h5>
+		<p>Tamil, English, Hindi</p>
+	</section>
+</div>
+
+
+
+</div>
+</body>
+</html>
+
+
+
+
+
+		
+
+
+
+	</article>
+</div>	
+</div>
+
+
+<footer>
+	<p>&copy; copyright </p>
+</footer>
+
+
+</div>
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

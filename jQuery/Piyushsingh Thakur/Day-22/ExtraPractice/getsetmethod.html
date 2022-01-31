@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #box {
+            background-color: azure;
+            border: 2px solid black;
+            padding: 10px;
+            margin: 10px;
+        }
+
+        .blue{
+            color: blue;
+        }
+    </style>
+</head>
+
+<body>
+    <script src="jquery-3.6.0.min.js"></script>
+    <!-- <script src="https://code.jquery.com/jquery-3.6.0.min.js"
+        integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script> -->
+
+    <h1>hello world </h1>
+    <div class="test" id="box">
+        <h1>heading inside div</h1>
+        <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestias, adipisci odit porro aspernaturs
+            <span>hellobhai im span</span>
+            molestiaetotam.
+        </p>
+    </div>
+    <button id="setval">set value</button>
+</body>
+<script>
+    //get
+    $(document).ready(function () {
+        var a = $('#box').html()
+        console.log(a);
+
+        var b = $('#box').text()
+        console.log(b);
+    })
+
+    //set
+    $(document).ready(function(){
+        $('#setval').click(function(){
+            $('#box h1').text("changed by jquery")
+        })
+
+        $('#setval').click(function(){
+            $('#box p').html("changed <b>by jquery<b> <br>paragraph")
+        })
+
+        $('#setval').click(function(){
+            $('#box h1').attr("class" , "blue")
+        })
+
+
+    })
+</script>
+
+</html>

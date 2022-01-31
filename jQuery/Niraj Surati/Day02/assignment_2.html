@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Assignment-2</title>
+    <link href="assets/css/bootstrap.min.css" rel="stylesheet">
+</head>
+<body>
+    <div class="container">
+        <div class="h3 text-center my-4">Assignment-2</div> 
+        <div id="jsonTable"></div>
+    </div>
+    <script src="assets/js/bootstrap.bundle.min.js"></script>
+    <script src="assets/js/jquery-3.6.0.min.js"></script>
+    <script>
+        $(document).ready(function(){
+            $.getJSON("https://gorest.co.in/public-api/users" , function(jsonData){
+                let tbl = $("<table />").addClass("table table-bordered table-primary table-dark bg-dark table-striped");
+                let tbl_tr = $("<tr />");
+                let heading = jsonData.data;
+                for(let row in heading[0]){
+                    let tbl_th = $("<th />").text(row);
+                    tbl_tr.append(tbl_th);
+                }
+                tbl.append(tbl_tr);
+
+                for(let row of jsonData.data){
+                    let tblRow = $("<tr />");
+                    for(let col in row){
+                        let tblCol = $("<td />").text(row[col]);
+                        tblRow.append(tblCol);
+                    }
+                    tbl.append(tblRow);
+                }
+                $("#jsonTable").append(tbl);
+            });           
+        });
+    </script>
+</body>
+</html>

@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Practice</title>
+    <link href="assets/css/bootstrap.min.css" rel="stylesheet">
+</head>
+<body>
+    <div class="container">
+        <div class="h3 text-center my-4">Practice</div>
+        <div id="div1">
+            <p></p><p></p><p></p><p></p>
+            <div id="div-child-1"></div>
+            <div id="div-child-2"></div>
+            <div id="div-child-3"></div>
+            <div id="div-child-4"></div>
+            <p></p><p></p><p></p><p></p>
+        </div>
+        <div id="div2">
+            <p></p><p></p><p></p><p></p>
+            <div id="div2-child-1"></div>
+            <div id="div2-child-2"></div>
+            <div id="div2-child-3"></div>
+            <div id="div2-child-4"></div>
+            <p></p><p></p><p></p><p></p>
+        </div>
+        <hr>
+        <div id="extFile">
+            
+        </div>
+    </div>
+    <script src="assets/js/bootstrap.bundle.min.js"></script>
+    <script src="assets/js/jquery-3.6.0.min.js"></script>
+    <script>
+        $(document).ready(function(){
+            console.log($("#div-child-2").parent());
+            console.log($("#div-child-2").parents());
+            console.log($("#div-child-2").parentsUntil("body"));
+            console.log($("#div1").children());
+            console.log($(".container").children());
+            console.log($(".container").children("#div2"));
+            console.log($(".container").find("#div-child-2"));
+            console.log($("#div-child-2").siblings());
+            console.log($("#div-child-2").siblings("p"));
+            console.log($("#div-child-2").next());
+            console.log($("#div-child-1").prev());
+            console.log($("#div-child-2").nextAll());
+            console.log($("#div-child-2").nextUntil("p"));
+            console.log($("#div-child-2").prevAll());
+            console.log($("#div-child-2").prevUntil("p"));
+            console.log($("div").first());
+            console.log($("div").last()); 
+            console.log($("div").eq(4)); 
+            console.log($('div').not("#div-child-2"));
+            console.log($("div").filter("#div-child-2"));
+            $("#extFile").load("demo.txt");
+        });
+    </script>
+</body>
+</html>

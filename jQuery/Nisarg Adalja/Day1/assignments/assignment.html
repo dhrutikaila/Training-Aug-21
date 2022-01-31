@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link rel="stylesheet" href="../../assests/css/bootstrap.min.css">
+  <script src="../../assests/js/jquery-3.6.0.js"></script>
+  <script src="../../assests/js/bootstrap.bundle.js"></script>
+
+</head>
+
+<body>
+  <div class="container mt-5">
+    <select class="form-select" aria-label="Default select example">
+      <option value="All" selected>Select Any Country</option>
+      <option value="India">India</option>
+      <option value="US">United State</option>
+      <option value="Australia">Australia</option>
+      <option value="Canada">Canada</option>
+      <option value="China">China</option>
+      <option value="UK">United Kingdom</option>
+    </select>
+    <label class="mt-5">Your Selected Country : <span id="India" class="ms-4">India</span><span id="US" class="ms-4">United States</span><span
+        id="Australia" class="ms-4">Australia</span><span id="Canada" class="ms-4">Canada</span><span id="China" class="ms-4">China</span><span
+        id="UK" class="ms-4">United Kingdom</span></label>
+  </div>
+  <script>
+    /*– Put a droplist with 5 country name from list object using jquery
+
+                  (Eg. India, United Kingdom..). Default value should “Please select”.
+
+                – Bellow droplist all country name which are in the dropdown that should display with Label :
+
+                  “Your Selected Country : “.
+
+                – By default all country name should display.
+
+                – Only that country name should appear which are you select from dropdown.
+
+                  All other label should be disappear.
+
+                – When i select ‘Please select’, all countries name should get displayed.*/
+    $("select").click(function () {
+      $('span').css("display", "none");
+      $('#' +$(this).val()).css('display','');
+      if($(this).val()=="All"){ $('span').css("display","");}
+      
+    });
+  </script>
+</body>
+
+</html>

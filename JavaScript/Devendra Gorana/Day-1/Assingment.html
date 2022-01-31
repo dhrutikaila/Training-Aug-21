@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Assingment</title>
+        <style>
+            #d1 {
+                border-style: solid;
+                width: auto;
+                height: auto;
+                padding: auto;
+                margin: 20px;
+            }
+            .d2 {
+                margin: 10px;
+            }
+        </style>
+    </head>
+    <body>
+        <!--
+            Create an application for performing basic math operations like Addition, Subtraction,   Multiplication and Division.
+
+            Consider following elements:
+
+            1.Label : “Please enter first number : ” with Text Box
+            2.Label : “Please enter second number : ” with Text Box
+            3.Label : “Please select operation you want to perform : ” with set of Radio Buttons like “Addition”, “Subtraction”, 
+              “Multiplication” and “Division” presented in vertical manner.
+            4.Two buttons,  “Calculate” and “Reset”
+            5.Label: “Result is: ” with final result – Place all the checks to make sure that user enters only numeric values 
+              for text boxes. Clicking on “Calculate” button will perform the requested operation and   the result will be displayed 
+              below “Calculate” and “Reset” buttons in the form of text,   e.g. : “Result is : 10”. – Clicking on “Reset” button will 
+              reset all the form information including radio button   selection and result text.
+        -->
+        <div id="d1"><br>
+            <form id="form">
+                <label class="d2" for="firstnum">Please Enter First Number :</label><br>
+                <input class="d2" type="text" id="firstnum" placeholder="First Number" required><br>
+                <label class="d2" for="secondnum">Please Enter Second Number :</label><br>
+                <input class="d2" type="text" id="secondnum" placeholder="Second Number" required><br>
+                <label class="d2">Please Select Operation You Want to Perform :</label>
+                <div style="margin: 7px;">
+                    <input type="radio" id="addition" value="Addition">
+                    <label for="addition">Addition</label><br>
+                    <input type="radio" id="subtraction" value="Subtraction">
+                    <label for="subtraction">Subtraction</label><br>
+                    <input type="radio" id="multiplication" value="Multiplication">
+                    <label for="multiplication">Multiplication</label><br>
+                    <input type="radio" id="division" value="Division">
+                    <label for="division">Division</label>
+                </div>
+                <div class="d2">
+                    <button type="button" onclick="cal()" value="cal">Calculate</button>
+                    <button type="button" value="Reset" onclick="reset_data()">Reset</button>
+                </div>
+                <label class="d2" id="result"></label><br><br>
+            </form>
+            
+        </div>
+
+        <!--Javascript-->
+        <script>
+            function cal()
+            {
+                var a = document.getElementById("firstnum").value;
+                var b = document.getElementById("secondnum").value;
+                var add_radio = document.getElementById("addition");
+                var sub_radio = document.getElementById("subtraction");
+                var mul_radio = document.getElementById("multiplication");
+                var div_radio = document.getElementById("division");
+            
+                if(add_radio.checked == true)
+                {
+                    let c = "Result is " + (parseInt(a) + parseInt(b));
+                    document.getElementById("result").innerHTML = c;            
+                }
+                else if(sub_radio.checked == true)
+                {
+                    let c = "Result is " + (parseInt(a) - parseInt(b));
+                    document.getElementById("result").innerHTML = c;
+                }
+                else if(mul_radio.checked == true)
+                {
+                    let c = "Result is " + (parseInt(a) * parseInt(b));
+                    document.getElementById("result").innerHTML = c;
+                }
+                else if(div_radio.checked == true)
+                {
+                    let c = "Result is " + (parseInt(a) / parseInt(b));
+                    document.getElementById("result").innerHTML = c;
+                }
+                else
+                {
+                    document.getElementById("result").innerHTML = "You Don't Select The Choice.";
+                }
+            }
+            function reset_data()
+            {  
+                document.getElementById("form").reset();  
+                document.getElementById("result").innerHTML = " ";
+            }
+        </script>        
+    </body>
+</html>

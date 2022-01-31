@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>String</title>
+    <link rel="stylesheet" href="../assets/css/bootstrap.min.css">
+</head>
+<body>
+    <div class="container">
+        <div class="h3 text-center my-3">string</div>
+        <div>String: <span id="a1"></span></div>
+    
+    </div>
+    <script src="../assets/js/bootstrap.min.js"></script>
+    <script>
+        let a = "this is string";
+        console.log(a);
+        console.log(a.length);
+
+        a = 'using \'" quotes inside "\'  ';
+        console.log(a);
+        
+        a = 'new line \n code';
+        console.log(a);
+
+        a = 'tab \t code';
+        console.log(a);
+
+        /* not preferred way */
+
+        let b = new String('don\'t create string like this');
+        document.getElementById('a1').innerHTML = b;
+
+        /* slice */
+        
+        a = 'Slice example';
+        console.log(a.slice(0,6));
+        console.log(a.slice(6,a.length));
+
+        a = 'SubString example';
+        console.log(a.substr(0,10));
+        console.log(a)
+        console.log(a.substr(-7));
+
+        a = 'replace example from w3school';
+        console.log(a.replace('w3school','self'));
+        
+        console.log(a.charAt(12));
+
+        arr = a.split(' ');
+        console.log(arr);
+
+        /* index of */
+        console.log(a.indexOf('from'));
+
+        a = 'abababcdcdababcdcd';
+        console.log(a.lastIndexOf('a'));
+
+        console.log(a.lastIndexOf('a',11));
+
+        console.log(a.indexOf('a',6));
+
+        a = 'search example';
+        console.log(a.search('xa'));
+        
+        a = 'abababcdcdababcdcd';
+        console.log(a.match(/bcd/g));
+
+        console.log(a.includes('a'))
+
+        a = 'startWith example from w3school';
+        console.log(a.startsWith('example from'));
+        console.log(a.startsWith('s'));
+        console.log(a.startsWith('example from', 10));
+        console.log(a.endsWith('w3school'));
+    </script>
+</body>
+</html>

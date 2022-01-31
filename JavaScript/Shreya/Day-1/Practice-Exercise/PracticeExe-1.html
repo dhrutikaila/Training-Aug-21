@@ -1,0 +1,52 @@
+<!--Accept three numbers from the user using prompt, find the greater of these
+     the numbers and do the sum of that numbers which are greater than 40.-->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Practice Exercise-1</title>
+</head>
+<body>
+<p id="greaterNo"></p>
+    <script>
+          var num1= prompt("Enter first number");
+          var num2= prompt("Enter second number");
+          var num3= prompt("Enter third number");
+          console.log(num1);
+          console.log(num2);
+          console.log(num3);
+          ans = parseInt(num1)+parseInt(num2)+parseInt(num3)
+          
+          //check the greatest number 
+          if(num1 > num2 && num1 > num3)
+          {
+               console.log(num1 +' is gretest number')
+          }
+          else if (num2 > num1 && num2 > num3)
+          {
+               console.log(num2 + ' is greatest number')
+          }
+          else{
+               console.log(num3 + 'is greatest number')
+          }
+
+          //check the number which is greater than 40 then add to the ans 
+          if(num1>40)
+          {
+               ans=ans+40;
+          }
+           if(num2>40){
+               ans=ans+40
+          }
+           if(num3>40)
+          {
+               ans=ans+40
+          }
+          //Print the ans
+          console.log('Total of this number is '+ans)
+     </script>
+</body>
+</html>

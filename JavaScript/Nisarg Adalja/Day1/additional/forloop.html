@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body id="main">
+    <script>
+        //simple for loop
+        for(var i=0;i<10;i++){
+            //execute a block of code number of times;
+            console.log(i);
+        }
+        var person = {"fname":"John","lname":"Doe","age":25};
+        var txt="";
+        var x;
+        for(x in person){
+            txt+=person[x];
+        }
+        console.log(txt);
+        
+        var cars=["BMW","Volvo","audi"];
+        var x;
+        for (x of cars){
+            document.write(x+'<br>');
+        }
+
+        var y=1;
+        //while loop
+        while(y<10){
+            console.log(y);
+            y=y+1;
+        };
+        
+        y=11;
+        //do while loop example
+        do{
+            console.log(y);
+            y=y+1;
+        }while(y<10);
+    </script>
+</body>
+</html>

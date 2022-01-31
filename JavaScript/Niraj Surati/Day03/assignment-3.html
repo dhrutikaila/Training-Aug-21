@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="assets/css/bootstrap.min.css" rel="stylesheet" />
+</head>
+<body>
+    <div class="container">
+        <div class="h3 text-center my-3">Employee Details</div>
+        <hr>
+        <div class="row justify-content-sm-center">
+            <div class="form col-8 row" style="border:1px solid black;">
+                <div class="my-2">
+                    <label for="employeeID" class="form-label">Employee ID</label>
+                    <input type="text" class="form-control" id="employeeID" name="employeeID" placeholder="Enter Employee ID">
+                    <div id="empId" class="text-danger">Employee ID Can not be Empty</div> 
+                    <div id="empIdLen" class="text-danger">Employee Should be At least 5 Char long</div> 
+                </div class="my-2">
+                <div>
+                    <label for="employeeName" class="form-label">Employee Name</label>
+                    <input type="text" class="form-control" id="employeeName" name="employeeName" placeholder="Enter Employee Name">
+                    <div id="empName" class="text-danger">Employee Name Can not be Empty</div> 
+                </div>
+                <div class="my-2">
+                    <label for="employeeAge" class="form-label">Employee Age</label>
+                    <input type="text" class="form-control" id="employeeAge" name="employeeAge" placeholder="Enter Employee Age">
+                    <div id="empAge" class="text-danger">Employee Age Can not be Empty</div> 
+                    <div id="empAgeChk" class="text-danger">Employee Age should be between 18 and 100 only</div> 
+                </div>
+                <div class="my-2">
+                    <fieldset class="form-group d-md-flex ">
+                        <div class="form-check px-md-3">
+                            <label class="form-label">
+                                Gender
+                            </label>
+                        </div>
+                        <div class="form-check px-md-3">
+                            <label class="form-check-label">
+                                <input type="radio" name="Gender" value="male" class="form-check-input">Male
+                            </label>
+                        </div>
+                        <div class="form-check px-md-3">
+                            <label class="form-check-label">
+                                <input type="radio" name="Gender"  value="female" class="form-check-input">Female
+                            </label>
+                        </div>
+                    </fieldset>
+                    <div id="empGender" class="text-danger">Please Select Gender</div> 
+                </div>
+                <div class="my-2">
+                    <label for="designation" class="form-label">Designation</label>
+                    <input type="text" class="form-control" id="designation" name="designation" placeholder="Enter Employee Designation">
+                    <div id="empDes" class="text-danger">Employee Designation Can not be Empty</div> 
+                </div>
+                <div class="my-2">
+                    <label for="salary" class="form-label">Salary</label>
+                    <input type="text" class="form-control " id="salary" name="salary" placeholder="Enter Employee Salary">
+                    <div id="empSalary" class="text-danger">Employee Salary Can not be Empty</div> 
+                    <div id="empSalaryPattern" class="text-danger">Employee Salary should be in Numbers</div> 
+                </div>
+                <div class="my-2">
+                    <label for="city" class="form-label">City</label>
+                    <select class="form-select" id="city" name="city">
+                        <option value="" selected disabled>----Select----</option>
+                        <option value="ahmedabad">Ahmedabad</option>
+                        <option value="surat">Surat</option>
+                        <option value="vadodara">Vadodara</option>
+                    </select>
+                    <div id="empCity" class="text-danger">Please Select Proper City</div> 
+                </div>
+                <div class="my-2">
+                    <label for="email" class="form-label">Email ID</label>
+                    <input type="text" class="form-control " id="email" name="email" placeholder="Enter Employee Email">
+                    <div id="empEmail" class="text-danger ">Employee Email Can not be Empty</div> 
+                    <div id="empEmailPattern" class="text-danger ">Email is not proper</div> 
+                </div>
+                <div class="my-2">
+                    <label for="date of joining" class="form-label">Date Of Joining <small>(MM-DD-YYYY)</small></label>
+                    <input type="text" class="form-control" id="doj" name="doj" placeholder="Enter Date Of Joining">
+                    <div id="empDoj" class="text-danger">Employee Date of Joining Can not be Empty</div> 
+                    <div id="empDojFormat" class="text-danger">Employee Date Format is not proper : dd-mm-yyyy</div> 
+                </div>
+                <div class="my-2">
+                    <label for="Contact" class="form-label">Contact Number</label>
+                    <input type="text" class="form-control " id="contact" name="contact" placeholder="Enter Date Of Joining">
+                    <div id="empContact" class="text-danger ">Employee Contact Can not be Empty</div> 
+                    <div id="empContactPattern" class="text-danger ">Contact Should be 10-Digits </div> 
+                </div>
+                <div class="m-3 text-center">
+                    <button type="button" onclick="empData()" class="btn btn-success">Submit</button>
+                    <button type="button" onclick="clearScreen()" class="btn btn-info">Clear</button>
+                </div>
+            </div>
+        </div>
+        <hr>
+        <div id="resultData"></div>
+    </div>
+    <script src="assets/js/bootstrap.bundle.min.js"></script>
+    <script>
+        // document.querySelector('div[class="text-danger"]').style.display = "none";
+        let elList = document.querySelectorAll('.text-danger');
+        elList.forEach(el => el.style.display = "none");
+        
+        // empdata
+        function empData(){
+            let elList = document.querySelectorAll('.text-danger');
+            elList.forEach(el => el.style.display = "none");
+
+            let empId, empName, empAge, empGender, empDes, empSalary, empCity, empEmail, empDoj, empContact;
+            empId = parseInt(document.getElementById('employeeID').value); 
+            empName = document.getElementById('employeeName').value; 
+            empAge = parseInt(document.getElementById('employeeAge').value); 
+            empGender = document.querySelector('input[name="Gender"]:checked').value;
+            empDes = document.getElementById('designation').value; 
+            empSalary = parseInt(document.getElementById('salary').value); 
+            empCity = document.getElementById('city').value; 
+            empEmail = document.getElementById('email').value; 
+            empDoj = document.getElementById('doj').value; 
+            empContact = parseInt(document.getElementById('contact').value); 
+            empIdPattern = /^[0-9]{5,}$/;
+            empDojPattern = /^(0?[1-9]|1[0-2])\-(0?[1-9]|[1-2][0-9]|3[01])\-\d{4}$/;
+            empContactPattern = /^[0-9]{10}$/;
+            empSalaryPattern = /^[0-9]{1,}$/;
+            empEmailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+            if(isNaN(empId)){
+                document.getElementById('empId').style.display = "block";
+                return;
+            }
+            if(empIdPattern.test(empId) == false){
+                document.getElementById('empIdLen').style.display = "block";
+                return
+            }
+            if(empName == ''){
+                document.getElementById('empName').style.display = "block";
+                return;
+            }
+            if(isNaN(empAge)){
+                document.getElementById('empAge').style.display = "block";
+                return;
+            }
+            if(empAge <= 18 || empAge > 100){
+                document.getElementById('empAgeChk').style.display = "block";
+                return;
+            }
+            if(empGender == ''){
+                document.getElementById('empGender').style.display = "block";
+                return;
+            }
+            if(empDes == ''){
+                document.getElementById('empDes').style.display = "block";
+                return;
+            }
+            if(isNaN(empSalary)){
+                document.getElementById('empSalary').style.display = "block";
+                return;
+            }
+            if(empSalaryPattern.test(empSalary) == false){
+                document.getElementById('empSalaryPattern').style.display = "block";
+                return;
+            }
+            if(empCity == ''){
+                console.log(empCity);
+                document.getElementById('empCity').style.display = "block";
+                return;
+            }
+            if(empEmail == ''){
+                document.getElementById('empEmail').style.display = "block";
+                return;
+            }
+            if(empEmailPattern.test(empEmail) == false){
+                document.getElementById('empEmailPattern').style.display = "block";
+                return;
+            }
+            if(empDoj == ''){
+                document.getElementById('empDoj').style.display = "block";
+                return;
+            }
+            if(empDojPattern.test(empDoj) == false){
+                document.getElementById('empDojFormat').style.display = "block";
+                return;
+            }
+            if(isNaN(empContact)){
+                document.getElementById('empContact').style.display = "block";
+                return;
+            }
+            if(empContactPattern.test(empContact) == false){
+                document.getElementById('empContactPattern').style.display = "block";
+                return;
+            }
+
+        let resultData = document.getElementById('resultData').innerHTML = `
+            <strong>Employee Id:<strong> ${empId}<br>
+            ${empName}<br>
+            ${empAge}<br>
+            ${empGender}<br>
+            ${empDes}<br>
+            ${empSalary}<br>
+            ${empCity}<br>
+            ${empEmail}<br>
+            ${empDoj}<br>
+            ${empContact}`;
+        let myWindow = window.open();
+        myWindow.document.write(resultData);
+        }
+
+
+
+        
+        // Clear Screen Function
+        function clearScreen(){
+            let inputList = document.querySelectorAll('input','select');
+            inputList.forEach(il => il.value='');
+        }
+    </script>
+</body>
+</html>

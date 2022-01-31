@@ -1,0 +1,363 @@
+<!--1. Display Student Report Card, Which contains field like Name, RollNo, Year Of Passing. Different subject marks should be displayed with its grade
+Note:  use table tag
+
+You are working in some company as HR. you have been assigned a task to arrange department hierarchy example: employee working under some manager.
+Note: Use Ordered and unordered list with its list-style-type attribute, practice nested list as  well
+
+Create Login Form with field UserName and Password field.
+Use Article tag display one latest news.
+Create Horizontal menu. Menu item will Home, AboutUs, ContactUS.
+Use Nav tag and anchor tag -->
+
+<!--1. Display Student Report Card, Which contains field like Name, RollNo, Year Of Passing. Different subject marks should be displayed with its grade -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Report Card</title>
+    <style>
+        nav {
+            background-color: lightgray;
+            display: flex;
+            flex-direction: row;
+            height: 15vh !important;
+            width: 100vw !important;
+        }
+
+        #logo {
+            display: flex;
+            justify-content: center;
+
+        }
+
+        div img {}
+
+        div {
+            font-size: 30px;
+            margin-left: auto;
+            margin-top: 5vh !important;
+            margin-bottom: 0px;
+        }
+
+        div a {
+            text-decoration: none;
+            color: grey;
+            /* margin-left:3vw !important; */
+            margin-right: 3vw !important;
+            /* justify-content:center;*/
+        }
+
+        article {
+
+            height: 85vh;
+            width: 79vw;
+            float: left;
+            background-image: url("../../../HTML/Nisarg Adalja/assests/images/html5.jpg");
+            background-repeat: no-repeat;
+            background-size: cover;
+        }
+
+        h1 {
+            margin-top: 40px !important;
+        }
+        li{
+            font-size:30px;
+        }
+        aside {
+            display: flex;
+            flex-direction: column;
+            float: left;
+            height: 85vh;
+            width: 18vw;
+            background-color: orange;
+        }
+
+        /* Dropdown Button */
+
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+        }
+
+        .navbar {
+            overflow: hidden;
+            display: flex;
+            flex-direction: column;
+            background-color: #333;
+        }
+
+        .navbar a {
+            float: left;
+            font-size: 20px;
+            color: white;
+            text-align: left;
+            padding: 14px 16px;
+            text-decoration: none;
+        }
+
+        .dropdown {
+            float: left;
+            overflow: hidden;
+        }
+
+        .dropdown .dropbtn {
+            font-size: 20px;
+            border: none;
+            outline: none;
+            color: white;
+            padding: 0px 0px;
+            background-color: inherit;
+            font-family: inherit;
+            margin: 0;
+        }
+
+        .navbar a:hover,
+        .dropdown:hover .dropbtn {
+            background-color: red;
+        }
+
+        .dropdown-content {
+            display: none;
+            position: absolute;
+            background-color: #f9f9f9;
+            min-width: 160px;
+            box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+            z-index: 1;
+        }
+
+        .dropdown-content a {
+            float: none;
+            color: black;
+            padding: 0px 0px;
+            text-decoration: none;
+            display: block;
+            text-align: left;
+        }
+
+        .dropdown-content a:hover {
+            background-color: #ddd;
+        }
+
+        .dropdown:hover .dropdown-content {
+            display: block;
+        }
+        .dropdown-content a:active {
+            background-color: #ddd;
+        }
+
+        .dropdown:active .dropdown-content {
+            display: block;
+        }
+    </style>
+</head>
+<body>
+      <nav>
+        <div id="logo">
+            <img src="https://tutorials.rxtrainees.radixweb.net/wp-content/uploads/2020/12/logo_2500X1875.jpg"
+                height="50px" width="200px">
+        </div>
+        <div>
+            <a href="../../../../Modules/Project/Nisarg Adalja/nisargProject.html">HOME</a>
+            <a href="../../../../Modules/Project/Nisarg Adalja/htmlfile.html">HTML</a>
+            <a href="../../../../Modules/Project/Nisarg Adalja/cssfile.html">CSS</a>
+            <a href="../../../../Modules/Project/Nisarg Adalja/Bootstrap.html">Bootstrap</a>
+            <a href="../../../../Modules/Project/Nisarg Adalja/javascript.html">JAVASCRIPT</a>
+            <a href="../../../../Modules/Project/Nisarg Adalja/jquery.html">JQUERY</a>
+            <a href="../../../../Modules/Project/Nisarg Adalja/project.html">PORJECT</a>
+        </div>
+    </nav>
+    <aside>
+        <ol>
+            <li>Day-6
+                <ul>
+                    <div class="dropdown">
+                        <button class="dropbtn">Additional Exercise</button>
+                        <div class="dropdown-content">
+                            <a href="#">additional.html</a>
+                        </div>
+                    </div>
+                    <div class="dropdown">
+                        <button class="dropbtn">Assignment Exercise</button>
+                        <div class="dropdown-content">
+                            <a href="assignment.html">assignment.html</a>
+                        </div>
+                    </div>
+                    <div class="dropdown">
+                        <button class="dropbtn">Practice Exercise</button>
+                        <div class="dropdown-content">
+                            
+                            <a href="practice.html">practice.html</a>
+                             <a href="practice1.html">practice1.html</a>
+                              <a href="login.html">login.html</a>
+                        </div>
+                    </div>
+
+                </ul>
+            </li>
+             <li>Day-2
+                <ul>
+                    <div class="dropdown">
+                        <button class="dropbtn">Additional Exercise</button>
+                        <div class="dropdown-content">
+                            <a href="../../Day2/additional/additional.html">additional.html</a>
+                        </div>
+                    </div>
+                    <div class="dropdown">
+                        <button class="dropbtn">Assignment Exercise</button>
+                        <div class="dropdown-content">
+                            <a href="../../Day2/assignment/assignment.html">assignment.html</a>
+                        </div>
+                    </div>
+                    <div class="dropdown">
+                        <button class="dropbtn">Practice Exercise</button>
+                        <div class="dropdown-content">
+                            <a href="../../Day2/practice/practice.html">practice.html</a>
+                        </div>
+                    </div>
+
+                </ul>
+            </li>
+        </ol>
+      
+    </aside>
+    <article>
+    <table border="1px solid black" style="border-collapse:collapse;box-shadow:5px 5px black !important;">
+        <caption>Student Report Card</caption>
+        <thead>
+            <tr>
+                <th>Name</th>
+                <th>Roll No.</th>
+                <th>Year Of Passing</th>
+                <th>c++</th>
+                <th>Java</th>
+                <th>Python</th>
+            </tr>
+            <tr>
+                <td>Nisarg</td>
+                <td>1</td>
+                <td>2021</td>
+                <td><table>
+                        <tr>
+                            <th>Marks</th>
+                            <th>Grade</th>
+                        </tr>
+                        <tr>
+                            <td>85</td>
+                            <td>AA</td>
+                        </tr>
+                    </table>
+                </td>
+                <td><table>
+                        <tr>
+                            <th>Marks</th>
+                            <th>Grade</th>
+                        </tr>
+                        <tr>
+                            <td>85</td>
+                            <td>AA</td>
+                        </tr>
+                    </table>
+                </td>
+                <td><table>
+                        <tr>
+                            <th>Marks</th>
+                            <th>Grade</th>
+                        </tr>
+                        <tr>
+                            <td>75</td>
+                            <td>AB</td>
+                        </tr>
+                    </table>
+                </td>
+
+            </tr>
+            <tr>
+                <td>Deep</td>
+                <td>2</td>
+                <td>2021</td>
+                <td><table>
+                        <tr>
+                            <th>Marks</th>
+                            <th>Grade</th>
+                        </tr>
+                        <tr>
+                            <td>75</td>
+                            <td>AB</td>
+                        </tr>
+                    </table>
+                </td>
+                <td><table>
+                        <tr>
+                            <th>Marks</th>
+                            <th>Grade</th>
+                        </tr>
+                        <tr>
+                            <td>65</td>
+                            <td>BB</td>
+                        </tr>
+                    </table>
+                </td>
+                <td><table>
+                        <tr>
+                            <th>Marks</th>
+                            <th>Grade</th>
+                        </tr>
+                        <tr>
+                            <td>85</td>
+                            <td>AA</td>
+                        </tr>
+                    </table>
+                </td>
+            </tr>
+        </thead>
+    </table>
+    <!-- practice exercise - 2 -->
+    <div style="margin-top:100px;"> 
+        <ul>
+            <li>
+                Nisarg
+                <ol>
+                    <li>
+                        Deep
+                    </li>
+                    <li>
+                        Dhruvil
+                    </li>
+                    <li>
+                        Ridham
+                    </li>
+                    <li>
+                        Jenil
+                    </li>
+                </ol>
+            </li>
+            <li>
+                Mehul
+                <ol>
+                    <li>Nikhil</li>
+                    <li>manav</li>
+                </ol>
+            </li>
+            <li>
+                Harsh
+                <ol>
+                    <li>
+                        Chitrank
+                    </li>
+                    <li>
+                        Chirag
+                    </li>
+                    <li>
+                        Vivek
+                    </li>
+                </ol>
+            </li>
+        </ul>
+    </div>
+
+<time datetime="2013-07-10T13:30-05:00">1:30pm on 03-03-2017</time>
+</article>
+</body>
+</html>

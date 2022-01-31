@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+      /*  Store following JSON data into localstorage,read that data and print it into console.*/
+      var str='{ "products" : [   { "Name": "Cheese", "Price" : 2.50, "Location": "Refrigerated foods"},   { "Name": "Crisps", "Price" : 3, "Location": "the Snack isle"},   { "Name": "Pizza", "Price" : 4, "Location": "Refrigerated foods"},   { "Name": "Chocolate", "Price" : 1.50, "Location": "the Snack isle"},   { "Name": "Self-raising flour", "Price" : 1.50, "Location": "Home baking"},   { "Name": "Ground almonds", "Price" : 3, "Location": "Home baking"} ]}';
+      localStorage.setItem('products',str);
+      var data=localStorage.getItem('products');
+      console.log(data);
+      data=JSON.parse(data);
+      console.log(data);
+      for(var i=0;i<data.products.length;i++){
+         // console.log("hi");
+          //console.log(data["products"]);
+          console.log("Name of te product is "+data.products[i].Name+', Product Price is '+data.products[i].Price+'$ , Product Location '+data.products[i].Location);
+      }
+    </script>
+</body>
+</html>

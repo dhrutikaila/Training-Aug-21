@@ -1,0 +1,35 @@
+<!-- Using Function Expression, find the area of circle -->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JS Day 19 Practice1</title>
+    <link rel="stylesheet" href="../../bootstrap.css">
+</head>
+
+<body>
+    <h1 class="display-4 text-center bg-info text-white p-3">Area of Circle</h1>
+    <div class="container bg-ligt">
+        <form>
+            <label for="">Enter Radius of a Circle: </label>
+            <input type="text" name="radius" id="r" class="form-control">
+            <center>
+                <button class="btn btn-info mt-3" type="button" onclick="area()">Calculate area</button>
+            </center>
+        </form>
+        <p id="demo" class="text-muted mt-2"></p>
+    </div>
+</body>
+<script>
+    const pi = 3.14;
+    function area() {
+        var r = parseInt(document.getElementById("r").value);
+        var x = function (r) { return pi * r * r };
+        document.getElementById("demo").innerHTML = "Area of a circle : " + x(r);
+    }
+</script>
+
+</html>

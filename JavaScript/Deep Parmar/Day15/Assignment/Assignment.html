@@ -1,0 +1,113 @@
+<!-- Create an application for performing basic math operations like Addition, Subtraction,   Multiplication and Division.
+
+Consider following elements:
+
+ Label : “Please enter first number : ” with Text Box
+ Label : “Please enter second number : ” with Text Box
+ Label : “Please select operation you want to perform : ” with set of Radio Buttons like “Addition”, “Subtraction”, “Multiplication” and “Division” presented in vertical manner.
+Two buttons,  “Calculate” and “Reset”
+ Label: “Result is: ” with final result – Place all the checks to make sure that user enters only numeric values for text boxes. Clicking on “Calculate” button will perform the requested operation and   the result will be displayed below “Calculate” and “Reset” buttons in the form of text,   e.g. : “Result is : 10”. – Clicking on “Reset” button will reset all the form information including radio button   selection and result text. -->
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Assignment</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+</head>
+
+<body>
+    <h2 style="height: 5vh; color:cadetblue; text-align:center" class="mt-5">Please Enter Two Number select operation
+        you want to perform Calculation</h2>
+    <div class="container w-25 border border-3 mt-5">
+        <form>
+            <h2 class="text-muted">Calculation</h2>
+            <div class="mb-3">
+                <label for="fnumber" class="form-label">Please enter first number : </label>
+                <input type="number" class="form-control" name="fnumber" id="fnum" required>
+            </div>
+            <div class="mb-3">
+                <label for="snumber" class="form-label">Please enter second number : </label>
+                <input type="number" class="form-control" name="snumber" id="snum" required>
+            </div>
+
+            <div class="mb-3">Please select operation you want to perform :</div>
+
+            <div class="form-check mb-2">
+                <input type="radio" class="form-check-input mx-3 " name="calculation" id="add" value="addition"
+                    required>
+                <label class="form-check-label">
+                    Addition
+                </label>
+            </div>
+            <div class="form-check mb-2">
+                <input type="radio" class="form-check-input mx-3 " name="calculation" id="sub" value="subtraction"
+                    required>
+                <label class="form-check-label">
+                    Subtraction
+                </label>
+            </div>
+            <div class="form-check mb-2">
+                <input type="radio" class="form-check-input mx-3 " name="calculation" id="mul" value="multiplication"
+                    required>
+                <label class="form-check-label">
+                    Multiplication
+                </label>
+            </div>
+            <div class="form-check mb-4">
+                <input type="radio" class="form-check-input mx-3 " name="calculation" id="div" value="division"
+                    required><label class="form-check-label">
+                    Division
+                </label>
+            </div>
+
+
+            <button type="button" class="btn btn-outline-primary " id="cal"
+                onclick="calculate(fnum.value,snum.value,result)">Calculate
+            </button>
+            <button class="btn btn-secondary ms-4" type="reset">Reset
+            </button>
+
+            <div class="fs-4 mt-3 text-success" id="result"></div>
+            <div class="fs-4 mt-3 text-danger" id="error"></div>
+
+        </form>
+    </div>
+    <script>
+
+
+        function calculate(num1, num2, result) {
+
+            if (document.getElementById("add").checked) {
+                var sum = parseInt(num1) + parseInt(num2);
+                result.innerHTML = "Result is : " + sum;
+            }
+            else if (document.getElementById("sub").checked) {
+                var sum = parseInt(num1) - parseInt(num2);
+                result.innerHTML = "Result is : " + sum;
+            }
+            else if (document.getElementById("mul").checked) {
+                var sum = parseInt(num1) * parseInt(num2);
+                result.innerHTML = "Result is : " + sum;
+            }
+            else if (document.getElementById("div").checked) {
+                var sum = parseInt(num1) / parseInt(num2);
+                result.innerHTML = "Result is : " + sum;
+            }
+            else {
+                document.getElementById("error").innerHTML = "Please Select appropriate operation For Calculation";
+                result.style.display = "none";
+            }
+        }
+
+    </script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+        crossorigin="anonymous"></script>
+
+</body>
+
+</html>

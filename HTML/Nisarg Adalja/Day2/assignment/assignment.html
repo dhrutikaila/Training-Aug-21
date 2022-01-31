@@ -1,0 +1,593 @@
+<!-- Create personalized resume, which must be attractive. Use all the HTML tags and apply CSS which we have learned so far. Add one short video of your project done into resume. -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nisarg Adalja Resume</title>
+    <link
+      rel="stylesheet"
+      href="https://use.fontawesome.com/releases/v5.13.0/css/all.css"
+      integrity="sha384-Bfad6CLCknfcloXFOyFnlgtENryhrpZCe29RTifKEixXQZ38WheV+i/6YWSzkz3V"
+      crossorigin="anonymous"
+    />
+    <style>
+
+        nav {
+            background-color: lightgray;
+            display: flex;
+            flex-direction: row;
+            height: 15vh !important;
+            width: 100vw !important;
+        }
+
+        #logo {
+            display: flex;
+            justify-content: center;
+
+        }
+
+        div img {}
+
+        div {
+            font-size: 30px;
+            margin-left: auto;
+            margin-top: 0vh !important;
+            margin-bottom: 0px;
+        }
+
+        div a {
+            text-decoration: none;
+            color: grey;
+            /* margin-left:3vw !important; */
+            margin-right: 3vw !important;
+            /* justify-content:center;*/
+        }
+
+        article {
+
+            height: 85vh;
+            width: 79vw;
+            float: left;
+            background-image: url("../../../HTML/Nisarg Adalja/assests/images/html5.jpg");
+            background-repeat: no-repeat;
+            background-size: cover;
+        }
+
+        h1 {
+            margin-top: 40px !important;
+        }
+        li{
+            font-size:30px;
+        }
+        aside {
+            display: flex;
+            flex-direction: column;
+            float: left;
+            height: 85vh;
+            width: 18vw;
+            background-color: orange;
+        }
+
+        /* Dropdown Button */
+
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+        }
+
+        .navbar {
+            overflow: hidden;
+            display: flex;
+            flex-direction: column;
+            background-color: #333;
+        }
+
+        .navbar a {
+            float: left;
+            font-size: 20px;
+            color: white;
+            text-align: left;
+            padding: 14px 16px;
+            text-decoration: none;
+        }
+
+        .dropdown {
+            float: left;
+            overflow: hidden;
+        }
+
+        .dropdown .dropbtn {
+            font-size: 20px;
+            border: none;
+            outline: none;
+            color: white;
+            padding: 0px 0px;
+            background-color: inherit;
+            font-family: inherit;
+            margin: 0;
+        }
+
+        .navbar a:hover,
+        .dropdown:hover .dropbtn {
+            background-color: red;
+        }
+
+        .dropdown-content {
+            display: none;
+            position: absolute;
+            background-color: #f9f9f9;
+            min-width: 160px;
+            box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+            z-index: 1;
+        }
+
+        .dropdown-content a {
+            float: none;
+            color: black;
+            padding: 0px 0px;
+            text-decoration: none;
+            display: block;
+            text-align: left;
+        }
+
+        .dropdown-content a:hover {
+            background-color: #ddd;
+        }
+
+        .dropdown:hover .dropdown-content {
+            display: block;
+        }
+        .dropdown-content a:active {
+            background-color: #ddd;
+        }
+
+        .dropdown:active .dropdown-content {
+            display: block;
+        }
+
+        /* Dropdown Button */
+
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+        }
+
+        .navbar {
+            overflow: hidden;
+            display: flex;
+            flex-direction: column;
+            background-color: #333;
+        }
+
+        .navbar a {
+            float: left;
+            font-size: 20px;
+            color: white;
+            text-align: left;
+            padding: 14px 16px;
+            text-decoration: none;
+        }
+
+        .dropdown {
+            float: left;
+            overflow: hidden;
+        }
+
+        .dropdown .dropbtn {
+            font-size: 20px;
+            border: none;
+            outline: none;
+            color: white;
+            padding: 0px 0px;
+            background-color: inherit;
+            font-family: inherit;
+            margin: 0;
+        }
+
+        .navbar a:hover,
+        .dropdown:hover .dropbtn {
+            background-color: red;
+        }
+
+        .dropdown-content {
+            display: none;
+            position: absolute;
+            background-color: #f9f9f9;
+            min-width: 160px;
+            box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+            z-index: 1;
+        }
+
+        .dropdown-content a {
+            float: none;
+            color: black;
+            padding: 0px 0px;
+            text-decoration: none;
+            display: block;
+            text-align: left;
+        }
+
+        .dropdown-content a:hover {
+            background-color: #ddd;
+        }
+
+        .dropdown:hover .dropdown-content {
+            display: block;
+        }
+        .dropdown-content a:active {
+            background-color: #ddd;
+        }
+
+        .dropdown:active .dropdown-content {
+            display: block;
+        }
+    </style>
+    <style>
+        body{
+        }
+        header{
+            background-color:#425061;
+            height:30vh;
+            width:82vw;
+        }
+        header h1{
+            color:white;
+            display:inline !important;
+            float:left;
+            margin-top:9vh;
+            margin-left:6vw;
+        }
+        header h2{
+            display:inline !important;
+            color:lightblue;
+            float:left;
+            clear:left;
+            margin-left:6vw !important;
+            margin-top :0vh !important;
+        }
+        header p{
+            display:inline;
+            color:lightblue;
+            float:left;
+            clear:left;
+            margin-left:6vw !important;
+            margin-top :2vh !important;
+        }
+        header img{
+            border:5px solid #313b47;
+            border-radius:50%;
+            float:right;
+            margin-top:6vh;
+            margin-right:6vw;
+        }
+        #contact{
+
+            height:25vh;
+            width:82vw;
+            background-color:#313b47 !important;
+        }
+        .details{
+            width:40vw !important;
+            float:left;
+        }
+        .details i{
+            color: white !important;
+            margin-top:3vh;
+            margin-left:6vw;
+            background-color:#313b47 !important;
+        }
+        i+a{
+            margin-left:1vw;
+            font-size: 12px;
+            text-decoration:none;
+            color:white;
+            margin-top:0vh !important;
+        }
+        i+p{
+            color:white !important;
+            margin-left:9vw;
+            font-size: 12px;
+            margin-top :-2vh !important;
+        }
+        .education{
+            display:inline;
+            margin-left:5vw !important;
+            margin-top:3vh !important;
+            width:33vw;
+            float:left;
+
+        }
+        .education h1{
+            color:#449399 !important;
+            text-decoration:underline;
+        }
+        .skills{
+            display: inline;
+            margin-top:5vh !important;
+            width:30vw;
+            float:right !important;
+            clear:left !important; 
+        }
+        .skills h1{
+           
+            color:#449399 !important;
+            text-decoration:underline;
+        }
+        .skills h2{
+            margin-top:5vh !important;
+        }
+        body{
+            background-color: aqua;
+        }
+        .main{
+            display: inline !important;
+            float:left !important;
+            width:45vw !important; 
+        }
+        .main1{
+            display: inline !important;
+            float:right !important;
+            margin-right:20px !important;
+
+        }
+        .skills span{
+            color:white !important;
+            display:inline-block !important;
+            height:5vh !important;
+            background-color:#449399;
+            border-radius:10px !important;
+            padding-top:10px !important;
+            margin-top:10px !important;
+            margin-left:5px !important;
+            margin-right: 5px !important;
+        }
+        .internships{
+
+        }
+        p a{
+            text-decoration:none;
+            color:black;
+        }
+    </style>
+    
+</head>
+<body>
+     <nav>
+        <div id="logo">
+            <img src="https://tutorials.rxtrainees.radixweb.net/wp-content/uploads/2020/12/logo_2500X1875.jpg"
+                height="50px" width="200px">
+        </div>
+        <div>
+            <a href="../../../../Modules/Project/Nisarg Adalja/nisargProject.html">HOME</a>
+            <a href="../../../../Modules/Project/Nisarg Adalja/htmlfile.html">HTML</a>
+            <a href="../../../../Modules/Project/Nisarg Adalja/cssfile.html">CSS</a>
+            <a href="../../../../Modules/Project/Nisarg Adalja/Bootstrap.html">Bootstrap</a>
+            <a href="../../../../Modules/Project/Nisarg Adalja/javascript.html">JAVASCRIPT</a>
+            <a href="../../../../Modules/Project/Nisarg Adalja/jquery.html">JQUERY</a>
+            <a href="../../../../Modules/Project/Nisarg Adalja/project.html">PORJECT</a>
+        </div>
+    </nav>
+    <aside>
+        <ol>
+            <li>Day-1
+                <ul>
+                    <div class="dropdown">
+                        <button class="dropbtn">Additional Exercise</button>
+                        <div class="dropdown-content">
+                            <a href="../../Day1/additional/additional.html">additional.html</a>
+                        </div>
+                    </div>
+                    <div class="dropdown">
+                        <button class="dropbtn">Assignment Exercise</button>
+                        <div class="dropdown-content">
+                            <a href="../../Day1/assignments/assignment.html">assignment.html</a>
+                        </div>
+                    </div>
+                    <div class="dropdown">
+                        <button class="dropbtn">Practice Exercise</button>
+                        <div class="dropdown-content">
+                            <a href="../../Day1/practice/practice.html">practice.html</a>
+                             <a href="../../Day1/practice/practice1.html">practice1.html</a>
+                              <a href="../../Day1/practice/login.html">login.html</a>
+                        </div>
+                    </div>
+
+                </ul>
+            </li>
+             <li>Day-2
+                <ul>
+                    <div class="dropdown">
+                        <button class="dropbtn">Additional Exercise</button>
+                        <div class="dropdown-content">
+                            <a href="../../Day2/additional/additional.html">additional.html</a>
+                        </div>
+                    </div>
+                    <div class="dropdown">
+                        <button class="dropbtn">Assignment Exercise</button>
+                        <div class="dropdown-content">
+                            <a href="../../Day2/assignment/assignment.html">assignment.html</a>
+                        </div>
+                    </div>
+                    <div class="dropdown">
+                        <button class="dropbtn">Practice Exercise</button>
+                        <div class="dropdown-content">
+                            <a href="../../Day2/practice/practice.html">practice.html</a>
+                        </div>
+                    </div>
+
+                </ul>
+            </li>
+        </ol>
+        
+    </aside>
+    <article>
+    <header>
+        <h1>Nisarg Adalja</h1>
+        <img src="../../assests/images/nisarg.jpg" alt="Profile Image" height="100vh" width="100vw">
+        <h2>Software Developer</h2>
+        <p>I'm a computer science enthusiast. I like to develop websites and apps to solve problems and add new
+        features.
+        </p>
+    </header>
+    <div id="contact">
+        <div class="details">
+            <i class="fas fa-envelope"></i><a href="mailto:nisargadalja24680@gmail.com">nisargadalja24680@gmail.com</a><br>
+            <i class="fas fa-map-marker-alt"></i><p>Ahmedabad,Gujarat,India</p>
+            <i class="fab fa-linkedin-in" style="margin-top:0vh !important"></i><a href="https://www.linkedin.com/in/nisarg-adalja-446434197">https://www.linkedin.com/in/nisarg-adalja-446434197</a>
+
+        </div>
+        <div class="details">
+           <i class="fas fa-mobile-alt"></i><a href="tel:7802043370">7802043370</a><br>
+            <i class="fas fa-link"style="color:white !important;"></i><a href="https://nisargadalja24680.wixsite.com/profile">https://nisargadalja24680.wixsite.com/profile</a><br>
+           <i class="fab fa-github" style="color:white !important;margin-top:2vh !important"></i><a href="https://github.com/nisarg291">https://github.com/nisarg291</a>
+
+        </div>
+    </div>
+    <div class="main">
+
+        <div class="education">
+            <h1>EDUCATION</h1>
+            <div class="degree" style="float:left !important">
+                <h2><b>B.E. In Computer Engineering</b></h2>
+                <h3>L.J. Institute of Engineering and Technology</h3>
+                <address>surkhaj,Ahmedabad</address>
+                <p>CGPA : 9.64</p>
+            </div>
+        </div>
+        <div class="education">
+            <h1>INTERNSHIPS</h1>
+            <div class="webdevelopment" style="float:left !important">
+                <h2><b>Web Development</b></h2>
+                <h3>Infolabz IT SERVICES</h3>
+                <address>Navrangpura,Ahmedabad</address>
+                <p>I have completed an Internship in Web Development where I have learned HTML5, CSS3, and logic development in Javascript</p>
+                <p><a href="tel:9725790521">+91 9725790521</a></p>
+            </div>
+            <div class="logicdevelopment" style="float:left !important">
+                <h2><b>Logic Developement in Python and IOT</b></h2>
+                <h3>Infolabz IT SERVICES</h3>
+                <address>Navrangpura,Ahmedabad</address>
+                <p>I have completed an Internship in IoT where I have developed some projects with Arduino and learned core python.</p>
+                <p><a href="tel:9725790521">+91 9725790521</a></p>
+            </div>
+            <div class="javadeveloper" style="float:left !important">
+                <h2><b>Core Java and Advanced Java</b></h2>
+                <h3>SoftVan IT Company</h3>
+                <address>Ambawadi,Ahmedabad</address>
+                <p>Underwent internship in HTML, CSS, JavaScript, Ajax, jQuery, Java and frameworks like hibernate, Spring, Spring Boot. I developed a Blood Bank Management System using Java, Spring-boot framework.</p>
+                <p><a href="tel:079-26308690">079-26308690</a></p>
+            </div>
+        </div>
+        <div class="education">
+            <h1>CERTIFICATES</h1>
+            <div class="certificate1">
+                <h2><b>N.I.I.T.</b></h2>
+                <p>08/2018-Present</p>
+                <h3>During This training. I have learnt C and C++</h3>
+            </div>
+            <div class="certificate2">
+                <h2><b>Coursera</b></h2>
+                <p>07/2020-Present</p>
+                <h3>Programming for Everybody (Getting Started with Python)</h3>
+            </div>
+            <div class="certificate3">
+                <h2><b>Coursera</b></h2>
+                <p>08/2020-Present</p>
+                <h3>Python Data Structures</h3>
+            </div>
+            
+            <div class="certificate4">
+                <h2><b>Coursera</b></h2>
+                <p>09/2020-Present</p>
+                <h3>Front-End Web UI Frameworks and Tools: Bootstrap 4</h3>
+            </div>
+            <div class="certificate5">
+                <h2><b>Coursera</b></h2>
+                <p>10/2020-Present</p>
+                <h3> Using Python to Access Web Data</h3>
+            </div>
+           
+        </div>
+    </div>
+    <div class="main1">
+        <div class="skills" style="float:right !important;clear:right !important;">
+            <h1>SKILLS</h1>
+            <span> &ensp;  HTML5 &ensp;  </span>
+            <span> &ensp;  CSS3 &ensp;   </span>
+            <span> &ensp;  JavaScript &ensp;   </span>
+            <span> &ensp;  Bootstrap &ensp;  </span>
+            <span> &ensp;  Python &ensp;  </span>
+            <span> &ensp;  Flask &ensp;  </span>
+            <span> &ensp;  Django &ensp;  </span>
+            <span> &ensp;  Node.js &ensp;  </span>
+            <span> &ensp;  React.js &ensp;  </span>
+            <span> &ensp;  Angular.js &ensp;  </span>
+            <span> &ensp;  JAVA &ensp;  </span>
+            <span> &ensp;  Advanced Java &ensp;  </span>
+            <span> &ensp;  Servlet &ensp;  </span>
+            <span> &ensp;  JSP &ensp;  </span>
+            <span> &ensp;  Hibernate &ensp;  </span>
+            <span> &ensp;  Spring &ensp;  </span>
+            <span> &ensp;  Spring-Boot &ensp;  </span>
+            <span> &ensp;  M.L. &ensp;  </span>
+            <span> &ensp;  A.I. &ensp;  </span>
+            
+        </div>
+        <div class="skills" style="float:right !important;clear:right !important;">
+            <h1>PERSONAL PROJECTS</h1>
+             <div>
+                <h2>UCMAS WEBSITE</h2>
+                <P><a href="https://github.com/nisarg291/FinalUCMAS" style="font-size: 23px !important;">https://github.com/nisarg291/FinalUCMAS</a></P>
+                <p>Developed the UCMAS website using Django, Python, HTML, CSS, JavaScript, Bootstrap. Developed Admin module to add student details during new admission of students. Different modules of this website are the Listening Practice Module, Flash Card Practice module, and current level information. The system sends an email to Student's parent to remind for payments.</p>
+                <iframe width="360" height="250" src="https://www.youtube.com/embed/w0sk3rQv2us" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                
+            </div>
+            <div>
+                <h2>Lung Cancer Detection System</h2>
+                <P><a href="https://nisarg291.github.io/CancerDetection/" style="font-size: 23px !important;">https://nisarg291.github.io/CancerDetection/</a></P>
+                <p>Developed WebSite using the C.N.N. algorithm of Deep learning, Django, python. In this user need to upload MRI image and using the CNN algorithm to predict cancer and added future of Chatbot, hospital Recommandation. During this, I learned many algorithms of machine learning and deep learning.</p>
+                <iframe width="360" height="250" src="https://www.youtube.com/embed/asQwVtGmBOw" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+               
+            </div>
+            <div>
+                <h2>Solo Web Service front-end Website</h2>
+               
+                <p><a href="https://nisarg291.github.io/SoloService/" style="font-size: 23px !important;">https://nisarg291.github.io/SoloService/</a></p>
+                <p><a href="https://github.com/nisarg291/SoloService" style="font-size: 23px !important;">https://github.com/nisarg291/SoloService</a></p>
+                <p>Developed Solo creative website using HTML5, CSS3, JavaScript, Bootstrap, JQuery. In this website, I developed full front-end website with awesome animations and google map.</p>
+                <iframe width="360" height="250" src="https://www.youtube.com/embed/DalWcBUKKfk" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            </div>
+            <div>
+                <h2>Shopping And Blogging website</h2>
+                <p><a href="https://nisarg291.github.io/mac/" style="font-size:23px !important;">https://nisarg291.github.io/mac/</a></p>
+                <p><a href="https://nisarg291.github.io/blogging/" style="font-size:23px !important">https://nisarg291.github.io/blogging/</a></p>
+                <p>Developed a Shopping Web Site using Django, Python and JavaScript. Users can shop for any product. Payment can be done using PayPal. The system sends emails to user for order confirmation, and also helps users to track orders. Developed blogging Web Site using Django, Python, JavaScript,  JQuery and bootstrap in which users can log in and create a blog. Users can also upload images or videos in blogs, and see all blogs which are created by other users.</p>
+               <iframe width="360" height="250" src="https://www.youtube.com/embed/gJVd1WLAces" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            </div>
+            <div>
+                <h2>Twitter clone</h2>
+                <P><a href="https://mytwitter.pythonanywhere.com" style="font-size: 23px !important;">https://mytwitter.pythonanywhere.com</a></P>
+                <p>Developed Social Media Website using Django and Python, where users can log in using google and Login Form. Also implemented trends, follow, and followers. Users can also post images and videos.</p>
+                <iframe width="360" height="250" src="https://www.youtube.com/embed/c-R7jwLV3hg" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            </div>
+        </div>
+
+        <div class="skills" style="float:right !important;clear:right !important;">
+            <h1>LANGUAGES</h1>
+            <div>
+                <h2>Gujarati</h2>
+               <p>Native and bilingual Profficiency </p>
+            </div>
+             <div>
+                <h2>Hindi</h2>
+               <p>Full Professional Profficiency </p>
+            </div>
+             <div>
+                <h2>Gujarati</h2>
+               <p>Full Professional Profficiency </p>
+            </div>
+        </div>
+    </div>
+    </article>
+</body>
+</html>

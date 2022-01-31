@@ -1,0 +1,69 @@
+<!--3. – Label : “Please select your technology :”
+
+                        – Consider following set of radio buttons :-
+
+                          “PHP”, “ASP.NET”, “ASP”, “JSP”, “PERL”, “Cold Fusion”, “Other”. Layout these buttons in a Horizontal manner.
+
+                        – Clicking on a particular radio button should display the related technology name besides label : “You have  selected : “.
+
+                        – Use multiple “span” HTML element for displaying the related message.
+
+                        – Note that radio button should be selectable by clicking on the corresponding label.  -->
+
+
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>jQuery Practice3</title>
+</head>
+
+<body>
+
+    <center>
+        <h1>jQuery Practice3</h1>
+
+        <form action="" id="f1">
+
+
+            <input type="radio" name="tech" value="PHP" id="tech1">
+            <label for="tech1">PHP</label><br>
+            <input type="radio" name="tech" value="ASP.Net" id="tech2">
+            <label for="tech2">ASP.NET</label><br>
+            <input type="radio" name="tech" value="ASP" id="tech3">
+            <label for="tech3">ASP</label><br>
+            <input type="radio" name="tech" value="JSP" id="tech4">
+            <label for="tech4">JSP</label><br>
+            <input type="radio" name="tech" value="PERL" id="tech5">
+            <label for="tech5">PERL</label><br>
+            <input type="radio" name="tech" value="Cold Fusion" id="tech6">
+            <label for="tech6">Cold Fusion</label><br>
+            <input type="radio" name="tech" value="Other" id="tech7">
+            <label for="tech7">Other</label><br>
+
+
+        </form>
+
+        <div id="box"></div>
+
+    </center>
+    <script src="jquery-3.6.0.min.js"></script>
+    <script>
+        $(document).ready(function () {
+            $("input[type=radio]").click(
+                function () {
+                    var tech = $('input[type="radio"]:checked').val();
+                    console.log(tech);
+                    $("#box").html("Selected Technology is: " + tech);
+                }
+            );
+        })
+
+    </script>
+</body>
+
+</html>

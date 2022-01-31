@@ -1,0 +1,221 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@100;400;500&display=swap");
+body {
+  background-color: #fff;
+}
+
+#navbar {
+  height: 56px;
+  width: 100%;
+  z-index: 1;
+  top: 0;
+  position: sticky;
+  background-color: #2874f0;
+}
+#navbar .container-fluid {
+  display: grid;
+  grid-template-columns: 100px 150px 1fr 300px 150px;
+  grid-template-rows: 1fr;
+  grid-template-areas: ". logo form nav cart";
+}
+#navbar .navbar-brand {
+  width: 75px;
+  grid-area: logo;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+#navbar .navbar-brand .logo-img {
+  width: 75px;
+}
+#navbar .navbar-brand .logo-text {
+  margin: 0;
+  width: 75px;
+  font-family: Roboto;
+  font-size: 11px;
+  line-height: 15.4px;
+  font-style: italic;
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+}
+#navbar .navbar-brand .logo-text .plus {
+  color: #ffe500;
+  display: flex;
+  align-items: center;
+}
+#navbar .navbar-brand .logo-text .plus img {
+  align-self: flex-start;
+  width: 10px;
+}
+#navbar #navbarnav {
+  grid-area: nav;
+}
+#navbar #navbarnav ul {
+  width: 100%;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+}
+#navbar #navbarnav ul .account-nav .btn {
+  padding: 5px 40px;
+  border-radius: 0;
+  background-color: #fff;
+  color: #2874f0;
+  font-family: Roboto;
+  font-weight: 500;
+}
+#navbar #navbarnav ul .more-nav {
+  margin: auto;
+  width: 56px;
+  color: #fff;
+  font-family: Roboto;
+  font-weight: 500;
+}
+#navbar .cart {
+  grid-area: cart;
+  color: #fff;
+  width: 60px;
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+}
+#navbar .cart span {
+  font-family: Roboto;
+  font-weight: 500;
+}
+#navbar form {
+  width: 560px;
+  grid-area: form;
+  margin: 0 12px;
+}
+#navbar form .input-group input {
+  border: none;
+  border-radius: 0;
+  height: 36px;
+  padding-top: 0;
+  padding-bottom: 0;
+  font-size: 14px;
+}
+#navbar form .input-group .input-group-text {
+  background: #fff;
+  height: 36px;
+  border-radius: 0;
+  outline: none;
+  border: none;
+  color: #2874f0;
+}
+
+#admin-op .container-fluid {
+  padding-left: 0px;
+  min-height: 100vh;
+  display: grid;
+  grid-template-columns: 1fr 3fr;
+  grid-template-areas: "pr-info op";
+  background-color: #fff;
+}
+#admin-op .container-fluid .admin-detail {
+  height: 100%;
+  background-color: #2874f0;
+  grid-area: pr-info;
+}
+#admin-op .container-fluid .admin-detail .card {
+  height: 100%;
+  background-color: #2874f0;
+  border-radius: 0;
+  border: none;
+  display: flex;
+  align-items: center;
+}
+#admin-op .container-fluid .admin-detail .card .card-img-top {
+  max-width: 150px;
+}
+#admin-op .container-fluid .operations {
+  grid-area: op;
+}
+#admin-op .container-fluid .operations .nav {
+  border-bottom: 1px solid #acacac;
+}
+#admin-op .container-fluid .operations .tab-content #pills-allProduct tr img {
+  max-height: 100px;
+  max-width: 100px;
+}
+
+footer {
+  background-color: #172337;
+  color: #fff;
+  font-size: 12px;
+  text-align: start;
+}
+footer li {
+  list-style: none;
+}
+footer li a {
+  text-decoration: none;
+  color: #fff;
+}
+footer .footer-links {
+  padding-top: 12px;
+  display: flex;
+  justify-content: space-evenly;
+}
+footer .footer-links h4 {
+  font-size: 12px;
+}
+footer .footer-links .about h4 {
+  padding-left: 32px;
+  font-size: 12px;
+}
+footer .footer-links .help h4 {
+  padding-left: 32px;
+  font-size: 12px;
+}
+footer .footer-links .Policy h4 {
+  padding-left: 32px;
+  font-size: 12px;
+}
+footer .footer-links .Social h4 {
+  padding-left: 32px;
+  font-size: 12px;
+}
+footer .copyright {
+  border-top: 1px solid white;
+  display: flex;
+  justify-content: space-evenly;
+}
+
+@media screen and (max-width: 565px) {
+  body {
+    overflow-x: auto;
+  }
+
+  #navbar {
+    height: 110px;
+    width: 100%;
+  }
+  #navbar .container-fluid {
+    width: 100vw;
+    grid-template-columns: 60px 1fr 20px;
+    grid-template-rows: 1fr 1fr;
+    grid-template-areas: "btn logo cart" "form form form";
+  }
+  #navbar .container-fluid .navbar-toggler {
+    grid-area: btn;
+    padding: 0;
+    width: 50px;
+    border: 2px solid;
+  }
+  #navbar .container-fluid form {
+    width: 100%;
+    margin: 0;
+  }
+
+  footer .footer-links {
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: flex-start;
+  }
+  footer .footer-links h4 {
+    padding-left: 0;
+  }
+}

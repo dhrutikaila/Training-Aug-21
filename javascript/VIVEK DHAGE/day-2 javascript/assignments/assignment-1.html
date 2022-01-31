@@ -1,0 +1,57 @@
+  <!DOCTYPE html>
+  <html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>practical-4</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-F3w7mX95PdgyTmZZMECAngseQB83DfGTowi0iMjiWaeVhAn4FJkqJByhZMI3AhiU" crossorigin="anonymous">
+  </head>
+  <body>
+
+    <div class="container mt-5  px-4 py-4 border border-dark bg-light">
+  <form >
+      <h1>click the button to check correct date or not: </h1>
+      <h1>RESULT:<span style="font-weight:600; color:rgb(140,50,50);" id="res">  </span></h1><br>
+      <div class="d-flex justify-content-center">
+        <label for="">please enter date in MM/DD/YYYY format</label></div>
+      <div class="d-flex justify-content-center">
+        <input  type="text" id="inp" name="" value="" placeholder="enter in MM-DD-YYYY format"></div><br>
+
+      <div class="d-flex justify-content-center" >
+        <button style="margin-right:15px"; type="button" onclick="fun(res.value)" name="button">check.</button>
+        <button type="reset" name="button">reset</button>
+      </div>
+
+  </form>
+    </div>
+
+
+    <script type="text/javascript">
+
+      function fun(res,input){
+
+      var inp = document.getElementById("inp").value;
+      var format = new RegExp(/^(0[1-9]|1[0-2])\/(0[1-9]|1\d|2\d|3[01])\/(18|20)\d{2}$/);
+      var match = format.test(inp);
+      if(match==true){
+        console.log("correcet format");
+        document.getElementById("res").innerHTML="date format is correct..!"
+      }
+      else if(inp==="") {
+        console.log("empty");
+        document.getElementById("res").innerHTML="please enter some date"
+
+      }
+      else{
+        console.log("not correct");
+        document.getElementById("res").innerHTML="date format is not correct, please enter in  MM/DD/YYYY format only"
+      }
+      }
+    </script>
+
+
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-/bQdsTh/da6pkI1MST/rWKFNjaCP5gBSY4sEBT38Q/9RBh9AH40zEOg7Hlq2THRZ" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.3/dist/umd/popper.min.js" integrity="sha384-W8fXfP3gkOKtndU4JGtKDvXbO53Wy8SZCQHczT5FMiiqmQfUpWbYdTil/SxwZgAN" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/js/bootstrap.min.js" integrity="sha384-skAcpIdS7UcVUC05LJ9Dxay8AXcDYfBJqt1CJ85S/CFujBsIzCIv+l9liuYLaMQ/" crossorigin="anonymous"></script>
+  </body>
+  </html>

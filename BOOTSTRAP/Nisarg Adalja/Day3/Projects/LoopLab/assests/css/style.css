@@ -1,0 +1,74 @@
+
+body{
+    height:100vh !important;
+    width:100vw !important;
+    background:#333 !important;
+    color:#fff;
+    overflow-x:hidden;
+}
+.navbar{
+    border-bottom:3px solid #008ed6;
+    opacity:0.8;
+    color:#fff !important;
+}
+img{
+    height:50vh !important;
+    width:30vw !important;
+}
+@media only screen and (max-width:700px){
+    img{
+        width:80vw !important;
+        height:70vh !important;
+        margin-left:-10px !important;
+    
+    }
+}
+#homesection{
+    margin-top:8vh !important;
+    background-image:url('../images/home.jpg') !important;
+    width:100vw !important;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment:fixed;
+
+}
+#homesection .dark-overley{
+    background-color: rgba(0,0,0,0.5);
+    position:absolute;
+    top:0;
+    left:0;
+    width:100vw;
+    z-index:10;
+
+}
+#homesection .card-form{
+    opacity:0.9;
+}
+#homesection .fa{
+    color:#008ed6;
+    background:#fff;
+    padding:4px;
+    border-radius:5px;
+    font-size:30px;
+}
+#homesection .home-inner{
+    padding-top:120px !important;
+    padding-bottom:120px !important;
+}
+#explore-section .row{
+    padding-top:50px !important;
+}
+#explore-section .flex-row .p-4 .fa{
+    color:#fff !important;
+    background:#333 !important;
+    padding:4px;
+    border-radius:5px;
+    font-size:30px;
+}
+#create-section .fa{
+    color:#008ed6;
+    background:#fff;
+    padding:4px;
+    border-radius:5px;
+    font-size:30px;
+}
