@@ -1,0 +1,10 @@
+REFS #378 fixes #378 issue: Tortoise SVN tasks of add, update, commit, ignore, conflict resolve, merge diff commits/ trees, create branch, cleanup, deletion done.
+REFS #440 fixes issue #440: Day-1 SQL: Working on basic functions of SQL, Createing Relational Database 
+REFS #470 fixes issue #470: Day-2 SQL: Working on basic select queries and different operators and functions of SQL
+REFS #501 fixes issue #501: Day-3 SQL: Working on assignments with the use of String, Math, Date functions
+REFS #522 fixes issue #522: Day-4 SQL: Working on Rank, Aggregate, Group by functions
+REFS #548 fixes issue #548: Day-5 SQL: Working on different Join Operations
+REFS #605 fixes issue #605: Day-6 SQL: Practicing Subqueries and Working on Subqueries assignment
+REFS #704 fixes issue #704: SQL PROJECT WORK: Researching Case Study, Preparing Charity Database
+REFS #799 fixes issue #799: Day-7 SQL: Practicing CTE and Working on CTE, Subqueries assignment
+REFS #847 fixes issue #847: Day-8 SQL: Practicing SQL Operations & Select,Insert,Update Queries

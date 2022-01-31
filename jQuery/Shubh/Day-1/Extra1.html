@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Extra Exercises</title>
+    <script src="../jquery-3.6.0.js"></script>
+    <script>
+        $(document).ready(function()
+        {
+            $("#lstfood"); //finding by unique id
+            $(".cookies"); //finding by class
+            $("#lstfood li"); //Selecting Descendants
+            $("#lstfood >li"); //Selecting Only Direct Children
+            $(".roti,.semi-liquid"); //Selecting multiple elements
+            $("#lstfood li:first") //CSS-like pseudo classes> li:last, li:odd, li:even
+            $("#lstfood").find("li"); //Filter by traversing
+            $("li").first(); //Walking the DOM
+
+            //adding h1 after ".sidebara class, appending ".chai" class, removing <p> tag
+            var heading1=$('<h1>what will you have?</h1>');
+            $(".sidebar").after(heading1);$(".chai").append(heading1);$("p").remove();
+            
+        })
+    </script>
+</head>
+<body>
+    <h1>What will you have ?</h1>
+    <div class="sidebar">
+        <h1>Welcome to Jumanji!</h1>
+    </div>
+<ul id="lstfood">
+	<li class="roti">
+		Bread
+	</li>
+	<li class="cookies">
+		biscuit
+        <ul>
+            <li>Parle-G</li>
+            <li>Krack-Jack</li>
+        </ul>
+	</li>
+	<li class="semi-liquid">
+		jam
+	</li>
+</ul>
+<div class="chai">
+    <h1>World's best masala chai</h1>
+</div>
+<p>Coffee is our speciality</p>
+
+</body>
+</html>

@@ -1,0 +1,41 @@
+--1. 
+CREATE TRIGGER reminder1  
+ON Math 
+INSTEAD OF INSERT
+AS
+INSERT INTO Math1
+GO
+
+INSERT INTO Math VALUES (11,106,116)
+SELECT * FROM Math
+SELECT * FROM Math1
+
+--2.
+CREATE TABLE Sample1(Nos INT,Test CHAR(1))
+CREATE TABLE Sample2(Nos INT,Test CHAR(1))
+GO
+
+CREATE TRIGGER tgrsmp1
+    ON Sample1
+    FOR INSERT
+    AS
+    BEGIN
+	INSERT INTO Sample2
+	SELECT * FROM inserted 
+    END
+GO
+
+CREATE TRIGGER tgrsmp2
+    ON Sample2
+    FOR INSERT
+    AS
+    BEGIN 
+	INSERT INTO Sample1
+	VALUES(2,'Z')
+    END
+GO
+
+INSERT INTO Sample1 VALUES (1,'A')
+
+SELECT * FROM Sample1
+SELECT * FROM Sample2

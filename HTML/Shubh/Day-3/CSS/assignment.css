@@ -1,0 +1,60 @@
+.head2 {
+    font-size:17px;
+    margin-left:10px;
+    margin-bottom:15px;
+}
+body {
+    margin: 0 auto;
+    background-position:center;
+    background-size: contain;
+}
+
+.menu {  
+    position:relative;
+    top: 0;
+    background-color: #011377;
+    padding:10px 0px 10px 0px;
+    color:white;
+    margin: 0 auto;
+    overflow: hidden;
+}
+.menu a {
+    float:left;
+    color:white;
+    text-align: center;
+    padding: 20px 20px;
+    font-size: 19px;
+}
+
+
+footer {
+    width: 100%;
+    bottom: 0px;
+    background-color: #000;
+    color: rgb(44, 187, 253);
+    position: relative;
+    padding-top:20px;
+    padding-bottom:50px;
+    text-align:center;
+    font-size:30px;
+    font-weight:bold;
+}
+#side {
+    display: table-cell;
+    background-image: url(https://cdn.britannica.com/q:60/51/190751-050-147B93F7/soccer-ball-goal.jpg);
+    background-size:contain;
+    width: 500px;
+    height: 750px;
+    vertical-align: top;
+}
+#main {
+    display: table-cell;
+    width: 2000px;
+    height: 100%;
+    background-image: url(https://images.hindustantimes.com/img/2021/05/15/1600x900/fifa-world-bangladesh-qatar-2022-qualifier-india_ccc38bae-e06d-11ea-983a-0aba0c178f59_1621070054334.jpg);
+    
+@media screen and (max-width: 800px) {
+            .left, .main, .right {
+            width: 100%;
+}
+}

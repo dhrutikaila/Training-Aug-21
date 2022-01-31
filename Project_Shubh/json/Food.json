@@ -1,0 +1,22 @@
+{"food": [
+    {
+        "image":"./Asset/rha.png",
+        "name":"RHA",
+        "smiles": 6325486
+    },
+    {
+        "image":"./Asset/ap.jpg",
+        "name":"RHA",
+        "smiles served": 250000
+    },
+    {
+        "image":"./Asset/rha.png",
+        "name":"RHA",
+        "smiles served": 6325486
+    },
+    {
+        "image":"./Asset/rha.png",
+        "name":"RHA",
+        "smiles served": 6325486
+    }
+]}

@@ -1,0 +1,52 @@
+    body {
+      font-family: Arial, Helvetica, sans-serif;
+    }
+
+    .header {
+      background-color: navy;
+      color: oldlace;
+      display: inline-block;
+      position: relative;
+      width: 100%;
+      text-align: center;
+      padding-top: 2px;
+
+    }
+    
+    footer {
+      width: 100%;
+      bottom: 0px;
+      background-color: #000;
+      color: rgb(44, 187, 253);
+      position: fixed;
+      padding-top:20px;
+      padding-bottom:50px;
+      text-align:center;
+      font-size:30px;
+      font-weight:bold;
+    }
+    #side {
+      display: table-cell;
+      background-color: aqua;
+      background-size:contain;
+      width: 500px;
+      height: 750px;
+      vertical-align: top;
+    }
+            #main {
+                display: table-cell;
+                width: 75%;
+                height: 100%;
+                background-image: url("1200px-Football_\(soccer_ball\).svg.png");
+                background-repeat: repeat;
+            } 
+            @media screen and (max-width: 800px) {
+                        .left, .main, .right {
+                        width: 100%;
+            }
+            }
+
+    .w3-sidebar{width:inherit;position:relative!important;z-index:1;overflow:auto}       
+    .w3-bar-block {width:100%}
+    .w3-button,.w3-bar-block{width:100%;text-align:left;padding:8px 16px}
+    

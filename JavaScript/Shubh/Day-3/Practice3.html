@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Practice Exercises JS Day-3</title>
+</head>
+<body>
+    <h3>DOM Practices Day-3</h3>
+    <p id="0">Test</p>
+    <br><br>
+    <p id="1">Check</p>
+    <br><br>
+    <p id="2">Hide</p>
+    <br><br>
+    <img id="image" src="../../HTML/Shubh/Day-4/Assets/xavi.jpg">
+    <br><br>
+    <input type="text" id="myText" value="Hello" readonly>
+    <br><br>
+    <h3>The window.location object</h3>
+    <input type="button" value="Load new document" onclick="newDoc()">
+    <br><br>
+    <input type="button" value="Back" onclick="goBack()">
+    <br><br>
+    <button onclick="openWin()">Create window</button>
+    <button onclick="resizeWin()">Resize window</button>
+    <script>
+        //Use the getElementById method to find the <p> element, and change its text to "Hello".
+        document.getElementById("1").innerHTML= "Hello" ;
+
+        //Use the getElementsByTagName method to find the first <p> element, and change its text to "Hello".
+        document.getElementsByTagName("p")[0].innerHTML = "Hello";
+
+        //Use HTML DOM to change the value of the image's src attribute.
+        document.getElementById("image").src = "../../../HTML/Shubh/Day-4/Assets/iniesta.jpg";
+
+        //Use HTML DOM to change the value of the input field.
+        document.getElementById("myText").value= "Have a nice day!";
+
+        //Change the text color of the <p> element to "red".
+        document.getElementById("0").style.color = "red";
+
+        //Use the CSS display property to hide the p element.
+        document.getElementById("2").style.display = "none";
+
+        //Use Window.location object to navigate on another page.
+        function newDoc() {
+            window.location.assign("https://www.the-aiff.com/")
+            }
+
+        //Use Window.history object to move to previous url in the history list
+        function goBack() {
+            window.history.back()
+            }
+
+        //Try to change windows height and width using Windows object
+        var myWindow;
+        function openWin() {
+        myWindow = window.open("", "", "width=100, height=100");
+        }
+
+        function resizeWin() {
+        myWindow.resizeTo(250, 250);
+        myWindow.focus();
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,313 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="description" content="FrontEnd Project: Social Charity Website's Home Page.">
+  <meta name="author" content="Shubh Patel">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>FrontEnd Project-Food Page</title>
+
+
+
+  <!-- Bootstrap core CSS -->
+  <link href="bootstrap-5.0.2-dist/css/bootstrap.min.css" rel="stylesheet">
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-JEW9xMcG8R+pH31jmWH6WWP0WintQrMb4s7ZOdauHnUtxwoG2vI5DkLtS3qm9Ekf"
+    crossorigin="anonymous"></script>
+  <script src="login.js"></script>
+  <link rel="stylesheet" href="./CSS/food.css">
+</head>
+
+<body>
+  <header>
+    <nav class="navbar navbar-expand-md navbar-dark bg-primary">
+      <div class="container-fluid">
+        <a class="navbar-brand" href="index.html">Rx-Web Foundation</a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse"
+          aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarCollapse">
+          <ul class="navbar-nav me-auto mb-2 mb-md-0">
+            <li class="nav-item">
+              <a class="nav-link" href="index.html">Home</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link active" aria-current="page" href="#">Food</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">Education</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">Health</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">Blogs</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="About_us.html">About Us</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="Contact_us.html">Contact Us</a>
+            </li>
+
+          </ul>
+          <button onclick="document.getElementById('id01').style.display='block'" style="width:auto;">Login</button>
+        </div>
+      </div>
+    </nav>
+    <div id="id01" class="modal">
+
+      <form class="modal-content animate" action="index.html">
+        <span onclick="document.getElementById('id01').style.display='none'" class="close"
+          title="Back to main content">&times;</span><br>
+        <div class="container">
+
+          <label for="userName"><b>Email</b></label>
+          <input type="email" id="userName" placeholder="Enter Username" name="uname" required>
+
+          <label for="userPw"><b>Password</b></label>
+          <input type="password" id="userPw" placeholder="Password" required>
+
+          <button id="log" type="submit" class="bg-primary justify-content-between" onclick="check()">Login</button><br>
+          <div id="remember">
+            <input type="checkbox" checked="checked" value="lsRememberMe" id="rememberMe"
+              style="display: inline-block;">
+            <label><b>Remember me</b></label>
+          </div>
+          <a href="#">Forgot password</a><br>
+          <a>New User? <a href="#">Sign-up here.</a></a><br>
+          <button id="can" type="button" onclick="document.getElementById('id01').style.display='none'"
+            class="cancelbtn bg-danger">Cancel</button>
+        </div>
+
+      </form>
+    </div>
+
+    <script src="./js/food.js"></script>
+    <script src="./js/login.js"></script>
+
+
+  </header>
+
+  <main class="main">
+
+    <section class="py-5 text-center container">
+      <br>
+      <h1 class="text">“The war against hunger is truly mankind’s war of liberation.” <br>
+        –John F. Kennedy
+      </h1>
+      <h3>Let's join the battlefield for this fight against hunger.</h3>
+    </section>
+
+    <div class="album py-5">
+      <div class="container">
+        <div id="post" class="row row-cols-1 row-cols-sm-1 row-cols-md-3 g-3">
+          <div class="col">
+            <div class="card shadow-sm">
+              <img src="Asset/f11.png" width="100%" height="400">
+
+              <div class="card-body">
+                <p class="card-text">Location: Ghodasar lake.<br>Families count: 40<br>People count: 200+
+                  approx.<br>Requirement: Raw materials to cook or Khichdi till the ration gets arranged.</p>
+                <div class="d-flex justify-content-between align-items-center">
+                  <div>
+                    <button type="button" class="btn btn-sm btn-success"
+                      onclick="location.href='https://www.google.com/maps/place/Ghodasar+Lake/@22.9856329,72.6126607,18.5z/data=!4m5!3m4!1s0x395e85fd3b285143:0x7ad42f2639e5d940!8m2!3d22.9856202!4d72.6127145'">Visit
+                      now</button>
+                    <button type="button" onclick="showAlert()" class="btn btn-sm btn-danger">Report Spam</button>
+                  </div>
+                  <small class="text-muted">Posted: 10 mins ago</small>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col">
+            <div class="card shadow-sm">
+              <img src="Asset/f10.jpg" width="100%" height="400">
+              <div class="card-body">
+                <p class="card-text">Food available for 25+ people.<br>Food Items: Puri, Sabji, Dal, Rice.<br>Collection
+                  Point: Chanakyapuri, Ahmedabad-380061</p><br><br>
+                <div class="d-flex justify-content-between align-items-center">
+                  <div>
+                    <button type="button" class="btn btn-sm btn-success"
+                      onclick="location.href='https://www.google.com/maps/place/Chanakyapuri+Community+Hall/@23.0757417,72.5252634,17z/data=!3m1!4b1!4m5!3m4!1s0x395e83671cdcca29:0xb9ebcfa525b3a4c3!8m2!3d23.0757317!4d72.5274507'">Visit
+                      now</button>
+                    <button type="button" onclick="showAlert()" class="btn btn-sm btn-danger">Report Spam</button>
+                  </div>
+                  <small class="text-muted">Posted: 50 mins ago</small>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col">
+            <div class="card shadow-sm">
+              <img src="Asset/f5.jpg" width="100%" height="400">
+              <div class="card-body">
+                <p class="card-text">Location: Trikampura Patiya<br>Families count: 50<br>People count: 250+
+                  approx.<br>Requirement: Raw materials to cook or Khichdi till the ration gets arranged.</p>
+                <div class="d-flex justify-content-between align-items-center">
+                  <div>
+                    <button type="button" class="btn btn-sm btn-success"
+                      onclick="location.href='https://www.google.com/maps/place/Maulichem+Products/@22.981224,72.6355258,19z/data=!4m13!1m7!3m6!1s0x395e861e9ec35a65:0xe3bd3271be81e4c7!2sTrikampura+Patiya,+Phase+IV,+GIDC+Estate,+Vatva,+Ahmedabad,+Gujarat+380038!3b1!8m2!3d22.9807819!4d72.6321178!3m4!1s0x395e861efc8beeb3:0x4cd9160d5b242c9d!8m2!3d22.9810023!4d72.6355173'">Visit
+                      now</button>
+                    <button type="button" onclick="showAlert()" class="btn btn-sm btn-danger">Report Spam</button>
+                  </div>
+                  <small class="text-muted">Posted: 2 hr ago</small>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="col">
+            <div class="card shadow-sm">
+              <img src="Asset/f1.jpg" width="100%" height="400">
+              <div class="card-body">
+                <p class="card-text">Activity: Food distribution<br>NGO: <a href="https://robinhoodarmy.com/"
+                    target="_blank">Robin Hood Army</a><br>Location: Vatva GIDC Basti</p><br>
+                <div class="d-flex justify-content-between align-items-center">
+                  <div>
+                    <button type="button" class="btn btn-sm btn-success"
+                      onclick="location.href='https://www.google.com/maps/place/Sark+engineering/@22.9740294,72.6351134,19.25z/data=!4m13!1m7!3m6!1s0x395e889c2074cffd:0x832ea58e68cb0fad!2sGIDC+Estate,+Vatva,+Ahmedabad,+Gujarat!3b1!8m2!3d22.967121!4d72.6469543!3m4!1s0x395e897026485059:0x40d19d3349368269!8m2!3d22.9736487!4d72.6349812'">Visit
+                      now</button>
+                    <button type="button" onclick="showAlert()" class="btn btn-sm btn-danger">Report Spam</button>
+                  </div>
+                  <small class="text-muted">Posted: 3 hr ago ago</small>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col">
+            <div class="card shadow-sm">
+              <img src="Asset/c2.jpg" width="100%" height="400">
+
+              <div class="card-body">
+                <p class="card-text">Activity: Food distribution<br>NGO: <a href="https://robinhoodarmy.com/"
+                    target="_blank">Robin Hood Army</a><br>Location: Ishwarnagar Canal Basti</p><br>
+                <div class="d-flex justify-content-between align-items-center">
+                  <div>
+                    <button type="button" class="btn btn-sm btn-success"
+                      onclick="location.href='https://www.google.com/maps/place/8,+Chandola+Canal+Garden+Rd,+Uttamnagar,+Daxini+Society,+Maninagar,+Ahmedabad,+Gujarat+380008/@22.9885534,72.6042874,19z/data=!3m1!4b1!4m13!1m7!3m6!1s0x395e889c2074cffd:0x832ea58e68cb0fad!2sGIDC+Estate,+Vatva,+Ahmedabad,+Gujarat!3b1!8m2!3d22.967121!4d72.6469543!3m4!1s0x395e85e5a00255cd:0x76d1dbd31b22abc9!8m2!3d22.9884882!4d72.604822'">Visit
+                      now</button>
+                    <button type="button" onclick="showAlert()" class="btn btn-sm btn-danger">Report Spam</button>
+                  </div>
+                  <small class="text-muted">Posted: 3 hr ago</small>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col">
+            <div class="card shadow-sm">
+              <img src="Asset/f4.jpg" width="100%" height="400">
+
+              <div class="card-body">
+                <p class="card-text">Activity: Grain-kit distribution<br>NGO: <a href="https://robinhoodarmy.com/"
+                    target="_blank">Robin Hood Army</a> + Google-pay India<br>Location: Mahisa Gaam<br>Distribution
+                  time: 24-10-2021, 10:00 am</p>
+                <div class="d-flex justify-content-between align-items-center">
+                  <div>
+                    <button type="button" class="btn btn-sm btn-success"
+                      onclick="location.href='https://www.google.com/maps/place/Mahisa,+Gujarat/@22.8491073,73.0518937,16z/data=!3m1!4b1!4m5!3m4!1s0x395e6a9a457ea979:0x8759a3359a4a0188!8m2!3d22.8497641!4d73.0567611'">Visit
+                      now</button>
+                    <button type="button" onclick="showAlert()" class="btn btn-sm btn-danger">Report Spam</button>
+                  </div>
+                  <small class="text-muted">Posted: 1d ago</small>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="col">
+            <div class="card shadow-sm">
+              <img src="Asset/f9.jpg" width="100%" height="400">
+
+              <div class="card-body">
+                <p class="card-text">Activity: Food cooking & distribution<br>NGO: <a href="index.html"
+                    target="_blank">Rx-web Foundation</a><br>Location: Ekyarth, B/h Nirma University<br>Cooking time:
+                  15-10-2021, 08:00 am</p>
+                <div class="d-flex justify-content-between align-items-center">
+                  <div>
+                    <button type="button" class="btn btn-sm btn-success"
+                      onclick="location.href='https://www.google.com/maps/place/RadixWeb-+Radix+Software+Services+Pvt+Ltd/@23.1204836,72.5447753,17z/data=!3m1!4b1!4m5!3m4!1s0x395e84f35399bd6f:0x230d6fd643aaa5e3!8m2!3d23.1204836!4d72.546964'">Visit
+                      now</button>
+                    <button type="button" onclick="showAlert()" class="btn btn-sm btn-danger">Report Spam</button>
+                  </div>
+                  <small class="text-muted">Posted: 2d ago</small>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col">
+            <div class="card shadow-sm">
+              <img src="Asset/f12.PNG" width="100%" height="400">
+
+              <div class="card-body">
+                <p class="card-text">Activity: Food cooking & distribution<br>NGO: <a href="https://robinhoodarmy.com/"
+                    target="_blank">Robin Hood Army</a><br>Location: Raghvendra Avenue, Vastral<br>Cooking time:
+                  14-10-2021, 06:00 am</p>
+                <div class="d-flex justify-content-between align-items-center">
+                  <div>
+                    <button type="button" class="btn btn-sm btn-success"
+                      onclick="location.href='https://www.google.com/maps/place/Raghvendra+Avenue,+Mahadev+Nagar+Tekra,+Ahmedabad,+Gujarat+380024/@23.0037003,72.6504424,20.5z/data=!4m5!3m4!1s0x395e8647de6b0edd:0x5f49f70a0e769aed!8m2!3d23.0037672!4d72.6506521'">Visit
+                      now</button>
+                    <button type="button" onclick="showAlert()" class="btn btn-sm btn-danger">Report Spam</button>
+                  </div>
+                  <small class="text-muted">Posted: 3d ago</small>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col">
+            <div class="card shadow-sm">
+              <img src="Asset/health1.jpg" width="100%" height="400">
+
+              <div class="card-body">
+                <p class="card-text">Activity: Health Check-up camp + Food distribution<br>NGO: <a
+                    href="https://www.facebook.com/groups/RobinHoodAcademy/" target="_blank">Robin Hood
+                    Academy</a><br>Location: RHA Maninagar Academy, Aavkar Hall<br>Time: 15-10-2021, 08:00 am</p>
+                <div class="d-flex justify-content-between align-items-center">
+                  <div>
+                    <button type="button" class="btn btn-sm btn-success"
+                      onclick="location.href='https://www.google.com/maps/place/RHA+Maninagar+Academy/@22.9871329,72.6082382,17z/data=!3m1!4b1!4m5!3m4!1s0x395e852a93bc17a3:0x2d650f5f99572ba7!8m2!3d22.9871329!4d72.6104269'">Visit
+                      now</button>
+                    <button type="button" onclick="showAlert()" class="btn btn-sm btn-danger">Report Spam</button>
+                  </div>
+                  <small class="text-muted">Posted: 3d ago</small>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <nav aria-label="Page navigation example">
+      <ul class="pagination justify-content-center">
+        <li class="page-item disabled">
+          <a class="page-link" href="#" tabindex="-1" aria-disabled="true">Previous</a>
+        </li>
+        <li class="page-item"><a class="page-link" href="#">1</a></li>
+        <li class="page-item"><a class="page-link" href="#">2</a></li>
+        <li class="page-item"><a class="page-link" href="#">3</a></li>
+        <li class="page-item">
+          <a class="page-link" href="#">Next</a>
+        </li>
+      </ul>
+    </nav>
+
+
+
+  </main>
+
+  <!-- FOOTER -->
+  <footer class="ftr bg-primary">
+    <p class="float-end"><a class="href" href="#">Back to top</a></p>
+    <a>Have any thoughts or suggestions: <a class="href" href="Contact_us.html">Contact us</a></a>
+    <p class="navbar-brand">Rx-Web Foundation ©</p>
+
+
+  </footer>
+
+</html>

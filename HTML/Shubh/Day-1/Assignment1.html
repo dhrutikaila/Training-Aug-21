@@ -1,0 +1,120 @@
+<!--Design a form for storing employee details. (Employee name, age, Gender, designation, salary, location, Email ID, Date of Joining and contact number)-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Assignment Day-1</title>
+    <style>
+        body {font-family: Arial, Helvetica, sans-serif;}
+        * {box-sizing: border-box;
+            width: fit-content;
+            height: fit-content;}
+        
+        input[type=text], textarea {
+          width: 80%;
+          padding: 12px;
+          border: 1px solid #ccc;
+          border-radius: 4px;
+          box-sizing: border-box;
+          margin-top: 6px;
+          margin-bottom: 16px;
+          resize: vertical;
+        }
+        input::-webkit-outer-spin-button,
+        input::-webkit-inner-spin-button {
+                 -webkit-appearance: none;
+                 margin: 0;
+        }
+        input[type=select] {
+          width: 50%;
+          padding: 12px;
+          border: 1px solid #ccc;
+          border-radius: 4px;
+          box-sizing: border-box;
+          margin-top: 6px;
+          margin-bottom: 16px;
+          resize: vertical;
+        }
+        
+        
+        input[type=submit] {
+          background-color: #ff0101;
+          color: white;
+          padding: 12px 20px;
+          border: none;
+          border-radius: 4px;
+          cursor: pointer;
+        }
+        
+        input[type=submit]:hover {
+          background-color: #0b0895;
+        }
+        
+        .container {
+          border-radius: 5px;
+          background-color: #90bff5;
+          padding: 20px;
+        }
+        </style>
+        </head>
+        <body>
+        
+        <h2>Employee Details</h2>
+        <div class="container">
+          <form action="demo.html">
+            <label for="fname">Full Name</label>
+            <input type="text" id="fname" name="fullname" placeholder="Your full name.." required>
+            <br><br>
+            <label for="age">Age: </label>  
+            <input type="number" name="num" min="10" max="120" required> 
+            <br><br>
+            <label for="Gender">Gender: </label>
+            <input type="radio" id="Gender" name="Gender" required>
+            <label for="Male">Male</label>
+            <input type="radio" id="Gender" name="Gender">
+            <label for="Feale">Female</label>
+            <input type="radio" id="Gender" name="Gender">
+            <label for="Others">Others</label>
+            <br><br>
+            <label for="Designation">Designation: </label>
+            <select id="Designation" name="Designation" required>
+              <option value="Trainee">Trainee</option>
+              <option value="Trainer">Trainer</option>
+              <option value="JrDev">Jr Develper</option>
+              <option value="TechAssistant">Technical Assistant</option>
+              <option value="SrPrM">Sr Project Manager</option>
+              <option value="CEO">CEO</option>
+              <option value="Memer">Memer</option>
+            </select>
+            <br><br>
+            <label for="Salary">Salary: </label>  
+            <input type="number" name="Salary" min="0" required>
+            <br><br>
+            <label for="Location">Location: </label>
+            <select id="Location" name="Location" required>
+              <option value="Loc1">India</option>
+              <option value="Loc2">Denmark</option>
+              <option value="Loc3">Switzerland</option>
+              <option value="Loc4">USA</option>
+              <option value="Loc5">Canada</option>
+              <option value="Loc6">Australia</option>
+            </select>
+            <br><br>
+            <label for="Email">Email-Id: </label>  
+            <input type="email" name="Email" required>
+            <br><br>
+            <label for="Doj">Date Of Joining: </label>  
+            <input type="date" name="date" required>
+            <br><br>
+            <label for="phone">Contact Number:</label>
+            <input type="tel" id="phone" name="phone" pattern="[0-9]{10}" required>
+            <br>
+            <input type="submit" value="Submit">
+          </form>
+        </div>
+        
+        </body>
+        </html>
+        >
