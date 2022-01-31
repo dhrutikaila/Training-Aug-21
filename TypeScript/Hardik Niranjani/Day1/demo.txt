@@ -1,0 +1,16 @@
+Typescripts:-
+
+1> Variable declaration
+2> Data types
+3> Array
+    - Multi type Array
+4> Array methods 
+
+
+// let employee : {ID:number,FirstName:string,LastName:string,Address:string,Salary:number}[] =[
+//     {"ID":1 , "FirstName":"Hardik", "LastName":"Niranjani", "Address":"Address_1", "Salary":25000},
+//     {"ID":2 , "FirstName":"Hardik", "LastName":"Niranjani", "Address":"Address_1", "Salary":20000},
+//     {"ID":3 , "FirstName":"Hardik", "LastName":"Niranjani", "Address":"Address_1", "Salary":23000},
+//     {"ID":4 , "FirstName":"Hardik", "LastName":"Niranjani", "Address":"Address_1", "Salary":36000},
+//     {"ID":5 , "FirstName":"Hardik", "LastName":"Niranjani", "Address":"Address_1", "Salary":56000}
+// ];
