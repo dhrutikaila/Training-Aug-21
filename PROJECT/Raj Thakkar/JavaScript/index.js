@@ -24,9 +24,10 @@ if(localStorage.Restaurant){
 else{
 
 
-    $.getJSON("http://127.0.0.1:5500/PROJECT/Raj%20Thakkar/JSON/Restaurant.json",(res)=>{
-        
-        $.each(res.restaurant,(index,element)=>{
+
+    $.getJSON("../JSON/Restaurant.json",(res)=>{
+
+            $.each(res.restaurant,(index,element)=>{
             $('#Restaurant_Card').append(` <div class="col"><div class="card  h-100">
             <img class="card__image " src=${element.imgSrc} alt="/" id=${element.id}>
             <div class="card__info ">
@@ -54,7 +55,8 @@ else{
 function search(){
     var searchInput = $("#search_value").val();
     console.log(searchInput)
-    $.getJSON("http://127.0.0.1:5500/PROJECT/Raj%20Thakkar/JSON/Restaurant.json",(res)=>{
+
+    $.getJSON("../JSON/Restaurant.json",(res)=>{
         
             $(res.restaurant).filter((index,element)=>{
              //   console.log($.contains(searchInput,element.title))
