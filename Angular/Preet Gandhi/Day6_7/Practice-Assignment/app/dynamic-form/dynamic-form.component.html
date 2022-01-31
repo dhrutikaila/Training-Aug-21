@@ -1,0 +1,25 @@
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
+
+
+<div class="container">
+  <div class="border border-3 border-warning mt-5 p-3 content">
+    <h3 class="text-center">Dynamic Form</h3>
+    <div>
+      <form (ngSubmit)="onSubmit()" [formGroup]="form">
+    
+        <div *ngFor="let question of questions" class="form-row">
+          <app-question [question]="question" [form]="form"></app-question>
+        </div>
+    
+        <div class="form-row">
+          <button class="btn btn-info mt-3" type="submit" [disabled]="!form.valid">Save</button>
+        </div>
+      </form>
+    
+      <div *ngIf="payLoad" class="form-row">
+        <strong>Saved the following values</strong><br>{{payLoad}}
+      </div>
+    </div>
+  </div>
+</div>

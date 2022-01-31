@@ -1,0 +1,12 @@
+<label class="form-label" for="id">Id</label><br>
+<input id="id" class="form-control" type="number" [(ngModel)]="id">
+<label class="form-label" for="name">Name</label><br>
+<input id="name" class="form-control" type="text" [(ngModel)]="name">
+<label class="form-label" for="age">Age</label><br>
+<input id="age" class="form-control" type="text" [(ngModel)]="age">
+<button class="btn btn-success my-3" (click)="addEmployee(id,name,age)">Add</button>
+
+<h2>Employee Service</h2>
+<ul *ngFor="let emp of employees">
+    <li>{{emp.id}} - {{emp.name}} - {{emp.age}}</li>
+</ul>

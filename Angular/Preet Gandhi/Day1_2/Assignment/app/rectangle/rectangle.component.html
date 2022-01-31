@@ -1,0 +1,11 @@
+<h2>Area of Rectangle</h2>
+
+<h5 class="mt-4 text-secondary">Enter Length:</h5>
+<input class="form-control" [(ngModel)]="length" type="number">
+<h5 class="text-secondary">Enter Width:</h5>
+<input class="form-control" [(ngModel)]="width" type="number">
+<br>
+
+<button class="btn btn-info fw-bolder mb-3" (click)="rectangleArea()">Calculate</button>
+
+<h3>Area of Rectangle is: <span class="ans">{{answer}}</span></h3>

@@ -1,0 +1,13 @@
+<h2>SignUP</h2>
+
+<h5 class="mt-4 text-secondary">Enter Name</h5>
+<input class="form-control" [(ngModel)]="name" type="text">
+<h5 class="text-secondary">Enter Address</h5>
+<input class="form-control" [(ngModel)]="address" type="text">
+<h5 class="text-secondary">Enter PAN Number</h5>
+<input class="form-control" [(ngModel)]="pan" type="number">
+<br>
+
+<button class="btn btn-primary mb-2" (click)="display()">SignUp</button>
+
+<p><b>{{answer}}</b></p>

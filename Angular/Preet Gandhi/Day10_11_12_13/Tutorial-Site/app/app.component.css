@@ -1,0 +1,31 @@
+nav{
+    background-color: lightseagreen;
+    grid-area: nav;
+}
+
+.main-img{
+    margin-left: 100px;
+    /* width: 1338px;
+    height: auto; */
+    width: 100px;
+    height: 100px;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+} 
+
+.content{
+    padding-left: 465px;
+}
+
+.title-radix{
+    color: #f50606;
+}
+
+.title-training{
+    color:#f3e30a;
+}
+
+.content a:hover{
+    color:  #f3e30a !important;
+}
