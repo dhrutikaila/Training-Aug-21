@@ -1,0 +1,120 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-F3w7mX95PdgyTmZZMECAngseQB83DfGTowi0iMjiWaeVhAn4FJkqJByhZMI3AhiU" crossorigin="anonymous">
+
+    <title>Assignment Day2</title>
+    <style>
+        @media only screen and (max-width:768px){
+            nav li{
+                display: block !important;
+                width: 100% !important;
+            }
+        }
+        @media only screen and (min-width:768px){
+            nav li{
+                justify-content: space-around;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <nav class="my-3">
+        <ul class="nav nav-fill nav-pills">
+            <li class="nav-item bg-primary rounded-3 mx-2">
+                <a href="#" class="nav-link dropdown-toggle text-white" data-bs-toggle="dropdown">Utilities</a>
+                <div class="dropdown-menu">
+                    <a href="/Bootstrap/Day1/Practice Exercise/BasicTypography.html" class="dropdown-item">Basic Typography</a>
+                    <a href="/Bootstrap/Day1/Practice Exercise/TextAlignmentAndDisplay.html" class="dropdown-item">Text Alignment & Display</a>
+                    <a href="/Bootstrap/Day1/Practice Exercise/FloatAndFixedPosition.html" class="dropdown-item">Floats & Position</a>
+                    <a href="/Bootstrap/Day1/Practice Exercise/ColorsAndBackground.html" class="dropdown-item">Colors & Background</a>
+                    <a href="/Bootstrap/Day1/Practice Exercise/MarginAndSpacing.html" class="dropdown-item">Margin & Spacing</a>
+                    <a href="/Bootstrap/Day1/Practice Exercise/SizingAndBorder.html" class="dropdown-item">Sizing & Border</a>
+                    <a href="/Bootstrap/Day1/Practice Exercise/CSSBreakpoints.html" class="dropdown-item">Breakpoints</a>
+                </div>
+            </li>
+            <li class="nav-item bg-success rounded-3 mx-2">
+                <a href="#" class="nav-link dropdown-toggle text-white" data-bs-toggle="dropdown">CSS Components</a>
+                <div class="dropdown-menu">
+                    <a href="/Bootstrap/Day1/Practice Exercise/NavbarAndNavs.html" class="dropdown-item">Navbar & Navs</a>
+                    <a href="/Bootstrap/Day1/Practice Exercise/listGroupsAndBadges.html" class="dropdown-item">ListGroups & Badges</a>
+                    <a href="/Bootstrap/Day1/Practice Exercise/Forms.html" class="dropdown-item">Forms</a>
+                    <a href="/Bootstrap/Day1/Practice Exercise/InputGroups&Addons.html" class="dropdown-item">InputGroups & Addons</a>
+                    <a href="/Bootstrap/Day1/Practice Exercise/AlertsAndProgressBars.html" class="dropdown-item">Alerts & ProgressBars</a>
+                    <a href="/Bootstrap/Day1/Practice Exercise/TablesAndPagination.html" class="dropdown-item">Tables & Pagination</a>
+                    <a href="/Bootstrap/Day1/Practice Exercise/Cards.html" class="dropdown-item">Cards</a>
+                    <a href="/Bootstrap/Day1/Practice Exercise/MediaObjects.html" class="dropdown-item">Media Objects</a>
+                </div>
+            </li>
+            <li class="nav-item bg-warning rounded-3 mx-2">
+                <a href="#" class="nav-link dropdown-toggle text-white" data-bs-toggle="dropdown">Grid & Flexbox</a>
+                <div class="dropdown-menu ">
+                    <a href="/Bootstrap/Day2/Practice Exercise/GridSystem.html" class="dropdown-item">Grid System</a>
+                    <a href="/Bootstrap/Day2/Practice Exercise/GridAlignment.html" class="dropdown-item">Grid Alignment</a>
+                    <a href="/Bootstrap/Day2/Practice Exercise/FlexBox.html" class="dropdown-item">Flexbox</a>
+                    <a href="/Bootstrap/Day2/Practice Exercise/AutoMarginsAndWrapping.html" class="dropdown-item">AutoMargin & Wraping</a>
+                </div>
+            </li>
+            <li class="nav-item bg-danger rounded-3 mx-2">
+                <a href="#" class="nav-link dropdown-toggle text-white" data-bs-toggle="dropdown">JavaScripts Widgets</a>
+                <div class="dropdown-menu">
+                    <a href="/Bootstrap/Day2/Practice Exercise/CarouselSlider.html" class="dropdown-item">Carousel Slider</a>
+                    <a href="/Bootstrap/Day2/Practice Exercise/CollapseAndAccordion.html" class="dropdown-item">Callopse & Accordion</a>
+                    <a href="/Bootstrap/Day2/Practice Exercise/Tooltips.html" class="dropdown-item">Tooltips</a>
+                    <a href="/Bootstrap/Day2/Practice Exercise/Popovers.html" class="dropdown-item">Popover</a>
+                    <a href="/Bootstrap/Day2/Practice Exercise/Modals.html" class="dropdown-item">Modals</a>
+                </div>
+            </li>
+        </ul>
+    </nav>
+
+
+    <!-- ###################################### START HERE #################################################### -->
+
+
+
+
+
+
+    <!-- ################################### END HERE ################################################### -->
+
+
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-/bQdsTh/da6pkI1MST/rWKFNjaCP5gBSY4sEBT38Q/9RBh9AH40zEOg7Hlq2THRZ"
+        crossorigin="anonymous"></script>
+
+    <script>
+        var tooltipTriggerList = [].slice.call(document.querySelectorAll('[data-bs-toggle="tooltip"]'))
+        var tooltipList = tooltipTriggerList.map(function (tooltipTriggerEl) {
+            return new bootstrap.Tooltip(tooltipTriggerEl)
+        })
+    </script>
+    <script>
+        var popoverTriggerList = [].slice.call(document.querySelectorAll('[data-bs-toggle="popover"]'))
+        var popoverList = popoverTriggerList.map(function (popoverTriggerEl) {
+            return new bootstrap.Popover(popoverTriggerEl)
+        })
+    </script>
+
+    <script>
+        var myModal = document.getElementById('myModal')
+        var myInput = document.getElementById('myInput')
+
+        myModal.addEventListener('shown.bs.modal', function () {
+            myInput.focus()
+        })
+    </script>
+
+</body>
+
+</html>

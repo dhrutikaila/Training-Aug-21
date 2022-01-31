@@ -1,0 +1,442 @@
+<!doctype html>
+<html>
+    <head>
+
+        <title>Employee Registeration Form </title>
+
+        <style type="text/css">
+            *{
+            
+            margin: 0;
+            
+            padding: 0;
+            
+            }
+            
+            body {
+            
+                background-color: #1E3947;
+                
+                }
+            .regform{
+
+                width: 800px;
+
+                background-color:#1E4547;
+
+                margin: auto;
+
+                color: #FFFFFF;
+
+                padding: 10px 0px 10px 0px;
+
+                text-align: center;
+
+                border-radius: 15px 15px 0px 0px;
+
+            }
+
+                .main{
+
+                    background-color: rgb(0,0,0,0.5);
+
+                    width: 800px;
+
+                    margin: auto;
+
+                    }
+
+form{
+    padding: 10px;
+    }
+
+#name {
+
+        width: 100%;
+
+        height:100px;
+
+      }
+
+.name {
+
+        margin-left: 25px;
+
+        margin-top: 30px;
+
+        width: 125px;
+
+        color: white;
+
+        font-size: 18px;
+
+        font-weight: 700;
+
+    }
+
+.firstname {
+
+            position:relative;
+
+            left: 200px;
+
+            top:-37px;
+
+            line-height: 40px;
+
+            border-radius: 6px;
+
+            padding:0 22px;
+
+            font-size: 16px;
+
+        }
+
+.lastname{ 
+
+        position: relative;
+
+        left: 417px;
+
+        top: -80px;
+
+        line-height: 40px;
+
+        border-radius: 6px;
+
+        padding:0 22px;
+
+        font-size: 16px;
+
+        color: #555;
+
+        }
+
+.firstlabel {
+
+            position: relative;
+
+            color: #E5E5E5;
+
+            text-transform: capitalize;
+
+            font-size: 14px;
+
+            left:203px;
+
+            top: -45px;
+
+            }
+            
+.lastlabel {
+
+            position: relative;
+
+            color: #E5E5E5;
+
+            text-transform: capitalize;
+
+            font-size: 14px;
+
+            left:175px;
+
+            top: -45px;
+
+            }
+
+.age { 
+
+        position: relative;
+
+        left: 200px;
+
+        top:-37px;
+
+        line-height: 40px;
+
+        width: 532px;
+
+        border-radius: 6px;
+
+        padding:0 22px;
+
+        font-size: 16px;
+
+        color: #555
+
+        }
+
+.email{
+        position:relative;
+
+        left: 200px;
+
+        top:-37px;
+
+        line-height: 40px;
+
+        width: 532px;
+
+        border-radius: 6px;
+
+        padding: 0 22px;
+
+        font-size: 16px;
+
+        color: #555;
+
+        }
+
+.salary { 
+
+        position: relative;
+
+        left: 200px;
+
+        top:-37px;
+
+        line-height: 40px;
+
+        width: 532px;
+
+        border-radius: 6px;
+
+        padding:0 22px;
+
+        font-size: 16px;
+
+        color: #555
+
+        }
+
+
+
+.phone-number {
+
+    position: relative;
+
+left: 200px;
+
+top:-37px;
+
+line-height: 40px;
+
+width: 532px;
+
+border-radius: 6px;
+
+padding:0 22px;
+
+font-size: 16px;
+
+color: #555
+
+            }
+.option {
+        position: relative;
+
+        left: 200px;
+
+        top:-37px;
+
+        line-height: 40px;
+
+        width: 532px;
+
+        height: 40px;
+
+        border-radius: 6px;
+
+        padding: 0 22px;
+
+        font-size: 16px;
+
+        color: #555;
+
+        outline: none;
+
+        overflow:hidden;
+
+        }
+
+.option option{
+                font-size:20px;
+                width: 532px;
+               }
+
+.date {
+
+        position: relative;
+
+        left: 200px;
+
+        top:-37px;
+
+        line-height: 40px;
+
+        width: 532px;
+
+        border-radius: 6px;
+
+        padding:0 22px;
+
+        font-size: 16px;
+
+        color: #555
+
+      }
+
+#coustomer{
+
+            font-size:20px;
+            
+            margin-left: 25px;
+            
+            font-size: 18px;
+
+            color: white;
+
+          }
+
+.radio { 
+        display:inline-block; 
+        
+        padding-right:70px; 
+
+        font-size:25px; 
+
+        margin-left: 25px; 
+
+        margin-top: 15px;
+
+        color: white;
+
+       }
+
+.radio input {
+
+width:20px;
+
+height:20px;
+
+border-radius: 50%;
+
+cursor: pointer;
+
+outline: none;
+
+}
+
+button {
+
+        background-color: #3BAF9F;
+
+        display:block;
+
+        margin:20px 0px 0px 20px;
+
+        text-align: center;
+
+        border-radius: 12px;
+
+        border:2px solid #366473;
+
+        padding: 14px 110px;
+
+        outline: none;
+
+        color: white;
+
+        cursor: pointer;
+
+        transition: 0.25px;
+
+        }
+            </style>
+    
+    </head>
+    
+    <body>  
+
+        <div class="regform"><h1> Registration Form</h1></div>
+
+        <div class="main">
+
+            <form>
+
+                <div id="name">
+
+                    <h2 class="name">Name</h2>
+
+                    <input class="firstname" id="fname" type="rext" name="first_name"><br>
+
+                    <label class="firstlabel">first name</label>
+
+                    <input class="lastname" id="lname" type="text" name="last_name">
+
+                    <label class="lastlabel">last name</label>
+
+
+                </div>
+
+                    <h2 class="name">Age</h2> 
+                    
+                    <input class="age" id = "age" placeholder="Enter Age" type="number" name="age" />
+
+                    <h2 class="name">Email</h2> 
+                    
+                    <input class="email" id="email" placeholder="Enter Email ID" type="email" name="email" required />
+
+                    <h2 class="name">Salary</h2> 
+                    
+                    <input class="salary" id="salary" placeholder="Enter Salary" type="text" name="salary"/>
+
+                    <h2 class="name">Phone</h2> 
+                    
+                    <input class="phone-number" id="pnumber" placeholder="Enter Phone Number" type="text" name="phone-number" pattern="[0-9] {10}"  maxlength="10" required />
+
+                    <h2 class="name"> Location</h2>
+
+                    <select class="option" name="subject">
+
+                    <option disabled="disabled" selected="selected">--Choose Location--</option>
+
+                    <option> Botad</option>
+
+                    <option> Ahemdabad</option>
+
+                    <option> Surat</option>
+
+                    </select>
+
+                    <h2 class="name">Date of Joining</h2> 
+                    
+                    <input class="date" placeholder="Enter Date" type="date" name="date">
+
+                    <h2 class="name" id="student">Gender</h2>
+
+                    <label class="radio">
+
+                        <input class="radio-one" type="radio" name="r1">
+
+
+                        Male
+
+                    </label>
+
+                    <label class="radio">
+
+                        <input class="radio-one" type="radio" name="r1">
+
+                        Female
+
+                    </label>
+
+                    <button type="submit">Submit</button>
+
+            </form>
+
+</div>
+
+<body>
+</html>

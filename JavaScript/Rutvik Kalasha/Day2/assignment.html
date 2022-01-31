@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+
+        function dateValidate() {
+            var d = document.getElementById('txt1').value;
+            arr = d.split("-");
+            month = parseInt(arr[0]);
+            day = parseInt(arr[1]);
+            year = parseInt(arr[2]);
+
+
+            if (day < 1 || day > 31) {
+                alert("Date is not valid");
+
+            }
+            else if (month < 1 || month > 12) {
+                alert("Date is not valid");
+
+            }
+            else if (month == 2) {
+
+                if (((year % 4 == 0 && year % 100 != 0) || (year % 400 == 0)) && (day > 1 || day < 30)) {
+                    alert("Date is valid");
+                }
+                else {
+                    alert("Date is not valid");
+                }
+            }
+            else if ((month == 4 || month == 6 || month == 9 || month == 11) && (day < 1 || day > 30)) {
+                alert("Date is not valid");
+            }
+            else {
+                alert("Date is valid");
+            }
+        }
+    </script>
+
+    
+</head>
+
+<body>
+  
+                <input type="text" id="txt1" placeholder="MM-DD-YYYY">
+
+                <button type="submit" onclick="dateValidate()" >Validate Date</button>
+
+    
+
+
+</body>
+
+</html>

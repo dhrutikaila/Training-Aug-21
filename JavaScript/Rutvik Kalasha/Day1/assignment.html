@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+
+<html>
+    <head>
+        
+        <title>calculate two numbers</title>
+        <meta charset="windows-1252">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        
+        <script>
+            
+            function calculation()
+            {
+                var n1 = parseFloat(document.getElementById('n1').value);
+                var n2 = parseFloat(document.getElementById('n2').value);
+                
+                var operation = document.getElementById('operators').value;
+                
+                if(operation === '+')
+                {
+                    document.getElementById('result').value = n1+n2;
+                }
+                
+                if(operation === '-')
+                {
+                    document.getElementById('result').value = n1-n2;
+                }
+                
+                if(operation === '/')
+                {
+                    document.getElementById('result').value = n1/n2;
+                }
+                
+                if(operation === 'X')
+                {
+                    document.getElementById('result').value = n1*n2;
+                }
+                
+            }
+
+            function Reset()
+                {
+                    document.getElementById("n1").value ="";
+                    document.getElementById("n2").value ="";
+                }
+            
+        </script>
+        
+    </head>
+    <body>
+        
+        <input type="text" id="n1"/><br/><br/>
+        <input type="text" id="n2"/><br/><br/>
+        
+        <select id="operators">
+            <option value="+">+</option>
+            <option value="-">-</option>
+            <option value="/">/</option>
+            <option value="X">X</option>
+        </select>
+        
+        <button onclick="calculation();">=</button>
+        <input type="text" id="result"/>
+        <button onclick="Reset();">Reset</button>
+        
+    </body>
+</html>
